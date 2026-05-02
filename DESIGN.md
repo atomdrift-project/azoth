@@ -46,6 +46,11 @@ azoth/
 models, the filetype-to-filegroup map, and the routed thresholds for hostile and
 suspicious decisions.
 
+`route_policies.json` is the decision contract when present. It records, for
+each filetype and level, which route thresholds are allowed to participate in
+the hostile and suspicious decisions. `config.json` thresholds remain the
+general compatibility path and a useful coarse calibration artifact.
+
 `general/` is required. If it is absent, corrupt, or incompatible with the
 running litmus binary, startup fails. Specialists are optional unless
 `config.json` marks a route as required.
@@ -108,22 +113,30 @@ If `T` is not in the filetype-to-filegroup map, the route is `general` only.
 Unknown filetypes are ordinary inputs, not errors.
 
 Each model returns a malware probability. A policy level supplies one threshold
-per applicable model. The decision is an OR over threshold crossings:
+per allowed route. With `route_policies.json`, allowed routes are chosen per
+filetype and severity by calibration. Routes absent from that policy do not
+participate in that decision, even if their model was scored for diagnostics.
+
+The runtime decision is:
 
 ```text
 hostile =
-    general_score >= general_hostile_threshold
- || group_score   >= group_hostile_threshold
- || type_score    >= type_hostile_threshold
+    OR over policy.hostile.thresholds:
+        score(route) >= hostile_threshold(route)
 
 suspicious =
-    general_score >= general_suspicious_threshold
- || group_score   >= group_suspicious_threshold
- || type_score    >= type_suspicious_threshold
+    OR over policy.suspicious.thresholds:
+        score(route) >= suspicious_threshold(route)
 ```
 
-This looks like three independent detectors. It is not calibrated that way. The
-thresholds are selected together, against the combined OR decision.
+This can express a strong specialist route, a general-primary weak route, or a
+specialist-primary route with a high-confidence general escape. The last case is
+important: an ELF specialist may own most ELF decisions while still preserving a
+0-FP-level general hit when calibration proves that hit fits inside budget.
+
+If `route_policies.json` is absent, litmus falls back to the older behavior:
+apply the per-route thresholds in `config.json` as a plain OR over every loaded
+applicable route.
 
 ## False-Positive Ownership
 
@@ -178,12 +191,19 @@ private budget. It is allowed only if the new union of hits still has at most
 positive are the same file, they cost one false positive. If they are different
 files, they cost two.
 
-The current search starts with the best general threshold under `K`, then
-repeatedly tries every candidate threshold for every route. It keeps the single
-change that adds the most new malware detections while keeping `FP(T) <= K`,
-preferring the lower FP increase on ties. Search stops when no route can add a
-new true positive inside the budget. The deployed thresholds are the resulting
-tuple, not independently calibrated model thresholds.
+The current search evaluates several route shapes for each filetype:
+
+- general only
+- filegroup only
+- filetype only
+- general-primary OR
+- filegroup primary with escape routes
+- filetype primary with escape routes
+
+The best shape is the one with the most true positives inside `K`, with
+precision and false-positive count as tie breakers. The deployed policy is the
+resulting route-specific threshold set, not independently calibrated model
+thresholds.
 
 ## Calibration Corpus
 
@@ -364,10 +384,12 @@ At scan time:
 2. Score `general`.
 3. Score the filegroup model if present.
 4. Score the filetype model if present.
-5. Apply the configured OR thresholds for the requested policy level.
-6. Return the highest severity triggered.
+5. If `route_policies.json` has a policy for the filetype, apply that policy.
+6. Otherwise apply the configured OR thresholds for the requested policy level.
+7. Return the highest severity triggered.
 
-If a specialist is missing, the route degrades to the models that exist. Missing
+If a policy references a specialist that is missing or failed validation, litmus
+ignores that route and reports it as unavailable in diagnostics. Missing
 specialists are not errors unless `config.json` says they are required.
 
 ## Latency
