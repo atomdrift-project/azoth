@@ -1,0 +1,334 @@
+{
+  "name": "python",
+  "kind": "filetype",
+  "file_types": [
+    "python"
+  ],
+  "output_dir": "out/models/azoth/filetypes/python",
+  "model_path": "out/models/azoth/filetypes/python/model.txt",
+  "spec_path": "out/models/azoth/filetypes/python/feature_spec.json",
+  "train_rows": 16103,
+  "train_malware": 6746,
+  "train_benign": 9357,
+  "benchmark_rows": 13129,
+  "benchmark_malware": 1010,
+  "benchmark_benign": 12119,
+  "n_features": 28960,
+  "feature_spec_policy": "general_shared",
+  "feature_mask": null,
+  "train_metrics": {
+    "accuracy": 0.9789081885856079,
+    "precision": 0.9819819819819819,
+    "recall": 0.9674556213017751,
+    "f1": 0.9746646795827124,
+    "brier": 0.01571721024811268,
+    "roc_auc": 0.9962638446366257,
+    "avg_precision": 0.9919522321034927
+  },
+  "metrics": {
+    "roc_auc": 0.995952268714783,
+    "avg_precision": 0.9882106403405441,
+    "max_f1": 0.967032967032967,
+    "max_f1_threshold": 0.42323392629623413,
+    "precision_at_max_f1": 0.9758064516129032,
+    "recall_at_max_f1": 0.9584158415841584
+  },
+  "levels": [
+    {
+      "level": 0,
+      "hostile": {
+        "target_per_million": 0.0,
+        "budget": 0,
+        "threshold": 0.9983068108558655,
+        "recall": 0.698019801980198,
+        "precision": 1.0,
+        "fp": 0,
+        "tp": 705,
+        "fn": 305,
+        "tn": 12119,
+        "fp_per_million": 0.0
+      },
+      "suspicious": {
+        "target_per_million": 8.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      }
+    },
+    {
+      "level": 1,
+      "hostile": {
+        "target_per_million": 1.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      },
+      "suspicious": {
+        "target_per_million": 16.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      }
+    },
+    {
+      "level": 2,
+      "hostile": {
+        "target_per_million": 2.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      },
+      "suspicious": {
+        "target_per_million": 24.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      }
+    },
+    {
+      "level": 3,
+      "hostile": {
+        "target_per_million": 3.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      },
+      "suspicious": {
+        "target_per_million": 32.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      }
+    },
+    {
+      "level": 4,
+      "hostile": {
+        "target_per_million": 4.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      },
+      "suspicious": {
+        "target_per_million": 40.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      }
+    },
+    {
+      "level": 5,
+      "hostile": {
+        "target_per_million": 5.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      },
+      "suspicious": {
+        "target_per_million": 48.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      }
+    },
+    {
+      "level": 6,
+      "hostile": {
+        "target_per_million": 6.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      },
+      "suspicious": {
+        "target_per_million": 56.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      }
+    },
+    {
+      "level": 7,
+      "hostile": {
+        "target_per_million": 7.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      },
+      "suspicious": {
+        "target_per_million": 64.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      }
+    },
+    {
+      "level": 8,
+      "hostile": {
+        "target_per_million": 8.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      },
+      "suspicious": {
+        "target_per_million": 72.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      }
+    },
+    {
+      "level": 9,
+      "hostile": {
+        "target_per_million": 9.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      },
+      "suspicious": {
+        "target_per_million": 80.0,
+        "budget": 1,
+        "threshold": 0.9970445036888123,
+        "recall": 0.7900990099009901,
+        "precision": 0.9987484355444305,
+        "fp": 1,
+        "tp": 798,
+        "fn": 212,
+        "tn": 12118,
+        "fp_per_million": 82.51505899826718
+      }
+    }
+  ],
+  "train_config": {
+    "learner": "azoth",
+    "seed": 42,
+    "device": "cpu",
+    "holdout_fraction": 0.1,
+    "n_folds": 0,
+    "n_estimators": 400,
+    "max_depth": 12,
+    "learning_rate": 0.05,
+    "early_stopping_rounds": 50,
+    "min_child_weight": 5,
+    "min_child_samples": 25,
+    "num_leaves": 96,
+    "colsample_bytree": 0.8,
+    "subsample": 0.8,
+    "gamma": 0.0,
+    "reg_alpha": 0.0,
+    "reg_lambda": 1.0,
+    "beta": 1.25,
+    "monotone_constraints": null,
+    "threshold_mode": "fbeta",
+    "threshold_fpr_target": null,
+    "hard_negative_fraction": 0.0,
+    "hard_negative_weight": 1.0,
+    "benign_filetype_weights": {}
+  }
+}
