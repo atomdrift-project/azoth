@@ -3,9 +3,26 @@
 Routed ensemble of the general model plus eligible filegroup and filetype specialists.
 
 - Inputs: one cleave report vectorized with the shared general feature spec.
-- Feature families: hopper score, cleave trait taxonomy, element tokens, path/criticality bigrams/trigrams, ATT&CK/MBC n-grams, aggregate finding counts, extended file metrics, soft presence, repetition penalties, severity distribution, hostile density/escalation, structural coverage; clusters disabled; packaged capability mode=paths.
+- Feature families:
+  - aggregate finding counts
+  - ATT&CK/MBC n-grams
+  - cleave trait taxonomy
+  - element tokens
+  - extended file metrics
+  - hopper score
+  - hostile density/escalation
+  - packaged capability mode=paths
+  - path/criticality bigrams/trigrams
+  - repetition penalties
+  - severity distribution
+  - soft presence
+  - structural coverage
 - Base technique: LightGBM binary classifier: estimators=500, num_leaves=96, max_depth=14, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0, reg_lambda=1, early_stop=?, device=cpu.
 - Decision rule: route-level OR ensemble calibrated against the full score-cache corpus.
+- Runtime route: score `az`, plus `az/<filegroup>` and `az/<filetype>` when calibrated.
+- At level L, a file is flagged when any routed score crosses its stored threshold.
+- Threshold search maximizes `TP(union)` subject to `FP(union) <= floor(benign * target_L / 1e6)`.
+- A specialist is kept only when it adds marginal true positives without breaking that union FP cap.
 - Calibration snapshot: `51198735`.
 - Calibration rows: 2173639 (393489 malware, 1780150 benign).
 - Models: 34 routes.

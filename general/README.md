@@ -3,7 +3,20 @@
 General malware detector used for every routed decision.
 
 - Inputs: shared `feature_spec.json` (28960 features) extracted from cleave reports.
-- Feature families: hopper score, cleave trait taxonomy, element tokens, path/criticality bigrams/trigrams, ATT&CK/MBC n-grams, aggregate finding counts, extended file metrics, soft presence, repetition penalties, severity distribution, hostile density/escalation, structural coverage; clusters disabled; packaged capability mode=paths.
+- Feature families:
+  - aggregate finding counts
+  - ATT&CK/MBC n-grams
+  - cleave trait taxonomy
+  - element tokens
+  - extended file metrics
+  - hopper score
+  - hostile density/escalation
+  - packaged capability mode=paths
+  - path/criticality bigrams/trigrams
+  - repetition penalties
+  - severity distribution
+  - soft presence
+  - structural coverage
 - Technique: LightGBM binary classifier: estimators=500, num_leaves=96, max_depth=14, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0, reg_lambda=1, early_stop=?, device=cpu.
 - Calibration corpus: 2173639 rows (393489 malware, 1780150 benign).
 

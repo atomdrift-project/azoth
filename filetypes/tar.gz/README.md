@@ -1,7 +1,20 @@
 # Azoth Filetype `tar.gz`
 Specialist model for `tar.gz`.
 - Inputs: shared general `feature_spec.json` (28960 features); policy `general_shared`.
-- Feature families: hopper score, cleave trait taxonomy, element tokens, path/criticality bigrams/trigrams, ATT&CK/MBC n-grams, aggregate finding counts, extended file metrics, soft presence, repetition penalties, severity distribution, hostile density/escalation, structural coverage; clusters disabled; packaged capability mode=paths.
+- Feature families:
+  - aggregate finding counts
+  - ATT&CK/MBC n-grams
+  - cleave trait taxonomy
+  - element tokens
+  - extended file metrics
+  - hopper score
+  - hostile density/escalation
+  - packaged capability mode=paths
+  - path/criticality bigrams/trigrams
+  - repetition penalties
+  - severity distribution
+  - soft presence
+  - structural coverage
 - Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=25, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Training rows: 15791 (9466 malware, 6325 benign).
 - Benchmark rows: 2420 (1331 malware, 1089 benign).

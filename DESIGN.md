@@ -144,6 +144,47 @@ Independent budgets add risk faster than they add detection.
 Training may use a budget allocation as a search hint. Deployment must use
 thresholds proven against the combined routed decision.
 
+More formally, let the calibration corpus contain `B` benign files and `M`
+malware files. For a severity target `q` false positives per million, the
+allowed false-positive count is:
+
+```text
+K = floor(B * q / 1,000,000)
+```
+
+Each route `r` has a score `s_r(x)` and a threshold `t_r`. A file is detected
+when any applicable route fires:
+
+```text
+D(x) = OR_r [s_r(x) >= t_r]
+```
+
+Calibration chooses the threshold tuple `T = {t_general, t_group, t_type...}`
+to maximize:
+
+```text
+TP(T) = count(malware x where D_T(x))
+```
+
+subject to:
+
+```text
+FP(T) = count(benign x where D_T(x)) <= K
+```
+
+That is the whole budget rule. A specialist is not allowed because it has a
+private budget. It is allowed only if the new union of hits still has at most
+`K` benign files. If a general-model false positive and an ELF-model false
+positive are the same file, they cost one false positive. If they are different
+files, they cost two.
+
+The current search starts with the best general threshold under `K`, then
+repeatedly tries every candidate threshold for every route. It keeps the single
+change that adds the most new malware detections while keeping `FP(T) <= K`,
+preferring the lower FP increase on ties. Search stops when no route can add a
+new true positive inside the budget. The deployed thresholds are the resulting
+tuple, not independently calibrated model thresholds.
+
 ## Calibration Corpus
 
 Calibration uses the full labeled corpus at a pinned snapshot:
