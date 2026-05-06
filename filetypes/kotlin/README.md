@@ -34,7 +34,7 @@ Specialist model for `kotlin`.
 ## Routed Policy
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
-| 5 | hostile | group_primary_with_escape | 57.83% | 0 | 0.00 | `{"filegroups/source": 0.5903330445289612, "filetypes/kotlin": 0.06616190075874329}` |
-| 5 | suspicious | group_primary_with_escape | 57.83% | 0 | 0.00 | `{"filegroups/source": 0.5903330445289612, "filetypes/kotlin": 0.06616190075874329}` |
-| 9 | hostile | group_primary_with_escape | 57.83% | 0 | 0.00 | `{"filegroups/source": 0.5903330445289612, "filetypes/kotlin": 0.06616190075874329}` |
-| 9 | suspicious | or_general_primary | 59.90% | 2 | 69.28 | `{"filetypes/kotlin": 0.06616190075874329, "general": 0.13608065247535706}` |
+| 5 | hostile | group_primary_with_escape | 57.92% | 0 | 0.00 | `{"filegroups/source": 0.5903330445289612, "filetypes/kotlin": 0.06616190075874329}` |
+| 5 | suspicious | group_primary_with_escape | 57.92% | 0 | 0.00 | `{"filegroups/source": 0.5903330445289612, "filetypes/kotlin": 0.06616190075874329}` |
+| 9 | hostile | group_primary_with_escape | 57.92% | 0 | 0.00 | `{"filegroups/source": 0.5903330445289612, "filetypes/kotlin": 0.06616190075874329}` |
+| 9 | suspicious | or_general_primary | 60.00% | 2 | 69.28 | `{"filetypes/kotlin": 0.06616190075874329, "general": 0.13608065247535706}` |

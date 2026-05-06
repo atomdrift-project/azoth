@@ -35,6 +35,6 @@ Specialist model for `c`.
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
 | 5 | hostile | no_policy | 0.00% | 0 | 0.00 | `{}` |
-| 5 | suspicious | group_primary_with_escape | 35.77% | 19 | 45.71 | `{"filegroups/source": 0.9536082148551941, "general": 0.9373036026954651}` |
-| 9 | hostile | group_primary_with_escape | 27.99% | 3 | 7.22 | `{"filegroups/source": 0.9845417737960815, "general": 0.9909083247184753}` |
-| 9 | suspicious | group_primary_with_escape | 36.15% | 33 | 79.39 | `{"filegroups/source": 0.9020361304283142, "general": 0.9866744875907898}` |
+| 5 | suspicious | group_primary_with_escape | 35.76% | 19 | 45.71 | `{"filegroups/source": 0.9536082148551941, "general": 0.9373036026954651}` |
+| 9 | hostile | group_primary_with_escape | 27.98% | 3 | 7.22 | `{"filegroups/source": 0.9845417737960815, "general": 0.9909083247184753}` |
+| 9 | suspicious | group_primary_with_escape | 36.14% | 33 | 79.39 | `{"filegroups/source": 0.9020361304283142, "general": 0.9866744875907898}` |

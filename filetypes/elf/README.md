@@ -34,7 +34,7 @@ Specialist model for `elf`.
 ## Routed Policy
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
-| 5 | hostile | filetype_only | 98.99% | 1 | 10.49 | `{"filetypes/elf": 0.9951940178871155}` |
-| 5 | suspicious | filetype_only | 99.41% | 4 | 41.96 | `{"filetypes/elf": 0.973215639591217}` |
-| 9 | hostile | filetype_only | 98.99% | 1 | 10.49 | `{"filetypes/elf": 0.9951940178871155}` |
-| 9 | suspicious | filetype_only | 99.58% | 7 | 73.43 | `{"filetypes/elf": 0.9218172430992126}` |
+| 5 | hostile | specialist_primary_with_escape | 99.05% | 1 | 10.49 | `{"filegroups/native": 0.9987809062004089, "filetypes/elf": 0.9951940178871155}` |
+| 5 | suspicious | specialist_primary_with_escape | 99.47% | 4 | 41.96 | `{"filegroups/native": 0.9984544515609741, "filetypes/elf": 0.973215639591217}` |
+| 9 | hostile | specialist_primary_with_escape | 99.05% | 1 | 10.49 | `{"filegroups/native": 0.9987809062004089, "filetypes/elf": 0.9951940178871155}` |
+| 9 | suspicious | specialist_primary_with_escape | 99.64% | 7 | 73.43 | `{"filegroups/native": 0.9984544515609741, "filetypes/elf": 0.9218172430992126}` |

@@ -35,6 +35,6 @@ Specialist model for `jar`.
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
 | 5 | hostile | no_policy | 0.00% | 0 | 0.00 | `{}` |
-| 5 | suspicious | or_general_primary | 88.22% | 1 | 942.51 | `{"filegroups/portable": 0.8732023239135742, "filetypes/jar": 0.9174808859825134, "general": 0.8665791749954224}` |
-| 9 | hostile | or_general_primary | 88.22% | 1 | 942.51 | `{"filegroups/portable": 0.8732023239135742, "filetypes/jar": 0.9174808859825134, "general": 0.8665791749954224}` |
-| 9 | suspicious | or_general_primary | 88.22% | 1 | 942.51 | `{"filegroups/portable": 0.8732023239135742, "filetypes/jar": 0.9174808859825134, "general": 0.8665791749954224}` |
+| 5 | suspicious | or_general_primary | 88.36% | 1 | 942.51 | `{"filegroups/portable": 0.8732023239135742, "filetypes/jar": 0.9174808859825134, "general": 0.8665791749954224}` |
+| 9 | hostile | or_general_primary | 88.36% | 1 | 942.51 | `{"filegroups/portable": 0.8732023239135742, "filetypes/jar": 0.9174808859825134, "general": 0.8665791749954224}` |
+| 9 | suspicious | or_general_primary | 88.36% | 1 | 942.51 | `{"filegroups/portable": 0.8732023239135742, "filetypes/jar": 0.9174808859825134, "general": 0.8665791749954224}` |

@@ -35,6 +35,6 @@ Specialist model for `ole`.
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
 | 5 | hostile | no_policy | 0.00% | 0 | 0.00 | `{}` |
-| 5 | suspicious | group_primary_with_escape | 88.93% | 1 | 188.43 | `{"filetypes/ole": 0.9899150729179382, "general": 0.9884464740753174}` |
+| 5 | suspicious | group_primary_with_escape | 89.08% | 1 | 188.61 | `{"filetypes/ole": 0.9899150729179382, "general": 0.9884464740753174}` |
 | 9 | hostile | no_policy | 0.00% | 0 | 0.00 | `{}` |
-| 9 | suspicious | group_primary_with_escape | 88.93% | 1 | 188.43 | `{"filetypes/ole": 0.9899150729179382, "general": 0.9884464740753174}` |
+| 9 | suspicious | group_primary_with_escape | 89.08% | 1 | 188.61 | `{"filetypes/ole": 0.9899150729179382, "general": 0.9884464740753174}` |

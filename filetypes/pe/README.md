@@ -34,7 +34,7 @@ Specialist model for `pe`.
 ## Routed Policy
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
-| 5 | hostile | specialist_primary_with_escape | 65.07% | 1 | 7.52 | `{"filegroups/native": 0.9998120069503784, "filetypes/pe": 0.9995437860488892, "general": 0.9996013045310974}` |
-| 5 | suspicious | specialist_primary_with_escape | 75.22% | 6 | 45.10 | `{"filegroups/native": 0.9998120069503784, "filetypes/pe": 0.9987611770629883, "general": 0.9993268251419067}` |
-| 9 | hostile | specialist_primary_with_escape | 65.07% | 1 | 7.52 | `{"filegroups/native": 0.9998120069503784, "filetypes/pe": 0.9995437860488892, "general": 0.9996013045310974}` |
-| 9 | suspicious | specialist_primary_with_escape | 75.93% | 10 | 75.17 | `{"filegroups/native": 0.9998120069503784, "filetypes/pe": 0.9986722469329834, "general": 0.9993268251419067}` |
+| 5 | hostile | specialist_primary_with_escape | 65.14% | 1 | 7.52 | `{"filegroups/native": 0.9999709725379944, "filetypes/pe": 0.9995437860488892, "general": 0.9996013045310974}` |
+| 5 | suspicious | specialist_primary_with_escape | 75.43% | 6 | 45.10 | `{"filegroups/native": 0.9999709725379944, "filetypes/pe": 0.9987611770629883, "general": 0.9993268251419067}` |
+| 9 | hostile | specialist_primary_with_escape | 65.14% | 1 | 7.52 | `{"filegroups/native": 0.9999709725379944, "filetypes/pe": 0.9995437860488892, "general": 0.9996013045310974}` |
+| 9 | suspicious | specialist_primary_with_escape | 76.13% | 10 | 75.17 | `{"filegroups/native": 0.9999709725379944, "filetypes/pe": 0.9986722469329834, "general": 0.9993268251419067}` |

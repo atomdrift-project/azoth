@@ -34,7 +34,7 @@ Specialist model for `javascript`.
 ## Routed Policy
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
-| 5 | hostile | or_general_primary | 87.03% | 1 | 3.00 | `{"filegroups/scripts": 0.9992733001708984, "filetypes/javascript": 0.9957285523414612, "general": 0.9862461090087891}` |
+| 5 | hostile | or_general_primary | 87.04% | 1 | 3.00 | `{"filegroups/scripts": 0.9992733001708984, "filetypes/javascript": 0.9957285523414612, "general": 0.9862461090087891}` |
 | 5 | suspicious | specialist_primary_with_escape | 90.89% | 15 | 45.03 | `{"filegroups/scripts": 0.9973033666610718, "filetypes/javascript": 0.9692838788032532, "general": 0.9862461090087891}` |
 | 9 | hostile | group_primary_with_escape | 89.07% | 2 | 6.00 | `{"filegroups/scripts": 0.998188853263855, "filetypes/javascript": 0.9908182621002197, "general": 0.9862461090087891}` |
 | 9 | suspicious | specialist_primary_with_escape | 91.86% | 26 | 78.05 | `{"filegroups/scripts": 0.9973033666610718, "filetypes/javascript": 0.9480387568473816, "general": 0.9840287566184998}` |
