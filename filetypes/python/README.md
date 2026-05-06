@@ -35,7 +35,7 @@ Specialist model for `python`.
 ## Routed Policy
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
-| 5 | hostile | or_general_primary | 87.78% | 1 | 10.23 | `{"filegroups/scripts": 0.9941955804824829, "filetypes/python": 0.9985394477844238, "general": 0.9818487763404846}` |
-| 5 | suspicious | or_general_primary | 90.76% | 4 | 40.91 | `{"filegroups/scripts": 0.9941955804824829, "filetypes/python": 0.9985394477844238, "general": 0.9685817956924438}` |
-| 9 | hostile | or_general_primary | 87.78% | 1 | 10.23 | `{"filegroups/scripts": 0.9941955804824829, "filetypes/python": 0.9985394477844238, "general": 0.9818487763404846}` |
-| 9 | suspicious | specialist_primary_with_escape | 92.11% | 7 | 71.59 | `{"filegroups/scripts": 0.9941955804824829, "filetypes/python": 0.9817735552787781, "general": 0.9743776917457581}` |
+| 5 | hostile | or_general_primary | 89.91% | 1 | 10.23 | `{"filegroups/scripts": 0.9941955804824829, "filetypes/python": 0.9961860775947571, "general": 0.9818487763404846}` |
+| 5 | suspicious | or_general_primary | 92.67% | 4 | 40.91 | `{"filegroups/scripts": 0.9941955804824829, "filetypes/python": 0.9961860775947571, "general": 0.9685817956924438}` |
+| 9 | hostile | or_general_primary | 89.91% | 1 | 10.23 | `{"filegroups/scripts": 0.9941955804824829, "filetypes/python": 0.9961860775947571, "general": 0.9818487763404846}` |
+| 9 | suspicious | or_general_primary | 93.14% | 7 | 71.59 | `{"filegroups/scripts": 0.9941955804824829, "filetypes/python": 0.9961860775947571, "general": 0.9583919048309326}` |
