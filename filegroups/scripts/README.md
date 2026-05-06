@@ -1,6 +1,6 @@
 # Azoth Filegroup `scripts`
 Specialist model for `batch`, `javascript`, `lua`, `perl`, `php`, `powershell`, `python`, `ruby`, `shell`, `typescript`, `vbscript`.
-- Inputs: shared general `feature_spec.json` (28960 features); policy `general_shared`.
+- Inputs: shared general `feature_spec.json` (45160 features); policy `general_shared`.
 - Feature families:
   - aggregate finding counts
   - ATT&CK/MBC n-grams
@@ -15,19 +15,19 @@ Specialist model for `batch`, `javascript`, `lua`, `perl`, `php`, `powershell`, 
   - severity distribution
   - soft presence
   - structural coverage
-- Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=25, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
-- Training rows: 99017 (56468 malware, 42549 benign).
-- Benchmark rows: 73784 (8649 malware, 65135 benign).
-- Benchmark AUC/AP/F1: 0.9867 / 0.9723 / 0.9685.
+- Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
+- Training rows: 605458 (66428 malware, 539030 benign).
+- Benchmark rows: 87084 (9808 malware, 77276 benign).
+- Benchmark AUC/AP/F1: 0.9992 / 0.9970 / 0.9849.
 | L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | - | 84.47% | 0.00 | 0.998958 | 8.0 | 91.50% | 15.35 | 0.984926 |
-| 1 | 1.0 | 91.50% | 15.35 | 0.984926 | 16.0 | 91.50% | 15.35 | 0.984926 |
-| 2 | 2.0 | 91.50% | 15.35 | 0.984926 | 24.0 | 91.50% | 15.35 | 0.984926 |
-| 3 | 3.0 | 91.50% | 15.35 | 0.984926 | 32.0 | 92.20% | 30.71 | 0.972963 |
-| 4 | 4.0 | 91.50% | 15.35 | 0.984926 | 40.0 | 92.20% | 30.71 | 0.972963 |
-| 5 | 5.0 | 91.50% | 15.35 | 0.984926 | 48.0 | 92.37% | 46.06 | 0.966879 |
-| 6 | 6.0 | 91.50% | 15.35 | 0.984926 | 56.0 | 92.37% | 46.06 | 0.966879 |
-| 7 | 7.0 | 91.50% | 15.35 | 0.984926 | 64.0 | 92.46% | 61.41 | 0.964678 |
-| 8 | 8.0 | 91.50% | 15.35 | 0.984926 | 72.0 | 92.46% | 61.41 | 0.964678 |
-| 9 | 9.0 | 91.50% | 15.35 | 0.984926 | 80.0 | 92.66% | 76.76 | 0.954358 |
+| 0 | - | 80.70% | 0.00 | 0.999570 | 8.0 | 92.43% | 12.94 | 0.994739 |
+| 1 | 1.0 | 92.43% | 12.94 | 0.994739 | 16.0 | 92.43% | 12.94 | 0.994739 |
+| 2 | 2.0 | 92.43% | 12.94 | 0.994739 | 24.0 | 92.43% | 12.94 | 0.994739 |
+| 3 | 3.0 | 92.43% | 12.94 | 0.994739 | 32.0 | 93.73% | 25.88 | 0.990744 |
+| 4 | 4.0 | 92.43% | 12.94 | 0.994739 | 40.0 | 94.52% | 38.82 | 0.985312 |
+| 5 | 5.0 | 92.43% | 12.94 | 0.994739 | 48.0 | 94.52% | 38.82 | 0.985312 |
+| 6 | 6.0 | 92.43% | 12.94 | 0.994739 | 56.0 | 94.58% | 51.76 | 0.984939 |
+| 7 | 7.0 | 92.43% | 12.94 | 0.994739 | 64.0 | 94.58% | 51.76 | 0.984939 |
+| 8 | 8.0 | 92.43% | 12.94 | 0.994739 | 72.0 | 94.86% | 64.70 | 0.982325 |
+| 9 | 9.0 | 92.43% | 12.94 | 0.994739 | 80.0 | 94.88% | 77.64 | 0.982238 |

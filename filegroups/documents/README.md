@@ -1,6 +1,6 @@
 # Azoth Filegroup `documents`
 Specialist model for `doc`, `docx`, `html`, `ole`, `pdf`, `ppt`, `pptx`, `rtf`, `xls`, `xlsx`.
-- Inputs: shared general `feature_spec.json` (28960 features); policy `general_shared`.
+- Inputs: shared general `feature_spec.json` (37595 features); policy `general_shared`.
 - Feature families:
   - aggregate finding counts
   - ATT&CK/MBC n-grams
@@ -15,10 +15,10 @@ Specialist model for `doc`, `docx`, `html`, `ole`, `pdf`, `ppt`, `pptx`, `rtf`, 
   - severity distribution
   - soft presence
   - structural coverage
-- Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=25, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
-- Training rows: 1514 (1420 malware, 94 benign).
-- Benchmark rows: 1236 (217 malware, 1019 benign).
-- Benchmark AUC/AP/F1: 0.5000 / 0.1756 / 0.2987.
+- Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
+- Training rows: 2141 (2040 malware, 101 benign).
+- Benchmark rows: 1340 (305 malware, 1035 benign).
+- Benchmark AUC/AP/F1: 0.5000 / 0.2276 / 0.3708.
 
 - Note: benchmark AUC is degenerate on this split; keep the artifact for coverage, but rely on routed full-corpus calibration before using it.
 | L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |

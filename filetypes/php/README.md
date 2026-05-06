@@ -1,6 +1,6 @@
 # Azoth Filetype `php`
 Specialist model for `php`.
-- Inputs: shared general `feature_spec.json` (28960 features); policy `general_shared`.
+- Inputs: shared general `feature_spec.json` (37595 features); policy `general_shared`.
 - Feature families:
   - aggregate finding counts
   - ATT&CK/MBC n-grams
@@ -15,19 +15,26 @@ Specialist model for `php`.
   - severity distribution
   - soft presence
   - structural coverage
-- Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=25, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
-- Training rows: 1630 (1007 malware, 623 benign).
-- Benchmark rows: 2001 (156 malware, 1845 benign).
-- Benchmark AUC/AP/F1: 0.9995 / 0.9955 / 0.9775.
+- Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
+- Training rows: 17083 (1090 malware, 15993 benign).
+- Benchmark rows: 2418 (160 malware, 2258 benign).
+- Benchmark AUC/AP/F1: 0.9999 / 0.9986 / 0.9874.
 | L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | - | 93.59% | 0.00 | 0.769494 | 8.0 | 96.15% | 542.01 | 0.527555 |
-| 1 | 1.0 | 96.15% | 542.01 | 0.527555 | 16.0 | 96.15% | 542.01 | 0.527555 |
-| 2 | 2.0 | 96.15% | 542.01 | 0.527555 | 24.0 | 96.15% | 542.01 | 0.527555 |
-| 3 | 3.0 | 96.15% | 542.01 | 0.527555 | 32.0 | 96.15% | 542.01 | 0.527555 |
-| 4 | 4.0 | 96.15% | 542.01 | 0.527555 | 40.0 | 96.15% | 542.01 | 0.527555 |
-| 5 | 5.0 | 96.15% | 542.01 | 0.527555 | 48.0 | 96.15% | 542.01 | 0.527555 |
-| 6 | 6.0 | 96.15% | 542.01 | 0.527555 | 56.0 | 96.15% | 542.01 | 0.527555 |
-| 7 | 7.0 | 96.15% | 542.01 | 0.527555 | 64.0 | 96.15% | 542.01 | 0.527555 |
-| 8 | 8.0 | 96.15% | 542.01 | 0.527555 | 72.0 | 96.15% | 542.01 | 0.527555 |
-| 9 | 9.0 | 96.15% | 542.01 | 0.527555 | 80.0 | 96.15% | 542.01 | 0.527555 |
+| 0 | - | 95.00% | 0.00 | 0.970051 | 8.0 | 98.12% | 442.87 | 0.885103 |
+| 1 | 1.0 | 98.12% | 442.87 | 0.885103 | 16.0 | 98.12% | 442.87 | 0.885103 |
+| 2 | 2.0 | 98.12% | 442.87 | 0.885103 | 24.0 | 98.12% | 442.87 | 0.885103 |
+| 3 | 3.0 | 98.12% | 442.87 | 0.885103 | 32.0 | 98.12% | 442.87 | 0.885103 |
+| 4 | 4.0 | 98.12% | 442.87 | 0.885103 | 40.0 | 98.12% | 442.87 | 0.885103 |
+| 5 | 5.0 | 98.12% | 442.87 | 0.885103 | 48.0 | 98.12% | 442.87 | 0.885103 |
+| 6 | 6.0 | 98.12% | 442.87 | 0.885103 | 56.0 | 98.12% | 442.87 | 0.885103 |
+| 7 | 7.0 | 98.12% | 442.87 | 0.885103 | 64.0 | 98.12% | 442.87 | 0.885103 |
+| 8 | 8.0 | 98.12% | 442.87 | 0.885103 | 72.0 | 98.12% | 442.87 | 0.885103 |
+| 9 | 9.0 | 98.12% | 442.87 | 0.885103 | 80.0 | 98.12% | 442.87 | 0.885103 |
+## Routed Policy
+| L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
+| ---: | --- | --- | ---: | ---: | ---: | --- |
+| 5 | hostile | filetype_only | 82.36% | 0 | 0.00 | `{"filetypes/php": 0.9792458415031433}` |
+| 5 | suspicious | group_primary_with_escape | 85.32% | 1 | 61.07 | `{"filegroups/scripts": 0.944978654384613, "filetypes/php": 0.9792458415031433, "general": 0.92668616771698}` |
+| 9 | hostile | filetype_only | 82.36% | 0 | 0.00 | `{"filetypes/php": 0.9792458415031433}` |
+| 9 | suspicious | group_primary_with_escape | 85.32% | 1 | 61.07 | `{"filegroups/scripts": 0.944978654384613, "filetypes/php": 0.9792458415031433, "general": 0.92668616771698}` |
