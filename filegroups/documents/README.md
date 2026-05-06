@@ -7,6 +7,7 @@ Specialist model for `doc`, `docx`, `html`, `ole`, `pdf`, `ppt`, `pptx`, `rtf`, 
   - cleave trait taxonomy
   - element tokens
   - extended file metrics
+  - format-group hints
   - hopper score
   - hostile density/escalation
   - packaged capability mode=paths

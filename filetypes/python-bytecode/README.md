@@ -7,6 +7,7 @@ Specialist model for `python-bytecode`.
   - cleave trait taxonomy
   - element tokens
   - extended file metrics
+  - format-group hints
   - hopper score
   - hostile density/escalation
   - packaged capability mode=paths
