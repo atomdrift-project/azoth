@@ -35,7 +35,7 @@ Specialist model for `shell`.
 ## Routed Policy
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
-| 5 | hostile | no_policy | 0.00% | 0 | 0.00 | `{}` |
-| 5 | suspicious | group_primary_with_escape | 69.31% | 1 | 28.11 | `{"filegroups/scripts": 0.9822300672531128, "filetypes/shell": 0.9585855007171631, "general": 0.9515489339828491}` |
-| 9 | hostile | group_primary_with_escape | 69.31% | 1 | 28.11 | `{"filegroups/scripts": 0.9822300672531128, "filetypes/shell": 0.9585855007171631, "general": 0.9515489339828491}` |
-| 9 | suspicious | specialist_primary_with_escape | 70.73% | 2 | 56.22 | `{"filegroups/scripts": 0.9822300672531128, "filetypes/shell": 0.9323660731315613, "general": 0.9515489339828491}` |
+| 5 | hostile | group_primary_with_escape | 71.01% | 1 | 28.11 | `{"filegroups/scripts": 0.9822300672531128, "filetypes/shell": 0.9583697319030762, "general": 0.9515489339828491}` |
+| 5 | suspicious | group_primary_with_escape | 71.01% | 1 | 28.11 | `{"filegroups/scripts": 0.9822300672531128, "filetypes/shell": 0.9583697319030762, "general": 0.9515489339828491}` |
+| 9 | hostile | group_primary_with_escape | 71.01% | 1 | 28.11 | `{"filegroups/scripts": 0.9822300672531128, "filetypes/shell": 0.9583697319030762, "general": 0.9515489339828491}` |
+| 9 | suspicious | specialist_primary_with_escape | 73.12% | 2 | 56.22 | `{"filegroups/scripts": 0.9822300672531128, "filetypes/shell": 0.9342930316925049, "general": 0.9515489339828491}` |

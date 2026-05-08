@@ -2,7 +2,7 @@
 
 General malware detector used for every routed decision.
 
-- Inputs: shared `feature_spec.json` (45160 features) extracted from cleave reports.
+- Inputs: shared `feature_spec.json` (49112 features) extracted from cleave reports.
 - Feature families:
   - aggregate finding counts
   - ATT&CK/MBC n-grams
@@ -18,7 +18,7 @@ General malware detector used for every routed decision.
   - severity distribution
   - soft presence
   - structural coverage
-- Technique: LightGBM binary classifier: estimators=600, num_leaves=160, max_depth=12, min_child_samples=100, learning_rate=0.03, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=60, device=cpu.
+- Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Calibration corpus: 2293938 rows (472475 malware, 1821463 benign).
 
 | L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |

@@ -36,6 +36,6 @@ Specialist model for `macho`.
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
 | 5 | hostile | no_policy | 0.00% | 0 | 0.00 | `{}` |
-| 5 | suspicious | group_primary_with_escape | 60.03% | 1 | 206.02 | `{"filegroups/native": 0.9966633915901184, "filetypes/macho": 0.9784113764762878, "general": 0.9814670085906982}` |
-| 9 | hostile | group_primary_with_escape | 60.03% | 1 | 206.02 | `{"filegroups/native": 0.9966633915901184, "filetypes/macho": 0.9784113764762878, "general": 0.9814670085906982}` |
-| 9 | suspicious | group_primary_with_escape | 60.03% | 1 | 206.02 | `{"filegroups/native": 0.9966633915901184, "filetypes/macho": 0.9784113764762878, "general": 0.9814670085906982}` |
+| 5 | suspicious | group_primary_with_escape | 61.27% | 1 | 206.02 | `{"filegroups/native": 0.9966633915901184, "filetypes/macho": 0.9784113764762878, "general": 0.9814670085906982}` |
+| 9 | hostile | group_primary_with_escape | 61.27% | 1 | 206.02 | `{"filegroups/native": 0.9966633915901184, "filetypes/macho": 0.9784113764762878, "general": 0.9814670085906982}` |
+| 9 | suspicious | group_primary_with_escape | 61.27% | 1 | 206.02 | `{"filegroups/native": 0.9966633915901184, "filetypes/macho": 0.9784113764762878, "general": 0.9814670085906982}` |

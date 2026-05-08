@@ -1,6 +1,6 @@
 # Azoth Filetype `xlsx`
 Specialist model for `xlsx`.
-- Inputs: shared general `feature_spec.json` (37595 features); policy `general_shared`.
+- Inputs: shared general `feature_spec.json` (49112 features); policy `general_shared`.
 - Feature families:
   - aggregate finding counts
   - ATT&CK/MBC n-grams
@@ -17,9 +17,9 @@ Specialist model for `xlsx`.
   - soft presence
   - structural coverage
 - Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
-- Training rows: 147 (76 malware, 71 benign).
-- Benchmark rows: 17 (11 malware, 6 benign).
-- Benchmark AUC/AP/F1: 0.5000 / 0.6471 / 0.7857.
+- Training rows: 189 (106 malware, 83 benign).
+- Benchmark rows: 23 (15 malware, 8 benign).
+- Benchmark AUC/AP/F1: 0.5000 / 0.6522 / 0.7895.
 
 - Note: benchmark AUC is degenerate on this split; keep the artifact for coverage, but rely on routed full-corpus calibration before using it.
 | L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |

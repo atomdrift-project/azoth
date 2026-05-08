@@ -36,6 +36,6 @@ Specialist model for `plist`.
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
 | 5 | hostile | no_policy | 0.00% | 0 | 0.00 | `{}` |
-| 5 | suspicious | or_general_primary | 8.12% | 1 | 112.83 | `{"filetypes/plist": 0.6069956421852112, "general": 0.16379986703395844}` |
+| 5 | suspicious | or_general_primary | 8.76% | 1 | 112.83 | `{"filegroups/config": 0.049664970487356186, "filetypes/plist": 0.6069956421852112, "general": 0.16379986703395844}` |
 | 9 | hostile | no_policy | 0.00% | 0 | 0.00 | `{}` |
-| 9 | suspicious | or_general_primary | 8.12% | 1 | 112.83 | `{"filetypes/plist": 0.6069956421852112, "general": 0.16379986703395844}` |
+| 9 | suspicious | or_general_primary | 8.76% | 1 | 112.83 | `{"filegroups/config": 0.049664970487356186, "filetypes/plist": 0.6069956421852112, "general": 0.16379986703395844}` |

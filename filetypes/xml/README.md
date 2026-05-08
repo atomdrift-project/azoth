@@ -35,7 +35,7 @@ Specialist model for `xml`.
 ## Routed Policy
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
-| 5 | hostile | general_only | 2.61% | 0 | 0.00 | `{"general": 0.6749266386032104}` |
-| 5 | suspicious | or_general_primary | 2.70% | 1 | 12.00 | `{"filegroups/config": 0.06453686207532883, "general": 0.6749266386032104}` |
-| 9 | hostile | general_only | 2.61% | 0 | 0.00 | `{"general": 0.6749266386032104}` |
-| 9 | suspicious | general_only | 2.80% | 5 | 59.98 | `{"general": 0.10532117635011673}` |
+| 5 | hostile | or_general_primary | 2.70% | 0 | 0.00 | `{"filegroups/config": 0.5439979434013367, "general": 0.6749266386032104}` |
+| 5 | suspicious | or_general_primary | 3.09% | 2 | 23.99 | `{"filegroups/config": 0.05154723674058914, "general": 0.6749266386032104}` |
+| 9 | hostile | or_general_primary | 2.70% | 0 | 0.00 | `{"filegroups/config": 0.5439979434013367, "general": 0.6749266386032104}` |
+| 9 | suspicious | or_general_primary | 3.19% | 6 | 71.98 | `{"filegroups/config": 0.05154723674058914, "general": 0.10532117635011673}` |

@@ -35,7 +35,7 @@ Specialist model for `rust`.
 ## Routed Policy
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
-| 5 | hostile | group_primary_with_escape | 25.00% | 0 | 0.00 | `{"filegroups/source": 0.6817883253097534, "general": 0.09213332086801529}` |
-| 5 | suspicious | group_primary_with_escape | 25.00% | 0 | 0.00 | `{"filegroups/source": 0.6817883253097534, "general": 0.09213332086801529}` |
-| 9 | hostile | group_primary_with_escape | 25.00% | 0 | 0.00 | `{"filegroups/source": 0.6817883253097534, "general": 0.09213332086801529}` |
-| 9 | suspicious | group_primary_with_escape | 26.92% | 4 | 62.94 | `{"filegroups/source": 0.6817883253097534, "filetypes/rust": 5.522569467280327e-24, "general": 0.09213332086801529}` |
+| 5 | hostile | group_only | 26.92% | 0 | 0.00 | `{"filegroups/source": 0.5780653357505798}` |
+| 5 | suspicious | group_only | 26.92% | 0 | 0.00 | `{"filegroups/source": 0.5780653357505798}` |
+| 9 | hostile | group_only | 26.92% | 0 | 0.00 | `{"filegroups/source": 0.5780653357505798}` |
+| 9 | suspicious | group_only | 26.92% | 0 | 0.00 | `{"filegroups/source": 0.5780653357505798}` |

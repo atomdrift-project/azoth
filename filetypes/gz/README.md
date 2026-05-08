@@ -35,7 +35,7 @@ Specialist model for `gz`.
 ## Routed Policy
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
-| 5 | hostile | group_only | 27.37% | 0 | 0.00 | `{"filegroups/archive": 0.6915613412857056}` |
-| 5 | suspicious | group_only | 27.37% | 0 | 0.00 | `{"filegroups/archive": 0.6915613412857056}` |
-| 9 | hostile | group_only | 27.37% | 0 | 0.00 | `{"filegroups/archive": 0.6915613412857056}` |
-| 9 | suspicious | group_only | 27.37% | 0 | 0.00 | `{"filegroups/archive": 0.6915613412857056}` |
+| 5 | hostile | no_policy | 0.00% | 0 | 0.00 | `{}` |
+| 5 | suspicious | or_general_primary | 29.05% | 1 | 36.63 | `{"filegroups/archive": 0.8133890628814697, "general": 0.8026745319366455}` |
+| 9 | hostile | no_policy | 0.00% | 0 | 0.00 | `{}` |
+| 9 | suspicious | or_general_primary | 29.05% | 1 | 36.63 | `{"filegroups/archive": 0.8133890628814697, "general": 0.8026745319366455}` |

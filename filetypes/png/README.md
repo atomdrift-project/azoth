@@ -36,6 +36,6 @@ Specialist model for `png`.
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
 | 5 | hostile | general_only | 0.03% | 0 | 0.00 | `{"general": 0.8867951035499573}` |
-| 5 | suspicious | or_general_primary | 0.97% | 1 | 16.60 | `{"filegroups/media": 0.9706203937530518, "general": 0.8867951035499573}` |
+| 5 | suspicious | or_general_primary | 1.23% | 1 | 16.60 | `{"filegroups/media": 0.9699244499206543, "general": 0.8867951035499573}` |
 | 9 | hostile | general_only | 0.03% | 0 | 0.00 | `{"general": 0.8867951035499573}` |
-| 9 | suspicious | or_general_primary | 0.97% | 1 | 16.60 | `{"filegroups/media": 0.9706203937530518, "general": 0.8867951035499573}` |
+| 9 | suspicious | or_general_primary | 1.23% | 1 | 16.60 | `{"filegroups/media": 0.9699244499206543, "general": 0.8867951035499573}` |
