@@ -26,16 +26,25 @@ The naive `max(raw_general, raw_filegroup, raw_specialist)` we used in earlier d
 
 ## General vs specialist vs ensemble
 
-Three views of each filetype, evaluated on **1963 test-partition rows** (SHA256-deterministic 12.5% locked holdout — never seen during training or calibration). 'Ensemble' uses the per-filetype winning strategy from above; 'Routing policy' is the deployed thresholded decision at the default operating level (a separate concern from the raw AUC of the combiner).
+Three views of each filetype, evaluated on **372198 test-partition rows** (SHA256-deterministic 12.5% locked holdout — never seen during training or calibration). 'Ensemble' uses the per-filetype winning strategy from above; 'Routing policy' is the deployed thresholded decision at the default operating level (a separate concern from the raw AUC of the combiner).
 
 | File type | Files | General ROC | Specialist ROC | Ensemble ROC | Strategy | Routing policy |
 |---|---:|---:|---:|---:|---|---|
-| `pe` | 1253 | 1.0000 | 1.0000 | 1.0000 | `calibrated_max` | `specialist_primary_with_escape` |
-| `elf` | 14 | 0.0000 | 0.0000 | 0.0000 | `specialist_priority` | `no_policy` |
-| `msi` | 2 | 0.0000 | 0.0000 | 0.0000 | `calibrated_max` | `or_general_primary` |
-| `javascript` | 11 | 1.0000 | 1.0000 | 1.0000 | `specialist_priority` | `no_policy` |
-| `shell` | 21 | 0.0000 | 0.0000 | 0.0000 | `calibrated_max` | `group_only` |
-| `jar` | 13 | 0.0000 | 0.0000 | 0.0000 | `specialist_priority` | `no_policy` |
+| `pe` | 67133 | 0.9970 | 0.2988 | 0.9970 | `calibrated_max` | `or_general_primary` |
+| `elf` | 16886 | 0.9998 | 0.0000 | 0.9998 | `calibrated_max` | `or_general_primary` |
+| `macho` | 921 | 0.9716 | 0.0000 | 0.9730 | `calibrated_max` | `or_general_primary` |
+| `msi` | 37 | 0.7043 | 0.0000 | 0.7634 | `calibrated_max` | `general_only` |
+| `pdf` | 352 | 0.8252 | 0.0000 | 0.8788 | `stacked_xgb` | `or_general_primary` |
+| `rtf` | 56 | 1.0000 | 0.0000 | 1.0000 | `calibrated_max` | `general_only` |
+| `javascript` | 54690 | 0.9857 | 0.2778 | 0.9881 | `calibrated_max` | `or_general_primary` |
+| `python` | 15704 | 0.9918 | 0.3093 | 0.9904 | `calibrated_max` | `or_general_primary` |
+| `shell` | 5455 | 0.9715 | 0.0000 | 0.9690 | `calibrated_max` | `or_general_primary` |
+| `powershell` | 241 | 0.9812 | 0.0000 | 0.9830 | `calibrated_max` | `or_general_primary` |
+| `batch` | 291 | 0.9562 | 0.0000 | 0.9578 | `calibrated_max` | `or_general_primary` |
+| `package.json` | 2782 | 0.9991 | 0.0000 | 0.9991 | `specialist_priority` | `or_general_primary` |
+| `jar` | 289 | 0.9935 | 0.0000 | 0.9935 | `specialist_priority` | `general_only` |
+| `ruby` | 2813 | 1.0000 | 0.0000 | 1.0000 | `calibrated_max` | `or_general_primary` |
+| `perl` | 3721 | 0.9988 | 0.0000 | 0.9983 | `stacked_xgb` | `or_general_primary` |
 
 Reading the table: ensemble ≥ specialist holds for every filetype by design. When `strategy = specialist_priority`, the ensemble's column matches the specialist's. When `strategy = calibrated_max`, the routing-free combiner beats the specialist alone — those filetypes benefit most from cross-model signal.
 
@@ -45,17 +54,21 @@ Independently of the AUC/PR metrics above, the bundle is calibrated at ten thres
 
 **This is a deployment dial, not a model-quality result.** When a route shows `no_policy` at a given level, it means no threshold for that route fits inside the global FP budget at that level — which is a function of corpus size, route benign-tail shape, and the FP target, not the model's discrimination ability. Dialing the operating level up admits more routes; dialing down enforces a stricter FP target. Per-route operating tables live in each `filetypes/<name>/README.md`.
 
-| L | H target/1M | H accuracy | H recall | H FP/1M | S target/1M | S accuracy | S recall | S FP/1M |
+| L | H target/1M | H recall | H FP/1M | H 95% CI upper | S target/1M | S recall | S FP/1M | S 95% CI upper |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | 0.0 | 89.72% | 83.41% | 86405.6 | 8.0 | 89.90% | 84.30% | 86412.3 |
-| 1 | 1.0 | 89.75% | 83.58% | 86405.6 | 16.0 | 90.01% | 84.84% | 86415.6 |
-| 2 | 2.0 | 89.75% | 83.58% | 86405.6 | 24.0 | 90.28% | 86.13% | 86422.4 |
-| 3 | 3.0 | 89.75% | 83.58% | 86405.6 | 32.0 | 90.29% | 86.20% | 86425.7 |
-| 4 | 4.0 | 89.75% | 83.58% | 86405.6 | 40.0 | 90.32% | 86.32% | 86429.1 |
-| 5 | 5.0 | 89.75% | 83.58% | 86405.6 | 48.0 | 90.37% | 86.57% | 86432.5 |
-| 6 | 6.0 | 89.75% | 83.58% | 86405.6 | 56.0 | 90.44% | 86.98% | 86533.3 |
-| 7 | 7.0 | 89.90% | 84.30% | 86412.3 | 64.0 | 90.49% | 88.30% | 89407.2 |
-| 8 | 8.0 | 89.90% | 84.30% | 86412.3 | 72.0 | 90.60% | 88.85% | 89424.0 |
-| 9 | 9.0 | 89.90% | 84.30% | 86412.3 | 80.0 | 90.70% | 89.34% | 89427.4 |
+| 0 | 0.0† | 70.95% | 36.97 | 61.20 | 8.0† | 70.95% | 36.97 | 61.20 |
+| 1 | 1.0† | 70.95% | 36.97 | 61.20 | 16.0 | 71.30% | 36.97 | 61.20 |
+| 2 | 2.0† | 70.95% | 36.97 | 61.20 | 24.0 | 72.74% | 47.06 | 73.57 |
+| 3 | 3.0† | 70.95% | 36.97 | 61.20 | 32.0 | 73.67% | 50.42 | 77.64 |
+| 4 | 4.0† | 70.95% | 36.97 | 61.20 | 40.0 | 74.85% | 50.42 | 77.64 |
+| 5 | 5.0† | 70.95% | 36.97 | 61.20 | 48.0 | 75.97% | 57.14 | 85.71 |
+| 6 | 6.0† | 70.95% | 36.97 | 61.20 | 56.0 | 76.08% | 60.50 | 89.72 |
+| 7 | 7.0† | 70.95% | 36.97 | 61.20 | 64.0 | 76.27% | 63.86 | 93.71 |
+| 8 | 8.0† | 70.95% | 36.97 | 61.20 | 72.0 | 76.47% | 67.23 | 97.68 |
+| 9 | 9.0† | 70.95% | 36.97 | 61.20 | 80.0 | 76.72% | 67.23 | 97.68 |
+
+*95% CI upper* is the Clopper-Pearson upper bound on the deployment FP rate given the observed FP count in 297,504 test-partition benigns. The honest deployment-FP/M claim sits below this number with 95% confidence.
+
+† below data resolution: the dev calibration sample is too small to credibly assert FP/M ≤ target at this level (95% CI). The deployed threshold falls back to the loosest empirical 0-FP fit; the FP/M and 95% CI columns show what the test partition actually achieves under that threshold, which exceeds the L target.
 
 Default deploy: L3 for hostile, L5 for suspicious. The headline AUC/PR/F1 figures elsewhere in this bundle are about the model's ranking ability — they don't change with the operating level.

@@ -3,144 +3,152 @@
 Best calibrated decision policy per filetype route. `*_with_escape` policies start from the specialist/group model, then allow general/group/type escape thresholds only when they add detections inside the route FP budget.
 
 - Calibration snapshot: `762136079`
-- Rows: 374918 (77361 malware, 297557 benign)
+- Rows: 2990924 (618271 malware, 2372653 benign)
 
 ## L5 Hostile
 
-| Route | Policy | Malware | Benign | Recall | FP | FP/1M | Global FP/1M | F1 | Accuracy | Thresholds |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| filetypes/zst | general_only | 273 | 2062 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.005351923406124115}` |
-| filetypes/doc | group_only | 206 | 6 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filegroups/documents": 0.011448593810200691}` |
-| filetypes/rar | general_only | 122 | 0 | 100.00% | 0 | — | 0.000 | 100.00% | 100.00% | `{"general": 0.00030210227123461664}` |
-| filetypes/msi | or_general_primary | 36 | 9 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filetypes/msi": 0.28024280071258545, "general": 0.9713645577430725}` |
-| filetypes/lnk | general_only | 35 | 0 | 100.00% | 0 | — | 0.000 | 100.00% | 100.00% | `{"general": 0.8371633887290955}` |
-| filetypes/ole | or_general_primary | 26 | 655 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filetypes/ole": 0.9222427606582642, "general": 0.9518448114395142}` |
-| filetypes/crx | general_only | 9 | 1 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.8564377427101135}` |
-| filetypes/rtf | or_general_primary | 9 | 59 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filetypes/rtf": 0.7234269976615906, "general": 0.9769636392593384}` |
-| filetypes/ruby | group_only | 9 | 2924 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filegroups/scripts": 0.9963645935058594}` |
-| filetypes/lua | general_only | 3 | 1319 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.7351991534233093}` |
-| filetypes/chm | general_only | 2 | 0 | 100.00% | 0 | — | 0.000 | 100.00% | 100.00% | `{"general": 0.9906882047653198}` |
-| filetypes/html | general_only | 2 | 177 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9354889392852783}` |
-| filetypes/java | general_only | 2 | 3529 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9540349841117859}` |
-| filetypes/cab | general_only | 1 | 1 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9981394410133362}` |
-| filetypes/groovy | general_only | 1 | 588 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9754495620727539}` |
-| filetypes/pptx | general_only | 1 | 26 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.8636189699172974}` |
-| filetypes/tar.xz | general_only | 1 | 26 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.8365404009819031}` |
-| filetypes/tar | or_general_primary | 146 | 46 | 99.32% | 0 | 0.00 | 0.000 | 99.66% | 99.48% | `{"filetypes/tar": 0.47724226117134094, "general": 0.7868746519088745}` |
-| filetypes/pkg-info | general_only | 485 | 96 | 95.67% | 0 | 0.00 | 0.000 | 97.79% | 96.39% | `{"general": 0.02792925015091896}` |
-| filetypes/xls | general_only | 21 | 4 | 95.24% | 0 | 0.00 | 0.000 | 97.56% | 96.00% | `{"general": 0.0009061877499334514}` |
-| filetypes/python-bytecode | filetype_only | 109 | 1267 | 94.50% | 0 | 0.00 | 0.000 | 97.17% | 99.56% | `{"filetypes/python-bytecode": 0.9863467216491699}` |
-| filetypes/data | general_only | 43 | 1064 | 90.70% | 0 | 0.00 | 0.000 | 95.12% | 99.64% | `{"general": 0.853091299533844}` |
-| filetypes/docx | general_only | 67 | 27 | 89.55% | 0 | 0.00 | 0.000 | 94.49% | 92.55% | `{"general": 0.11987817287445068}` |
-| filetypes/macho | specialist_primary_with_escape | 163 | 721 | 88.34% | 0 | 0.00 | 0.000 | 93.81% | 97.85% | `{"filegroups/native": 0.99602872133255, "filetypes/macho": 0.7973178625106812}` |
-| filetypes/pe | specialist_primary_with_escape | 51401 | 17486 | 88.28% | 1 | 57.19 | 3.361 | 93.77% | 91.25% | `{"filegroups/native": 0.999194860458374, "filetypes/pe": 0.9990107417106628, "general": 0.9957654476165771}` |
-| filetypes/applescript | general_only | 5 | 16 | 80.00% | 0 | 0.00 | 0.000 | 88.89% | 95.24% | `{"general": 0.9594946503639221}` |
-| filetypes/xlsx | general_only | 17 | 8 | 76.47% | 0 | 0.00 | 0.000 | 86.67% | 84.00% | `{"general": 0.0004667504399549216}` |
-| filetypes/xz | general_only | 4 | 2886 | 75.00% | 0 | 0.00 | 0.000 | 85.71% | 99.97% | `{"general": 0.9911648035049438}` |
-| filetypes/perl | group_only | 21 | 3650 | 66.67% | 0 | 0.00 | 0.000 | 80.00% | 99.81% | `{"filegroups/scripts": 0.07316567003726959}` |
-| filetypes/shell | group_only | 281 | 5058 | 65.84% | 0 | 0.00 | 0.000 | 79.40% | 98.20% | `{"filegroups/scripts": 0.9826321005821228}` |
+Rows marked † are below data resolution: the per-filetype calibration sample is too small to credibly assert FP/M ≤ target at this level (95% CI). The threshold shown is the loosest empirical 0-FP threshold; FP/M is what the test partition actually observed under that threshold. *95% CI upper* is the Clopper-Pearson upper bound on deployment FP/M given the observed FP count in this filetype's benigns.
+
+| Route | Policy | Malware | Benign | Recall | FP | FP/1M | 95% CI upper | Global FP/1M | F1 | Accuracy | Thresholds |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| filetypes/html† | general_only | 9 | 1384 | 100.00% | 0 | 0.00 | 2162.21 | 0.000 | 100.00% | 100.00% | `{"general": 0.8594487309455872}` |
+| filetypes/desktop-entry† | general_only | 2 | 231 | 100.00% | 0 | 0.00 | 12884.81 | 0.000 | 100.00% | 100.00% | `{"general": 0.9922379851341248}` |
+| filetypes/pkg† | general_only | 1 | 13 | 100.00% | 0 | 0.00 | 205816.67 | 0.000 | 100.00% | 100.00% | `{"general": 0.0017194385873153806}` |
+| filetypes/doc† | general_only | 1899 | 23 | 99.79% | 0 | 0.00 | 122123.39 | 0.000 | 99.89% | 99.79% | `{"general": 0.002071269089356065}` |
+| filetypes/lnk† | general_only | 285 | 17 | 99.30% | 0 | 0.00 | 161566.11 | 0.000 | 99.65% | 99.34% | `{"general": 0.0039053931832313538}` |
+| filetypes/tar† | or_general_primary | 1042 | 355 | 97.02% | 0 | 0.00 | 8403.18 | 0.000 | 98.49% | 97.78% | `{"filegroups/archive": 1.0, "general": 0.7734574675559998}` |
+| filetypes/zst† | general_only | 2282 | 16150 | 96.93% | 0 | 0.00 | 185.48 | 0.000 | 98.44% | 99.62% | `{"general": 0.8446625471115112}` |
+| filetypes/rar† | general_only | 952 | 4 | 95.69% | 0 | 0.00 | 527129.20 | 0.000 | 97.80% | 95.71% | `{"general": 0.0008109572809189558}` |
+| filetypes/rtf† | general_only | 89 | 437 | 95.51% | 0 | 0.00 | 6831.78 | 0.000 | 97.70% | 99.24% | `{"general": 0.9508298635482788}` |
+| filetypes/pkg-info† | general_only | 3681 | 807 | 91.69% | 0 | 0.00 | 3705.30 | 0.000 | 95.66% | 93.18% | `{"general": 0.7194933891296387}` |
+| filetypes/chm† | general_only | 17 | 5 | 88.24% | 0 | 0.00 | 450719.73 | 0.000 | 93.75% | 90.91% | `{"general": 0.5562927722930908}` |
+| filetypes/elf† | or_general_primary | 21965 | 111877 | 87.03% | 0 | 0.00 | 26.78 | 0.000 | 93.07% | 97.87% | `{"filegroups/native": 1.0, "filetypes/elf": 1.0, "general": 0.989948570728302}` |
+| filetypes/package.json† | or_general_primary | 15658 | 7205 | 86.72% | 0 | 0.00 | 415.70 | 0.000 | 92.89% | 90.90% | `{"filegroups/config": 1.0, "filetypes/package.json": 1.0, "general": 0.9915000796318054}` |
+| filetypes/tar.gz† | or_general_primary | 19387 | 11894 | 85.12% | 0 | 0.00 | 251.84 | 0.000 | 91.96% | 90.78% | `{"filegroups/archive": 1.0, "filetypes/tar.gz": 1.0, "general": 0.9977129101753235}` |
+| filetypes/cab† | general_only | 5 | 23 | 80.00% | 0 | 0.00 | 122123.39 | 0.000 | 88.89% | 96.43% | `{"general": 0.9920740127563477}` |
+| filetypes/zip† | or_general_primary | 32962 | 5584 | 77.44% | 0 | 0.00 | 536.34 | 0.000 | 87.28% | 80.71% | `{"filegroups/archive": 0.006320903543382883, "filetypes/zip": 1.0, "general": 0.9965186715126038}` |
+| filetypes/xz† | general_only | 42 | 23367 | 76.19% | 0 | 0.00 | 128.20 | 0.000 | 86.49% | 99.96% | `{"general": 0.8812193274497986}` |
+| filetypes/7z† | general_only | 3780 | 34 | 75.16% | 0 | 0.00 | 84339.64 | 0.000 | 85.82% | 75.38% | `{"general": 0.9988694190979004}` |
+| filetypes/jar† | general_only | 606 | 1566 | 74.26% | 0 | 0.00 | 1911.15 | 0.000 | 85.23% | 92.82% | `{"general": 0.9402996897697449}` |
+| filetypes/applescript† | general_only | 22 | 100 | 72.73% | 0 | 0.00 | 29513.05 | 0.000 | 84.21% | 95.08% | `{"general": 0.9594946503639221}` |
+| filetypes/xls† | general_only | 229 | 42 | 69.00% | 0 | 0.00 | 68842.61 | 0.000 | 81.65% | 73.80% | `{"general": 0.29995617270469666}` |
+| filetypes/tar.bz2† | general_only | 3 | 186 | 66.67% | 0 | 0.00 | 15977.08 | 0.000 | 80.00% | 99.47% | `{"general": 0.9955074191093445}` |
+| filetypes/perl† | or_general_primary | 157 | 29368 | 65.61% | 0 | 0.00 | 102.00 | 0.000 | 79.23% | 99.82% | `{"filegroups/scripts": 1.0, "filetypes/perl": 1.0, "general": 0.9737693071365356}` |
+| filetypes/javascript† | or_general_primary | 57629 | 375582 | 65.08% | 0 | 0.00 | 7.98 | 0.000 | 78.85% | 95.35% | `{"filegroups/scripts": 1.0, "filetypes/javascript": 1.0, "general": 0.9950519800186157}` |
+| filetypes/docx† | general_only | 372 | 219 | 61.83% | 0 | 0.00 | 13586.01 | 0.000 | 76.41% | 75.97% | `{"general": 0.860793948173523}` |
+| filetypes/kotlin† | or_general_primary | 928 | 34931 | 60.88% | 0 | 0.00 | 85.76 | 0.000 | 75.69% | 98.99% | `{"filegroups/source": 1.0, "filetypes/kotlin": 1.0, "general": 0.7555142045021057}` |
+| filetypes/ruby† | or_general_primary | 70 | 23108 | 60.00% | 0 | 0.00 | 129.63 | 0.000 | 75.00% | 99.88% | `{"filegroups/scripts": 1.0, "filetypes/ruby": 1.0, "general": 0.9729308485984802}` |
+| filetypes/objc† | general_only | 5 | 17944 | 60.00% | 0 | 0.00 | 166.94 | 0.000 | 75.00% | 99.99% | `{"general": 0.9903209805488586}` |
+| filetypes/crx† | general_only | 37 | 13 | 56.76% | 0 | 0.00 | 205816.67 | 0.000 | 72.41% | 68.00% | `{"general": 0.9494370818138123}` |
+| filetypes/data† | or_general_primary | 361 | 8705 | 55.96% | 0 | 0.00 | 344.08 | 0.000 | 71.76% | 98.25% | `{"filetypes/data": 1.0, "general": 0.9315239191055298}` |
 
 ## L9 Hostile
 
-| Route | Policy | Malware | Benign | Recall | FP | FP/1M | Global FP/1M | F1 | Accuracy | Thresholds |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| filetypes/zst | general_only | 273 | 2062 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.005351923406124115}` |
-| filetypes/doc | group_only | 206 | 6 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filegroups/documents": 0.011448593810200691}` |
-| filetypes/rar | general_only | 122 | 0 | 100.00% | 0 | — | 0.000 | 100.00% | 100.00% | `{"general": 0.00030210227123461664}` |
-| filetypes/msi | or_general_primary | 36 | 9 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filetypes/msi": 0.28024280071258545, "general": 0.9713645577430725}` |
-| filetypes/lnk | general_only | 35 | 0 | 100.00% | 0 | — | 0.000 | 100.00% | 100.00% | `{"general": 0.8371633887290955}` |
-| filetypes/ole | or_general_primary | 26 | 655 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filetypes/ole": 0.9222427606582642, "general": 0.9518448114395142}` |
-| filetypes/crx | general_only | 9 | 1 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.8564377427101135}` |
-| filetypes/rtf | or_general_primary | 9 | 59 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filetypes/rtf": 0.7234269976615906, "general": 0.9769636392593384}` |
-| filetypes/ruby | group_only | 9 | 2924 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filegroups/scripts": 0.9963645935058594}` |
-| filetypes/lua | general_only | 3 | 1319 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.7351991534233093}` |
-| filetypes/chm | general_only | 2 | 0 | 100.00% | 0 | — | 0.000 | 100.00% | 100.00% | `{"general": 0.9906882047653198}` |
-| filetypes/html | general_only | 2 | 177 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9354889392852783}` |
-| filetypes/java | general_only | 2 | 3529 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9540349841117859}` |
-| filetypes/cab | general_only | 1 | 1 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9981394410133362}` |
-| filetypes/groovy | general_only | 1 | 588 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9754495620727539}` |
-| filetypes/pptx | general_only | 1 | 26 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.8636189699172974}` |
-| filetypes/tar.xz | general_only | 1 | 26 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.8365404009819031}` |
-| filetypes/tar | or_general_primary | 146 | 46 | 99.32% | 0 | 0.00 | 0.000 | 99.66% | 99.48% | `{"filetypes/tar": 0.47724226117134094, "general": 0.7868746519088745}` |
-| filetypes/pkg-info | general_only | 485 | 96 | 95.67% | 0 | 0.00 | 0.000 | 97.79% | 96.39% | `{"general": 0.02792925015091896}` |
-| filetypes/xls | general_only | 21 | 4 | 95.24% | 0 | 0.00 | 0.000 | 97.56% | 96.00% | `{"general": 0.0009061877499334514}` |
-| filetypes/python-bytecode | filetype_only | 109 | 1267 | 94.50% | 0 | 0.00 | 0.000 | 97.17% | 99.56% | `{"filetypes/python-bytecode": 0.9863467216491699}` |
-| filetypes/data | general_only | 43 | 1064 | 90.70% | 0 | 0.00 | 0.000 | 95.12% | 99.64% | `{"general": 0.853091299533844}` |
-| filetypes/docx | general_only | 67 | 27 | 89.55% | 0 | 0.00 | 0.000 | 94.49% | 92.55% | `{"general": 0.11987817287445068}` |
-| filetypes/macho | specialist_primary_with_escape | 163 | 721 | 88.34% | 0 | 0.00 | 0.000 | 93.81% | 97.85% | `{"filegroups/native": 0.99602872133255, "filetypes/macho": 0.7973178625106812}` |
-| filetypes/pe | specialist_primary_with_escape | 51401 | 17486 | 88.28% | 1 | 57.19 | 3.361 | 93.77% | 91.25% | `{"filegroups/native": 0.999194860458374, "filetypes/pe": 0.9990107417106628, "general": 0.9957654476165771}` |
-| filetypes/javascript | group_primary_with_escape | 7213 | 47045 | 88.04% | 1 | 21.26 | 3.361 | 93.63% | 98.41% | `{"filegroups/scripts": 0.9960349798202515, "filetypes/javascript": 0.9933727979660034, "general": 0.9938915371894836}` |
-| filetypes/applescript | general_only | 5 | 16 | 80.00% | 0 | 0.00 | 0.000 | 88.89% | 95.24% | `{"general": 0.9594946503639221}` |
-| filetypes/xlsx | general_only | 17 | 8 | 76.47% | 0 | 0.00 | 0.000 | 86.67% | 84.00% | `{"general": 0.0004667504399549216}` |
-| filetypes/xz | general_only | 4 | 2886 | 75.00% | 0 | 0.00 | 0.000 | 85.71% | 99.97% | `{"general": 0.9911648035049438}` |
-| filetypes/perl | group_only | 21 | 3650 | 66.67% | 0 | 0.00 | 0.000 | 80.00% | 99.81% | `{"filegroups/scripts": 0.07316567003726959}` |
+Rows marked † are below data resolution: the per-filetype calibration sample is too small to credibly assert FP/M ≤ target at this level (95% CI). The threshold shown is the loosest empirical 0-FP threshold; FP/M is what the test partition actually observed under that threshold. *95% CI upper* is the Clopper-Pearson upper bound on deployment FP/M given the observed FP count in this filetype's benigns.
+
+| Route | Policy | Malware | Benign | Recall | FP | FP/1M | 95% CI upper | Global FP/1M | F1 | Accuracy | Thresholds |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| filetypes/html† | general_only | 9 | 1384 | 100.00% | 0 | 0.00 | 2162.21 | 0.000 | 100.00% | 100.00% | `{"general": 0.8594487309455872}` |
+| filetypes/desktop-entry† | general_only | 2 | 231 | 100.00% | 0 | 0.00 | 12884.81 | 0.000 | 100.00% | 100.00% | `{"general": 0.9922379851341248}` |
+| filetypes/pkg† | general_only | 1 | 13 | 100.00% | 0 | 0.00 | 205816.67 | 0.000 | 100.00% | 100.00% | `{"general": 0.0017194385873153806}` |
+| filetypes/doc† | general_only | 1899 | 23 | 99.79% | 0 | 0.00 | 122123.39 | 0.000 | 99.89% | 99.79% | `{"general": 0.002071269089356065}` |
+| filetypes/lnk† | general_only | 285 | 17 | 99.30% | 0 | 0.00 | 161566.11 | 0.000 | 99.65% | 99.34% | `{"general": 0.0039053931832313538}` |
+| filetypes/tar† | or_general_primary | 1042 | 355 | 97.02% | 0 | 0.00 | 8403.18 | 0.000 | 98.49% | 97.78% | `{"filegroups/archive": 1.0, "general": 0.7734574675559998}` |
+| filetypes/zst† | general_only | 2282 | 16150 | 96.93% | 0 | 0.00 | 185.48 | 0.000 | 98.44% | 99.62% | `{"general": 0.8446625471115112}` |
+| filetypes/rar† | general_only | 952 | 4 | 95.69% | 0 | 0.00 | 527129.20 | 0.000 | 97.80% | 95.71% | `{"general": 0.0008109572809189558}` |
+| filetypes/rtf† | general_only | 89 | 437 | 95.51% | 0 | 0.00 | 6831.78 | 0.000 | 97.70% | 99.24% | `{"general": 0.9508298635482788}` |
+| filetypes/pkg-info† | general_only | 3681 | 807 | 91.69% | 0 | 0.00 | 3705.30 | 0.000 | 95.66% | 93.18% | `{"general": 0.7194933891296387}` |
+| filetypes/chm† | general_only | 17 | 5 | 88.24% | 0 | 0.00 | 450719.73 | 0.000 | 93.75% | 90.91% | `{"general": 0.5562927722930908}` |
+| filetypes/elf† | or_general_primary | 21965 | 111877 | 87.03% | 0 | 0.00 | 26.78 | 0.000 | 93.07% | 97.87% | `{"filegroups/native": 1.0, "filetypes/elf": 1.0, "general": 0.989948570728302}` |
+| filetypes/package.json† | or_general_primary | 15658 | 7205 | 86.72% | 0 | 0.00 | 415.70 | 0.000 | 92.89% | 90.90% | `{"filegroups/config": 1.0, "filetypes/package.json": 1.0, "general": 0.9915000796318054}` |
+| filetypes/tar.gz† | or_general_primary | 19387 | 11894 | 85.12% | 0 | 0.00 | 251.84 | 0.000 | 91.96% | 90.78% | `{"filegroups/archive": 1.0, "filetypes/tar.gz": 1.0, "general": 0.9977129101753235}` |
+| filetypes/cab† | general_only | 5 | 23 | 80.00% | 0 | 0.00 | 122123.39 | 0.000 | 88.89% | 96.43% | `{"general": 0.9920740127563477}` |
+| filetypes/zip† | or_general_primary | 32962 | 5584 | 77.44% | 0 | 0.00 | 536.34 | 0.000 | 87.28% | 80.71% | `{"filegroups/archive": 0.006320903543382883, "filetypes/zip": 1.0, "general": 0.9965186715126038}` |
+| filetypes/xz† | general_only | 42 | 23367 | 76.19% | 0 | 0.00 | 128.20 | 0.000 | 86.49% | 99.96% | `{"general": 0.8812193274497986}` |
+| filetypes/7z† | general_only | 3780 | 34 | 75.16% | 0 | 0.00 | 84339.64 | 0.000 | 85.82% | 75.38% | `{"general": 0.9988694190979004}` |
+| filetypes/jar† | general_only | 606 | 1566 | 74.26% | 0 | 0.00 | 1911.15 | 0.000 | 85.23% | 92.82% | `{"general": 0.9402996897697449}` |
+| filetypes/applescript† | general_only | 22 | 100 | 72.73% | 0 | 0.00 | 29513.05 | 0.000 | 84.21% | 95.08% | `{"general": 0.9594946503639221}` |
+| filetypes/xls† | general_only | 229 | 42 | 69.00% | 0 | 0.00 | 68842.61 | 0.000 | 81.65% | 73.80% | `{"general": 0.29995617270469666}` |
+| filetypes/tar.bz2† | general_only | 3 | 186 | 66.67% | 0 | 0.00 | 15977.08 | 0.000 | 80.00% | 99.47% | `{"general": 0.9955074191093445}` |
+| filetypes/perl† | or_general_primary | 157 | 29368 | 65.61% | 0 | 0.00 | 102.00 | 0.000 | 79.23% | 99.82% | `{"filegroups/scripts": 1.0, "filetypes/perl": 1.0, "general": 0.9737693071365356}` |
+| filetypes/javascript | or_general_primary | 57629 | 375582 | 65.08% | 0 | 0.00 | 7.98 | 0.000 | 78.85% | 95.35% | `{"filegroups/scripts": 1.0, "filetypes/javascript": 1.0, "general": 0.9950519800186157}` |
+| filetypes/docx† | general_only | 372 | 219 | 61.83% | 0 | 0.00 | 13586.01 | 0.000 | 76.41% | 75.97% | `{"general": 0.860793948173523}` |
+| filetypes/kotlin† | or_general_primary | 928 | 34931 | 60.88% | 0 | 0.00 | 85.76 | 0.000 | 75.69% | 98.99% | `{"filegroups/source": 1.0, "filetypes/kotlin": 1.0, "general": 0.7555142045021057}` |
+| filetypes/ruby† | or_general_primary | 70 | 23108 | 60.00% | 0 | 0.00 | 129.63 | 0.000 | 75.00% | 99.88% | `{"filegroups/scripts": 1.0, "filetypes/ruby": 1.0, "general": 0.9729308485984802}` |
+| filetypes/objc† | general_only | 5 | 17944 | 60.00% | 0 | 0.00 | 166.94 | 0.000 | 75.00% | 99.99% | `{"general": 0.9903209805488586}` |
+| filetypes/crx† | general_only | 37 | 13 | 56.76% | 0 | 0.00 | 205816.67 | 0.000 | 72.41% | 68.00% | `{"general": 0.9494370818138123}` |
+| filetypes/data† | or_general_primary | 361 | 8705 | 55.96% | 0 | 0.00 | 344.08 | 0.000 | 71.76% | 98.25% | `{"filetypes/data": 1.0, "general": 0.9315239191055298}` |
 
 ## L5 Suspicious
 
-| Route | Policy | Malware | Benign | Recall | FP | FP/1M | Global FP/1M | F1 | Accuracy | Thresholds |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| filetypes/zst | general_only | 273 | 2062 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.005351923406124115}` |
-| filetypes/doc | group_only | 206 | 6 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filegroups/documents": 0.011448593810200691}` |
-| filetypes/rar | general_only | 122 | 0 | 100.00% | 0 | — | 0.000 | 100.00% | 100.00% | `{"general": 0.00030210227123461664}` |
-| filetypes/msi | or_general_primary | 36 | 9 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filetypes/msi": 0.28024280071258545, "general": 0.9713645577430725}` |
-| filetypes/lnk | general_only | 35 | 0 | 100.00% | 0 | — | 0.000 | 100.00% | 100.00% | `{"general": 0.8371633887290955}` |
-| filetypes/ole | or_general_primary | 26 | 655 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filetypes/ole": 0.9222427606582642, "general": 0.9518448114395142}` |
-| filetypes/crx | general_only | 9 | 1 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.8564377427101135}` |
-| filetypes/rtf | or_general_primary | 9 | 59 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filetypes/rtf": 0.7234269976615906, "general": 0.9769636392593384}` |
-| filetypes/ruby | group_only | 9 | 2924 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filegroups/scripts": 0.9963645935058594}` |
-| filetypes/lua | general_only | 3 | 1319 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.7351991534233093}` |
-| filetypes/chm | general_only | 2 | 0 | 100.00% | 0 | — | 0.000 | 100.00% | 100.00% | `{"general": 0.9906882047653198}` |
-| filetypes/html | general_only | 2 | 177 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9354889392852783}` |
-| filetypes/java | general_only | 2 | 3529 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9540349841117859}` |
-| filetypes/cab | general_only | 1 | 1 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9981394410133362}` |
-| filetypes/groovy | general_only | 1 | 588 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9754495620727539}` |
-| filetypes/pptx | general_only | 1 | 26 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.8636189699172974}` |
-| filetypes/tar.xz | general_only | 1 | 26 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.8365404009819031}` |
-| filetypes/package.json | or_general_primary | 1963 | 868 | 99.39% | 1 | 1152.07 | 3.361 | 99.67% | 99.54% | `{"filetypes/package.json": 0.8790057897567749, "general": 0.9376559257507324}` |
-| filetypes/tar | or_general_primary | 146 | 46 | 99.32% | 0 | 0.00 | 0.000 | 99.66% | 99.48% | `{"filetypes/tar": 0.47724226117134094, "general": 0.7868746519088745}` |
-| filetypes/7z | or_general_primary | 469 | 3 | 98.29% | 1 | 333333.33 | 3.361 | 99.03% | 98.09% | `{"filegroups/archive": 0.6381730437278748, "general": 0.6577135920524597}` |
-| filetypes/elf | filetype_only | 2764 | 13799 | 97.87% | 1 | 72.47 | 3.361 | 98.90% | 99.64% | `{"filetypes/elf": 0.8628232479095459}` |
-| filetypes/tar.gz | or_general_primary | 2470 | 1525 | 97.09% | 1 | 655.74 | 3.361 | 98.50% | 98.17% | `{"filegroups/archive": 0.8576307892799377, "filetypes/tar.gz": 0.6969171762466431, "general": 0.9723145961761475}` |
-| filetypes/pkg-info | general_only | 485 | 96 | 95.67% | 0 | 0.00 | 0.000 | 97.79% | 96.39% | `{"general": 0.02792925015091896}` |
-| filetypes/xls | general_only | 21 | 4 | 95.24% | 0 | 0.00 | 0.000 | 97.56% | 96.00% | `{"general": 0.0009061877499334514}` |
-| filetypes/python-bytecode | filetype_only | 109 | 1267 | 94.50% | 0 | 0.00 | 0.000 | 97.17% | 99.56% | `{"filetypes/python-bytecode": 0.9863467216491699}` |
-| filetypes/jar | group_primary_with_escape | 71 | 197 | 92.96% | 1 | 5076.14 | 3.361 | 95.65% | 97.76% | `{"filegroups/portable": 0.9876785278320312, "filetypes/jar": 0.4033418297767639, "general": 0.610687792301178}` |
-| filetypes/data | general_only | 43 | 1064 | 90.70% | 0 | 0.00 | 0.000 | 95.12% | 99.64% | `{"general": 0.853091299533844}` |
-| filetypes/python | specialist_primary_with_escape | 1715 | 14198 | 89.74% | 1 | 70.43 | 3.361 | 94.56% | 98.89% | `{"filegroups/scripts": 0.9956585168838501, "filetypes/python": 0.9637269377708435, "general": 0.990637481212616}` |
-| filetypes/docx | general_only | 67 | 27 | 89.55% | 0 | 0.00 | 0.000 | 94.49% | 92.55% | `{"general": 0.11987817287445068}` |
-| filetypes/zip | group_primary_with_escape | 4068 | 693 | 89.16% | 1 | 1443.00 | 3.361 | 94.26% | 90.72% | `{"filegroups/archive": 0.9765775799751282, "filetypes/zip": 0.9374825954437256, "general": 0.9927071928977966}` |
+Rows marked † are below data resolution: the per-filetype calibration sample is too small to credibly assert FP/M ≤ target at this level (95% CI). The threshold shown is the loosest empirical 0-FP threshold; FP/M is what the test partition actually observed under that threshold. *95% CI upper* is the Clopper-Pearson upper bound on deployment FP/M given the observed FP count in this filetype's benigns.
+
+| Route | Policy | Malware | Benign | Recall | FP | FP/1M | 95% CI upper | Global FP/1M | F1 | Accuracy | Thresholds |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| filetypes/html† | general_only | 9 | 1384 | 100.00% | 0 | 0.00 | 2162.21 | 0.000 | 100.00% | 100.00% | `{"general": 0.8594487309455872}` |
+| filetypes/desktop-entry† | general_only | 2 | 231 | 100.00% | 0 | 0.00 | 12884.81 | 0.000 | 100.00% | 100.00% | `{"general": 0.9922379851341248}` |
+| filetypes/pkg† | general_only | 1 | 13 | 100.00% | 0 | 0.00 | 205816.67 | 0.000 | 100.00% | 100.00% | `{"general": 0.0017194385873153806}` |
+| filetypes/doc† | general_only | 1899 | 23 | 99.79% | 0 | 0.00 | 122123.39 | 0.000 | 99.89% | 99.79% | `{"general": 0.002071269089356065}` |
+| filetypes/lnk† | general_only | 285 | 17 | 99.30% | 0 | 0.00 | 161566.11 | 0.000 | 99.65% | 99.34% | `{"general": 0.0039053931832313538}` |
+| filetypes/tar† | or_general_primary | 1042 | 355 | 97.02% | 0 | 0.00 | 8403.18 | 0.000 | 98.49% | 97.78% | `{"filegroups/archive": 1.0, "general": 0.7734574675559998}` |
+| filetypes/zst† | general_only | 2282 | 16150 | 96.93% | 0 | 0.00 | 185.48 | 0.000 | 98.44% | 99.62% | `{"general": 0.8446625471115112}` |
+| filetypes/rar† | general_only | 952 | 4 | 95.69% | 0 | 0.00 | 527129.20 | 0.000 | 97.80% | 95.71% | `{"general": 0.0008109572809189558}` |
+| filetypes/rtf† | general_only | 89 | 437 | 95.51% | 0 | 0.00 | 6831.78 | 0.000 | 97.70% | 99.24% | `{"general": 0.9508298635482788}` |
+| filetypes/pkg-info† | general_only | 3681 | 807 | 91.69% | 0 | 0.00 | 3705.30 | 0.000 | 95.66% | 93.18% | `{"general": 0.7194933891296387}` |
+| filetypes/chm† | general_only | 17 | 5 | 88.24% | 0 | 0.00 | 450719.73 | 0.000 | 93.75% | 90.91% | `{"general": 0.5562927722930908}` |
+| filetypes/elf | or_general_primary | 21965 | 111877 | 87.17% | 1 | 8.94 | 42.40 | 0.421 | 93.14% | 97.89% | `{"filegroups/native": 1.0, "filetypes/elf": 1.0, "general": 0.9891113042831421}` |
+| filetypes/package.json† | or_general_primary | 15658 | 7205 | 86.72% | 0 | 0.00 | 415.70 | 0.000 | 92.89% | 90.90% | `{"filegroups/config": 1.0, "filetypes/package.json": 1.0, "general": 0.9915000796318054}` |
+| filetypes/tar.gz† | or_general_primary | 19387 | 11894 | 85.12% | 0 | 0.00 | 251.84 | 0.000 | 91.96% | 90.78% | `{"filegroups/archive": 1.0, "filetypes/tar.gz": 1.0, "general": 0.9977129101753235}` |
+| filetypes/cab† | general_only | 5 | 23 | 80.00% | 0 | 0.00 | 122123.39 | 0.000 | 88.89% | 96.43% | `{"general": 0.9920740127563477}` |
+| filetypes/zip† | or_general_primary | 32962 | 5584 | 77.44% | 0 | 0.00 | 536.34 | 0.000 | 87.28% | 80.71% | `{"filegroups/archive": 0.006320903543382883, "filetypes/zip": 1.0, "general": 0.9965186715126038}` |
+| filetypes/xz† | general_only | 42 | 23367 | 76.19% | 0 | 0.00 | 128.20 | 0.000 | 86.49% | 99.96% | `{"general": 0.8812193274497986}` |
+| filetypes/7z† | general_only | 3780 | 34 | 75.16% | 0 | 0.00 | 84339.64 | 0.000 | 85.82% | 75.38% | `{"general": 0.9988694190979004}` |
+| filetypes/jar† | general_only | 606 | 1566 | 74.26% | 0 | 0.00 | 1911.15 | 0.000 | 85.23% | 92.82% | `{"general": 0.9402996897697449}` |
+| filetypes/applescript† | general_only | 22 | 100 | 72.73% | 0 | 0.00 | 29513.05 | 0.000 | 84.21% | 95.08% | `{"general": 0.9594946503639221}` |
+| filetypes/javascript | or_general_primary | 57629 | 375582 | 72.68% | 10 | 26.63 | 45.16 | 4.215 | 84.17% | 96.36% | `{"filegroups/scripts": 1.0, "filetypes/javascript": 1.0, "general": 0.9919425249099731}` |
+| filetypes/xls† | general_only | 229 | 42 | 69.00% | 0 | 0.00 | 68842.61 | 0.000 | 81.65% | 73.80% | `{"general": 0.29995617270469666}` |
+| filetypes/tar.bz2† | general_only | 3 | 186 | 66.67% | 0 | 0.00 | 15977.08 | 0.000 | 80.00% | 99.47% | `{"general": 0.9955074191093445}` |
+| filetypes/perl† | or_general_primary | 157 | 29368 | 65.61% | 0 | 0.00 | 102.00 | 0.000 | 79.23% | 99.82% | `{"filegroups/scripts": 1.0, "filetypes/perl": 1.0, "general": 0.9737693071365356}` |
+| filetypes/pe | or_general_primary | 410851 | 140808 | 63.20% | 2 | 14.20 | 44.71 | 0.843 | 77.45% | 72.59% | `{"filegroups/native": 1.0, "filetypes/pe": 0.9999626874923706, "general": 0.9979832172393799}` |
+| filetypes/docx† | general_only | 372 | 219 | 61.83% | 0 | 0.00 | 13586.01 | 0.000 | 76.41% | 75.97% | `{"general": 0.860793948173523}` |
+| filetypes/kotlin† | or_general_primary | 928 | 34931 | 60.88% | 0 | 0.00 | 85.76 | 0.000 | 75.69% | 98.99% | `{"filegroups/source": 1.0, "filetypes/kotlin": 1.0, "general": 0.7555142045021057}` |
+| filetypes/ruby† | or_general_primary | 70 | 23108 | 60.00% | 0 | 0.00 | 129.63 | 0.000 | 75.00% | 99.88% | `{"filegroups/scripts": 1.0, "filetypes/ruby": 1.0, "general": 0.9729308485984802}` |
+| filetypes/objc† | general_only | 5 | 17944 | 60.00% | 0 | 0.00 | 166.94 | 0.000 | 75.00% | 99.99% | `{"general": 0.9903209805488586}` |
+| filetypes/python | or_general_primary | 13423 | 112372 | 57.42% | 1 | 8.90 | 42.22 | 0.421 | 72.95% | 95.46% | `{"filegroups/scripts": 1.0, "filetypes/python": 1.0, "general": 0.9963129758834839}` |
 
 ## L9 Suspicious
 
-| Route | Policy | Malware | Benign | Recall | FP | FP/1M | Global FP/1M | F1 | Accuracy | Thresholds |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| filetypes/pkg-info | or_general_primary | 485 | 96 | 100.00% | 1 | 10416.67 | 3.361 | 99.90% | 99.83% | `{"filetypes/pkg-info": 0.0189649760723114, "general": 0.02792925015091896}` |
-| filetypes/zst | general_only | 273 | 2062 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.005351923406124115}` |
-| filetypes/doc | group_only | 206 | 6 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filegroups/documents": 0.011448593810200691}` |
-| filetypes/rar | general_only | 122 | 0 | 100.00% | 0 | — | 0.000 | 100.00% | 100.00% | `{"general": 0.00030210227123461664}` |
-| filetypes/msi | or_general_primary | 36 | 9 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filetypes/msi": 0.28024280071258545, "general": 0.9713645577430725}` |
-| filetypes/lnk | general_only | 35 | 0 | 100.00% | 0 | — | 0.000 | 100.00% | 100.00% | `{"general": 0.8371633887290955}` |
-| filetypes/ole | or_general_primary | 26 | 655 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filetypes/ole": 0.9222427606582642, "general": 0.9518448114395142}` |
-| filetypes/crx | general_only | 9 | 1 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.8564377427101135}` |
-| filetypes/rtf | or_general_primary | 9 | 59 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filetypes/rtf": 0.7234269976615906, "general": 0.9769636392593384}` |
-| filetypes/ruby | group_only | 9 | 2924 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"filegroups/scripts": 0.9963645935058594}` |
-| filetypes/lua | general_only | 3 | 1319 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.7351991534233093}` |
-| filetypes/chm | general_only | 2 | 0 | 100.00% | 0 | — | 0.000 | 100.00% | 100.00% | `{"general": 0.9906882047653198}` |
-| filetypes/html | general_only | 2 | 177 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9354889392852783}` |
-| filetypes/java | general_only | 2 | 3529 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9540349841117859}` |
-| filetypes/cab | general_only | 1 | 1 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9981394410133362}` |
-| filetypes/groovy | general_only | 1 | 588 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.9754495620727539}` |
-| filetypes/pptx | general_only | 1 | 26 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.8636189699172974}` |
-| filetypes/tar.xz | general_only | 1 | 26 | 100.00% | 0 | 0.00 | 0.000 | 100.00% | 100.00% | `{"general": 0.8365404009819031}` |
-| filetypes/package.json | or_general_primary | 1963 | 868 | 99.39% | 1 | 1152.07 | 3.361 | 99.67% | 99.54% | `{"filetypes/package.json": 0.8790057897567749, "general": 0.9376559257507324}` |
-| filetypes/tar | or_general_primary | 146 | 46 | 99.32% | 0 | 0.00 | 0.000 | 99.66% | 99.48% | `{"filetypes/tar": 0.47724226117134094, "general": 0.7868746519088745}` |
-| filetypes/7z | or_general_primary | 469 | 3 | 98.29% | 1 | 333333.33 | 3.361 | 99.03% | 98.09% | `{"filegroups/archive": 0.6381730437278748, "general": 0.6577135920524597}` |
-| filetypes/elf | filetype_only | 2764 | 13799 | 97.87% | 1 | 72.47 | 3.361 | 98.90% | 99.64% | `{"filetypes/elf": 0.8628232479095459}` |
-| filetypes/tar.gz | or_general_primary | 2470 | 1525 | 97.09% | 1 | 655.74 | 3.361 | 98.50% | 98.17% | `{"filegroups/archive": 0.8576307892799377, "filetypes/tar.gz": 0.6969171762466431, "general": 0.9723145961761475}` |
-| filetypes/xls | general_only | 21 | 4 | 95.24% | 0 | 0.00 | 0.000 | 97.56% | 96.00% | `{"general": 0.0009061877499334514}` |
-| filetypes/python-bytecode | filetype_only | 109 | 1267 | 94.50% | 0 | 0.00 | 0.000 | 97.17% | 99.56% | `{"filetypes/python-bytecode": 0.9863467216491699}` |
-| filetypes/jar | group_primary_with_escape | 71 | 197 | 92.96% | 1 | 5076.14 | 3.361 | 95.65% | 97.76% | `{"filegroups/portable": 0.9876785278320312, "filetypes/jar": 0.4033418297767639, "general": 0.610687792301178}` |
-| filetypes/data | general_only | 43 | 1064 | 90.70% | 0 | 0.00 | 0.000 | 95.12% | 99.64% | `{"general": 0.853091299533844}` |
-| filetypes/javascript | group_primary_with_escape | 7213 | 47045 | 90.31% | 3 | 63.77 | 10.082 | 94.89% | 98.71% | `{"filegroups/scripts": 0.9906684756278992, "general": 0.9938915371894836}` |
-| filetypes/python | specialist_primary_with_escape | 1715 | 14198 | 89.74% | 1 | 70.43 | 3.361 | 94.56% | 98.89% | `{"filegroups/scripts": 0.9956585168838501, "filetypes/python": 0.9637269377708435, "general": 0.990637481212616}` |
-| filetypes/docx | general_only | 67 | 27 | 89.55% | 0 | 0.00 | 0.000 | 94.49% | 92.55% | `{"general": 0.11987817287445068}` |
+Rows marked † are below data resolution: the per-filetype calibration sample is too small to credibly assert FP/M ≤ target at this level (95% CI). The threshold shown is the loosest empirical 0-FP threshold; FP/M is what the test partition actually observed under that threshold. *95% CI upper* is the Clopper-Pearson upper bound on deployment FP/M given the observed FP count in this filetype's benigns.
+
+| Route | Policy | Malware | Benign | Recall | FP | FP/1M | 95% CI upper | Global FP/1M | F1 | Accuracy | Thresholds |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| filetypes/html† | general_only | 9 | 1384 | 100.00% | 0 | 0.00 | 2162.21 | 0.000 | 100.00% | 100.00% | `{"general": 0.8594487309455872}` |
+| filetypes/desktop-entry† | general_only | 2 | 231 | 100.00% | 0 | 0.00 | 12884.81 | 0.000 | 100.00% | 100.00% | `{"general": 0.9922379851341248}` |
+| filetypes/pkg† | general_only | 1 | 13 | 100.00% | 0 | 0.00 | 205816.67 | 0.000 | 100.00% | 100.00% | `{"general": 0.0017194385873153806}` |
+| filetypes/doc† | general_only | 1899 | 23 | 99.79% | 0 | 0.00 | 122123.39 | 0.000 | 99.89% | 99.79% | `{"general": 0.002071269089356065}` |
+| filetypes/lnk† | general_only | 285 | 17 | 99.30% | 0 | 0.00 | 161566.11 | 0.000 | 99.65% | 99.34% | `{"general": 0.0039053931832313538}` |
+| filetypes/tar† | or_general_primary | 1042 | 355 | 97.02% | 0 | 0.00 | 8403.18 | 0.000 | 98.49% | 97.78% | `{"filegroups/archive": 1.0, "general": 0.7734574675559998}` |
+| filetypes/zst† | general_only | 2282 | 16150 | 96.93% | 0 | 0.00 | 185.48 | 0.000 | 98.44% | 99.62% | `{"general": 0.8446625471115112}` |
+| filetypes/rar† | general_only | 952 | 4 | 95.69% | 0 | 0.00 | 527129.20 | 0.000 | 97.80% | 95.71% | `{"general": 0.0008109572809189558}` |
+| filetypes/rtf† | general_only | 89 | 437 | 95.51% | 0 | 0.00 | 6831.78 | 0.000 | 97.70% | 99.24% | `{"general": 0.9508298635482788}` |
+| filetypes/pkg-info† | general_only | 3681 | 807 | 91.69% | 0 | 0.00 | 3705.30 | 0.000 | 95.66% | 93.18% | `{"general": 0.7194933891296387}` |
+| filetypes/chm† | general_only | 17 | 5 | 88.24% | 0 | 0.00 | 450719.73 | 0.000 | 93.75% | 90.91% | `{"general": 0.5562927722930908}` |
+| filetypes/elf | or_general_primary | 21965 | 111877 | 87.18% | 3 | 26.82 | 69.30 | 1.264 | 93.14% | 97.89% | `{"filegroups/native": 1.0, "filetypes/elf": 1.0, "general": 0.9890598058700562}` |
+| filetypes/package.json† | or_general_primary | 15658 | 7205 | 86.72% | 0 | 0.00 | 415.70 | 0.000 | 92.89% | 90.90% | `{"filegroups/config": 1.0, "filetypes/package.json": 1.0, "general": 0.9915000796318054}` |
+| filetypes/tar.gz† | or_general_primary | 19387 | 11894 | 85.12% | 0 | 0.00 | 251.84 | 0.000 | 91.96% | 90.78% | `{"filegroups/archive": 1.0, "filetypes/tar.gz": 1.0, "general": 0.9977129101753235}` |
+| filetypes/cab† | general_only | 5 | 23 | 80.00% | 0 | 0.00 | 122123.39 | 0.000 | 88.89% | 96.43% | `{"general": 0.9920740127563477}` |
+| filetypes/javascript | or_general_primary | 57629 | 375582 | 79.78% | 20 | 53.25 | 77.38 | 8.429 | 88.74% | 97.31% | `{"filegroups/scripts": 1.0, "filetypes/javascript": 1.0, "general": 0.9867922067642212}` |
+| filetypes/zip† | or_general_primary | 32962 | 5584 | 77.44% | 0 | 0.00 | 536.34 | 0.000 | 87.28% | 80.71% | `{"filegroups/archive": 0.006320903543382883, "filetypes/zip": 1.0, "general": 0.9965186715126038}` |
+| filetypes/xz† | general_only | 42 | 23367 | 76.19% | 0 | 0.00 | 128.20 | 0.000 | 86.49% | 99.96% | `{"general": 0.8812193274497986}` |
+| filetypes/7z† | general_only | 3780 | 34 | 75.16% | 0 | 0.00 | 84339.64 | 0.000 | 85.82% | 75.38% | `{"general": 0.9988694190979004}` |
+| filetypes/jar† | general_only | 606 | 1566 | 74.26% | 0 | 0.00 | 1911.15 | 0.000 | 85.23% | 92.82% | `{"general": 0.9402996897697449}` |
+| filetypes/applescript† | general_only | 22 | 100 | 72.73% | 0 | 0.00 | 29513.05 | 0.000 | 84.21% | 95.08% | `{"general": 0.9594946503639221}` |
+| filetypes/python | or_general_primary | 13423 | 112372 | 71.68% | 3 | 26.70 | 69.00 | 1.264 | 83.50% | 96.98% | `{"filegroups/scripts": 1.0, "filetypes/python": 1.0, "general": 0.9934084415435791}` |
+| filetypes/xls† | general_only | 229 | 42 | 69.00% | 0 | 0.00 | 68842.61 | 0.000 | 81.65% | 73.80% | `{"general": 0.29995617270469666}` |
+| filetypes/pe | or_general_primary | 410851 | 140808 | 66.84% | 5 | 35.51 | 74.66 | 2.107 | 80.12% | 75.30% | `{"filegroups/native": 1.0, "filetypes/pe": 0.9999626874923706, "general": 0.9975352883338928}` |
+| filetypes/tar.bz2† | general_only | 3 | 186 | 66.67% | 0 | 0.00 | 15977.08 | 0.000 | 80.00% | 99.47% | `{"general": 0.9955074191093445}` |
+| filetypes/perl† | or_general_primary | 157 | 29368 | 65.61% | 0 | 0.00 | 102.00 | 0.000 | 79.23% | 99.82% | `{"filegroups/scripts": 1.0, "filetypes/perl": 1.0, "general": 0.9737693071365356}` |
+| filetypes/java_class | general_only | 603 | 184472 | 62.02% | 8 | 43.37 | 78.25 | 3.372 | 75.94% | 99.87% | `{"general": 0.9439346790313721}` |
+| filetypes/docx† | general_only | 372 | 219 | 61.83% | 0 | 0.00 | 13586.01 | 0.000 | 76.41% | 75.97% | `{"general": 0.860793948173523}` |
+| filetypes/kotlin† | or_general_primary | 928 | 34931 | 60.88% | 0 | 0.00 | 85.76 | 0.000 | 75.69% | 98.99% | `{"filegroups/source": 1.0, "filetypes/kotlin": 1.0, "general": 0.7555142045021057}` |
+| filetypes/ruby† | or_general_primary | 70 | 23108 | 60.00% | 0 | 0.00 | 129.63 | 0.000 | 75.00% | 99.88% | `{"filegroups/scripts": 1.0, "filetypes/ruby": 1.0, "general": 0.9729308485984802}` |

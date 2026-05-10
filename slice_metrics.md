@@ -3,79 +3,72 @@
 Effective routed ensemble metrics by corpus slice. A filetype row uses the route litmus would use for that filetype: `az`, calibrated `az/<filegroup>`, and calibrated `az/<filetype>` when available.
 
 - Calibration snapshot: `762136079`
-- Rows: 374918 (77361 malware, 297557 benign)
+- Rows: 2990924 (618271 malware, 2372653 benign)
 
 ## L5 Hostile
 
 | Scope | Rows | Malware | Benign | Recall | FPR | FP/1M | Precision | F1 | Accuracy | Routes |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| all | 374918 | 77361 | 297557 | 84.93% | 0.00% | 3.3607 | 100.00% | 91.85% | 96.89% | general,filegroups/scripts,filegroups/native,filegroups/portable,filegroups/archive,filegroups/documents,filegroups/config,filetypes/pe,filetypes/c,filetypes/javascript,filetypes/elf,filetypes/python,filetypes/png,filetypes/go,filetypes/rust,filetypes/csharp,filetypes/php,filetypes/shell,filetypes/zip,filetypes/kotlin,filetypes/tar.gz,filetypes/perl,filetypes/ruby,filetypes/package.json,filetypes/zst,filetypes/unknown,filetypes/plist,filetypes/python-bytecode,filetypes/data,filetypes/jpeg,filetypes/macho,filetypes/ole,filetypes/pkg-info,filetypes/batch,filetypes/jar,filetypes/powershell,filetypes/vbs,filetypes/tar,filetypes/docx,filetypes/rtf,filetypes/msi |
-| filetype/elf | 16563 | 2764 | 13799 | 97.40% | 0.00% | 0 | 100.00% | 98.68% | 99.57% | general,filegroups/native,filetypes/elf |
-| filetype/pe | 68887 | 51401 | 17486 | 86.30% | 0.01% | 57.189 | 100.00% | 92.64% | 89.77% | general,filegroups/native,filetypes/pe |
-| filetype/python | 15913 | 1715 | 14198 | 86.01% | 0.00% | 0 | 100.00% | 92.48% | 98.49% | general,filegroups/scripts,filetypes/python |
-| filetype/javascript | 54258 | 7213 | 47045 | 87.02% | 0.00% | 0 | 100.00% | 93.06% | 98.27% | general,filegroups/scripts,filetypes/javascript |
-| filetype/zst | 2335 | 273 | 2062 | 100.00% | 0.00% | 0 | 100.00% | 100.00% | 100.00% | general,filegroups/archive,filetypes/zst |
-| filetype/pkg-info | 581 | 485 | 96 | 99.79% | 0.00% | 0 | 100.00% | 99.90% | 99.83% | general,filetypes/pkg-info |
-| filetype/doc | 212 | 206 | 6 | 99.51% | 0.00% | 0 | 100.00% | 99.76% | 99.53% | general,filegroups/documents |
-| filetype/package.json | 2831 | 1963 | 868 | 97.96% | 0.00% | 0 | 100.00% | 98.97% | 98.59% | general,filegroups/config,filetypes/package.json |
-| filetype/tar | 192 | 146 | 46 | 96.58% | 0.00% | 0 | 100.00% | 98.26% | 97.40% | general,filegroups/archive,filetypes/tar |
-| filetype/7z | 472 | 469 | 3 | 95.52% | 0.00% | 0 | 100.00% | 97.71% | 95.55% | general,filegroups/archive |
-| filetype/tar.gz | 3995 | 2470 | 1525 | 95.43% | 0.00% | 0 | 100.00% | 97.66% | 97.17% | general,filegroups/archive,filetypes/tar.gz |
-| filetype/python-bytecode | 1376 | 109 | 1267 | 94.50% | 0.00% | 0 | 100.00% | 97.17% | 99.56% | general,filetypes/python-bytecode |
-| filetype/docx | 94 | 67 | 27 | 89.55% | 0.00% | 0 | 100.00% | 94.49% | 92.55% | general,filegroups/documents,filetypes/docx |
+| all | 2990924 | 618271 | 2372653 | 71.18% | 0.00% | 13.487 | 99.99% | 83.16% | 94.04% | general,filegroups/source,filetypes/go |
+| filetype/elf | 133842 | 21965 | 111877 | 83.52% | 0.00% | 0 | 100.00% | 91.02% | 97.30% | general |
+| filetype/pe | 551659 | 410851 | 140808 | 75.96% | 0.01% | 106.53 | 100.00% | 86.34% | 82.09% | general |
+| filetype/python | 125795 | 13423 | 112372 | 64.00% | 0.00% | 17.798 | 99.98% | 78.04% | 96.16% | general |
+| filetype/javascript | 433211 | 57629 | 375582 | 59.38% | 0.00% | 0 | 100.00% | 74.51% | 94.60% | general |
+| filetype/zst | 18432 | 2282 | 16150 | 91.41% | 0.00% | 0 | 100.00% | 95.51% | 98.94% | general |
+| filetype/tar.gz | 31281 | 19387 | 11894 | 89.00% | 0.01% | 84.076 | 99.99% | 94.18% | 93.18% | general |
+| filetype/7z | 3814 | 3780 | 34 | 86.85% | 2.94% | 29412 | 99.97% | 92.95% | 86.94% | general |
+| filetype/tar | 1397 | 1042 | 355 | 81.77% | 0.00% | 0 | 100.00% | 89.97% | 86.40% | general |
+| filetype/zip | 38546 | 32962 | 5584 | 78.44% | 0.05% | 537.25 | 99.99% | 87.91% | 81.55% | general |
+| filetype/package.json | 22863 | 15658 | 7205 | 75.43% | 0.00% | 0 | 100.00% | 86.00% | 83.17% | general |
+| filetype/pkg-info | 4488 | 3681 | 807 | 65.42% | 0.00% | 0 | 100.00% | 79.09% | 71.64% | general |
 
 ## L9 Hostile
 
 | Scope | Rows | Malware | Benign | Recall | FPR | FP/1M | Precision | F1 | Accuracy | Routes |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| all | 374918 | 77361 | 297557 | 85.20% | 0.00% | 6.7214 | 100.00% | 92.01% | 96.95% | general,filegroups/scripts,filegroups/native,filegroups/portable,filegroups/archive,filegroups/documents,filegroups/config,filetypes/pe,filetypes/c,filetypes/javascript,filetypes/elf,filetypes/python,filetypes/png,filetypes/go,filetypes/rust,filetypes/csharp,filetypes/php,filetypes/shell,filetypes/zip,filetypes/kotlin,filetypes/tar.gz,filetypes/perl,filetypes/ruby,filetypes/package.json,filetypes/zst,filetypes/unknown,filetypes/plist,filetypes/python-bytecode,filetypes/data,filetypes/jpeg,filetypes/macho,filetypes/ole,filetypes/pkg-info,filetypes/batch,filetypes/jar,filetypes/powershell,filetypes/vbs,filetypes/tar,filetypes/docx,filetypes/rtf,filetypes/msi |
-| filetype/elf | 16563 | 2764 | 13799 | 97.40% | 0.00% | 0 | 100.00% | 98.68% | 99.57% | general,filegroups/native,filetypes/elf |
-| filetype/pe | 68887 | 51401 | 17486 | 86.69% | 0.01% | 114.38 | 100.00% | 92.87% | 90.06% | general,filegroups/native,filetypes/pe |
-| filetype/python | 15913 | 1715 | 14198 | 86.01% | 0.00% | 0 | 100.00% | 92.48% | 98.49% | general,filegroups/scripts,filetypes/python |
-| filetype/javascript | 54258 | 7213 | 47045 | 87.08% | 0.00% | 0 | 100.00% | 93.09% | 98.28% | general,filegroups/scripts,filetypes/javascript |
-| filetype/zst | 2335 | 273 | 2062 | 100.00% | 0.00% | 0 | 100.00% | 100.00% | 100.00% | general,filegroups/archive,filetypes/zst |
-| filetype/pkg-info | 581 | 485 | 96 | 99.79% | 0.00% | 0 | 100.00% | 99.90% | 99.83% | general,filetypes/pkg-info |
-| filetype/doc | 212 | 206 | 6 | 99.51% | 0.00% | 0 | 100.00% | 99.76% | 99.53% | general,filegroups/documents |
-| filetype/package.json | 2831 | 1963 | 868 | 97.96% | 0.00% | 0 | 100.00% | 98.97% | 98.59% | general,filegroups/config,filetypes/package.json |
-| filetype/tar | 192 | 146 | 46 | 96.58% | 0.00% | 0 | 100.00% | 98.26% | 97.40% | general,filegroups/archive,filetypes/tar |
-| filetype/7z | 472 | 469 | 3 | 95.74% | 0.00% | 0 | 100.00% | 97.82% | 95.76% | general,filegroups/archive |
-| filetype/tar.gz | 3995 | 2470 | 1525 | 95.43% | 0.00% | 0 | 100.00% | 97.66% | 97.17% | general,filegroups/archive,filetypes/tar.gz |
-| filetype/python-bytecode | 1376 | 109 | 1267 | 94.50% | 0.00% | 0 | 100.00% | 97.17% | 99.56% | general,filetypes/python-bytecode |
-| filetype/docx | 94 | 67 | 27 | 89.55% | 0.00% | 0 | 100.00% | 94.49% | 92.55% | general,filegroups/documents,filetypes/docx |
+| all | 2990924 | 618271 | 2372653 | 71.18% | 0.00% | 13.487 | 99.99% | 83.16% | 94.04% | general,filegroups/source,filetypes/go |
+| filetype/elf | 133842 | 21965 | 111877 | 83.52% | 0.00% | 0 | 100.00% | 91.02% | 97.30% | general |
+| filetype/pe | 551659 | 410851 | 140808 | 75.96% | 0.01% | 106.53 | 100.00% | 86.34% | 82.09% | general |
+| filetype/python | 125795 | 13423 | 112372 | 64.00% | 0.00% | 17.798 | 99.98% | 78.04% | 96.16% | general |
+| filetype/javascript | 433211 | 57629 | 375582 | 59.38% | 0.00% | 0 | 100.00% | 74.51% | 94.60% | general |
+| filetype/zst | 18432 | 2282 | 16150 | 91.41% | 0.00% | 0 | 100.00% | 95.51% | 98.94% | general |
+| filetype/tar.gz | 31281 | 19387 | 11894 | 89.00% | 0.01% | 84.076 | 99.99% | 94.18% | 93.18% | general |
+| filetype/7z | 3814 | 3780 | 34 | 86.85% | 2.94% | 29412 | 99.97% | 92.95% | 86.94% | general |
+| filetype/tar | 1397 | 1042 | 355 | 81.77% | 0.00% | 0 | 100.00% | 89.97% | 86.40% | general |
+| filetype/zip | 38546 | 32962 | 5584 | 78.44% | 0.05% | 537.25 | 99.99% | 87.91% | 81.55% | general |
+| filetype/package.json | 22863 | 15658 | 7205 | 75.43% | 0.00% | 0 | 100.00% | 86.00% | 83.17% | general |
+| filetype/pkg-info | 4488 | 3681 | 807 | 65.42% | 0.00% | 0 | 100.00% | 79.09% | 71.64% | general |
 
 ## L5 Suspicious
 
 | Scope | Rows | Malware | Benign | Recall | FPR | FP/1M | Precision | F1 | Accuracy | Routes |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| all | 374918 | 77361 | 297557 | 86.29% | 0.00% | 47.05 | 99.98% | 92.63% | 97.17% | general,filegroups/scripts,filegroups/native,filegroups/portable,filegroups/archive,filegroups/documents,filegroups/config,filetypes/pe,filetypes/c,filetypes/javascript,filetypes/elf,filetypes/python,filetypes/png,filetypes/go,filetypes/rust,filetypes/csharp,filetypes/php,filetypes/shell,filetypes/zip,filetypes/kotlin,filetypes/tar.gz,filetypes/perl,filetypes/ruby,filetypes/package.json,filetypes/zst,filetypes/unknown,filetypes/plist,filetypes/python-bytecode,filetypes/data,filetypes/jpeg,filetypes/macho,filetypes/ole,filetypes/pkg-info,filetypes/batch,filetypes/jar,filetypes/powershell,filetypes/vbs,filetypes/tar,filetypes/docx,filetypes/rtf,filetypes/msi |
-| filetype/elf | 16563 | 2764 | 13799 | 97.40% | 0.00% | 0 | 100.00% | 98.68% | 99.57% | general,filegroups/native,filetypes/elf |
-| filetype/pe | 68887 | 51401 | 17486 | 88.26% | 0.06% | 629.07 | 99.98% | 93.76% | 91.23% | general,filegroups/native,filetypes/pe |
-| filetype/python | 15913 | 1715 | 14198 | 86.06% | 0.00% | 0 | 100.00% | 92.51% | 98.50% | general,filegroups/scripts,filetypes/python |
-| filetype/javascript | 54258 | 7213 | 47045 | 87.25% | 0.01% | 63.769 | 99.95% | 93.17% | 98.30% | general,filegroups/scripts,filetypes/javascript |
-| filetype/zst | 2335 | 273 | 2062 | 100.00% | 0.00% | 0 | 100.00% | 100.00% | 100.00% | general,filegroups/archive,filetypes/zst |
-| filetype/pkg-info | 581 | 485 | 96 | 99.79% | 0.00% | 0 | 100.00% | 99.90% | 99.83% | general,filetypes/pkg-info |
-| filetype/doc | 212 | 206 | 6 | 99.51% | 0.00% | 0 | 100.00% | 99.76% | 99.53% | general,filegroups/documents |
-| filetype/package.json | 2831 | 1963 | 868 | 97.96% | 0.00% | 0 | 100.00% | 98.97% | 98.59% | general,filegroups/config,filetypes/package.json |
-| filetype/tar | 192 | 146 | 46 | 96.58% | 0.00% | 0 | 100.00% | 98.26% | 97.40% | general,filegroups/archive,filetypes/tar |
-| filetype/7z | 472 | 469 | 3 | 95.74% | 0.00% | 0 | 100.00% | 97.82% | 95.76% | general,filegroups/archive |
-| filetype/tar.gz | 3995 | 2470 | 1525 | 95.43% | 0.00% | 0 | 100.00% | 97.66% | 97.17% | general,filegroups/archive,filetypes/tar.gz |
-| filetype/python-bytecode | 1376 | 109 | 1267 | 94.50% | 0.00% | 0 | 100.00% | 97.17% | 99.56% | general,filetypes/python-bytecode |
-| filetype/docx | 94 | 67 | 27 | 89.55% | 0.00% | 0 | 100.00% | 94.49% | 92.55% | general,filegroups/documents,filetypes/docx |
+| all | 2990924 | 618271 | 2372653 | 76.16% | 0.00% | 29.081 | 99.99% | 86.46% | 95.07% | general,filegroups/source,filetypes/go |
+| filetype/elf | 133842 | 21965 | 111877 | 85.28% | 0.00% | 0 | 100.00% | 92.06% | 97.58% | general |
+| filetype/pe | 551659 | 410851 | 140808 | 81.00% | 0.03% | 319.58 | 99.99% | 89.50% | 85.84% | general |
+| filetype/python | 125795 | 13423 | 112372 | 70.28% | 0.00% | 17.798 | 99.98% | 82.54% | 96.83% | general |
+| filetype/javascript | 433211 | 57629 | 375582 | 68.63% | 0.00% | 5.3251 | 99.99% | 81.40% | 95.83% | general |
+| filetype/zst | 18432 | 2282 | 16150 | 93.56% | 0.00% | 0 | 100.00% | 96.67% | 99.20% | general |
+| filetype/tar.gz | 31281 | 19387 | 11894 | 90.46% | 0.02% | 168.15 | 99.99% | 94.99% | 94.08% | general |
+| filetype/7z | 3814 | 3780 | 34 | 88.28% | 2.94% | 29412 | 99.97% | 93.76% | 88.36% | general |
+| filetype/tar | 1397 | 1042 | 355 | 84.64% | 0.00% | 0 | 100.00% | 91.68% | 88.55% | general |
+| filetype/package.json | 22863 | 15658 | 7205 | 82.51% | 0.00% | 0 | 100.00% | 90.42% | 88.02% | general |
+| filetype/zip | 38546 | 32962 | 5584 | 80.58% | 0.11% | 1074.5 | 99.98% | 89.24% | 83.38% | general |
+| filetype/pkg-info | 4488 | 3681 | 807 | 77.86% | 0.00% | 0 | 100.00% | 87.55% | 81.84% | general |
 
 ## L9 Suspicious
 
 | Scope | Rows | Malware | Benign | Recall | FPR | FP/1M | Precision | F1 | Accuracy | Routes |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| all | 374918 | 77361 | 297557 | 88.61% | 0.01% | 77.296 | 99.97% | 93.95% | 97.64% | general,filegroups/scripts,filegroups/native,filegroups/portable,filegroups/archive,filegroups/documents,filegroups/config,filetypes/pe,filetypes/c,filetypes/javascript,filetypes/elf,filetypes/python,filetypes/png,filetypes/go,filetypes/rust,filetypes/csharp,filetypes/php,filetypes/shell,filetypes/zip,filetypes/kotlin,filetypes/tar.gz,filetypes/perl,filetypes/ruby,filetypes/package.json,filetypes/zst,filetypes/unknown,filetypes/plist,filetypes/python-bytecode,filetypes/data,filetypes/jpeg,filetypes/macho,filetypes/ole,filetypes/pkg-info,filetypes/batch,filetypes/jar,filetypes/powershell,filetypes/vbs,filetypes/tar,filetypes/docx,filetypes/rtf,filetypes/msi |
-| filetype/elf | 16563 | 2764 | 13799 | 97.40% | 0.00% | 0 | 100.00% | 98.68% | 99.57% | general,filegroups/native,filetypes/elf |
-| filetype/pe | 68887 | 51401 | 17486 | 91.57% | 0.10% | 972.21 | 99.96% | 95.58% | 93.69% | general,filegroups/native,filetypes/pe |
-| filetype/python | 15913 | 1715 | 14198 | 87.17% | 0.01% | 70.432 | 99.93% | 93.12% | 98.61% | general,filegroups/scripts,filetypes/python |
-| filetype/javascript | 54258 | 7213 | 47045 | 87.73% | 0.01% | 63.769 | 99.95% | 93.44% | 98.36% | general,filegroups/scripts,filetypes/javascript |
-| filetype/zst | 2335 | 273 | 2062 | 100.00% | 0.00% | 0 | 100.00% | 100.00% | 100.00% | general,filegroups/archive,filetypes/zst |
-| filetype/pkg-info | 581 | 485 | 96 | 99.79% | 0.00% | 0 | 100.00% | 99.90% | 99.83% | general,filetypes/pkg-info |
-| filetype/doc | 212 | 206 | 6 | 99.51% | 0.00% | 0 | 100.00% | 99.76% | 99.53% | general,filegroups/documents |
-| filetype/package.json | 2831 | 1963 | 868 | 98.12% | 0.00% | 0 | 100.00% | 99.05% | 98.69% | general,filegroups/config,filetypes/package.json |
-| filetype/tar | 192 | 146 | 46 | 96.58% | 0.00% | 0 | 100.00% | 98.26% | 97.40% | general,filegroups/archive,filetypes/tar |
-| filetype/7z | 472 | 469 | 3 | 95.74% | 0.00% | 0 | 100.00% | 97.82% | 95.76% | general,filegroups/archive |
-| filetype/tar.gz | 3995 | 2470 | 1525 | 95.51% | 0.00% | 0 | 100.00% | 97.70% | 97.22% | general,filegroups/archive,filetypes/tar.gz |
-| filetype/python-bytecode | 1376 | 109 | 1267 | 94.50% | 0.00% | 0 | 100.00% | 97.17% | 99.56% | general,filetypes/python-bytecode |
+| all | 2990924 | 618271 | 2372653 | 76.93% | 0.00% | 37.932 | 99.98% | 86.95% | 95.23% | general,filegroups/source,filetypes/go |
+| filetype/elf | 133842 | 21965 | 111877 | 85.48% | 0.00% | 0 | 100.00% | 92.17% | 97.62% | general |
+| filetype/pe | 551659 | 410851 | 140808 | 81.87% | 0.04% | 390.6 | 99.98% | 90.03% | 86.49% | general |
+| filetype/python | 125795 | 13423 | 112372 | 71.57% | 0.00% | 26.697 | 99.97% | 83.42% | 96.96% | general |
+| filetype/javascript | 433211 | 57629 | 375582 | 69.53% | 0.00% | 23.963 | 99.98% | 82.02% | 95.94% | general |
+| filetype/zst | 18432 | 2282 | 16150 | 93.78% | 0.00% | 0 | 100.00% | 96.79% | 99.23% | general |
+| filetype/tar.gz | 31281 | 19387 | 11894 | 90.69% | 0.02% | 168.15 | 99.99% | 95.12% | 94.23% | general |
+| filetype/7z | 3814 | 3780 | 34 | 88.54% | 2.94% | 29412 | 99.97% | 93.91% | 88.62% | general |
+| filetype/tar | 1397 | 1042 | 355 | 85.32% | 0.00% | 0 | 100.00% | 92.08% | 89.05% | general |
+| filetype/package.json | 22863 | 15658 | 7205 | 83.32% | 0.00% | 0 | 100.00% | 90.90% | 88.58% | general |
+| filetype/zip | 38546 | 32962 | 5584 | 80.90% | 0.14% | 1432.7 | 99.97% | 89.43% | 83.65% | general |
+| filetype/pkg-info | 4488 | 3681 | 807 | 78.51% | 0.00% | 0 | 100.00% | 87.96% | 82.38% | general |

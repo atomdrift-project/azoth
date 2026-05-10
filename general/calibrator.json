@@ -1,5 +1,6 @@
 {
   "schema": "azoth.calibrator.isotonic.v1",
+  "method": "isotonic",
   "x": [
     1.735320984153077e-05,
     0.0001718557032290846,
@@ -266,5 +267,5 @@
   ],
   "out_of_bounds": "clip",
   "n_train": 374918,
-  "fit_log": "isotonic regression on 374918 rows (77361 malware, 297557 benign); breakpoints: 130"
+  "fit_log": "isotonic on 374918 rows (77361 malware, 297557 benign); empirical max x=1.000 y=1.000; method=isotonic, breakpoints=130"
 }
