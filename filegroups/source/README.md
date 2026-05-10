@@ -1,6 +1,19 @@
-# Azoth Filegroup `source`
-Specialist model for `c`, `cpp`, `csharp`, `go`, `java`, `kotlin`, `makefile`, `rust`, `scala`, `swift`.
-- Inputs: shared general `feature_spec.json` (37595 features); policy `general_shared`.
+# Azoth Filegroup — `source`
+
+Specialist classifier for `c`, `cpp`, `csharp`, `go`, `java`, `kotlin`, `makefile`, `rust`, `scala`, `swift`. Used by the routed ensemble — see [../../ENSEMBLE_MODEL.md](../../ENSEMBLE_MODEL.md).
+
+
+## Single-model performance
+
+Training-time benchmark (no test-bucket-only metric on file):
+
+- ROC AUC / PR AUC / F1: 0.9203 / 0.6229 / 0.6615
+- Benchmark rows: 88277 (1112 malware, 87165 benign).
+
+## Training
+
+- Inputs: shared general `feature_spec.json` (37595 features); feature-spec policy `general_shared`.
+- Algorithm: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Feature families:
   - aggregate finding counts
   - ATT&CK/MBC n-grams
@@ -16,10 +29,14 @@ Specialist model for `c`, `cpp`, `csharp`, `go`, `java`, `kotlin`, `makefile`, `
   - severity distribution
   - soft presence
   - structural coverage
-- Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Training rows: 10578 (3532 malware, 7046 benign).
-- Benchmark rows: 88277 (1112 malware, 87165 benign).
-- Benchmark AUC/AP/F1: 0.9203 / 0.6229 / 0.6615.
+- Internal training-time benchmark rows: 88277 (1112 malware, 87165 benign).
+- Internal training-time benchmark AUC/AP/F1: 0.9203 / 0.6229 / 0.6615.
+
+## Operational policy levels (advanced)
+
+Per-FP/M-target operating points for this specialist. Default deploy uses L3 hostile, L5 suspicious; lower levels = stricter FP budget. Useful when you need to tune deployed sensitivity.
+
 | L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | 0 | - | 45.41% | 0.00 | 0.955159 | 8.0 | 45.86% | 11.47 | 0.951228 |

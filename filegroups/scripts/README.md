@@ -1,6 +1,19 @@
-# Azoth Filegroup `scripts`
-Specialist model for `batch`, `javascript`, `lua`, `perl`, `php`, `powershell`, `python`, `ruby`, `shell`, `typescript`, `vbscript`.
-- Inputs: shared general `feature_spec.json` (45160 features); policy `general_shared`.
+# Azoth Filegroup — `scripts`
+
+Specialist classifier for `batch`, `javascript`, `lua`, `perl`, `php`, `powershell`, `python`, `ruby`, `shell`, `typescript`, `vbscript`. Used by the routed ensemble — see [../../ENSEMBLE_MODEL.md](../../ENSEMBLE_MODEL.md).
+
+
+## Single-model performance
+
+Training-time benchmark (no test-bucket-only metric on file):
+
+- ROC AUC / PR AUC / F1: 0.9992 / 0.9970 / 0.9849
+- Benchmark rows: 87084 (9808 malware, 77276 benign).
+
+## Training
+
+- Inputs: shared general `feature_spec.json` (45160 features); feature-spec policy `general_shared`.
+- Algorithm: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Feature families:
   - aggregate finding counts
   - ATT&CK/MBC n-grams
@@ -16,10 +29,14 @@ Specialist model for `batch`, `javascript`, `lua`, `perl`, `php`, `powershell`, 
   - severity distribution
   - soft presence
   - structural coverage
-- Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Training rows: 605458 (66428 malware, 539030 benign).
-- Benchmark rows: 87084 (9808 malware, 77276 benign).
-- Benchmark AUC/AP/F1: 0.9992 / 0.9970 / 0.9849.
+- Internal training-time benchmark rows: 87084 (9808 malware, 77276 benign).
+- Internal training-time benchmark AUC/AP/F1: 0.9992 / 0.9970 / 0.9849.
+
+## Operational policy levels (advanced)
+
+Per-FP/M-target operating points for this specialist. Default deploy uses L3 hostile, L5 suspicious; lower levels = stricter FP budget. Useful when you need to tune deployed sensitivity.
+
 | L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | 0 | - | 80.70% | 0.00 | 0.999570 | 8.0 | 92.43% | 12.94 | 0.994739 |

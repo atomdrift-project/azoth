@@ -1,6 +1,19 @@
-# Azoth Filegroup `portable`
-Specialist model for `dex`, `jar`, `java_class`, `pyc`, `wasm`.
-- Inputs: shared general `feature_spec.json` (37595 features); policy `general_shared`.
+# Azoth Filegroup — `portable`
+
+Specialist classifier for `dex`, `jar`, `java_class`, `pyc`, `wasm`. Used by the routed ensemble — see [../../ENSEMBLE_MODEL.md](../../ENSEMBLE_MODEL.md).
+
+
+## Single-model performance
+
+Training-time benchmark (no test-bucket-only metric on file):
+
+- ROC AUC / PR AUC / F1: 0.9879 / 0.9806 / 0.9648
+- Benchmark rows: 1140 (142 malware, 998 benign).
+
+## Training
+
+- Inputs: shared general `feature_spec.json` (37595 features); feature-spec policy `general_shared`.
+- Algorithm: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Feature families:
   - aggregate finding counts
   - ATT&CK/MBC n-grams
@@ -16,10 +29,14 @@ Specialist model for `dex`, `jar`, `java_class`, `pyc`, `wasm`.
   - severity distribution
   - soft presence
   - structural coverage
-- Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Training rows: 1220 (751 malware, 469 benign).
-- Benchmark rows: 1140 (142 malware, 998 benign).
-- Benchmark AUC/AP/F1: 0.9879 / 0.9806 / 0.9648.
+- Internal training-time benchmark rows: 1140 (142 malware, 998 benign).
+- Internal training-time benchmark AUC/AP/F1: 0.9879 / 0.9806 / 0.9648.
+
+## Operational policy levels (advanced)
+
+Per-FP/M-target operating points for this specialist. Default deploy uses L3 hostile, L5 suspicious; lower levels = stricter FP budget. Useful when you need to tune deployed sensitivity.
+
 | L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | 0 | - | 79.58% | 0.00 | 0.846355 | 8.0 | 93.66% | 1002.0 | 0.425958 |

@@ -1,0 +1,18 @@
+{
+  "schema": "azoth.calibrator.isotonic.v1",
+  "x": [
+    0.014550730586051941,
+    0.41712260246276855,
+    0.7234269976615906,
+    0.9935401082038879
+  ],
+  "y": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+  ],
+  "out_of_bounds": "clip",
+  "n_train": 68,
+  "fit_log": "isotonic regression on 68 rows (9 malware, 59 benign); breakpoints: 4"
+}

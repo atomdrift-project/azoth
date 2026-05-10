@@ -1,6 +1,19 @@
-# Azoth Filegroup `archive`
-Specialist model for `7z`, `apk`, `cab`, `deb`, `egg`, `gz`, `msi`, `rar`, `rpm`, `tar`, `tar.gz`, `tgz`, `vsix`, `war`, `whl`, `xpi`, `xz`, `zip`, `zst`.
-- Inputs: shared general `feature_spec.json` (37595 features); policy `general_shared`.
+# Azoth Filegroup — `archive`
+
+Specialist classifier for `7z`, `apk`, `cab`, `deb`, `egg`, `gz`, `msi`, `rar`, `rpm`, `tar`, `tar.gz`, `tgz`, `vsix`, `war`, `whl`, `xpi`, `xz`, `zip`, `zst`. Used by the routed ensemble — see [../../ENSEMBLE_MODEL.md](../../ENSEMBLE_MODEL.md).
+
+
+## Single-model performance
+
+Training-time benchmark (no test-bucket-only metric on file):
+
+- ROC AUC / PR AUC / F1: 0.9579 / 0.9488 / 0.9205
+- Benchmark rows: 16636 (6170 malware, 10466 benign).
+
+## Training
+
+- Inputs: shared general `feature_spec.json` (37595 features); feature-spec policy `general_shared`.
+- Algorithm: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Feature families:
   - aggregate finding counts
   - ATT&CK/MBC n-grams
@@ -16,10 +29,14 @@ Specialist model for `7z`, `apk`, `cab`, `deb`, `egg`, `gz`, `msi`, `rar`, `rpm`
   - severity distribution
   - soft presence
   - structural coverage
-- Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Training rows: 83389 (42971 malware, 40418 benign).
-- Benchmark rows: 16636 (6170 malware, 10466 benign).
-- Benchmark AUC/AP/F1: 0.9579 / 0.9488 / 0.9205.
+- Internal training-time benchmark rows: 16636 (6170 malware, 10466 benign).
+- Internal training-time benchmark AUC/AP/F1: 0.9579 / 0.9488 / 0.9205.
+
+## Operational policy levels (advanced)
+
+Per-FP/M-target operating points for this specialist. Default deploy uses L3 hostile, L5 suspicious; lower levels = stricter FP budget. Useful when you need to tune deployed sensitivity.
+
 | L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | 0 | - | 78.49% | 0.00 | 0.994853 | 8.0 | 81.17% | 95.55 | 0.981812 |

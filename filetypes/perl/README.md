@@ -1,6 +1,30 @@
-# Azoth Filetype `perl`
-Specialist model for `perl`.
-- Inputs: shared general `feature_spec.json` (49112 features); policy `general_shared`.
+# Azoth Filetype — `perl`
+
+Specialist classifier for `perl`. Used by the routed ensemble — see [../../ENSEMBLE_MODEL.md](../../ENSEMBLE_MODEL.md).
+
+
+## Single-model performance
+
+On `perl` test-bucket rows (n=2761, SHA256-deterministic 12.5% holdout):
+
+| Metric | Specialist (this model alone) | EMBER 2024 reference | Δ |
+|---|---:|---:|---:|
+| ROC AUC | 0.9953 | — | - |
+| PR AUC | 0.9484 | — | - |
+| F1 | 0.9714 | — | — |
+| Brier (calibration) | - | — | — |
+
+## How the ensemble uses this specialist
+
+At the default operating level, the deployed routing policy for `perl` is `specialist_primary_with_escape`.
+Routes consulted (max-of-thresholds): `general`, `filegroups/scripts`, `filetypes/perl`.
+
+Ensemble's headline numbers on this filetype's test bucket: ROC AUC = **0.9992**, PR AUC = **0.9471**, F1 = **0.9189**. When the ensemble lags the specialist, the router is being conservative for FP/M-budget reasons; the specialist alone is what production would get if you bypassed routing.
+
+## Training
+
+- Inputs: shared general `feature_spec.json` (49112 features); feature-spec policy `general_shared`.
+- Algorithm: LightGBM binary classifier: estimators=400, num_leaves=48, max_depth=12, min_child_samples=140, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.5, reg_lambda=4.0, early_stop=50, device=cpu.
 - Feature families:
   - aggregate finding counts
   - ATT&CK/MBC n-grams
@@ -16,10 +40,14 @@ Specialist model for `perl`.
   - severity distribution
   - soft presence
   - structural coverage
-- Technique: LightGBM binary classifier: estimators=400, num_leaves=48, max_depth=12, min_child_samples=140, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.5, reg_lambda=4.0, early_stop=50, device=cpu.
 - Training rows: 25798 (133 malware, 25665 benign).
-- Benchmark rows: 3721 (18 malware, 3703 benign).
-- Benchmark AUC/AP/F1: 0.9994 / 0.9608 / 0.9714.
+- Internal training-time benchmark rows: 3721 (18 malware, 3703 benign).
+- Internal training-time benchmark AUC/AP/F1: 0.9994 / 0.9608 / 0.9714.
+
+## Operational policy levels (advanced)
+
+Per-FP/M-target operating points for this specialist. Default deploy uses L3 hostile, L5 suspicious; lower levels = stricter FP budget. Useful when you need to tune deployed sensitivity.
+
 | L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | 0 | - | 94.44% | 0.00 | 0.992144 | 8.0 | 94.44% | 270.05 | 0.910061 |
@@ -32,7 +60,11 @@ Specialist model for `perl`.
 | 7 | 7.0 | 94.44% | 270.05 | 0.910061 | 64.0 | 94.44% | 270.05 | 0.910061 |
 | 8 | 8.0 | 94.44% | 270.05 | 0.910061 | 72.0 | 94.44% | 270.05 | 0.910061 |
 | 9 | 9.0 | 94.44% | 270.05 | 0.910061 | 80.0 | 94.44% | 270.05 | 0.910061 |
-## Routed Policy
+
+## Routed policy decisions
+
+What the ensemble actually does with this route at each operating level.
+
 | L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
 | 5 | hostile | specialist_primary_with_escape | 85.23% | 0 | 0.00 | `{"filegroups/scripts": 0.8397799730300903, "filetypes/perl": 0.6115842461585999}` |

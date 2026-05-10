@@ -1,6 +1,20 @@
-# Azoth Filegroup `media`
-Specialist model for `bmp`, `gif`, `jpeg`, `jpg`, `mp3`, `mp4`, `png`, `svg`, `webp`.
-- Inputs: shared general `feature_spec.json` (37595 features); policy `general_shared`.
+# Azoth Filegroup — `media`
+
+Specialist classifier for `bmp`, `gif`, `jpeg`, `jpg`, `mp3`, `mp4`, `png`, `svg`, `webp`. Used by the routed ensemble — see [../../ENSEMBLE_MODEL.md](../../ENSEMBLE_MODEL.md).
+
+
+> ⚠ Benchmark AUC is degenerate on this split — keep the artifact for coverage, but rely on routed full-corpus calibration before relying on it.
+## Single-model performance
+
+Training-time benchmark (no test-bucket-only metric on file):
+
+- ROC AUC / PR AUC / F1: 0.3906 / 0.0583 / 0.1081
+- Benchmark rows: 8965 (497 malware, 8468 benign).
+
+## Training
+
+- Inputs: shared general `feature_spec.json` (37595 features); feature-spec policy `general_shared`.
+- Algorithm: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Feature families:
   - aggregate finding counts
   - ATT&CK/MBC n-grams
@@ -16,12 +30,14 @@ Specialist model for `bmp`, `gif`, `jpeg`, `jpg`, `mp3`, `mp4`, `png`, `svg`, `w
   - severity distribution
   - soft presence
   - structural coverage
-- Technique: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Training rows: 477 (246 malware, 231 benign).
-- Benchmark rows: 8965 (497 malware, 8468 benign).
-- Benchmark AUC/AP/F1: 0.3906 / 0.0583 / 0.1081.
+- Internal training-time benchmark rows: 8965 (497 malware, 8468 benign).
+- Internal training-time benchmark AUC/AP/F1: 0.3906 / 0.0583 / 0.1081.
 
-- Note: benchmark AUC is degenerate on this split; keep the artifact for coverage, but rely on routed full-corpus calibration before using it.
+## Operational policy levels (advanced)
+
+Per-FP/M-target operating points for this specialist. Default deploy uses L3 hostile, L5 suspicious; lower levels = stricter FP budget. Useful when you need to tune deployed sensitivity.
+
 | L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | 0 | - | 1.21% | 0.00 | 0.961643 | 8.0 | 1.41% | 118.09 | 0.955624 |
