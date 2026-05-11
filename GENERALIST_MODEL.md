@@ -10,27 +10,27 @@ Test-partition only (SHA256-deterministic 12.5% locked holdout, never trained on
 
 | File type | Files | ROC AUC | PR AUC | F1 | EMBER ROC (All files → X) | Δ ROC | EMBER PR | Δ PR |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| **all files** | 372198 | 0.9879 | 0.9800 | 0.9631 | 0.9969 | -0.0090 | 0.9971 | -0.0171 |
-| `pe` | 67133 | 0.9970 | 0.9989 | 0.9872 | 0.9982 | -0.0012 | 0.9983 | +0.0006 |
-| `elf` | 16886 | 0.9998 | 0.9989 | 0.9844 | 0.9887 | +0.0111 | 0.9902 | +0.0087 |
-| `macho` | 921 | 0.9716 | 0.9060 | 0.8571 | — | - | — | - |
-| `msi` | 37 | 0.7043 | 0.9420 | 0.9118 | — | - | — | - |
-| `pdf` | 352 | 0.8252 | 0.1085 | 0.2000 | 0.9878 | -0.1626 | 0.9901 | -0.8816 |
-| `rtf` | 56 | 1.0000 | 1.0000 | 1.0000 | — | - | — | - |
-| `javascript` | 54690 | 0.9857 | 0.9707 | 0.9551 | — | - | — | - |
-| `python` | 15704 | 0.9918 | 0.9801 | 0.9608 | — | - | — | - |
-| `shell` | 5455 | 0.9715 | 0.9353 | 0.9105 | — | - | — | - |
-| `powershell` | 241 | 0.9812 | 0.9641 | 0.9027 | — | - | — | - |
-| `batch` | 291 | 0.9562 | 0.9207 | 0.8704 | — | - | — | - |
-| `package.json` | 2782 | 0.9991 | 0.9996 | 0.9971 | — | - | — | - |
-| `jar` | 289 | 0.9935 | 0.9890 | 0.9626 | — | - | — | - |
-| `ruby` | 2813 | 1.0000 | 1.0000 | 1.0000 | — | - | — | - |
-| `perl` | 3721 | 0.9988 | 0.9052 | 0.8750 | — | - | — | - |
+| **all files** | 408858 | 0.9838 | 0.9737 | 0.9452 | 0.9969 | -0.0131 | 0.9971 | -0.0234 |
+| `pe` | 74705 | 0.9942 | 0.9981 | 0.9796 | 0.9982 | -0.0040 | 0.9983 | -0.0002 |
+| `elf` | 17668 | 0.9996 | 0.9981 | 0.9752 | 0.9887 | +0.0109 | 0.9902 | +0.0079 |
+| `macho` | 949 | 0.9825 | 0.9059 | 0.8466 | — | - | — | - |
+| `msi` | 38 | 0.9147 | 0.9773 | 0.9538 | — | - | — | - |
+| `pdf` | 358 | 0.3564 | 0.0255 | 0.0592 | 0.9878 | -0.6314 | 0.9901 | -0.9646 |
+| `rtf` | 60 | 1.0000 | 1.0000 | 1.0000 | — | - | — | - |
+| `javascript` | 57574 | 0.9775 | 0.9621 | 0.9474 | — | - | — | - |
+| `python` | 16448 | 0.9908 | 0.9641 | 0.9202 | — | - | — | - |
+| `shell` | 5720 | 0.9770 | 0.9198 | 0.8858 | — | - | — | - |
+| `powershell` | 323 | 0.9643 | 0.9060 | 0.8382 | — | - | — | - |
+| `batch` | 307 | 0.9531 | 0.9166 | 0.8667 | — | - | — | - |
+| `package.json` | 3007 | 0.9987 | 0.9994 | 0.9968 | — | - | — | - |
+| `jar` | 307 | 0.9806 | 0.9741 | 0.9189 | — | - | — | - |
+| `ruby` | 2824 | 1.0000 | 1.0000 | 1.0000 | — | - | — | - |
+| `perl` | 3791 | 0.9560 | 0.8665 | 0.8627 | — | - | — | - |
 
 ## Training
 
 - Algorithm: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
-- Feature spec: `general/feature_spec.json` (45503 features)
+- Feature spec: `general/feature_spec.json` (47621 features)
 - Trained on the full mixed corpus across all supported filetypes (75% train / 12.5% dev / 12.5% test, SHA256-deterministic split). Calibrators and L0..L9 thresholds are fit on dev; the metrics in this card are reported on the locked test partition (never seen during training or calibration).
 
 ## Hard-pool reference (training-time evaluation)

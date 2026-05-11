@@ -26,49 +26,32 @@ The naive `max(raw_general, raw_filegroup, raw_specialist)` we used in earlier d
 
 ## General vs specialist vs ensemble
 
-Three views of each filetype, evaluated on **372198 test-partition rows** (SHA256-deterministic 12.5% locked holdout — never seen during training or calibration). 'Ensemble' uses the per-filetype winning strategy from above; 'Routing policy' is the deployed thresholded decision at the default operating level (a separate concern from the raw AUC of the combiner).
+Three views of each filetype, evaluated on **408858 test-partition rows** (SHA256-deterministic 12.5% locked holdout — never seen during training or calibration). 'Ensemble' uses the per-filetype winning strategy from above; 'Routing policy' is the deployed thresholded decision at the default operating level (a separate concern from the raw AUC of the combiner).
 
 | File type | Files | General ROC | Specialist ROC | Ensemble ROC | Strategy | Routing policy |
 |---|---:|---:|---:|---:|---|---|
-| `pe` | 67133 | 0.9970 | 0.2988 | 0.9970 | `calibrated_max` | `or_general_primary` |
-| `elf` | 16886 | 0.9998 | 0.0000 | 0.9998 | `calibrated_max` | `or_general_primary` |
-| `macho` | 921 | 0.9716 | 0.0000 | 0.9730 | `calibrated_max` | `or_general_primary` |
-| `msi` | 37 | 0.7043 | 0.0000 | 0.7634 | `calibrated_max` | `general_only` |
-| `pdf` | 352 | 0.8252 | 0.0000 | 0.8788 | `stacked_xgb` | `or_general_primary` |
-| `rtf` | 56 | 1.0000 | 0.0000 | 1.0000 | `calibrated_max` | `general_only` |
-| `javascript` | 54690 | 0.9857 | 0.2778 | 0.9881 | `calibrated_max` | `or_general_primary` |
-| `python` | 15704 | 0.9918 | 0.3093 | 0.9904 | `calibrated_max` | `or_general_primary` |
-| `shell` | 5455 | 0.9715 | 0.0000 | 0.9690 | `calibrated_max` | `or_general_primary` |
-| `powershell` | 241 | 0.9812 | 0.0000 | 0.9830 | `calibrated_max` | `or_general_primary` |
-| `batch` | 291 | 0.9562 | 0.0000 | 0.9578 | `calibrated_max` | `or_general_primary` |
-| `package.json` | 2782 | 0.9991 | 0.0000 | 0.9991 | `specialist_priority` | `or_general_primary` |
-| `jar` | 289 | 0.9935 | 0.0000 | 0.9935 | `specialist_priority` | `general_only` |
-| `ruby` | 2813 | 1.0000 | 0.0000 | 1.0000 | `calibrated_max` | `or_general_primary` |
-| `perl` | 3721 | 0.9988 | 0.0000 | 0.9983 | `stacked_xgb` | `or_general_primary` |
+| `pe` | 74705 | 0.9942 | 0.9986 | 0.9986 | `specialist_priority` | `or_general_primary` |
+| `elf` | 17668 | 0.9996 | 0.9999 | 0.9998 | `calibrated_max` | `or_general_primary` |
+| `macho` | 949 | 0.9825 | 0.9990 | 0.9990 | `specialist_priority` | `filetype_only` |
+| `msi` | 38 | 0.9147 | 0.9862 | 0.9862 | `specialist_priority` | `no_policy` |
+| `pdf` | 358 | 0.3564 | 0.9335 | 0.9335 | `specialist_priority` | `no_policy` |
+| `rtf` | 60 | 1.0000 | 1.0000 | 1.0000 | `specialist_priority` | `no_policy` |
+| `javascript` | 57574 | 0.9775 | 0.9959 | 0.9959 | `specialist_priority` | `filetype_only` |
+| `python` | 16448 | 0.9908 | 0.9949 | 0.9949 | `specialist_priority` | `or_general_primary` |
+| `shell` | 5720 | 0.9770 | 0.9971 | 0.9954 | `specialist_priority` | `group_only` |
+| `powershell` | 323 | 0.9643 | 0.9869 | 0.9869 | `specialist_priority` | `no_policy` |
+| `batch` | 307 | 0.9531 | 0.9908 | 0.9908 | `specialist_priority` | `no_policy` |
+| `package.json` | 3007 | 0.9987 | 0.9996 | 0.9995 | `specialist_priority` | `general_only` |
+| `jar` | 307 | 0.9806 | 0.9930 | 0.9846 | `specialist_priority` | `no_policy` |
+| `ruby` | 2824 | 1.0000 | 0.9993 | 0.9995 | `calibrated_max` | `general_only` |
+| `perl` | 3791 | 0.9560 | 0.9961 | 0.9961 | `specialist_priority` | `or_general_primary` |
 
 Reading the table: ensemble ≥ specialist holds for every filetype by design. When `strategy = specialist_priority`, the ensemble's column matches the specialist's. When `strategy = calibrated_max`, the routing-free combiner beats the specialist alone — those filetypes benefit most from cross-model signal.
 
-## Operational FP/M dialing (deployment knob)
+## Severity tiers (L0..L9)
 
-Independently of the AUC/PR metrics above, the bundle is calibrated at ten thresholded operating points (L0…L9) per severity. Each level corresponds to a per-million false-positive budget; the calibrator picks the per-route thresholds that maximize true positives subject to that global budget.
+L0..L9 are observation-derived severity grades, not optimization targets. For each route, level Lk's threshold is the (1 − qk × 10⁻⁶) quantile of that route's calibrated benign-score distribution on the dev partition — i.e., the score cut at which roughly qk benigns per million would be flagged. Strict tiers (qk below the empirical floor of n_benign × qk × 10⁻⁶ < 1) come from a generalized-Pareto fit to the benign-score upper tail; looser tiers are direct empirical quantiles.
 
-**This is a deployment dial, not a model-quality result.** When a route shows `no_policy` at a given level, it means no threshold for that route fits inside the global FP budget at that level — which is a function of corpus size, route benign-tail shape, and the FP target, not the model's discrimination ability. Dialing the operating level up admits more routes; dialing down enforces a stricter FP target. Per-route operating tables live in each `filetypes/<name>/README.md`.
+**The grade is a description of the score's strictness, not a deployment knob optimized for any objective.** Litmus reads the per-level thresholds out of `route_policies.json`/`config.json` and assigns severity per file. The headline PR AUC and recall@3FP/M numbers above describe the underlying ranking — they don't depend on the L grade.
 
-| L | H target/1M | H recall | H FP/1M | H 95% CI upper | S target/1M | S recall | S FP/1M | S 95% CI upper |
-| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | 0.0† | 70.95% | 36.97 | 61.20 | 8.0† | 70.95% | 36.97 | 61.20 |
-| 1 | 1.0† | 70.95% | 36.97 | 61.20 | 16.0 | 71.30% | 36.97 | 61.20 |
-| 2 | 2.0† | 70.95% | 36.97 | 61.20 | 24.0 | 72.74% | 47.06 | 73.57 |
-| 3 | 3.0† | 70.95% | 36.97 | 61.20 | 32.0 | 73.67% | 50.42 | 77.64 |
-| 4 | 4.0† | 70.95% | 36.97 | 61.20 | 40.0 | 74.85% | 50.42 | 77.64 |
-| 5 | 5.0† | 70.95% | 36.97 | 61.20 | 48.0 | 75.97% | 57.14 | 85.71 |
-| 6 | 6.0† | 70.95% | 36.97 | 61.20 | 56.0 | 76.08% | 60.50 | 89.72 |
-| 7 | 7.0† | 70.95% | 36.97 | 61.20 | 64.0 | 76.27% | 63.86 | 93.71 |
-| 8 | 8.0† | 70.95% | 36.97 | 61.20 | 72.0 | 76.47% | 67.23 | 97.68 |
-| 9 | 9.0† | 70.95% | 36.97 | 61.20 | 80.0 | 76.72% | 67.23 | 97.68 |
-
-*95% CI upper* is the Clopper-Pearson upper bound on the deployment FP rate given the observed FP count in 297,504 test-partition benigns. The honest deployment-FP/M claim sits below this number with 95% confidence.
-
-† below data resolution: the dev calibration sample is too small to credibly assert FP/M ≤ target at this level (95% CI). The deployed threshold falls back to the loosest empirical 0-FP fit; the FP/M and 95% CI columns show what the test partition actually achieves under that threshold, which exceeds the L target.
-
-Default deploy: L3 for hostile, L5 for suspicious. The headline AUC/PR/F1 figures elsewhere in this bundle are about the model's ranking ability — they don't change with the operating level.
+Default deploy: L3 for hostile, L5 for suspicious. Per-route L0..L9 thresholds and observed FP/M live in [route_policies.md](route_policies.md) and each `filetypes/<name>/README.md`.

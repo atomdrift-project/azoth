@@ -1,72 +1,19 @@
-# Azoth Filetype — `php`
+# `filetype/php`
 
-Specialist classifier for `php`. Used by the routed ensemble — see [../../ENSEMBLE_MODEL.md](../../ENSEMBLE_MODEL.md).
+LightGBM specialist for `php`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+## Performance
 
-## Single-model performance
+Test partition, n=6572 (453 malware / 6119 benign).
 
-On `php` test-bucket rows (n=2182, SHA256-deterministic 12.5% holdout):
+| ROC AUC [95% CI] | PR AUC [95% CI] | F1 [95% CI] | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|
+| 0.9937 [0.9914, 0.9955] | 0.9499 [0.9358, 0.9614] | 0.8964 [0.8744, 0.9171] | - | — |
 
-| Metric | Specialist (this model alone) | EMBER 2024 reference | Δ |
-|---|---:|---:|---:|
-| ROC AUC | 0.9986 | — | - |
-| PR AUC | 0.9865 | — | - |
-| F1 | 0.9542 | — | — |
-| Brier (calibration) | - | — | — |
+## Routing
 
-## How the ensemble uses this specialist
-
-At the default operating level, the deployed routing policy for `php` is `no_policy`.
-
-Ensemble's headline numbers on this filetype's test bucket: ROC AUC = **0.9986**, PR AUC = **0.9865**, F1 = **0.9542**. When the ensemble lags the specialist, the router is being conservative for FP/M-budget reasons; the specialist alone is what production would get if you bypassed routing.
+Default-level policy `general_only`. Allowed routes (OR over thresholds): `general`. Per-level severity thresholds in `route_policies.md` at the bundle root.
 
 ## Training
 
-- Inputs: shared general `feature_spec.json` (49112 features); feature-spec policy `general_shared`.
-- Algorithm: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
-- Feature families:
-  - aggregate finding counts
-  - ATT&CK/MBC n-grams
-  - cleave trait taxonomy
-  - element tokens
-  - extended file metrics
-  - format-group hints
-  - hopper score
-  - hostile density/escalation
-  - packaged capability mode=paths
-  - path/criticality bigrams/trigrams
-  - repetition penalties
-  - severity distribution
-  - soft presence
-  - structural coverage
-- Training rows: 37476 (1214 malware, 36262 benign).
-- Internal training-time benchmark rows: 5303 (178 malware, 5125 benign).
-- Internal training-time benchmark AUC/AP/F1: 1.0000 / 0.9998 / 0.9944.
-
-## Operational policy levels (advanced)
-
-Per-FP/M-target operating points for this specialist. Default deploy uses L3 hostile, L5 suspicious; lower levels = stricter FP budget. Useful when you need to tune deployed sensitivity.
-
-| L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |
-| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | - | 98.31% | 0.00 | 0.963190 | 8.0 | 99.44% | 195.12 | 0.920663 |
-| 1 | 1.0 | 99.44% | 195.12 | 0.920663 | 16.0 | 99.44% | 195.12 | 0.920663 |
-| 2 | 2.0 | 99.44% | 195.12 | 0.920663 | 24.0 | 99.44% | 195.12 | 0.920663 |
-| 3 | 3.0 | 99.44% | 195.12 | 0.920663 | 32.0 | 99.44% | 195.12 | 0.920663 |
-| 4 | 4.0 | 99.44% | 195.12 | 0.920663 | 40.0 | 99.44% | 195.12 | 0.920663 |
-| 5 | 5.0 | 99.44% | 195.12 | 0.920663 | 48.0 | 99.44% | 195.12 | 0.920663 |
-| 6 | 6.0 | 99.44% | 195.12 | 0.920663 | 56.0 | 99.44% | 195.12 | 0.920663 |
-| 7 | 7.0 | 99.44% | 195.12 | 0.920663 | 64.0 | 99.44% | 195.12 | 0.920663 |
-| 8 | 8.0 | 99.44% | 195.12 | 0.920663 | 72.0 | 99.44% | 195.12 | 0.920663 |
-| 9 | 9.0 | 99.44% | 195.12 | 0.920663 | 80.0 | 99.44% | 195.12 | 0.920663 |
-
-## Routed policy decisions
-
-What the ensemble actually does with this route at each operating level.
-
-| L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
-| ---: | --- | --- | ---: | ---: | ---: | --- |
-| 5 | hostile | no_policy | 0.00% | 0 | 0.00 | `{}` |
-| 5 | suspicious | specialist_primary_with_escape | 87.89% | 1 | 61.07 | `{"filegroups/scripts": 0.9553837180137634, "filetypes/php": 0.8189165592193604, "general": 0.92668616771698}` |
-| 9 | hostile | specialist_primary_with_escape | 87.89% | 1 | 61.07 | `{"filegroups/scripts": 0.9553837180137634, "filetypes/php": 0.8189165592193604, "general": 0.92668616771698}` |
-| 9 | suspicious | specialist_primary_with_escape | 87.89% | 1 | 61.07 | `{"filegroups/scripts": 0.9553837180137634, "filetypes/php": 0.8189165592193604, "general": 0.92668616771698}` |
+LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 47621 features, policy `general_shared`. Trained on 45971 rows (2921 mal / 43050 ben).

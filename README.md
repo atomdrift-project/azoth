@@ -1,6 +1,6 @@
 # Azoth
 
-Routed ensemble for static malware detection. A general LightGBM classifier scores every file; per-filetype specialists score files in their domain; any route above its calibrated threshold flags the file. Calibrators and L0..L9 thresholds fit on a 2990924-row dev partition (12.5% of the labeled corpus). Metrics below: locked 372198-row test partition, disjoint from training and calibration. EMBER 2024 reference: Joyce et al., *KDD'25*.
+Routed ensemble for static malware detection. A general LightGBM classifier scores every file; per-filetype specialists score files in their domain; any route above its calibrated threshold flags the file. Calibrators and L0..L9 thresholds fit on a 411836-row dev partition (12.5% of the labeled corpus). Metrics below: locked 408858-row test partition, disjoint from training and calibration. EMBER 2024 reference: Joyce et al., *KDD'25*.
 
 ## Use
 
@@ -10,50 +10,33 @@ Bundle layout: `config.json` (deployed thresholds), then per-route subdirectorie
 
 ## Performance
 
-| File type | Mal / Ben | Routed ROC AUC [95% CI] | Routed PR AUC [95% CI] | Routed F1 [95% CI] | Δ vs EMBER 2024 |
-|---|---:|---:|---:|---:|---:|
-| [`pe`](filetypes/pe/README.md) | 49589 / 17544 | 0.9970 [0.9967, 0.9972] | 0.9989 [0.9988, 0.9990] | 0.9872 [0.9865, 0.9878] | ROC -0.0012 / PR +0.0006 |
-| [`elf`](filetypes/elf/README.md) | 2742 / 14144 | 0.9998 [0.9997, 0.9998] | 0.9989 [0.9985, 0.9992] | 0.9842 [0.9816, 0.9879] | ROC +0.0065 / PR +0.0056 |
-| [`macho`](filetypes/macho/README.md) | 151 / 770 | 0.9730 [0.9612, 0.9837] | 0.9062 [0.8731, 0.9366] | 0.8571 [0.8212, 0.8984] | — |
-| [`msi`](filetypes/msi/README.md) | 31 / 6 | 0.7634 | 0.9524 | 0.9118 | — |
-| [`pdf`](filetypes/pdf/README.md) | 9 / 343 | 0.8788 [0.8226, 0.9266] | 0.1043 [0.0761, 0.1731] | 0.2333 [0.1586, 0.3405] | ROC -0.1124 / PR -0.8890 |
-| [`rtf`](filetypes/rtf/README.md) | 11 / 45 | 1.0000 [1.0000, 1.0000] | 1.0000 [1.0000, 1.0000] | 1.0000 [1.0000, 1.0000] | — |
-| [`javascript`](filetypes/javascript/README.md) | 7314 / 47376 | 0.9881 [0.9864, 0.9895] | 0.9740 [0.9712, 0.9767] | 0.9549 [0.9518, 0.9585] | — |
-| [`python`](filetypes/python/README.md) | 1689 / 14015 | 0.9904 [0.9872, 0.9935] | 0.9763 [0.9702, 0.9822] | 0.9591 [0.9519, 0.9664] | — |
-| [`shell`](filetypes/shell/README.md) | 392 / 5063 | 0.9690 [0.9548, 0.9791] | 0.9299 [0.9081, 0.9485] | 0.9105 [0.8909, 0.9341] | — |
-| [`powershell`](filetypes/powershell/README.md) | 59 / 182 | 0.9830 [0.9639, 0.9956] | 0.9638 [0.9364, 0.9877] | 0.8983 [0.8688, 0.9500] | — |
-| [`batch`](filetypes/batch/README.md) | 60 / 231 | 0.9578 [0.9180, 0.9852] | 0.9196 [0.8616, 0.9623] | 0.8598 [0.8107, 0.9204] | — |
-| [`package.json`](filetypes/package.json/README.md) | 1875 / 907 | 0.9991 [0.9982, 0.9999] | 0.9996 [0.9993, 0.9999] | 0.9971 [0.9955, 0.9987] | — |
-| [`jar`](filetypes/jar/README.md) | 107 / 182 | 0.9935 [0.9879, 0.9981] | 0.9890 [0.9796, 0.9968] | 0.9626 [0.9332, 0.9860] | — |
-| [`ruby`](filetypes/ruby/README.md) | 7 / 2806 | 1.0000 [1.0000, 1.0000] | 1.0000 [1.0000, 1.0000] | 1.0000 [1.0000, 1.0000] | — |
-| [`perl`](filetypes/perl/README.md) | 18 / 3703 | 0.9983 [0.9958, 0.9999] | 0.8562 [0.7109, 0.9684] | 0.8485 [0.7141, 0.9714] | — |
+| File type | Mal / Ben | PR AUC [95% CI] | Recall@3FP/M [95% CI] | ROC AUC [95% CI] | F1 [95% CI] | Δ vs EMBER 2024 |
+|---|---:|---:|---:|---:|---:|---:|
+| [`pe`](filetypes/pe/README.md) | 56704 / 18001 | 0.9996 [0.9995, 0.9996] | 0.6716 [0.6684, 0.7756] | 0.9986 [0.9985, 0.9988] | 0.9906 [0.9901, 0.9911] | PR +0.0013 / ROC +0.0004 |
+| [`elf`](filetypes/elf/README.md) | 2793 / 14875 | 0.9986 [0.9975, 0.9995] | 0.9048 [0.8944, 0.9452] | 0.9998 [0.9997, 0.9999] | 0.9912 [0.9887, 0.9936] | PR +0.0053 / ROC +0.0065 |
+| [`macho`](filetypes/macho/README.md) | 152 / 797 | 0.9949 [0.9902, 0.9981] | — | 0.9990 [0.9979, 0.9996] | 0.9589 [0.9481, 0.9803] | — |
+| [`msi`](filetypes/msi/README.md) | 31 / 7 | 0.9969 | — | 0.9862 | 0.9841 | — |
+| [`pdf`](filetypes/pdf/README.md) | 9 / 349 | 0.2365 [0.1568, 0.4079] | — | 0.9335 [0.8939, 0.9698] | 0.4375 [0.3028, 0.6429] | PR -0.7568 / ROC -0.0577 |
+| [`rtf`](filetypes/rtf/README.md) | 11 / 49 | 1.0000 [1.0000, 1.0000] | — | 1.0000 [1.0000, 1.0000] | 1.0000 [1.0000, 1.0000] | — |
+| [`javascript`](filetypes/javascript/README.md) | 7439 / 50135 | 0.9816 [0.9802, 0.9832] | 0.0000 [0.0000, 0.0000] | 0.9959 [0.9956, 0.9963] | 0.9506 [0.9475, 0.9547] | — |
+| [`python`](filetypes/python/README.md) | 1843 / 14605 | 0.9711 [0.9655, 0.9760] | 0.4645 [0.0000, 0.8101] | 0.9949 [0.9938, 0.9959] | 0.9195 [0.9109, 0.9322] | — |
+| [`shell`](filetypes/shell/README.md) | 417 / 5303 | 0.9655 [0.9550, 0.9752] | 0.0072 [0.0000, 0.7938] | 0.9954 [0.9924, 0.9975] | 0.9029 [0.8851, 0.9227] | — |
+| [`powershell`](filetypes/powershell/README.md) | 66 / 257 | 0.9569 [0.9215, 0.9822] | — | 0.9869 [0.9767, 0.9947] | 0.8923 [0.8507, 0.9482] | — |
+| [`batch`](filetypes/batch/README.md) | 63 / 244 | 0.9680 [0.9380, 0.9884] | — | 0.9908 [0.9810, 0.9967] | 0.9134 [0.8615, 0.9613] | — |
+| [`package.json`](filetypes/package.json/README.md) | 1886 / 1121 | 0.9997 [0.9995, 0.9999] | — | 0.9995 [0.9990, 0.9999] | 0.9968 [0.9952, 0.9984] | — |
+| [`jar`](filetypes/jar/README.md) | 108 / 199 | 0.9811 [0.9645, 0.9927] | — | 0.9846 [0.9666, 0.9961] | 0.9488 [0.9296, 0.9722] | — |
+| [`ruby`](filetypes/ruby/README.md) | 7 / 2817 | 0.9098 [0.7143, 1.0000] | — | 0.9995 [0.9981, 1.0000] | 0.9231 [0.7273, 1.0000] | — |
+| [`perl`](filetypes/perl/README.md) | 25 / 3766 | 0.9565 [0.8793, 1.0000] | 0.0000 [0.0000, 0.9600] | 0.9961 [0.9882, 1.0000] | 0.9388 [0.8889, 1.0000] | — |
 
-## Operating points
-
-| L | H target/1M | H recall | H FP/1M | H 95% CI upper | S target/1M | S recall | S FP/1M | S 95% CI upper |
-| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | 0.0† | 70.95% | 36.97 | 61.20 | 8.0† | 70.95% | 36.97 | 61.20 |
-| 1 | 1.0† | 70.95% | 36.97 | 61.20 | 16.0 | 71.30% | 36.97 | 61.20 |
-| 2 | 2.0† | 70.95% | 36.97 | 61.20 | 24.0 | 72.74% | 47.06 | 73.57 |
-| 3 | 3.0† | 70.95% | 36.97 | 61.20 | 32.0 | 73.67% | 50.42 | 77.64 |
-| 4 | 4.0† | 70.95% | 36.97 | 61.20 | 40.0 | 74.85% | 50.42 | 77.64 |
-| 5 | 5.0† | 70.95% | 36.97 | 61.20 | 48.0 | 75.97% | 57.14 | 85.71 |
-| 6 | 6.0† | 70.95% | 36.97 | 61.20 | 56.0 | 76.08% | 60.50 | 89.72 |
-| 7 | 7.0† | 70.95% | 36.97 | 61.20 | 64.0 | 76.27% | 63.86 | 93.71 |
-| 8 | 8.0† | 70.95% | 36.97 | 61.20 | 72.0 | 76.47% | 67.23 | 97.68 |
-| 9 | 9.0† | 70.95% | 36.97 | 61.20 | 80.0 | 76.72% | 67.23 | 97.68 |
-
-*95% CI upper* is the Clopper-Pearson upper bound on the deployment FP rate given the observed FP count in 297,504 test-partition benigns. The honest deployment-FP/M claim sits below this number with 95% confidence.
-
-† below data resolution: the dev calibration sample is too small to credibly assert FP/M ≤ target at this level (95% CI). The deployed threshold falls back to the loosest empirical 0-FP fit; the FP/M and 95% CI columns show what the test partition actually achieves under that threshold, which exceeds the L target.
+PR AUC summarizes recall-vs-precision across operating points; Recall@3FP/M is the deployment-budget headline. Per-severity L0..L9 thresholds (observed benign-score quantiles per route, GPD-extrapolated for FP/M targets below the empirical floor) are in [route_policies.md](route_policies.md) — they document the severity-grading curve litmus uses, not optimization targets.
 
 ## Provenance
 
-Calibration snapshot `762136079`, score-table `30d34ec9c941`, model-set `8454dfc478df`. 1 general, 8 filegroup, 41 filetype routes.
+Calibration snapshot `1123787257`, score-table `90a2da149603`, model-set `bda9148ae3a2`. 1 general, 8 filegroup, 41 filetype routes.
 
 ## Limits
 
-- L0..L3 FP/M targets are volume-floored: ~150k benign rows in test, one FP ≈ 6 FP/M. Wide CI.
+- Strict L0..L3 FP/M targets sit below empirical resolution on a single dev partition (one FP per 150k benigns ≈ 6 FP/M); their thresholds are GPD tail-extrapolations.
 - The split is content-deduplicated by `canonical_sha256`, not family-aware. Campaign-level generalization may be overstated.
 - Deployment distribution may differ from the training corpus.
 

@@ -1,72 +1,19 @@
-# Azoth Filetype — `macho`
+# `filetype/macho`
 
-Specialist classifier for `macho`. Used by the routed ensemble — see [../../ENSEMBLE_MODEL.md](../../ENSEMBLE_MODEL.md).
+LightGBM specialist for `macho`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+## Performance
 
-## Single-model performance
+Test partition, n=949 (152 malware / 797 benign).
 
-On `macho` test-bucket rows (n=770, SHA256-deterministic 12.5% holdout):
+| ROC AUC [95% CI] | PR AUC [95% CI] | F1 [95% CI] | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|
+| 0.9990 [0.9979, 0.9996] | 0.9949 [0.9902, 0.9981] | 0.9589 [0.9481, 0.9803] | - | — |
 
-| Metric | Specialist (this model alone) | EMBER 2024 reference | Δ |
-|---|---:|---:|---:|
-| ROC AUC | 0.9937 | — | - |
-| PR AUC | 0.9690 | — | - |
-| F1 | 0.9329 | — | — |
-| Brier (calibration) | - | — | — |
+## Routing
 
-## How the ensemble uses this specialist
-
-At the default operating level, the deployed routing policy for `macho` is `no_policy`.
-
-Ensemble's headline numbers on this filetype's test bucket: ROC AUC = **0.9937**, PR AUC = **0.9690**, F1 = **0.9329**. When the ensemble lags the specialist, the router is being conservative for FP/M-budget reasons; the specialist alone is what production would get if you bypassed routing.
+Default-level policy `filetype_only`. Allowed routes (OR over thresholds): `filetypes/macho`. Per-level severity thresholds in `route_policies.md` at the bundle root.
 
 ## Training
 
-- Inputs: shared general `feature_spec.json` (37595 features); feature-spec policy `general_shared`.
-- Algorithm: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
-- Feature families:
-  - aggregate finding counts
-  - ATT&CK/MBC n-grams
-  - cleave trait taxonomy
-  - element tokens
-  - extended file metrics
-  - format-group hints
-  - hopper score
-  - hostile density/escalation
-  - packaged capability mode=paths
-  - path/criticality bigrams/trigrams
-  - repetition penalties
-  - severity distribution
-  - soft presence
-  - structural coverage
-- Training rows: 5398 (1159 malware, 4239 benign).
-- Internal training-time benchmark rows: 771 (145 malware, 626 benign).
-- Internal training-time benchmark AUC/AP/F1: 0.9991 / 0.9953 / 0.9831.
-
-## Operational policy levels (advanced)
-
-Per-FP/M-target operating points for this specialist. Default deploy uses L3 hostile, L5 suspicious; lower levels = stricter FP budget. Useful when you need to tune deployed sensitivity.
-
-| L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |
-| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | - | 60.69% | 0.00 | 0.995418 | 8.0 | 93.10% | 1597.4 | 0.931796 |
-| 1 | 1.0 | 93.10% | 1597.4 | 0.931796 | 16.0 | 93.10% | 1597.4 | 0.931796 |
-| 2 | 2.0 | 93.10% | 1597.4 | 0.931796 | 24.0 | 93.10% | 1597.4 | 0.931796 |
-| 3 | 3.0 | 93.10% | 1597.4 | 0.931796 | 32.0 | 93.10% | 1597.4 | 0.931796 |
-| 4 | 4.0 | 93.10% | 1597.4 | 0.931796 | 40.0 | 93.10% | 1597.4 | 0.931796 |
-| 5 | 5.0 | 93.10% | 1597.4 | 0.931796 | 48.0 | 93.10% | 1597.4 | 0.931796 |
-| 6 | 6.0 | 93.10% | 1597.4 | 0.931796 | 56.0 | 93.10% | 1597.4 | 0.931796 |
-| 7 | 7.0 | 93.10% | 1597.4 | 0.931796 | 64.0 | 93.10% | 1597.4 | 0.931796 |
-| 8 | 8.0 | 93.10% | 1597.4 | 0.931796 | 72.0 | 93.10% | 1597.4 | 0.931796 |
-| 9 | 9.0 | 93.10% | 1597.4 | 0.931796 | 80.0 | 93.10% | 1597.4 | 0.931796 |
-
-## Routed policy decisions
-
-What the ensemble actually does with this route at each operating level.
-
-| L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
-| ---: | --- | --- | ---: | ---: | ---: | --- |
-| 5 | hostile | no_policy | 0.00% | 0 | 0.00 | `{}` |
-| 5 | suspicious | group_primary_with_escape | 61.27% | 1 | 206.02 | `{"filegroups/native": 0.9966633915901184, "filetypes/macho": 0.9784113764762878, "general": 0.9814670085906982}` |
-| 9 | hostile | group_primary_with_escape | 61.27% | 1 | 206.02 | `{"filegroups/native": 0.9966633915901184, "filetypes/macho": 0.9784113764762878, "general": 0.9814670085906982}` |
-| 9 | suspicious | group_primary_with_escape | 61.27% | 1 | 206.02 | `{"filegroups/native": 0.9966633915901184, "filetypes/macho": 0.9784113764762878, "general": 0.9814670085906982}` |
+LightGBM binary classifier: estimators=120, num_leaves=160, max_depth=12, min_child_samples=60, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 47621 features, policy `general_shared`. Trained on 6584 rows (1202 mal / 5382 ben).

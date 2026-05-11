@@ -1,51 +1,15 @@
-# Azoth Filegroup — `scripts`
+# `filegroup/scripts`
 
-Specialist classifier for `batch`, `javascript`, `lua`, `perl`, `php`, `powershell`, `python`, `ruby`, `shell`, `typescript`, `vbscript`. Used by the routed ensemble — see [../../ENSEMBLE_MODEL.md](../../ENSEMBLE_MODEL.md).
+LightGBM specialist for `batch`, `javascript`, `lua`, `perl`, `php`, `powershell`, `python`, `ruby`, `shell`, `typescript`, `vbscript`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+## Performance
 
-## Single-model performance
+Training-time benchmark only (no test-partition rows for `scripts`). ROC 0.9997, PR 0.9979, F1 0.9790 on 94984 rows (10317 mal / 84667 ben).
 
-Training-time benchmark (no test-bucket-only metric on file):
+## Routing
 
-- ROC AUC / PR AUC / F1: 0.9992 / 0.9970 / 0.9849
-- Benchmark rows: 87084 (9808 malware, 77276 benign).
+Default-level policy `—`. Allowed routes (OR over thresholds): none. Per-level severity thresholds in `route_policies.md` at the bundle root.
 
 ## Training
 
-- Inputs: shared general `feature_spec.json` (45160 features); feature-spec policy `general_shared`.
-- Algorithm: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
-- Feature families:
-  - aggregate finding counts
-  - ATT&CK/MBC n-grams
-  - cleave trait taxonomy
-  - element tokens
-  - extended file metrics
-  - format-group hints
-  - hopper score
-  - hostile density/escalation
-  - packaged capability mode=paths
-  - path/criticality bigrams/trigrams
-  - repetition penalties
-  - severity distribution
-  - soft presence
-  - structural coverage
-- Training rows: 605458 (66428 malware, 539030 benign).
-- Internal training-time benchmark rows: 87084 (9808 malware, 77276 benign).
-- Internal training-time benchmark AUC/AP/F1: 0.9992 / 0.9970 / 0.9849.
-
-## Operational policy levels (advanced)
-
-Per-FP/M-target operating points for this specialist. Default deploy uses L3 hostile, L5 suspicious; lower levels = stricter FP budget. Useful when you need to tune deployed sensitivity.
-
-| L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |
-| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | - | 80.70% | 0.00 | 0.999570 | 8.0 | 92.43% | 12.94 | 0.994739 |
-| 1 | 1.0 | 92.43% | 12.94 | 0.994739 | 16.0 | 92.43% | 12.94 | 0.994739 |
-| 2 | 2.0 | 92.43% | 12.94 | 0.994739 | 24.0 | 92.43% | 12.94 | 0.994739 |
-| 3 | 3.0 | 92.43% | 12.94 | 0.994739 | 32.0 | 93.73% | 25.88 | 0.990744 |
-| 4 | 4.0 | 92.43% | 12.94 | 0.994739 | 40.0 | 94.52% | 38.82 | 0.985312 |
-| 5 | 5.0 | 92.43% | 12.94 | 0.994739 | 48.0 | 94.52% | 38.82 | 0.985312 |
-| 6 | 6.0 | 92.43% | 12.94 | 0.994739 | 56.0 | 94.58% | 51.76 | 0.984939 |
-| 7 | 7.0 | 92.43% | 12.94 | 0.994739 | 64.0 | 94.58% | 51.76 | 0.984939 |
-| 8 | 8.0 | 92.43% | 12.94 | 0.994739 | 72.0 | 94.86% | 64.70 | 0.982325 |
-| 9 | 9.0 | 92.43% | 12.94 | 0.994739 | 80.0 | 94.88% | 77.64 | 0.982238 |
+LightGBM binary classifier: estimators=250, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 47621 features, policy `general_shared`. Trained on 659366 rows (69994 mal / 589372 ben).

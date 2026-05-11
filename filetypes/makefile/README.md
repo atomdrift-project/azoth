@@ -1,73 +1,19 @@
-# Azoth Filetype — `makefile`
+# `filetype/makefile`
 
-Specialist classifier for `makefile`. Used by the routed ensemble — see [../../ENSEMBLE_MODEL.md](../../ENSEMBLE_MODEL.md).
+LightGBM specialist for `makefile`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+## Performance
 
-## Single-model performance
+Test partition, n=2524 (17 malware / 2507 benign).
 
-On `makefile` test-bucket rows (n=2274, SHA256-deterministic 12.5% holdout):
+| ROC AUC [95% CI] | PR AUC [95% CI] | F1 [95% CI] | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|
+| 0.7847 [0.7144, 0.8559] | 0.0775 [0.0151, 0.2504] | 0.1111 [0.0372, 0.3810] | - | — |
 
-| Metric | Specialist (this model alone) | EMBER 2024 reference | Δ |
-|---|---:|---:|---:|
-| ROC AUC | 0.5072 | — | - |
-| PR AUC | 0.0029 | — | - |
-| F1 | 0.0104 | — | — |
-| Brier (calibration) | - | — | — |
+## Routing
 
-## How the ensemble uses this specialist
-
-At the default operating level, the deployed routing policy for `makefile` is `general_only`.
-Routes consulted (max-of-thresholds): `general`.
-
-Ensemble's headline numbers on this filetype's test bucket: ROC AUC = **0.5072**, PR AUC = **0.0029**, F1 = **0.0104**. When the ensemble lags the specialist, the router is being conservative for FP/M-budget reasons; the specialist alone is what production would get if you bypassed routing.
+Default-level policy `or_general_primary`. Allowed routes (OR over thresholds): `general`, `filegroups/source`, `filetypes/makefile`. Per-level severity thresholds in `route_policies.md` at the bundle root.
 
 ## Training
 
-- Inputs: shared general `feature_spec.json` (37595 features); feature-spec policy `general_shared`.
-- Algorithm: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
-- Feature families:
-  - aggregate finding counts
-  - ATT&CK/MBC n-grams
-  - cleave trait taxonomy
-  - element tokens
-  - extended file metrics
-  - format-group hints
-  - hopper score
-  - hostile density/escalation
-  - packaged capability mode=paths
-  - path/criticality bigrams/trigrams
-  - repetition penalties
-  - severity distribution
-  - soft presence
-  - structural coverage
-- Training rows: 15557 (62 malware, 15495 benign).
-- Internal training-time benchmark rows: 2275 (4 malware, 2271 benign).
-- Internal training-time benchmark AUC/AP/F1: 0.8778 / 0.3366 / 0.4000.
-
-## Operational policy levels (advanced)
-
-Per-FP/M-target operating points for this specialist. Default deploy uses L3 hostile, L5 suspicious; lower levels = stricter FP budget. Useful when you need to tune deployed sensitivity.
-
-| L | H target/1M | H recall | H FP/1M | H threshold | S target/1M | S recall | S FP/1M | S threshold |
-| ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | - | 25.00% | 0.00 | 0.997118 | 8.0 | 25.00% | 440.33 | 0.987454 |
-| 1 | 1.0 | 25.00% | 440.33 | 0.987454 | 16.0 | 25.00% | 440.33 | 0.987454 |
-| 2 | 2.0 | 25.00% | 440.33 | 0.987454 | 24.0 | 25.00% | 440.33 | 0.987454 |
-| 3 | 3.0 | 25.00% | 440.33 | 0.987454 | 32.0 | 25.00% | 440.33 | 0.987454 |
-| 4 | 4.0 | 25.00% | 440.33 | 0.987454 | 40.0 | 25.00% | 440.33 | 0.987454 |
-| 5 | 5.0 | 25.00% | 440.33 | 0.987454 | 48.0 | 25.00% | 440.33 | 0.987454 |
-| 6 | 6.0 | 25.00% | 440.33 | 0.987454 | 56.0 | 25.00% | 440.33 | 0.987454 |
-| 7 | 7.0 | 25.00% | 440.33 | 0.987454 | 64.0 | 25.00% | 440.33 | 0.987454 |
-| 8 | 8.0 | 25.00% | 440.33 | 0.987454 | 72.0 | 25.00% | 440.33 | 0.987454 |
-| 9 | 9.0 | 25.00% | 440.33 | 0.987454 | 80.0 | 25.00% | 440.33 | 0.987454 |
-
-## Routed policy decisions
-
-What the ensemble actually does with this route at each operating level.
-
-| L | Severity | Policy | Recall | FP | FP/1M | Thresholds |
-| ---: | --- | --- | ---: | ---: | ---: | --- |
-| 5 | hostile | general_only | 1.54% | 0 | 0.00 | `{"general": 0.8322421908378601}` |
-| 5 | suspicious | general_only | 1.54% | 0 | 0.00 | `{"general": 0.8322421908378601}` |
-| 9 | hostile | general_only | 1.54% | 0 | 0.00 | `{"general": 0.8322421908378601}` |
-| 9 | suspicious | general_only | 1.54% | 0 | 0.00 | `{"general": 0.8322421908378601}` |
+LightGBM binary classifier: estimators=120, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 47621 features, policy `general_shared`. Trained on 17314 rows (147 mal / 17167 ben).
