@@ -4,11 +4,11 @@ LightGBM specialist for `text`. Member of the Azoth routed ensemble; bundle root
 
 ## Performance
 
-Test partition, n=7632 (133 malware / 7499 benign).
+Test partition, n=7860 (154 malware / 7706 benign).
 
 | ROC AUC [95% CI] | PR AUC [95% CI] | F1 [95% CI] | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|
-| 0.6790 [0.6144, 0.7367] | 0.2477 [0.1850, 0.3245] | 0.3101 [0.2507, 0.3863] | - | — |
+| 0.8369 [0.8024, 0.8696] | 0.3045 [0.2300, 0.3667] | 0.3207 [0.2659, 0.3862] | - | — |
 
 ## Routing
 
@@ -16,4 +16,4 @@ Default-level policy `or_general_primary`. Allowed routes (OR over thresholds): 
 
 ## Training
 
-LightGBM binary classifier: estimators=120, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 47621 features, policy `general_shared`. Trained on 53535 rows (877 mal / 52658 ben).
+LightGBM binary classifier: estimators=300, num_leaves=96, max_depth=12, min_child_samples=50, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 56209 features, policy `general_shared`. Trained on 55340 rows (1004 mal / 54336 ben).

@@ -4,11 +4,11 @@ LightGBM specialist for `jpeg`. Member of the Azoth routed ensemble; bundle root
 
 ## Performance
 
-Test partition, n=1044 (102 malware / 942 benign).
+Test partition, n=1398 (116 malware / 1282 benign).
 
 | ROC AUC [95% CI] | PR AUC [95% CI] | F1 [95% CI] | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|
-| 0.4693 [0.4281, 0.5100] | 0.1038 [0.0942, 0.1283] | 0.1884 [0.1861, 0.1912] | - | — |
+| 0.7571 [0.7210, 0.7925] | 0.2647 [0.2055, 0.3289] | 0.2686 [0.2355, 0.3355] | - | — |
 
 ## Routing
 
@@ -16,4 +16,4 @@ Default-level policy `group_only`. Allowed routes (OR over thresholds): `filegro
 
 ## Training
 
-LightGBM binary classifier: estimators=120, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 47621 features, policy `general_shared`. Trained on 7603 rows (670 mal / 6933 ben).
+LightGBM binary classifier: estimators=120, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 56209 features, policy `general_shared`. Trained on 10133 rows (765 mal / 9368 ben).
