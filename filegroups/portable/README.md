@@ -1,10 +1,10 @@
 # `filegroup/portable`
 
-LightGBM specialist for `dex`, `jar`, `java_class`, `pyc`, `wasm`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
+LightGBM specialist for `dex`, `java_class`, `pyc`, `wasm`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `portable`). ROC 0.9985, PR 0.9775, F1 0.9668 on 34552 rows (317 mal / 34235 ben).
+Training-time benchmark only (no test-partition rows for `portable`). ROC 0.9834, PR 0.9594, F1 0.9558 on 45306 rows (171 mal / 45135 ben).
 
 ## Routing
 
@@ -12,4 +12,4 @@ Default-level policy `—`. Allowed routes (OR over thresholds): none. Per-level
 
 ## Training
 
-LightGBM binary classifier: estimators=250, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 56209 features, policy `general_shared`. Trained on 243461 rows (1924 mal / 241537 ben).
+LightGBM binary classifier: estimators=250, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 60358 features, policy `general_shared`. Trained on 319282 rows (1120 mal / 318162 ben).

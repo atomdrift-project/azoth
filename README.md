@@ -1,6 +1,6 @@
 # Azoth
 
-Routed ensemble for static malware detection. A general LightGBM classifier scores every file; per-filetype specialists score files in their domain; any route above its calibrated threshold flags the file. Calibrators and L0..L9 thresholds fit on a 530492-row dev partition (12.5% of the labeled corpus). Metrics below: locked 526207-row test partition, disjoint from training and calibration. EMBER 2024 reference: Joyce et al., *KDD'25*.
+Routed ensemble for static malware detection. A general LightGBM classifier scores every file; per-filetype specialists score files in their domain; any route above its calibrated threshold flags the file. Calibrators and L0..L9 thresholds fit on a 583032-row dev partition (12.5% of the labeled corpus). Metrics below: locked 585889-row test partition, disjoint from training and calibration. EMBER 2024 reference: Joyce et al., *KDD'25*.
 
 ## Use
 
@@ -12,27 +12,27 @@ Bundle layout: `config.json` (deployed thresholds), then per-route subdirectorie
 
 | File type | Mal / Ben | PR AUC [95% CI] | Recall@3FP/M [95% CI] | ROC AUC [95% CI] | F1 [95% CI] | Δ vs EMBER 2024 |
 |---|---:|---:|---:|---:|---:|---:|
-| [`pe`](filetypes/pe/README.md) | 99087 / 18558 | 0.9997 | 0.6075 | 0.9986 | 0.9937 | PR +0.0014 / ROC +0.0004 |
-| [`elf`](filetypes/elf/README.md) | 4500 / 15507 | 0.9998 | 0.9373 | 0.9999 | 0.9941 | PR +0.0065 / ROC +0.0066 |
-| [`macho`](filetypes/macho/README.md) | 205 / 1087 | 0.9898 | — | 0.9980 | 0.9499 | — |
-| [`msi`](filetypes/msi/README.md) | 101 / 7 | 0.9997 | — | 0.9958 | 0.9950 | — |
-| [`pdf`](filetypes/pdf/README.md) | 18189 / 1731 | 0.9987 | — | 0.9914 | 0.9952 | PR +0.0054 / ROC +0.0002 |
-| [`rtf`](filetypes/rtf/README.md) | 196 / 50 | 0.9997 | — | 0.9989 | 0.9924 | — |
-| [`javascript`](filetypes/javascript/README.md) | 9559 / 55045 | 0.9879 | 0.0000 | 0.9974 | 0.9419 | — |
-| [`python`](filetypes/python/README.md) | 2238 / 15454 | 0.9795 | 0.4830 | 0.9962 | 0.9308 | — |
-| [`shell`](filetypes/shell/README.md) | 533 / 5406 | 0.9711 | 0.7767 | 0.9962 | 0.9183 | — |
-| [`powershell`](filetypes/powershell/README.md) | 119 / 261 | 0.9461 | — | 0.9769 | 0.9053 | — |
-| [`batch`](filetypes/batch/README.md) | 17345 / 263 | 1.0000 | — | 0.9996 | 0.9992 | — |
-| [`package.json`](filetypes/package.json/README.md) | 2152 / 1189 | 0.9997 | — | 0.9994 | 0.9972 | — |
-| [`jar`](filetypes/jar/README.md) | 182 / 212 | 0.9849 | — | 0.9881 | 0.9568 | — |
-| [`ruby`](filetypes/ruby/README.md) | 7 / 2821 | 0.9034 | — | 0.9995 | 0.8571 | — |
-| [`perl`](filetypes/perl/README.md) | 27 / 3780 | 0.9523 | 0.0000 | 0.9961 | 0.9412 | — |
+| [`pe`](filetypes/pe/README.md) | 109970 / 18938 | 0.9997 | 0.1881 | 0.9991 | 0.9976 | PR +0.0014 / ROC +0.0009 |
+| [`elf`](filetypes/elf/README.md) | 8826 / 16927 | 0.9998 | 0.9355 | 0.9999 | 0.9946 | PR +0.0065 / ROC +0.0066 |
+| [`macho`](filetypes/macho/README.md) | 258 / 1382 | 0.9942 | — | 0.9989 | 0.9602 | — |
+| [`msi`](filetypes/msi/README.md) | 215 / 8 | 0.9992 | — | 0.9785 | 0.9885 | — |
+| [`pdf`](filetypes/pdf/README.md) | 21777 / 1734 | 0.9988 | — | 0.9923 | 0.9954 | PR +0.0055 / ROC +0.0011 |
+| [`rtf`](filetypes/rtf/README.md) | 214 / 51 | 0.9995 | — | 0.9980 | 0.9882 | — |
+| [`javascript`](filetypes/javascript/README.md) | 10488 / 59418 | 0.9818 | — | 0.9960 | 0.9316 | — |
+| [`python`](filetypes/python/README.md) | 2271 / 16286 | 0.9765 | 0.5363 | 0.9950 | 0.9324 | — |
+| [`shell`](filetypes/shell/README.md) | 920 / 5682 | 0.9854 | 0.8087 | 0.9969 | 0.9461 | — |
+| [`powershell`](filetypes/powershell/README.md) | 240 / 274 | 0.9673 | — | 0.9797 | 0.9421 | — |
+| [`batch`](filetypes/batch/README.md) | 21095 / 425 | 1.0000 | — | 0.9996 | 0.9988 | — |
+| [`package.json`](filetypes/package.json/README.md) | 2162 / 1361 | 0.9996 | — | 0.9992 | 0.9972 | — |
+| [`jar`](filetypes/jar/README.md) | 215 / 236 | 0.9812 | — | 0.9839 | 0.9388 | — |
+| [`ruby`](filetypes/ruby/README.md) | 7 / 2943 | 1.0000 | — | 1.0000 | 1.0000 | — |
+| [`perl`](filetypes/perl/README.md) | 28 / 3956 | 0.9231 | — | 0.9979 | 0.9057 | — |
 
 PR AUC summarizes recall-vs-precision across operating points; Recall@3FP/M is the deployment-budget headline. Per-severity L0..L9 thresholds (observed benign-score quantiles per route, GPD-extrapolated for FP/M targets below the empirical floor) are in [route_policies.md](route_policies.md) — they document the severity-grading curve litmus uses, not optimization targets.
 
 ## Provenance
 
-Calibration snapshot `1234486188`, score-table `46091935de7f`, model-set `0e62cca94242`. 1 general, 8 filegroup, 48 filetype routes.
+Calibration snapshot `1310931333`, score-table `ad73d201a7a0`, model-set `fba7b85a30a9`. 1 general, 7 filegroup, 40 filetype routes.
 
 ## Limits
 

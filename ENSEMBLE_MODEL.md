@@ -26,25 +26,25 @@ The naive `max(raw_general, raw_filegroup, raw_specialist)` we used in earlier d
 
 ## General vs specialist vs ensemble
 
-Three views of each filetype, evaluated on **526207 test-partition rows** (SHA256-deterministic 12.5% locked holdout — never seen during training or calibration). 'Ensemble' uses the per-filetype winning strategy from above; 'Routing policy' is the deployed thresholded decision at the default operating level (a separate concern from the raw AUC of the combiner).
+Three views of each filetype, evaluated on **585889 test-partition rows** (SHA256-deterministic 12.5% locked holdout — never seen during training or calibration). 'Ensemble' uses the per-filetype winning strategy from above; 'Routing policy' is the deployed thresholded decision at the default operating level (a separate concern from the raw AUC of the combiner).
 
 | File type | Files | General ROC | Specialist ROC | Ensemble ROC | Strategy | Routing policy |
 |---|---:|---:|---:|---:|---|---|
-| `pe` | 117645 | 0.9933 | 0.9986 | 0.9986 | `specialist_priority` | `or_general_primary` |
-| `elf` | 20007 | 0.9991 | 0.9999 | 0.9999 | `specialist_priority` | `group_only` |
-| `macho` | 1292 | 0.8987 | 0.9980 | 0.9980 | `specialist_priority` | `filetype_only` |
-| `msi` | 108 | 0.9066 | 0.9958 | 0.9958 | `specialist_priority` | `no_policy` |
-| `pdf` | 19920 | 0.9721 | 0.9744 | 0.9914 | `stacked_xgb` | `or_general_primary` |
-| `rtf` | 246 | 0.9788 | 0.9989 | 0.9989 | `specialist_priority` | `no_policy` |
-| `javascript` | 64604 | 0.9906 | 0.9974 | 0.9974 | `specialist_priority` | `filetype_only` |
-| `python` | 17692 | 0.9847 | 0.9962 | 0.9962 | `specialist_priority` | `general_only` |
-| `shell` | 5939 | 0.9869 | 0.9962 | 0.9962 | `specialist_priority` | `filetype_only` |
-| `powershell` | 380 | 0.9716 | 0.9769 | 0.9769 | `specialist_priority` | `no_policy` |
-| `batch` | 17608 | 0.8873 | 0.9996 | 0.9996 | `specialist_priority` | `filetype_only` |
-| `package.json` | 3341 | 0.9992 | 0.9994 | 0.9994 | `specialist_priority` | `or_general_primary` |
-| `jar` | 394 | 0.9778 | 0.9881 | 0.9881 | `specialist_priority` | `no_policy` |
-| `ruby` | 2828 | 0.9999 | 0.9995 | 0.9995 | `specialist_priority` | `general_only` |
-| `perl` | 3807 | 0.9840 | 0.9961 | 0.9961 | `specialist_priority` | `general_only` |
+| `pe` | 128908 | 0.9956 | 0.9983 | 0.9991 | `stacked_xgb` | `learned_blend_at_fp_3` |
+| `elf` | 25753 | 0.9993 | 0.9999 | 0.9999 | `specialist_priority` | `learned_blend_at_fp_0` |
+| `macho` | 1640 | 0.9283 | 0.9988 | 0.9989 | `stacked_lr` | `learned_blend_at_fp_0` |
+| `msi` | 223 | 0.8064 | 0.9785 | 0.9785 | `specialist_priority` | `joint_or_at_fp_0` |
+| `pdf` | 23511 | 0.9770 | 0.9438 | 0.9923 | `stacked_xgb` | `joint_or_at_fp_0` |
+| `rtf` | 265 | 0.9955 | 0.9980 | 0.9980 | `specialist_priority` | `joint_or_at_fp_0` |
+| `javascript` | 69906 | 0.9883 | 0.9960 | 0.9960 | `calibrated_max` | `filetype_only` |
+| `python` | 18557 | 0.9653 | 0.9950 | 0.9950 | `specialist_priority` | `joint_or_at_fp_0` |
+| `shell` | 6602 | 0.9888 | 0.9969 | 0.9969 | `specialist_priority` | `filetype_only` |
+| `powershell` | 514 | 0.9608 | 0.9790 | 0.9797 | `specialist_priority` | `joint_or_at_fp_0` |
+| `batch` | 21520 | 0.9092 | 0.9996 | 0.9996 | `specialist_priority` | `learned_blend_at_fp_3` |
+| `package.json` | 3523 | 0.9991 | 0.9992 | 0.9992 | `specialist_priority` | `joint_or_at_fp_0` |
+| `jar` | 451 | 0.9681 | 0.9839 | 0.9839 | `specialist_priority` | `joint_or_at_fp_0` |
+| `ruby` | 2950 | 0.9998 | 0.9989 | 1.0000 | `stacked_lr` | `joint_or_at_fp_0` |
+| `perl` | 3984 | 0.9631 | 0.9979 | 0.9979 | `specialist_priority` | `joint_or_at_fp_0` |
 
 Reading the table: ensemble ≥ specialist holds for every filetype by design. When `strategy = specialist_priority`, the ensemble's column matches the specialist's. When `strategy = calibrated_max`, the routing-free combiner beats the specialist alone — those filetypes benefit most from cross-model signal.
 
