@@ -2,9 +2,17 @@
 
 LightGBM specialist for `pkg-info`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/pkg-info` specialist scored *alone* on its test-partition slice: 1276 malware / 114 benign (1390 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `pkg-info` slice of the test partition: 1276 malware / 114 benign (1390 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9994 | 0.9999 | 96.94% | 99.73% | 0.0282 |
+
+## Specialist Performance
+
+`filetypes/pkg-info` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

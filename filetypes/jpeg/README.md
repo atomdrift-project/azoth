@@ -2,9 +2,17 @@
 
 LightGBM specialist for `jpeg`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/jpeg` specialist scored *alone* on its test-partition slice: 125 malware / 1319 benign (1444 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `jpeg` slice of the test partition: 125 malware / 1319 benign (1444 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.7716 | 0.3336 | 0.80% | 32.12% | 0.0744 |
+
+## Specialist Performance
+
+`filetypes/jpeg` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

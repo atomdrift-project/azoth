@@ -2,9 +2,17 @@
 
 LightGBM specialist for `elf`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/elf` specialist scored *alone* on its test-partition slice: 8826 malware / 16927 benign (25753 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `elf` slice of the test partition: 8826 malware / 16927 benign (25753 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9999 | 0.9998 | 93.55% | 99.46% | 0.0038 |
+
+## Specialist Performance
+
+`filetypes/elf` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

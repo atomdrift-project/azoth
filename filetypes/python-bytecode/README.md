@@ -2,9 +2,17 @@
 
 LightGBM specialist for `python-bytecode`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/python-bytecode` specialist scored *alone* on its test-partition slice: 233 malware / 3841 benign (4074 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `python-bytecode` slice of the test partition: 233 malware / 3841 benign (4074 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9993 | 0.9929 | 97.85% | 98.92% | 0.0015 |
+
+## Specialist Performance
+
+`filetypes/python-bytecode` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

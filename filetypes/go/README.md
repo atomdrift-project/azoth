@@ -2,9 +2,17 @@
 
 LightGBM specialist for `go`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/go` specialist scored *alone* on its test-partition slice: 1177 malware / 11858 benign (13035 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `go` slice of the test partition: 1177 malware / 11858 benign (13035 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9344 | 0.6324 | 1.53% | 64.85% | 0.0524 |
+
+## Specialist Performance
+
+`filetypes/go` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

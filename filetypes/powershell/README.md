@@ -2,9 +2,17 @@
 
 LightGBM specialist for `powershell`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/powershell` specialist scored *alone* on its test-partition slice: 240 malware / 274 benign (514 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `powershell` slice of the test partition: 240 malware / 274 benign (514 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9797 | 0.9673 | 4.58% | 94.21% | 0.0560 |
+
+## Specialist Performance
+
+`filetypes/powershell` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

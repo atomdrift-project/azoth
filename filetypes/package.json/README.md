@@ -2,9 +2,17 @@
 
 LightGBM specialist for `package.json`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/package.json` specialist scored *alone* on its test-partition slice: 2162 malware / 1361 benign (3523 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `package.json` slice of the test partition: 2162 malware / 1361 benign (3523 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9992 | 0.9996 | 90.61% | 99.72% | 0.0034 |
+
+## Specialist Performance
+
+`filetypes/package.json` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

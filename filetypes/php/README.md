@@ -2,9 +2,17 @@
 
 LightGBM specialist for `php`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/php` specialist scored *alone* on its test-partition slice: 516 malware / 10809 benign (11325 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `php` slice of the test partition: 516 malware / 10809 benign (11325 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9897 | 0.9275 | 67.25% | 88.52% | 0.0087 |
+
+## Specialist Performance
+
+`filetypes/php` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

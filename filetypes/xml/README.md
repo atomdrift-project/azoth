@@ -2,9 +2,17 @@
 
 LightGBM specialist for `xml`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/xml` specialist scored *alone* on its test-partition slice: 288 malware / 17921 benign (18209 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `xml` slice of the test partition: 288 malware / 17921 benign (18209 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.7434 | 0.1440 | 0.00% | 32.99% | 0.0155 |
+
+## Specialist Performance
+
+`filetypes/xml` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

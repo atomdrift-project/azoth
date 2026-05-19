@@ -2,9 +2,17 @@
 
 LightGBM specialist for `docx`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/docx` specialist scored *alone* on its test-partition slice: 173 malware / 31 benign (204 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `docx` slice of the test partition: 173 malware / 31 benign (204 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9153 | 0.9761 | 62.43% | 92.27% | 0.2614 |
+
+## Specialist Performance
+
+`filetypes/docx` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

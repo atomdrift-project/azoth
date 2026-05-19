@@ -2,9 +2,17 @@
 
 LightGBM specialist for `perl`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/perl` specialist scored *alone* on its test-partition slice: 28 malware / 3956 benign (3984 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `perl` slice of the test partition: 28 malware / 3956 benign (3984 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9979 | 0.9231 | 82.14% | 90.57% | 0.0036 |
+
+## Specialist Performance
+
+`filetypes/perl` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

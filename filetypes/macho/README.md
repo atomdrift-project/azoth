@@ -2,9 +2,17 @@
 
 LightGBM specialist for `macho`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/macho` specialist scored *alone* on its test-partition slice: 258 malware / 1382 benign (1640 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `macho` slice of the test partition: 258 malware / 1382 benign (1640 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9988 | 0.9936 | 80.62% | 95.94% | 0.0107 |
+
+## Specialist Performance
+
+`filetypes/macho` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

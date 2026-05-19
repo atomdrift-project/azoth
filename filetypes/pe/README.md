@@ -2,9 +2,17 @@
 
 LightGBM specialist for `pe`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/pe` specialist scored *alone* on its test-partition slice: 109970 malware / 18938 benign (128908 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `pe` slice of the test partition: 109970 malware / 18938 benign (128908 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9991 | 0.9998 | 73.42% | 99.55% | 0.0240 |
+
+## Specialist Performance
+
+`filetypes/pe` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

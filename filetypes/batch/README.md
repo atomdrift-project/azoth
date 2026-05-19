@@ -2,9 +2,17 @@
 
 LightGBM specialist for `batch`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/batch` specialist scored *alone* on its test-partition slice: 21095 malware / 425 benign (21520 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `batch` slice of the test partition: 21095 malware / 425 benign (21520 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9996 | 1.0000 | 98.84% | 99.88% | 0.0020 |
+
+## Specialist Performance
+
+`filetypes/batch` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

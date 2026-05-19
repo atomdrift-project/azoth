@@ -2,9 +2,17 @@
 
 LightGBM specialist for `msi`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/msi` specialist scored *alone* on its test-partition slice: 215 malware / 8 benign (223 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `msi` slice of the test partition: 215 malware / 8 benign (223 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9785 | 0.9992 | — | 98.85% | 0.1911 |
+
+## Specialist Performance
+
+`filetypes/msi` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

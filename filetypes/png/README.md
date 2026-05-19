@@ -2,9 +2,17 @@
 
 LightGBM specialist for `png`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/png` specialist scored *alone* on its test-partition slice: 657 malware / 14338 benign (14995 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `png` slice of the test partition: 657 malware / 14338 benign (14995 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.6161 | 0.1546 | 1.37% | 18.71% | 0.0389 |
+
+## Specialist Performance
+
+`filetypes/png` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

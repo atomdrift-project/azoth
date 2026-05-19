@@ -2,9 +2,17 @@
 
 LightGBM specialist for `pdf`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/pdf` specialist scored *alone* on its test-partition slice: 21777 malware / 1734 benign (23511 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `pdf` slice of the test partition: 21777 malware / 1734 benign (23511 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9813 | 0.9979 | 6.59% | 99.10% | 0.0172 |
+
+## Specialist Performance
+
+`filetypes/pdf` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

@@ -2,9 +2,17 @@
 
 LightGBM specialist for `jar`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/jar` specialist scored *alone* on its test-partition slice: 215 malware / 236 benign (451 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `jar` slice of the test partition: 215 malware / 236 benign (451 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9839 | 0.9812 | 58.60% | 93.88% | 0.0948 |
+
+## Specialist Performance
+
+`filetypes/jar` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

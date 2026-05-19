@@ -2,9 +2,17 @@
 
 LightGBM specialist for `makefile`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/makefile` specialist scored *alone* on its test-partition slice: 17 malware / 2740 benign (2757 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `makefile` slice of the test partition: 17 malware / 2740 benign (2757 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.7597 | 0.0184 | 0.00% | 5.83% | 0.0062 |
+
+## Specialist Performance
+
+`filetypes/makefile` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

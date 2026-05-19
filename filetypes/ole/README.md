@@ -2,9 +2,17 @@
 
 LightGBM specialist for `ole`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/ole` specialist scored *alone* on its test-partition slice: 221 malware / 664 benign (885 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `ole` slice of the test partition: 221 malware / 664 benign (885 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9863 | 0.9858 | 90.95% | 97.75% | 0.0188 |
+
+## Specialist Performance
+
+`filetypes/ole` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

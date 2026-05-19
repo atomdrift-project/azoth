@@ -2,9 +2,17 @@
 
 LightGBM specialist for `pptx`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/pptx` specialist scored *alone* on its test-partition slice: 22 malware / 21 benign (43 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `pptx` slice of the test partition: 22 malware / 21 benign (43 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.6071 | 0.6534 | 0.00% | 67.69% | 0.4821 |
+
+## Specialist Performance
+
+`filetypes/pptx` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

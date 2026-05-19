@@ -2,9 +2,17 @@
 
 LightGBM specialist for `vbs`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/vbs` specialist scored *alone* on its test-partition slice: 445 malware / 423 benign (868 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `vbs` slice of the test partition: 445 malware / 423 benign (868 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9847 | 0.9816 | 36.40% | 95.87% | 0.1763 |
+
+## Specialist Performance
+
+`filetypes/vbs` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

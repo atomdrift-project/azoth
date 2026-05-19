@@ -2,9 +2,17 @@
 
 LightGBM specialist for `unknown`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/unknown` specialist scored *alone* on its test-partition slice: 1342 malware / 2020 benign (3362 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `unknown` slice of the test partition: 1342 malware / 2020 benign (3362 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.8331 | 0.8282 | 12.37% | 76.41% | 0.1208 |
+
+## Specialist Performance
+
+`filetypes/unknown` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

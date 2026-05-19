@@ -2,9 +2,17 @@
 
 LightGBM specialist for `java_class`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/java_class` specialist scored *alone* on its test-partition slice: 173 malware / 47070 benign (47243 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `java_class` slice of the test partition: 173 malware / 47070 benign (47243 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9855 | 0.9265 | 6.36% | 91.86% | 0.0012 |
+
+## Specialist Performance
+
+`filetypes/java_class` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

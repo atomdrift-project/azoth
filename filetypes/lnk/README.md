@@ -2,9 +2,17 @@
 
 LightGBM specialist for `lnk`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/lnk` specialist scored *alone* on its test-partition slice: 257 malware / 127 benign (384 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `lnk` slice of the test partition: 257 malware / 127 benign (384 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9114 | 0.9467 | 59.92% | 90.00% | 0.1949 |
+
+## Specialist Performance
+
+`filetypes/lnk` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

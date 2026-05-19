@@ -1,0 +1,4487 @@
+{
+  "schema": "azoth.per_filetype_metrics.v1",
+  "calibration_snapshot_id": 1310931333,
+  "operating_level": 5,
+  "severity": "hostile",
+  "evaluated_on": "test_bucket_only",
+  "n_rows_evaluated": 585889,
+  "with_ci": false,
+  "stacked_diagnostics": false,
+  "filetypes": {
+    "7z": {
+      "n_files": 575,
+      "n_malware": 561,
+      "n_benign": 14,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.9626305067481539,
+        "pr_auc": 0.9989987310397628,
+        "f1": 0.9876760563380281,
+        "f1_at_05": 0.9641214351425943,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.060688186436891556,
+        "n_evaluated": 575
+      },
+      "ensemble": {
+        "roc_auc": 0.9551820728291317,
+        "pr_auc": 0.998767822928338,
+        "f1": 0.9885057471264368,
+        "f1_at_05": 0.9839285714285714,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.02916337363421917,
+        "n_evaluated": 575
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9626305067481539,
+          "pr_auc": 0.9989987310397628,
+          "f1": 0.9876760563380281,
+          "f1_at_05": 0.9641214351425943,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.060688186436891556,
+          "n_evaluated": 575
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9551820728291317,
+          "pr_auc": 0.998767822928338,
+          "f1": 0.9885057471264368,
+          "f1_at_05": 0.9839285714285714,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.02916337363421917,
+          "n_evaluated": 575
+        }
+      }
+    },
+    "applescript": {
+      "n_files": 34,
+      "n_malware": 2,
+      "n_benign": 32,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "f1": 1.0,
+        "f1_at_05": 0.6666666666666666,
+        "recall_at_3fp_per_million": 0.5,
+        "brier": 0.02874547243118286,
+        "n_evaluated": 34
+      },
+      "ensemble": {
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "f1": 1.0,
+        "f1_at_05": 0.5,
+        "recall_at_3fp_per_million": 1.0,
+        "brier": 0.08447254449129105,
+        "n_evaluated": 34
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 1.0,
+          "pr_auc": 1.0,
+          "f1": 1.0,
+          "f1_at_05": 0.6666666666666666,
+          "recall_at_3fp_per_million": 0.5,
+          "brier": 0.02874547243118286,
+          "n_evaluated": 34
+        },
+        "calibrated_max": {
+          "roc_auc": 1.0,
+          "pr_auc": 1.0,
+          "f1": 1.0,
+          "f1_at_05": 0.5,
+          "recall_at_3fp_per_million": 1.0,
+          "brier": 0.08447254449129105,
+          "n_evaluated": 34
+        }
+      }
+    },
+    "batch": {
+      "n_files": 21520,
+      "n_malware": 21095,
+      "n_benign": 425,
+      "ensemble_policy": "learned_blend_at_fp_3",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/scripts",
+        "filetypes/batch"
+      ],
+      "general": {
+        "roc_auc": 0.9092350849797136,
+        "pr_auc": 0.9952915709820475,
+        "f1": 0.9986021938449146,
+        "f1_at_05": 0.014675446848541863,
+        "recall_at_3fp_per_million": 0.004787864422849016,
+        "brier": 0.9681714773178101,
+        "n_evaluated": 21520
+      },
+      "specialist": {
+        "roc_auc": 0.9995993075783327,
+        "pr_auc": 0.9999919351762503,
+        "f1": 0.9988151658767772,
+        "f1_at_05": 0.9987197116980416,
+        "recall_at_3fp_per_million": 0.9884332780279688,
+        "brier": 0.0019711104687303305,
+        "n_evaluated": 21517
+      },
+      "ensemble": {
+        "roc_auc": 0.9996021359954268,
+        "pr_auc": 0.9999919351762504,
+        "f1": 0.9988151658767772,
+        "f1_at_05": 0.9987197116980416,
+        "recall_at_3fp_per_million": 0.9884332780279688,
+        "brier": 0.0019708359614014626,
+        "n_evaluated": 21520
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9995906473516166,
+          "pr_auc": 0.9999917013331698,
+          "f1": 0.9988853843052623,
+          "f1_at_05": 0.9987673051393894,
+          "recall_at_3fp_per_million": 0.9733112111874852,
+          "brier": 0.00189834157936275,
+          "n_evaluated": 21520
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9984865663734088,
+          "pr_auc": 0.9999453170135613,
+          "f1": 0.9988381742738588,
+          "f1_at_05": 0.9986972072861643,
+          "recall_at_3fp_per_million": 0.9884332780279688,
+          "brier": 0.002176583744585514,
+          "n_evaluated": 21520
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9996021359954268,
+          "pr_auc": 0.9999919351762504,
+          "f1": 0.9988151658767772,
+          "f1_at_05": 0.9987197116980416,
+          "recall_at_3fp_per_million": 0.9884332780279688,
+          "brier": 0.0019708359614014626,
+          "n_evaluated": 21520
+        }
+      }
+    },
+    "bz2": {
+      "n_files": 1412,
+      "n_malware": 2,
+      "n_benign": 1410,
+      "ensemble_policy": "general_only",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.7484042553191489,
+        "pr_auc": 0.5007107320540156,
+        "f1": 0.6666666666666666,
+        "f1_at_05": 0.6666666666666666,
+        "recall_at_3fp_per_million": 0.5,
+        "brier": 0.0008723121136426926,
+        "n_evaluated": 1412
+      },
+      "ensemble": {
+        "roc_auc": 0.749290780141844,
+        "pr_auc": 0.5011820330969267,
+        "f1": 0.6666666666666666,
+        "f1_at_05": 0.5,
+        "recall_at_3fp_per_million": 0.5,
+        "brier": 0.0017720697214826941,
+        "n_evaluated": 1412
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.7484042553191489,
+          "pr_auc": 0.5007107320540156,
+          "f1": 0.6666666666666666,
+          "f1_at_05": 0.6666666666666666,
+          "recall_at_3fp_per_million": 0.5,
+          "brier": 0.0008723121136426926,
+          "n_evaluated": 1412
+        },
+        "calibrated_max": {
+          "roc_auc": 0.749290780141844,
+          "pr_auc": 0.5011820330969267,
+          "f1": 0.6666666666666666,
+          "f1_at_05": 0.5,
+          "recall_at_3fp_per_million": 0.5,
+          "brier": 0.0017720697214826941,
+          "n_evaluated": 1412
+        }
+      }
+    },
+    "c": {
+      "n_files": 68328,
+      "n_malware": 1766,
+      "n_benign": 66562,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/source",
+        "filetypes/c"
+      ],
+      "general": {
+        "roc_auc": 0.6072877948957439,
+        "pr_auc": 0.2547898307119525,
+        "f1": 0.3353021353930032,
+        "f1_at_05": 0.24889326119035907,
+        "recall_at_3fp_per_million": 0.08040770101925254,
+        "brier": 0.022147374227643013,
+        "n_evaluated": 68328
+      },
+      "specialist": {
+        "roc_auc": 0.8818460286904692,
+        "pr_auc": 0.5103172338283398,
+        "f1": 0.5613234455219623,
+        "f1_at_05": 0.31096408317580343,
+        "recall_at_3fp_per_million": 0.11155152887882219,
+        "brier": 0.021139372140169144,
+        "n_evaluated": 68227
+      },
+      "ensemble": {
+        "roc_auc": 0.8817414135776408,
+        "pr_auc": 0.5098415951308277,
+        "f1": 0.5611633875106928,
+        "f1_at_05": 0.3108171941426547,
+        "recall_at_3fp_per_million": 0.11155152887882219,
+        "brier": 0.021115615963935852,
+        "n_evaluated": 68328
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.875939926987749,
+          "pr_auc": 0.44083499512109525,
+          "f1": 0.45468442891461025,
+          "f1_at_05": 0.3108171941426547,
+          "recall_at_3fp_per_million": 0.11721404303510759,
+          "brier": 0.02112049236893654,
+          "n_evaluated": 68328
+        },
+        "calibrated_max": {
+          "roc_auc": 0.8797175509491012,
+          "pr_auc": 0.3878145850520307,
+          "f1": 0.4465517241379311,
+          "f1_at_05": 0.43263661546210025,
+          "recall_at_3fp_per_million": 0.12797281993204984,
+          "brier": 0.026856642216444016,
+          "n_evaluated": 68328
+        },
+        "specialist_priority": {
+          "roc_auc": 0.8817414135776408,
+          "pr_auc": 0.5098415951308277,
+          "f1": 0.5611633875106928,
+          "f1_at_05": 0.3108171941426547,
+          "recall_at_3fp_per_million": 0.11155152887882219,
+          "brier": 0.021115615963935852,
+          "n_evaluated": 68328
+        }
+      }
+    },
+    "cab": {
+      "n_files": 38,
+      "n_malware": 27,
+      "n_benign": 11,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.9158249158249158,
+        "pr_auc": 0.9587685083388628,
+        "f1": 0.9473684210526316,
+        "f1_at_05": 0.7916666666666666,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.22011029720306396,
+        "n_evaluated": 38
+      },
+      "ensemble": {
+        "roc_auc": 0.9158249158249158,
+        "pr_auc": 0.9562445028518944,
+        "f1": 0.9473684210526316,
+        "f1_at_05": 0.9473684210526315,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.07136370986700058,
+        "n_evaluated": 38
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9158249158249158,
+          "pr_auc": 0.9587685083388628,
+          "f1": 0.9473684210526316,
+          "f1_at_05": 0.7916666666666666,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.22011029720306396,
+          "n_evaluated": 38
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9158249158249158,
+          "pr_auc": 0.9562445028518944,
+          "f1": 0.9473684210526316,
+          "f1_at_05": 0.9473684210526315,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.07136370986700058,
+          "n_evaluated": 38
+        }
+      }
+    },
+    "chm": {
+      "n_files": 14,
+      "n_malware": 10,
+      "n_benign": 4,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 1.0,
+        "pr_auc": 0.9999999999999999,
+        "f1": 1.0,
+        "f1_at_05": 1.0,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.006217596586793661,
+        "n_evaluated": 14
+      },
+      "ensemble": {
+        "roc_auc": 1.0,
+        "pr_auc": 0.9999999999999999,
+        "f1": 1.0,
+        "f1_at_05": 1.0,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.0019462381023913622,
+        "n_evaluated": 14
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 1.0,
+          "pr_auc": 0.9999999999999999,
+          "f1": 1.0,
+          "f1_at_05": 1.0,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.006217596586793661,
+          "n_evaluated": 14
+        },
+        "calibrated_max": {
+          "roc_auc": 1.0,
+          "pr_auc": 0.9999999999999999,
+          "f1": 1.0,
+          "f1_at_05": 1.0,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.0019462381023913622,
+          "n_evaluated": 14
+        }
+      }
+    },
+    "chrome-manifest": {
+      "n_files": 48,
+      "n_malware": 2,
+      "n_benign": 46,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.9456521739130436,
+        "pr_auc": 0.6428571428571428,
+        "f1": 0.6666666666666666,
+        "f1_at_05": 0.2857142857142857,
+        "recall_at_3fp_per_million": 0.5,
+        "brier": 0.04577310010790825,
+        "n_evaluated": 48
+      },
+      "ensemble": {
+        "roc_auc": 0.8967391304347826,
+        "pr_auc": 0.19444444444444442,
+        "f1": 0.3636363636363636,
+        "f1_at_05": 0.19047619047619047,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.2665277421474457,
+        "n_evaluated": 48
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9456521739130436,
+          "pr_auc": 0.6428571428571428,
+          "f1": 0.6666666666666666,
+          "f1_at_05": 0.2857142857142857,
+          "recall_at_3fp_per_million": 0.5,
+          "brier": 0.04577310010790825,
+          "n_evaluated": 48
+        },
+        "calibrated_max": {
+          "roc_auc": 0.8967391304347826,
+          "pr_auc": 0.19444444444444442,
+          "f1": 0.3636363636363636,
+          "f1_at_05": 0.19047619047619047,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.2665277421474457,
+          "n_evaluated": 48
+        }
+      }
+    },
+    "crx": {
+      "n_files": 11,
+      "n_malware": 6,
+      "n_benign": 5,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.5333333333333333,
+        "pr_auc": 0.7575757575757576,
+        "f1": 0.7058823529411764,
+        "f1_at_05": 0.5,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.3719310462474823,
+        "n_evaluated": 11
+      },
+      "ensemble": {
+        "roc_auc": 0.5666666666666667,
+        "pr_auc": 0.7575757575757576,
+        "f1": 0.7058823529411764,
+        "f1_at_05": 0.625,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.450356662273407,
+        "n_evaluated": 11
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.5333333333333333,
+          "pr_auc": 0.7575757575757576,
+          "f1": 0.7058823529411764,
+          "f1_at_05": 0.5,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.3719310462474823,
+          "n_evaluated": 11
+        },
+        "calibrated_max": {
+          "roc_auc": 0.5666666666666667,
+          "pr_auc": 0.7575757575757576,
+          "f1": 0.7058823529411764,
+          "f1_at_05": 0.625,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.450356662273407,
+          "n_evaluated": 11
+        }
+      }
+    },
+    "csharp": {
+      "n_files": 7806,
+      "n_malware": 234,
+      "n_benign": 7572,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/source",
+        "filetypes/csharp"
+      ],
+      "general": {
+        "roc_auc": 0.8134538064213184,
+        "pr_auc": 0.43141450725718816,
+        "f1": 0.4929971988795519,
+        "f1_at_05": 0.46296296296296297,
+        "recall_at_3fp_per_million": 0.17094017094017094,
+        "brier": 0.02166186459362507,
+        "n_evaluated": 7806
+      },
+      "specialist": {
+        "roc_auc": 0.8418081009206207,
+        "pr_auc": 0.5712056083133923,
+        "f1": 0.5626134301270418,
+        "f1_at_05": 0.48297213622291024,
+        "recall_at_3fp_per_million": 0.16666666666666666,
+        "brier": 0.020250096917152405,
+        "n_evaluated": 7806
+      },
+      "ensemble": {
+        "roc_auc": 0.8945837904831565,
+        "pr_auc": 0.5185242613375037,
+        "f1": 0.48467966573816157,
+        "f1_at_05": 0.4351464435146444,
+        "recall_at_3fp_per_million": 0.2222222222222222,
+        "brier": 0.028098419308662415,
+        "n_evaluated": 7806
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.8530429811135042,
+          "pr_auc": 0.5729870743018555,
+          "f1": 0.5626134301270418,
+          "f1_at_05": 0.46956521739130436,
+          "recall_at_3fp_per_million": 0.29914529914529914,
+          "brier": 0.02231689542531967,
+          "n_evaluated": 7806
+        },
+        "calibrated_max": {
+          "roc_auc": 0.8945837904831565,
+          "pr_auc": 0.5185242613375037,
+          "f1": 0.48467966573816157,
+          "f1_at_05": 0.4351464435146444,
+          "recall_at_3fp_per_million": 0.2222222222222222,
+          "brier": 0.028098419308662415,
+          "n_evaluated": 7806
+        },
+        "specialist_priority": {
+          "roc_auc": 0.8418081009206207,
+          "pr_auc": 0.5712056083133923,
+          "f1": 0.5626134301270418,
+          "f1_at_05": 0.48297213622291024,
+          "recall_at_3fp_per_million": 0.16666666666666666,
+          "brier": 0.020250096917152405,
+          "n_evaluated": 7806
+        }
+      }
+    },
+    "data": {
+      "n_files": 1215,
+      "n_malware": 58,
+      "n_benign": 1157,
+      "ensemble_policy": "filetype_only_at_fp_0",
+      "ensemble_allowed_routes": [
+        "filetypes/data"
+      ],
+      "general": {
+        "roc_auc": 0.8837436294817155,
+        "pr_auc": 0.8188820851138784,
+        "f1": 0.8623853211009175,
+        "f1_at_05": 0.8041237113402062,
+        "recall_at_3fp_per_million": 0.7241379310344828,
+        "brier": 0.016264518722891808,
+        "n_evaluated": 1215
+      },
+      "specialist": {
+        "roc_auc": 0.9705316961225524,
+        "pr_auc": 0.881134122422876,
+        "f1": 0.8761904761904762,
+        "f1_at_05": 0.8514851485148515,
+        "recall_at_3fp_per_million": 0.7241379310344828,
+        "brier": 0.011752835474908352,
+        "n_evaluated": 1215
+      },
+      "ensemble": {
+        "roc_auc": 0.9705316961225524,
+        "pr_auc": 0.881134122422876,
+        "f1": 0.8761904761904762,
+        "f1_at_05": 0.8514851485148515,
+        "recall_at_3fp_per_million": 0.7241379310344828,
+        "brier": 0.011752835474908352,
+        "n_evaluated": 1215
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9705316961225524,
+          "pr_auc": 0.881134122422876,
+          "f1": 0.8761904761904762,
+          "f1_at_05": 0.8514851485148515,
+          "recall_at_3fp_per_million": 0.7241379310344828,
+          "brier": 0.011752835474908352,
+          "n_evaluated": 1215
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9515691592406045,
+          "pr_auc": 0.8260135808340181,
+          "f1": 0.8653846153846154,
+          "f1_at_05": 0.8653846153846154,
+          "recall_at_3fp_per_million": 0.7586206896551724,
+          "brier": 0.011449514888226986,
+          "n_evaluated": 1215
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9705316961225524,
+          "pr_auc": 0.881134122422876,
+          "f1": 0.8761904761904762,
+          "f1_at_05": 0.8514851485148515,
+          "recall_at_3fp_per_million": 0.7241379310344828,
+          "brier": 0.011752835474908352,
+          "n_evaluated": 1215
+        }
+      }
+    },
+    "deb": {
+      "n_files": 744,
+      "n_malware": 7,
+      "n_benign": 737,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.8453188602442334,
+        "pr_auc": 0.717376904393906,
+        "f1": 0.8333333333333333,
+        "f1_at_05": 0.6,
+        "recall_at_3fp_per_million": 0.7142857142857143,
+        "brier": 0.00487408135086298,
+        "n_evaluated": 744
+      },
+      "ensemble": {
+        "roc_auc": 0.8342702074045357,
+        "pr_auc": 0.4256527379112387,
+        "f1": 0.6666666666666666,
+        "f1_at_05": 0.19607843137254902,
+        "recall_at_3fp_per_million": 0.14285714285714285,
+        "brier": 0.04103989154100418,
+        "n_evaluated": 744
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.8453188602442334,
+          "pr_auc": 0.717376904393906,
+          "f1": 0.8333333333333333,
+          "f1_at_05": 0.6,
+          "recall_at_3fp_per_million": 0.7142857142857143,
+          "brier": 0.00487408135086298,
+          "n_evaluated": 744
+        },
+        "calibrated_max": {
+          "roc_auc": 0.8342702074045357,
+          "pr_auc": 0.4256527379112387,
+          "f1": 0.6666666666666666,
+          "f1_at_05": 0.19607843137254902,
+          "recall_at_3fp_per_million": 0.14285714285714285,
+          "brier": 0.04103989154100418,
+          "n_evaluated": 744
+        }
+      }
+    },
+    "desktop-entry": {
+      "n_files": 53,
+      "n_malware": 0,
+      "n_benign": 53,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 53
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 53
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 53
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 53
+        }
+      }
+    },
+    "doc": {
+      "n_files": 1290,
+      "n_malware": 1287,
+      "n_benign": 3,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/documents"
+      ],
+      "general": {
+        "roc_auc": 0.9981869981869982,
+        "pr_auc": 0.9999933669296661,
+        "f1": 0.9988358556461001,
+        "f1_at_05": 0.8384476534296029,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.1312328726053238,
+        "n_evaluated": 1290
+      },
+      "ensemble": {
+        "roc_auc": 0.9971509971509972,
+        "pr_auc": 0.999992752388582,
+        "f1": 0.999223602484472,
+        "f1_at_05": 0.9992236024844721,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.0016725893365219235,
+        "n_evaluated": 1290
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9984459984459985,
+          "pr_auc": 0.9999963804297086,
+          "f1": 0.999223602484472,
+          "f1_at_05": 0.990983927871423,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.03190014883875847,
+          "n_evaluated": 1290
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9971509971509972,
+          "pr_auc": 0.999992752388582,
+          "f1": 0.999223602484472,
+          "f1_at_05": 0.9992236024844721,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.0016725893365219235,
+          "n_evaluated": 1290
+        }
+      }
+    },
+    "docx": {
+      "n_files": 204,
+      "n_malware": 173,
+      "n_benign": 31,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/documents",
+        "filetypes/docx"
+      ],
+      "general": {
+        "roc_auc": 0.8965131456274474,
+        "pr_auc": 0.9730882832639905,
+        "f1": 0.9177718832891246,
+        "f1_at_05": 0.8013698630136986,
+        "recall_at_3fp_per_million": 0.47398843930635837,
+        "brier": 0.2495584636926651,
+        "n_evaluated": 204
+      },
+      "specialist": {
+        "roc_auc": 0.9153458884952451,
+        "pr_auc": 0.9761360416506719,
+        "f1": 0.9226666666666667,
+        "f1_at_05": 0.7659574468085106,
+        "recall_at_3fp_per_million": 0.6242774566473989,
+        "brier": 0.26135215163230896,
+        "n_evaluated": 204
+      },
+      "ensemble": {
+        "roc_auc": 0.9153458884952451,
+        "pr_auc": 0.9761360416506719,
+        "f1": 0.9226666666666667,
+        "f1_at_05": 0.7659574468085106,
+        "recall_at_3fp_per_million": 0.6242774566473989,
+        "brier": 0.26135215163230896,
+        "n_evaluated": 204
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9080738392690657,
+          "pr_auc": 0.9746663277075136,
+          "f1": 0.9226666666666667,
+          "f1_at_05": 0.89937106918239,
+          "recall_at_3fp_per_million": 0.47398843930635837,
+          "brier": 0.15220044553279877,
+          "n_evaluated": 204
+        },
+        "calibrated_max": {
+          "roc_auc": 0.8845795263844861,
+          "pr_auc": 0.9749183371454186,
+          "f1": 0.9177718832891246,
+          "f1_at_05": 0.899135446685879,
+          "recall_at_3fp_per_million": 0.7167630057803468,
+          "brier": 0.08777431398630142,
+          "n_evaluated": 204
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9153458884952451,
+          "pr_auc": 0.9761360416506719,
+          "f1": 0.9226666666666667,
+          "f1_at_05": 0.7659574468085106,
+          "recall_at_3fp_per_million": 0.6242774566473989,
+          "brier": 0.26135215163230896,
+          "n_evaluated": 204
+        }
+      }
+    },
+    "elf": {
+      "n_files": 25753,
+      "n_malware": 8826,
+      "n_benign": 16927,
+      "ensemble_policy": "learned_blend_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/native",
+        "filetypes/elf"
+      ],
+      "general": {
+        "roc_auc": 0.9992727465111879,
+        "pr_auc": 0.9986027096688309,
+        "f1": 0.9806205892237033,
+        "f1_at_05": 0.953482880755608,
+        "recall_at_3fp_per_million": 0.8656242918649445,
+        "brier": 0.021347906440496445,
+        "n_evaluated": 25753
+      },
+      "specialist": {
+        "roc_auc": 0.9999234340309198,
+        "pr_auc": 0.9998519772675163,
+        "f1": 0.9946621237932992,
+        "f1_at_05": 0.9929438329099634,
+        "recall_at_3fp_per_million": 0.9365061335756474,
+        "brier": 0.003768731839954853,
+        "n_evaluated": 25695
+      },
+      "ensemble": {
+        "roc_auc": 0.9999197042535499,
+        "pr_auc": 0.9998449994044348,
+        "f1": 0.9945615227736235,
+        "f1_at_05": 0.9928478909725742,
+        "recall_at_3fp_per_million": 0.9355313845456605,
+        "brier": 0.003813195275142789,
+        "n_evaluated": 25753
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9999305477938342,
+          "pr_auc": 0.9998678037758022,
+          "f1": 0.994670597573421,
+          "f1_at_05": 0.9888446661808398,
+          "recall_at_3fp_per_million": 0.9436891003852255,
+          "brier": 0.006285503506660461,
+          "n_evaluated": 25753
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9998420089487051,
+          "pr_auc": 0.9996366285375587,
+          "f1": 0.9940976163450623,
+          "f1_at_05": 0.980102267674522,
+          "recall_at_3fp_per_million": 0.9409698617720371,
+          "brier": 0.011128593236207962,
+          "n_evaluated": 25753
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9999197042535499,
+          "pr_auc": 0.9998449994044348,
+          "f1": 0.9945615227736235,
+          "f1_at_05": 0.9928478909725742,
+          "recall_at_3fp_per_million": 0.9355313845456605,
+          "brier": 0.003813195275142789,
+          "n_evaluated": 25753
+        }
+      }
+    },
+    "elixir": {
+      "n_files": 1138,
+      "n_malware": 0,
+      "n_benign": 1138,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 1138
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 1138
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 1138
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 1138
+        }
+      }
+    },
+    "github-actions": {
+      "n_files": 704,
+      "n_malware": 1,
+      "n_benign": 703,
+      "ensemble_policy": "general_only",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.9943100995732574,
+        "pr_auc": 0.2,
+        "f1": 0.33333333333333337,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.0017716683214530349,
+        "n_evaluated": 704
+      },
+      "ensemble": {
+        "roc_auc": 0.9943100995732574,
+        "pr_auc": 0.2,
+        "f1": 0.33333333333333337,
+        "f1_at_05": 0.18181818181818182,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.009439200162887573,
+        "n_evaluated": 704
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9943100995732574,
+          "pr_auc": 0.2,
+          "f1": 0.33333333333333337,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.0017716683214530349,
+          "n_evaluated": 704
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9943100995732574,
+          "pr_auc": 0.2,
+          "f1": 0.33333333333333337,
+          "f1_at_05": 0.18181818181818182,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.009439200162887573,
+          "n_evaluated": 704
+        }
+      }
+    },
+    "go": {
+      "n_files": 13035,
+      "n_malware": 1177,
+      "n_benign": 11858,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/source",
+        "filetypes/go"
+      ],
+      "general": {
+        "roc_auc": 0.9289144138805947,
+        "pr_auc": 0.5974580540337642,
+        "f1": 0.695929203539823,
+        "f1_at_05": 0.04466501240694789,
+        "recall_at_3fp_per_million": 0.009345794392523364,
+        "brier": 0.0872800275683403,
+        "n_evaluated": 13035
+      },
+      "specialist": {
+        "roc_auc": 0.9274924972411428,
+        "pr_auc": 0.6525523216563796,
+        "f1": 0.6240179573512906,
+        "f1_at_05": 0.0766721044045677,
+        "recall_at_3fp_per_million": 0.008496176720475786,
+        "brier": 0.08442144840955734,
+        "n_evaluated": 13035
+      },
+      "ensemble": {
+        "roc_auc": 0.934411887310518,
+        "pr_auc": 0.6323587696498169,
+        "f1": 0.6485325697924124,
+        "f1_at_05": 0.5534988713318284,
+        "recall_at_3fp_per_million": 0.015293118096856415,
+        "brier": 0.05241501331329346,
+        "n_evaluated": 13035
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9374525412796827,
+          "pr_auc": 0.6339426815478872,
+          "f1": 0.6223104932141676,
+          "f1_at_05": 0.07941653160453808,
+          "recall_at_3fp_per_million": 0.010195412064570943,
+          "brier": 0.08467139303684235,
+          "n_evaluated": 13035
+        },
+        "calibrated_max": {
+          "roc_auc": 0.934411887310518,
+          "pr_auc": 0.6323587696498169,
+          "f1": 0.6485325697924124,
+          "f1_at_05": 0.5534988713318284,
+          "recall_at_3fp_per_million": 0.015293118096856415,
+          "brier": 0.05241501331329346,
+          "n_evaluated": 13035
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9274924972411428,
+          "pr_auc": 0.6525523216563796,
+          "f1": 0.6240179573512906,
+          "f1_at_05": 0.0766721044045677,
+          "recall_at_3fp_per_million": 0.008496176720475786,
+          "brier": 0.08442144840955734,
+          "n_evaluated": 13035
+        }
+      }
+    },
+    "groovy": {
+      "n_files": 663,
+      "n_malware": 15,
+      "n_benign": 648,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.275977366255144,
+        "pr_auc": 0.019061672922253012,
+        "f1": 0.05,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.02259664796292782,
+        "n_evaluated": 663
+      },
+      "specialist": {
+        "roc_auc": 0.41014940752189594,
+        "pr_auc": 0.023226553304855593,
+        "f1": 0.05932203389830508,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.02255573682487011,
+        "n_evaluated": 662
+      },
+      "ensemble": {
+        "roc_auc": 0.411059670781893,
+        "pr_auc": 0.023226553304855596,
+        "f1": 0.05932203389830508,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.022521715611219406,
+        "n_evaluated": 663
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.275977366255144,
+          "pr_auc": 0.019061672922253012,
+          "f1": 0.05,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.02259664796292782,
+          "n_evaluated": 663
+        },
+        "calibrated_max": {
+          "roc_auc": 0.26522633744855967,
+          "pr_auc": 0.017094834453716894,
+          "f1": 0.04573170731707318,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.024110155180096626,
+          "n_evaluated": 663
+        },
+        "specialist_priority": {
+          "roc_auc": 0.411059670781893,
+          "pr_auc": 0.023226553304855596,
+          "f1": 0.05932203389830508,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.022521715611219406,
+          "n_evaluated": 663
+        }
+      }
+    },
+    "gz": {
+      "n_files": 6552,
+      "n_malware": 168,
+      "n_benign": 6384,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.8115815953574413,
+        "pr_auc": 0.6341289100366451,
+        "f1": 0.7266666666666667,
+        "f1_at_05": 0.49557522123893805,
+        "recall_at_3fp_per_million": 0.2976190476190476,
+        "brier": 0.015353127382695675,
+        "n_evaluated": 6552
+      },
+      "ensemble": {
+        "roc_auc": 0.8033350675796634,
+        "pr_auc": 0.6391257081326216,
+        "f1": 0.7242524916943522,
+        "f1_at_05": 0.7050847457627119,
+        "recall_at_3fp_per_million": 0.2976190476190476,
+        "brier": 0.012330441735684872,
+        "n_evaluated": 6552
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.8115815953574413,
+          "pr_auc": 0.6341289100366451,
+          "f1": 0.7266666666666667,
+          "f1_at_05": 0.49557522123893805,
+          "recall_at_3fp_per_million": 0.2976190476190476,
+          "brier": 0.015353127382695675,
+          "n_evaluated": 6552
+        },
+        "calibrated_max": {
+          "roc_auc": 0.8033350675796634,
+          "pr_auc": 0.6391257081326216,
+          "f1": 0.7242524916943522,
+          "f1_at_05": 0.7050847457627119,
+          "recall_at_3fp_per_million": 0.2976190476190476,
+          "brier": 0.012330441735684872,
+          "n_evaluated": 6552
+        }
+      }
+    },
+    "html": {
+      "n_files": 990,
+      "n_malware": 6,
+      "n_benign": 984,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/documents"
+      ],
+      "general": {
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "f1": 1.0,
+        "f1_at_05": 1.0,
+        "recall_at_3fp_per_million": 1.0,
+        "brier": 0.00011040698882425204,
+        "n_evaluated": 990
+      },
+      "ensemble": {
+        "roc_auc": 0.9991531165311652,
+        "pr_auc": 0.8888888888888888,
+        "f1": 0.8,
+        "f1_at_05": 0.6666666666666666,
+        "recall_at_3fp_per_million": 0.6666666666666666,
+        "brier": 0.00617897929623723,
+        "n_evaluated": 990
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9999999999999999,
+          "pr_auc": 1.0,
+          "f1": 1.0,
+          "f1_at_05": 1.0,
+          "recall_at_3fp_per_million": 1.0,
+          "brier": 0.00011222263856325299,
+          "n_evaluated": 990
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9991531165311652,
+          "pr_auc": 0.8888888888888888,
+          "f1": 0.8,
+          "f1_at_05": 0.6666666666666666,
+          "recall_at_3fp_per_million": 0.6666666666666666,
+          "brier": 0.00617897929623723,
+          "n_evaluated": 990
+        }
+      }
+    },
+    "jar": {
+      "n_files": 451,
+      "n_malware": 215,
+      "n_benign": 236,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filetypes/jar"
+      ],
+      "general": {
+        "roc_auc": 0.9681119432400475,
+        "pr_auc": 0.9664210923101901,
+        "f1": 0.9160997732426304,
+        "f1_at_05": 0.7888888888888889,
+        "recall_at_3fp_per_million": 0.3581395348837209,
+        "brier": 0.1634630560874939,
+        "n_evaluated": 451
+      },
+      "specialist": {
+        "roc_auc": 0.9838983050847457,
+        "pr_auc": 0.981203175003988,
+        "f1": 0.9387755102040817,
+        "f1_at_05": 0.8390501319261213,
+        "recall_at_3fp_per_million": 0.586046511627907,
+        "brier": 0.09475044906139374,
+        "n_evaluated": 451
+      },
+      "ensemble": {
+        "roc_auc": 0.9838983050847457,
+        "pr_auc": 0.981203175003988,
+        "f1": 0.9387755102040817,
+        "f1_at_05": 0.8390501319261213,
+        "recall_at_3fp_per_million": 0.586046511627907,
+        "brier": 0.09475044906139374,
+        "n_evaluated": 451
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9838194718171068,
+          "pr_auc": 0.9807762991926672,
+          "f1": 0.9387755102040817,
+          "f1_at_05": 0.8421052631578947,
+          "recall_at_3fp_per_million": 0.4418604651162791,
+          "brier": 0.09257684648036957,
+          "n_evaluated": 451
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9764978320851398,
+          "pr_auc": 0.9701573721639629,
+          "f1": 0.9255813953488373,
+          "f1_at_05": 0.9192825112107623,
+          "recall_at_3fp_per_million": 0.5813953488372093,
+          "brier": 0.058449920266866684,
+          "n_evaluated": 451
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9838983050847457,
+          "pr_auc": 0.981203175003988,
+          "f1": 0.9387755102040817,
+          "f1_at_05": 0.8390501319261213,
+          "recall_at_3fp_per_million": 0.586046511627907,
+          "brier": 0.09475044906139374,
+          "n_evaluated": 451
+        }
+      }
+    },
+    "java": {
+      "n_files": 4196,
+      "n_malware": 4,
+      "n_benign": 4192,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/source"
+      ],
+      "general": {
+        "roc_auc": 0.9767414122137406,
+        "pr_auc": 0.6275575447570332,
+        "f1": 0.6666666666666666,
+        "f1_at_05": 0.5714285714285714,
+        "recall_at_3fp_per_million": 0.5,
+        "brier": 0.000531105964910239,
+        "n_evaluated": 4196
+      },
+      "ensemble": {
+        "roc_auc": 0.9752802958015266,
+        "pr_auc": 0.6523474178403756,
+        "f1": 0.6666666666666666,
+        "f1_at_05": 0.15384615384615385,
+        "recall_at_3fp_per_million": 0.5,
+        "brier": 0.0066529372707009315,
+        "n_evaluated": 4196
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9748330152671756,
+          "pr_auc": 0.6898529411764706,
+          "f1": 0.75,
+          "f1_at_05": 0.5,
+          "recall_at_3fp_per_million": 0.5,
+          "brier": 0.0013766454067081213,
+          "n_evaluated": 4196
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9752802958015266,
+          "pr_auc": 0.6523474178403756,
+          "f1": 0.6666666666666666,
+          "f1_at_05": 0.15384615384615385,
+          "recall_at_3fp_per_million": 0.5,
+          "brier": 0.0066529372707009315,
+          "n_evaluated": 4196
+        }
+      }
+    },
+    "java_class": {
+      "n_files": 47243,
+      "n_malware": 173,
+      "n_benign": 47070,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/portable",
+        "filetypes/java_class"
+      ],
+      "general": {
+        "roc_auc": 0.9308869093012373,
+        "pr_auc": 0.9059544115441842,
+        "f1": 0.9253731343283582,
+        "f1_at_05": 0.890282131661442,
+        "recall_at_3fp_per_million": 0.7572254335260116,
+        "brier": 0.0007146836724132299,
+        "n_evaluated": 47243
+      },
+      "specialist": {
+        "roc_auc": 0.9848654923631899,
+        "pr_auc": 0.9254441804355029,
+        "f1": 0.9181286549707601,
+        "f1_at_05": 0.870026525198939,
+        "recall_at_3fp_per_million": 0.05813953488372093,
+        "brier": 0.0012853769585490227,
+        "n_evaluated": 45622
+      },
+      "ensemble": {
+        "roc_auc": 0.9854708459053114,
+        "pr_auc": 0.9264620564175154,
+        "f1": 0.9186046511627907,
+        "f1_at_05": 0.8707124010554089,
+        "recall_at_3fp_per_million": 0.06358381502890173,
+        "brier": 0.0012412846554070711,
+        "n_evaluated": 47243
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9854615128617937,
+          "pr_auc": 0.9452229529020758,
+          "f1": 0.9186046511627907,
+          "f1_at_05": 0.8616187989556136,
+          "recall_at_3fp_per_million": 0.7225433526011561,
+          "brier": 0.0012884213356301188,
+          "n_evaluated": 47243
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9689170967848892,
+          "pr_auc": 0.9254112744214994,
+          "f1": 0.9285714285714286,
+          "f1_at_05": 0.8517520215633423,
+          "recall_at_3fp_per_million": 0.7398843930635838,
+          "brier": 0.0013493269216269255,
+          "n_evaluated": 47243
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9854708459053114,
+          "pr_auc": 0.9264620564175154,
+          "f1": 0.9186046511627907,
+          "f1_at_05": 0.8707124010554089,
+          "recall_at_3fp_per_million": 0.06358381502890173,
+          "brier": 0.0012412846554070711,
+          "n_evaluated": 47243
+        }
+      }
+    },
+    "javascript": {
+      "n_files": 69906,
+      "n_malware": 10488,
+      "n_benign": 59418,
+      "ensemble_policy": "filetype_only",
+      "ensemble_allowed_routes": [
+        "filetypes/javascript"
+      ],
+      "general": {
+        "roc_auc": 0.9883157780675964,
+        "pr_auc": 0.9617499507714895,
+        "f1": 0.9169327504052659,
+        "f1_at_05": 0.8998567921440261,
+        "recall_at_3fp_per_million": 0.45499618611746756,
+        "brier": 0.026059558615088463,
+        "n_evaluated": 69906
+      },
+      "specialist": {
+        "roc_auc": 0.9960217822158985,
+        "pr_auc": 0.9824908395420099,
+        "f1": 0.9319791005420186,
+        "f1_at_05": 0.9198396793587175,
+        "recall_at_3fp_per_million": 0.6886387484498713,
+        "brier": 0.0185563825070858,
+        "n_evaluated": 69602
+      },
+      "ensemble": {
+        "roc_auc": 0.9959533023801356,
+        "pr_auc": 0.9818298141347297,
+        "f1": 0.9315951369562032,
+        "f1_at_05": 0.9315295956241454,
+        "recall_at_3fp_per_million": 0.6835829438137938,
+        "brier": 0.015306896530091763,
+        "n_evaluated": 69602
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9960217822158985,
+          "pr_auc": 0.9824908395420099,
+          "f1": 0.9319791005420186,
+          "f1_at_05": 0.9198396793587175,
+          "recall_at_3fp_per_million": 0.6886387484498713,
+          "brier": 0.0185563825070858,
+          "n_evaluated": 69602
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9959533023801356,
+          "pr_auc": 0.9818298141347297,
+          "f1": 0.9315951369562032,
+          "f1_at_05": 0.9315295956241454,
+          "recall_at_3fp_per_million": 0.6835829438137938,
+          "brier": 0.015306896530091763,
+          "n_evaluated": 69602
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9959531487657586,
+          "pr_auc": 0.982065335950797,
+          "f1": 0.9304229195088677,
+          "f1_at_05": 0.9185,
+          "recall_at_3fp_per_million": 0.6793478260869565,
+          "brier": 0.018769394606351852,
+          "n_evaluated": 69906
+        }
+      }
+    },
+    "jpeg": {
+      "n_files": 1444,
+      "n_malware": 125,
+      "n_benign": 1319,
+      "ensemble_policy": "learned_blend_at_fp_1",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/media",
+        "filetypes/jpeg"
+      ],
+      "general": {
+        "roc_auc": 0.5116421531463229,
+        "pr_auc": 0.25533706696717434,
+        "f1": 0.3095238095238095,
+        "f1_at_05": 0.2465753424657534,
+        "recall_at_3fp_per_million": 0.136,
+        "brier": 0.07503852248191833,
+        "n_evaluated": 1444
+      },
+      "specialist": {
+        "roc_auc": 0.7714081942336874,
+        "pr_auc": 0.33361040390166047,
+        "f1": 0.3212435233160622,
+        "f1_at_05": 0.015873015873015872,
+        "recall_at_3fp_per_million": 0.008,
+        "brier": 0.0744825154542923,
+        "n_evaluated": 1443
+      },
+      "ensemble": {
+        "roc_auc": 0.7715815011372251,
+        "pr_auc": 0.3336104039016604,
+        "f1": 0.3212435233160622,
+        "f1_at_05": 0.015873015873015872,
+        "recall_at_3fp_per_million": 0.008,
+        "brier": 0.0744309350848198,
+        "n_evaluated": 1444
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.771420773313116,
+          "pr_auc": 0.33978842800580744,
+          "f1": 0.32051282051282054,
+          "f1_at_05": 0.24324324324324326,
+          "recall_at_3fp_per_million": 0.104,
+          "brier": 0.06953690201044083,
+          "n_evaluated": 1444
+        },
+        "calibrated_max": {
+          "roc_auc": 0.7500166793025018,
+          "pr_auc": 0.3086005360013161,
+          "f1": 0.31,
+          "f1_at_05": 0.2937853107344633,
+          "recall_at_3fp_per_million": 0.12,
+          "brier": 0.07438541948795319,
+          "n_evaluated": 1444
+        },
+        "specialist_priority": {
+          "roc_auc": 0.7715815011372251,
+          "pr_auc": 0.3336104039016604,
+          "f1": 0.3212435233160622,
+          "f1_at_05": 0.015873015873015872,
+          "recall_at_3fp_per_million": 0.008,
+          "brier": 0.0744309350848198,
+          "n_evaluated": 1444
+        }
+      }
+    },
+    "kotlin": {
+      "n_files": 8170,
+      "n_malware": 2829,
+      "n_benign": 5341,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/source",
+        "filetypes/kotlin"
+      ],
+      "general": {
+        "roc_auc": 0.871388980937993,
+        "pr_auc": 0.8887978448272316,
+        "f1": 0.873031304685981,
+        "f1_at_05": 0.5697674418604651,
+        "recall_at_3fp_per_million": 0.29975256274301876,
+        "brier": 0.196153923869133,
+        "n_evaluated": 8170
+      },
+      "specialist": {
+        "roc_auc": 0.9800289111881649,
+        "pr_auc": 0.9786330221653435,
+        "f1": 0.9571660943430327,
+        "f1_at_05": 0.6892079666512274,
+        "recall_at_3fp_per_million": 0.5231530576175327,
+        "brier": 0.1559639871120453,
+        "n_evaluated": 8137
+      },
+      "ensemble": {
+        "roc_auc": 0.9821303072485476,
+        "pr_auc": 0.9786054631440465,
+        "f1": 0.9555475243946512,
+        "f1_at_05": 0.9534256428699874,
+        "recall_at_3fp_per_million": 0.5468363379285966,
+        "brier": 0.02751914970576763,
+        "n_evaluated": 8170
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9673033309950986,
+          "pr_auc": 0.966375104018373,
+          "f1": 0.9351254480286739,
+          "f1_at_05": 0.7246507435781884,
+          "recall_at_3fp_per_million": 0.4418522446094026,
+          "brier": 0.1404068022966385,
+          "n_evaluated": 8170
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9821303072485476,
+          "pr_auc": 0.9786054631440465,
+          "f1": 0.9555475243946512,
+          "f1_at_05": 0.9534256428699874,
+          "recall_at_3fp_per_million": 0.5468363379285966,
+          "brier": 0.02751914970576763,
+          "n_evaluated": 8170
+        },
+        "specialist_priority": {
+          "roc_auc": 0.979458048408541,
+          "pr_auc": 0.9776397339524595,
+          "f1": 0.9514911965504851,
+          "f1_at_05": 0.6892079666512274,
+          "recall_at_3fp_per_million": 0.5231530576175327,
+          "brier": 0.15533402562141418,
+          "n_evaluated": 8170
+        }
+      }
+    },
+    "lnk": {
+      "n_files": 384,
+      "n_malware": 257,
+      "n_benign": 127,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filetypes/lnk"
+      ],
+      "general": {
+        "roc_auc": 0.835871197034223,
+        "pr_auc": 0.9171051603051652,
+        "f1": 0.8547297297297298,
+        "f1_at_05": 0.6716791979949874,
+        "recall_at_3fp_per_million": 0.42412451361867703,
+        "brier": 0.3216247260570526,
+        "n_evaluated": 384
+      },
+      "specialist": {
+        "roc_auc": 0.9110943651574803,
+        "pr_auc": 0.9463335966936846,
+        "f1": 0.899641577060932,
+        "f1_at_05": 0.8136363636363636,
+        "recall_at_3fp_per_million": 0.59765625,
+        "brier": 0.1954125165939331,
+        "n_evaluated": 383
+      },
+      "ensemble": {
+        "roc_auc": 0.9114403014798247,
+        "pr_auc": 0.9467186942744807,
+        "f1": 0.8999999999999999,
+        "f1_at_05": 0.8144796380090498,
+        "recall_at_3fp_per_million": 0.5992217898832685,
+        "brier": 0.19490362703800201,
+        "n_evaluated": 384
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9098317963172892,
+          "pr_auc": 0.9454124847003887,
+          "f1": 0.8999999999999999,
+          "f1_at_05": 0.8098434004474273,
+          "recall_at_3fp_per_million": 0.5019455252918288,
+          "brier": 0.19748516380786896,
+          "n_evaluated": 384
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9034437329575048,
+          "pr_auc": 0.9508217551267221,
+          "f1": 0.8999999999999999,
+          "f1_at_05": 0.8983957219251337,
+          "recall_at_3fp_per_million": 0.6147859922178989,
+          "brier": 0.10902129858732224,
+          "n_evaluated": 384
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9114403014798247,
+          "pr_auc": 0.9467186942744807,
+          "f1": 0.8999999999999999,
+          "f1_at_05": 0.8144796380090498,
+          "recall_at_3fp_per_million": 0.5992217898832685,
+          "brier": 0.19490362703800201,
+          "n_evaluated": 384
+        }
+      }
+    },
+    "lua": {
+      "n_files": 1845,
+      "n_malware": 6,
+      "n_benign": 1839,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/scripts"
+      ],
+      "general": {
+        "roc_auc": 0.9632952691680261,
+        "pr_auc": 0.5535363666273972,
+        "f1": 0.6666666666666666,
+        "f1_at_05": 0.6666666666666666,
+        "recall_at_3fp_per_million": 0.5,
+        "brier": 0.0017486298456788063,
+        "n_evaluated": 1845
+      },
+      "ensemble": {
+        "roc_auc": 0.9722675367047309,
+        "pr_auc": 0.5815868500079027,
+        "f1": 0.6666666666666666,
+        "f1_at_05": 0.46153846153846156,
+        "recall_at_3fp_per_million": 0.5,
+        "brier": 0.003490404924377799,
+        "n_evaluated": 1845
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9613014319376473,
+          "pr_auc": 0.625485008818342,
+          "f1": 0.6666666666666666,
+          "f1_at_05": 0.6666666666666666,
+          "recall_at_3fp_per_million": 0.5,
+          "brier": 0.0016196535434573889,
+          "n_evaluated": 1845
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9722675367047309,
+          "pr_auc": 0.5815868500079027,
+          "f1": 0.6666666666666666,
+          "f1_at_05": 0.46153846153846156,
+          "recall_at_3fp_per_million": 0.5,
+          "brier": 0.003490404924377799,
+          "n_evaluated": 1845
+        }
+      }
+    },
+    "macho": {
+      "n_files": 1640,
+      "n_malware": 258,
+      "n_benign": 1382,
+      "ensemble_policy": "learned_blend_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/native",
+        "filetypes/macho"
+      ],
+      "general": {
+        "roc_auc": 0.9282945736434107,
+        "pr_auc": 0.8631940607798011,
+        "f1": 0.8625,
+        "f1_at_05": 0.8505263157894737,
+        "recall_at_3fp_per_million": 0.6744186046511628,
+        "brier": 0.050865285098552704,
+        "n_evaluated": 1640
+      },
+      "specialist": {
+        "roc_auc": 0.9987905176584422,
+        "pr_auc": 0.993628516235794,
+        "f1": 0.9593810444874276,
+        "f1_at_05": 0.9551656920077972,
+        "recall_at_3fp_per_million": 0.8062015503875969,
+        "brier": 0.01075622346252203,
+        "n_evaluated": 1636
+      },
+      "ensemble": {
+        "roc_auc": 0.9987940183309214,
+        "pr_auc": 0.9936285162357941,
+        "f1": 0.9593810444874276,
+        "f1_at_05": 0.9551656920077972,
+        "recall_at_3fp_per_million": 0.8062015503875969,
+        "brier": 0.010730098001658916,
+        "n_evaluated": 1640
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.997086011734482,
+          "pr_auc": 0.9842133620849383,
+          "f1": 0.9463601532567051,
+          "f1_at_05": 0.7701492537313432,
+          "recall_at_3fp_per_million": 0.624031007751938,
+          "brier": 0.07257091999053955,
+          "n_evaluated": 1640
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9765703003174817,
+          "pr_auc": 0.94371936774677,
+          "f1": 0.9346534653465347,
+          "f1_at_05": 0.4695177434030937,
+          "recall_at_3fp_per_million": 0.810077519379845,
+          "brier": 0.2803172171115875,
+          "n_evaluated": 1640
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9987940183309214,
+          "pr_auc": 0.9936285162357941,
+          "f1": 0.9593810444874276,
+          "f1_at_05": 0.9551656920077972,
+          "recall_at_3fp_per_million": 0.8062015503875969,
+          "brier": 0.010730098001658916,
+          "n_evaluated": 1640
+        }
+      }
+    },
+    "makefile": {
+      "n_files": 2757,
+      "n_malware": 17,
+      "n_benign": 2740,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "filegroups/source",
+        "filetypes/makefile"
+      ],
+      "general": {
+        "roc_auc": 0.7222949763847145,
+        "pr_auc": 0.04097329673102355,
+        "f1": 0.16216216216216214,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.006156424526125193,
+        "n_evaluated": 2757
+      },
+      "specialist": {
+        "roc_auc": 0.7598629813371132,
+        "pr_auc": 0.01838122100676933,
+        "f1": 0.058252427184466014,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.00616008136421442,
+        "n_evaluated": 2756
+      },
+      "ensemble": {
+        "roc_auc": 0.7597144697294976,
+        "pr_auc": 0.0183691318515768,
+        "f1": 0.058252427184466014,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.006157847121357918,
+        "n_evaluated": 2757
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.5980606919657238,
+          "pr_auc": 0.012117645040952104,
+          "f1": 0.056603773584905655,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.006158540956676006,
+          "n_evaluated": 2756
+        },
+        "calibrated_max": {
+          "roc_auc": 0.5445740179971222,
+          "pr_auc": 0.009747530786503554,
+          "f1": 0.038461538461538464,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.009084436111152172,
+          "n_evaluated": 2756
+        },
+        "specialist_priority": {
+          "roc_auc": 0.7597144697294976,
+          "pr_auc": 0.0183691318515768,
+          "f1": 0.058252427184466014,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.006157847121357918,
+          "n_evaluated": 2757
+        }
+      }
+    },
+    "msg": {
+      "n_files": 3,
+      "n_malware": 3,
+      "n_benign": 0,
+      "ensemble_policy": "general_only",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 3
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 3
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 3
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 3
+        }
+      }
+    },
+    "msi": {
+      "n_files": 223,
+      "n_malware": 215,
+      "n_benign": 8,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filetypes/msi"
+      ],
+      "general": {
+        "roc_auc": 0.8063953488372092,
+        "pr_auc": 0.9918864495447361,
+        "f1": 0.9839816933638443,
+        "f1_at_05": 0.7692307692307693,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.3494626581668854,
+        "n_evaluated": 223
+      },
+      "specialist": {
+        "roc_auc": 0.9784883720930233,
+        "pr_auc": 0.9991916980409808,
+        "f1": 0.9885057471264368,
+        "f1_at_05": 0.7818696883852692,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.19108064472675323,
+        "n_evaluated": 223
+      },
+      "ensemble": {
+        "roc_auc": 0.9784883720930233,
+        "pr_auc": 0.9991916980409808,
+        "f1": 0.9885057471264368,
+        "f1_at_05": 0.7818696883852692,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.19108064472675323,
+        "n_evaluated": 223
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9383720930232557,
+          "pr_auc": 0.9971533638080072,
+          "f1": 0.9884526558891455,
+          "f1_at_05": 0.8355795148247979,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.13630211353302002,
+          "n_evaluated": 223
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9212209302325581,
+          "pr_auc": 0.9945932109261546,
+          "f1": 0.9885057471264368,
+          "f1_at_05": 0.9839816933638444,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.02518751658499241,
+          "n_evaluated": 223
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9784883720930233,
+          "pr_auc": 0.9991916980409808,
+          "f1": 0.9885057471264368,
+          "f1_at_05": 0.7818696883852692,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.19108064472675323,
+          "n_evaluated": 223
+        }
+      }
+    },
+    "objc": {
+      "n_files": 2309,
+      "n_malware": 1,
+      "n_benign": 2308,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "f1": 1.0,
+        "f1_at_05": 1.0,
+        "recall_at_3fp_per_million": 1.0,
+        "brier": 8.331533081218367e-07,
+        "n_evaluated": 2309
+      },
+      "ensemble": {
+        "roc_auc": 0.9999999999999999,
+        "pr_auc": 1.0,
+        "f1": 1.0,
+        "f1_at_05": 1.0,
+        "recall_at_3fp_per_million": 1.0,
+        "brier": 0.0006720408564433455,
+        "n_evaluated": 2309
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 1.0,
+          "pr_auc": 1.0,
+          "f1": 1.0,
+          "f1_at_05": 1.0,
+          "recall_at_3fp_per_million": 1.0,
+          "brier": 8.331533081218367e-07,
+          "n_evaluated": 2309
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9999999999999999,
+          "pr_auc": 1.0,
+          "f1": 1.0,
+          "f1_at_05": 1.0,
+          "recall_at_3fp_per_million": 1.0,
+          "brier": 0.0006720408564433455,
+          "n_evaluated": 2309
+        }
+      }
+    },
+    "ole": {
+      "n_files": 885,
+      "n_malware": 221,
+      "n_benign": 664,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filetypes/ole"
+      ],
+      "general": {
+        "roc_auc": 0.9854338167148232,
+        "pr_auc": 0.9839141754926972,
+        "f1": 0.9723502304147466,
+        "f1_at_05": 0.3,
+        "recall_at_3fp_per_million": 0.9095022624434389,
+        "brier": 0.1806846559047699,
+        "n_evaluated": 885
+      },
+      "specialist": {
+        "roc_auc": 0.9863299351251159,
+        "pr_auc": 0.9857514627684825,
+        "f1": 0.9774774774774775,
+        "f1_at_05": 0.95260663507109,
+        "recall_at_3fp_per_million": 0.9095022624434389,
+        "brier": 0.018776677548885345,
+        "n_evaluated": 885
+      },
+      "ensemble": {
+        "roc_auc": 0.9863299351251159,
+        "pr_auc": 0.9857514627684825,
+        "f1": 0.9774774774774775,
+        "f1_at_05": 0.95260663507109,
+        "recall_at_3fp_per_million": 0.9095022624434389,
+        "brier": 0.018776677548885345,
+        "n_evaluated": 885
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9858392847407731,
+          "pr_auc": 0.9851303573340651,
+          "f1": 0.9771689497716893,
+          "f1_at_05": 0.95260663507109,
+          "recall_at_3fp_per_million": 0.9095022624434389,
+          "brier": 0.018764685839414597,
+          "n_evaluated": 885
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9852770811753803,
+          "pr_auc": 0.9813283161336857,
+          "f1": 0.9724770642201834,
+          "f1_at_05": 0.9658314350797267,
+          "recall_at_3fp_per_million": 0.918552036199095,
+          "brier": 0.01253605168312788,
+          "n_evaluated": 885
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9863299351251159,
+          "pr_auc": 0.9857514627684825,
+          "f1": 0.9774774774774775,
+          "f1_at_05": 0.95260663507109,
+          "recall_at_3fp_per_million": 0.9095022624434389,
+          "brier": 0.018776677548885345,
+          "n_evaluated": 885
+        }
+      }
+    },
+    "ooxml": {
+      "n_files": 3,
+      "n_malware": 0,
+      "n_benign": 3,
+      "ensemble_policy": "general_only",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 3
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 3
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 3
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 3
+        }
+      }
+    },
+    "package-lock.json": {
+      "n_files": 68,
+      "n_malware": 3,
+      "n_benign": 65,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.41538461538461535,
+        "pr_auc": 0.04727727727727728,
+        "f1": 0.11320754716981131,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.052099328488111496,
+        "n_evaluated": 68
+      },
+      "ensemble": {
+        "roc_auc": 0.44358974358974357,
+        "pr_auc": 0.046296296296296294,
+        "f1": 0.10526315789473684,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.13054905831813812,
+        "n_evaluated": 68
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.41538461538461535,
+          "pr_auc": 0.04727727727727728,
+          "f1": 0.11320754716981131,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.052099328488111496,
+          "n_evaluated": 68
+        },
+        "calibrated_max": {
+          "roc_auc": 0.44358974358974357,
+          "pr_auc": 0.046296296296296294,
+          "f1": 0.10526315789473684,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.13054905831813812,
+          "n_evaluated": 68
+        }
+      }
+    },
+    "package.json": {
+      "n_files": 3523,
+      "n_malware": 2162,
+      "n_benign": 1361,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/config",
+        "filetypes/package.json"
+      ],
+      "general": {
+        "roc_auc": 0.9990922629263322,
+        "pr_auc": 0.9994771908125294,
+        "f1": 0.9965285813469104,
+        "f1_at_05": 0.9958391123439667,
+        "recall_at_3fp_per_million": 0.8209990749306197,
+        "brier": 0.004471029620617628,
+        "n_evaluated": 3523
+      },
+      "specialist": {
+        "roc_auc": 0.9992467856457493,
+        "pr_auc": 0.9996103527449933,
+        "f1": 0.9972170686456402,
+        "f1_at_05": 0.9969858567122653,
+        "recall_at_3fp_per_million": 0.9069444444444444,
+        "brier": 0.003380420384928584,
+        "n_evaluated": 3511
+      },
+      "ensemble": {
+        "roc_auc": 0.9992485935343021,
+        "pr_auc": 0.9996087379257695,
+        "f1": 0.9972196478220574,
+        "f1_at_05": 0.9969886495251332,
+        "recall_at_3fp_per_million": 0.9061054579093432,
+        "brier": 0.003368999809026718,
+        "n_evaluated": 3523
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9992553905172572,
+          "pr_auc": 0.9996175364176623,
+          "f1": 0.9974519342135743,
+          "f1_at_05": 0.9958391123439667,
+          "recall_at_3fp_per_million": 0.9250693802035153,
+          "brier": 0.004362867679446936,
+          "n_evaluated": 3523
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9982910685604874,
+          "pr_auc": 0.998536667477543,
+          "f1": 0.9974519342135743,
+          "f1_at_05": 0.9742314647377939,
+          "recall_at_3fp_per_million": 0.9463459759481961,
+          "brier": 0.026802578940987587,
+          "n_evaluated": 3523
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9992485935343021,
+          "pr_auc": 0.9996087379257695,
+          "f1": 0.9972196478220574,
+          "f1_at_05": 0.9969886495251332,
+          "recall_at_3fp_per_million": 0.9061054579093432,
+          "brier": 0.003368999809026718,
+          "n_evaluated": 3523
+        }
+      }
+    },
+    "pdf": {
+      "n_files": 23511,
+      "n_malware": 21777,
+      "n_benign": 1734,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/documents",
+        "filetypes/pdf"
+      ],
+      "general": {
+        "roc_auc": 0.9770150634043019,
+        "pr_auc": 0.9964897342805866,
+        "f1": 0.9933838731909028,
+        "f1_at_05": 0.1327562564278368,
+        "recall_at_3fp_per_million": 0.06470129035220645,
+        "brier": 0.6649385690689087,
+        "n_evaluated": 23511
+      },
+      "specialist": {
+        "roc_auc": 0.9438219555789868,
+        "pr_auc": 0.9934709594164625,
+        "f1": 0.9888919363686233,
+        "f1_at_05": 0.12629586613326452,
+        "recall_at_3fp_per_million": 0.06125728980116637,
+        "brier": 0.8290966749191284,
+        "n_evaluated": 23511
+      },
+      "ensemble": {
+        "roc_auc": 0.981342415007866,
+        "pr_auc": 0.9979410746047261,
+        "f1": 0.9909848225493552,
+        "f1_at_05": 0.990013224497241,
+        "recall_at_3fp_per_million": 0.06589521054323369,
+        "brier": 0.01715436950325966,
+        "n_evaluated": 23511
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9521053131673001,
+          "pr_auc": 0.9945436654924678,
+          "f1": 0.9887121835298418,
+          "f1_at_05": 0.1577745835799442,
+          "recall_at_3fp_per_million": 0.07526289204206273,
+          "brier": 0.6541135311126709,
+          "n_evaluated": 23511
+        },
+        "calibrated_max": {
+          "roc_auc": 0.981342415007866,
+          "pr_auc": 0.9979410746047261,
+          "f1": 0.9909848225493552,
+          "f1_at_05": 0.990013224497241,
+          "recall_at_3fp_per_million": 0.06589521054323369,
+          "brier": 0.01715436950325966,
+          "n_evaluated": 23511
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9438219555789868,
+          "pr_auc": 0.9934709594164625,
+          "f1": 0.9888919363686233,
+          "f1_at_05": 0.12629586613326452,
+          "recall_at_3fp_per_million": 0.06125728980116637,
+          "brier": 0.8290966749191284,
+          "n_evaluated": 23511
+        }
+      }
+    },
+    "pe": {
+      "n_files": 128908,
+      "n_malware": 109970,
+      "n_benign": 18938,
+      "ensemble_policy": "learned_blend_at_fp_3",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/native",
+        "filetypes/pe"
+      ],
+      "general": {
+        "roc_auc": 0.9956067596292283,
+        "pr_auc": 0.9992185911232503,
+        "f1": 0.9908464855833277,
+        "f1_at_05": 0.978240972832261,
+        "recall_at_3fp_per_million": 0.5139492588887878,
+        "brier": 0.024958714842796326,
+        "n_evaluated": 128908
+      },
+      "specialist": {
+        "roc_auc": 0.998329743240818,
+        "pr_auc": 0.9996930352672196,
+        "f1": 0.9942443886196072,
+        "f1_at_05": 0.9889260370872013,
+        "recall_at_3fp_per_million": 0.46786052267598455,
+        "brier": 0.016257110983133316,
+        "n_evaluated": 128819
+      },
+      "ensemble": {
+        "roc_auc": 0.9991053822674378,
+        "pr_auc": 0.9998213988148588,
+        "f1": 0.9955251884190968,
+        "f1_at_05": 0.9819097451649196,
+        "recall_at_3fp_per_million": 0.7342457033736474,
+        "brier": 0.02403578907251358,
+        "n_evaluated": 128908
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9989521439198948,
+          "pr_auc": 0.9998104997937449,
+          "f1": 0.995309640890124,
+          "f1_at_05": 0.9888228470717298,
+          "recall_at_3fp_per_million": 0.5513139947258343,
+          "brier": 0.016416624188423157,
+          "n_evaluated": 128908
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9991053822674378,
+          "pr_auc": 0.9998213988148588,
+          "f1": 0.9955251884190968,
+          "f1_at_05": 0.9819097451649196,
+          "recall_at_3fp_per_million": 0.7342457033736474,
+          "brier": 0.02403578907251358,
+          "n_evaluated": 128908
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9983178889128194,
+          "pr_auc": 0.999690896390951,
+          "f1": 0.9941753038330404,
+          "f1_at_05": 0.9889200661918124,
+          "recall_at_3fp_per_million": 0.46755478766936437,
+          "brier": 0.016269845888018608,
+          "n_evaluated": 128908
+        }
+      }
+    },
+    "perl": {
+      "n_files": 3984,
+      "n_malware": 28,
+      "n_benign": 3956,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "filegroups/scripts",
+        "filetypes/perl"
+      ],
+      "general": {
+        "roc_auc": 0.9631436877076411,
+        "pr_auc": 0.8056315968922009,
+        "f1": 0.830188679245283,
+        "f1_at_05": 0.7755102040816326,
+        "recall_at_3fp_per_million": 0.5,
+        "brier": 0.0026252595707774162,
+        "n_evaluated": 3984
+      },
+      "specialist": {
+        "roc_auc": 0.9979225377556181,
+        "pr_auc": 0.9231031162464987,
+        "f1": 0.9056603773584904,
+        "f1_at_05": 0.746268656716418,
+        "recall_at_3fp_per_million": 0.8214285714285714,
+        "brier": 0.0035704325418919325,
+        "n_evaluated": 3982
+      },
+      "ensemble": {
+        "roc_auc": 0.9979235880398671,
+        "pr_auc": 0.9231031162464985,
+        "f1": 0.9056603773584904,
+        "f1_at_05": 0.746268656716418,
+        "recall_at_3fp_per_million": 0.8214285714285714,
+        "brier": 0.0035686406772583723,
+        "n_evaluated": 3984
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9979044728665365,
+          "pr_auc": 0.9230494220884229,
+          "f1": 0.9056603773584904,
+          "f1_at_05": 0.7352941176470589,
+          "recall_at_3fp_per_million": 0.8214285714285714,
+          "brier": 0.003717064158990979,
+          "n_evaluated": 3982
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9945669846087146,
+          "pr_auc": 0.8828607100264078,
+          "f1": 0.9056603773584904,
+          "f1_at_05": 0.8727272727272727,
+          "recall_at_3fp_per_million": 0.8214285714285714,
+          "brier": 0.0016415357822552323,
+          "n_evaluated": 3982
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9979235880398671,
+          "pr_auc": 0.9231031162464985,
+          "f1": 0.9056603773584904,
+          "f1_at_05": 0.746268656716418,
+          "recall_at_3fp_per_million": 0.8214285714285714,
+          "brier": 0.0035686406772583723,
+          "n_evaluated": 3984
+        }
+      }
+    },
+    "php": {
+      "n_files": 11325,
+      "n_malware": 516,
+      "n_benign": 10809,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/scripts",
+        "filetypes/php"
+      ],
+      "general": {
+        "roc_auc": 0.9620937476019481,
+        "pr_auc": 0.8554096499552296,
+        "f1": 0.8279689234184239,
+        "f1_at_05": 0.8275862068965517,
+        "recall_at_3fp_per_million": 0.5271317829457365,
+        "brier": 0.01383950188755989,
+        "n_evaluated": 11325
+      },
+      "specialist": {
+        "roc_auc": 0.9897213793556726,
+        "pr_auc": 0.9279601225331896,
+        "f1": 0.8861283643892339,
+        "f1_at_05": 0.8788501026694046,
+        "recall_at_3fp_per_million": 0.6724806201550387,
+        "brier": 0.00880508217960596,
+        "n_evaluated": 11131
+      },
+      "ensemble": {
+        "roc_auc": 0.989690887080175,
+        "pr_auc": 0.9274613227278831,
+        "f1": 0.8852119958634954,
+        "f1_at_05": 0.877948717948718,
+        "recall_at_3fp_per_million": 0.6724806201550387,
+        "brier": 0.008725556544959545,
+        "n_evaluated": 11325
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9876257834233746,
+          "pr_auc": 0.9147848019702209,
+          "f1": 0.8589341692789968,
+          "f1_at_05": 0.8451801363193768,
+          "recall_at_3fp_per_million": 0.6666666666666666,
+          "brier": 0.011196047998964787,
+          "n_evaluated": 11325
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9837542071242671,
+          "pr_auc": 0.8697370149932857,
+          "f1": 0.8461538461538461,
+          "f1_at_05": 0.7156549520766773,
+          "recall_at_3fp_per_million": 0.6763565891472868,
+          "brier": 0.026999706402420998,
+          "n_evaluated": 11325
+        },
+        "specialist_priority": {
+          "roc_auc": 0.989690887080175,
+          "pr_auc": 0.9274613227278831,
+          "f1": 0.8852119958634954,
+          "f1_at_05": 0.877948717948718,
+          "recall_at_3fp_per_million": 0.6724806201550387,
+          "brier": 0.008725556544959545,
+          "n_evaluated": 11325
+        }
+      }
+    },
+    "pickle": {
+      "n_files": 37,
+      "n_malware": 0,
+      "n_benign": 37,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 37
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 37
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 37
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 37
+        }
+      }
+    },
+    "pkg": {
+      "n_files": 3,
+      "n_malware": 0,
+      "n_benign": 3,
+      "ensemble_policy": "general_only",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 3
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 3
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 3
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 3
+        }
+      }
+    },
+    "pkg-info": {
+      "n_files": 1390,
+      "n_malware": 1276,
+      "n_benign": 114,
+      "ensemble_policy": "filetype_only_at_fp_0",
+      "ensemble_allowed_routes": [
+        "filetypes/pkg-info"
+      ],
+      "general": {
+        "roc_auc": 0.9956312214706043,
+        "pr_auc": 0.9996109398190954,
+        "f1": 0.9910540645663166,
+        "f1_at_05": 0.9836718438868977,
+        "recall_at_3fp_per_million": 0.9702194357366771,
+        "brier": 0.028843164443969727,
+        "n_evaluated": 1390
+      },
+      "specialist": {
+        "roc_auc": 0.9993688795184066,
+        "pr_auc": 0.999936233516902,
+        "f1": 0.9972624168947987,
+        "f1_at_05": 0.9836718438868977,
+        "recall_at_3fp_per_million": 0.969435736677116,
+        "brier": 0.028249220922589302,
+        "n_evaluated": 1389
+      },
+      "ensemble": {
+        "roc_auc": 0.9993744156629819,
+        "pr_auc": 0.999936233516902,
+        "f1": 0.9972624168947987,
+        "f1_at_05": 0.9836718438868977,
+        "recall_at_3fp_per_million": 0.969435736677116,
+        "brier": 0.028228897601366043,
+        "n_evaluated": 1390
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9993688795184066,
+          "pr_auc": 0.999936233516902,
+          "f1": 0.9972624168947987,
+          "f1_at_05": 0.9836718438868977,
+          "recall_at_3fp_per_million": 0.969435736677116,
+          "brier": 0.028249220922589302,
+          "n_evaluated": 1389
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9945973312619636,
+          "pr_auc": 0.9990848637288111,
+          "f1": 0.9972624168947987,
+          "f1_at_05": 0.99687255668491,
+          "recall_at_3fp_per_million": 0.981974921630094,
+          "brier": 0.004843137226998806,
+          "n_evaluated": 1389
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9993744156629819,
+          "pr_auc": 0.999936233516902,
+          "f1": 0.9972624168947987,
+          "f1_at_05": 0.9836718438868977,
+          "recall_at_3fp_per_million": 0.969435736677116,
+          "brier": 0.028228897601366043,
+          "n_evaluated": 1390
+        }
+      }
+    },
+    "plist": {
+      "n_files": 1612,
+      "n_malware": 68,
+      "n_benign": 1544,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "filegroups/config",
+        "filetypes/plist"
+      ],
+      "general": {
+        "roc_auc": 0.3707091968911917,
+        "pr_auc": 0.08655883992553837,
+        "f1": 0.12,
+        "f1_at_05": 0.0821917808219178,
+        "recall_at_3fp_per_million": 0.029411764705882353,
+        "brier": 0.04053998365998268,
+        "n_evaluated": 1612
+      },
+      "specialist": {
+        "roc_auc": 0.6257333892106065,
+        "pr_auc": 0.10426490439017932,
+        "f1": 0.15999999999999998,
+        "f1_at_05": 0.05555555555555555,
+        "recall_at_3fp_per_million": 0.014705882352941176,
+        "brier": 0.040973588824272156,
+        "n_evaluated": 1612
+      },
+      "ensemble": {
+        "roc_auc": 0.6438966778421213,
+        "pr_auc": 0.10997207536400751,
+        "f1": 0.16949152542372883,
+        "f1_at_05": 0.0821917808219178,
+        "recall_at_3fp_per_million": 0.014705882352941176,
+        "brier": 0.039567865431308746,
+        "n_evaluated": 1612
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.6257714873514173,
+          "pr_auc": 0.11701000242939502,
+          "f1": 0.15999999999999998,
+          "f1_at_05": 0.10666666666666667,
+          "recall_at_3fp_per_million": 0.04411764705882353,
+          "brier": 0.041432857513427734,
+          "n_evaluated": 1612
+        },
+        "calibrated_max": {
+          "roc_auc": 0.6438966778421213,
+          "pr_auc": 0.10997207536400751,
+          "f1": 0.16949152542372883,
+          "f1_at_05": 0.0821917808219178,
+          "recall_at_3fp_per_million": 0.014705882352941176,
+          "brier": 0.039567865431308746,
+          "n_evaluated": 1612
+        },
+        "specialist_priority": {
+          "roc_auc": 0.6257333892106065,
+          "pr_auc": 0.10426490439017932,
+          "f1": 0.15999999999999998,
+          "f1_at_05": 0.05555555555555555,
+          "recall_at_3fp_per_million": 0.014705882352941176,
+          "brier": 0.040973588824272156,
+          "n_evaluated": 1612
+        }
+      }
+    },
+    "png": {
+      "n_files": 14995,
+      "n_malware": 657,
+      "n_benign": 14338,
+      "ensemble_policy": "learned_blend_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/media",
+        "filetypes/png"
+      ],
+      "general": {
+        "roc_auc": 0.5497333564329592,
+        "pr_auc": 0.14221966375081532,
+        "f1": 0.18906605922551256,
+        "f1_at_05": 0.16434540389972144,
+        "recall_at_3fp_per_million": 0.0898021308980213,
+        "brier": 0.03997179865837097,
+        "n_evaluated": 14995
+      },
+      "specialist": {
+        "roc_auc": 0.5981049028780718,
+        "pr_auc": 0.10427971414668455,
+        "f1": 0.12605042016806722,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.04207059368491173,
+        "n_evaluated": 14932
+      },
+      "ensemble": {
+        "roc_auc": 0.6160781145270107,
+        "pr_auc": 0.15459327240683918,
+        "f1": 0.18708827404479578,
+        "f1_at_05": 0.17473118279569894,
+        "recall_at_3fp_per_million": 0.0136986301369863,
+        "brier": 0.03885452821850777,
+        "n_evaluated": 14995
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.6101193452360099,
+          "pr_auc": 0.14793551683462552,
+          "f1": 0.18548387096774194,
+          "f1_at_05": 0.1632088520055325,
+          "recall_at_3fp_per_million": 0.0106544901065449,
+          "brier": 0.038526639342308044,
+          "n_evaluated": 14995
+        },
+        "calibrated_max": {
+          "roc_auc": 0.6160781145270107,
+          "pr_auc": 0.15459327240683918,
+          "f1": 0.18708827404479578,
+          "f1_at_05": 0.17473118279569894,
+          "recall_at_3fp_per_million": 0.0136986301369863,
+          "brier": 0.03885452821850777,
+          "n_evaluated": 14995
+        },
+        "specialist_priority": {
+          "roc_auc": 0.5998707970835873,
+          "pr_auc": 0.10427971414668455,
+          "f1": 0.12605042016806722,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.041893839836120605,
+          "n_evaluated": 14995
+        }
+      }
+    },
+    "powershell": {
+      "n_files": 514,
+      "n_malware": 240,
+      "n_benign": 274,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/scripts",
+        "filetypes/powershell"
+      ],
+      "general": {
+        "roc_auc": 0.9608120437956205,
+        "pr_auc": 0.9495025670499134,
+        "f1": 0.9131313131313131,
+        "f1_at_05": 0.8633405639913232,
+        "recall_at_3fp_per_million": 0.21666666666666667,
+        "brier": 0.09913899749517441,
+        "n_evaluated": 514
+      },
+      "specialist": {
+        "roc_auc": 0.9790481563317818,
+        "pr_auc": 0.9671066006637496,
+        "f1": 0.941908713692946,
+        "f1_at_05": 0.9071274298056156,
+        "recall_at_3fp_per_million": 0.04602510460251046,
+        "brier": 0.05686677619814873,
+        "n_evaluated": 506
+      },
+      "ensemble": {
+        "roc_auc": 0.9796532846715329,
+        "pr_auc": 0.9673230846380787,
+        "f1": 0.9421487603305784,
+        "f1_at_05": 0.9075268817204301,
+        "recall_at_3fp_per_million": 0.04583333333333333,
+        "brier": 0.05598406493663788,
+        "n_evaluated": 514
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9670772506082725,
+          "pr_auc": 0.9523066938387985,
+          "f1": 0.9206349206349207,
+          "f1_at_05": 0.8997955010224948,
+          "recall_at_3fp_per_million": 0.20416666666666666,
+          "brier": 0.07112307101488113,
+          "n_evaluated": 514
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9618461070559612,
+          "pr_auc": 0.9424172559236679,
+          "f1": 0.8984375,
+          "f1_at_05": 0.888468809073724,
+          "recall_at_3fp_per_million": 0.20833333333333334,
+          "brier": 0.09421277791261673,
+          "n_evaluated": 514
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9796532846715329,
+          "pr_auc": 0.9673230846380787,
+          "f1": 0.9421487603305784,
+          "f1_at_05": 0.9075268817204301,
+          "recall_at_3fp_per_million": 0.04583333333333333,
+          "brier": 0.05598406493663788,
+          "n_evaluated": 514
+        }
+      }
+    },
+    "ppt": {
+      "n_files": 3,
+      "n_malware": 0,
+      "n_benign": 3,
+      "ensemble_policy": "or_general_primary",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/documents"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 3
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 3
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 3
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 3
+        }
+      }
+    },
+    "pptx": {
+      "n_files": 43,
+      "n_malware": 22,
+      "n_benign": 21,
+      "ensemble_policy": "learned_blend_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/documents",
+        "filetypes/pptx"
+      ],
+      "general": {
+        "roc_auc": 0.5995670995670995,
+        "pr_auc": 0.6304930534581697,
+        "f1": 0.676923076923077,
+        "f1_at_05": 0.16,
+        "recall_at_3fp_per_million": 0.09090909090909091,
+        "brier": 0.46146485209465027,
+        "n_evaluated": 43
+      },
+      "specialist": {
+        "roc_auc": 0.6071428571428572,
+        "pr_auc": 0.6533826638477802,
+        "f1": 0.676923076923077,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.4820915460586548,
+        "n_evaluated": 43
+      },
+      "ensemble": {
+        "roc_auc": 0.6071428571428572,
+        "pr_auc": 0.6533826638477802,
+        "f1": 0.676923076923077,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.4820915460586548,
+        "n_evaluated": 43
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.6082251082251082,
+          "pr_auc": 0.6613372093023255,
+          "f1": 0.676923076923077,
+          "f1_at_05": 0.41379310344827586,
+          "recall_at_3fp_per_million": 0.2727272727272727,
+          "brier": 0.35881176590919495,
+          "n_evaluated": 43
+        },
+        "calibrated_max": {
+          "roc_auc": 0.6038961038961039,
+          "pr_auc": 0.6783559410990702,
+          "f1": 0.6885245901639344,
+          "f1_at_05": 0.4375,
+          "recall_at_3fp_per_million": 0.3181818181818182,
+          "brier": 0.3168794810771942,
+          "n_evaluated": 43
+        },
+        "specialist_priority": {
+          "roc_auc": 0.6071428571428572,
+          "pr_auc": 0.6533826638477802,
+          "f1": 0.676923076923077,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.4820915460586548,
+          "n_evaluated": 43
+        }
+      }
+    },
+    "python": {
+      "n_files": 18557,
+      "n_malware": 2271,
+      "n_benign": 16286,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/scripts",
+        "filetypes/python"
+      ],
+      "general": {
+        "roc_auc": 0.9652801694804446,
+        "pr_auc": 0.890618262668832,
+        "f1": 0.8587270973963356,
+        "f1_at_05": 0.8533138401559455,
+        "recall_at_3fp_per_million": 0.42976662263320126,
+        "brier": 0.030617577955126762,
+        "n_evaluated": 18557
+      },
+      "specialist": {
+        "roc_auc": 0.9950090977461323,
+        "pr_auc": 0.9764987091321099,
+        "f1": 0.9323924425221943,
+        "f1_at_05": 0.9294568402073473,
+        "recall_at_3fp_per_million": 0.5363276089828269,
+        "brier": 0.014111344702541828,
+        "n_evaluated": 18512
+      },
+      "ensemble": {
+        "roc_auc": 0.9950185891738239,
+        "pr_auc": 0.9764867516822807,
+        "f1": 0.9323924425221943,
+        "f1_at_05": 0.9294568402073473,
+        "recall_at_3fp_per_million": 0.5363276089828269,
+        "brier": 0.014077133499085903,
+        "n_evaluated": 18557
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9931633759451608,
+          "pr_auc": 0.9689622928278466,
+          "f1": 0.9279891304347826,
+          "f1_at_05": 0.9220808216119669,
+          "recall_at_3fp_per_million": 0.5372082782915015,
+          "brier": 0.015578769147396088,
+          "n_evaluated": 18557
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9909157792785097,
+          "pr_auc": 0.9577374720734841,
+          "f1": 0.918944171922448,
+          "f1_at_05": 0.8535990239934933,
+          "recall_at_3fp_per_million": 0.5486569793042713,
+          "brier": 0.029129767790436745,
+          "n_evaluated": 18557
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9950185891738239,
+          "pr_auc": 0.9764867516822807,
+          "f1": 0.9323924425221943,
+          "f1_at_05": 0.9294568402073473,
+          "recall_at_3fp_per_million": 0.5363276089828269,
+          "brier": 0.014077133499085903,
+          "n_evaluated": 18557
+        }
+      }
+    },
+    "python-bytecode": {
+      "n_files": 4074,
+      "n_malware": 233,
+      "n_benign": 3841,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.9883904517890885,
+        "pr_auc": 0.9794239256921349,
+        "f1": 0.973568281938326,
+        "f1_at_05": 0.9384965831435079,
+        "recall_at_3fp_per_million": 0.9012875536480687,
+        "brier": 0.007118092849850655,
+        "n_evaluated": 4074
+      },
+      "specialist": {
+        "roc_auc": 0.9992488689465111,
+        "pr_auc": 0.9928583964074555,
+        "f1": 0.9891540130151844,
+        "f1_at_05": 0.9869565217391304,
+        "recall_at_3fp_per_million": 0.9785407725321889,
+        "brier": 0.0015717464266344905,
+        "n_evaluated": 3927
+      },
+      "ensemble": {
+        "roc_auc": 0.9992776156960198,
+        "pr_auc": 0.9928583964074555,
+        "f1": 0.9891540130151844,
+        "f1_at_05": 0.9869565217391304,
+        "recall_at_3fp_per_million": 0.9785407725321889,
+        "brier": 0.0015150416875258088,
+        "n_evaluated": 4074
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9883904517890885,
+          "pr_auc": 0.9794239256921349,
+          "f1": 0.973568281938326,
+          "f1_at_05": 0.9384965831435079,
+          "recall_at_3fp_per_million": 0.9012875536480687,
+          "brier": 0.007118092849850655,
+          "n_evaluated": 4074
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9883256439164962,
+          "pr_auc": 0.9766844712351649,
+          "f1": 0.95,
+          "f1_at_05": 0.95,
+          "recall_at_3fp_per_million": 0.9141630901287554,
+          "brier": 0.005089467857033014,
+          "n_evaluated": 4074
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9992776156960198,
+          "pr_auc": 0.9928583964074555,
+          "f1": 0.9891540130151844,
+          "f1_at_05": 0.9869565217391304,
+          "recall_at_3fp_per_million": 0.9785407725321889,
+          "brier": 0.0015150416875258088,
+          "n_evaluated": 4074
+        }
+      }
+    },
+    "rar": {
+      "n_files": 759,
+      "n_malware": 759,
+      "n_benign": 0,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 759
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 759
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 759
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 759
+        }
+      }
+    },
+    "rpm": {
+      "n_files": 74,
+      "n_malware": 0,
+      "n_benign": 74,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 74
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 74
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 74
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 74
+        }
+      }
+    },
+    "rtf": {
+      "n_files": 265,
+      "n_malware": 214,
+      "n_benign": 51,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filetypes/rtf"
+      ],
+      "general": {
+        "roc_auc": 0.99551035367418,
+        "pr_auc": 0.9989388115260268,
+        "f1": 0.9837587006960556,
+        "f1_at_05": 0.9711538461538461,
+        "recall_at_3fp_per_million": 0.9439252336448598,
+        "brier": 0.0452076718211174,
+        "n_evaluated": 265
+      },
+      "specialist": {
+        "roc_auc": 0.9979842404251419,
+        "pr_auc": 0.9995269760771395,
+        "f1": 0.988179669030733,
+        "f1_at_05": 0.9760765550239234,
+        "recall_at_3fp_per_million": 0.9532710280373832,
+        "brier": 0.029639534652233124,
+        "n_evaluated": 265
+      },
+      "ensemble": {
+        "roc_auc": 0.9979842404251419,
+        "pr_auc": 0.9995269760771395,
+        "f1": 0.988179669030733,
+        "f1_at_05": 0.9760765550239234,
+        "recall_at_3fp_per_million": 0.9532710280373832,
+        "brier": 0.029639534652233124,
+        "n_evaluated": 265
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9979842404251419,
+          "pr_auc": 0.9995269760771394,
+          "f1": 0.988179669030733,
+          "f1_at_05": 0.9760765550239234,
+          "recall_at_3fp_per_million": 0.9532710280373832,
+          "brier": 0.02918151579797268,
+          "n_evaluated": 265
+        },
+        "calibrated_max": {
+          "roc_auc": 0.996747297049661,
+          "pr_auc": 0.9992343468781402,
+          "f1": 0.988179669030733,
+          "f1_at_05": 0.9767441860465116,
+          "recall_at_3fp_per_million": 0.9766355140186916,
+          "brier": 0.020827827975153923,
+          "n_evaluated": 265
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9979842404251419,
+          "pr_auc": 0.9995269760771395,
+          "f1": 0.988179669030733,
+          "f1_at_05": 0.9760765550239234,
+          "recall_at_3fp_per_million": 0.9532710280373832,
+          "brier": 0.029639534652233124,
+          "n_evaluated": 265
+        }
+      }
+    },
+    "ruby": {
+      "n_files": 2950,
+      "n_malware": 7,
+      "n_benign": 2943,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/scripts",
+        "filetypes/ruby"
+      ],
+      "general": {
+        "roc_auc": 0.9998058346682199,
+        "pr_auc": 0.9240362811791383,
+        "f1": 0.8750000000000001,
+        "f1_at_05": 0.7777777777777778,
+        "recall_at_3fp_per_million": 0.5714285714285714,
+        "brier": 0.0008355575264431536,
+        "n_evaluated": 2950
+      },
+      "specialist": {
+        "roc_auc": 0.9989421720733428,
+        "pr_auc": 0.8598901098901097,
+        "f1": 0.8333333333333333,
+        "f1_at_05": 0.3888888888888889,
+        "recall_at_3fp_per_million": 0.7142857142857143,
+        "brier": 0.006778447423130274,
+        "n_evaluated": 2843
+      },
+      "ensemble": {
+        "roc_auc": 0.9991019853405174,
+        "pr_auc": 0.6427676333691371,
+        "f1": 0.7999999999999999,
+        "f1_at_05": 0.28,
+        "recall_at_3fp_per_million": 0.5714285714285714,
+        "brier": 0.010344107635319233,
+        "n_evaluated": 2950
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9995631280034949,
+          "pr_auc": 0.8928571428571428,
+          "f1": 0.8333333333333333,
+          "f1_at_05": 0.3111111111111111,
+          "recall_at_3fp_per_million": 0.7142857142857143,
+          "brier": 0.008817767724394798,
+          "n_evaluated": 2950
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9991019853405174,
+          "pr_auc": 0.6427676333691371,
+          "f1": 0.7999999999999999,
+          "f1_at_05": 0.28,
+          "recall_at_3fp_per_million": 0.5714285714285714,
+          "brier": 0.010344107635319233,
+          "n_evaluated": 2950
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9989806320081549,
+          "pr_auc": 0.8598901098901097,
+          "f1": 0.8333333333333333,
+          "f1_at_05": 0.3783783783783784,
+          "recall_at_3fp_per_million": 0.7142857142857143,
+          "brier": 0.006782348267734051,
+          "n_evaluated": 2950
+        }
+      }
+    },
+    "rust": {
+      "n_files": 9768,
+      "n_malware": 164,
+      "n_benign": 9604,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filetypes/rust"
+      ],
+      "general": {
+        "roc_auc": 0.6535510483436778,
+        "pr_auc": 0.060813181383730375,
+        "f1": 0.09090909090909091,
+        "f1_at_05": 0.03592814371257485,
+        "recall_at_3fp_per_million": 0.018292682926829267,
+        "brier": 0.016477666795253754,
+        "n_evaluated": 9768
+      },
+      "specialist": {
+        "roc_auc": 0.7708166655237312,
+        "pr_auc": 0.10571872769093019,
+        "f1": 0.1804511278195489,
+        "f1_at_05": 0.03571428571428571,
+        "recall_at_3fp_per_million": 0.012195121951219513,
+        "brier": 0.016510935500264168,
+        "n_evaluated": 9767
+      },
+      "ensemble": {
+        "roc_auc": 0.7707503733200597,
+        "pr_auc": 0.10562270542411611,
+        "f1": 0.17977528089887637,
+        "f1_at_05": 0.03571428571428571,
+        "recall_at_3fp_per_million": 0.012195121951219513,
+        "brier": 0.016509244218468666,
+        "n_evaluated": 9768
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.6531707444052782,
+          "pr_auc": 0.06441370875612974,
+          "f1": 0.09774436090225562,
+          "f1_at_05": 0.03571428571428571,
+          "recall_at_3fp_per_million": 0.012195121951219513,
+          "brier": 0.016503190621733665,
+          "n_evaluated": 9768
+        },
+        "calibrated_max": {
+          "roc_auc": 0.7052273062037159,
+          "pr_auc": 0.05922432038603141,
+          "f1": 0.1225,
+          "f1_at_05": 0.08029197080291971,
+          "recall_at_3fp_per_million": 0.006097560975609756,
+          "brier": 0.023481596261262894,
+          "n_evaluated": 9768
+        },
+        "specialist_priority": {
+          "roc_auc": 0.7707503733200597,
+          "pr_auc": 0.10562270542411611,
+          "f1": 0.17977528089887637,
+          "f1_at_05": 0.03571428571428571,
+          "recall_at_3fp_per_million": 0.012195121951219513,
+          "brier": 0.016509244218468666,
+          "n_evaluated": 9768
+        }
+      }
+    },
+    "scala": {
+      "n_files": 2146,
+      "n_malware": 0,
+      "n_benign": 2146,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/source"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 2146
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 2146
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 2146
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 2146
+        }
+      }
+    },
+    "shell": {
+      "n_files": 6602,
+      "n_malware": 920,
+      "n_benign": 5682,
+      "ensemble_policy": "filetype_only",
+      "ensemble_allowed_routes": [
+        "filetypes/shell"
+      ],
+      "general": {
+        "roc_auc": 0.9887670638017844,
+        "pr_auc": 0.9648028491067884,
+        "f1": 0.9194414607948442,
+        "f1_at_05": 0.911697247706422,
+        "recall_at_3fp_per_million": 0.6891304347826087,
+        "brier": 0.019982678815722466,
+        "n_evaluated": 6602
+      },
+      "specialist": {
+        "roc_auc": 0.9969385019259738,
+        "pr_auc": 0.9854686819721845,
+        "f1": 0.9469525959367946,
+        "f1_at_05": 0.9388888888888889,
+        "recall_at_3fp_per_million": 0.8109289617486338,
+        "brier": 0.01371629349887371,
+        "n_evaluated": 6581
+      },
+      "ensemble": {
+        "roc_auc": 0.9969264113983134,
+        "pr_auc": 0.9853861915236093,
+        "f1": 0.946067415730337,
+        "f1_at_05": 0.9380530973451328,
+        "recall_at_3fp_per_million": 0.808695652173913,
+        "brier": 0.01392119936645031,
+        "n_evaluated": 6602
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9969385019259738,
+          "pr_auc": 0.9854686819721845,
+          "f1": 0.9469525959367946,
+          "f1_at_05": 0.9388888888888889,
+          "recall_at_3fp_per_million": 0.8109289617486338,
+          "brier": 0.01371629349887371,
+          "n_evaluated": 6581
+        },
+        "calibrated_max": {
+          "roc_auc": 0.995652236810888,
+          "pr_auc": 0.9809104495532137,
+          "f1": 0.9453521126760563,
+          "f1_at_05": 0.9434389140271493,
+          "recall_at_3fp_per_million": 0.8295081967213115,
+          "brier": 0.012127070687711239,
+          "n_evaluated": 6581
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9969264113983134,
+          "pr_auc": 0.9853861915236093,
+          "f1": 0.946067415730337,
+          "f1_at_05": 0.9380530973451328,
+          "recall_at_3fp_per_million": 0.808695652173913,
+          "brier": 0.01392119936645031,
+          "n_evaluated": 6602
+        }
+      }
+    },
+    "swift": {
+      "n_files": 3810,
+      "n_malware": 0,
+      "n_benign": 3810,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/source"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 3810
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 3810
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 3810
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 3810
+        }
+      }
+    },
+    "systemd": {
+      "n_files": 135,
+      "n_malware": 1,
+      "n_benign": 134,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.20149253731343286,
+        "pr_auc": 0.008928571428571428,
+        "f1": 0.017699115044247787,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.03256627917289734,
+        "n_evaluated": 135
+      },
+      "ensemble": {
+        "roc_auc": 0.16417910447761197,
+        "pr_auc": 0.008771929824561403,
+        "f1": 0.017391304347826087,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.21083112061023712,
+        "n_evaluated": 135
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.20149253731343286,
+          "pr_auc": 0.008928571428571428,
+          "f1": 0.017699115044247787,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.03256627917289734,
+          "n_evaluated": 135
+        },
+        "calibrated_max": {
+          "roc_auc": 0.16417910447761197,
+          "pr_auc": 0.008771929824561403,
+          "f1": 0.017391304347826087,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.21083112061023712,
+          "n_evaluated": 135
+        }
+      }
+    },
+    "tar": {
+      "n_files": 172,
+      "n_malware": 125,
+      "n_benign": 47,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.9626382978723403,
+        "pr_auc": 0.9871352576391713,
+        "f1": 0.9435483870967742,
+        "f1_at_05": 0.9322033898305084,
+        "recall_at_3fp_per_million": 0.88,
+        "brier": 0.08228829503059387,
+        "n_evaluated": 172
+      },
+      "ensemble": {
+        "roc_auc": 0.9652765957446808,
+        "pr_auc": 0.9882006164873955,
+        "f1": 0.9387755102040817,
+        "f1_at_05": 0.9322709163346613,
+        "recall_at_3fp_per_million": 0.88,
+        "brier": 0.0789327546954155,
+        "n_evaluated": 172
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9626382978723403,
+          "pr_auc": 0.9871352576391713,
+          "f1": 0.9435483870967742,
+          "f1_at_05": 0.9322033898305084,
+          "recall_at_3fp_per_million": 0.88,
+          "brier": 0.08228829503059387,
+          "n_evaluated": 172
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9652765957446808,
+          "pr_auc": 0.9882006164873955,
+          "f1": 0.9387755102040817,
+          "f1_at_05": 0.9322709163346613,
+          "recall_at_3fp_per_million": 0.88,
+          "brier": 0.0789327546954155,
+          "n_evaluated": 172
+        }
+      }
+    },
+    "tar.bz2": {
+      "n_files": 22,
+      "n_malware": 0,
+      "n_benign": 22,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 22
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 22
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 22
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 22
+        }
+      }
+    },
+    "tar.gz": {
+      "n_files": 4000,
+      "n_malware": 2390,
+      "n_benign": 1610,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.992481093583513,
+        "pr_auc": 0.9952683863967925,
+        "f1": 0.9612822647793506,
+        "f1_at_05": 0.9585035476241669,
+        "recall_at_3fp_per_million": 0.6041841004184101,
+        "brier": 0.041857391595840454,
+        "n_evaluated": 4000
+      },
+      "ensemble": {
+        "roc_auc": 0.9920856830998727,
+        "pr_auc": 0.9947340784358807,
+        "f1": 0.9589504866694879,
+        "f1_at_05": 0.9562043795620438,
+        "recall_at_3fp_per_million": 0.6376569037656904,
+        "brier": 0.040362052619457245,
+        "n_evaluated": 4000
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.992481093583513,
+          "pr_auc": 0.9952683863967925,
+          "f1": 0.9612822647793506,
+          "f1_at_05": 0.9585035476241669,
+          "recall_at_3fp_per_million": 0.6041841004184101,
+          "brier": 0.041857391595840454,
+          "n_evaluated": 4000
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9920856830998727,
+          "pr_auc": 0.9947340784358807,
+          "f1": 0.9589504866694879,
+          "f1_at_05": 0.9562043795620438,
+          "recall_at_3fp_per_million": 0.6376569037656904,
+          "brier": 0.040362052619457245,
+          "n_evaluated": 4000
+        }
+      }
+    },
+    "tar.xz": {
+      "n_files": 96,
+      "n_malware": 0,
+      "n_benign": 96,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 96
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 96
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 96
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 96
+        }
+      }
+    },
+    "tar.zst": {
+      "n_files": 70,
+      "n_malware": 0,
+      "n_benign": 70,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 70
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 70
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 70
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 70
+        }
+      }
+    },
+    "text": {
+      "n_files": 8138,
+      "n_malware": 159,
+      "n_benign": 7979,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filetypes/text"
+      ],
+      "general": {
+        "roc_auc": 0.6438315672981199,
+        "pr_auc": 0.19871419306551846,
+        "f1": 0.2645502645502646,
+        "f1_at_05": 0.24043715846994534,
+        "recall_at_3fp_per_million": 0.12578616352201258,
+        "brier": 0.016830725595355034,
+        "n_evaluated": 8138
+      },
+      "specialist": {
+        "roc_auc": 0.7601994009129998,
+        "pr_auc": 0.18766694983453197,
+        "f1": 0.23529411764705882,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.017923275008797646,
+        "n_evaluated": 8125
+      },
+      "ensemble": {
+        "roc_auc": 0.7609365307201845,
+        "pr_auc": 0.20439780312879266,
+        "f1": 0.25806451612903225,
+        "f1_at_05": 0.13747228381374724,
+        "recall_at_3fp_per_million": 0.11949685534591195,
+        "brier": 0.03723079711198807,
+        "n_evaluated": 8138
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.7608908132274895,
+          "pr_auc": 0.22098400669654794,
+          "f1": 0.2594594594594594,
+          "f1_at_05": 0.24043715846994534,
+          "recall_at_3fp_per_million": 0.12578616352201258,
+          "brier": 0.01652132347226143,
+          "n_evaluated": 8138
+        },
+        "calibrated_max": {
+          "roc_auc": 0.7609365307201845,
+          "pr_auc": 0.20439780312879266,
+          "f1": 0.25806451612903225,
+          "f1_at_05": 0.13747228381374724,
+          "recall_at_3fp_per_million": 0.11949685534591195,
+          "brier": 0.03723079711198807,
+          "n_evaluated": 8138
+        },
+        "specialist_priority": {
+          "roc_auc": 0.7605901024781246,
+          "pr_auc": 0.18766694983453197,
+          "f1": 0.23529411764705882,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.017894644290208817,
+          "n_evaluated": 8138
+        }
+      }
+    },
+    "unknown": {
+      "n_files": 3362,
+      "n_malware": 1342,
+      "n_benign": 2020,
+      "ensemble_policy": "filetype_only_at_fp_3",
+      "ensemble_allowed_routes": [
+        "filetypes/unknown"
+      ],
+      "general": {
+        "roc_auc": 0.7796767791533252,
+        "pr_auc": 0.7737812817652493,
+        "f1": 0.7637017070979336,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.39830970764160156,
+        "n_evaluated": 3362
+      },
+      "specialist": {
+        "roc_auc": 0.8312218720958643,
+        "pr_auc": 0.8044544242018585,
+        "f1": 0.7651067696501591,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.3914898931980133,
+        "n_evaluated": 3361
+      },
+      "ensemble": {
+        "roc_auc": 0.8330786736140791,
+        "pr_auc": 0.8281625907434671,
+        "f1": 0.7640653357531761,
+        "f1_at_05": 0.764065335753176,
+        "recall_at_3fp_per_million": 0.12369597615499255,
+        "brier": 0.12082033604383469,
+        "n_evaluated": 3361
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.8312218720958643,
+          "pr_auc": 0.8044544242018585,
+          "f1": 0.7651067696501591,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.3914898931980133,
+          "n_evaluated": 3361
+        },
+        "calibrated_max": {
+          "roc_auc": 0.8330786736140791,
+          "pr_auc": 0.8281625907434671,
+          "f1": 0.7640653357531761,
+          "f1_at_05": 0.764065335753176,
+          "recall_at_3fp_per_million": 0.12369597615499255,
+          "brier": 0.12082033604383469,
+          "n_evaluated": 3361
+        },
+        "specialist_priority": {
+          "roc_auc": 0.8313054256245295,
+          "pr_auc": 0.8044544242018584,
+          "f1": 0.7651067696501591,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.3913734257221222,
+          "n_evaluated": 3362
+        }
+      }
+    },
+    "vbs": {
+      "n_files": 868,
+      "n_malware": 445,
+      "n_benign": 423,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filetypes/vbs"
+      ],
+      "general": {
+        "roc_auc": 0.9351369299014529,
+        "pr_auc": 0.9470093755693865,
+        "f1": 0.923418423973363,
+        "f1_at_05": 0.75,
+        "recall_at_3fp_per_million": 0.19775280898876405,
+        "brier": 0.206316739320755,
+        "n_evaluated": 868
+      },
+      "specialist": {
+        "roc_auc": 0.9851991229904098,
+        "pr_auc": 0.9819749111319713,
+        "f1": 0.9596412556053812,
+        "f1_at_05": 0.7417998317914214,
+        "recall_at_3fp_per_million": 0.3673469387755102,
+        "brier": 0.17698289453983307,
+        "n_evaluated": 864
+      },
+      "ensemble": {
+        "roc_auc": 0.9846574760273062,
+        "pr_auc": 0.9815969167788845,
+        "f1": 0.958695652173913,
+        "f1_at_05": 0.7435254803675856,
+        "recall_at_3fp_per_million": 0.36404494382022473,
+        "brier": 0.17629212141036987,
+        "n_evaluated": 868
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9846681010439078,
+          "pr_auc": 0.981615439120634,
+          "f1": 0.958695652173913,
+          "f1_at_05": 0.7435254803675856,
+          "recall_at_3fp_per_million": 0.36404494382022473,
+          "brier": 0.1762920618057251,
+          "n_evaluated": 868
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9831035673493239,
+          "pr_auc": 0.9769970352351052,
+          "f1": 0.9619978284473398,
+          "f1_at_05": 0.9517684887459807,
+          "recall_at_3fp_per_million": 0.36404494382022473,
+          "brier": 0.036408681422472,
+          "n_evaluated": 868
+        },
+        "specialist_priority": {
+          "roc_auc": 0.9846574760273062,
+          "pr_auc": 0.9815969167788845,
+          "f1": 0.958695652173913,
+          "f1_at_05": 0.7435254803675856,
+          "recall_at_3fp_per_million": 0.36404494382022473,
+          "brier": 0.17629212141036987,
+          "n_evaluated": 868
+        }
+      }
+    },
+    "vsix_manifest": {
+      "n_files": 7,
+      "n_malware": 0,
+      "n_benign": 7,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 7
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 7
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 7
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 7
+        }
+      }
+    },
+    "xls": {
+      "n_files": 1304,
+      "n_malware": 1297,
+      "n_benign": 7,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/documents"
+      ],
+      "general": {
+        "roc_auc": 0.9887652825201014,
+        "pr_auc": 0.999936803162545,
+        "f1": 0.9976887519260401,
+        "f1_at_05": 0.9548751007252216,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.06524639576673508,
+        "n_evaluated": 1304
+      },
+      "specialist": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.9946319018404908,
+        "f1": 0.9973087274125336,
+        "f1_at_05": 0.9973087274125336,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.005339582450687885,
+        "n_evaluated": 1304
+      },
+      "ensemble": {
+        "roc_auc": 0.9876638396299152,
+        "pr_auc": 0.9999274725381566,
+        "f1": 0.9976887519260401,
+        "f1_at_05": 0.9969111969111969,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.0048841494135558605,
+        "n_evaluated": 1304
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9914087454565481,
+          "pr_auc": 0.9999511958163767,
+          "f1": 0.9976887519260401,
+          "f1_at_05": 0.9767258382642998,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.0370333231985569,
+          "n_evaluated": 1304
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9876638396299152,
+          "pr_auc": 0.9999274725381566,
+          "f1": 0.9976887519260401,
+          "f1_at_05": 0.9969111969111969,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.0048841494135558605,
+          "n_evaluated": 1304
+        },
+        "specialist_priority": {
+          "roc_auc": 0.5,
+          "pr_auc": 0.9946319018404908,
+          "f1": 0.9973087274125336,
+          "f1_at_05": 0.9973087274125336,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.005339582450687885,
+          "n_evaluated": 1304
+        }
+      }
+    },
+    "xlsx": {
+      "n_files": 2244,
+      "n_malware": 2232,
+      "n_benign": 12,
+      "ensemble_policy": "learned_blend_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/documents",
+        "filetypes/xlsx"
+      ],
+      "general": {
+        "roc_auc": 0.8776881720430108,
+        "pr_auc": 0.9989615127035428,
+        "f1": 0.9973190348525469,
+        "f1_at_05": 0.4456824512534819,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.6874264478683472,
+        "n_evaluated": 2244
+      },
+      "specialist": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.9946524064171123,
+        "f1": 0.9973190348525469,
+        "f1_at_05": 0.9973190348525469,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.005328439176082611,
+        "n_evaluated": 2244
+      },
+      "ensemble": {
+        "roc_auc": 0.8492383512544803,
+        "pr_auc": 0.99879025394671,
+        "f1": 0.9973190348525469,
+        "f1_at_05": 0.9973190348525469,
+        "recall_at_3fp_per_million": NaN,
+        "brier": 0.00530482642352581,
+        "n_evaluated": 2244
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.6429211469534051,
+          "pr_auc": 0.9961809748337263,
+          "f1": 0.9973190348525469,
+          "f1_at_05": 0.9973190348525469,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.0053087081760168076,
+          "n_evaluated": 2244
+        },
+        "calibrated_max": {
+          "roc_auc": 0.8492383512544803,
+          "pr_auc": 0.99879025394671,
+          "f1": 0.9973190348525469,
+          "f1_at_05": 0.9973190348525469,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.00530482642352581,
+          "n_evaluated": 2244
+        },
+        "specialist_priority": {
+          "roc_auc": 0.5,
+          "pr_auc": 0.9946524064171123,
+          "f1": 0.9973190348525469,
+          "f1_at_05": 0.9973190348525469,
+          "recall_at_3fp_per_million": NaN,
+          "brier": 0.005328439176082611,
+          "n_evaluated": 2244
+        }
+      }
+    },
+    "xml": {
+      "n_files": 18209,
+      "n_malware": 288,
+      "n_benign": 17921,
+      "ensemble_policy": "joint_or_at_fp_0",
+      "ensemble_allowed_routes": [
+        "general",
+        "filegroups/config"
+      ],
+      "general": {
+        "roc_auc": 0.5016478572624297,
+        "pr_auc": 0.10284653402702523,
+        "f1": 0.2363636363636364,
+        "f1_at_05": 0.0472972972972973,
+        "recall_at_3fp_per_million": 0.020833333333333332,
+        "brier": 0.015448235906660557,
+        "n_evaluated": 18209
+      },
+      "specialist": {
+        "roc_auc": 0.7451325549947684,
+        "pr_auc": 0.14448931765248121,
+        "f1": 0.33057851239669417,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.015521286055445671,
+        "n_evaluated": 18146
+      },
+      "ensemble": {
+        "roc_auc": 0.7434359868000917,
+        "pr_auc": 0.1440427241599389,
+        "f1": 0.32989690721649484,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": 0.0,
+        "brier": 0.015521839261054993,
+        "n_evaluated": 18209
+      },
+      "ensemble_strategy": "specialist_priority",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.5022376370986242,
+          "pr_auc": 0.11679159424763666,
+          "f1": 0.23744292237442924,
+          "f1_at_05": 0.04713804713804714,
+          "recall_at_3fp_per_million": 0.020833333333333332,
+          "brier": 0.015486324205994606,
+          "n_evaluated": 18209
+        },
+        "calibrated_max": {
+          "roc_auc": 0.6424866621406294,
+          "pr_auc": 0.18362493274169364,
+          "f1": 0.33658536585365856,
+          "f1_at_05": 0.125,
+          "recall_at_3fp_per_million": 0.024305555555555556,
+          "brier": 0.014371039345860481,
+          "n_evaluated": 18209
+        },
+        "specialist_priority": {
+          "roc_auc": 0.7434359868000917,
+          "pr_auc": 0.1440427241599389,
+          "f1": 0.32989690721649484,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": 0.0,
+          "brier": 0.015521839261054993,
+          "n_evaluated": 18209
+        }
+      }
+    },
+    "xz": {
+      "n_files": 3454,
+      "n_malware": 6,
+      "n_benign": 3448,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.9993716163959783,
+        "pr_auc": 0.8333333333333333,
+        "f1": 0.8,
+        "f1_at_05": 0.6153846153846154,
+        "recall_at_3fp_per_million": 0.6666666666666666,
+        "brier": 0.001021919073536992,
+        "n_evaluated": 3454
+      },
+      "ensemble": {
+        "roc_auc": 0.9992991105955144,
+        "pr_auc": 0.8180827886710239,
+        "f1": 0.8,
+        "f1_at_05": 0.47619047619047616,
+        "recall_at_3fp_per_million": 0.6666666666666666,
+        "brier": 0.0023445759434252977,
+        "n_evaluated": 3454
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9993716163959783,
+          "pr_auc": 0.8333333333333333,
+          "f1": 0.8,
+          "f1_at_05": 0.6153846153846154,
+          "recall_at_3fp_per_million": 0.6666666666666666,
+          "brier": 0.001021919073536992,
+          "n_evaluated": 3454
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9992991105955144,
+          "pr_auc": 0.8180827886710239,
+          "f1": 0.8,
+          "f1_at_05": 0.47619047619047616,
+          "recall_at_3fp_per_million": 0.6666666666666666,
+          "brier": 0.0023445759434252977,
+          "n_evaluated": 3454
+        }
+      }
+    },
+    "zig": {
+      "n_files": 15,
+      "n_malware": 0,
+      "n_benign": 15,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 15
+      },
+      "ensemble": {
+        "roc_auc": 0.0,
+        "pr_auc": 0.0,
+        "f1": 0.0,
+        "f1_at_05": 0.0,
+        "recall_at_3fp_per_million": NaN,
+        "n_evaluated": 15
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 15
+        },
+        "calibrated_max": {
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "f1": 0.0,
+          "f1_at_05": 0.0,
+          "recall_at_3fp_per_million": NaN,
+          "n_evaluated": 15
+        }
+      }
+    },
+    "zip": {
+      "n_files": 7973,
+      "n_malware": 7095,
+      "n_benign": 878,
+      "ensemble_policy": "calibrate_inherited",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.9034980038237971,
+        "pr_auc": 0.9872197372292486,
+        "f1": 0.9587252562122701,
+        "f1_at_05": 0.8196317000986517,
+        "recall_at_3fp_per_million": 0.46060606060606063,
+        "brier": 0.2477460503578186,
+        "n_evaluated": 7973
+      },
+      "ensemble": {
+        "roc_auc": 0.9080021221913471,
+        "pr_auc": 0.9874263557457579,
+        "f1": 0.9586579630799467,
+        "f1_at_05": 0.955245052840627,
+        "recall_at_3fp_per_million": 0.43805496828752644,
+        "brier": 0.06952659040689468,
+        "n_evaluated": 7973
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9034980038237971,
+          "pr_auc": 0.9872197372292486,
+          "f1": 0.9587252562122701,
+          "f1_at_05": 0.8196317000986517,
+          "recall_at_3fp_per_million": 0.46060606060606063,
+          "brier": 0.2477460503578186,
+          "n_evaluated": 7973
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9080021221913471,
+          "pr_auc": 0.9874263557457579,
+          "f1": 0.9586579630799467,
+          "f1_at_05": 0.955245052840627,
+          "recall_at_3fp_per_million": 0.43805496828752644,
+          "brier": 0.06952659040689468,
+          "n_evaluated": 7973
+        }
+      }
+    },
+    "zst": {
+      "n_files": 3313,
+      "n_malware": 1283,
+      "n_benign": 2030,
+      "ensemble_policy": "general_only",
+      "ensemble_allowed_routes": [
+        "general"
+      ],
+      "general": {
+        "roc_auc": 0.9999328083425161,
+        "pr_auc": 0.9998876428807191,
+        "f1": 0.9988322304398598,
+        "f1_at_05": 0.9401568303755675,
+        "recall_at_3fp_per_million": 0.877630553390491,
+        "brier": 0.02754051797091961,
+        "n_evaluated": 3313
+      },
+      "ensemble": {
+        "roc_auc": 0.9999379916989506,
+        "pr_auc": 0.9998858409387987,
+        "f1": 0.9988322304398598,
+        "f1_at_05": 0.9988322304398599,
+        "recall_at_3fp_per_million": 0.8939984411535464,
+        "brier": 0.0017301295883953571,
+        "n_evaluated": 3313
+      },
+      "ensemble_strategy": "calibrated_max",
+      "ensemble_strategies": {
+        "naive_max": {
+          "roc_auc": 0.9999328083425161,
+          "pr_auc": 0.9998876428807191,
+          "f1": 0.9988322304398598,
+          "f1_at_05": 0.9401568303755675,
+          "recall_at_3fp_per_million": 0.877630553390491,
+          "brier": 0.02754051797091961,
+          "n_evaluated": 3313
+        },
+        "calibrated_max": {
+          "roc_auc": 0.9999379916989506,
+          "pr_auc": 0.9998858409387987,
+          "f1": 0.9988322304398598,
+          "f1_at_05": 0.9988322304398599,
+          "recall_at_3fp_per_million": 0.8939984411535464,
+          "brier": 0.0017301295883953571,
+          "n_evaluated": 3313
+        }
+      }
+    }
+  },
+  "filegroups": {},
+  "all_files": {
+    "general": {
+      "roc_auc": 0.9833169874375418,
+      "pr_auc": 0.9781809604676235,
+      "f1": 0.9511655443791937,
+      "f1_at_05": 0.8242420849312768,
+      "recall_at_3fp_per_million": 0.3696712058985998,
+      "brier": 0.09443006664514542,
+      "n_evaluated": 585889
+    },
+    "n_files": 585889,
+    "n_malware": 208185,
+    "n_benign": 377704
+  }
+}

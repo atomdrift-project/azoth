@@ -2,9 +2,17 @@
 
 LightGBM specialist for `kotlin`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/kotlin` specialist scored *alone* on its test-partition slice: 2829 malware / 5341 benign (8170 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `kotlin` slice of the test partition: 2829 malware / 5341 benign (8170 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9821 | 0.9786 | 54.68% | 95.55% | 0.0275 |
+
+## Specialist Performance
+
+`filetypes/kotlin` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

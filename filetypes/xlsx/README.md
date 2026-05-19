@@ -4,9 +4,17 @@ LightGBM specialist for `xlsx`. Member of the Azoth routed ensemble; bundle root
 
 > Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
 
-## Performance
+## Ensemble Performance
 
-`filetypes/xlsx` specialist scored *alone* on its test-partition slice: 2232 malware / 12 benign (2244 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `xlsx` slice of the test partition: 2232 malware / 12 benign (2244 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.8492 | 0.9988 | — | 99.73% | 0.0053 |
+
+## Specialist Performance
+
+`filetypes/xlsx` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

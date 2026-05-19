@@ -2,9 +2,17 @@
 
 LightGBM specialist for `c`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/c` specialist scored *alone* on its test-partition slice: 1766 malware / 66562 benign (68328 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `c` slice of the test partition: 1766 malware / 66562 benign (68328 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.8817 | 0.5098 | 11.16% | 56.12% | 0.0211 |
+
+## Specialist Performance
+
+`filetypes/c` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

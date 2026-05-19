@@ -2,9 +2,17 @@
 
 LightGBM specialist for `text`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/text` specialist scored *alone* on its test-partition slice: 159 malware / 7979 benign (8138 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `text` slice of the test partition: 159 malware / 7979 benign (8138 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.7609 | 0.2044 | 11.95% | 25.81% | 0.0372 |
+
+## Specialist Performance
+
+`filetypes/text` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|

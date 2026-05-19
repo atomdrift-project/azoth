@@ -2,9 +2,17 @@
 
 LightGBM specialist for `rust`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Performance
+## Ensemble Performance
 
-`filetypes/rust` specialist scored *alone* on its test-partition slice: 164 malware / 9604 benign (9768 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
+Deployed routed ensemble on the `rust` slice of the test partition: 164 malware / 9604 benign (9768 rows). These are the headline numbers from the bundle [README](../../README.md).
+
+| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
+|---:|---:|---:|---:|---:|
+| 0.7708 | 0.1056 | 1.22% | 17.98% | 0.0165 |
+
+## Specialist Performance
+
+`filetypes/rust` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
 | ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|
