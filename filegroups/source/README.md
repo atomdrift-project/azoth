@@ -4,18 +4,18 @@ LightGBM specialist for `c`, `cpp`, `csharp`, `go`, `java`, `kotlin`, `makefile`
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `source`). ROC 0.9987, PR 0.9796, F1 0.9214 on 119823 rows (6182 mal / 113641 ben).
+Training-time benchmark only (no test-partition rows for `source`). ROC 0.9987, PR 0.9796, F1 0.9214 on 119,823 rows (6,182 mal / 113,641 ben).
 
 ## Routing
 
-Default level `—` over none. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `—` over none. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 833900 (43563 mal / 790337 ben) |
+| Train rows | 833,900 (43,563 mal / 790,337 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 150 |
 | num_leaves | 96 |

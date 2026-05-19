@@ -4,11 +4,11 @@ LightGBM specialist for `elf`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `elf` slice of the test partition: 8826 malware / 16927 benign (25753 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `elf` slice of the locked test partition: 8,826 malware / 16,927 benign (25,753 rows). The OR-rule fires across `general`, `filegroups/native`, `filetypes/elf` via the `learned_blend_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.9999 | 0.9998 | 93.55% | 0.9946 | 0.0038 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 93.07% | 8,150 | 0 | 0.0 | `learned_blend_at_fp_0` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `elf` slice of the test partition: 8826 malware 
 
 ## Routing
 
-Default level `learned_blend_at_fp_0` over `general`, `filegroups/native`, `filetypes/elf`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `learned_blend_at_fp_0` over `general`, `filegroups/native`, `filetypes/elf`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 178232 (61224 mal / 117008 ben) |
+| Train rows | 178,232 (61,224 mal / 117,008 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

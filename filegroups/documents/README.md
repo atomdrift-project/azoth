@@ -4,18 +4,18 @@ LightGBM specialist for `doc`, `docx`, `html`, `ole`, `pdf`, `ppt`, `pptx`, `rtf
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `documents`). ROC 0.9995, PR 0.9999, F1 0.9960 on 30638 rows (27128 mal / 3510 ben).
+Training-time benchmark only (no test-partition rows for `documents`). ROC 0.9995, PR 0.9999, F1 0.9960 on 30,638 rows (27,128 mal / 3,510 ben).
 
 ## Routing
 
-Default level `—` over none. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `—` over none. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 214440 (189602 mal / 24838 ben) |
+| Train rows | 214,440 (189,602 mal / 24,838 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 150 |
 | num_leaves | 96 |

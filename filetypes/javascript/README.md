@@ -4,11 +4,11 @@ LightGBM specialist for `javascript`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `javascript` slice of the test partition: 10488 malware / 59418 benign (69906 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `javascript` slice of the locked test partition: 10,488 malware / 59,418 benign (69,906 rows). The OR-rule fires across `general`, `filegroups/scripts`, `filetypes/javascript` via the `filetype_only` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.9960 | 0.9818 | 68.36% | 0.9316 | 0.0153 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 64.25% | 6,798 | 0 | 0.0 | `filetype_only` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `javascript` slice of the test partition: 10488 
 
 ## Routing
 
-Default level `filetype_only` over `filetypes/javascript`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `filetype_only` over `filetypes/javascript`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 481289 (72891 mal / 408398 ben) |
+| Train rows | 481,289 (72,891 mal / 408,398 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 250 |
 | num_leaves | 128 |

@@ -4,11 +4,11 @@ LightGBM specialist for `lnk`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `lnk` slice of the test partition: 257 malware / 127 benign (384 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `lnk` slice of the locked test partition: 257 malware / 127 benign (384 rows). The OR-rule fires across `general`, `filetypes/lnk` via the `joint_or_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.9114 | 0.9467 | 59.92% | 0.9000 | 0.1949 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 46.69% | 120 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `lnk` slice of the test partition: 257 malware /
 
 ## Routing
 
-Default level `joint_or_at_fp_0` over `general`, `filetypes/lnk`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filetypes/lnk`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2621 (1726 mal / 895 ben) |
+| Train rows | 2,621 (1,726 mal / 895 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 250 |
 | num_leaves | 96 |

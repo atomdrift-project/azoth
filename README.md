@@ -1,52 +1,62 @@
 # Azoth
 
-Routed ensemble for static malware detection. A general LightGBM classifier scores every file; per-filetype specialists score files in their domain; any route above its calibrated threshold flags the file. Calibrators and L0..L20 thresholds fit on a 583032-row dev partition (12.5% of the labeled corpus). Metrics below: locked 585889-row test partition, disjoint from training and calibration. EMBER 2024 reference: Joyce et al., *KDD'25*.
+Static malware detection by routed ensemble. A general LightGBM model scores every file. Per-filetype specialists score files in their domain — PE, ELF, JavaScript, PDF, and 36 more. A file is flagged when any route's score crosses its calibrated threshold.
+
+The point of routing is that the evidence differs by format. A PE's section table is signal. A PDF's stream dictionary is signal. A shell script's token distribution is signal. One generalist trained over all of them learns averages; a specialist trained on one of them learns the format.
+
+Thresholds and isotonic calibrators were fit on a 583,032-row dev partition (12.5% of the labeled corpus). The numbers in this README come from a locked 589,899-row test partition, disjoint from training and calibration. The bundle is loaded at scan time by [litmus](https://codeberg.org/atomdrift/litmus). EMBER 2024 reference: Joyce et al., *KDD'25*.
 
 ## Use
 
-Input: cleave-extracted JSON reports. Output: one of `benign`, `suspicious`, `hostile`, with severity level L0..L20. Loaded at scan time by [litmus](https://codeberg.org/atomdrift/litmus); deployed default is L3 (litmus loads both hostile and suspicious thresholds at the same level).
+Input is a JSON report produced by `cleave`. Output is one verdict — `benign`, `suspicious`, or `hostile` — qualified by a severity level L0..L20. Litmus reads the hostile and suspicious thresholds at the same level; the deployed default is L3. Lower levels tighten the operating point; higher levels loosen it.
 
-Bundle layout: `config.json` (deployed thresholds), then per-route subdirectories under `general/`, `filegroups/<name>/`, `filetypes/<name>/`, each carrying `model.txt`, `feature_spec.json`, and `calibrator.json`. Architecture and FP-budget design: [DESIGN.md](DESIGN.md). Routing detail: [ENSEMBLE_MODEL.md](ENSEMBLE_MODEL.md). Single-model baseline: [GENERALIST_MODEL.md](GENERALIST_MODEL.md). Apache 2.0.
+## Bundle layout
 
-## Routed Ensemble Performance
+`config.json` records the deployed thresholds. Each route lives in its own subdirectory: `general/`, one of 7 `filegroups/<name>/`, or one of 40 `filetypes/<name>/`. A route directory carries three files: `model.txt` (LightGBM), `feature_spec.json` (the features the model expects), and `calibrator.json` (isotonic probability calibrator).
 
-Deployed ensemble (general + filegroup + filetype combined per `route_policies.json`) measured on each filetype's slice of the locked test partition. Sorted by PR AUC, best first. Filetypes included: ≥25/25 in test, or ≥100/100 in the full labeled corpus.
+Further reading: [DESIGN.md](DESIGN.md) for architecture and FP-budget design, [ENSEMBLE_MODEL.md](ENSEMBLE_MODEL.md) for routing details, [GENERALIST_MODEL.md](GENERALIST_MODEL.md) for the single-model baseline. License: Apache 2.0.
 
-| File type | Test mal / ben | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Δ vs EMBER 2024 |
-|---|---:|---:|---:|---:|---:|---:|
-| [`batch`](filetypes/batch/README.md) | 21095 / 425 | 1.0000 | 0.9996 | 0.9988 | 98.84% | — |
-| [`pkg-info`](filetypes/pkg-info/README.md) | 1276 / 114 | 0.9999 | 0.9994 | 0.9973 | 96.94% | — |
-| [`elf`](filetypes/elf/README.md) | 8826 / 16927 | 0.9998 | 0.9999 | 0.9946 | 93.55% | PR +0.0065 / ROC +0.0066 |
-| [`pe`](filetypes/pe/README.md) | 109970 / 18938 | 0.9998 | 0.9991 | 0.9955 | 73.42% | PR +0.0015 / ROC +0.0009 |
-| [`package.json`](filetypes/package.json/README.md) | 2162 / 1361 | 0.9996 | 0.9992 | 0.9972 | 90.61% | — |
-| [`rtf`](filetypes/rtf/README.md) | 214 / 51 | 0.9995 | 0.9980 | 0.9882 | 95.33% | — |
-| [`pdf`](filetypes/pdf/README.md) | 21777 / 1734 | 0.9979 | 0.9813 | 0.9910 | 6.59% | PR +0.0046 / ROC -0.0099 |
-| [`macho`](filetypes/macho/README.md) | 258 / 1382 | 0.9936 | 0.9988 | 0.9594 | 80.62% | — |
-| [`python-bytecode`](filetypes/python-bytecode/README.md) | 233 / 3841 | 0.9929 | 0.9993 | 0.9892 | 97.85% | — |
-| [`ole`](filetypes/ole/README.md) | 221 / 664 | 0.9858 | 0.9863 | 0.9775 | 90.95% | — |
-| [`shell`](filetypes/shell/README.md) | 920 / 5682 | 0.9854 | 0.9969 | 0.9461 | 80.87% | — |
-| [`javascript`](filetypes/javascript/README.md) | 10488 / 59418 | 0.9818 | 0.9960 | 0.9316 | 68.36% | — |
-| [`vbs`](filetypes/vbs/README.md) | 445 / 423 | 0.9816 | 0.9847 | 0.9587 | 36.40% | — |
-| [`jar`](filetypes/jar/README.md) | 215 / 236 | 0.9812 | 0.9839 | 0.9388 | 58.60% | — |
-| [`kotlin`](filetypes/kotlin/README.md) | 2829 / 5341 | 0.9786 | 0.9821 | 0.9555 | 54.68% | — |
-| [`python`](filetypes/python/README.md) | 2271 / 16286 | 0.9765 | 0.9950 | 0.9324 | 53.63% | — |
-| [`docx`](filetypes/docx/README.md) | 173 / 31 | 0.9761 | 0.9153 | 0.9227 | 62.43% | — |
-| [`powershell`](filetypes/powershell/README.md) | 240 / 274 | 0.9673 | 0.9797 | 0.9421 | 4.58% | — |
-| [`lnk`](filetypes/lnk/README.md) | 257 / 127 | 0.9467 | 0.9114 | 0.9000 | 59.92% | — |
-| [`php`](filetypes/php/README.md) | 516 / 10809 | 0.9275 | 0.9897 | 0.8852 | 67.25% | — |
-| [`java_class`](filetypes/java_class/README.md) | 173 / 47070 | 0.9265 | 0.9855 | 0.9186 | 6.36% | — |
-| [`perl`](filetypes/perl/README.md) | 28 / 3956 | 0.9231 | 0.9979 | 0.9057 | 82.14% | — |
-| [`go`](filetypes/go/README.md) | 1177 / 11858 | 0.6324 | 0.9344 | 0.6485 | 1.53% | — |
-| [`csharp`](filetypes/csharp/README.md) | 234 / 7572 | 0.5185 | 0.8946 | 0.4847 | 22.22% | — |
-| [`c`](filetypes/c/README.md) | 1766 / 66562 | 0.5098 | 0.8817 | 0.5612 | 11.16% | — |
-| [`jpeg`](filetypes/jpeg/README.md) | 125 / 1319 | 0.3336 | 0.7716 | 0.3212 | 0.80% | — |
-| [`text`](filetypes/text/README.md) | 159 / 7979 | 0.2044 | 0.7609 | 0.2581 | 11.95% | — |
-| [`png`](filetypes/png/README.md) | 657 / 14338 | 0.1546 | 0.6161 | 0.1871 | 1.37% | — |
-| [`xml`](filetypes/xml/README.md) | 288 / 17921 | 0.1440 | 0.7434 | 0.3299 | 0.00% | — |
-| [`plist`](filetypes/plist/README.md) | 68 / 1544 | 0.1100 | 0.6439 | 0.1695 | 1.47% | — |
-| [`rust`](filetypes/rust/README.md) | 164 / 9604 | 0.1056 | 0.7708 | 0.1798 | 1.22% | — |
+## Per-filetype Deployed Performance
 
-PR AUC summarizes recall-vs-precision across operating points; Recall@3FP/M is the deployment-budget headline (GPD-extrapolated for filetypes whose dev slice can't resolve 3 FP/M empirically). Per-severity L0..L20 thresholds are in [route_policies.md](route_policies.md) — they document the severity-grading curve litmus uses, not optimization targets.
+Each row is the deployed ensemble — the OR-rule or learned blend in `route_policies.json` at L3 hostile — measured on the filetype's slice of the locked test partition. Recall and FP are exactly what litmus would produce on these files at scan time; FP/M normalizes against the benign slice. The policy column names the rule that fires (`joint_or_at_fp_N` is an OR across allowed routes at an FP/M target of N per million; `learned_blend_at_fp_N` is a logit blend at the same budget; see [ENSEMBLE_MODEL.md](ENSEMBLE_MODEL.md)).
+
+A filetype appears here when it has at least 25 malware and 25 benign in the test slice, or at least 100 of each across the full labeled corpus. Pure archive wrappers (zip, tar, gz, …), `data`, and `unknown` are excluded — their score reflects the container's shape, not the classifier's quality.
+
+| File type | Test mal / ben | Recall | FP | FP / M | Policy |
+|---|---:|---:|---:|---:|---|
+| [`batch`](filetypes/batch/README.md) | 21,095 / 425 | 98.85% | 0 | 0.0 | `learned_blend_at_fp_3` |
+| [`rtf`](filetypes/rtf/README.md) | 214 / 51 | 97.66% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`pkg-info`](filetypes/pkg-info/README.md) | 1,276 / 114 | 97.02% | 0 | 0.0 | `filetype_only_at_fp_0` |
+| [`elf`](filetypes/elf/README.md) | 8,826 / 16,927 | 93.07% | 0 | 0.0 | `learned_blend_at_fp_0` |
+| [`package.json`](filetypes/package.json/README.md) | 2,162 / 1,361 | 92.74% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`ole`](filetypes/ole/README.md) | 221 / 664 | 90.83% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`perl`](filetypes/perl/README.md) | 28 / 3,956 | 85.19% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`pe`](filetypes/pe/README.md) | 109,970 / 18,938 | 78.71% | 3 | 158.4 | `learned_blend_at_fp_3` |
+| [`macho`](filetypes/macho/README.md) | 258 / 1,382 | 71.71% | 0 | 0.0 | `learned_blend_at_fp_0` |
+| [`docx`](filetypes/docx/README.md) | 173 / 31 | 69.94% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`javascript`](filetypes/javascript/README.md) | 10,488 / 59,418 | 64.25% | 0 | 0.0 | `filetype_only` |
+| [`jar`](filetypes/jar/README.md) | 215 / 236 | 54.97% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`python`](filetypes/python/README.md) | 2,271 / 16,286 | 54.31% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`php`](filetypes/php/README.md) | 516 / 10,809 | 50.20% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`kotlin`](filetypes/kotlin/README.md) | 2,829 / 5,341 | 48.96% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`lnk`](filetypes/lnk/README.md) | 257 / 127 | 46.69% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`shell`](filetypes/shell/README.md) | 920 / 5,682 | 46.21% | 0 | 0.0 | `filetype_only` |
+| [`java_class`](filetypes/java_class/README.md) | 173 / 47,070 | 32.37% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`python-bytecode`](filetypes/python-bytecode/README.md) | 233 / 3,841 | 29.61% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`vbs`](filetypes/vbs/README.md) | 445 / 423 | 27.19% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`powershell`](filetypes/powershell/README.md) | 240 / 274 | 24.90% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`csharp`](filetypes/csharp/README.md) | 234 / 7,572 | 18.80% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`text`](filetypes/text/README.md) | 159 / 7,979 | 11.32% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`jpeg`](filetypes/jpeg/README.md) | 125 / 1,319 | 11.20% | 0 | 0.0 | `learned_blend_at_fp_1` |
+| [`png`](filetypes/png/README.md) | 657 / 14,338 | 6.85% | 0 | 0.0 | `learned_blend_at_fp_0` |
+| [`pdf`](filetypes/pdf/README.md) | 21,777 / 1,734 | 5.87% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`c`](filetypes/c/README.md) | 1,766 / 66,562 | 5.44% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`xml`](filetypes/xml/README.md) | 288 / 17,921 | 2.42% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`plist`](filetypes/plist/README.md) | 68 / 1,544 | 1.47% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`rust`](filetypes/rust/README.md) | 164 / 9,604 | 1.22% | 0 | 0.0 | `joint_or_at_fp_0` |
+| [`go`](filetypes/go/README.md) | 1,177 / 11,858 | 0.93% | 0 | 0.0 | `joint_or_at_fp_0` |
+
+Recall and FP are the operational headline: what fraction of the filetype's malware does litmus flag at L3 hostile, and at what false-positive cost? The per-severity thresholds in [route_policies.md](route_policies.md) document the L0..L20 curve — L0 is tightest, L20 is loosest — alongside the same tp/fp/recall numbers for every level.
 
 ## Provenance
 

@@ -4,11 +4,11 @@ LightGBM specialist for `kotlin`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `kotlin` slice of the test partition: 2829 malware / 5341 benign (8170 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `kotlin` slice of the locked test partition: 2,829 malware / 5,341 benign (8,170 rows). The OR-rule fires across `general`, `filegroups/source`, `filetypes/kotlin` via the `joint_or_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.9821 | 0.9786 | 54.68% | 0.9555 | 0.0275 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 48.96% | 1,407 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `kotlin` slice of the test partition: 2829 malwa
 
 ## Routing
 
-Default level `joint_or_at_fp_0` over `general`, `filegroups/source`, `filetypes/kotlin`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/source`, `filetypes/kotlin`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 57342 (20474 mal / 36868 ben) |
+| Train rows | 57,342 (20,474 mal / 36,868 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 250 |
 | num_leaves | 128 |

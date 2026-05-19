@@ -4,11 +4,11 @@ LightGBM specialist for `text`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `text` slice of the test partition: 159 malware / 7979 benign (8138 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `text` slice of the locked test partition: 159 malware / 7,979 benign (8,138 rows). The OR-rule fires across `general`, `filetypes/text` via the `joint_or_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.7609 | 0.2044 | 11.95% | 0.2581 | 0.0372 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 11.32% | 18 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `text` slice of the test partition: 159 malware 
 
 ## Routing
 
-Default level `joint_or_at_fp_0` over `general`, `filetypes/text`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filetypes/text`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 56781 (1029 mal / 55752 ben) |
+| Train rows | 56,781 (1,029 mal / 55,752 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 300 |
 | num_leaves | 96 |

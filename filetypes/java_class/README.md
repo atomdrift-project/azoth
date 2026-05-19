@@ -4,11 +4,11 @@ LightGBM specialist for `java_class`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `java_class` slice of the test partition: 173 malware / 47070 benign (47243 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `java_class` slice of the locked test partition: 173 malware / 47,070 benign (47,243 rows). The OR-rule fires across `general`, `filegroups/portable`, `filetypes/java_class` via the `joint_or_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.9855 | 0.9265 | 6.36% | 0.9186 | 0.0012 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 32.37% | 56 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `java_class` slice of the test partition: 173 ma
 
 ## Routing
 
-Default level `joint_or_at_fp_0` over `general`, `filegroups/portable`, `filetypes/java_class`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/portable`, `filetypes/java_class`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 319282 (1120 mal / 318162 ben) |
+| Train rows | 319,282 (1,120 mal / 318,162 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 250 |
 | num_leaves | 128 |

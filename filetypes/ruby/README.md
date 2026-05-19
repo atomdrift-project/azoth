@@ -4,11 +4,11 @@ LightGBM specialist for `ruby`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `ruby` slice of the test partition: 7 malware / 2943 benign (2950 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `ruby` slice of the locked test partition: 7 malware / 2,943 benign (2,950 rows). The OR-rule fires across `general`, `filegroups/scripts`, `filetypes/ruby` via the `joint_or_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.9991 | 0.6428 | 57.14% | 0.8000 | 0.0103 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 42.86% | 3 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `ruby` slice of the test partition: 7 malware / 
 
 ## Routing
 
-Default level `joint_or_at_fp_0` over `general`, `filegroups/scripts`, `filetypes/ruby`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/scripts`, `filetypes/ruby`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 20606 (66 mal / 20540 ben) |
+| Train rows | 20,606 (66 mal / 20,540 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 250 |
 | num_leaves | 128 |

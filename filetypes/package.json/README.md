@@ -4,11 +4,11 @@ LightGBM specialist for `package.json`. Member of the Azoth routed ensemble; bun
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `package.json` slice of the test partition: 2162 malware / 1361 benign (3523 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `package.json` slice of the locked test partition: 2,162 malware / 1,361 benign (3,523 rows). The OR-rule fires across `general`, `filegroups/config`, `filetypes/package.json` via the `joint_or_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.9992 | 0.9996 | 90.61% | 0.9972 | 0.0034 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 92.74% | 2,006 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `package.json` slice of the test partition: 2162
 
 ## Routing
 
-Default level `joint_or_at_fp_0` over `general`, `filegroups/config`, `filetypes/package.json`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/config`, `filetypes/package.json`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 25259 (15617 mal / 9642 ben) |
+| Train rows | 25,259 (15,617 mal / 9,642 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 150 |
 | num_leaves | 96 |

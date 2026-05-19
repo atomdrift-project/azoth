@@ -6,11 +6,11 @@ LightGBM specialist for `xlsx`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `xlsx` slice of the test partition: 2232 malware / 12 benign (2244 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `xlsx` slice of the locked test partition: 2,232 malware / 12 benign (2,244 rows). The OR-rule fires across `general`, `filegroups/documents`, `filetypes/xlsx` via the `learned_blend_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.8492 | 0.9988 | — | 0.9973 | 0.0053 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 28.23% | 630 | 0 | 0.0 | `learned_blend_at_fp_0` |
 
 ## Specialist Performance
 
@@ -22,14 +22,14 @@ Deployed routed ensemble on the `xlsx` slice of the test partition: 2232 malware
 
 ## Routing
 
-Default level `learned_blend_at_fp_0` over `general`, `filegroups/documents`, `filetypes/xlsx`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `learned_blend_at_fp_0` over `general`, `filegroups/documents`, `filetypes/xlsx`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 15655 (15523 mal / 132 ben) |
+| Train rows | 15,655 (15,523 mal / 132 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 100 |
 | num_leaves | 48 |

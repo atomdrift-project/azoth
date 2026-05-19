@@ -4,11 +4,11 @@ LightGBM specialist for `perl`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `perl` slice of the test partition: 28 malware / 3956 benign (3984 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `perl` slice of the locked test partition: 28 malware / 3,956 benign (3,984 rows). The OR-rule fires across `filegroups/scripts`, `filetypes/perl` via the `joint_or_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.9979 | 0.9231 | 82.14% | 0.9057 | 0.0036 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 85.19% | 23 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `perl` slice of the test partition: 28 malware /
 
 ## Routing
 
-Default level `joint_or_at_fp_0` over `filegroups/scripts`, `filetypes/perl`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `joint_or_at_fp_0` over `filegroups/scripts`, `filetypes/perl`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 27599 (196 mal / 27403 ben) |
+| Train rows | 27,599 (196 mal / 27,403 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |

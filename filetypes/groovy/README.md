@@ -4,11 +4,11 @@ LightGBM specialist for `groovy`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `groovy` slice of the test partition: 15 malware / 648 benign (663 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `groovy` slice of the locked test partition: 15 malware / 648 benign (663 rows). The OR-rule fires across `general` via the `joint_or_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.4111 | 0.0232 | 0.00% | 0.0593 | 0.0225 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 0.00% | 0 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `groovy` slice of the test partition: 15 malware
 
 ## Routing
 
-Default level `joint_or_at_fp_0` over `general`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4500 (108 mal / 4392 ben) |
+| Train rows | 4,500 (108 mal / 4,392 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 120 |
 | num_leaves | 96 |

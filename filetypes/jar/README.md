@@ -4,11 +4,11 @@ LightGBM specialist for `jar`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `jar` slice of the test partition: 215 malware / 236 benign (451 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `jar` slice of the locked test partition: 215 malware / 236 benign (451 rows). The OR-rule fires across `general`, `filetypes/jar` via the `joint_or_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.9839 | 0.9812 | 58.60% | 0.9388 | 0.0948 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 54.97% | 105 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `jar` slice of the test partition: 215 malware /
 
 ## Routing
 
-Default level `joint_or_at_fp_0` over `general`, `filetypes/jar`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filetypes/jar`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3073 (1239 mal / 1834 ben) |
+| Train rows | 3,073 (1,239 mal / 1,834 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 120 |
 | num_leaves | 96 |

@@ -4,11 +4,11 @@ LightGBM specialist for `pptx`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `pptx` slice of the test partition: 22 malware / 21 benign (43 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `pptx` slice of the locked test partition: 22 malware / 21 benign (43 rows). The OR-rule fires across `general`, `filegroups/documents`, `filetypes/pptx` via the `learned_blend_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.6071 | 0.6534 | 0.00% | 0.6769 | 0.4821 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 27.27% | 6 | 0 | 0.0 | `learned_blend_at_fp_0` |
 
 ## Specialist Performance
 
@@ -20,7 +20,7 @@ Deployed routed ensemble on the `pptx` slice of the test partition: 22 malware /
 
 ## Routing
 
-Default level `learned_blend_at_fp_0` over `general`, `filegroups/documents`, `filetypes/pptx`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `learned_blend_at_fp_0` over `general`, `filegroups/documents`, `filetypes/pptx`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

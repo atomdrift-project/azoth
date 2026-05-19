@@ -4,11 +4,11 @@ LightGBM specialist for `unknown`. Member of the Azoth routed ensemble; bundle r
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `unknown` slice of the test partition: 1342 malware / 2020 benign (3362 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `unknown` slice of the locked test partition: 1,342 malware / 2,020 benign (3,362 rows). The OR-rule fires across `filetypes/unknown` via the `filetype_only_at_fp_3` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.8331 | 0.8282 | 12.37% | 0.7641 | 0.1208 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 0.00% | 0 | 0 | 0.0 | `filetype_only_at_fp_3` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `unknown` slice of the test partition: 1342 malw
 
 ## Routing
 
-Default level `filetype_only_at_fp_3` over `filetypes/unknown`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `filetype_only_at_fp_3` over `filetypes/unknown`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 23626 (9702 mal / 13924 ben) |
+| Train rows | 23,626 (9,702 mal / 13,924 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 120 |
 | num_leaves | 96 |

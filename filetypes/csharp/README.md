@@ -4,11 +4,11 @@ LightGBM specialist for `csharp`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Deployed routed ensemble on the `csharp` slice of the test partition: 234 malware / 7572 benign (7806 rows). These are the headline numbers from the bundle [README](../../README.md).
+Deployed at L3 hostile on the `csharp` slice of the locked test partition: 234 malware / 7,572 benign (7,806 rows). The OR-rule fires across `general`, `filegroups/source`, `filetypes/csharp` via the `joint_or_at_fp_0` policy.
 
-| ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.8946 | 0.5185 | 22.22% | 0.4847 | 0.0281 |
+| Recall | TP | FP | FP / M | Policy |
+|---:|---:|---:|---:|---|
+| 18.80% | 44 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -20,14 +20,14 @@ Deployed routed ensemble on the `csharp` slice of the test partition: 234 malwar
 
 ## Routing
 
-Default level `joint_or_at_fp_0` over `general`, `filegroups/source`, `filetypes/csharp`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/source`, `filetypes/csharp`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 54055 (1531 mal / 52524 ben) |
+| Train rows | 54,055 (1,531 mal / 52,524 ben) |
 | Feature spec | 60358 features (`general_shared`) |
 | n_estimators | 120 |
 | num_leaves | 96 |
