@@ -6,16 +6,29 @@ LightGBM specialist for `xlsx`. Member of the Azoth routed ensemble; bundle root
 
 ## Performance
 
-Test partition, n=2244 (2232 malware / 12 benign).
+`filetypes/xlsx` specialist scored *alone* on its test-partition slice: 2232 malware / 12 benign (2244 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
 
-| ROC AUC [95% CI] | PR AUC [95% CI] | F1 [95% CI] | Brier | Δ vs EMBER 2024 |
+| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|
-| 0.5000 [0.5000, 0.5000] | 0.9947 [0.9947, 0.9947] | 0.9973 [0.9973, 0.9973] | - | — |
+| 0.5000 | 0.9947 | 99.73% | 0.0053 | — |
 
 ## Routing
 
-Default-level policy `learned_blend_at_fp_0`. Allowed routes (OR over thresholds): `general`, `filegroups/documents`, `filetypes/xlsx`. Per-level severity thresholds in `route_policies.md` at the bundle root.
+Default level `learned_blend_at_fp_0` over `general`, `filegroups/documents`, `filetypes/xlsx`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
-LightGBM binary classifier: estimators=100, num_leaves=48, max_depth=12, min_child_samples=20, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 60358 features, policy `general_shared`. Trained on 15655 rows (15523 mal / 132 ben).
+| Parameter | Value |
+|---|---:|
+| Algorithm | LightGBM binary classifier |
+| Train rows | 15655 (15523 mal / 132 ben) |
+| Feature spec | 60358 features (`general_shared`) |
+| n_estimators | 100 |
+| num_leaves | 48 |
+| max_depth | 12 |
+| min_child_samples | 20 |
+| learning_rate | 0.05 |
+| subsample / colsample | 0.8 / 0.8 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
+| early_stopping_rounds | 25 |
+| device | auto |

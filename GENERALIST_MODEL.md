@@ -31,7 +31,7 @@ Test-partition only (SHA256-deterministic 12.5% locked holdout, never trained on
 
 - Algorithm: LightGBM binary classifier: estimators=400, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=50, device=cpu.
 - Feature spec: `general/feature_spec.json` (60358 features)
-- Trained on the full mixed corpus across all supported filetypes (75% train / 12.5% dev / 12.5% test, SHA256-deterministic split). Calibrators and L0..L9 thresholds are fit on dev; the metrics in this card are reported on the locked test partition (never seen during training or calibration).
+- Trained on the full mixed corpus across all supported filetypes (75% train / 12.5% dev / 12.5% test, SHA256-deterministic split). Calibrators and L0..L20 thresholds are fit on dev; the metrics in this card are reported on the locked test partition (never seen during training or calibration).
 
 ## Hard-pool reference (training-time evaluation)
 

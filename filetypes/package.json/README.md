@@ -4,16 +4,29 @@ LightGBM specialist for `package.json`. Member of the Azoth routed ensemble; bun
 
 ## Performance
 
-Test partition, n=3523 (2162 malware / 1361 benign).
+`filetypes/package.json` specialist scored *alone* on its test-partition slice: 2162 malware / 1361 benign (3523 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
 
-| ROC AUC [95% CI] | PR AUC [95% CI] | F1 [95% CI] | Brier | Δ vs EMBER 2024 |
+| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|
-| 0.9992 [0.9983, 0.9998] | 0.9996 [0.9992, 0.9999] | 0.9972 [0.9956, 0.9986] | - | — |
+| 0.9992 | 0.9996 | 99.72% | 0.0034 | — |
 
 ## Routing
 
-Default-level policy `joint_or_at_fp_0`. Allowed routes (OR over thresholds): `general`, `filegroups/config`, `filetypes/package.json`. Per-level severity thresholds in `route_policies.md` at the bundle root.
+Default level `joint_or_at_fp_0` over `general`, `filegroups/config`, `filetypes/package.json`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
-LightGBM binary classifier: estimators=150, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 60358 features, policy `general_shared`. Trained on 25259 rows (15617 mal / 9642 ben).
+| Parameter | Value |
+|---|---:|
+| Algorithm | LightGBM binary classifier |
+| Train rows | 25259 (15617 mal / 9642 ben) |
+| Feature spec | 60358 features (`general_shared`) |
+| n_estimators | 150 |
+| num_leaves | 96 |
+| max_depth | 12 |
+| min_child_samples | 100 |
+| learning_rate | 0.05 |
+| subsample / colsample | 0.8 / 0.8 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
+| early_stopping_rounds | 25 |
+| device | auto |

@@ -4,16 +4,29 @@ LightGBM specialist for `jpeg`. Member of the Azoth routed ensemble; bundle root
 
 ## Performance
 
-Test partition, n=1444 (125 malware / 1319 benign).
+`filetypes/jpeg` specialist scored *alone* on its test-partition slice: 125 malware / 1319 benign (1444 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
 
-| ROC AUC [95% CI] | PR AUC [95% CI] | F1 [95% CI] | Brier | Δ vs EMBER 2024 |
+| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|
-| 0.7714 [0.7329, 0.8047] | 0.3336 [0.2623, 0.4101] | 0.3212 [0.2666, 0.4159] | - | — |
+| 0.7714 | 0.3336 | 32.12% | 0.0745 | — |
 
 ## Routing
 
-Default-level policy `learned_blend_at_fp_1`. Allowed routes (OR over thresholds): `general`, `filegroups/media`, `filetypes/jpeg`. Per-level severity thresholds in `route_policies.md` at the bundle root.
+Default level `learned_blend_at_fp_1` over `general`, `filegroups/media`, `filetypes/jpeg`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
-LightGBM binary classifier: estimators=120, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 60358 features, policy `general_shared`. Trained on 10467 rows (844 mal / 9623 ben).
+| Parameter | Value |
+|---|---:|
+| Algorithm | LightGBM binary classifier |
+| Train rows | 10467 (844 mal / 9623 ben) |
+| Feature spec | 60358 features (`general_shared`) |
+| n_estimators | 120 |
+| num_leaves | 96 |
+| max_depth | 12 |
+| min_child_samples | 100 |
+| learning_rate | 0.05 |
+| subsample / colsample | 0.8 / 0.8 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
+| early_stopping_rounds | 25 |
+| device | auto |

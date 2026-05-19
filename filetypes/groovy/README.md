@@ -4,16 +4,29 @@ LightGBM specialist for `groovy`. Member of the Azoth routed ensemble; bundle ro
 
 ## Performance
 
-Test partition, n=663 (15 malware / 648 benign).
+`filetypes/groovy` specialist scored *alone* on its test-partition slice: 15 malware / 648 benign (663 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
 
-| ROC AUC [95% CI] | PR AUC [95% CI] | F1 [95% CI] | Brier | Δ vs EMBER 2024 |
+| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|
-| 0.4101 [0.2457, 0.5783] | 0.0232 [0.0196, 0.0354] | 0.0593 [0.0452, 0.0986] | - | — |
+| 0.4101 | 0.0232 | 5.93% | 0.0226 | — |
 
 ## Routing
 
-Default-level policy `joint_or_at_fp_0`. Allowed routes (OR over thresholds): `general`. Per-level severity thresholds in `route_policies.md` at the bundle root.
+Default level `joint_or_at_fp_0` over `general`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
-LightGBM binary classifier: estimators=120, num_leaves=96, max_depth=12, min_child_samples=30, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 60358 features, policy `general_shared`. Trained on 4500 rows (108 mal / 4392 ben).
+| Parameter | Value |
+|---|---:|
+| Algorithm | LightGBM binary classifier |
+| Train rows | 4500 (108 mal / 4392 ben) |
+| Feature spec | 60358 features (`general_shared`) |
+| n_estimators | 120 |
+| num_leaves | 96 |
+| max_depth | 12 |
+| min_child_samples | 30 |
+| learning_rate | 0.05 |
+| subsample / colsample | 0.8 / 0.8 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
+| early_stopping_rounds | 25 |
+| device | auto |

@@ -4,16 +4,29 @@ LightGBM specialist for `text`. Member of the Azoth routed ensemble; bundle root
 
 ## Performance
 
-Test partition, n=8138 (159 malware / 7979 benign).
+`filetypes/text` specialist scored *alone* on its test-partition slice: 159 malware / 7979 benign (8138 rows). The bundle README reports the deployed ensemble's metrics on this same slice; numbers there will differ.
 
-| ROC AUC [95% CI] | PR AUC [95% CI] | F1 [95% CI] | Brier | Δ vs EMBER 2024 |
+| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|
-| 0.7602 [0.7146, 0.8021] | 0.1877 [0.1421, 0.2548] | 0.2353 [0.2034, 0.3158] | - | — |
+| 0.7602 | 0.1877 | 23.53% | 0.0179 | — |
 
 ## Routing
 
-Default-level policy `joint_or_at_fp_0`. Allowed routes (OR over thresholds): `general`, `filetypes/text`. Per-level severity thresholds in `route_policies.md` at the bundle root.
+Default level `joint_or_at_fp_0` over `general`, `filetypes/text`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
-LightGBM binary classifier: estimators=300, num_leaves=96, max_depth=12, min_child_samples=50, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=25, device=auto. Feature spec: general-shared, 60358 features, policy `general_shared`. Trained on 56781 rows (1029 mal / 55752 ben).
+| Parameter | Value |
+|---|---:|
+| Algorithm | LightGBM binary classifier |
+| Train rows | 56781 (1029 mal / 55752 ben) |
+| Feature spec | 60358 features (`general_shared`) |
+| n_estimators | 300 |
+| num_leaves | 96 |
+| max_depth | 12 |
+| min_child_samples | 50 |
+| learning_rate | 0.05 |
+| subsample / colsample | 0.8 / 0.8 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
+| early_stopping_rounds | 25 |
+| device | auto |

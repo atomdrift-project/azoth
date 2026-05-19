@@ -30,11 +30,11 @@ Three views of each filetype, evaluated on **585889 test-partition rows** (SHA25
 
 | File type | Files | General ROC | Specialist ROC | Ensemble ROC | Strategy | Routing policy |
 |---|---:|---:|---:|---:|---|---|
-| `pe` | 128908 | 0.9956 | 0.9983 | 0.9991 | `stacked_xgb` | `learned_blend_at_fp_3` |
+| `pe` | 128908 | 0.9956 | 0.9983 | 0.9991 | `calibrated_max` | `learned_blend_at_fp_3` |
 | `elf` | 25753 | 0.9993 | 0.9999 | 0.9999 | `specialist_priority` | `learned_blend_at_fp_0` |
-| `macho` | 1640 | 0.9283 | 0.9988 | 0.9989 | `stacked_lr` | `learned_blend_at_fp_0` |
+| `macho` | 1640 | 0.9283 | 0.9988 | 0.9988 | `specialist_priority` | `learned_blend_at_fp_0` |
 | `msi` | 223 | 0.8064 | 0.9785 | 0.9785 | `specialist_priority` | `joint_or_at_fp_0` |
-| `pdf` | 23511 | 0.9770 | 0.9438 | 0.9923 | `stacked_xgb` | `joint_or_at_fp_0` |
+| `pdf` | 23511 | 0.9770 | 0.9438 | 0.9813 | `calibrated_max` | `joint_or_at_fp_0` |
 | `rtf` | 265 | 0.9955 | 0.9980 | 0.9980 | `specialist_priority` | `joint_or_at_fp_0` |
 | `javascript` | 69906 | 0.9883 | 0.9960 | 0.9960 | `calibrated_max` | `filetype_only` |
 | `python` | 18557 | 0.9653 | 0.9950 | 0.9950 | `specialist_priority` | `joint_or_at_fp_0` |
@@ -43,15 +43,15 @@ Three views of each filetype, evaluated on **585889 test-partition rows** (SHA25
 | `batch` | 21520 | 0.9092 | 0.9996 | 0.9996 | `specialist_priority` | `learned_blend_at_fp_3` |
 | `package.json` | 3523 | 0.9991 | 0.9992 | 0.9992 | `specialist_priority` | `joint_or_at_fp_0` |
 | `jar` | 451 | 0.9681 | 0.9839 | 0.9839 | `specialist_priority` | `joint_or_at_fp_0` |
-| `ruby` | 2950 | 0.9998 | 0.9989 | 1.0000 | `stacked_lr` | `joint_or_at_fp_0` |
+| `ruby` | 2950 | 0.9998 | 0.9989 | 0.9991 | `calibrated_max` | `joint_or_at_fp_0` |
 | `perl` | 3984 | 0.9631 | 0.9979 | 0.9979 | `specialist_priority` | `joint_or_at_fp_0` |
 
 Reading the table: ensemble ≥ specialist holds for every filetype by design. When `strategy = specialist_priority`, the ensemble's column matches the specialist's. When `strategy = calibrated_max`, the routing-free combiner beats the specialist alone — those filetypes benefit most from cross-model signal.
 
-## Severity tiers (L0..L9)
+## Severity tiers (L0..L20)
 
-L0..L9 are observation-derived severity grades, not optimization targets. For each route, level Lk's threshold is the (1 − qk × 10⁻⁶) quantile of that route's calibrated benign-score distribution on the dev partition — i.e., the score cut at which roughly qk benigns per million would be flagged. Strict tiers (qk below the empirical floor of n_benign × qk × 10⁻⁶ < 1) come from a generalized-Pareto fit to the benign-score upper tail; looser tiers are direct empirical quantiles.
+L0..L20 are observation-derived severity grades, not optimization targets. For each route, level Lk's threshold is the (1 − qk × 10⁻⁶) quantile of that route's calibrated benign-score distribution on the dev partition — i.e., the score cut at which roughly qk benigns per million would be flagged. Strict tiers (qk below the empirical floor of n_benign × qk × 10⁻⁶ < 1) come from a generalized-Pareto fit to the benign-score upper tail; looser tiers are direct empirical quantiles.
 
 **The grade is a description of the score's strictness, not a deployment knob optimized for any objective.** Litmus reads the per-level thresholds out of `route_policies.json`/`config.json` and assigns severity per file. The headline PR AUC and recall@3FP/M numbers above describe the underlying ranking — they don't depend on the L grade.
 
-Default deploy: L3 for hostile, L5 for suspicious. Per-route L0..L9 thresholds and observed FP/M live in [route_policies.md](route_policies.md) and each `filetypes/<name>/README.md`.
+Default deploy level: L3 (used for both hostile and suspicious tiers). Per-route L0..L20 thresholds and observed FP/M live in [route_policies.md](route_policies.md) and each `filetypes/<name>/README.md`.

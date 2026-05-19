@@ -1,34 +1,59 @@
 # Azoth
 
-Routed ensemble for static malware detection. A general LightGBM classifier scores every file; per-filetype specialists score files in their domain; any route above its calibrated threshold flags the file. Calibrators and L0..L9 thresholds fit on a 583032-row dev partition (12.5% of the labeled corpus). Metrics below: locked 585889-row test partition, disjoint from training and calibration. EMBER 2024 reference: Joyce et al., *KDD'25*.
+Routed ensemble for static malware detection. A general LightGBM classifier scores every file; per-filetype specialists score files in their domain; any route above its calibrated threshold flags the file. Calibrators and L0..L20 thresholds fit on a 583032-row dev partition (12.5% of the labeled corpus). Metrics below: locked 585889-row test partition, disjoint from training and calibration. EMBER 2024 reference: Joyce et al., *KDD'25*.
 
 ## Use
 
-Input: cleave-extracted JSON reports. Output: one of `benign`, `suspicious`, `hostile`, with severity level L0..L9. Loaded at scan time by [litmus](https://codeberg.org/atomdrift/litmus); deployed default is L3 hostile, L5 suspicious.
+Input: cleave-extracted JSON reports. Output: one of `benign`, `suspicious`, `hostile`, with severity level L0..L20. Loaded at scan time by [litmus](https://codeberg.org/atomdrift/litmus); deployed default is L3 (litmus loads both hostile and suspicious thresholds at the same level).
 
 Bundle layout: `config.json` (deployed thresholds), then per-route subdirectories under `general/`, `filegroups/<name>/`, `filetypes/<name>/`, each carrying `model.txt`, `feature_spec.json`, and `calibrator.json`. Architecture and FP-budget design: [DESIGN.md](DESIGN.md). Routing detail: [ENSEMBLE_MODEL.md](ENSEMBLE_MODEL.md). Single-model baseline: [GENERALIST_MODEL.md](GENERALIST_MODEL.md). Apache 2.0.
 
-## Performance
+## Routed Ensemble Performance
 
-| File type | Mal / Ben | PR AUC [95% CI] | Recall@3FP/M [95% CI] | ROC AUC [95% CI] | F1 [95% CI] | Δ vs EMBER 2024 |
+Deployed ensemble (general + filegroup + filetype combined per `route_policies.json`) measured on each filetype's slice of the locked test partition. Sorted by PR AUC, best first. Filetypes included: ≥25/25 in test, or ≥100/100 in the full labeled corpus.
+
+| File type | Test mal / ben | PR AUC | Recall @ 3FP/M | ROC AUC | F1 | Δ vs EMBER 2024 |
 |---|---:|---:|---:|---:|---:|---:|
-| [`pe`](filetypes/pe/README.md) | 109970 / 18938 | 0.9997 | 0.1881 | 0.9991 | 0.9976 | PR +0.0014 / ROC +0.0009 |
-| [`elf`](filetypes/elf/README.md) | 8826 / 16927 | 0.9998 | 0.9355 | 0.9999 | 0.9946 | PR +0.0065 / ROC +0.0066 |
-| [`macho`](filetypes/macho/README.md) | 258 / 1382 | 0.9942 | — | 0.9989 | 0.9602 | — |
-| [`msi`](filetypes/msi/README.md) | 215 / 8 | 0.9992 | — | 0.9785 | 0.9885 | — |
-| [`pdf`](filetypes/pdf/README.md) | 21777 / 1734 | 0.9988 | — | 0.9923 | 0.9954 | PR +0.0055 / ROC +0.0011 |
-| [`rtf`](filetypes/rtf/README.md) | 214 / 51 | 0.9995 | — | 0.9980 | 0.9882 | — |
-| [`javascript`](filetypes/javascript/README.md) | 10488 / 59418 | 0.9818 | — | 0.9960 | 0.9316 | — |
-| [`python`](filetypes/python/README.md) | 2271 / 16286 | 0.9765 | 0.5363 | 0.9950 | 0.9324 | — |
-| [`shell`](filetypes/shell/README.md) | 920 / 5682 | 0.9854 | 0.8087 | 0.9969 | 0.9461 | — |
-| [`powershell`](filetypes/powershell/README.md) | 240 / 274 | 0.9673 | — | 0.9797 | 0.9421 | — |
-| [`batch`](filetypes/batch/README.md) | 21095 / 425 | 1.0000 | — | 0.9996 | 0.9988 | — |
-| [`package.json`](filetypes/package.json/README.md) | 2162 / 1361 | 0.9996 | — | 0.9992 | 0.9972 | — |
-| [`jar`](filetypes/jar/README.md) | 215 / 236 | 0.9812 | — | 0.9839 | 0.9388 | — |
-| [`ruby`](filetypes/ruby/README.md) | 7 / 2943 | 1.0000 | — | 1.0000 | 1.0000 | — |
-| [`perl`](filetypes/perl/README.md) | 28 / 3956 | 0.9231 | — | 0.9979 | 0.9057 | — |
+| [`batch`](filetypes/batch/README.md) | 21095 / 425 | 1.0000 | 98.84% | 0.9996 | 99.88% | — |
+| [`pkg-info`](filetypes/pkg-info/README.md) | 1276 / 114 | 0.9999 | 96.94% | 0.9994 | 99.73% | — |
+| [`zst`](filetypes/zst/README.md) | 1283 / 2030 | 0.9999 | 89.40% | 0.9999 | 99.88% | — |
+| [`elf`](filetypes/elf/README.md) | 8826 / 16927 | 0.9998 | 93.55% | 0.9999 | 99.46% | PR +0.0065 / ROC +0.0066 |
+| [`pe`](filetypes/pe/README.md) | 109970 / 18938 | 0.9998 | 73.42% | 0.9991 | 99.55% | PR +0.0015 / ROC +0.0009 |
+| [`package.json`](filetypes/package.json/README.md) | 2162 / 1361 | 0.9996 | 90.61% | 0.9992 | 99.72% | — |
+| [`rtf`](filetypes/rtf/README.md) | 214 / 51 | 0.9995 | 95.33% | 0.9980 | 98.82% | — |
+| [`pdf`](filetypes/pdf/README.md) | 21777 / 1734 | 0.9979 | 6.59% | 0.9813 | 99.10% | PR +0.0046 / ROC -0.0099 |
+| [`tar.gz`](filetypes/tar.gz/README.md) | 2390 / 1610 | 0.9947 | 63.77% | 0.9921 | 95.90% | — |
+| [`macho`](filetypes/macho/README.md) | 258 / 1382 | 0.9936 | 80.62% | 0.9988 | 95.94% | — |
+| [`python-bytecode`](filetypes/python-bytecode/README.md) | 233 / 3841 | 0.9929 | 97.85% | 0.9993 | 98.92% | — |
+| [`tar`](filetypes/tar/README.md) | 125 / 47 | 0.9882 | 88.00% | 0.9653 | 93.88% | — |
+| [`zip`](filetypes/zip/README.md) | 7095 / 878 | 0.9874 | 43.81% | 0.9080 | 95.87% | — |
+| [`ole`](filetypes/ole/README.md) | 221 / 664 | 0.9858 | 90.95% | 0.9863 | 97.75% | — |
+| [`shell`](filetypes/shell/README.md) | 920 / 5682 | 0.9854 | 80.87% | 0.9969 | 94.61% | — |
+| [`javascript`](filetypes/javascript/README.md) | 10488 / 59418 | 0.9818 | 68.36% | 0.9960 | 93.16% | — |
+| [`vbs`](filetypes/vbs/README.md) | 445 / 423 | 0.9816 | 36.40% | 0.9847 | 95.87% | — |
+| [`jar`](filetypes/jar/README.md) | 215 / 236 | 0.9812 | 58.60% | 0.9839 | 93.88% | — |
+| [`kotlin`](filetypes/kotlin/README.md) | 2829 / 5341 | 0.9786 | 54.68% | 0.9821 | 95.55% | — |
+| [`python`](filetypes/python/README.md) | 2271 / 16286 | 0.9765 | 53.63% | 0.9950 | 93.24% | — |
+| [`docx`](filetypes/docx/README.md) | 173 / 31 | 0.9761 | 62.43% | 0.9153 | 92.27% | — |
+| [`powershell`](filetypes/powershell/README.md) | 240 / 274 | 0.9673 | 4.58% | 0.9797 | 94.21% | — |
+| [`lnk`](filetypes/lnk/README.md) | 257 / 127 | 0.9467 | 59.92% | 0.9114 | 90.00% | — |
+| [`php`](filetypes/php/README.md) | 516 / 10809 | 0.9275 | 67.25% | 0.9897 | 88.52% | — |
+| [`java_class`](filetypes/java_class/README.md) | 173 / 47070 | 0.9265 | 6.36% | 0.9855 | 91.86% | — |
+| [`perl`](filetypes/perl/README.md) | 28 / 3956 | 0.9231 | 82.14% | 0.9979 | 90.57% | — |
+| [`data`](filetypes/data/README.md) | 58 / 1157 | 0.8811 | 72.41% | 0.9705 | 87.62% | — |
+| [`unknown`](filetypes/unknown/README.md) | 1342 / 2020 | 0.8282 | 12.37% | 0.8331 | 76.41% | — |
+| [`gz`](filetypes/gz/README.md) | 168 / 6384 | 0.6391 | 29.76% | 0.8033 | 72.43% | — |
+| [`go`](filetypes/go/README.md) | 1177 / 11858 | 0.6324 | 1.53% | 0.9344 | 64.85% | — |
+| [`csharp`](filetypes/csharp/README.md) | 234 / 7572 | 0.5185 | 22.22% | 0.8946 | 48.47% | — |
+| [`c`](filetypes/c/README.md) | 1766 / 66562 | 0.5098 | 11.16% | 0.8817 | 56.12% | — |
+| [`jpeg`](filetypes/jpeg/README.md) | 125 / 1319 | 0.3336 | 0.80% | 0.7716 | 32.12% | — |
+| [`text`](filetypes/text/README.md) | 159 / 7979 | 0.2044 | 11.95% | 0.7609 | 25.81% | — |
+| [`png`](filetypes/png/README.md) | 657 / 14338 | 0.1546 | 1.37% | 0.6161 | 18.71% | — |
+| [`xml`](filetypes/xml/README.md) | 288 / 17921 | 0.1440 | 0.00% | 0.7434 | 32.99% | — |
+| [`plist`](filetypes/plist/README.md) | 68 / 1544 | 0.1100 | 1.47% | 0.6439 | 16.95% | — |
+| [`rust`](filetypes/rust/README.md) | 164 / 9604 | 0.1056 | 1.22% | 0.7708 | 17.98% | — |
 
-PR AUC summarizes recall-vs-precision across operating points; Recall@3FP/M is the deployment-budget headline. Per-severity L0..L9 thresholds (observed benign-score quantiles per route, GPD-extrapolated for FP/M targets below the empirical floor) are in [route_policies.md](route_policies.md) — they document the severity-grading curve litmus uses, not optimization targets.
+PR AUC summarizes recall-vs-precision across operating points; Recall@3FP/M is the deployment-budget headline (GPD-extrapolated for filetypes whose dev slice can't resolve 3 FP/M empirically). Per-severity L0..L20 thresholds are in [route_policies.md](route_policies.md) — they document the severity-grading curve litmus uses, not optimization targets.
 
 ## Provenance
 

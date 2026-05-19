@@ -8,8 +8,21 @@ Training-time benchmark only (no test-partition rows for `native`). ROC 0.9999, 
 
 ## Routing
 
-Default-level policy `—`. Allowed routes (OR over thresholds): none. Per-level severity thresholds in `route_policies.md` at the bundle root.
+Default level `—` over none. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
-LightGBM binary classifier: estimators=350, num_leaves=96, max_depth=12, min_child_samples=100, learning_rate=0.05, subsample=0.8, colsample=0.8, reg_alpha=0.0, reg_lambda=1.0, early_stop=40, device=auto. Feature spec: general-shared, 48518 features, policy `route_specific`. Trained on 1116880 rows (856135 mal / 260745 ben).
+| Parameter | Value |
+|---|---:|
+| Algorithm | LightGBM binary classifier |
+| Train rows | 1116880 (856135 mal / 260745 ben) |
+| Feature spec | 48518 features (`route_specific`) |
+| n_estimators | 350 |
+| num_leaves | 96 |
+| max_depth | 12 |
+| min_child_samples | 100 |
+| learning_rate | 0.05 |
+| subsample / colsample | 0.8 / 0.8 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
+| early_stopping_rounds | 40 |
+| device | auto |
