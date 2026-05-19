@@ -8,15 +8,15 @@ Deployed routed ensemble on the `jpeg` slice of the test partition: 125 malware 
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.7716 | 0.3336 | 0.80% | 32.12% | 0.0744 |
+| 0.7716 | 0.3336 | 0.80% | 0.3212 | 0.0744 |
 
 ## Specialist Performance
 
 `filetypes/jpeg` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.7714 | 0.3336 | 32.12% | 0.0745 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.7714 | 0.3336 | 0.3212 | 0.80% | 0.0745 | — |
 
 ## Routing
 

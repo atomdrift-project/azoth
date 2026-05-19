@@ -8,15 +8,15 @@ Deployed routed ensemble on the `shell` slice of the test partition: 920 malware
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9969 | 0.9854 | 80.87% | 94.61% | 0.0139 |
+| 0.9969 | 0.9854 | 80.87% | 0.9461 | 0.0139 |
 
 ## Specialist Performance
 
 `filetypes/shell` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9969 | 0.9855 | 94.70% | 0.0137 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9969 | 0.9855 | 0.9470 | 81.09% | 0.0137 | — |
 
 ## Routing
 

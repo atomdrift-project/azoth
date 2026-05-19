@@ -8,15 +8,15 @@ Deployed routed ensemble on the `csharp` slice of the test partition: 234 malwar
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.8946 | 0.5185 | 22.22% | 48.47% | 0.0281 |
+| 0.8946 | 0.5185 | 22.22% | 0.4847 | 0.0281 |
 
 ## Specialist Performance
 
 `filetypes/csharp` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.8418 | 0.5712 | 56.26% | 0.0203 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.8418 | 0.5712 | 0.5626 | 16.67% | 0.0203 | — |
 
 ## Routing
 

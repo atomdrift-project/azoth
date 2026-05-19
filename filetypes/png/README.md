@@ -8,15 +8,15 @@ Deployed routed ensemble on the `png` slice of the test partition: 657 malware /
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.6161 | 0.1546 | 1.37% | 18.71% | 0.0389 |
+| 0.6161 | 0.1546 | 1.37% | 0.1871 | 0.0389 |
 
 ## Specialist Performance
 
 `filetypes/png` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.5981 | 0.1043 | 12.61% | 0.0421 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.5981 | 0.1043 | 0.1261 | 0.00% | 0.0421 | — |
 
 ## Routing
 

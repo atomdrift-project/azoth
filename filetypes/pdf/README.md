@@ -8,15 +8,15 @@ Deployed routed ensemble on the `pdf` slice of the test partition: 21777 malware
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9813 | 0.9979 | 6.59% | 99.10% | 0.0172 |
+| 0.9813 | 0.9979 | 6.59% | 0.9910 | 0.0172 |
 
 ## Specialist Performance
 
 `filetypes/pdf` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9438 | 0.9935 | 98.89% | 0.8291 | ROC -0.0474 / PR +0.0002 |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9438 | 0.9935 | 0.9889 | 6.13% | 0.8291 | ROC -0.0474 / PR +0.0002 |
 
 ## Routing
 

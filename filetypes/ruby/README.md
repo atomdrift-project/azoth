@@ -8,15 +8,15 @@ Deployed routed ensemble on the `ruby` slice of the test partition: 7 malware / 
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9991 | 0.6428 | 57.14% | 80.00% | 0.0103 |
+| 0.9991 | 0.6428 | 57.14% | 0.8000 | 0.0103 |
 
 ## Specialist Performance
 
 `filetypes/ruby` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9989 | 0.8599 | 83.33% | 0.0068 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9989 | 0.8599 | 0.8333 | 71.43% | 0.0068 | — |
 
 ## Routing
 

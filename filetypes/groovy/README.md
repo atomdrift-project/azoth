@@ -8,15 +8,15 @@ Deployed routed ensemble on the `groovy` slice of the test partition: 15 malware
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.4111 | 0.0232 | 0.00% | 5.93% | 0.0225 |
+| 0.4111 | 0.0232 | 0.00% | 0.0593 | 0.0225 |
 
 ## Specialist Performance
 
 `filetypes/groovy` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.4101 | 0.0232 | 5.93% | 0.0226 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.4101 | 0.0232 | 0.0593 | 0.00% | 0.0226 | — |
 
 ## Routing
 

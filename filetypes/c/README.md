@@ -8,15 +8,15 @@ Deployed routed ensemble on the `c` slice of the test partition: 1766 malware / 
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.8817 | 0.5098 | 11.16% | 56.12% | 0.0211 |
+| 0.8817 | 0.5098 | 11.16% | 0.5612 | 0.0211 |
 
 ## Specialist Performance
 
 `filetypes/c` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.8818 | 0.5103 | 56.13% | 0.0211 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.8818 | 0.5103 | 0.5613 | 11.16% | 0.0211 | — |
 
 ## Routing
 

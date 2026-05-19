@@ -8,15 +8,15 @@ Deployed routed ensemble on the `vbs` slice of the test partition: 445 malware /
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9847 | 0.9816 | 36.40% | 95.87% | 0.1763 |
+| 0.9847 | 0.9816 | 36.40% | 0.9587 | 0.1763 |
 
 ## Specialist Performance
 
 `filetypes/vbs` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9852 | 0.9820 | 95.96% | 0.1770 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9852 | 0.9820 | 0.9596 | 36.73% | 0.1770 | — |
 
 ## Routing
 

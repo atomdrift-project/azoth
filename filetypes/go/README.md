@@ -8,15 +8,15 @@ Deployed routed ensemble on the `go` slice of the test partition: 1177 malware /
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9344 | 0.6324 | 1.53% | 64.85% | 0.0524 |
+| 0.9344 | 0.6324 | 1.53% | 0.6485 | 0.0524 |
 
 ## Specialist Performance
 
 `filetypes/go` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9275 | 0.6526 | 62.40% | 0.0844 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9275 | 0.6526 | 0.6240 | 0.85% | 0.0844 | — |
 
 ## Routing
 

@@ -8,15 +8,15 @@ Deployed routed ensemble on the `pkg-info` slice of the test partition: 1276 mal
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9994 | 0.9999 | 96.94% | 99.73% | 0.0282 |
+| 0.9994 | 0.9999 | 96.94% | 0.9973 | 0.0282 |
 
 ## Specialist Performance
 
 `filetypes/pkg-info` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9994 | 0.9999 | 99.73% | 0.0282 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9994 | 0.9999 | 0.9973 | 96.94% | 0.0282 | — |
 
 ## Routing
 

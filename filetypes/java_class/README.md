@@ -8,15 +8,15 @@ Deployed routed ensemble on the `java_class` slice of the test partition: 173 ma
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9855 | 0.9265 | 6.36% | 91.86% | 0.0012 |
+| 0.9855 | 0.9265 | 6.36% | 0.9186 | 0.0012 |
 
 ## Specialist Performance
 
 `filetypes/java_class` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9849 | 0.9254 | 91.81% | 0.0013 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9849 | 0.9254 | 0.9181 | 5.81% | 0.0013 | — |
 
 ## Routing
 

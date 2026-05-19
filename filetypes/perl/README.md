@@ -8,15 +8,15 @@ Deployed routed ensemble on the `perl` slice of the test partition: 28 malware /
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9979 | 0.9231 | 82.14% | 90.57% | 0.0036 |
+| 0.9979 | 0.9231 | 82.14% | 0.9057 | 0.0036 |
 
 ## Specialist Performance
 
 `filetypes/perl` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9979 | 0.9231 | 90.57% | 0.0036 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9979 | 0.9231 | 0.9057 | 82.14% | 0.0036 | — |
 
 ## Routing
 

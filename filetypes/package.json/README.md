@@ -8,15 +8,15 @@ Deployed routed ensemble on the `package.json` slice of the test partition: 2162
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9992 | 0.9996 | 90.61% | 99.72% | 0.0034 |
+| 0.9992 | 0.9996 | 90.61% | 0.9972 | 0.0034 |
 
 ## Specialist Performance
 
 `filetypes/package.json` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9992 | 0.9996 | 99.72% | 0.0034 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9992 | 0.9996 | 0.9972 | 90.69% | 0.0034 | — |
 
 ## Routing
 

@@ -8,15 +8,15 @@ Deployed routed ensemble on the `kotlin` slice of the test partition: 2829 malwa
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9821 | 0.9786 | 54.68% | 95.55% | 0.0275 |
+| 0.9821 | 0.9786 | 54.68% | 0.9555 | 0.0275 |
 
 ## Specialist Performance
 
 `filetypes/kotlin` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9800 | 0.9786 | 95.72% | 0.1560 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9800 | 0.9786 | 0.9572 | 52.32% | 0.1560 | — |
 
 ## Routing
 

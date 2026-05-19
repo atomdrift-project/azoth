@@ -8,15 +8,15 @@ Deployed routed ensemble on the `macho` slice of the test partition: 258 malware
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9988 | 0.9936 | 80.62% | 95.94% | 0.0107 |
+| 0.9988 | 0.9936 | 80.62% | 0.9594 | 0.0107 |
 
 ## Specialist Performance
 
 `filetypes/macho` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9988 | 0.9936 | 95.94% | 0.0108 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9988 | 0.9936 | 0.9594 | 80.62% | 0.0108 | — |
 
 ## Routing
 

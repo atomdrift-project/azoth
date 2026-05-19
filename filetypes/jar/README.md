@@ -8,15 +8,15 @@ Deployed routed ensemble on the `jar` slice of the test partition: 215 malware /
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9839 | 0.9812 | 58.60% | 93.88% | 0.0948 |
+| 0.9839 | 0.9812 | 58.60% | 0.9388 | 0.0948 |
 
 ## Specialist Performance
 
 `filetypes/jar` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9839 | 0.9812 | 93.88% | 0.0948 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9839 | 0.9812 | 0.9388 | 58.60% | 0.0948 | — |
 
 ## Routing
 

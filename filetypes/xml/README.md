@@ -8,15 +8,15 @@ Deployed routed ensemble on the `xml` slice of the test partition: 288 malware /
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.7434 | 0.1440 | 0.00% | 32.99% | 0.0155 |
+| 0.7434 | 0.1440 | 0.00% | 0.3299 | 0.0155 |
 
 ## Specialist Performance
 
 `filetypes/xml` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.7451 | 0.1445 | 33.06% | 0.0155 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.7451 | 0.1445 | 0.3306 | 0.00% | 0.0155 | — |
 
 ## Routing
 

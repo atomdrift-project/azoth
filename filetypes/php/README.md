@@ -8,15 +8,15 @@ Deployed routed ensemble on the `php` slice of the test partition: 516 malware /
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9897 | 0.9275 | 67.25% | 88.52% | 0.0087 |
+| 0.9897 | 0.9275 | 67.25% | 0.8852 | 0.0087 |
 
 ## Specialist Performance
 
 `filetypes/php` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9897 | 0.9280 | 88.61% | 0.0088 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9897 | 0.9280 | 0.8861 | 67.25% | 0.0088 | — |
 
 ## Routing
 

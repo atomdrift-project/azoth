@@ -8,15 +8,15 @@ Deployed routed ensemble on the `plist` slice of the test partition: 68 malware 
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.6439 | 0.1100 | 1.47% | 16.95% | 0.0396 |
+| 0.6439 | 0.1100 | 1.47% | 0.1695 | 0.0396 |
 
 ## Specialist Performance
 
 `filetypes/plist` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.6257 | 0.1043 | 16.00% | 0.0410 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.6257 | 0.1043 | 0.1600 | 1.47% | 0.0410 | — |
 
 ## Routing
 

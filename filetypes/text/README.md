@@ -8,15 +8,15 @@ Deployed routed ensemble on the `text` slice of the test partition: 159 malware 
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.7609 | 0.2044 | 11.95% | 25.81% | 0.0372 |
+| 0.7609 | 0.2044 | 11.95% | 0.2581 | 0.0372 |
 
 ## Specialist Performance
 
 `filetypes/text` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.7602 | 0.1877 | 23.53% | 0.0179 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.7602 | 0.1877 | 0.2353 | 0.00% | 0.0179 | — |
 
 ## Routing
 

@@ -8,15 +8,15 @@ Deployed routed ensemble on the `makefile` slice of the test partition: 17 malwa
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.7597 | 0.0184 | 0.00% | 5.83% | 0.0062 |
+| 0.7597 | 0.0184 | 0.00% | 0.0583 | 0.0062 |
 
 ## Specialist Performance
 
 `filetypes/makefile` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.7599 | 0.0184 | 5.83% | 0.0062 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.7599 | 0.0184 | 0.0583 | 0.00% | 0.0062 | — |
 
 ## Routing
 

@@ -8,15 +8,15 @@ Deployed routed ensemble on the `powershell` slice of the test partition: 240 ma
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9797 | 0.9673 | 4.58% | 94.21% | 0.0560 |
+| 0.9797 | 0.9673 | 4.58% | 0.9421 | 0.0560 |
 
 ## Specialist Performance
 
 `filetypes/powershell` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9790 | 0.9671 | 94.19% | 0.0569 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9790 | 0.9671 | 0.9419 | 4.60% | 0.0569 | — |
 
 ## Routing
 

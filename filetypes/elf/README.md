@@ -8,15 +8,15 @@ Deployed routed ensemble on the `elf` slice of the test partition: 8826 malware 
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9999 | 0.9998 | 93.55% | 99.46% | 0.0038 |
+| 0.9999 | 0.9998 | 93.55% | 0.9946 | 0.0038 |
 
 ## Specialist Performance
 
 `filetypes/elf` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9999 | 0.9999 | 99.47% | 0.0038 | ROC +0.0066 / PR +0.0066 |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9999 | 0.9999 | 0.9947 | 93.65% | 0.0038 | ROC +0.0066 / PR +0.0066 |
 
 ## Routing
 

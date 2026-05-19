@@ -8,15 +8,15 @@ Deployed routed ensemble on the `batch` slice of the test partition: 21095 malwa
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9996 | 1.0000 | 98.84% | 99.88% | 0.0020 |
+| 0.9996 | 1.0000 | 98.84% | 0.9988 | 0.0020 |
 
 ## Specialist Performance
 
 `filetypes/batch` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9996 | 1.0000 | 99.88% | 0.0020 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9996 | 1.0000 | 0.9988 | 98.84% | 0.0020 | — |
 
 ## Routing
 

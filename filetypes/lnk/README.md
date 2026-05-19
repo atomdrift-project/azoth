@@ -8,15 +8,15 @@ Deployed routed ensemble on the `lnk` slice of the test partition: 257 malware /
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9114 | 0.9467 | 59.92% | 90.00% | 0.1949 |
+| 0.9114 | 0.9467 | 59.92% | 0.9000 | 0.1949 |
 
 ## Specialist Performance
 
 `filetypes/lnk` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9111 | 0.9463 | 89.96% | 0.1954 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9111 | 0.9463 | 0.8996 | 59.77% | 0.1954 | — |
 
 ## Routing
 

@@ -8,15 +8,15 @@ Deployed routed ensemble on the `javascript` slice of the test partition: 10488 
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9960 | 0.9818 | 68.36% | 93.16% | 0.0153 |
+| 0.9960 | 0.9818 | 68.36% | 0.9316 | 0.0153 |
 
 ## Specialist Performance
 
 `filetypes/javascript` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9960 | 0.9825 | 93.20% | 0.0186 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9960 | 0.9825 | 0.9320 | 68.86% | 0.0186 | — |
 
 ## Routing
 

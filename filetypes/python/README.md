@@ -8,15 +8,15 @@ Deployed routed ensemble on the `python` slice of the test partition: 2271 malwa
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9950 | 0.9765 | 53.63% | 93.24% | 0.0141 |
+| 0.9950 | 0.9765 | 53.63% | 0.9324 | 0.0141 |
 
 ## Specialist Performance
 
 `filetypes/python` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9950 | 0.9765 | 93.24% | 0.0141 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9950 | 0.9765 | 0.9324 | 53.63% | 0.0141 | — |
 
 ## Routing
 

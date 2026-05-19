@@ -8,15 +8,15 @@ Deployed routed ensemble on the `rust` slice of the test partition: 164 malware 
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.7708 | 0.1056 | 1.22% | 17.98% | 0.0165 |
+| 0.7708 | 0.1056 | 1.22% | 0.1798 | 0.0165 |
 
 ## Specialist Performance
 
 `filetypes/rust` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.7708 | 0.1057 | 18.05% | 0.0165 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.7708 | 0.1057 | 0.1805 | 1.22% | 0.0165 | — |
 
 ## Routing
 

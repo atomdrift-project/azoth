@@ -10,15 +10,15 @@ Deployed routed ensemble on the `xlsx` slice of the test partition: 2232 malware
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.8492 | 0.9988 | — | 99.73% | 0.0053 |
+| 0.8492 | 0.9988 | — | 0.9973 | 0.0053 |
 
 ## Specialist Performance
 
 `filetypes/xlsx` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.5000 | 0.9947 | 99.73% | 0.0053 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.5000 | 0.9947 | 0.9973 | — | 0.0053 | — |
 
 ## Routing
 

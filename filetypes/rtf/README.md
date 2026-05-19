@@ -8,15 +8,15 @@ Deployed routed ensemble on the `rtf` slice of the test partition: 214 malware /
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9980 | 0.9995 | 95.33% | 98.82% | 0.0296 |
+| 0.9980 | 0.9995 | 95.33% | 0.9882 | 0.0296 |
 
 ## Specialist Performance
 
 `filetypes/rtf` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9980 | 0.9995 | 98.82% | 0.0296 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9980 | 0.9995 | 0.9882 | 95.33% | 0.0296 | — |
 
 ## Routing
 

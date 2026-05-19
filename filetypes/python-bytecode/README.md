@@ -8,15 +8,15 @@ Deployed routed ensemble on the `python-bytecode` slice of the test partition: 2
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9993 | 0.9929 | 97.85% | 98.92% | 0.0015 |
+| 0.9993 | 0.9929 | 97.85% | 0.9892 | 0.0015 |
 
 ## Specialist Performance
 
 `filetypes/python-bytecode` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9992 | 0.9929 | 98.92% | 0.0016 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9992 | 0.9929 | 0.9892 | 97.85% | 0.0016 | — |
 
 ## Routing
 

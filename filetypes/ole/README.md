@@ -8,15 +8,15 @@ Deployed routed ensemble on the `ole` slice of the test partition: 221 malware /
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9863 | 0.9858 | 90.95% | 97.75% | 0.0188 |
+| 0.9863 | 0.9858 | 90.95% | 0.9775 | 0.0188 |
 
 ## Specialist Performance
 
 `filetypes/ole` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9863 | 0.9858 | 97.75% | 0.0188 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9863 | 0.9858 | 0.9775 | 90.95% | 0.0188 | — |
 
 ## Routing
 

@@ -8,15 +8,15 @@ Deployed routed ensemble on the `msi` slice of the test partition: 215 malware /
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9785 | 0.9992 | — | 98.85% | 0.1911 |
+| 0.9785 | 0.9992 | — | 0.9885 | 0.1911 |
 
 ## Specialist Performance
 
 `filetypes/msi` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.9785 | 0.9992 | 98.85% | 0.1911 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.9785 | 0.9992 | 0.9885 | — | 0.1911 | — |
 
 ## Routing
 

@@ -8,15 +8,15 @@ Deployed routed ensemble on the `unknown` slice of the test partition: 1342 malw
 
 | ROC AUC | PR AUC | Recall @ 3FP/M | F1 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.8331 | 0.8282 | 12.37% | 76.41% | 0.1208 |
+| 0.8331 | 0.8282 | 12.37% | 0.7641 | 0.1208 |
 
 ## Specialist Performance
 
 `filetypes/unknown` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|
-| 0.8312 | 0.8045 | 76.51% | 0.3915 | — |
+| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+|---:|---:|---:|---:|---:|---:|
+| 0.8312 | 0.8045 | 0.7651 | 0.00% | 0.3915 | — |
 
 ## Routing
 
