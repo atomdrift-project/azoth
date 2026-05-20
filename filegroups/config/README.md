@@ -4,7 +4,7 @@ LightGBM specialist for `ini`, `json`, `package.json`, `plist`, `toml`, `xml`, `
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `config`). ROC 0.9984, PR 0.9916, F1 0.9672 on 23,248 rows (2,513 mal / 20,735 ben).
+Training-time benchmark only (no test-partition rows for `config`). ROC 0.9982, PR 0.9910, F1 0.9687 on 23,882 rows (2,521 mal / 21,361 ben).
 
 ## Routing
 
@@ -15,8 +15,8 @@ At the L3 deploy level the policy is `—` over none. Full per-level thresholds:
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 162,484 (18,106 mal / 144,378 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 166,992 (18,137 mal / 148,855 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 300 |
 | num_leaves | 96 |
 | max_depth | 12 |

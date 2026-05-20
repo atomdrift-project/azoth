@@ -8,7 +8,7 @@ Deployed at L3 hostile on the `csharp` slice of the locked test partition: 234 m
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 18.80% | 44 | 0 | 0.0 | `joint_or_at_fp_0` |
+| 17.52% | 41 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Deployed at L3 hostile on the `csharp` slice of the locked test partition: 234 m
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.8418 | 0.5712 | 0.5626 | 16.67% | 0.0203 | — |
+| 0.8771 | 0.5506 | 0.5327 | 24.79% | 0.0199 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegro
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 54,055 (1,531 mal / 52,524 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 54,057 (1,532 mal / 52,525 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 120 |
 | num_leaves | 96 |
 | max_depth | 12 |

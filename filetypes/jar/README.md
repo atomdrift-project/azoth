@@ -4,11 +4,11 @@ LightGBM specialist for `jar`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `jar` slice of the locked test partition: 215 malware / 236 benign (451 rows). The OR-rule fires across `general`, `filetypes/jar` via the `joint_or_at_fp_0` policy.
+Deployed at L3 hostile on the `jar` slice of the locked test partition: 215 malware / 237 benign (452 rows). The OR-rule fires across `filetypes/jar` via the `filetype_only_at_fp_0` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 54.97% | 105 | 0 | 0.0 | `joint_or_at_fp_0` |
+| 56.54% | 108 | 0 | 0.0 | `filetype_only_at_fp_0` |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Deployed at L3 hostile on the `jar` slice of the locked test partition: 215 malw
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9839 | 0.9812 | 0.9388 | 58.60% | 0.0948 | — |
+| 0.9836 | 0.9811 | 0.9333 | 61.86% | 0.1007 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filetypes/jar`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `filetype_only_at_fp_0` over `filetypes/jar`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,073 (1,239 mal / 1,834 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 3,142 (1,249 mal / 1,893 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 120 |
 | num_leaves | 96 |
 | max_depth | 12 |

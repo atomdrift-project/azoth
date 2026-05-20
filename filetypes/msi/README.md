@@ -4,11 +4,11 @@ LightGBM specialist for `msi`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `msi` slice of the locked test partition: 215 malware / 8 benign (223 rows). The OR-rule fires across `general`, `filetypes/msi` via the `joint_or_at_fp_0` policy.
+Deployed at L3 hostile on the `msi` slice of the locked test partition: 218 malware / 8 benign (226 rows). The OR-rule fires across `filetypes/msi` via the `filetype_only` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 70.59% | 156 | 0 | 0.0 | `joint_or_at_fp_0` |
+| 61.11% | 143 | 0 | 0.0 | `filetype_only` |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Deployed at L3 hostile on the `msi` slice of the locked test partition: 215 malw
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9785 | 0.9992 | 0.9885 | — | 0.1911 | — |
+| 0.9828 | 0.9994 | 0.9887 | — | 0.1586 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filetypes/msi`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `filetype_only` over `filetypes/msi`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,534 (1,413 mal / 121 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 1,713 (1,588 mal / 125 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

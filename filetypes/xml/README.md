@@ -4,11 +4,11 @@ LightGBM specialist for `xml`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `xml` slice of the locked test partition: 288 malware / 17,921 benign (18,209 rows). The OR-rule fires across `general`, `filegroups/config` via the `joint_or_at_fp_0` policy.
+Deployed at L3 hostile on the `xml` slice of the locked test partition: 291 malware / 18,378 benign (18,669 rows). The OR-rule fires across `general`, `filegroups/config`, `filetypes/xml` via the `learned_blend_at_fp_3` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 2.42% | 7 | 0 | 0.0 | `joint_or_at_fp_0` |
+| 2.74% | 8 | 0 | 0.0 | `learned_blend_at_fp_3` |
 
 ## Specialist Performance
 
@@ -16,21 +16,21 @@ Deployed at L3 hostile on the `xml` slice of the locked test partition: 288 malw
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.7451 | 0.1445 | 0.3306 | 0.00% | 0.0155 | — |
+| 0.5068 | 0.0245 | 0.0307 | 0.00% | 0.0153 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/config`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `learned_blend_at_fp_3` over `general`, `filegroups/config`, `filetypes/xml`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 125,937 (1,948 mal / 123,989 ben) |
-| Feature spec | 60358 features (`general_shared`) |
-| n_estimators | 250 |
-| num_leaves | 96 |
+| Train rows | 129,881 (1,965 mal / 127,916 ben) |
+| Feature spec | 60778 features (`general_shared`) |
+| n_estimators | 400 |
+| num_leaves | 128 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |

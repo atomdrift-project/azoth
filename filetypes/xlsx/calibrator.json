@@ -2,14 +2,14 @@
   "schema": "azoth.calibrator.isotonic.v1",
   "method": "isotonic+anchor",
   "x": [
-    0.991579532623291,
+    0.99159175157547,
     1.0
   ],
   "y": [
-    0.9928347514554411,
+    0.9928443649373881,
     1.0
   ],
   "out_of_bounds": "clip",
-  "n_train": 2233,
-  "fit_log": "isotonic on 2233 rows (2217 malware, 16 benign); empirical max x=0.992 y=0.993; method=isotonic+anchor, breakpoints=2"
+  "n_train": 2236,
+  "fit_log": "isotonic on 2236 rows (2220 malware, 16 benign); empirical max x=0.992 y=0.993; method=isotonic+anchor, breakpoints=2"
 }

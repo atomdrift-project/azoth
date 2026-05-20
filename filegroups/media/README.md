@@ -4,7 +4,7 @@ LightGBM specialist for `bmp`, `gif`, `jpeg`, `jpg`, `mp3`, `mp4`, `png`, `svg`,
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `media`). ROC 0.9871, PR 0.8759, F1 0.8048 on 16,364 rows (782 mal / 15,582 ben).
+Training-time benchmark only (no test-partition rows for `media`). ROC 0.9852, PR 0.8691, F1 0.7978 on 16,491 rows (784 mal / 15,707 ben).
 
 ## Routing
 
@@ -15,8 +15,8 @@ At the L3 deploy level the policy is `—` over none. Full per-level thresholds:
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 113,181 (5,437 mal / 107,744 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 114,175 (5,449 mal / 108,726 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

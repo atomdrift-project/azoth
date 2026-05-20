@@ -4,11 +4,11 @@ LightGBM specialist for `shell`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `shell` slice of the locked test partition: 920 malware / 5,682 benign (6,602 rows). The OR-rule fires across `filetypes/shell` via the `filetype_only` policy.
+Deployed at L3 hostile on the `shell` slice of the locked test partition: 949 malware / 5,693 benign (6,642 rows). The OR-rule fires across `general`, `filegroups/scripts`, `filetypes/shell` via the `joint_or_at_fp_0` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 46.21% | 366 | 0 | 0.0 | `filetype_only` |
+| 84.80% | 692 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Deployed at L3 hostile on the `shell` slice of the locked test partition: 920 ma
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9969 | 0.9855 | 0.9470 | 81.09% | 0.0137 | — |
+| 0.9970 | 0.9859 | 0.9457 | 79.45% | 0.0138 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `filetype_only` over `filetypes/shell`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/scripts`, `filetypes/shell`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 44,922 (5,513 mal / 39,409 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 45,757 (5,927 mal / 39,830 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 150 |
 | num_leaves | 96 |
 | max_depth | 12 |

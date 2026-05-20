@@ -16,7 +16,7 @@ Deployed at L3 hostile on the `groovy` slice of the locked test partition: 15 ma
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.4101 | 0.0232 | 0.0593 | 0.00% | 0.0226 | — |
+| 0.7273 | 0.0444 | 0.1074 | 0.00% | 0.0225 | — |
 
 ## Routing
 
@@ -27,12 +27,12 @@ At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`. Full per
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,500 (108 mal / 4,392 ben) |
-| Feature spec | 60358 features (`general_shared`) |
-| n_estimators | 120 |
+| Train rows | 4,504 (108 mal / 4,396 ben) |
+| Feature spec | 60778 features (`general_shared`) |
+| n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
-| min_child_samples | 30 |
+| min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |

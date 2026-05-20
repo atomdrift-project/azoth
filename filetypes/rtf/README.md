@@ -4,11 +4,11 @@ LightGBM specialist for `rtf`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `rtf` slice of the locked test partition: 214 malware / 51 benign (265 rows). The OR-rule fires across `general`, `filetypes/rtf` via the `joint_or_at_fp_0` policy.
+Deployed at L3 hostile on the `rtf` slice of the locked test partition: 215 malware / 51 benign (266 rows). The OR-rule fires across `general`, `filegroups/documents`, `filetypes/rtf` via the `max_rule` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 97.66% | 209 | 0 | 0.0 | `joint_or_at_fp_0` |
+| 97.67% | 210 | 0 | 0.0 | `max_rule` |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Deployed at L3 hostile on the `rtf` slice of the locked test partition: 214 malw
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9980 | 0.9995 | 0.9882 | 95.33% | 0.0296 | — |
+| 0.9983 | 0.9996 | 0.9885 | 95.35% | 0.0299 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filetypes/rtf`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `max_rule` over `general`, `filegroups/documents`, `filetypes/rtf`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,669 (1,240 mal / 429 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 1,679 (1,250 mal / 429 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 120 |
 | num_leaves | 96 |
 | max_depth | 12 |

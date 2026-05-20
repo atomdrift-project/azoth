@@ -4,11 +4,11 @@ LightGBM specialist for `powershell`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `powershell` slice of the locked test partition: 240 malware / 274 benign (514 rows). The OR-rule fires across `general`, `filegroups/scripts`, `filetypes/powershell` via the `joint_or_at_fp_0` policy.
+Deployed at L3 hostile on the `powershell` slice of the locked test partition: 256 malware / 274 benign (530 rows). The OR-rule fires across `general`, `filegroups/scripts`, `filetypes/powershell` via the `joint_or_at_fp_0` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 24.90% | 60 | 0 | 0.0 | `joint_or_at_fp_0` |
+| 39.69% | 102 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Deployed at L3 hostile on the `powershell` slice of the locked test partition: 2
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9790 | 0.9671 | 0.9419 | 4.60% | 0.0569 | — |
+| 0.9831 | 0.9724 | 0.9484 | 3.52% | 0.0447 | — |
 
 ## Routing
 
@@ -27,12 +27,12 @@ At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegro
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,386 (1,622 mal / 1,764 ben) |
-| Feature spec | 60358 features (`general_shared`) |
-| n_estimators | 120 |
+| Train rows | 3,617 (1,811 mal / 1,806 ben) |
+| Feature spec | 60778 features (`general_shared`) |
+| n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
-| min_child_samples | 40 |
+| min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |

@@ -4,11 +4,11 @@ LightGBM specialist for `docx`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `docx` slice of the locked test partition: 173 malware / 31 benign (204 rows). The OR-rule fires across `general`, `filegroups/documents`, `filetypes/docx` via the `joint_or_at_fp_0` policy.
+Deployed at L3 hostile on the `docx` slice of the locked test partition: 176 malware / 31 benign (207 rows). The OR-rule fires across `general`, `filegroups/documents`, `filetypes/docx` via the `joint_or_at_fp_0` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 69.94% | 121 | 0 | 0.0 | `joint_or_at_fp_0` |
+| 70.45% | 124 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Deployed at L3 hostile on the `docx` slice of the locked test partition: 173 mal
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9153 | 0.9761 | 0.9227 | 62.43% | 0.2614 | — |
+| 0.9161 | 0.9767 | 0.9263 | 63.07% | 0.2576 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegro
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,591 (1,378 mal / 213 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 1,615 (1,402 mal / 213 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 120 |
 | num_leaves | 96 |
 | max_depth | 12 |

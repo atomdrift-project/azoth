@@ -4,11 +4,11 @@ LightGBM specialist for `jpeg`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `jpeg` slice of the locked test partition: 125 malware / 1,319 benign (1,444 rows). The OR-rule fires across `general`, `filegroups/media`, `filetypes/jpeg` via the `learned_blend_at_fp_1` policy.
+Deployed at L3 hostile on the `jpeg` slice of the locked test partition: 127 malware / 1,319 benign (1,446 rows). The OR-rule fires across `general`, `filegroups/media` via the `joint_or_at_fp_0` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 11.20% | 14 | 0 | 0.0 | `learned_blend_at_fp_1` |
+| 12.60% | 16 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Deployed at L3 hostile on the `jpeg` slice of the locked test partition: 125 mal
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.7714 | 0.3336 | 0.3212 | 0.80% | 0.0745 | — |
+| 0.7477 | 0.2298 | 0.3037 | 21.26% | 0.0787 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `learned_blend_at_fp_1` over `general`, `filegroups/media`, `filetypes/jpeg`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/media`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 10,467 (844 mal / 9,623 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 10,522 (853 mal / 9,669 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 120 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -4,11 +4,11 @@ LightGBM specialist for `pdf`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `pdf` slice of the locked test partition: 21,777 malware / 1,734 benign (23,511 rows). The OR-rule fires across `general`, `filegroups/documents`, `filetypes/pdf` via the `joint_or_at_fp_0` policy.
+Deployed at L3 hostile on the `pdf` slice of the locked test partition: 21,801 malware / 1,734 benign (23,535 rows). The OR-rule fires across `general`, `filegroups/documents`, `filetypes/pdf` via the `joint_or_at_fp_0` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 5.87% | 1,278 | 0 | 0.0 | `joint_or_at_fp_0` |
+| 6.48% | 1,412 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Deployed at L3 hostile on the `pdf` slice of the locked test partition: 21,777 m
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9438 | 0.9935 | 0.9889 | 6.13% | 0.8291 | ROC -0.0474 / PR +0.0002 |
+| 0.9745 | 0.9969 | 0.9935 | 6.26% | 0.8190 | ROC -0.0167 / PR +0.0036 |
 
 ## Routing
 
@@ -27,8 +27,8 @@ At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegro
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 162,814 (150,685 mal / 12,129 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 163,541 (151,412 mal / 12,129 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 120 |
 | num_leaves | 96 |
 | max_depth | 12 |

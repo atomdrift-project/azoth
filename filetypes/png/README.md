@@ -4,11 +4,11 @@ LightGBM specialist for `png`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `png` slice of the locked test partition: 657 malware / 14,338 benign (14,995 rows). The OR-rule fires across `general`, `filegroups/media`, `filetypes/png` via the `learned_blend_at_fp_0` policy.
+Deployed at L3 hostile on the `png` slice of the locked test partition: 657 malware / 14,388 benign (15,045 rows). The OR-rule fires across `general`, `filegroups/media`, `filetypes/png` via the `learned_blend_at_fp_0` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 6.85% | 45 | 0 | 0.0 | `learned_blend_at_fp_0` |
+| 0.15% | 1 | 0 | 0.0 | `learned_blend_at_fp_0` |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Deployed at L3 hostile on the `png` slice of the locked test partition: 657 malw
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.5981 | 0.1043 | 0.1261 | 0.00% | 0.0421 | — |
+| 0.5993 | 0.1206 | 0.1593 | 0.00% | 0.0417 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ At the L3 deploy level the policy is `learned_blend_at_fp_0` over `general`, `fi
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 102,714 (4,593 mal / 98,121 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 103,653 (4,596 mal / 99,057 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 120 |
 | num_leaves | 96 |
 | max_depth | 12 |

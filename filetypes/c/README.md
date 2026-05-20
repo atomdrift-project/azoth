@@ -4,11 +4,11 @@ LightGBM specialist for `c`. Member of the Azoth routed ensemble; bundle root: [
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `c` slice of the locked test partition: 1,766 malware / 66,562 benign (68,328 rows). The OR-rule fires across `general`, `filegroups/source`, `filetypes/c` via the `joint_or_at_fp_0` policy.
+Deployed at L3 hostile on the `c` slice of the locked test partition: 1,766 malware / 66,647 benign (68,413 rows). The OR-rule fires across `general`, `filegroups/source`, `filetypes/c` via the `joint_or_at_fp_0` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 5.44% | 96 | 0 | 0.0 | `joint_or_at_fp_0` |
+| 3.74% | 66 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Deployed at L3 hostile on the `c` slice of the locked test partition: 1,766 malw
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.8818 | 0.5103 | 0.5613 | 11.16% | 0.0211 | — |
+| 0.8956 | 0.4890 | 0.5302 | 12.85% | 0.0211 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegro
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 475,087 (12,555 mal / 462,532 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 476,397 (12,557 mal / 463,840 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 150 |
 | num_leaves | 96 |
 | max_depth | 12 |

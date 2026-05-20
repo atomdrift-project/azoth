@@ -4,11 +4,11 @@ LightGBM specialist for `java_class`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `java_class` slice of the locked test partition: 173 malware / 47,070 benign (47,243 rows). The OR-rule fires across `general`, `filegroups/portable`, `filetypes/java_class` via the `joint_or_at_fp_0` policy.
+Deployed at L3 hostile on the `java_class` slice of the locked test partition: 173 malware / 47,377 benign (47,550 rows). The OR-rule fires across `general`, `filegroups/portable`, `filetypes/java_class` via the `joint_or_at_fp_0` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 32.37% | 56 | 0 | 0.0 | `joint_or_at_fp_0` |
+| 45.66% | 79 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Deployed at L3 hostile on the `java_class` slice of the locked test partition: 1
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9849 | 0.9254 | 0.9181 | 5.81% | 0.0013 | — |
+| 0.9815 | 0.9385 | 0.9231 | 45.09% | 0.0005 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegro
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 319,282 (1,120 mal / 318,162 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 335,071 (1,139 mal / 333,932 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 250 |
 | num_leaves | 128 |
 | max_depth | 12 |

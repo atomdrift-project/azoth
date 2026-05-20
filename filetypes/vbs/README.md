@@ -4,11 +4,11 @@ LightGBM specialist for `vbs`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `vbs` slice of the locked test partition: 445 malware / 423 benign (868 rows). The OR-rule fires across `general`, `filetypes/vbs` via the `joint_or_at_fp_0` policy.
+Deployed at L3 hostile on the `vbs` slice of the locked test partition: 462 malware / 423 benign (885 rows). The OR-rule fires across `general`, `filetypes/vbs` via the `joint_or_at_fp_0` policy.
 
 | Recall | TP | FP | FP / M | Policy |
 |---:|---:|---:|---:|---|
-| 27.19% | 121 | 0 | 0.0 | `joint_or_at_fp_0` |
+| 27.71% | 128 | 0 | 0.0 | `joint_or_at_fp_0` |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Deployed at L3 hostile on the `vbs` slice of the locked test partition: 445 malw
 
 | ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9852 | 0.9820 | 0.9596 | 36.73% | 0.1770 | — |
+| 0.9811 | 0.9772 | 0.9523 | 26.84% | 0.0879 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filetyp
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 5,884 (3,026 mal / 2,858 ben) |
-| Feature spec | 60358 features (`general_shared`) |
+| Train rows | 6,122 (3,263 mal / 2,859 ben) |
+| Feature spec | 60778 features (`general_shared`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
