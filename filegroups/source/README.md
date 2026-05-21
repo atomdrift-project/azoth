@@ -4,7 +4,7 @@ LightGBM specialist for `c`, `cpp`, `csharp`, `go`, `java`, `kotlin`, `makefile`
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `source`). ROC 0.9804, PR 0.8790, F1 0.8125 on 120,160 rows (6,207 mal / 113,953 ben).
+Training-time benchmark only (no test-partition rows for `source`). ROC 0.980406, PR 0.879035, F1 0.8125 on 120,160 rows (6,207 mal / 113,953 ben).
 
 ## Routing
 

@@ -4,7 +4,7 @@ LightGBM specialist for `elf`, `macho`, `pe`. Member of the Azoth routed ensembl
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `native`). ROC 0.9999, PR 1.0000, F1 0.9986 on 156,934 rows (119,532 mal / 37,402 ben).
+Training-time benchmark only (no test-partition rows for `native`). ROC 0.999938, PR 0.999980, F1 0.9986 on 156,934 rows (119,532 mal / 37,402 ben).
 
 ## Routing
 

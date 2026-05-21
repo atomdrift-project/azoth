@@ -4,7 +4,7 @@ LightGBM specialist for `batch`, `javascript`, `lua`, `perl`, `php`, `powershell
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `scripts`). ROC 0.9997, PR 0.9992, F1 0.9891 on 137,715 rows (35,696 mal / 102,019 ben).
+Training-time benchmark only (no test-partition rows for `scripts`). ROC 0.999697, PR 0.999242, F1 0.9891 on 137,715 rows (35,696 mal / 102,019 ben).
 
 ## Routing
 

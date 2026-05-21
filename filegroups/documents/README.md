@@ -4,7 +4,7 @@ LightGBM specialist for `doc`, `docx`, `html`, `ole`, `pdf`, `ppt`, `pptx`, `rtf
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `documents`). ROC 0.9981, PR 0.9996, F1 0.9933 on 30,772 rows (27,262 mal / 3,510 ben).
+Training-time benchmark only (no test-partition rows for `documents`). ROC 0.998065, PR 0.999621, F1 0.9933 on 30,772 rows (27,262 mal / 3,510 ben).
 
 ## Routing
 

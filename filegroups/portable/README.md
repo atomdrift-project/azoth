@@ -4,7 +4,7 @@ LightGBM specialist for `dex`, `java_class`, `pyc`, `wasm`. Member of the Azoth 
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `portable`). ROC 0.9748, PR 0.9487, F1 0.9425 on 47,550 rows (173 mal / 47,377 ben).
+Training-time benchmark only (no test-partition rows for `portable`). ROC 0.974845, PR 0.948729, F1 0.9425 on 47,550 rows (173 mal / 47,377 ben).
 
 ## Routing
 

@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `groovy
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.8208 | 0.9839 | 0.7857 | 53.33% | 0.0086 |
+| 0.820795 | 0.983899 | 0.785714 | 53.33% | 0.0086 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `groovy
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.8208 | 0.9839 | 0.7857 | 53.33% | 0.0086 | — |
+| 0.820795 | 0.983899 | 0.785714 | 53.33% | 0.0086 | — |
 
 ## Routing
 

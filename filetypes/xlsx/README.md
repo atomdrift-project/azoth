@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9994 | 0.9089 | 0.9973 | — | 0.0052 |
+| 0.999427 | 0.908862 | 0.997325 | — | 0.0052 |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9947 | 0.5000 | 0.9973 | — | 0.0053 | — |
+| 0.994664 | 0.500000 | 0.997325 | — | 0.0053 | — |
 
 ## Routing
 

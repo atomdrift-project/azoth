@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9982 | 0.9983 | 0.9903 | 97.19% | 0.0056 |
+| 0.998171 | 0.998315 | 0.990302 | 97.19% | 0.0056 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9982 | 0.9983 | 0.9903 | 97.19% | 0.0056 | — |
+| 0.998171 | 0.998315 | 0.990302 | 97.19% | 0.0056 | — |
 
 ## Routing
 

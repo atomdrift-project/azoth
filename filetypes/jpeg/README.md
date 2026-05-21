@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.2775 | 0.6558 | 0.3140 | 8.66% | 0.0766 |
+| 0.277459 | 0.655833 | 0.313953 | 8.66% | 0.0766 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.3085 | 0.7706 | 0.3248 | 0.00% | 0.0768 | — |
+| 0.308471 | 0.770561 | 0.324786 | 0.00% | 0.0768 | — |
 
 ## Routing
 

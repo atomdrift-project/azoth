@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9900 | 0.9907 | 0.9464 | 71.63% | 0.0404 |
+| 0.990034 | 0.990717 | 0.946387 | 71.63% | 0.0404 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9900 | 0.9907 | 0.9464 | 71.63% | 0.0404 | — |
+| 0.990034 | 0.990717 | 0.946387 | 71.63% | 0.0404 | — |
 
 ## Routing
 

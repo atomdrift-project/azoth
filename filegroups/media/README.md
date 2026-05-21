@@ -4,7 +4,7 @@ LightGBM specialist for `bmp`, `gif`, `jpeg`, `jpg`, `mp3`, `mp4`, `png`, `svg`,
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `media`). ROC 0.6982, PR 0.1964, F1 0.2326 on 16,491 rows (784 mal / 15,707 ben).
+Training-time benchmark only (no test-partition rows for `media`). ROC 0.698193, PR 0.196385, F1 0.2326 on 16,491 rows (784 mal / 15,707 ben).
 
 ## Routing
 

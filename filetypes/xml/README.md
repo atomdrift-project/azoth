@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xml` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.2122 | 0.8936 | 0.3183 | 24.05% | 0.0154 |
+| 0.212186 | 0.893647 | 0.318280 | 24.05% | 0.0154 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xml` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.2122 | 0.8936 | 0.3183 | 24.05% | 0.0154 | — |
+| 0.212186 | 0.893647 | 0.318280 | 24.05% | 0.0154 | — |
 
 ## Routing
 

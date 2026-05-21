@@ -4,7 +4,7 @@ LightGBM specialist for `ini`, `json`, `package.json`, `plist`, `toml`, `xml`, `
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `config`). ROC 0.9928, PR 0.9765, F1 0.9566 on 23,882 rows (2,521 mal / 21,361 ben).
+Training-time benchmark only (no test-partition rows for `config`). ROC 0.992781, PR 0.976517, F1 0.9566 on 23,882 rows (2,521 mal / 21,361 ben).
 
 ## Routing
 
