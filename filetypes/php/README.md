@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `php` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9572 | 0.9933 | 0.9496 | 76.49% | 0.0319 |
+| 0.9893 | 0.9984 | 0.9607 | 70.33% | 0.0031 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `php` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9896 | 0.9985 | 0.9609 | 73.41% | 0.0031 | — |
+| 0.9893 | 0.9984 | 0.9607 | 70.33% | 0.0031 | — |
 
 ## Routing
 
-Files matching `php` are scored by `general`, `filegroups/scripts`, `filetypes/php`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `php` are scored by `filetypes/php`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
@@ -28,7 +28,7 @@ Files matching `php` are scored by `general`, `filegroups/scripts`, `filetypes/p
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 79,058 (3,339 mal / 75,719 ben) |
-| Feature spec | 60778 features (`general_shared`) |
+| Feature spec | 60790 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

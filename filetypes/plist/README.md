@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `plist`
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.0936 | 0.6029 | 0.1218 | 1.47% | 0.0412 |
+| 0.9160 | 0.9865 | 0.8480 | 52.94% | 0.0146 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `plist`
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.0936 | 0.6029 | 0.1218 | 1.47% | 0.0412 | — |
+| 0.9160 | 0.9865 | 0.8480 | 52.94% | 0.0146 | — |
 
 ## Routing
 
-Files matching `plist` are scored by `filegroups/config`, `filetypes/plist`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `plist` are scored by `general`, `filegroups/config`, `filetypes/plist`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
@@ -28,13 +28,13 @@ Files matching `plist` are scored by `filegroups/config`, `filetypes/plist`. The
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 11,294 (541 mal / 10,753 ben) |
-| Feature spec | 60778 features (`general_shared`) |
-| n_estimators | 120 |
-| num_leaves | 64 |
+| Feature spec | 60790 features (`general_shared`) |
+| n_estimators | 400 |
+| num_leaves | 96 |
 | max_depth | 12 |
-| min_child_samples | 120 |
+| min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 25 |
+| early_stopping_rounds | 50 |
 | device | auto |

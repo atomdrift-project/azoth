@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9915 | 0.9978 | 0.9650 | 43.31% | 0.0073 |
+| 0.9866 | 0.9975 | 0.9542 | 57.75% | 0.0230 |
 
 ## Specialist Performance
 
@@ -16,25 +16,25 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9738 | 0.9944 | 0.9301 | 41.86% | 0.0148 | — |
+| 0.9950 | 0.9990 | 0.9708 | 57.53% | 0.0063 | — |
 
 ## Routing
 
-Files matching `python` are scored by `general`, `filegroups/scripts`, `filetypes/python`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `python` are scored by `general`, `filegroups/scripts`, `filetypes/python`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 129,527 (15,645 mal / 113,882 ben) |
-| Feature spec | 60778 features (`general_shared`) |
-| n_estimators | 250 |
+| Train rows | 129,528 (15,645 mal / 113,883 ben) |
+| Feature spec | 60790 features (`general_shared`) |
+| n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 25 |
+| early_stopping_rounds | 50 |
 | device | auto |

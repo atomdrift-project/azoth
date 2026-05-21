@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `text` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.2324 | 0.5894 | 0.3273 | 12.50% | 0.0202 |
+| 0.1929 | 0.6599 | 0.2581 | 14.37% | 0.0364 |
 
 ## Specialist Performance
 
@@ -16,25 +16,25 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `text` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.2324 | 0.5894 | 0.3273 | 12.50% | 0.0202 | — |
+| 0.1488 | 0.8784 | 0.2684 | — | 0.0183 | — |
 
 ## Routing
 
-Files matching `text` are scored by `general`, `filetypes/text`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `text` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 56,989 (1,034 mal / 55,955 ben) |
-| Feature spec | 60778 features (`general_shared`) |
-| n_estimators | 350 |
-| num_leaves | 128 |
+| Train rows | 56,990 (1,034 mal / 55,956 ben) |
+| Feature spec | 60790 features (`general_shared`) |
+| n_estimators | 400 |
+| num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 25 |
+| early_stopping_rounds | 50 |
 | device | auto |

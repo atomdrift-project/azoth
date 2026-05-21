@@ -4,11 +4,11 @@ LightGBM specialist for `shell`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `shell` slice of the locked test partition: 949 malware / 5,693 benign (6,642 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `shell` slice of the locked test partition: 950 malware / 5,694 benign (6,644 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9805 | 0.9956 | 0.9523 | 85.56% | 0.0410 |
+| 0.9870 | 0.9971 | 0.9698 | 92.42% | 0.0401 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `shell`
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9859 | 0.9970 | 0.9457 | 79.45% | 0.0138 | — |
+| 0.9961 | 0.9992 | 0.9753 | 92.00% | 0.0078 | — |
 
 ## Routing
 
@@ -27,14 +27,14 @@ Files matching `shell` are scored by `general`, `filegroups/scripts`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 45,757 (5,927 mal / 39,830 ben) |
-| Feature spec | 60778 features (`general_shared`) |
-| n_estimators | 150 |
+| Train rows | 45,761 (5,931 mal / 39,830 ben) |
+| Feature spec | 60790 features (`general_shared`) |
+| n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 25 |
+| early_stopping_rounds | 50 |
 | device | auto |

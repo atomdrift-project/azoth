@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rust` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.1102 | 0.7258 | 0.1660 | 1.83% | 0.0164 |
+| 0.1523 | 0.8348 | 0.2462 | 11.59% | 0.0168 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rust` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.1102 | 0.7258 | 0.1660 | 1.83% | 0.0164 | — |
+| 0.1523 | 0.8348 | 0.2462 | 11.59% | 0.0168 | — |
 
 ## Routing
 
@@ -28,13 +28,13 @@ Files matching `rust` are scored by `general`, `filegroups/source`, `filetypes/r
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 68,451 (1,117 mal / 67,334 ben) |
-| Feature spec | 60778 features (`general_shared`) |
-| n_estimators | 200 |
-| num_leaves | 128 |
-| max_depth | 14 |
-| min_child_samples | 50 |
-| learning_rate | 0.04 |
+| Feature spec | 60790 features (`general_shared`) |
+| n_estimators | 400 |
+| num_leaves | 96 |
+| max_depth | 12 |
+| min_child_samples | 100 |
+| learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 25 |
+| early_stopping_rounds | 50 |
 | device | auto |

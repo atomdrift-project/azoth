@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `makefi
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.0468 | 0.6887 | 0.1429 | 5.88% | 0.0077 |
+| 0.2438 | 0.7735 | 0.3571 | 11.76% | 0.0097 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `makefi
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.0144 | 0.6504 | 0.0690 | 0.00% | 0.0062 | — |
+| 0.2438 | 0.7735 | 0.3571 | 11.76% | 0.0097 | — |
 
 ## Routing
 
-Files matching `makefile` are scored by `general`, `filetypes/makefile`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `makefile` are scored by `general`, `filetypes/makefile`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
@@ -28,13 +28,13 @@ Files matching `makefile` are scored by `general`, `filetypes/makefile`. The ens
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 18,986 (146 mal / 18,840 ben) |
-| Feature spec | 60778 features (`general_shared`) |
-| n_estimators | 250 |
+| Feature spec | 60790 features (`general_shared`) |
+| n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
-| min_child_samples | 50 |
+| min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 25 |
+| early_stopping_rounds | 50 |
 | device | auto |

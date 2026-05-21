@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `docx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9751 | 0.8827 | 0.9191 | 71.59% | 0.0875 |
+| 0.9772 | 0.9185 | 0.9191 | 77.84% | 0.0830 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `docx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9767 | 0.9161 | 0.9263 | 63.07% | 0.2576 | — |
+| 0.9772 | 0.9185 | 0.9191 | 77.84% | 0.0830 | — |
 
 ## Routing
 
-Files matching `docx` are scored by `general`, `filegroups/documents`, `filetypes/docx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `docx` are scored by `general`, `filegroups/documents`, `filetypes/docx`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
@@ -28,13 +28,13 @@ Files matching `docx` are scored by `general`, `filegroups/documents`, `filetype
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 1,615 (1,402 mal / 213 ben) |
-| Feature spec | 60778 features (`general_shared`) |
-| n_estimators | 120 |
+| Feature spec | 60790 features (`general_shared`) |
+| n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
-| min_child_samples | 40 |
+| min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 25 |
+| early_stopping_rounds | 50 |
 | device | auto |

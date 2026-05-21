@@ -4,11 +4,11 @@ LightGBM specialist for `elf`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `elf` slice of the locked test partition: 9,019 malware / 17,064 benign (26,083 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `elf` slice of the locked test partition: 9,026 malware / 17,067 benign (26,093 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9999 | 0.9999 | 0.9954 | 81.43% | 0.0025 |
+| 1.0000 | 1.0000 | 0.9987 | 98.59% | 0.0008 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `elf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9999 | 0.9999 | 0.9954 | 81.43% | 0.0025 | PR +0.0066 / ROC +0.0066 |
+| 1.0000 | 1.0000 | 0.9987 | 98.59% | 0.0008 | PR +0.0067 / ROC +0.0067 |
 
 ## Routing
 
@@ -27,14 +27,14 @@ Files matching `elf` are scored by `general`, `filegroups/native`, `filetypes/el
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 182,595 (64,088 mal / 118,507 ben) |
-| Feature spec | 60778 features (`general_shared`) |
-| n_estimators | 300 |
+| Train rows | 182,667 (64,151 mal / 118,516 ben) |
+| Feature spec | 60790 features (`general_shared`) |
+| n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 25 |
+| early_stopping_rounds | 50 |
 | device | auto |

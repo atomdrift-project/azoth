@@ -2,8 +2,8 @@
 
 Marginal-value report for the routed ensemble. `after general` measures the best single-route addition to the general model under the level budget. `final marginal` measures whether a route can still add anything after the final selected ensemble.
 
-- Calibration snapshot: `1349983353`
-- Rows: 4727335 (1702977 malware, 3024358 benign)
+- Calibration snapshot: `1384435807`
+- Rows: 4727598 (1703195 malware, 3024403 benign)
 - Search: `quantile_severity_v1`
 
 ## Selected Routes
@@ -57,118 +57,118 @@ Marginal-value report for the routed ensemble. `after general` measures the best
 
 | Route | Sel | Rows | Alone TP/FP | After general +TP/+FP | Final +TP/+FP | Threshold |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| filegroups/native | Y | 1275074 | 112193/1 | 226201/0 | 0/0 | 0.996168 |
-| filegroups/scripts | Y | 1095078 | 32278/1 | 206948/0 | 0/0 | 0.99712 |
-| filetypes/batch | Y | 172618 | 19981/1 | 158199/0 | 0/0 | 0.994311 |
-| filetypes/pe | Y | 1053636 | 105690/1 | 120205/0 | 0/0 | 0.991605 |
-| filetypes/javascript | Y | 556832 | 9963/1 | 31362/0 | 0/0 | 0.965745 |
-| filetypes/kotlin | Y | 66007 | 2754/1 | 21841/0 | 0/0 | 0.98368 |
-| filegroups/documents | Y | 246032 | 4577/1 | 18435/0 | 0/0 | 0.899422 |
-| filetypes/elf | Y | 208678 | 8757/1 | 10315/0 | 0/0 | 0.992638 |
-| filetypes/pdf | Y | 187076 | 1726/1 | 7509/0 | 0/0 | 0.0961294 |
-| filegroups/config | Y | 190874 | 2206/1 | 7461/0 | 0/0 | 0.998356 |
-| filetypes/pkg-info | Y | 11667 | 1373/0 | 5042/0 | 0/0 | 0.0347401 |
-| filetypes/shell | Y | 52399 | 556/0 | 4706/0 | 0/0 | 0.971075 |
-| filetypes/php | Y | 90446 | 466/1 | 2525/0 | 0/0 | 0.979547 |
-| filetypes/package.json | Y | 29418 | 2210/1 | 2279/0 | 0/0 | 0.981986 |
-| filetypes/python | Y | 148142 | 1432/1 | 1812/0 | 0/0 | 0.994142 |
-| filetypes/ole | Y | 7285 | 243/1 | 1575/0 | 0/0 | 0.115855 |
-| filetypes/macho | Y | 12760 | 201/1 | 1172/0 | 0/0 | 0.939241 |
-| filetypes/python-bytecode | Y | 32780 | 207/2 | 941/0 | 0/0 | 0.997479 |
-| filetypes/vbs | Y | 7007 | 107/1 | 938/0 | 0/0 | 0.994942 |
-| filetypes/rtf | Y | 1945 | 181/1 | 764/0 | 0/0 | 0.0731261 |
-| filetypes/jar | Y | 3594 | 128/1 | 657/0 | 0/0 | 0.588076 |
-| filetypes/lnk | Y | 3049 | 134/1 | 635/0 | 0/0 | 0.938999 |
-| filetypes/java_class | Y | 382621 | 115/1 | 556/0 | 0/0 | 0.999303 |
-| filegroups/portable | Y | 382621 | 97/1 | 258/0 | 0/0 | 0.999418 |
-| filetypes/c | Y | 544810 | 37/1 | 219/0 | 0/0 | 0.997047 |
+| filegroups/native | Y | 1275234 | 109083/1 | 254860/0 | 0/0 | 0.997585 |
+| filegroups/scripts | Y | 1095121 | 32382/1 | 205180/0 | 0/0 | 0.996906 |
+| filegroups/documents | Y | 246036 | 26417/1 | 191888/0 | 0/0 | 0.979285 |
+| filetypes/batch | Y | 172620 | 21230/1 | 167751/0 | 0/0 | 0.37608 |
+| filetypes/pdf | Y | 187078 | 21175/1 | 167198/0 | 0/0 | 0.984069 |
+| filetypes/pe | Y | 1053716 | 104996/1 | 141007/0 | 0/0 | 0.992876 |
+| filetypes/javascript | Y | 556861 | 9950/1 | 34358/0 | 0/0 | 0.966098 |
+| filetypes/elf | Y | 208758 | 9126/1 | 23527/0 | 0/0 | 0.427923 |
+| filetypes/kotlin | Y | 66023 | 2755/1 | 21831/0 | 0/0 | 0.983824 |
+| filetypes/package.json | Y | 29419 | 2252/1 | 7615/0 | 0/0 | 0.922162 |
+| filegroups/config | Y | 190875 | 2248/1 | 6606/0 | 0/0 | 0.998501 |
+| filetypes/shell | Y | 52405 | 799/1 | 5244/0 | 0/0 | 0.961858 |
+| filetypes/pkg-info | Y | 11667 | 1388/1 | 4961/0 | 0/0 | 0.0923254 |
+| filetypes/python | Y | 148143 | 2130/0 | 2895/0 | 0/0 | 0.96612 |
+| filetypes/vbs | Y | 7013 | 420/1 | 2607/0 | 0/0 | 0.862214 |
+| filetypes/php | Y | 90448 | 467/1 | 2476/0 | 0/0 | 0.981681 |
+| filetypes/python-bytecode | Y | 32792 | 252/1 | 1774/0 | 0/0 | 0.819781 |
+| filetypes/ole | Y | 7285 | 248/1 | 1653/0 | 0/0 | 0.777957 |
+| filetypes/macho | Y | 12760 | 252/1 | 1652/0 | 0/0 | 0.941145 |
+| filetypes/lnk | Y | 3049 | 180/1 | 1171/0 | 0/0 | 0.694355 |
+| filetypes/rtf | Y | 1945 | 181/1 | 1016/0 | 0/0 | 0.503603 |
+| filetypes/jar | Y | 3595 | 182/1 | 934/0 | 0/0 | 0.827039 |
+| filegroups/portable | Y | 382621 | 136/1 | 928/0 | 0/0 | 0.999424 |
+| filetypes/java_class | Y | 382621 | 136/1 | 928/0 | 0/0 | 0.999424 |
+| filetypes/go | Y | 102900 | 433/0 | 899/0 | 0/0 | 0.991814 |
 
 ## L5 Suspicious
 
 | Route | Sel | Rows | Alone TP/FP | After general +TP/+FP | Final +TP/+FP | Threshold |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| filegroups/scripts | Y | 1095078 | 34070/5 | 190905/0 | 0/0 | 0.973547 |
-| filetypes/batch | Y | 172618 | 19985/1 | 158143/0 | 0/0 | 0.994002 |
-| filegroups/native | Y | 1275074 | 112505/2 | 107312/0 | 0/0 | 0.995976 |
-| filetypes/pe | Y | 1053636 | 105690/1 | 44458/0 | 0/0 | 0.991605 |
-| filetypes/javascript | Y | 556832 | 10109/3 | 25813/0 | 0/0 | 0.944422 |
-| filetypes/kotlin | Y | 66007 | 2754/1 | 15590/0 | 0/0 | 0.98368 |
-| filetypes/shell | Y | 52399 | 650/1 | 4637/0 | 0/0 | 0.932843 |
-| filegroups/config | Y | 190874 | 2263/2 | 3311/0 | 0/0 | 0.967064 |
-| filetypes/package.json | Y | 29418 | 2210/1 | 2611/0 | 0/0 | 0.981986 |
-| filetypes/elf | Y | 208678 | 8757/1 | 2000/0 | 0/0 | 0.992638 |
-| filetypes/pkg-info | Y | 11667 | 1374/0 | 1891/0 | 0/0 | 0.0337248 |
-| filetypes/php | Y | 90446 | 466/1 | 1639/0 | 0/0 | 0.979547 |
-| filetypes/python | Y | 148142 | 1435/1 | 1575/0 | 0/0 | 0.993945 |
-| filetypes/ole | Y | 7285 | 243/1 | 1536/0 | 0/0 | 0.115855 |
-| filetypes/pdf | Y | 187076 | 1581/0 | 1359/0 | 0/0 | 0.0961294 |
-| filetypes/python-bytecode | Y | 32780 | 207/2 | 894/0 | 0/0 | 0.997479 |
-| filetypes/vbs | Y | 7007 | 108/1 | 893/0 | 0/0 | 0.99493 |
-| filegroups/documents | Y | 246032 | 4577/1 | 843/0 | 0/0 | 0.899422 |
-| filetypes/macho | Y | 12760 | 201/1 | 821/0 | 0/0 | 0.939241 |
-| filetypes/jar | Y | 3594 | 128/1 | 543/0 | 0/0 | 0.588076 |
-| filetypes/java_class | Y | 382621 | 127/3 | 526/0 | 0/0 | 0.995898 |
-| filetypes/rtf | Y | 1945 | 181/1 | 395/0 | 0/0 | 0.0731261 |
-| filetypes/lnk | Y | 3049 | 134/1 | 391/0 | 0/0 | 0.938999 |
-| filegroups/portable | Y | 382621 | 129/3 | 250/0 | 0/0 | 0.997532 |
-| filetypes/perl | Y | 31768 | 23/0 | 167/0 | 0/0 | 0.974878 |
+| filegroups/scripts | Y | 1095121 | 34148/5 | 187027/0 | 0/0 | 0.97095 |
+| filegroups/documents | Y | 246036 | 26417/1 | 174365/0 | 0/0 | 0.979285 |
+| filetypes/batch | Y | 172620 | 21230/1 | 167536/0 | 0/0 | 0.37608 |
+| filetypes/pdf | Y | 187078 | 21175/1 | 160979/0 | 0/0 | 0.984069 |
+| filegroups/native | Y | 1275234 | 111736/2 | 114971/0 | 0/0 | 0.996643 |
+| filetypes/pe | Y | 1053716 | 104996/1 | 51810/0 | 0/0 | 0.992876 |
+| filetypes/javascript | Y | 556861 | 10131/3 | 26715/0 | 0/0 | 0.93992 |
+| filetypes/kotlin | Y | 66023 | 2755/1 | 15354/0 | 0/0 | 0.983824 |
+| filetypes/elf | Y | 208758 | 9117/0 | 11924/0 | 0/0 | 0.427923 |
+| filetypes/shell | Y | 52405 | 799/1 | 5155/0 | 0/0 | 0.961858 |
+| filetypes/python | Y | 148143 | 2227/0 | 2759/0 | 0/0 | 0.85715 |
+| filetypes/package.json | Y | 29419 | 2252/1 | 2661/0 | 0/0 | 0.922162 |
+| filetypes/vbs | Y | 7013 | 420/1 | 2439/0 | 0/0 | 0.862214 |
+| filetypes/pkg-info | Y | 11667 | 1345/0 | 2164/0 | 0/0 | 0.0923254 |
+| filegroups/config | Y | 190875 | 2348/2 | 1789/0 | 0/0 | 0.9606 |
+| filetypes/python-bytecode | Y | 32792 | 252/1 | 1703/0 | 0/0 | 0.819781 |
+| filetypes/php | Y | 90448 | 467/1 | 1697/0 | 0/0 | 0.981681 |
+| filetypes/ole | Y | 7285 | 248/1 | 1618/0 | 0/0 | 0.777957 |
+| filetypes/macho | Y | 12760 | 252/1 | 1227/0 | 0/0 | 0.941145 |
+| filetypes/lnk | Y | 3049 | 180/1 | 903/0 | 0/0 | 0.694355 |
+| filetypes/go | Y | 102900 | 456/1 | 892/0 | 0/0 | 0.990725 |
+| filegroups/portable | Y | 382621 | 150/3 | 855/0 | 0/0 | 0.997701 |
+| filetypes/java_class | Y | 382621 | 150/3 | 855/0 | 0/0 | 0.997701 |
+| filetypes/jar | Y | 3595 | 182/1 | 764/0 | 0/0 | 0.827039 |
+| filetypes/csharp | Y | 61863 | 214/1 | 599/0 | 0/0 | 0.958455 |
 
 ## L9 Hostile
 
 | Route | Sel | Rows | Alone TP/FP | After general +TP/+FP | Final +TP/+FP | Threshold |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| filegroups/scripts | Y | 1095078 | 32278/1 | 200342/0 | 0/0 | 0.99712 |
-| filegroups/native | Y | 1275074 | 112193/1 | 196067/0 | 0/0 | 0.996168 |
-| filetypes/batch | Y | 172618 | 19981/1 | 158190/0 | 0/0 | 0.994283 |
-| filetypes/pe | Y | 1053636 | 105690/1 | 101038/0 | 0/0 | 0.991605 |
-| filetypes/javascript | Y | 556832 | 9963/1 | 25753/0 | 0/0 | 0.965745 |
-| filegroups/documents | Y | 246032 | 4577/1 | 17422/0 | 0/0 | 0.899422 |
-| filetypes/kotlin | Y | 66007 | 2754/1 | 16158/0 | 0/0 | 0.98368 |
-| filetypes/elf | Y | 208678 | 8757/1 | 8208/0 | 0/0 | 0.992638 |
-| filetypes/pdf | Y | 187076 | 1407/0 | 7308/0 | 0/0 | 0.834104 |
-| filegroups/config | Y | 190874 | 2206/1 | 6634/0 | 0/0 | 0.998356 |
-| filetypes/shell | Y | 52399 | 572/0 | 4700/0 | 0/0 | 0.964691 |
-| filetypes/pkg-info | Y | 11667 | 1373/0 | 3864/0 | 0/0 | 0.0345334 |
-| filetypes/python | Y | 148142 | 1432/1 | 3444/0 | 0/0 | 0.994134 |
-| filetypes/php | Y | 90446 | 466/1 | 2383/0 | 0/0 | 0.979547 |
-| filetypes/package.json | Y | 29418 | 2210/1 | 1762/0 | 0/0 | 0.981986 |
-| filetypes/ole | Y | 7285 | 243/1 | 1568/0 | 0/0 | 0.115855 |
-| filetypes/macho | Y | 12760 | 201/1 | 1111/0 | 0/0 | 0.939241 |
-| filetypes/vbs | Y | 7007 | 107/1 | 937/0 | 0/0 | 0.994941 |
-| filetypes/python-bytecode | Y | 32780 | 207/2 | 931/0 | 0/0 | 0.997479 |
-| filetypes/jar | Y | 3594 | 128/1 | 608/0 | 0/0 | 0.588076 |
-| filetypes/lnk | Y | 3049 | 134/1 | 570/0 | 0/0 | 0.938999 |
-| filetypes/java_class | Y | 382621 | 115/1 | 556/0 | 0/0 | 0.999303 |
-| filetypes/rtf | Y | 1945 | 181/1 | 419/0 | 0/0 | 0.0731261 |
-| filegroups/portable | Y | 382621 | 97/1 | 258/0 | 0/0 | 0.999418 |
-| filetypes/c | Y | 544810 | 37/1 | 201/0 | 0/0 | 0.997047 |
+| filegroups/native | Y | 1275234 | 109083/1 | 228102/0 | 0/0 | 0.997585 |
+| filegroups/scripts | Y | 1095121 | 32382/1 | 202420/0 | 0/0 | 0.996906 |
+| filegroups/documents | Y | 246036 | 26417/1 | 190968/0 | 0/0 | 0.979285 |
+| filetypes/batch | Y | 172620 | 21230/1 | 167733/0 | 0/0 | 0.37608 |
+| filetypes/pdf | Y | 187078 | 21175/1 | 166930/0 | 0/0 | 0.984069 |
+| filetypes/pe | Y | 1053716 | 104996/1 | 121303/0 | 0/0 | 0.992876 |
+| filetypes/javascript | Y | 556861 | 9950/1 | 32005/0 | 0/0 | 0.966098 |
+| filetypes/elf | Y | 208758 | 9126/1 | 22405/0 | 0/0 | 0.427923 |
+| filetypes/kotlin | Y | 66023 | 2755/1 | 21739/0 | 0/0 | 0.983824 |
+| filetypes/package.json | Y | 29419 | 2252/1 | 6694/0 | 0/0 | 0.922162 |
+| filegroups/config | Y | 190875 | 2248/1 | 5696/0 | 0/0 | 0.998501 |
+| filetypes/shell | Y | 52405 | 799/1 | 5237/0 | 0/0 | 0.961858 |
+| filetypes/pkg-info | Y | 11667 | 1388/1 | 4785/0 | 0/0 | 0.0923254 |
+| filetypes/vbs | Y | 7013 | 420/1 | 2607/0 | 0/0 | 0.862214 |
+| filetypes/python | Y | 148143 | 2177/0 | 2576/0 | 0/0 | 0.942968 |
+| filetypes/php | Y | 90448 | 467/1 | 2396/0 | 0/0 | 0.981681 |
+| filetypes/python-bytecode | Y | 32792 | 252/1 | 1773/0 | 0/0 | 0.819781 |
+| filetypes/ole | Y | 7285 | 248/1 | 1647/0 | 0/0 | 0.777957 |
+| filetypes/macho | Y | 12760 | 252/1 | 1629/0 | 0/0 | 0.941145 |
+| filetypes/lnk | Y | 3049 | 180/1 | 1130/0 | 0/0 | 0.694355 |
+| filegroups/portable | Y | 382621 | 136/1 | 928/0 | 0/0 | 0.999424 |
+| filetypes/java_class | Y | 382621 | 136/1 | 928/0 | 0/0 | 0.999424 |
+| filetypes/jar | Y | 3595 | 182/1 | 916/0 | 0/0 | 0.827039 |
+| filetypes/go | Y | 102900 | 434/1 | 898/0 | 0/0 | 0.991702 |
+| filetypes/rtf | Y | 1945 | 181/1 | 742/0 | 0/0 | 0.503603 |
 
 ## L9 Suspicious
 
 | Route | Sel | Rows | Alone TP/FP | After general +TP/+FP | Final +TP/+FP | Threshold |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| filegroups/scripts | Y | 1095078 | 34391/9 | 190041/2 | 0/0 | 0.953035 |
-| filetypes/batch | Y | 172618 | 19985/1 | 158133/2 | 0/0 | 0.993768 |
-| filegroups/native | Y | 1275074 | 118038/3 | 112925/2 | 0/0 | 0.987933 |
-| filetypes/pe | Y | 1053636 | 107171/2 | 106369/2 | 0/0 | 0.988034 |
-| filetypes/javascript | Y | 556832 | 10175/5 | 24961/2 | 0/0 | 0.930325 |
-| filetypes/kotlin | Y | 66007 | 2754/1 | 15616/2 | 0/0 | 0.98368 |
-| filetypes/elf | Y | 208678 | 8856/2 | 4726/2 | 0/0 | 0.984525 |
-| filetypes/shell | Y | 52399 | 689/1 | 4682/2 | 0/0 | 0.916891 |
-| filetypes/pdf | Y | 187076 | 1692/0 | 3327/2 | 0/0 | 0.244609 |
-| filegroups/config | Y | 190874 | 2263/2 | 3141/2 | 0/0 | 0.967064 |
-| filetypes/package.json | Y | 29418 | 2210/1 | 2914/2 | 0/0 | 0.981986 |
-| filegroups/documents | Y | 246032 | 4577/1 | 2400/2 | 0/0 | 0.899422 |
-| filetypes/php | Y | 90446 | 466/1 | 1967/2 | 0/0 | 0.979547 |
-| filegroups/source | Y | 956404 | 2408/10 | 1779/2 | 0/0 | 0.636055 |
-| filetypes/ole | Y | 7285 | 243/1 | 1529/2 | 0/0 | 0.115855 |
-| filetypes/python | Y | 148142 | 1473/2 | 1522/2 | 0/0 | 0.992623 |
-| filetypes/pkg-info | Y | 11667 | 1374/0 | 1169/0 | 0/0 | 0.0333946 |
-| filetypes/python-bytecode | Y | 32780 | 207/2 | 1049/1 | 0/0 | 0.997479 |
-| filetypes/vbs | Y | 7007 | 108/1 | 947/2 | 0/0 | 0.994918 |
-| filetypes/powershell | Y | 4147 | 172/1 | 940/2 | 0/0 | 0.954491 |
-| filetypes/macho | Y | 12760 | 201/1 | 858/2 | 0/0 | 0.939241 |
-| filetypes/jar | Y | 3594 | 128/1 | 553/2 | 0/0 | 0.588076 |
-| filetypes/c | Y | 544810 | 254/6 | 503/2 | 0/0 | 0.983866 |
-| filetypes/java_class | Y | 382621 | 127/4 | 463/2 | 0/0 | 0.983913 |
-| filegroups/portable | Y | 382621 | 141/4 | 350/1 | 0/0 | 0.888528 |
+| filegroups/scripts | Y | 1095121 | 34520/9 | 183489/0 | 0/0 | 0.944389 |
+| filegroups/documents | Y | 246036 | 26417/1 | 173410/0 | 0/0 | 0.979285 |
+| filetypes/batch | Y | 172620 | 21230/1 | 167426/0 | 0/0 | 0.37608 |
+| filetypes/pdf | Y | 187078 | 21175/1 | 160936/0 | 0/0 | 0.984069 |
+| filegroups/native | Y | 1275234 | 111842/3 | 90963/0 | 0/0 | 0.996601 |
+| filetypes/pe | Y | 1053716 | 107374/2 | 39004/0 | 0/0 | 0.98764 |
+| filetypes/javascript | Y | 556861 | 10214/5 | 23082/0 | 0/0 | 0.914006 |
+| filetypes/kotlin | Y | 66023 | 2755/1 | 15194/0 | 0/0 | 0.983824 |
+| filetypes/elf | Y | 208758 | 9126/2 | 10243/0 | 0/0 | 0.411188 |
+| filetypes/shell | Y | 52405 | 728/0 | 5098/0 | 0/0 | 0.961858 |
+| filetypes/python | Y | 148143 | 2240/2 | 4667/0 | 0/0 | 0.817642 |
+| filetypes/vbs | Y | 7013 | 420/1 | 2283/0 | 0/0 | 0.862214 |
+| filegroups/config | Y | 190875 | 2348/2 | 2115/0 | 0/0 | 0.9606 |
+| filetypes/package.json | Y | 29419 | 2252/1 | 2074/0 | 0/0 | 0.922162 |
+| filetypes/python-bytecode | Y | 32792 | 252/1 | 1623/0 | 0/0 | 0.819781 |
+| filetypes/ole | Y | 7285 | 248/1 | 1604/0 | 0/0 | 0.777957 |
+| filetypes/pkg-info | Y | 11667 | 1386/0 | 1402/0 | 0/0 | 0.0923254 |
+| filetypes/php | Y | 90448 | 467/1 | 1324/0 | 0/0 | 0.981681 |
+| filetypes/macho | Y | 12760 | 252/1 | 1035/0 | 0/0 | 0.941145 |
+| filetypes/go | Y | 102900 | 472/1 | 889/0 | 0/0 | 0.989982 |
+| filegroups/portable | Y | 382621 | 155/6 | 825/0 | 0/0 | 0.988392 |
+| filetypes/java_class | Y | 382621 | 155/6 | 825/0 | 0/0 | 0.988392 |
+| filetypes/lnk | Y | 3049 | 180/1 | 791/0 | 0/0 | 0.694355 |
+| filetypes/jar | Y | 3595 | 182/1 | 696/0 | 0/0 | 0.827039 |
+| filetypes/csharp | Y | 61863 | 214/1 | 570/0 | 0/0 | 0.958455 |

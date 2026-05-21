@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xls` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.9999 | 0.9867 | 0.9977 | — | 0.0053 |
+| 1.0000 | 0.9975 | 0.9988 | — | 0.0025 |
 
 ## Specialist Performance
 
@@ -18,19 +18,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xls` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9946 | 0.5000 | 0.9973 | — | 0.0054 | — |
+| 0.9946 | 0.5000 | 0.9973 | — | 0.0053 | — |
 
 ## Routing
 
-Files matching `xls` are scored by `general`, `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xls` are scored by `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,245 (9,201 mal / 44 ben) |
-| Feature spec | 60778 features (`general_shared`) |
+| Train rows | 9,253 (9,203 mal / 50 ben) |
+| Feature spec | 60790 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
