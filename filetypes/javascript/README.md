@@ -4,23 +4,23 @@ LightGBM specialist for `javascript`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `javascript` slice of the locked test partition: 10,529 malware / 59,665 benign (70,194 rows). The OR-rule fires across `general`, `filegroups/scripts`, `filetypes/javascript` via the `filetype_only` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `javascript` slice of the locked test partition: 10,529 malware / 59,665 benign (70,194 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 88.33% | 9,382 | 2 | 33.5 | `filetype_only` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9977 | 0.9995 | 0.9814 | 76.97% | 0.0044 |
 
 ## Specialist Performance
 
 `filetypes/javascript` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9996 | 0.9981 | 0.9817 | 74.43% | 0.0052 | — |
+| 0.9981 | 0.9996 | 0.9817 | 74.43% | 0.0052 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `filetype_only` over `filetypes/javascript`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `javascript` are scored by `filetypes/javascript`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

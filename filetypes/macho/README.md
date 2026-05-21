@@ -4,23 +4,23 @@ LightGBM specialist for `macho`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `macho` slice of the locked test partition: 262 malware / 1,383 benign (1,645 rows). The OR-rule fires across `filetypes/macho` via the `learned_blend_at_fp_1` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `macho` slice of the locked test partition: 262 malware / 1,383 benign (1,645 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 67.18% | 176 | 0 | 0.0 | `learned_blend_at_fp_1` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9947 | 0.9990 | 0.9638 | 84.35% | 0.0098 |
 
 ## Specialist Performance
 
 `filetypes/macho` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9990 | 0.9947 | 0.9638 | 84.35% | 0.0098 | — |
+| 0.9947 | 0.9990 | 0.9638 | 84.35% | 0.0098 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `learned_blend_at_fp_1` over `general`, `filegroups/native`, `filetypes/macho`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `macho` are scored by `general`, `filegroups/native`, `filetypes/macho`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

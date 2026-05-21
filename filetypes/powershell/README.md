@@ -4,23 +4,23 @@ LightGBM specialist for `powershell`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `powershell` slice of the locked test partition: 256 malware / 274 benign (530 rows). The OR-rule fires across `general`, `filegroups/scripts`, `filetypes/powershell` via the `joint_or_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `powershell` slice of the locked test partition: 256 malware / 274 benign (530 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 39.69% | 102 | 0 | 0.0 | `joint_or_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9704 | 0.9758 | 0.9537 | 14.06% | 0.0456 |
 
 ## Specialist Performance
 
 `filetypes/powershell` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9831 | 0.9724 | 0.9484 | 3.52% | 0.0447 | — |
+| 0.9724 | 0.9831 | 0.9484 | 3.52% | 0.0447 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/scripts`, `filetypes/powershell`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `powershell` are scored by `general`, `filegroups/scripts`, `filetypes/powershell`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

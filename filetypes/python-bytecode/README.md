@@ -4,23 +4,23 @@ LightGBM specialist for `python-bytecode`. Member of the Azoth routed ensemble; 
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `python-bytecode` slice of the locked test partition: 233 malware / 3,862 benign (4,095 rows). The OR-rule fires across `general`, `filetypes/python-bytecode` via the `joint_or_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `python-bytecode` slice of the locked test partition: 233 malware / 3,862 benign (4,095 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 68.67% | 160 | 0 | 0.0 | `joint_or_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9863 | 0.9940 | 0.9847 | 97.42% | 0.0087 |
 
 ## Specialist Performance
 
 `filetypes/python-bytecode` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9996 | 0.9955 | 0.9892 | 97.00% | 0.0015 | — |
+| 0.9955 | 0.9996 | 0.9892 | 97.00% | 0.0015 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filetypes/python-bytecode`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `python-bytecode` are scored by `general`, `filetypes/python-bytecode`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

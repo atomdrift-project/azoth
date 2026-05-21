@@ -4,23 +4,23 @@ LightGBM specialist for `ole`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `ole` slice of the locked test partition: 221 malware / 664 benign (885 rows). The OR-rule fires across `filetypes/ole` via the `filetype_only_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `ole` slice of the locked test partition: 221 malware / 664 benign (885 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 91.27% | 209 | 0 | 0.0 | `filetype_only_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9817 | 0.9862 | 0.9775 | 91.40% | 0.0113 |
 
 ## Specialist Performance
 
 `filetypes/ole` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9950 | 0.9919 | 0.9775 | 90.95% | 0.0192 | — |
+| 0.9919 | 0.9950 | 0.9775 | 90.95% | 0.0192 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `filetype_only_at_fp_0` over `filetypes/ole`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `ole` are scored by `filetypes/ole`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

@@ -4,23 +4,23 @@ LightGBM specialist for `docx`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `docx` slice of the locked test partition: 176 malware / 31 benign (207 rows). The OR-rule fires across `general`, `filegroups/documents`, `filetypes/docx` via the `joint_or_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `docx` slice of the locked test partition: 176 malware / 31 benign (207 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 70.45% | 124 | 0 | 0.0 | `joint_or_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9751 | 0.8827 | 0.9191 | 71.59% | 0.0875 |
 
 ## Specialist Performance
 
 `filetypes/docx` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9161 | 0.9767 | 0.9263 | 63.07% | 0.2576 | — |
+| 0.9767 | 0.9161 | 0.9263 | 63.07% | 0.2576 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/documents`, `filetypes/docx`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `docx` are scored by `general`, `filegroups/documents`, `filetypes/docx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

@@ -4,23 +4,23 @@ LightGBM specialist for `java_class`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `java_class` slice of the locked test partition: 173 malware / 47,377 benign (47,550 rows). The OR-rule fires across `general`, `filegroups/portable`, `filetypes/java_class` via the `joint_or_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 173 malware / 47,377 benign (47,550 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 45.66% | 79 | 0 | 0.0 | `joint_or_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9385 | 0.9815 | 0.9231 | 45.09% | 0.0005 |
 
 ## Specialist Performance
 
 `filetypes/java_class` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9815 | 0.9385 | 0.9231 | 45.09% | 0.0005 | — |
+| 0.9385 | 0.9815 | 0.9231 | 45.09% | 0.0005 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/portable`, `filetypes/java_class`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `java_class` are scored by `general`, `filegroups/portable`, `filetypes/java_class`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

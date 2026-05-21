@@ -4,23 +4,23 @@ LightGBM specialist for `pe`. Member of the Azoth routed ensemble; bundle root: 
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `pe` slice of the locked test partition: 110,233 malware / 18,952 benign (129,185 rows). The OR-rule fires across `general`, `filegroups/native`, `filetypes/pe` via the `learned_blend_at_fp_4` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `pe` slice of the locked test partition: 110,233 malware / 18,952 benign (129,185 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 91.11% | 102,961 | 3 | 158.3 | `learned_blend_at_fp_4` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 1.0000 | 0.9999 | 0.9988 | 84.76% | 0.0022 |
 
 ## Specialist Performance
 
 `filetypes/pe` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9999 | 1.0000 | 0.9988 | 84.76% | 0.0022 | ROC +0.0017 / PR +0.0017 |
+| 1.0000 | 0.9999 | 0.9988 | 84.76% | 0.0022 | PR +0.0017 / ROC +0.0017 |
 
 ## Routing
 
-At the L3 deploy level the policy is `learned_blend_at_fp_4` over `general`, `filegroups/native`, `filetypes/pe`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `pe` are scored by `general`, `filegroups/native`, `filetypes/pe`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

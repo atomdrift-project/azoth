@@ -4,23 +4,23 @@ LightGBM specialist for `package.json`. Member of the Azoth routed ensemble; bun
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `package.json` slice of the locked test partition: 2,162 malware / 1,439 benign (3,601 rows). The OR-rule fires across `general`, `filegroups/config` via the `joint_or_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `package.json` slice of the locked test partition: 2,162 malware / 1,439 benign (3,601 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 91.68% | 1,983 | 0 | 0.0 | `joint_or_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9996 | 0.9992 | 0.9975 | 88.25% | 0.0032 |
 
 ## Specialist Performance
 
 `filetypes/package.json` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9992 | 0.9996 | 0.9975 | 88.25% | 0.0032 | — |
+| 0.9996 | 0.9992 | 0.9975 | 88.25% | 0.0032 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/config`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `package.json` are scored by `general`, `filegroups/config`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

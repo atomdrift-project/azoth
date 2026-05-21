@@ -4,23 +4,23 @@ LightGBM specialist for `pkg-info`. Member of the Azoth routed ensemble; bundle 
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `pkg-info` slice of the locked test partition: 1,276 malware / 114 benign (1,390 rows). The OR-rule fires across `filetypes/pkg-info` via the `filetype_only_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `pkg-info` slice of the locked test partition: 1,276 malware / 114 benign (1,390 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 98.43% | 1,256 | 0 | 0.0 | `filetype_only_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 1.0000 | 0.9998 | 0.9988 | 96.79% | 0.0290 |
 
 ## Specialist Performance
 
 `filetypes/pkg-info` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9998 | 1.0000 | 0.9988 | 96.79% | 0.0290 | — |
+| 1.0000 | 0.9998 | 0.9988 | 96.79% | 0.0290 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `filetype_only_at_fp_0` over `filetypes/pkg-info`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `pkg-info` are scored by `filetypes/pkg-info`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

@@ -8,7 +8,7 @@ Training-time benchmark only (no test-partition rows for `scripts`). ROC 0.9997,
 
 ## Routing
 
-At the L3 deploy level the policy is `—` over none. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `scripts` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

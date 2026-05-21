@@ -4,23 +4,23 @@ LightGBM specialist for `pdf`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `pdf` slice of the locked test partition: 21,801 malware / 1,734 benign (23,535 rows). The OR-rule fires across `general`, `filegroups/documents`, `filetypes/pdf` via the `joint_or_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` slice of the locked test partition: 21,801 malware / 1,734 benign (23,535 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 6.48% | 1,412 | 0 | 0.0 | `joint_or_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9989 | 0.9925 | 0.9959 | 17.59% | 0.0085 |
 
 ## Specialist Performance
 
 `filetypes/pdf` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9745 | 0.9969 | 0.9935 | 6.26% | 0.8190 | ROC -0.0167 / PR +0.0036 |
+| 0.9969 | 0.9745 | 0.9935 | 6.26% | 0.8190 | PR +0.0036 / ROC -0.0167 |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/documents`, `filetypes/pdf`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `pdf` are scored by `general`, `filegroups/documents`, `filetypes/pdf`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

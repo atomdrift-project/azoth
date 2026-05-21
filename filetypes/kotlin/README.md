@@ -4,23 +4,23 @@ LightGBM specialist for `kotlin`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `kotlin` slice of the locked test partition: 2,843 malware / 5,355 benign (8,198 rows). The OR-rule fires across `general`, `filegroups/source`, `filetypes/kotlin` via the `joint_or_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin` slice of the locked test partition: 2,843 malware / 5,355 benign (8,198 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 94.77% | 2,737 | 0 | 0.0 | `joint_or_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9981 | 0.9982 | 0.9908 | 96.94% | 0.0056 |
 
 ## Specialist Performance
 
 `filetypes/kotlin` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9982 | 0.9981 | 0.9908 | 96.94% | 0.0056 | — |
+| 0.9981 | 0.9982 | 0.9908 | 96.94% | 0.0056 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/source`, `filetypes/kotlin`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `kotlin` are scored by `general`, `filegroups/source`, `filetypes/kotlin`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

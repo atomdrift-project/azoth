@@ -4,23 +4,23 @@ LightGBM specialist for `batch`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `batch` slice of the locked test partition: 21,128 malware / 427 benign (21,555 rows). The OR-rule fires across `general`, `filegroups/scripts`, `filetypes/batch` via the `joint_or_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `batch` slice of the locked test partition: 21,128 malware / 427 benign (21,555 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 99.46% | 21,014 | 0 | 0.0 | `joint_or_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 1.0000 | 0.9998 | 0.9992 | 99.54% | 0.0013 |
 
 ## Specialist Performance
 
 `filetypes/batch` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9996 | 1.0000 | 0.9988 | 98.78% | 0.0020 | — |
+| 1.0000 | 0.9996 | 0.9988 | 98.78% | 0.0020 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/scripts`, `filetypes/batch`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `batch` are scored by `general`, `filegroups/scripts`, `filetypes/batch`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

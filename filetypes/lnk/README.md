@@ -4,23 +4,23 @@ LightGBM specialist for `lnk`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `lnk` slice of the locked test partition: 261 malware / 127 benign (388 rows). The OR-rule fires across `general`, `filetypes/lnk` via the `joint_or_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 261 malware / 127 benign (388 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 49.04% | 128 | 0 | 0.0 | `joint_or_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.9478 | 0.9132 | 0.9030 | 51.72% | 0.1919 |
 
 ## Specialist Performance
 
 `filetypes/lnk` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.9132 | 0.9478 | 0.9030 | 51.72% | 0.1919 | — |
+| 0.9478 | 0.9132 | 0.9030 | 51.72% | 0.1919 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filetypes/lnk`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `lnk` are scored by `general`, `filetypes/lnk`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

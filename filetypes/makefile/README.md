@@ -4,23 +4,23 @@ LightGBM specialist for `makefile`. Member of the Azoth routed ensemble; bundle 
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `makefile` slice of the locked test partition: 17 malware / 2,741 benign (2,758 rows). The OR-rule fires across `general`, `filetypes/makefile` via the `joint_or_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `makefile` slice of the locked test partition: 17 malware / 2,741 benign (2,758 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 0.00% | 0 | 0 | 0.0 | `joint_or_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.0468 | 0.6887 | 0.1429 | 5.88% | 0.0077 |
 
 ## Specialist Performance
 
 `filetypes/makefile` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.6504 | 0.0144 | 0.0690 | 0.00% | 0.0062 | — |
+| 0.0144 | 0.6504 | 0.0690 | 0.00% | 0.0062 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filetypes/makefile`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `makefile` are scored by `general`, `filetypes/makefile`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

@@ -4,23 +4,23 @@ LightGBM specialist for `jpeg`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Deployed at L3 hostile on the `jpeg` slice of the locked test partition: 127 malware / 1,319 benign (1,446 rows). The OR-rule fires across `general`, `filegroups/media` via the `joint_or_at_fp_0` policy.
+Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 127 malware / 1,319 benign (1,446 rows).
 
-| Recall | TP | FP | FP / M | Policy |
-|---:|---:|---:|---:|---|
-| 12.60% | 16 | 0 | 0.0 | `joint_or_at_fp_0` |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+|---:|---:|---:|---:|---:|
+| 0.2298 | 0.7477 | 0.3037 | 21.26% | 0.0787 |
 
 ## Specialist Performance
 
 `filetypes/jpeg` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| ROC AUC | PR AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.7477 | 0.2298 | 0.3037 | 21.26% | 0.0787 | — |
+| 0.2298 | 0.7477 | 0.3037 | 21.26% | 0.0787 | — |
 
 ## Routing
 
-At the L3 deploy level the policy is `joint_or_at_fp_0` over `general`, `filegroups/media`. Full per-level thresholds: [`route_policies.md`](../../route_policies.md).
+Files matching `jpeg` are scored by `general`, `filegroups/media`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
