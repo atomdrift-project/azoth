@@ -4,11 +4,11 @@ LightGBM specialist for `text`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `text` slice of the locked test partition: 160 malware / 7,992 benign (8,152 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `text` slice of the locked test partition: 160 malware / 7,993 benign (8,153 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.192871 | 0.659870 | 0.258065 | 14.37% | 0.0364 |
+| 0.210502 | 0.605343 | 0.280000 | 12.50% | 0.0169 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `text` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.148768 | 0.878386 | 0.268382 | — | 0.0183 | — |
+| 0.255358 | 0.709935 | 0.307692 | 11.88% | 0.0172 | — |
 
 ## Routing
 
-Files matching `text` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `text` are scored by `general`, `filetypes/text`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 56,990 (1,034 mal / 55,956 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Train rows | 57,006 (1,034 mal / 55,972 ben) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

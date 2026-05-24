@@ -4,11 +4,11 @@ LightGBM specialist for `java_class`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 173 malware / 47,377 benign (47,550 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 173 malware / 47,394 benign (47,567 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.915496 | 0.982355 | 0.943284 | 91.33% | 0.0005 |
+| 0.922704 | 0.967181 | 0.925373 | 65.90% | 0.0011 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java_c
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.948729 | 0.974845 | 0.942529 | 76.30% | 0.0020 | — |
+| 0.946262 | 0.976979 | 0.934524 | 64.74% | 0.0004 | — |
 
 ## Routing
 
-Files matching `java_class` are scored by `general`, `filetypes/java_class`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `java_class` are scored by `general`, `filegroups/portable`, `filetypes/java_class`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 335,071 (1,139 mal / 333,932 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Train rows | 335,130 (1,139 mal / 333,991 ben) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
@@ -36,5 +36,5 @@ Files matching `java_class` are scored by `general`, `filetypes/java_class`. The
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| early_stopping_rounds | 25 |
 | device | auto |

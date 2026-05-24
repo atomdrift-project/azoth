@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999827 | 0.999316 | 0.995370 | 98.14% | 0.0106 |
+| 0.999595 | 0.998267 | 0.988453 | 97.67% | 0.0237 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999827 | 0.999316 | 0.995370 | 98.14% | 0.0106 | — |
+| 0.999595 | 0.998267 | 0.988453 | 97.67% | 0.0237 | — |
 
 ## Routing
 
-Files matching `rtf` are scored by `filetypes/rtf`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `rtf` are scored by `general`, `filegroups/documents`, `filetypes/rtf`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
@@ -28,7 +28,7 @@ Files matching `rtf` are scored by `filetypes/rtf`. The ensemble's per-row score
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 1,679 (1,250 mal / 429 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

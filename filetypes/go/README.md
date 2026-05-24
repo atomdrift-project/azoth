@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `go` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.868307 | 0.982540 | 0.765319 | 13.08% | 0.0390 |
+| 0.765679 | 0.966971 | 0.735693 | 2.97% | 0.0377 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `go` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.938361 | 0.993148 | 0.859836 | 6.37% | 0.0264 | — |
+| 0.368720 | 0.756789 | 0.372525 | 1.53% | 0.0856 | — |
 
 ## Routing
 
-Files matching `go` are scored by `general`, `filegroups/source`, `filetypes/go`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `go` are scored by `general`, `filegroups/source`, `filetypes/go`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
@@ -28,7 +28,7 @@ Files matching `go` are scored by `general`, `filegroups/source`, `filetypes/go`
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 89,856 (7,710 mal / 82,146 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

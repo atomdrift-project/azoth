@@ -4,11 +4,11 @@ LightGBM specialist for `jpeg`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 127 malware / 1,319 benign (1,446 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 128 malware / 1,319 benign (1,447 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.277459 | 0.655833 | 0.313953 | 8.66% | 0.0766 |
+| 0.285369 | 0.669808 | 0.312796 | 5.47% | 0.0686 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.308471 | 0.770561 | 0.324786 | 0.00% | 0.0768 | — |
+| 0.320319 | 0.709937 | 0.326531 | 1.56% | 0.0821 | — |
 
 ## Routing
 
-Files matching `jpeg` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `jpeg` are scored by `filetypes/jpeg`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 10,522 (853 mal / 9,669 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Train rows | 10,523 (854 mal / 9,669 ben) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

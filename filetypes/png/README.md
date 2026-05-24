@@ -4,11 +4,11 @@ LightGBM specialist for `png`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `png` slice of the locked test partition: 657 malware / 14,388 benign (15,045 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `png` slice of the locked test partition: 657 malware / 14,393 benign (15,050 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.192414 | 0.687783 | 0.217160 | 0.00% | 0.0415 |
+| 0.129877 | 0.587239 | 0.165088 | 8.37% | 0.0415 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `png` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.192414 | 0.687783 | 0.217160 | 0.00% | 0.0415 | — |
+| 0.129877 | 0.587239 | 0.165088 | 8.37% | 0.0415 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `png` are scored by `general`, `filegroups/media`, `filetypes/png
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 103,653 (4,596 mal / 99,057 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Train rows | 103,685 (4,596 mal / 99,089 ben) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

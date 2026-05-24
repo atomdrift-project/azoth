@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `groovy
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.820795 | 0.983899 | 0.785714 | 53.33% | 0.0086 |
+| 0.037839 | 0.674743 | 0.084112 | 0.00% | 0.0226 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `groovy
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.820795 | 0.983899 | 0.785714 | 53.33% | 0.0086 | — |
+| 0.037839 | 0.674743 | 0.084112 | 0.00% | 0.0226 | — |
 
 ## Routing
 
@@ -28,7 +28,7 @@ Files matching `groovy` are scored by `general`, `filetypes/groovy`. The ensembl
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 4,504 (108 mal / 4,396 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

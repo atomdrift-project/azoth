@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999427 | 0.908862 | 0.997325 | — | 0.0052 |
+| 0.999652 | 0.942110 | 0.997547 | — | 0.0486 |
 
 ## Specialist Performance
 
@@ -22,7 +22,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` 
 
 ## Routing
 
-Files matching `xlsx` are scored by `general`, `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xlsx` are scored by `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
@@ -30,7 +30,7 @@ Files matching `xlsx` are scored by `general`, `filegroups/documents`. The ensem
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 15,678 (15,546 mal / 132 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

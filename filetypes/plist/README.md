@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `plist`
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.916016 | 0.986504 | 0.848000 | 52.94% | 0.0146 |
+| 0.118299 | 0.686805 | 0.142857 | 1.47% | 0.0411 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `plist`
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.916016 | 0.986504 | 0.848000 | 52.94% | 0.0146 | — |
+| 0.118299 | 0.686805 | 0.142857 | 1.47% | 0.0411 | — |
 
 ## Routing
 
@@ -28,7 +28,7 @@ Files matching `plist` are scored by `general`, `filegroups/config`, `filetypes/
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 11,294 (541 mal / 10,753 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

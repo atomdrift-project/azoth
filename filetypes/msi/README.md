@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `msi` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999627 | 0.989679 | 0.990783 | — | 0.0391 |
+| 0.999286 | 0.980505 | 0.988662 | — | 0.1437 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `msi` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999627 | 0.989679 | 0.990783 | — | 0.0391 | — |
+| 0.999286 | 0.980505 | 0.988662 | — | 0.1437 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `msi` are scored by `general`, `filetypes/msi`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,715 (1,590 mal / 125 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Train rows | 1,720 (1,595 mal / 125 ben) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
@@ -36,5 +36,5 @@ Files matching `msi` are scored by `general`, `filetypes/msi`. The ensemble's pe
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| early_stopping_rounds | 25 |
 | device | auto |

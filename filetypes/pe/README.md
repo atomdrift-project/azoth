@@ -4,11 +4,11 @@ LightGBM specialist for `pe`. Member of the Azoth routed ensemble; bundle root: 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pe` slice of the locked test partition: 110,244 malware / 18,952 benign (129,196 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pe` slice of the locked test partition: 110,264 malware / 18,952 benign (129,216 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999979 | 0.999880 | 0.998771 | 78.03% | 0.0022 |
+| 0.999608 | 0.997985 | 0.992503 | 56.81% | 0.0266 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pe` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999979 | 0.999880 | 0.998771 | 78.03% | 0.0022 | PR +0.001679 / ROC +0.001680 |
+| 0.999657 | 0.998136 | 0.994303 | 32.49% | 0.0154 | PR +0.001357 / ROC -0.000064 |
 
 ## Routing
 
-Files matching `pe` are scored by `general`, `filegroups/native`, `filetypes/pe`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `pe` are scored by `general`, `filegroups/native`, `filetypes/pe`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 924,522 (791,506 mal / 133,016 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Train rows | 924,677 (791,661 mal / 133,016 ben) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

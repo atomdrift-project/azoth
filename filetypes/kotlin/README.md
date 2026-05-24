@@ -4,11 +4,11 @@ LightGBM specialist for `kotlin`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin` slice of the locked test partition: 2,845 malware / 5,355 benign (8,200 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin` slice of the locked test partition: 2,856 malware / 5,360 benign (8,216 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998171 | 0.998315 | 0.990302 | 97.19% | 0.0056 |
+| 0.971744 | 0.976583 | 0.947948 | 50.63% | 0.0326 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998171 | 0.998315 | 0.990302 | 97.19% | 0.0056 | — |
+| 0.969221 | 0.973266 | 0.937884 | 48.18% | 0.1644 | — |
 
 ## Routing
 
-Files matching `kotlin` are scored by `general`, `filegroups/source`, `filetypes/kotlin`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `kotlin` are scored by `general`, `filegroups/source`, `filetypes/kotlin`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 57,823 (20,648 mal / 37,175 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Train rows | 57,925 (20,720 mal / 37,205 ben) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

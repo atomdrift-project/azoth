@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.958748 | 0.942710 | 0.920578 | 68.58% | 0.0912 |
+| 0.944528 | 0.898045 | 0.899824 | 54.79% | 0.1100 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.958748 | 0.942710 | 0.920578 | 68.58% | 0.0912 | — |
+| 0.947925 | 0.913642 | 0.902998 | 52.11% | 0.1906 | — |
 
 ## Routing
 
-Files matching `lnk` are scored by `general`, `filetypes/lnk`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `lnk` are scored by `general`, `filetypes/lnk`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
@@ -28,7 +28,7 @@ Files matching `lnk` are scored by `general`, `filetypes/lnk`. The ensemble's pe
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 2,661 (1,759 mal / 902 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

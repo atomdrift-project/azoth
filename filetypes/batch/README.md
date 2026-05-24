@@ -4,11 +4,11 @@ LightGBM specialist for `batch`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `batch` slice of the locked test partition: 21,128 malware / 427 benign (21,555 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `batch` slice of the locked test partition: 21,129 malware / 427 benign (21,556 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999949 | 0.998643 | 0.999148 | 99.39% | 0.0020 |
+| 0.999989 | 0.999452 | 0.998817 | 99.02% | 0.0021 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `batch`
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999996 | 0.999822 | 0.999219 | 99.34% | 0.0028 | — |
+| 0.999991 | 0.999561 | 0.998817 | 97.18% | 0.0020 | — |
 
 ## Routing
 
-Files matching `batch` are scored by `general`, `filegroups/scripts`, `filetypes/batch`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `batch` are scored by `general`, `filegroups/scripts`, `filetypes/batch`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 151,065 (147,813 mal / 3,252 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Train rows | 151,076 (147,823 mal / 3,253 ben) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

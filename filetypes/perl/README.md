@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `perl` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.965883 | 0.999314 | 0.962963 | 92.86% | 0.0011 |
+| 0.924378 | 0.994524 | 0.905660 | 82.14% | 0.0021 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `perl` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.965883 | 0.999314 | 0.962963 | 92.86% | 0.0011 | — |
+| 0.924378 | 0.994524 | 0.905660 | 82.14% | 0.0021 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `perl` are scored by `filegroups/scripts`, `filetypes/perl`. The 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 27,781 (196 mal / 27,585 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Train rows | 27,785 (196 mal / 27,589 ben) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
@@ -36,5 +36,5 @@ Files matching `perl` are scored by `filegroups/scripts`, `filetypes/perl`. The 
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| early_stopping_rounds | 25 |
 | device | auto |

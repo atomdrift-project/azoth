@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pkg-in
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999189 | 0.995322 | 0.999216 | 99.84% | 0.0212 |
+| 0.999118 | 0.994645 | 0.996466 | 97.57% | 0.0122 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pkg-in
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999999 | 0.999986 | 0.999608 | 96.87% | 0.0022 | — |
+| 0.999964 | 0.999601 | 0.998043 | 96.94% | 0.0291 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `pkg-info` are scored by `general`, `filetypes/pkg-info`. The ens
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 10,277 (9,358 mal / 919 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Train rows | 10,279 (9,358 mal / 921 ben) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

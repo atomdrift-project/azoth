@@ -2,15 +2,13 @@
 
 LightGBM specialist for `pptx`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
-
 ## Ensemble Performance
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `pptx` slice of the locked test partition: 22 malware / 21 benign (43 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.673884 | 0.573593 | 0.676923 | 31.82% | 0.2686 |
+| 0.702163 | 0.666667 | 0.687500 | 18.18% | 0.2656 |
 
 ## Specialist Performance
 
@@ -18,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pptx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.511628 | 0.500000 | 0.676923 | — | 0.2664 | — |
+| 0.511628 | 0.500000 | 0.676923 | — | 0.4519 | — |
 
 ## Routing
 
@@ -30,7 +28,7 @@ Files matching `pptx` are scored by `filegroups/documents`. The ensemble's per-r
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 276 (106 mal / 170 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

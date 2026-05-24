@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `macho`
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998792 | 0.999771 | 0.988593 | 88.93% | 0.0050 |
+| 0.996984 | 0.999412 | 0.971209 | 88.17% | 0.0089 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `macho`
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998792 | 0.999771 | 0.988593 | 88.93% | 0.0050 | — |
+| 0.996984 | 0.999412 | 0.971209 | 88.17% | 0.0089 | — |
 
 ## Routing
 
-Files matching `macho` are scored by `general`, `filegroups/native`, `filetypes/macho`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `macho` are scored by `filetypes/macho`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 11,115 (1,805 mal / 9,310 ben) |
-| Feature spec | 60790 features (`general_shared`) |
+| Train rows | 11,116 (1,806 mal / 9,310 ben) |
+| Feature spec | 60810 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
