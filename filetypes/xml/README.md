@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xml` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.117993 | 0.644890 | 0.222997 | 1.72% | 0.0149 |
+| 0.240119 | 0.733924 | 0.348315 | 4.47% | 0.0136 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xml` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.024520 | 0.506818 | 0.030664 | 0.00% | 0.0152 | — |
+| 0.141715 | 0.638500 | 0.288793 | 4.12% | 0.0217 | — |
 
 ## Routing
 
-Files matching `xml` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xml` are scored by `general`, `filegroups/config`, `filetypes/xml`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

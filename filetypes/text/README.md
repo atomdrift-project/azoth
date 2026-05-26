@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `text` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.210502 | 0.605343 | 0.280000 | 12.50% | 0.0169 |
+| 0.210422 | 0.719022 | 0.262911 | 12.50% | 0.0254 |
 
 ## Specialist Performance
 
@@ -20,7 +20,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `text` 
 
 ## Routing
 
-Files matching `text` are scored by `general`, `filetypes/text`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `text` are scored by `general`, `filetypes/text`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

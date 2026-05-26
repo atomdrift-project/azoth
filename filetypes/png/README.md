@@ -20,7 +20,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `png` s
 
 ## Routing
 
-Files matching `png` are scored by `general`, `filegroups/media`, `filetypes/png`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `png` are scored by `filegroups/media`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

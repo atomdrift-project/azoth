@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pkg-in
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999118 | 0.994645 | 0.996466 | 97.57% | 0.0122 |
+| 0.999184 | 0.995353 | 0.999216 | 97.65% | 0.0107 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pkg-in
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999964 | 0.999601 | 0.998043 | 96.94% | 0.0291 | — |
+| 0.999969 | 0.999653 | 0.999216 | 96.79% | 0.0321 | — |
 
 ## Routing
 

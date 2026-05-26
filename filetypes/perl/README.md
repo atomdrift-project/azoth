@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `perl` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.924378 | 0.994524 | 0.905660 | 82.14% | 0.0021 |
+| 0.944597 | 0.998660 | 0.923077 | 85.71% | 0.0094 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `perl` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.924378 | 0.994524 | 0.905660 | 82.14% | 0.0021 | — |
+| 0.944597 | 0.998660 | 0.923077 | 85.71% | 0.0094 | — |
 
 ## Routing
 
-Files matching `perl` are scored by `filegroups/scripts`, `filetypes/perl`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `perl` are scored by `filetypes/perl`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

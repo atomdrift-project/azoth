@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `batch`
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999989 | 0.999452 | 0.998817 | 99.02% | 0.0021 |
+| 0.999944 | 0.998433 | 0.998769 | 98.80% | 0.0023 |
 
 ## Specialist Performance
 
@@ -20,7 +20,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `batch`
 
 ## Routing
 
-Files matching `batch` are scored by `general`, `filegroups/scripts`, `filetypes/batch`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `batch` are scored by `general`, `filegroups/scripts`, `filetypes/batch`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

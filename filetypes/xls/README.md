@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xls` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999386 | 0.986194 | 0.989222 | 92.75% | 0.0294 |
+| 0.998677 | 0.975753 | 0.989264 | 94.29% | 0.0262 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xls` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999386 | 0.986194 | 0.989222 | 92.75% | 0.0294 | — |
+| 0.999561 | 0.988193 | 0.988109 | 93.90% | 0.0292 | — |
 
 ## Routing
 
-Files matching `xls` are scored by `general`, `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xls` are scored by `general`, `filegroups/documents`, `filetypes/xls`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
