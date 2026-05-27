@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `groovy
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.181727 | 0.836368 | 0.245614 | 0.00% | 0.0221 |
+| 0.030518 | 0.597222 | 0.066298 | 0.00% | 0.0242 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `groovy
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.181727 | 0.836368 | 0.245614 | 0.00% | 0.0221 | — |
+| 0.022624 | 0.500000 | 0.044248 | — | 0.2500 | — |
 
 ## Routing
 
-Files matching `groovy` are scored by `general`, `filetypes/groovy`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `groovy` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rust` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.079247 | 0.734373 | 0.137931 | 2.44% | 0.0203 |
+| 0.102036 | 0.623744 | 0.136752 | 5.49% | 0.2639 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rust` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.119386 | 0.719228 | 0.181159 | 1.83% | 0.0164 | — |
+| 0.102036 | 0.623744 | 0.136752 | 5.49% | 0.2639 | — |
 
 ## Routing
 
-Files matching `rust` are scored by `general`, `filegroups/source`, `filetypes/rust`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `rust` are scored by `filetypes/rust`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

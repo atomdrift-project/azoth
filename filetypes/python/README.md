@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.966362 | 0.991800 | 0.930587 | 53.32% | 0.0161 |
+| 0.966352 | 0.992660 | 0.930295 | 51.96% | 0.0162 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.877624 | 0.914668 | 0.873833 | 39.07% | 0.0260 | — |
+| 0.882243 | 0.934697 | 0.871882 | 43.66% | 0.0277 | — |
 
 ## Routing
 

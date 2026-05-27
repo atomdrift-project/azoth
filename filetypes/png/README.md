@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `png` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.129877 | 0.587239 | 0.165088 | 8.37% | 0.0415 |
+| 0.156400 | 0.605552 | 0.179657 | 8.98% | 0.0382 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `png` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.129877 | 0.587239 | 0.165088 | 8.37% | 0.0415 | — |
+| 0.156400 | 0.605552 | 0.179657 | 8.98% | 0.0382 | — |
 
 ## Routing
 
-Files matching `png` are scored by `filegroups/media`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `png` are scored by `filetypes/png`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

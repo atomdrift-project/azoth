@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java_c
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.899889 | 0.934620 | 0.915152 | 66.47% | 0.0012 |
+| 0.900926 | 0.934622 | 0.921687 | 66.47% | 0.0011 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java_c
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.918556 | 0.946508 | 0.926829 | 59.30% | 0.0005 | — |
+| 0.920920 | 0.950639 | 0.934524 | 61.63% | 0.0005 | — |
 
 ## Routing
 

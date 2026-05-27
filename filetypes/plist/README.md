@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `plist`
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.118299 | 0.686805 | 0.142857 | 1.47% | 0.0411 |
+| 0.139318 | 0.700563 | 0.241611 | 0.00% | 0.0424 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `plist`
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.118299 | 0.686805 | 0.142857 | 1.47% | 0.0411 | — |
+| 0.042184 | 0.500000 | 0.080952 | — | 0.1312 | — |
 
 ## Routing
 
-Files matching `plist` are scored by `filegroups/config`, `filetypes/plist`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `plist` are scored by `general`, `filegroups/config`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `makefi
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.057619 | 0.703972 | 0.173913 | 0.00% | 0.0061 |
+| 0.019537 | 0.622315 | 0.105263 | 0.00% | 0.0067 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `makefi
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.057619 | 0.703972 | 0.173913 | 0.00% | 0.0061 | — |
+| 0.006164 | 0.500000 | 0.012252 | — | 0.0143 | — |
 
 ## Routing
 
-Files matching `makefile` are scored by `filegroups/source`, `filetypes/makefile`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `makefile` are scored by `filegroups/source`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

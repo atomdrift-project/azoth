@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `csharp
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.508591 | 0.910905 | 0.483871 | 29.91% | 0.0294 |
+| 0.577510 | 0.876339 | 0.573099 | 32.48% | 0.0585 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `csharp
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.606967 | 0.909647 | 0.585480 | 29.06% | 0.0190 | — |
+| 0.577510 | 0.876339 | 0.573099 | 32.48% | 0.0585 | — |
 
 ## Routing
 
-Files matching `csharp` are scored by `general`, `filegroups/source`, `filetypes/csharp`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `csharp` are scored by `general`, `filegroups/source`, `filetypes/csharp`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

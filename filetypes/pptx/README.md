@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pptx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.648350 | 0.620130 | 0.676923 | 18.18% | 0.3661 |
+| 0.702163 | 0.666667 | 0.687500 | 18.18% | 0.2656 |
 
 ## Specialist Performance
 
@@ -20,7 +20,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pptx` 
 
 ## Routing
 
-Files matching `pptx` are scored by `general`, `filegroups/documents`, `filetypes/pptx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `pptx` are scored by `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

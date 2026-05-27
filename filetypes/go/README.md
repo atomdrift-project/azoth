@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `go` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.592412 | 0.937337 | 0.626242 | 2.72% | 0.0555 |
+| 0.579758 | 0.933275 | 0.657069 | 2.04% | 0.0579 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `go` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.409745 | 0.809525 | 0.401583 | 2.21% | 0.0777 | — |
+| 0.218502 | 0.671573 | 0.226869 | 1.70% | 0.0782 | — |
 
 ## Routing
 
