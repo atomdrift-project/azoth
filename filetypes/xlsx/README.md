@@ -6,11 +6,11 @@ LightGBM specialist for `xlsx`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` slice of the locked test partition: 2,237 malware / 12 benign (2,249 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` slice of the locked test partition: 2,243 malware / 22 benign (2,265 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999652 | 0.942110 | 0.997547 | — | 0.0486 |
+| 0.999824 | 0.984578 | 0.996430 | 91.26% | 0.0073 |
 
 ## Specialist Performance
 
@@ -18,19 +18,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.994664 | 0.500000 | 0.997325 | — | 0.0053 | — |
+| 0.990287 | 0.500000 | 0.995120 | — | 0.0096 | — |
 
 ## Routing
 
-Files matching `xlsx` are scored by `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xlsx` are scored by `general`, `filegroups/documents`, `filetypes/xlsx`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 15,678 (15,546 mal / 132 ben) |
-| Feature spec | 60810 features (`general_shared`) |
+| Train rows | 15,809 (15,596 mal / 213 ben) |
+| Feature spec | 62607 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

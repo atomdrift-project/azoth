@@ -4,11 +4,11 @@ LightGBM specialist for `package.json`. Member of the Azoth routed ensemble; bun
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `package.json` slice of the locked test partition: 2,162 malware / 1,440 benign (3,602 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `package.json` slice of the locked test partition: 2,200 malware / 1,563 benign (3,763 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998638 | 0.998609 | 0.997224 | 91.54% | 0.0206 |
+| 0.999509 | 0.999149 | 0.997041 | 89.14% | 0.0034 |
 
 ## Specialist Performance
 
@@ -16,25 +16,25 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `packag
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999818 | 0.999729 | 0.997918 | 86.96% | 0.0030 | — |
+| 0.999509 | 0.999149 | 0.997041 | 89.14% | 0.0034 | — |
 
 ## Routing
 
-Files matching `package.json` are scored by `general`, `filegroups/config`, `filetypes/package.json`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `package.json` are scored by `general`, `filegroups/config`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 25,824 (15,632 mal / 10,192 ben) |
-| Feature spec | 60810 features (`general_shared`) |
+| Train rows | 26,945 (15,913 mal / 11,032 ben) |
+| Feature spec | 62607 features (`general_shared`) |
 | n_estimators | 400 |
-| num_leaves | 96 |
+| num_leaves | 128 |
 | max_depth | 12 |
 | min_child_samples | 100 |
-| learning_rate | 0.05 |
-| subsample / colsample | 0.8 / 0.7 |
+| learning_rate | 0.03 |
+| subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |
 | device | auto |

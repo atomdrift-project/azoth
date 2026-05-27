@@ -4,11 +4,11 @@ LightGBM specialist for `xml`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xml` slice of the locked test partition: 291 malware / 18,398 benign (18,689 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xml` slice of the locked test partition: 306 malware / 19,746 benign (20,052 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.234673 | 0.717127 | 0.358407 | 5.15% | 0.0135 |
+| 0.165250 | 0.768203 | 0.360153 | 28.43% | 0.0263 |
 
 ## Specialist Performance
 
@@ -16,21 +16,21 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xml` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.107955 | 0.586169 | 0.250000 | 1.03% | 0.1760 | — |
+| 0.165250 | 0.768203 | 0.360153 | 28.43% | 0.0263 | — |
 
 ## Routing
 
-Files matching `xml` are scored by `general`, `filegroups/config`, `filetypes/xml`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xml` are scored by `general`, `filegroups/config`, `filetypes/xml`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 130,011 (1,966 mal / 128,045 ben) |
-| Feature spec | 60810 features (`general_shared`) |
+| Train rows | 139,125 (2,021 mal / 137,104 ben) |
+| Feature spec | 62607 features (`general_shared`) |
 | n_estimators | 400 |
-| num_leaves | 128 |
+| num_leaves | 64 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |

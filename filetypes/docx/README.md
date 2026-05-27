@@ -4,11 +4,11 @@ LightGBM specialist for `docx`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `docx` slice of the locked test partition: 176 malware / 31 benign (207 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `docx` slice of the locked test partition: 183 malware / 31 benign (214 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.970000 | 0.873625 | 0.919060 | 74.43% | 0.0861 |
+| 0.977481 | 0.914419 | 0.926209 | 70.49% | 0.4301 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `docx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.976950 | 0.916972 | 0.926316 | 65.34% | 0.3150 | — |
+| 0.977481 | 0.914419 | 0.926209 | 70.49% | 0.4301 | — |
 
 ## Routing
 
-Files matching `docx` are scored by `general`, `filegroups/documents`, `filetypes/docx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `docx` are scored by `general`, `filegroups/documents`, `filetypes/docx`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,616 (1,403 mal / 213 ben) |
-| Feature spec | 60810 features (`general_shared`) |
+| Train rows | 1,653 (1,440 mal / 213 ben) |
+| Feature spec | 62607 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

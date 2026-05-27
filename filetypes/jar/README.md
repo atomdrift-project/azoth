@@ -4,11 +4,11 @@ LightGBM specialist for `jar`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `jar` slice of the locked test partition: 215 malware / 237 benign (452 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `jar` slice of the locked test partition: 225 malware / 299 benign (524 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.981657 | 0.984270 | 0.936471 | 59.53% | 0.1188 |
+| 0.979629 | 0.985269 | 0.933638 | 55.56% | 0.1044 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.981657 | 0.984270 | 0.936471 | 59.53% | 0.1188 | — |
+| 0.979629 | 0.985269 | 0.933638 | 55.56% | 0.1044 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `jar` are scored by `general`, `filetypes/jar`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,145 (1,251 mal / 1,894 ben) |
-| Feature spec | 60810 features (`general_shared`) |
+| Train rows | 3,557 (1,298 mal / 2,259 ben) |
+| Feature spec | 62607 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pptx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.702163 | 0.666667 | 0.687500 | 18.18% | 0.2656 |
+| 0.663729 | 0.613636 | 0.687500 | 18.18% | 0.2723 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pptx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.511628 | 0.500000 | 0.676923 | — | 0.3618 | — |
+| 0.511628 | 0.500000 | 0.676923 | — | 0.4523 | — |
 
 ## Routing
 
-Files matching `pptx` are scored by `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `pptx` are scored by `general`, `filegroups/documents`, `filetypes/pptx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
@@ -28,7 +28,7 @@ Files matching `pptx` are scored by `filegroups/documents`. The ensemble's per-r
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 276 (106 mal / 170 ben) |
-| Feature spec | 60810 features (`general_shared`) |
+| Feature spec | 62607 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
@@ -36,5 +36,5 @@ Files matching `pptx` are scored by `filegroups/documents`. The ensemble's per-r
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| early_stopping_rounds | 25 |
 | device | auto |

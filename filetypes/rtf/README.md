@@ -4,11 +4,11 @@ LightGBM specialist for `rtf`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` slice of the locked test partition: 215 malware / 51 benign (266 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` slice of the locked test partition: 216 malware / 51 benign (267 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999595 | 0.998267 | 0.988453 | 97.67% | 0.0237 |
+| 0.999452 | 0.997640 | 0.988290 | 97.69% | 0.0254 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999595 | 0.998267 | 0.988453 | 97.67% | 0.0237 | — |
+| 0.999452 | 0.997640 | 0.988290 | 97.69% | 0.0254 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `rtf` are scored by `general`, `filegroups/documents`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,679 (1,250 mal / 429 ben) |
-| Feature spec | 60810 features (`general_shared`) |
+| Train rows | 1,701 (1,272 mal / 429 ben) |
+| Feature spec | 62607 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
