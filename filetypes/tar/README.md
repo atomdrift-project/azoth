@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `tar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.993250 | 0.982104 | 0.975806 | 85.71% | 0.0677 |
+| 0.984230 | 0.967787 | 0.967480 | 93.65% | 0.0664 |
 
 ## Specialist Performance
 
@@ -20,7 +20,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `tar` s
 
 ## Routing
 
-Files matching `tar` are scored by `general`, `filetypes/tar`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `tar` are scored by `general`, `filetypes/tar`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

@@ -1593,30 +1593,30 @@
             "fp_at_3fp": 3
           },
           "filetypes/c": {
-            "pr_auc": 0.35613678280886163,
-            "recall_at_0fp": 0.08885116015846067,
-            "threshold_at_0fp": 0.9977384805679321,
+            "pr_auc": 0.2797185281401782,
+            "recall_at_0fp": 0.13752122241086587,
+            "threshold_at_0fp": 0.9724044799804688,
             "fp_at_0fp": 0,
-            "recall_at_3fp": 0.11941143180531975,
-            "threshold_at_3fp": 0.9936380982398987,
+            "recall_at_3fp": 0.13978494623655913,
+            "threshold_at_3fp": 0.9607701897621155,
             "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.30807177296362664,
-          "recall_at_0fp": 0.09281267685342388,
-          "threshold_at_0fp": 0.9977384805679321,
+          "pr_auc": 0.2788946579063351,
+          "recall_at_0fp": 0.11092246745897001,
+          "threshold_at_0fp": 0.9951750040054321,
           "fp_at_0fp": 0,
-          "recall_at_3fp": 0.1273344651952462,
-          "threshold_at_3fp": 0.9942737221717834,
+          "recall_at_3fp": 0.1318619128466327,
+          "threshold_at_3fp": 0.9918176531791687,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 146,
+          "tp": 134,
           "fp": 0,
-          "recall": 0.08262591963780419,
+          "recall": 0.07583474816072439,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1624,9 +1624,9 @@
           ]
         },
         "L0_suspicious": {
-          "tp": 205,
-          "fp": 1,
-          "recall": 0.11601584606677985,
+          "tp": 229,
+          "fp": 0,
+          "recall": 0.12959818902093945,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1634,9 +1634,9 @@
           ]
         },
         "L1_hostile": {
-          "tp": 173,
-          "fp": 1,
-          "recall": 0.09790605546123372,
+          "tp": 217,
+          "fp": 0,
+          "recall": 0.12280701754385964,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1644,9 +1644,9 @@
           ]
         },
         "L1_suspicious": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 244,
+          "fp": 0,
+          "recall": 0.1380871533672892,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1654,9 +1654,9 @@
           ]
         },
         "L2_hostile": {
-          "tp": 172,
-          "fp": 1,
-          "recall": 0.09734012450481042,
+          "tp": 217,
+          "fp": 0,
+          "recall": 0.12280701754385964,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1664,9 +1664,9 @@
           ]
         },
         "L2_suspicious": {
-          "tp": 239,
-          "fp": 5,
-          "recall": 0.1352574985851726,
+          "tp": 246,
+          "fp": 1,
+          "recall": 0.13921901528013583,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1674,9 +1674,9 @@
           ]
         },
         "L3_hostile": {
-          "tp": 202,
-          "fp": 1,
-          "recall": 0.1143180531975099,
+          "tp": 217,
+          "fp": 0,
+          "recall": 0.12280701754385964,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1684,9 +1684,9 @@
           ]
         },
         "L3_suspicious": {
-          "tp": 288,
-          "fp": 6,
-          "recall": 0.16298811544991512,
+          "tp": 247,
+          "fp": 1,
+          "recall": 0.13978494623655913,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1694,9 +1694,9 @@
           ]
         },
         "L4_hostile": {
-          "tp": 202,
-          "fp": 1,
-          "recall": 0.1143180531975099,
+          "tp": 220,
+          "fp": 0,
+          "recall": 0.1245048104131296,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1704,9 +1704,9 @@
           ]
         },
         "L4_suspicious": {
-          "tp": 288,
-          "fp": 6,
-          "recall": 0.16298811544991512,
+          "tp": 219,
+          "fp": 1,
+          "recall": 0.12393887945670629,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1714,9 +1714,9 @@
           ]
         },
         "L5_hostile": {
-          "tp": 202,
-          "fp": 1,
-          "recall": 0.1143180531975099,
+          "tp": 220,
+          "fp": 0,
+          "recall": 0.1245048104131296,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1724,9 +1724,9 @@
           ]
         },
         "L5_suspicious": {
-          "tp": 288,
-          "fp": 6,
-          "recall": 0.16298811544991512,
+          "tp": 219,
+          "fp": 1,
+          "recall": 0.12393887945670629,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1734,9 +1734,9 @@
           ]
         },
         "L6_hostile": {
-          "tp": 202,
-          "fp": 1,
-          "recall": 0.1143180531975099,
+          "tp": 226,
+          "fp": 0,
+          "recall": 0.1279003961516695,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1744,9 +1744,9 @@
           ]
         },
         "L6_suspicious": {
-          "tp": 288,
-          "fp": 6,
-          "recall": 0.16298811544991512,
+          "tp": 219,
+          "fp": 1,
+          "recall": 0.12393887945670629,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1754,9 +1754,9 @@
           ]
         },
         "L7_hostile": {
-          "tp": 202,
-          "fp": 1,
-          "recall": 0.1143180531975099,
+          "tp": 226,
+          "fp": 0,
+          "recall": 0.1279003961516695,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1764,9 +1764,9 @@
           ]
         },
         "L7_suspicious": {
-          "tp": 288,
-          "fp": 6,
-          "recall": 0.16298811544991512,
+          "tp": 219,
+          "fp": 1,
+          "recall": 0.12393887945670629,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1774,9 +1774,9 @@
           ]
         },
         "L8_hostile": {
-          "tp": 205,
-          "fp": 1,
-          "recall": 0.11601584606677985,
+          "tp": 229,
+          "fp": 0,
+          "recall": 0.12959818902093945,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1784,9 +1784,9 @@
           ]
         },
         "L8_suspicious": {
-          "tp": 288,
-          "fp": 6,
-          "recall": 0.16298811544991512,
+          "tp": 219,
+          "fp": 1,
+          "recall": 0.12393887945670629,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1794,9 +1794,9 @@
           ]
         },
         "L9_hostile": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 242,
+          "fp": 0,
+          "recall": 0.13695529145444255,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1804,19 +1804,18 @@
           ]
         },
         "L9_suspicious": {
-          "tp": 288,
-          "fp": 6,
-          "recall": 0.16298811544991512,
+          "tp": 285,
+          "fp": 11,
+          "recall": 0.16129032258064516,
           "active_routes": [
             "general",
-            "filegroups/source",
             "filetypes/c"
           ]
         },
         "L10_hostile": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 242,
+          "fp": 0,
+          "recall": 0.13695529145444255,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1824,9 +1823,9 @@
           ]
         },
         "L10_suspicious": {
-          "tp": 288,
-          "fp": 6,
-          "recall": 0.16298811544991512,
+          "tp": 300,
+          "fp": 2,
+          "recall": 0.1697792869269949,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1834,9 +1833,9 @@
           ]
         },
         "L11_hostile": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 242,
+          "fp": 0,
+          "recall": 0.13695529145444255,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1844,9 +1843,9 @@
           ]
         },
         "L11_suspicious": {
-          "tp": 288,
-          "fp": 6,
-          "recall": 0.16298811544991512,
+          "tp": 304,
+          "fp": 2,
+          "recall": 0.17204301075268819,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1854,9 +1853,9 @@
           ]
         },
         "L12_hostile": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 242,
+          "fp": 0,
+          "recall": 0.13695529145444255,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1864,19 +1863,18 @@
           ]
         },
         "L12_suspicious": {
-          "tp": 288,
-          "fp": 6,
-          "recall": 0.16298811544991512,
+          "tp": 326,
+          "fp": 15,
+          "recall": 0.18449349179400112,
           "active_routes": [
             "general",
-            "filegroups/source",
             "filetypes/c"
           ]
         },
         "L13_hostile": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 242,
+          "fp": 0,
+          "recall": 0.13695529145444255,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1884,9 +1882,9 @@
           ]
         },
         "L13_suspicious": {
-          "tp": 288,
-          "fp": 6,
-          "recall": 0.16298811544991512,
+          "tp": 331,
+          "fp": 15,
+          "recall": 0.1873231465761177,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1894,9 +1892,9 @@
           ]
         },
         "L14_hostile": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 242,
+          "fp": 0,
+          "recall": 0.13695529145444255,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1904,19 +1902,18 @@
           ]
         },
         "L14_suspicious": {
-          "tp": 288,
-          "fp": 6,
-          "recall": 0.16298811544991512,
+          "tp": 335,
+          "fp": 16,
+          "recall": 0.189586870401811,
           "active_routes": [
             "general",
-            "filegroups/source",
             "filetypes/c"
           ]
         },
         "L15_hostile": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 244,
+          "fp": 0,
+          "recall": 0.1380871533672892,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1924,19 +1921,18 @@
           ]
         },
         "L15_suspicious": {
-          "tp": 301,
-          "fp": 19,
-          "recall": 0.17034521788341822,
+          "tp": 337,
+          "fp": 17,
+          "recall": 0.1907187323146576,
           "active_routes": [
             "general",
-            "filegroups/source",
             "filetypes/c"
           ]
         },
         "L16_hostile": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 244,
+          "fp": 0,
+          "recall": 0.1380871533672892,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1944,19 +1940,18 @@
           ]
         },
         "L16_suspicious": {
-          "tp": 301,
-          "fp": 19,
-          "recall": 0.17034521788341822,
+          "tp": 338,
+          "fp": 17,
+          "recall": 0.19128466327108093,
           "active_routes": [
             "general",
-            "filegroups/source",
             "filetypes/c"
           ]
         },
         "L17_hostile": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 244,
+          "fp": 0,
+          "recall": 0.1380871533672892,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1964,18 +1959,18 @@
           ]
         },
         "L17_suspicious": {
-          "tp": 306,
-          "fp": 21,
-          "recall": 0.1731748726655348,
+          "tp": 339,
+          "fp": 17,
+          "recall": 0.19185059422750425,
           "active_routes": [
-            "filegroups/source",
+            "general",
             "filetypes/c"
           ]
         },
         "L18_hostile": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 244,
+          "fp": 0,
+          "recall": 0.1380871533672892,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1983,9 +1978,9 @@
           ]
         },
         "L18_suspicious": {
-          "tp": 308,
-          "fp": 19,
-          "recall": 0.17430673457838144,
+          "tp": 342,
+          "fp": 17,
+          "recall": 0.1935483870967742,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -1993,9 +1988,9 @@
           ]
         },
         "L19_hostile": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 244,
+          "fp": 0,
+          "recall": 0.1380871533672892,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -2003,18 +1998,18 @@
           ]
         },
         "L19_suspicious": {
-          "tp": 316,
-          "fp": 21,
-          "recall": 0.17883418222976796,
+          "tp": 346,
+          "fp": 17,
+          "recall": 0.19581211092246745,
           "active_routes": [
-            "filegroups/source",
+            "general",
             "filetypes/c"
           ]
         },
         "L20_hostile": {
-          "tp": 237,
-          "fp": 5,
-          "recall": 0.13412563667232597,
+          "tp": 244,
+          "fp": 0,
+          "recall": 0.1380871533672892,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -2022,19 +2017,19 @@
           ]
         },
         "L20_suspicious": {
-          "tp": 319,
-          "fp": 21,
-          "recall": 0.18053197509903793,
+          "tp": 346,
+          "fp": 17,
+          "recall": 0.19581211092246745,
           "active_routes": [
-            "filegroups/source",
+            "general",
             "filetypes/c"
           ]
         }
       },
       "deployed_or_summary": {
-        "tp": 237,
-        "fp": 5,
-        "recall": 0.13412563667232597,
+        "tp": 242,
+        "fp": 0,
+        "recall": 0.13695529145444255,
         "active_routes": [
           "general",
           "filegroups/source",
@@ -6158,30 +6153,30 @@
             "fp_at_3fp": 3
           },
           "filetypes/elf": {
-            "pr_auc": 0.9997046811819066,
-            "recall_at_0fp": 0.8913022015993681,
-            "threshold_at_0fp": 0.9988560676574707,
+            "pr_auc": 0.9998673955764279,
+            "recall_at_0fp": 0.8675091321946885,
+            "threshold_at_0fp": 0.9995678663253784,
             "fp_at_0fp": 0,
-            "recall_at_3fp": 0.933458386810149,
-            "threshold_at_3fp": 0.9966722726821899,
+            "recall_at_3fp": 0.9601145226577155,
+            "threshold_at_3fp": 0.9953165650367737,
             "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.9995458580451215,
-          "recall_at_0fp": 0.8696811136341198,
-          "threshold_at_0fp": 0.9992515444755554,
+          "pr_auc": 0.9997082971074629,
+          "recall_at_0fp": 0.8680027643400138,
+          "threshold_at_0fp": 0.9995678663253784,
           "fp_at_0fp": 0,
-          "recall_at_3fp": 0.9363214532530358,
-          "threshold_at_3fp": 0.9966617822647095,
+          "recall_at_3fp": 0.9585348997926745,
+          "threshold_at_3fp": 0.9961246252059937,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 8666,
+          "tp": 8811,
           "fp": 0,
-          "recall": 0.8555632342778162,
+          "recall": 0.8698785664922499,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6189,9 +6184,9 @@
           ]
         },
         "L0_suspicious": {
-          "tp": 9448,
-          "fp": 2,
-          "recall": 0.9327673018066936,
+          "tp": 9537,
+          "fp": 1,
+          "recall": 0.9415539539934841,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6199,9 +6194,9 @@
           ]
         },
         "L1_hostile": {
-          "tp": 8666,
+          "tp": 8811,
           "fp": 0,
-          "recall": 0.8555632342778162,
+          "recall": 0.8698785664922499,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6209,9 +6204,9 @@
           ]
         },
         "L1_suspicious": {
-          "tp": 9551,
-          "fp": 5,
-          "recall": 0.942936124000395,
+          "tp": 9408,
+          "fp": 1,
+          "recall": 0.9288182446440912,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6219,9 +6214,9 @@
           ]
         },
         "L2_hostile": {
-          "tp": 9431,
-          "fp": 1,
-          "recall": 0.9310889525125876,
+          "tp": 8811,
+          "fp": 0,
+          "recall": 0.8698785664922499,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6229,9 +6224,9 @@
           ]
         },
         "L2_suspicious": {
-          "tp": 9567,
-          "fp": 6,
-          "recall": 0.9445157468654358,
+          "tp": 9413,
+          "fp": 1,
+          "recall": 0.9293118767894165,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6239,9 +6234,9 @@
           ]
         },
         "L3_hostile": {
-          "tp": 9433,
+          "tp": 9466,
           "fp": 1,
-          "recall": 0.9312864053707177,
+          "recall": 0.9345443775298647,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6249,9 +6244,9 @@
           ]
         },
         "L3_suspicious": {
-          "tp": 9611,
-          "fp": 8,
-          "recall": 0.9488597097442986,
+          "tp": 9415,
+          "fp": 1,
+          "recall": 0.9295093296475466,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6259,9 +6254,9 @@
           ]
         },
         "L4_hostile": {
-          "tp": 9433,
+          "tp": 9466,
           "fp": 1,
-          "recall": 0.9312864053707177,
+          "recall": 0.9345443775298647,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6269,9 +6264,9 @@
           ]
         },
         "L4_suspicious": {
-          "tp": 9629,
-          "fp": 8,
-          "recall": 0.9506367854674697,
+          "tp": 9415,
+          "fp": 1,
+          "recall": 0.9295093296475466,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6279,9 +6274,9 @@
           ]
         },
         "L5_hostile": {
-          "tp": 9455,
-          "fp": 2,
-          "recall": 0.933458386810149,
+          "tp": 9466,
+          "fp": 1,
+          "recall": 0.9345443775298647,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6289,9 +6284,9 @@
           ]
         },
         "L5_suspicious": {
-          "tp": 9643,
-          "fp": 9,
-          "recall": 0.9520189554743805,
+          "tp": 9416,
+          "fp": 1,
+          "recall": 0.9296080560766117,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6299,9 +6294,9 @@
           ]
         },
         "L6_hostile": {
-          "tp": 9433,
+          "tp": 9489,
           "fp": 1,
-          "recall": 0.9312864053707177,
+          "recall": 0.9368150853983611,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6309,9 +6304,9 @@
           ]
         },
         "L6_suspicious": {
-          "tp": 9693,
-          "fp": 9,
-          "recall": 0.9569552769276335,
+          "tp": 9416,
+          "fp": 1,
+          "recall": 0.9296080560766117,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6319,9 +6314,9 @@
           ]
         },
         "L7_hostile": {
-          "tp": 9497,
-          "fp": 4,
-          "recall": 0.9376048968308817,
+          "tp": 9537,
+          "fp": 1,
+          "recall": 0.9415539539934841,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6329,9 +6324,9 @@
           ]
         },
         "L7_suspicious": {
-          "tp": 9693,
-          "fp": 9,
-          "recall": 0.9569552769276335,
+          "tp": 9418,
+          "fp": 1,
+          "recall": 0.9298055089347418,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6339,9 +6334,9 @@
           ]
         },
         "L8_hostile": {
-          "tp": 9448,
-          "fp": 2,
-          "recall": 0.9327673018066936,
+          "tp": 9537,
+          "fp": 1,
+          "recall": 0.9415539539934841,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6349,9 +6344,9 @@
           ]
         },
         "L8_suspicious": {
-          "tp": 9693,
-          "fp": 9,
-          "recall": 0.9569552769276335,
+          "tp": 9421,
+          "fp": 1,
+          "recall": 0.9301016882219371,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6359,9 +6354,9 @@
           ]
         },
         "L9_hostile": {
-          "tp": 9448,
-          "fp": 2,
-          "recall": 0.9327673018066936,
+          "tp": 9537,
+          "fp": 1,
+          "recall": 0.9415539539934841,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6369,9 +6364,9 @@
           ]
         },
         "L9_suspicious": {
-          "tp": 9693,
-          "fp": 9,
-          "recall": 0.9569552769276335,
+          "tp": 9428,
+          "fp": 1,
+          "recall": 0.9307927732253924,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6379,9 +6374,9 @@
           ]
         },
         "L10_hostile": {
-          "tp": 9448,
-          "fp": 2,
-          "recall": 0.9327673018066936,
+          "tp": 9537,
+          "fp": 1,
+          "recall": 0.9415539539934841,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6389,178 +6384,8 @@
           ]
         },
         "L10_suspicious": {
-          "tp": 9693,
-          "fp": 9,
-          "recall": 0.9569552769276335,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L11_hostile": {
-          "tp": 9526,
-          "fp": 4,
-          "recall": 0.9404679632737684,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L11_suspicious": {
-          "tp": 9693,
-          "fp": 9,
-          "recall": 0.9569552769276335,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L12_hostile": {
-          "tp": 9448,
-          "fp": 2,
-          "recall": 0.9327673018066936,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L12_suspicious": {
-          "tp": 9693,
-          "fp": 9,
-          "recall": 0.9569552769276335,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L13_hostile": {
-          "tp": 9522,
-          "fp": 4,
-          "recall": 0.9400730575575081,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L13_suspicious": {
-          "tp": 9732,
-          "fp": 9,
-          "recall": 0.9608056076611708,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L14_hostile": {
-          "tp": 9544,
-          "fp": 4,
-          "recall": 0.9422450389969395,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L14_suspicious": {
-          "tp": 9732,
-          "fp": 9,
-          "recall": 0.9608056076611708,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L15_hostile": {
-          "tp": 9532,
-          "fp": 4,
-          "recall": 0.9410603218481588,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L15_suspicious": {
-          "tp": 9732,
-          "fp": 9,
-          "recall": 0.9608056076611708,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L16_hostile": {
-          "tp": 9551,
-          "fp": 5,
-          "recall": 0.942936124000395,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L16_suspicious": {
-          "tp": 9732,
-          "fp": 9,
-          "recall": 0.9608056076611708,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L17_hostile": {
-          "tp": 9551,
-          "fp": 5,
-          "recall": 0.942936124000395,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L17_suspicious": {
-          "tp": 9732,
-          "fp": 9,
-          "recall": 0.9608056076611708,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L18_hostile": {
-          "tp": 9556,
-          "fp": 5,
-          "recall": 0.9434297561457202,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L18_suspicious": {
-          "tp": 9732,
-          "fp": 9,
-          "recall": 0.9608056076611708,
-          "active_routes": [
-            "general",
-            "filegroups/native",
-            "filetypes/elf"
-          ]
-        },
-        "L19_hostile": {
           "tp": 9566,
-          "fp": 5,
+          "fp": 1,
           "recall": 0.9444170204363708,
           "active_routes": [
             "general",
@@ -6568,20 +6393,184 @@
             "filetypes/elf"
           ]
         },
-        "L19_suspicious": {
-          "tp": 9732,
-          "fp": 9,
-          "recall": 0.9608056076611708,
+        "L11_hostile": {
+          "tp": 9537,
+          "fp": 1,
+          "recall": 0.9415539539934841,
           "active_routes": [
             "general",
             "filegroups/native",
             "filetypes/elf"
           ]
         },
+        "L11_suspicious": {
+          "tp": 9752,
+          "fp": 3,
+          "recall": 0.9627801362424722,
+          "active_routes": [
+            "general",
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L12_hostile": {
+          "tp": 9537,
+          "fp": 1,
+          "recall": 0.9415539539934841,
+          "active_routes": [
+            "general",
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L12_suspicious": {
+          "tp": 9760,
+          "fp": 4,
+          "recall": 0.9635699476749926,
+          "active_routes": [
+            "general",
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L13_hostile": {
+          "tp": 9537,
+          "fp": 1,
+          "recall": 0.9415539539934841,
+          "active_routes": [
+            "general",
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L13_suspicious": {
+          "tp": 9760,
+          "fp": 4,
+          "recall": 0.9635699476749926,
+          "active_routes": [
+            "general",
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L14_hostile": {
+          "tp": 9408,
+          "fp": 1,
+          "recall": 0.9288182446440912,
+          "active_routes": [
+            "general",
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L14_suspicious": {
+          "tp": 9871,
+          "fp": 8,
+          "recall": 0.9745285813012143,
+          "active_routes": [
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L15_hostile": {
+          "tp": 9408,
+          "fp": 1,
+          "recall": 0.9288182446440912,
+          "active_routes": [
+            "general",
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L15_suspicious": {
+          "tp": 9908,
+          "fp": 9,
+          "recall": 0.9781814591766216,
+          "active_routes": [
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L16_hostile": {
+          "tp": 9408,
+          "fp": 1,
+          "recall": 0.9288182446440912,
+          "active_routes": [
+            "general",
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L16_suspicious": {
+          "tp": 9910,
+          "fp": 10,
+          "recall": 0.9783789120347517,
+          "active_routes": [
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L17_hostile": {
+          "tp": 9408,
+          "fp": 1,
+          "recall": 0.9288182446440912,
+          "active_routes": [
+            "general",
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L17_suspicious": {
+          "tp": 9912,
+          "fp": 10,
+          "recall": 0.9785763648928818,
+          "active_routes": [
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L18_hostile": {
+          "tp": 9408,
+          "fp": 1,
+          "recall": 0.9288182446440912,
+          "active_routes": [
+            "general",
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L18_suspicious": {
+          "tp": 9916,
+          "fp": 11,
+          "recall": 0.978971270609142,
+          "active_routes": [
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L19_hostile": {
+          "tp": 9408,
+          "fp": 1,
+          "recall": 0.9288182446440912,
+          "active_routes": [
+            "general",
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
+        "L19_suspicious": {
+          "tp": 9922,
+          "fp": 11,
+          "recall": 0.9795636291835325,
+          "active_routes": [
+            "filegroups/native",
+            "filetypes/elf"
+          ]
+        },
         "L20_hostile": {
-          "tp": 9561,
-          "fp": 5,
-          "recall": 0.9439233882910455,
+          "tp": 9408,
+          "fp": 1,
+          "recall": 0.9288182446440912,
           "active_routes": [
             "general",
             "filegroups/native",
@@ -6589,20 +6578,19 @@
           ]
         },
         "L20_suspicious": {
-          "tp": 9749,
-          "fp": 10,
-          "recall": 0.9624839569552769,
+          "tp": 9927,
+          "fp": 11,
+          "recall": 0.9800572613288577,
           "active_routes": [
-            "general",
             "filegroups/native",
             "filetypes/elf"
           ]
         }
       },
       "deployed_or_summary": {
-        "tp": 9448,
-        "fp": 2,
-        "recall": 0.9327673018066936,
+        "tp": 9537,
+        "fp": 1,
+        "recall": 0.9415539539934841,
         "active_routes": [
           "general",
           "filegroups/native",
@@ -7006,362 +6994,29 @@
             "fp_at_3fp": 3
           },
           "filetypes/go": {
-            "pr_auc": 0.4565119278595764,
-            "recall_at_0fp": 0.016142735768903994,
-            "threshold_at_0fp": 0.9420195817947388,
+            "pr_auc": 0.7419589945765742,
+            "recall_at_0fp": 0.04927782497875956,
+            "threshold_at_0fp": 0.8829816579818726,
             "fp_at_0fp": 0,
-            "recall_at_3fp": 0.048428207306711976,
-            "threshold_at_3fp": 0.23998814821243286,
+            "recall_at_3fp": 0.0713678844519966,
+            "threshold_at_3fp": 0.6627495288848877,
             "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.5825238623432469,
-          "recall_at_0fp": 0.012744265080713678,
-          "threshold_at_0fp": 0.9920634627342224,
+          "pr_auc": 0.7357642103169358,
+          "recall_at_0fp": 0.014443500424808835,
+          "threshold_at_0fp": 0.9919316172599792,
           "fp_at_0fp": 0,
-          "recall_at_3fp": 0.021240441801189464,
+          "recall_at_3fp": 0.052676295666949875,
           "threshold_at_3fp": 0.9546512365341187,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 14,
-          "fp": 0,
-          "recall": 0.0118946474086661,
-          "active_routes": [
-            "general",
-            "filetypes/go"
-          ]
-        },
-        "L0_suspicious": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L1_hostile": {
-          "tp": 14,
-          "fp": 0,
-          "recall": 0.0118946474086661,
-          "active_routes": [
-            "general",
-            "filetypes/go"
-          ]
-        },
-        "L1_suspicious": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L2_hostile": {
-          "tp": 14,
-          "fp": 0,
-          "recall": 0.0118946474086661,
-          "active_routes": [
-            "general",
-            "filetypes/go"
-          ]
-        },
-        "L2_suspicious": {
-          "tp": 25,
-          "fp": 1,
-          "recall": 0.021240441801189464,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L3_hostile": {
-          "tp": 20,
-          "fp": 0,
-          "recall": 0.016992353440951572,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L3_suspicious": {
-          "tp": 30,
-          "fp": 1,
-          "recall": 0.025488530161427356,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L4_hostile": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L4_suspicious": {
-          "tp": 62,
-          "fp": 4,
-          "recall": 0.052676295666949875,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L5_hostile": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L5_suspicious": {
-          "tp": 65,
-          "fp": 4,
-          "recall": 0.055225148683092605,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L6_hostile": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L6_suspicious": {
-          "tp": 65,
-          "fp": 4,
-          "recall": 0.055225148683092605,
-          "active_routes": [
-            "general",
-            "filetypes/go"
-          ]
-        },
-        "L7_hostile": {
-          "tp": 29,
-          "fp": 1,
-          "recall": 0.02463891248937978,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L7_suspicious": {
-          "tp": 69,
-          "fp": 4,
-          "recall": 0.05862361937128292,
-          "active_routes": [
-            "general",
-            "filetypes/go"
-          ]
-        },
-        "L8_hostile": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L8_suspicious": {
-          "tp": 69,
-          "fp": 4,
-          "recall": 0.05862361937128292,
-          "active_routes": [
-            "general",
-            "filetypes/go"
-          ]
-        },
-        "L9_hostile": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L9_suspicious": {
-          "tp": 69,
-          "fp": 4,
-          "recall": 0.05862361937128292,
-          "active_routes": [
-            "general",
-            "filetypes/go"
-          ]
-        },
-        "L10_hostile": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L10_suspicious": {
-          "tp": 65,
-          "fp": 4,
-          "recall": 0.055225148683092605,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L11_hostile": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L11_suspicious": {
-          "tp": 65,
-          "fp": 4,
-          "recall": 0.055225148683092605,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L12_hostile": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L12_suspicious": {
-          "tp": 65,
-          "fp": 4,
-          "recall": 0.055225148683092605,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L13_hostile": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L13_suspicious": {
-          "tp": 65,
-          "fp": 4,
-          "recall": 0.055225148683092605,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L14_hostile": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L14_suspicious": {
-          "tp": 65,
-          "fp": 4,
-          "recall": 0.055225148683092605,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L15_hostile": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L15_suspicious": {
-          "tp": 65,
-          "fp": 4,
-          "recall": 0.055225148683092605,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L16_hostile": {
-          "tp": 23,
-          "fp": 1,
-          "recall": 0.01954120645709431,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L16_suspicious": {
-          "tp": 65,
-          "fp": 4,
-          "recall": 0.055225148683092605,
-          "active_routes": [
-            "general",
-            "filegroups/source",
-            "filetypes/go"
-          ]
-        },
-        "L17_hostile": {
           "tp": 48,
-          "fp": 2,
+          "fp": 0,
           "recall": 0.04078164825828377,
           "active_routes": [
             "general",
@@ -7369,20 +7024,345 @@
             "filetypes/go"
           ]
         },
-        "L17_suspicious": {
-          "tp": 65,
-          "fp": 4,
-          "recall": 0.055225148683092605,
+        "L0_suspicious": {
+          "tp": 60,
+          "fp": 0,
+          "recall": 0.05097706032285471,
           "active_routes": [
             "general",
             "filegroups/source",
             "filetypes/go"
           ]
         },
-        "L18_hostile": {
-          "tp": 49,
+        "L1_hostile": {
+          "tp": 48,
+          "fp": 0,
+          "recall": 0.04078164825828377,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L1_suspicious": {
+          "tp": 63,
           "fp": 2,
-          "recall": 0.041631265930331354,
+          "recall": 0.05352591333899745,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L2_hostile": {
+          "tp": 48,
+          "fp": 0,
+          "recall": 0.04078164825828377,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L2_suspicious": {
+          "tp": 84,
+          "fp": 3,
+          "recall": 0.0713678844519966,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L3_hostile": {
+          "tp": 56,
+          "fp": 0,
+          "recall": 0.0475785896346644,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L3_suspicious": {
+          "tp": 86,
+          "fp": 4,
+          "recall": 0.07306711979609176,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L4_hostile": {
+          "tp": 60,
+          "fp": 0,
+          "recall": 0.05097706032285471,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L4_suspicious": {
+          "tp": 97,
+          "fp": 4,
+          "recall": 0.08241291418861513,
+          "active_routes": [
+            "filetypes/go"
+          ]
+        },
+        "L5_hostile": {
+          "tp": 60,
+          "fp": 0,
+          "recall": 0.05097706032285471,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L5_suspicious": {
+          "tp": 98,
+          "fp": 4,
+          "recall": 0.08326253186066271,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L6_hostile": {
+          "tp": 60,
+          "fp": 0,
+          "recall": 0.05097706032285471,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L6_suspicious": {
+          "tp": 100,
+          "fp": 4,
+          "recall": 0.08496176720475786,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L7_hostile": {
+          "tp": 60,
+          "fp": 0,
+          "recall": 0.05097706032285471,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L7_suspicious": {
+          "tp": 101,
+          "fp": 4,
+          "recall": 0.08581138487680544,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L8_hostile": {
+          "tp": 60,
+          "fp": 0,
+          "recall": 0.05097706032285471,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L8_suspicious": {
+          "tp": 106,
+          "fp": 4,
+          "recall": 0.09005947323704333,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L9_hostile": {
+          "tp": 60,
+          "fp": 1,
+          "recall": 0.05097706032285471,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L9_suspicious": {
+          "tp": 113,
+          "fp": 4,
+          "recall": 0.09600679694137638,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L10_hostile": {
+          "tp": 61,
+          "fp": 1,
+          "recall": 0.051826677994902294,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L10_suspicious": {
+          "tp": 110,
+          "fp": 4,
+          "recall": 0.09345794392523364,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L11_hostile": {
+          "tp": 60,
+          "fp": 1,
+          "recall": 0.05097706032285471,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L11_suspicious": {
+          "tp": 110,
+          "fp": 4,
+          "recall": 0.09345794392523364,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L12_hostile": {
+          "tp": 61,
+          "fp": 1,
+          "recall": 0.051826677994902294,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L12_suspicious": {
+          "tp": 110,
+          "fp": 4,
+          "recall": 0.09345794392523364,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L13_hostile": {
+          "tp": 63,
+          "fp": 2,
+          "recall": 0.05352591333899745,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L13_suspicious": {
+          "tp": 110,
+          "fp": 4,
+          "recall": 0.09345794392523364,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L14_hostile": {
+          "tp": 63,
+          "fp": 2,
+          "recall": 0.05352591333899745,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L14_suspicious": {
+          "tp": 110,
+          "fp": 4,
+          "recall": 0.09345794392523364,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L15_hostile": {
+          "tp": 63,
+          "fp": 2,
+          "recall": 0.05352591333899745,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L15_suspicious": {
+          "tp": 110,
+          "fp": 4,
+          "recall": 0.09345794392523364,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L16_hostile": {
+          "tp": 63,
+          "fp": 2,
+          "recall": 0.05352591333899745,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L16_suspicious": {
+          "tp": 110,
+          "fp": 4,
+          "recall": 0.09345794392523364,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L17_hostile": {
+          "tp": 67,
+          "fp": 2,
+          "recall": 0.05692438402718777,
+          "active_routes": [
+            "general",
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L17_suspicious": {
+          "tp": 110,
+          "fp": 4,
+          "recall": 0.09345794392523364,
+          "active_routes": [
+            "filegroups/source",
+            "filetypes/go"
+          ]
+        },
+        "L18_hostile": {
+          "tp": 67,
+          "fp": 2,
+          "recall": 0.05692438402718777,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -7390,19 +7370,18 @@
           ]
         },
         "L18_suspicious": {
-          "tp": 65,
+          "tp": 110,
           "fp": 4,
-          "recall": 0.055225148683092605,
+          "recall": 0.09345794392523364,
           "active_routes": [
-            "general",
             "filegroups/source",
             "filetypes/go"
           ]
         },
         "L19_hostile": {
-          "tp": 49,
+          "tp": 67,
           "fp": 2,
-          "recall": 0.041631265930331354,
+          "recall": 0.05692438402718777,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -7410,19 +7389,18 @@
           ]
         },
         "L19_suspicious": {
-          "tp": 65,
+          "tp": 110,
           "fp": 4,
-          "recall": 0.055225148683092605,
+          "recall": 0.09345794392523364,
           "active_routes": [
-            "general",
             "filegroups/source",
             "filetypes/go"
           ]
         },
         "L20_hostile": {
-          "tp": 51,
+          "tp": 67,
           "fp": 2,
-          "recall": 0.04333050127442651,
+          "recall": 0.05692438402718777,
           "active_routes": [
             "general",
             "filegroups/source",
@@ -7430,19 +7408,18 @@
           ]
         },
         "L20_suspicious": {
-          "tp": 98,
-          "fp": 7,
-          "recall": 0.08326253186066271,
+          "tp": 119,
+          "fp": 5,
+          "recall": 0.10110450297366186,
           "active_routes": [
-            "general",
             "filetypes/go"
           ]
         }
       },
       "deployed_or_summary": {
-        "tp": 23,
+        "tp": 60,
         "fp": 1,
-        "recall": 0.01954120645709431,
+        "recall": 0.05097706032285471,
         "active_routes": [
           "general",
           "filegroups/source",
@@ -10037,30 +10014,30 @@
             "fp_at_3fp": 3
           },
           "filetypes/javascript": {
-            "pr_auc": 0.9788558475520039,
-            "recall_at_0fp": 0.6416586977310267,
-            "threshold_at_0fp": 0.9967156648635864,
+            "pr_auc": 0.9798846559318323,
+            "recall_at_0fp": 0.7117273754672694,
+            "threshold_at_0fp": 0.9686574339866638,
             "fp_at_0fp": 0,
-            "recall_at_3fp": 0.6952968790750239,
-            "threshold_at_3fp": 0.993998646736145,
+            "recall_at_3fp": 0.7798835086499174,
+            "threshold_at_3fp": 0.9081076979637146,
             "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.9728085646532796,
-          "recall_at_0fp": 0.6094931756932974,
-          "threshold_at_0fp": 0.9978125095367432,
+          "pr_auc": 0.9725837255301727,
+          "recall_at_0fp": 0.5605494218899417,
+          "threshold_at_0fp": 0.9978183507919312,
           "fp_at_0fp": 0,
-          "recall_at_3fp": 0.7043379987829262,
-          "threshold_at_3fp": 0.993998646736145,
+          "recall_at_3fp": 0.6840824132834913,
+          "threshold_at_3fp": 0.9921635389328003,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 6689,
+          "tp": 7891,
           "fp": 0,
-          "recall": 0.5815004781361384,
+          "recall": 0.685994957837086,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10068,9 +10045,9 @@
           ]
         },
         "L0_suspicious": {
-          "tp": 8199,
-          "fp": 5,
-          "recall": 0.712770581587412,
+          "tp": 8971,
+          "fp": 3,
+          "recall": 0.7798835086499174,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10078,9 +10055,9 @@
           ]
         },
         "L1_hostile": {
-          "tp": 7074,
-          "fp": 0,
-          "recall": 0.6149700078240459,
+          "tp": 8622,
+          "fp": 1,
+          "recall": 0.7495435973224376,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10088,19 +10065,18 @@
           ]
         },
         "L1_suspicious": {
-          "tp": 8384,
+          "tp": 9223,
           "fp": 6,
-          "recall": 0.7288533426062767,
+          "recall": 0.8017908371729114,
           "active_routes": [
             "general",
-            "filegroups/scripts",
             "filetypes/javascript"
           ]
         },
         "L2_hostile": {
-          "tp": 7283,
-          "fp": 0,
-          "recall": 0.6331391810831957,
+          "tp": 8705,
+          "fp": 2,
+          "recall": 0.7567591063200904,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10108,9 +10084,9 @@
           ]
         },
         "L2_suspicious": {
-          "tp": 8425,
-          "fp": 7,
-          "recall": 0.7324176301834304,
+          "tp": 9307,
+          "fp": 9,
+          "recall": 0.8090932800139095,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10118,9 +10094,9 @@
           ]
         },
         "L3_hostile": {
-          "tp": 7283,
-          "fp": 0,
-          "recall": 0.6331391810831957,
+          "tp": 8774,
+          "fp": 2,
+          "recall": 0.7627575415109102,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10128,9 +10104,9 @@
           ]
         },
         "L3_suspicious": {
-          "tp": 8425,
-          "fp": 7,
-          "recall": 0.7324176301834304,
+          "tp": 9461,
+          "fp": 12,
+          "recall": 0.8224810918890724,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10138,9 +10114,9 @@
           ]
         },
         "L4_hostile": {
-          "tp": 7611,
-          "fp": 1,
-          "recall": 0.6616534817004259,
+          "tp": 8774,
+          "fp": 2,
+          "recall": 0.7627575415109102,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10148,9 +10124,9 @@
           ]
         },
         "L4_suspicious": {
-          "tp": 8482,
-          "fp": 7,
-          "recall": 0.7373728592541077,
+          "tp": 9507,
+          "fp": 14,
+          "recall": 0.8264800486829523,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10158,9 +10134,9 @@
           ]
         },
         "L5_hostile": {
-          "tp": 7611,
-          "fp": 1,
-          "recall": 0.6616534817004259,
+          "tp": 8774,
+          "fp": 2,
+          "recall": 0.7627575415109102,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10168,9 +10144,9 @@
           ]
         },
         "L5_suspicious": {
-          "tp": 8556,
-          "fp": 8,
-          "recall": 0.7438059636616535,
+          "tp": 9541,
+          "fp": 15,
+          "recall": 0.8294357993566895,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10178,9 +10154,9 @@
           ]
         },
         "L6_hostile": {
-          "tp": 8159,
-          "fp": 5,
-          "recall": 0.7092932278536034,
+          "tp": 8844,
+          "fp": 2,
+          "recall": 0.7688429105450753,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10188,9 +10164,9 @@
           ]
         },
         "L6_suspicious": {
-          "tp": 8601,
-          "fp": 9,
-          "recall": 0.7477179866121881,
+          "tp": 9638,
+          "fp": 20,
+          "recall": 0.8378683821611753,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10198,9 +10174,9 @@
           ]
         },
         "L7_hostile": {
-          "tp": 8193,
-          "fp": 5,
-          "recall": 0.7122489785273407,
+          "tp": 8844,
+          "fp": 2,
+          "recall": 0.7688429105450753,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10208,9 +10184,9 @@
           ]
         },
         "L7_suspicious": {
-          "tp": 8671,
-          "fp": 11,
-          "recall": 0.7538033556463531,
+          "tp": 9705,
+          "fp": 20,
+          "recall": 0.8436929496653047,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10218,9 +10194,9 @@
           ]
         },
         "L8_hostile": {
-          "tp": 8199,
-          "fp": 5,
-          "recall": 0.712770581587412,
+          "tp": 8971,
+          "fp": 3,
+          "recall": 0.7798835086499174,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10228,9 +10204,9 @@
           ]
         },
         "L8_suspicious": {
-          "tp": 8768,
-          "fp": 12,
-          "recall": 0.7622359384508389,
+          "tp": 9736,
+          "fp": 20,
+          "recall": 0.8463878988090063,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10238,9 +10214,9 @@
           ]
         },
         "L9_hostile": {
-          "tp": 8199,
-          "fp": 5,
-          "recall": 0.712770581587412,
+          "tp": 8971,
+          "fp": 3,
+          "recall": 0.7798835086499174,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10248,9 +10224,9 @@
           ]
         },
         "L9_suspicious": {
-          "tp": 8806,
-          "fp": 14,
-          "recall": 0.7655394244979571,
+          "tp": 9760,
+          "fp": 21,
+          "recall": 0.8484743110492915,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10258,19 +10234,18 @@
           ]
         },
         "L10_hostile": {
-          "tp": 8225,
-          "fp": 5,
-          "recall": 0.7150308615143876,
+          "tp": 9003,
+          "fp": 4,
+          "recall": 0.7826653916369642,
           "active_routes": [
             "general",
-            "filegroups/scripts",
             "filetypes/javascript"
           ]
         },
         "L10_suspicious": {
-          "tp": 8834,
-          "fp": 16,
-          "recall": 0.7679735721116231,
+          "tp": 9775,
+          "fp": 23,
+          "recall": 0.8497783186994697,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10278,19 +10253,18 @@
           ]
         },
         "L11_hostile": {
-          "tp": 8225,
-          "fp": 5,
-          "recall": 0.7150308615143876,
+          "tp": 9003,
+          "fp": 4,
+          "recall": 0.7826653916369642,
           "active_routes": [
             "general",
-            "filegroups/scripts",
             "filetypes/javascript"
           ]
         },
         "L11_suspicious": {
-          "tp": 8861,
-          "fp": 18,
-          "recall": 0.7703207858819439,
+          "tp": 9792,
+          "fp": 26,
+          "recall": 0.8512561940363383,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10298,19 +10272,18 @@
           ]
         },
         "L12_hostile": {
-          "tp": 8241,
+          "tp": 9045,
           "fp": 5,
-          "recall": 0.716421803007911,
+          "recall": 0.7863166130574633,
           "active_routes": [
             "general",
-            "filegroups/scripts",
             "filetypes/javascript"
           ]
         },
         "L12_suspicious": {
-          "tp": 8896,
-          "fp": 18,
-          "recall": 0.7733634703990263,
+          "tp": 9824,
+          "fp": 29,
+          "recall": 0.8540380770233852,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10318,19 +10291,18 @@
           ]
         },
         "L13_hostile": {
-          "tp": 8241,
+          "tp": 9045,
           "fp": 5,
-          "recall": 0.716421803007911,
+          "recall": 0.7863166130574633,
           "active_routes": [
             "general",
-            "filegroups/scripts",
             "filetypes/javascript"
           ]
         },
         "L13_suspicious": {
-          "tp": 8908,
-          "fp": 19,
-          "recall": 0.774406676519169,
+          "tp": 9842,
+          "fp": 31,
+          "recall": 0.855602886203599,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10338,19 +10310,18 @@
           ]
         },
         "L14_hostile": {
-          "tp": 8241,
-          "fp": 5,
-          "recall": 0.716421803007911,
+          "tp": 9147,
+          "fp": 6,
+          "recall": 0.7951838650786751,
           "active_routes": [
             "general",
-            "filegroups/scripts",
             "filetypes/javascript"
           ]
         },
         "L14_suspicious": {
-          "tp": 8924,
-          "fp": 20,
-          "recall": 0.7757976180126923,
+          "tp": 9877,
+          "fp": 32,
+          "recall": 0.8586455707206816,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10358,19 +10329,18 @@
           ]
         },
         "L15_hostile": {
-          "tp": 8241,
-          "fp": 5,
-          "recall": 0.716421803007911,
+          "tp": 9147,
+          "fp": 6,
+          "recall": 0.7951838650786751,
           "active_routes": [
             "general",
-            "filegroups/scripts",
             "filetypes/javascript"
           ]
         },
         "L15_suspicious": {
-          "tp": 8935,
-          "fp": 21,
-          "recall": 0.7767538902894897,
+          "tp": 9890,
+          "fp": 32,
+          "recall": 0.8597757106841694,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10378,19 +10348,18 @@
           ]
         },
         "L16_hostile": {
-          "tp": 8384,
+          "tp": 9223,
           "fp": 6,
-          "recall": 0.7288533426062767,
+          "recall": 0.8017908371729114,
           "active_routes": [
             "general",
-            "filegroups/scripts",
             "filetypes/javascript"
           ]
         },
         "L16_suspicious": {
-          "tp": 8947,
-          "fp": 22,
-          "recall": 0.7777970964096322,
+          "tp": 9924,
+          "fp": 34,
+          "recall": 0.8627314613579067,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10398,19 +10367,18 @@
           ]
         },
         "L17_hostile": {
-          "tp": 8384,
+          "tp": 9223,
           "fp": 6,
-          "recall": 0.7288533426062767,
+          "recall": 0.8017908371729114,
           "active_routes": [
             "general",
-            "filegroups/scripts",
             "filetypes/javascript"
           ]
         },
         "L17_suspicious": {
-          "tp": 8956,
-          "fp": 22,
-          "recall": 0.7785795009997392,
+          "tp": 9936,
+          "fp": 36,
+          "recall": 0.8637746674780492,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10418,19 +10386,18 @@
           ]
         },
         "L18_hostile": {
-          "tp": 8384,
+          "tp": 9245,
           "fp": 6,
-          "recall": 0.7288533426062767,
+          "recall": 0.8037033817265061,
           "active_routes": [
             "general",
-            "filegroups/scripts",
             "filetypes/javascript"
           ]
         },
         "L18_suspicious": {
-          "tp": 8976,
-          "fp": 23,
-          "recall": 0.7803181778666435,
+          "tp": 9953,
+          "fp": 40,
+          "recall": 0.8652525428149178,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10438,19 +10405,18 @@
           ]
         },
         "L19_hostile": {
-          "tp": 8425,
-          "fp": 7,
-          "recall": 0.7324176301834304,
+          "tp": 9245,
+          "fp": 6,
+          "recall": 0.8037033817265061,
           "active_routes": [
             "general",
-            "filegroups/scripts",
             "filetypes/javascript"
           ]
         },
         "L19_suspicious": {
-          "tp": 8990,
-          "fp": 23,
-          "recall": 0.7815352516734765,
+          "tp": 9962,
+          "fp": 42,
+          "recall": 0.8660349474050247,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10458,9 +10424,9 @@
           ]
         },
         "L20_hostile": {
-          "tp": 8425,
-          "fp": 7,
-          "recall": 0.7324176301834304,
+          "tp": 9262,
+          "fp": 6,
+          "recall": 0.8051812570633747,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10468,9 +10434,9 @@
           ]
         },
         "L20_suspicious": {
-          "tp": 9006,
-          "fp": 25,
-          "recall": 0.782926193167,
+          "tp": 9985,
+          "fp": 45,
+          "recall": 0.8680344258019647,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -10479,9 +10445,9 @@
         }
       },
       "deployed_or_summary": {
-        "tp": 8199,
-        "fp": 5,
-        "recall": 0.712770581587412,
+        "tp": 8971,
+        "fp": 3,
+        "recall": 0.7798835086499174,
         "active_routes": [
           "general",
           "filegroups/scripts",
@@ -22582,30 +22548,30 @@
             "fp_at_3fp": 3
           },
           "filetypes/shell": {
-            "pr_auc": 0.9662619393639824,
-            "recall_at_0fp": 0.4561586638830898,
-            "threshold_at_0fp": 0.948430597782135,
+            "pr_auc": 0.9844367878337588,
+            "recall_at_0fp": 0.837160751565762,
+            "threshold_at_0fp": 0.9311933517456055,
             "fp_at_0fp": 0,
-            "recall_at_3fp": 0.5501043841336117,
-            "threshold_at_3fp": 0.9327789545059204,
+            "recall_at_3fp": 0.8757828810020877,
+            "threshold_at_3fp": 0.8352085947990417,
             "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.9703167710148545,
-          "recall_at_0fp": 0.68580375782881,
-          "threshold_at_0fp": 0.9927224516868591,
+          "pr_auc": 0.9771030204480545,
+          "recall_at_0fp": 0.7755741127348643,
+          "threshold_at_0fp": 0.9927546381950378,
           "fp_at_0fp": 0,
-          "recall_at_3fp": 0.755741127348643,
-          "threshold_at_3fp": 0.9880176782608032,
+          "recall_at_3fp": 0.8183716075156576,
+          "threshold_at_3fp": 0.9878470301628113,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 668,
+          "tp": 796,
           "fp": 0,
-          "recall": 0.697286012526096,
+          "recall": 0.8308977035490606,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22613,9 +22579,9 @@
           ]
         },
         "L0_suspicious": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22623,17 +22589,19 @@
           ]
         },
         "L1_hostile": {
-          "tp": 456,
+          "tp": 796,
           "fp": 0,
-          "recall": 0.4759916492693111,
+          "recall": 0.8308977035490606,
           "active_routes": [
-            "general"
+            "general",
+            "filegroups/scripts",
+            "filetypes/shell"
           ]
         },
         "L1_suspicious": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22641,17 +22609,19 @@
           ]
         },
         "L2_hostile": {
-          "tp": 470,
+          "tp": 796,
           "fp": 0,
-          "recall": 0.4906054279749478,
+          "recall": 0.8308977035490606,
           "active_routes": [
-            "general"
+            "general",
+            "filegroups/scripts",
+            "filetypes/shell"
           ]
         },
         "L2_suspicious": {
-          "tp": 726,
-          "fp": 1,
-          "recall": 0.7578288100208769,
+          "tp": 840,
+          "fp": 2,
+          "recall": 0.8768267223382046,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22659,9 +22629,9 @@
           ]
         },
         "L3_hostile": {
-          "tp": 668,
+          "tp": 796,
           "fp": 0,
-          "recall": 0.697286012526096,
+          "recall": 0.8308977035490606,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22669,9 +22639,9 @@
           ]
         },
         "L3_suspicious": {
-          "tp": 726,
-          "fp": 1,
-          "recall": 0.7578288100208769,
+          "tp": 840,
+          "fp": 2,
+          "recall": 0.8768267223382046,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22679,9 +22649,9 @@
           ]
         },
         "L4_hostile": {
-          "tp": 668,
+          "tp": 796,
           "fp": 0,
-          "recall": 0.697286012526096,
+          "recall": 0.8308977035490606,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22689,9 +22659,9 @@
           ]
         },
         "L4_suspicious": {
-          "tp": 726,
-          "fp": 1,
-          "recall": 0.7578288100208769,
+          "tp": 840,
+          "fp": 2,
+          "recall": 0.8768267223382046,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22699,9 +22669,9 @@
           ]
         },
         "L5_hostile": {
-          "tp": 668,
-          "fp": 0,
-          "recall": 0.697286012526096,
+          "tp": 818,
+          "fp": 1,
+          "recall": 0.8538622129436325,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22709,9 +22679,9 @@
           ]
         },
         "L5_suspicious": {
-          "tp": 736,
-          "fp": 2,
-          "recall": 0.7682672233820459,
+          "tp": 840,
+          "fp": 3,
+          "recall": 0.8768267223382046,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22719,9 +22689,9 @@
           ]
         },
         "L6_hostile": {
-          "tp": 668,
-          "fp": 0,
-          "recall": 0.697286012526096,
+          "tp": 818,
+          "fp": 1,
+          "recall": 0.8538622129436325,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22729,9 +22699,9 @@
           ]
         },
         "L6_suspicious": {
-          "tp": 736,
-          "fp": 2,
-          "recall": 0.7682672233820459,
+          "tp": 840,
+          "fp": 3,
+          "recall": 0.8768267223382046,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22739,9 +22709,9 @@
           ]
         },
         "L7_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22749,9 +22719,9 @@
           ]
         },
         "L7_suspicious": {
-          "tp": 743,
-          "fp": 3,
-          "recall": 0.7755741127348643,
+          "tp": 846,
+          "fp": 5,
+          "recall": 0.8830897703549061,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22759,9 +22729,9 @@
           ]
         },
         "L8_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22769,9 +22739,9 @@
           ]
         },
         "L8_suspicious": {
-          "tp": 743,
-          "fp": 3,
-          "recall": 0.7755741127348643,
+          "tp": 846,
+          "fp": 5,
+          "recall": 0.8830897703549061,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22779,9 +22749,9 @@
           ]
         },
         "L9_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22789,9 +22759,9 @@
           ]
         },
         "L9_suspicious": {
-          "tp": 743,
-          "fp": 3,
-          "recall": 0.7755741127348643,
+          "tp": 846,
+          "fp": 5,
+          "recall": 0.8830897703549061,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22799,9 +22769,9 @@
           ]
         },
         "L10_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22809,9 +22779,9 @@
           ]
         },
         "L10_suspicious": {
-          "tp": 746,
-          "fp": 4,
-          "recall": 0.778705636743215,
+          "tp": 846,
+          "fp": 5,
+          "recall": 0.8830897703549061,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22819,9 +22789,9 @@
           ]
         },
         "L11_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22829,9 +22799,9 @@
           ]
         },
         "L11_suspicious": {
-          "tp": 746,
-          "fp": 4,
-          "recall": 0.778705636743215,
+          "tp": 846,
+          "fp": 5,
+          "recall": 0.8830897703549061,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22839,9 +22809,9 @@
           ]
         },
         "L12_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22849,9 +22819,9 @@
           ]
         },
         "L12_suspicious": {
-          "tp": 746,
-          "fp": 4,
-          "recall": 0.778705636743215,
+          "tp": 846,
+          "fp": 5,
+          "recall": 0.8830897703549061,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22859,9 +22829,9 @@
           ]
         },
         "L13_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22869,9 +22839,9 @@
           ]
         },
         "L13_suspicious": {
-          "tp": 748,
-          "fp": 4,
-          "recall": 0.7807933194154488,
+          "tp": 848,
+          "fp": 5,
+          "recall": 0.8851774530271399,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22879,9 +22849,9 @@
           ]
         },
         "L14_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22889,9 +22859,9 @@
           ]
         },
         "L14_suspicious": {
-          "tp": 748,
-          "fp": 4,
-          "recall": 0.7807933194154488,
+          "tp": 848,
+          "fp": 5,
+          "recall": 0.8851774530271399,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22899,9 +22869,9 @@
           ]
         },
         "L15_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22909,9 +22879,9 @@
           ]
         },
         "L15_suspicious": {
-          "tp": 748,
-          "fp": 5,
-          "recall": 0.7807933194154488,
+          "tp": 850,
+          "fp": 6,
+          "recall": 0.8872651356993737,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22919,9 +22889,9 @@
           ]
         },
         "L16_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22929,9 +22899,9 @@
           ]
         },
         "L16_suspicious": {
-          "tp": 748,
-          "fp": 5,
-          "recall": 0.7807933194154488,
+          "tp": 850,
+          "fp": 6,
+          "recall": 0.8872651356993737,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22939,9 +22909,9 @@
           ]
         },
         "L17_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22949,9 +22919,9 @@
           ]
         },
         "L17_suspicious": {
-          "tp": 748,
-          "fp": 5,
-          "recall": 0.7807933194154488,
+          "tp": 850,
+          "fp": 6,
+          "recall": 0.8872651356993737,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22959,9 +22929,9 @@
           ]
         },
         "L18_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22969,9 +22939,9 @@
           ]
         },
         "L18_suspicious": {
-          "tp": 749,
-          "fp": 5,
-          "recall": 0.7818371607515657,
+          "tp": 851,
+          "fp": 6,
+          "recall": 0.8883089770354906,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22979,9 +22949,9 @@
           ]
         },
         "L19_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22989,9 +22959,9 @@
           ]
         },
         "L19_suspicious": {
-          "tp": 749,
-          "fp": 5,
-          "recall": 0.7818371607515657,
+          "tp": 851,
+          "fp": 6,
+          "recall": 0.8883089770354906,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -22999,9 +22969,9 @@
           ]
         },
         "L20_hostile": {
-          "tp": 675,
-          "fp": 0,
-          "recall": 0.7045929018789144,
+          "tp": 828,
+          "fp": 2,
+          "recall": 0.8643006263048016,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -23009,9 +22979,9 @@
           ]
         },
         "L20_suspicious": {
-          "tp": 750,
+          "tp": 851,
           "fp": 6,
-          "recall": 0.7828810020876826,
+          "recall": 0.8883089770354906,
           "active_routes": [
             "general",
             "filegroups/scripts",
@@ -23020,9 +22990,9 @@
         }
       },
       "deployed_or_summary": {
-        "tp": 675,
-        "fp": 0,
-        "recall": 0.7045929018789144,
+        "tp": 828,
+        "fp": 2,
+        "recall": 0.8643006263048016,
         "active_routes": [
           "general",
           "filegroups/scripts",

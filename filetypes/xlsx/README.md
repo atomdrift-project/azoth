@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999824 | 0.984578 | 0.996430 | 91.26% | 0.0073 |
+| 0.993843 | 0.587423 | 0.995120 | 47.17% | 0.0096 |
 
 ## Specialist Performance
 
@@ -22,7 +22,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` 
 
 ## Routing
 
-Files matching `xlsx` are scored by `general`, `filegroups/documents`, `filetypes/xlsx`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xlsx` are scored by `general`, `filegroups/documents`, `filetypes/xlsx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

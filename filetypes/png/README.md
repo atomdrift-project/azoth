@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `png` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.188662 | 0.674289 | 0.208139 | 1.21% | 0.0366 |
+| 0.141525 | 0.533348 | 0.188235 | 1.36% | 0.0376 |
 
 ## Specialist Performance
 
@@ -20,7 +20,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `png` s
 
 ## Routing
 
-Files matching `png` are scored by `general`, `filetypes/png`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `png` are scored by `general`, `filetypes/png`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
