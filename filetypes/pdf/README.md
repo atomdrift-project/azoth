@@ -4,11 +4,11 @@ LightGBM specialist for `pdf`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` slice of the locked test partition: 22,310 malware / 1,743 benign (24,053 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` slice of the locked test partition: 22,329 malware / 2,089 benign (24,418 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999276 | 0.994735 | 0.995153 | 7.08% | 0.0113 |
+| 0.998852 | 0.992404 | 0.994386 | 12.71% | 0.0119 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999079 | 0.991160 | 0.991794 | 6.50% | 0.8215 | PR +0.005779 / ROC -0.000040 |
+| 0.998994 | 0.992008 | 0.989575 | 7.03% | 0.7484 | PR +0.005694 / ROC +0.000808 |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `pdf` are scored by `general`, `filegroups/documents`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 167,021 (154,825 mal / 12,196 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 169,535 (154,991 mal / 14,544 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

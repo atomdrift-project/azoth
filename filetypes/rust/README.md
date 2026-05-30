@@ -4,11 +4,11 @@ LightGBM specialist for `rust`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `rust` slice of the locked test partition: 164 malware / 10,209 benign (10,373 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `rust` slice of the locked test partition: 165 malware / 10,264 benign (10,429 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.083821 | 0.679077 | 0.135501 | 1.83% | 0.0185 |
+| 0.118590 | 0.724733 | 0.166667 | 3.03% | 0.0154 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rust` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.105344 | 0.717266 | 0.153595 | 1.22% | 0.0156 | — |
+| 0.118590 | 0.724733 | 0.166667 | 3.03% | 0.0154 | — |
 
 ## Routing
 
-Files matching `rust` are scored by `general`, `filegroups/source`, `filetypes/rust`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `rust` are scored by `general`, `filegroups/source`, `filetypes/rust`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 72,958 (1,117 mal / 71,841 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 73,392 (1,133 mal / 72,259 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

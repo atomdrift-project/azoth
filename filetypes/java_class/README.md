@@ -4,11 +4,11 @@ LightGBM specialist for `java_class`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 177 malware / 55,387 benign (55,564 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 184 malware / 57,544 benign (57,728 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.960505 | 0.984525 | 0.944134 | 67.23% | 0.0003 |
+| 0.930808 | 0.967033 | 0.947075 | 66.85% | 0.0011 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java_c
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.960505 | 0.984525 | 0.944134 | 67.23% | 0.0003 | — |
+| 0.935395 | 0.968701 | 0.938547 | 32.07% | 0.0004 | — |
 
 ## Routing
 
-Files matching `java_class` are scored by `general`, `filegroups/portable`, `filetypes/java_class`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `java_class` are scored by `general`, `filegroups/portable`, `filetypes/java_class`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 392,098 (1,158 mal / 390,940 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 407,246 (1,218 mal / 406,028 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

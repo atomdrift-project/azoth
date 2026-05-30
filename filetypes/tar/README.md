@@ -4,11 +4,11 @@ LightGBM specialist for `tar`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `tar` slice of the locked test partition: 126 malware / 51 benign (177 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `tar` slice of the locked test partition: 129 malware / 57 benign (186 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.984230 | 0.967787 | 0.967480 | 93.65% | 0.0664 |
+| 0.993503 | 0.983068 | 0.984252 | 96.90% | 0.0234 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `tar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.993250 | 0.982104 | 0.975806 | 85.71% | 0.0677 | — |
+| 0.994412 | 0.986672 | 0.984252 | 92.25% | 0.0504 | — |
 
 ## Routing
 
-Files matching `tar` are scored by `general`, `filetypes/tar`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `tar` are scored by `filetypes/tar`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,404 (1,019 mal / 385 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 1,458 (1,037 mal / 421 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

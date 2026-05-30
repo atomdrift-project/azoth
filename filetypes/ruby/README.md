@@ -4,11 +4,11 @@ LightGBM specialist for `ruby`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` slice of the locked test partition: 7 malware / 2,968 benign (2,975 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` slice of the locked test partition: 9 malware / 2,977 benign (2,986 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.778401 | 0.999711 | 0.933333 | 28.57% | 0.0069 |
+| 0.972222 | 0.999888 | 0.941176 | 88.89% | 0.0011 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.775541 | 0.999278 | 0.769231 | 28.57% | 0.0116 | — |
+| 0.932884 | 0.999776 | 0.900000 | 66.67% | 0.0091 | — |
 
 ## Routing
 
-Files matching `ruby` are scored by `general`, `filegroups/scripts`, `filetypes/ruby`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `ruby` are scored by `general`, `filegroups/scripts`, `filetypes/ruby`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 21,633 (69 mal / 21,564 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 21,719 (85 mal / 21,634 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

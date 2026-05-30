@@ -4,11 +4,11 @@ LightGBM specialist for `pptx`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pptx` slice of the locked test partition: 22 malware / 21 benign (43 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pptx` slice of the locked test partition: 28 malware / 21 benign (49 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.663729 | 0.613636 | 0.687500 | 18.18% | 0.2723 |
+| 0.738497 | 0.658163 | 0.727273 | 14.29% | 0.2322 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pptx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.511628 | 0.500000 | 0.676923 | — | 0.4523 | — |
+| 0.571429 | 0.500000 | 0.727273 | — | 0.5397 | — |
 
 ## Routing
 
-Files matching `pptx` are scored by `general`, `filegroups/documents`, `filetypes/pptx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `pptx` are scored by `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 276 (106 mal / 170 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 316 (146 mal / 170 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

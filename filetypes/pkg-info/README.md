@@ -4,11 +4,11 @@ LightGBM specialist for `pkg-info`. Member of the Azoth routed ensemble; bundle 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pkg-info` slice of the locked test partition: 1,276 malware / 133 benign (1,409 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pkg-info` slice of the locked test partition: 1,276 malware / 139 benign (1,415 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999123 | 0.995460 | 0.997254 | 97.34% | 0.0106 |
+| 0.999999 | 0.999994 | 0.999608 | 99.84% | 0.0028 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pkg-in
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999970 | 0.999717 | 0.998433 | 96.79% | 0.0319 | — |
+| 0.999999 | 0.999994 | 0.999608 | 99.84% | 0.0028 | — |
 
 ## Routing
 
-Files matching `pkg-info` are scored by `general`, `filetypes/pkg-info`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `pkg-info` are scored by `filetypes/pkg-info`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 10,362 (9,358 mal / 1,004 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 10,414 (9,359 mal / 1,055 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -4,11 +4,11 @@ LightGBM specialist for `msi`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `msi` slice of the locked test partition: 244 malware / 9 benign (253 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `msi` slice of the locked test partition: 266 malware / 10 benign (276 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998388 | 0.967441 | 0.987854 | — | 0.1312 |
+| 0.991544 | 0.846617 | 0.981550 | — | 0.0465 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `msi` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998388 | 0.967441 | 0.987854 | — | 0.1312 | — |
+| 0.991544 | 0.846617 | 0.981550 | — | 0.0465 | — |
 
 ## Routing
 
-Files matching `msi` are scored by `filetypes/msi`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `msi` are scored by `general`, `filetypes/msi`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,100 (1,969 mal / 131 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 2,348 (2,204 mal / 144 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

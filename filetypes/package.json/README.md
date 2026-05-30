@@ -4,11 +4,11 @@ LightGBM specialist for `package.json`. Member of the Azoth routed ensemble; bun
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `package.json` slice of the locked test partition: 2,200 malware / 1,563 benign (3,763 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `package.json` slice of the locked test partition: 2,212 malware / 1,622 benign (3,834 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999509 | 0.999149 | 0.997041 | 89.14% | 0.0034 |
+| 0.998340 | 0.997531 | 0.995922 | 92.81% | 0.0263 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `packag
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999509 | 0.999149 | 0.997041 | 89.14% | 0.0034 | — |
+| 0.998725 | 0.997520 | 0.996149 | 85.13% | 0.0047 | — |
 
 ## Routing
 
-Files matching `package.json` are scored by `general`, `filegroups/config`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `package.json` are scored by `general`, `filegroups/config`, `filetypes/package.json`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 26,945 (15,913 mal / 11,032 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 27,354 (16,010 mal / 11,344 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

@@ -4,11 +4,11 @@ LightGBM specialist for `macho`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `macho` slice of the locked test partition: 274 malware / 1,403 benign (1,677 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `macho` slice of the locked test partition: 276 malware / 1,409 benign (1,685 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.992418 | 0.998504 | 0.950998 | 79.20% | 0.0126 |
+| 0.993931 | 0.998807 | 0.957486 | 81.52% | 0.0110 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `macho`
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.992418 | 0.998504 | 0.950998 | 79.20% | 0.0126 | — |
+| 0.993931 | 0.998807 | 0.957486 | 81.52% | 0.0110 | — |
 
 ## Routing
 
-Files matching `macho` are scored by `filetypes/macho`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `macho` are scored by `general`, `filegroups/native`, `filetypes/macho`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 11,348 (1,873 mal / 9,475 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 11,415 (1,887 mal / 9,528 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

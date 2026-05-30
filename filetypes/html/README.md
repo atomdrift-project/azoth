@@ -4,11 +4,11 @@ LightGBM specialist for `html`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `html` slice of the locked test partition: 7 malware / 984 benign (991 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `html` slice of the locked test partition: 20 malware / 3,224 benign (3,244 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.982143 | 0.999927 | 0.933333 | 100.00% | 0.0017 |
+| 0.802315 | 0.974116 | 0.756757 | 60.00% | 0.0023 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `html` 
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.982143 | 0.999927 | 0.933333 | 100.00% | 0.0017 | — |
+| 0.802315 | 0.974116 | 0.756757 | 60.00% | 0.0023 | — |
 
 ## Routing
 
-Files matching `html` are scored by `general`, `filegroups/documents`, `filetypes/html`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `html` are scored by `filegroups/documents`, `filetypes/html`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 7,028 (49 mal / 6,979 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 22,524 (137 mal / 22,387 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

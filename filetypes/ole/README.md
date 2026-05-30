@@ -4,11 +4,11 @@ LightGBM specialist for `ole`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ole` slice of the locked test partition: 221 malware / 702 benign (923 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ole` slice of the locked test partition: 286 malware / 714 benign (1,000 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.989845 | 0.994263 | 0.977064 | 91.86% | 0.0173 |
+| 0.992713 | 0.995367 | 0.980462 | 88.46% | 0.0219 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ole` s
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.989845 | 0.994263 | 0.977064 | 91.86% | 0.0173 | — |
+| 0.992713 | 0.995367 | 0.980462 | 88.46% | 0.0219 | — |
 
 ## Routing
 
-Files matching `ole` are scored by `general`, `filetypes/ole`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `ole` are scored by `general`, `filegroups/documents`, `filetypes/ole`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,586 (1,694 mal / 4,892 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 7,162 (2,162 mal / 5,000 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

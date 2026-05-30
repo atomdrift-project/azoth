@@ -4,11 +4,11 @@ LightGBM specialist for `c`. Member of the Azoth routed ensemble; bundle root: [
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `c` slice of the locked test partition: 1,767 malware / 68,272 benign (70,039 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `c` slice of the locked test partition: 1,776 malware / 70,036 benign (71,812 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
 |---:|---:|---:|---:|---:|
-| 0.279865 | 0.767449 | 0.332257 | 13.75% | 0.0200 |
+| 0.328535 | 0.844979 | 0.345248 | 11.71% | 0.0298 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `c` sli
 
 | PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.279865 | 0.767449 | 0.332257 | 13.75% | 0.0200 | — |
+| 0.445002 | 0.878705 | 0.456197 | 10.53% | 0.0202 | — |
 
 ## Routing
 
-Files matching `c` are scored by `general`, `filegroups/source`, `filetypes/c`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `c` are scored by `general`, `filegroups/source`, `filetypes/c`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 488,169 (12,584 mal / 475,585 ben) |
-| Feature spec | 62607 features (`general_shared`) |
+| Train rows | 500,456 (12,592 mal / 487,864 ben) |
+| Feature spec | 63983 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
