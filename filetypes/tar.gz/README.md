@@ -4,19 +4,19 @@ LightGBM specialist for `tar.gz`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `tar.gz` slice of the locked test partition: 2,589 malware / 1,786 benign (4,375 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `tar.gz` slice of the locked test partition: 2,597 malware / 1,866 benign (4,463 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.995217 | 0.993069 | 0.971046 | 74.47% | 0.0493 |
+| 0.993947 | 0.990787 | 0.971082 | 75.93% | 0.0622 |
 
 ## Specialist Performance
 
 `filetypes/tar.gz` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998018 | 0.997292 | 0.980862 | 73.77% | 0.0191 | — |
+| 0.997891 | 0.997188 | 0.979545 | 75.16% | 0.0196 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `tar.gz` are scored by `general`, `filetypes/tar.gz`. The ensembl
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 39,639 (27,138 mal / 12,501 ben) |
-| Feature spec | 63983 features (`general_shared`) |
+| Train rows | 40,381 (27,189 mal / 13,192 ben) |
+| Feature spec | 73750 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 64 |
 | max_depth | 12 |

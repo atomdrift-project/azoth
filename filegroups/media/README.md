@@ -4,7 +4,7 @@ LightGBM specialist for `bmp`, `gif`, `jpeg`, `jpg`, `mp3`, `mp4`, `png`, `svg`,
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `media`). ROC 0.985117, PR 0.861546, F1 0.8066 on 20,452 rows (789 mal / 19,663 ben).
+Training-time benchmark only (no test-partition rows for `media`). ROC 0.975153, PR 0.755127, F1 0.6818 on 22,841 rows (820 mal / 22,021 ben).
 
 ## Routing
 
@@ -15,8 +15,8 @@ Files matching `media` are scored by none. The ensemble's per-row score is whate
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 141,355 (5,501 mal / 135,854 ben) |
-| Feature spec | 63983 features (`general_shared`) |
+| Train rows | 158,020 (5,790 mal / 152,230 ben) |
+| Feature spec | 73750 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -4,19 +4,19 @@ LightGBM specialist for `makefile`. Member of the Azoth routed ensemble; bundle 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `makefile` slice of the locked test partition: 40 malware / 2,796 benign (2,836 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `makefile` slice of the locked test partition: 59 malware / 2,913 benign (2,972 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.410799 | 0.796245 | 0.491803 | 25.00% | 0.0104 |
+| 0.431977 | 0.873958 | 0.561798 | 0.00% | 0.0136 |
 
 ## Specialist Performance
 
 `filetypes/makefile` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.069234 | 0.764154 | 0.234234 | 0.00% | 0.0141 | — |
+| 0.096498 | 0.823532 | 0.231047 | 0.00% | 0.0198 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `makefile` are scored by `filegroups/source`, `filetypes/makefile
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 19,510 (284 mal / 19,226 ben) |
-| Feature spec | 63983 features (`general_shared`) |
+| Train rows | 20,453 (401 mal / 20,052 ben) |
+| Feature spec | 73750 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

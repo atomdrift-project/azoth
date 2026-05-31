@@ -6,17 +6,17 @@ LightGBM specialist for `crx`. Member of the Azoth routed ensemble; bundle root:
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `crx` slice of the locked test partition: 39 malware / 10 benign (49 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.978237 | 0.905128 | 0.918919 | — | 0.1035 |
+| 0.983842 | 0.928205 | 0.931507 | — | 0.0886 |
 
 ## Specialist Performance
 
 `filetypes/crx` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.978237 | 0.905128 | 0.918919 | — | 0.1035 | — |
+| 0.983842 | 0.928205 | 0.931507 | — | 0.0886 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `crx` are scored by `general`, `filetypes/crx`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 393 (324 mal / 69 ben) |
-| Feature spec | 63983 features (`general_shared`) |
+| Train rows | 408 (339 mal / 69 ben) |
+| Feature spec | 73750 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -4,19 +4,19 @@ LightGBM specialist for `lnk`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 309 malware / 131 benign (440 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 485 malware / 131 benign (616 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.976411 | 0.951654 | 0.919658 | 73.14% | 0.1659 |
+| 0.988323 | 0.963359 | 0.943277 | 82.47% | 0.1312 |
 
 ## Specialist Performance
 
 `filetypes/lnk` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.976411 | 0.951654 | 0.919658 | 73.14% | 0.1659 | — |
+| 0.988323 | 0.963359 | 0.943277 | 82.47% | 0.1312 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `lnk` are scored by `filetypes/lnk`. The ensemble's per-row score
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,983 (2,059 mal / 924 ben) |
-| Feature spec | 63983 features (`general_shared`) |
+| Train rows | 4,397 (3,473 mal / 924 ben) |
+| Feature spec | 73750 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

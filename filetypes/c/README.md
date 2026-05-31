@@ -4,19 +4,19 @@ LightGBM specialist for `c`. Member of the Azoth routed ensemble; bundle root: [
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `c` slice of the locked test partition: 1,776 malware / 70,036 benign (71,812 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `c` slice of the locked test partition: 1,779 malware / 73,290 benign (75,069 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.328535 | 0.844979 | 0.345248 | 11.71% | 0.0298 |
+| 0.287412 | 0.828180 | 0.325415 | 9.44% | 0.0303 |
 
 ## Specialist Performance
 
 `filetypes/c` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ 3FP/M | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.445002 | 0.878705 | 0.456197 | 10.53% | 0.0202 | — |
+| 0.351428 | 0.830950 | 0.380359 | 9.27% | 0.0193 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `c` are scored by `general`, `filegroups/source`, `filetypes/c`. 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 500,456 (12,592 mal / 487,864 ben) |
-| Feature spec | 63983 features (`general_shared`) |
+| Train rows | 523,504 (12,648 mal / 510,856 ben) |
+| Feature spec | 73750 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
