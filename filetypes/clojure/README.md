@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `clojur
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.664053 | 0.833403 | 0.727273 | 57.14% | 0.0223 |
+| 0.664053 | 0.833403 | 0.727273 | — | 0.0223 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `clojur
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.664053 | 0.833403 | 0.727273 | 57.14% | 0.0223 | — |
+| 0.664053 | 0.833403 | 0.727273 | — | 0.0223 | — |
 
 ## Recall by FP level (per 100M benigns)
 

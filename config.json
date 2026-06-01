@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-01T16:20:46.727143+00:00",
+  "timestamp": "2026-06-01T19:39:32.936224+00:00",
   "schema": "azoth.routed_ensemble.v1",
   "max_id": 1637343931,
   "calibration_snapshot_id": 1637343931,
@@ -3598,6 +3598,809 @@
         "fn": 111759,
         "recall": 0.6248401293064382,
         "precision": 0.9772973086494944,
+        "fp_per_100M": 824649.4667622782
+      }
+    },
+    {
+      "level": 4,
+      "hostile": {
+        "target_per_million": 0.04,
+        "below_resolution": true,
+        "cp_floor_per_million": 5.713279289585204,
+        "extrapolated_routes": [
+          "general",
+          "filegroups/scripts",
+          "filegroups/native",
+          "filegroups/portable",
+          "filetypes/pe",
+          "filetypes/java_class",
+          "filetypes/javascript",
+          "filetypes/elf",
+          "filetypes/python",
+          "filetypes/shell",
+          "filetypes/csharp",
+          "filetypes/tar.gz",
+          "filetypes/jpeg",
+          "filetypes/ruby",
+          "filetypes/vbs",
+          "filetypes/deb",
+          "filetypes/groovy"
+        ],
+        "thresholds": {
+          "general": 0.9985973136250718,
+          "filegroups/scripts": 0.9976166408192311,
+          "filegroups/native": 0.9993506874450853,
+          "filegroups/portable": 0.9999988079063741,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
+          "filegroups/config": 0.999061644077301,
+          "filegroups/media": 0.8671467900276184,
+          "filetypes/pe": 0.9995451444821609,
+          "filetypes/java_class": 0.9999999999999601,
+          "filetypes/javascript": 0.9733644964198365,
+          "filetypes/c": 0.9955354928970337,
+          "filetypes/elf": 0.9939401066499493,
+          "filetypes/pdf": 0.37758001685142517,
+          "filetypes/python": 0.9979529353495152,
+          "filetypes/xml": 0.2533334493637085,
+          "filetypes/batch": 0.9927771091461182,
+          "filetypes/png": 0.13528257608413696,
+          "filetypes/php": 0.9953118562698364,
+          "filetypes/go": 0.7825130224227905,
+          "filetypes/zip": 0.9939855933189392,
+          "filetypes/rust": 0.7905694246292114,
+          "filetypes/kotlin": 0.6866006851196289,
+          "filetypes/python-bytecode": 0.8837788701057434,
+          "filetypes/text": 0.22389566898345947,
+          "filetypes/shell": 0.9940274654061453,
+          "filetypes/csharp": 0.9995144579041475,
+          "filetypes/markdown": 0.43448418378829956,
+          "filetypes/xls": 0.7933555245399475,
+          "filetypes/xlsx": 0.8707722425460815,
+          "filetypes/tar.gz": 0.9888375536549525,
+          "filetypes/java": 0.9976025223731995,
+          "filetypes/package.json": 0.9983539581298828,
+          "filetypes/perl": 0.796964704990387,
+          "filetypes/json": 0.03829383850097656,
+          "filetypes/jpeg": 0.9975257056591932,
+          "filetypes/html": 0.8294766545295715,
+          "filetypes/ruby": 0.9982670984229205,
+          "filetypes/makefile": 0.050270020961761475,
+          "filetypes/lua": 0.07938539981842041,
+          "filetypes/macho": 0.947270393371582,
+          "filetypes/plist": 0.8615944981575012,
+          "filetypes/vbs": 0.9940547199638878,
+          "filetypes/pkg-info": 0.06263196468353271,
+          "filetypes/ole": 0.32986289262771606,
+          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/deb": 0.14449363946914673,
+          "filetypes/jar": 0.04028582572937012,
+          "filetypes/groovy": 0.018980434246672603,
+          "filetypes/rtf": 0.05923277139663696,
+          "filetypes/lnk": 0.5052585005760193,
+          "filetypes/docx": 0.2326485514640808,
+          "filetypes/clojure": 0.8211286664009094,
+          "filetypes/tar": 0.06313180923461914,
+          "filetypes/dockerfile": 0.1385757327079773,
+          "filetypes/package-lock.json": 0.2938859462738037,
+          "filetypes/chrome-manifest": 0.8901082277297974
+        },
+        "diagnostics": {
+          "general": {
+            "kind": "general",
+            "rows": 822241,
+            "selected": true,
+            "selected_threshold": 0.9985973136250718,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9985973136250718,
+              "tp": 73052,
+              "fp": 1
+            }
+          },
+          "filegroups/scripts": {
+            "kind": "filegroup",
+            "rows": 162728,
+            "selected": true,
+            "selected_threshold": 0.9976166408192311,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9976166408192311,
+              "tp": 28245,
+              "fp": 1
+            }
+          },
+          "filegroups/native": {
+            "kind": "filegroup",
+            "rows": 221139,
+            "selected": true,
+            "selected_threshold": 0.9993506874450853,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9993506874450853,
+              "tp": 78594,
+              "fp": 0
+            }
+          },
+          "filegroups/portable": {
+            "kind": "filegroup",
+            "rows": 83985,
+            "selected": true,
+            "selected_threshold": 0.9999988079063741,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9999988079063741,
+              "tp": 11,
+              "fp": 18
+            }
+          },
+          "filegroups/documents": {
+            "kind": "filegroup",
+            "rows": 48133,
+            "selected": true,
+            "selected_threshold": 0.7054287195205688,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7054287195205688,
+              "tp": 15671,
+              "fp": 1
+            }
+          },
+          "filegroups/source": {
+            "kind": "filegroup",
+            "rows": 133666,
+            "selected": true,
+            "selected_threshold": 0.9860523343086243,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9860523343086243,
+              "tp": 1296,
+              "fp": 1
+            }
+          },
+          "filegroups/config": {
+            "kind": "filegroup",
+            "rows": 32773,
+            "selected": true,
+            "selected_threshold": 0.999061644077301,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.999061644077301,
+              "tp": 2259,
+              "fp": 1
+            }
+          },
+          "filegroups/media": {
+            "kind": "filegroup",
+            "rows": 22901,
+            "selected": true,
+            "selected_threshold": 0.8671467900276184,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8671467900276184,
+              "tp": 75,
+              "fp": 1
+            }
+          },
+          "filetypes/pe": {
+            "kind": "filetype",
+            "rows": 178631,
+            "selected": true,
+            "selected_threshold": 0.9995451444821609,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9995451444821609,
+              "tp": 59727,
+              "fp": 0
+            }
+          },
+          "filetypes/java_class": {
+            "kind": "filetype",
+            "rows": 83985,
+            "selected": true,
+            "selected_threshold": 0.9999999999999601,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9999999999999601,
+              "tp": 0,
+              "fp": 11
+            }
+          },
+          "filetypes/javascript": {
+            "kind": "filetype",
+            "rows": 82322,
+            "selected": true,
+            "selected_threshold": 0.9733644964198365,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9733644964198365,
+              "tp": 8692,
+              "fp": 0
+            }
+          },
+          "filetypes/c": {
+            "kind": "filetype",
+            "rows": 76105,
+            "selected": true,
+            "selected_threshold": 0.9955354928970337,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9955354928970337,
+              "tp": 144,
+              "fp": 1
+            }
+          },
+          "filetypes/elf": {
+            "kind": "filetype",
+            "rows": 40760,
+            "selected": true,
+            "selected_threshold": 0.9939401066499493,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9939401066499493,
+              "tp": 18853,
+              "fp": 1
+            }
+          },
+          "filetypes/pdf": {
+            "kind": "filetype",
+            "rows": 24909,
+            "selected": true,
+            "selected_threshold": 0.37758001685142517,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.37758001685142517,
+              "tp": 19260,
+              "fp": 1
+            }
+          },
+          "filetypes/python": {
+            "kind": "filetype",
+            "rows": 23113,
+            "selected": true,
+            "selected_threshold": 0.9979529353495152,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9979529353495152,
+              "tp": 1472,
+              "fp": 1
+            }
+          },
+          "filetypes/xml": {
+            "kind": "filetype",
+            "rows": 22622,
+            "selected": true,
+            "selected_threshold": 0.2533334493637085,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.2533334493637085,
+              "tp": 9,
+              "fp": 2
+            }
+          },
+          "filetypes/batch": {
+            "kind": "filetype",
+            "rows": 22730,
+            "selected": true,
+            "selected_threshold": 0.9927771091461182,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9927771091461182,
+              "tp": 21560,
+              "fp": 1
+            }
+          },
+          "filetypes/png": {
+            "kind": "filetype",
+            "rows": 19427,
+            "selected": true,
+            "selected_threshold": 0.13528257608413696,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.13528257608413696,
+              "tp": 58,
+              "fp": 1
+            }
+          },
+          "filetypes/php": {
+            "kind": "filetype",
+            "rows": 15662,
+            "selected": true,
+            "selected_threshold": 0.9953118562698364,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9953118562698364,
+              "tp": 295,
+              "fp": 1
+            }
+          },
+          "filetypes/go": {
+            "kind": "filetype",
+            "rows": 14863,
+            "selected": true,
+            "selected_threshold": 0.7825130224227905,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7825130224227905,
+              "tp": 53,
+              "fp": 1
+            }
+          },
+          "filetypes/zip": {
+            "kind": "filetype",
+            "rows": 13422,
+            "selected": true,
+            "selected_threshold": 0.9939855933189392,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9939855933189392,
+              "tp": 4618,
+              "fp": 1
+            }
+          },
+          "filetypes/rust": {
+            "kind": "filetype",
+            "rows": 10596,
+            "selected": true,
+            "selected_threshold": 0.7905694246292114,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7905694246292114,
+              "tp": 4,
+              "fp": 1
+            }
+          },
+          "filetypes/kotlin": {
+            "kind": "filetype",
+            "rows": 10402,
+            "selected": true,
+            "selected_threshold": 0.6866006851196289,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.6866006851196289,
+              "tp": 1838,
+              "fp": 1
+            }
+          },
+          "filetypes/python-bytecode": {
+            "kind": "filetype",
+            "rows": 9560,
+            "selected": true,
+            "selected_threshold": 0.8837788701057434,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8837788701057434,
+              "tp": 328,
+              "fp": 1
+            }
+          },
+          "filetypes/text": {
+            "kind": "filetype",
+            "rows": 8990,
+            "selected": true,
+            "selected_threshold": 0.22389566898345947,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.22389566898345947,
+              "tp": 17,
+              "fp": 4
+            }
+          },
+          "filetypes/shell": {
+            "kind": "filetype",
+            "rows": 8474,
+            "selected": true,
+            "selected_threshold": 0.9940274654061453,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9940274654061453,
+              "tp": 1057,
+              "fp": 0
+            }
+          },
+          "filetypes/csharp": {
+            "kind": "filetype",
+            "rows": 8217,
+            "selected": true,
+            "selected_threshold": 0.9995144579041475,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9995144579041475,
+              "tp": 22,
+              "fp": 0
+            }
+          },
+          "filetypes/markdown": {
+            "kind": "filetype",
+            "rows": 7569,
+            "selected": true,
+            "selected_threshold": 0.43448418378829956,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.43448418378829956,
+              "tp": 3,
+              "fp": 1
+            }
+          },
+          "filetypes/xls": {
+            "kind": "filetype",
+            "rows": 6763,
+            "selected": true,
+            "selected_threshold": 0.7933555245399475,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7933555245399475,
+              "tp": 3949,
+              "fp": 1
+            }
+          },
+          "filetypes/xlsx": {
+            "kind": "filetype",
+            "rows": 6662,
+            "selected": true,
+            "selected_threshold": 0.8707722425460815,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8707722425460815,
+              "tp": 3042,
+              "fp": 1
+            }
+          },
+          "filetypes/tar.gz": {
+            "kind": "filetype",
+            "rows": 5772,
+            "selected": true,
+            "selected_threshold": 0.9888375536549525,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9888375536549525,
+              "tp": 3164,
+              "fp": 1
+            }
+          },
+          "filetypes/java": {
+            "kind": "filetype",
+            "rows": 4475,
+            "selected": true,
+            "selected_threshold": 0.9976025223731995,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9976025223731995,
+              "tp": 1,
+              "fp": 1
+            }
+          },
+          "filetypes/package.json": {
+            "kind": "filetype",
+            "rows": 4380,
+            "selected": true,
+            "selected_threshold": 0.9983539581298828,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9983539581298828,
+              "tp": 2016,
+              "fp": 1
+            }
+          },
+          "filetypes/perl": {
+            "kind": "filetype",
+            "rows": 4150,
+            "selected": true,
+            "selected_threshold": 0.796964704990387,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.796964704990387,
+              "tp": 30,
+              "fp": 1
+            }
+          },
+          "filetypes/json": {
+            "kind": "filetype",
+            "rows": 4132,
+            "selected": true,
+            "selected_threshold": 0.03829383850097656,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.03829383850097656,
+              "tp": 89,
+              "fp": 4043
+            }
+          },
+          "filetypes/jpeg": {
+            "kind": "filetype",
+            "rows": 3474,
+            "selected": true,
+            "selected_threshold": 0.9975257056591932,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9975257056591932,
+              "tp": 1,
+              "fp": 0
+            }
+          },
+          "filetypes/html": {
+            "kind": "filetype",
+            "rows": 3156,
+            "selected": true,
+            "selected_threshold": 0.8294766545295715,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8294766545295715,
+              "tp": 25,
+              "fp": 1
+            }
+          },
+          "filetypes/ruby": {
+            "kind": "filetype",
+            "rows": 3144,
+            "selected": true,
+            "selected_threshold": 0.9982670984229205,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9982670984229205,
+              "tp": 7,
+              "fp": 1
+            }
+          },
+          "filetypes/makefile": {
+            "kind": "filetype",
+            "rows": 2979,
+            "selected": true,
+            "selected_threshold": 0.050270020961761475,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.050270020961761475,
+              "tp": 0,
+              "fp": 1
+            }
+          },
+          "filetypes/lua": {
+            "kind": "filetype",
+            "rows": 2245,
+            "selected": true,
+            "selected_threshold": 0.07938539981842041,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.07938539981842041,
+              "tp": 6,
+              "fp": 1
+            }
+          },
+          "filetypes/macho": {
+            "kind": "filetype",
+            "rows": 1748,
+            "selected": true,
+            "selected_threshold": 0.947270393371582,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.947270393371582,
+              "tp": 257,
+              "fp": 1
+            }
+          },
+          "filetypes/plist": {
+            "kind": "filetype",
+            "rows": 1639,
+            "selected": true,
+            "selected_threshold": 0.8615944981575012,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8615944981575012,
+              "tp": 4,
+              "fp": 1
+            }
+          },
+          "filetypes/vbs": {
+            "kind": "filetype",
+            "rows": 1571,
+            "selected": true,
+            "selected_threshold": 0.9940547199638878,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9940547199638878,
+              "tp": 783,
+              "fp": 1
+            }
+          },
+          "filetypes/pkg-info": {
+            "kind": "filetype",
+            "rows": 1572,
+            "selected": true,
+            "selected_threshold": 0.06263196468353271,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.06263196468353271,
+              "tp": 1388,
+              "fp": 1
+            }
+          },
+          "filetypes/ole": {
+            "kind": "filetype",
+            "rows": 1519,
+            "selected": true,
+            "selected_threshold": 0.32986289262771606,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.32986289262771606,
+              "tp": 750,
+              "fp": 1
+            }
+          },
+          "filetypes/powershell": {
+            "kind": "filetype",
+            "rows": 888,
+            "selected": true,
+            "selected_threshold": 0.8938430547714233,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8938430547714233,
+              "tp": 398,
+              "fp": 1
+            }
+          },
+          "filetypes/deb": {
+            "kind": "filetype",
+            "rows": 856,
+            "selected": true,
+            "selected_threshold": 0.14449363946914673,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.14449363946914673,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/jar": {
+            "kind": "filetype",
+            "rows": 842,
+            "selected": true,
+            "selected_threshold": 0.04028582572937012,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.04028582572937012,
+              "tp": 370,
+              "fp": 1
+            }
+          },
+          "filetypes/groovy": {
+            "kind": "filetype",
+            "rows": 770,
+            "selected": true,
+            "selected_threshold": 0.018980434246672603,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.018980434246672603,
+              "tp": 1,
+              "fp": 0
+            }
+          },
+          "filetypes/rtf": {
+            "kind": "filetype",
+            "rows": 745,
+            "selected": true,
+            "selected_threshold": 0.05923277139663696,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.05923277139663696,
+              "tp": 665,
+              "fp": 1
+            }
+          },
+          "filetypes/lnk": {
+            "kind": "filetype",
+            "rows": 653,
+            "selected": true,
+            "selected_threshold": 0.5052585005760193,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.5052585005760193,
+              "tp": 438,
+              "fp": 1
+            }
+          },
+          "filetypes/docx": {
+            "kind": "filetype",
+            "rows": 611,
+            "selected": true,
+            "selected_threshold": 0.2326485514640808,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.2326485514640808,
+              "tp": 483,
+              "fp": 1
+            }
+          },
+          "filetypes/clojure": {
+            "kind": "filetype",
+            "rows": 387,
+            "selected": true,
+            "selected_threshold": 0.8211286664009094,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8211286664009094,
+              "tp": 14,
+              "fp": 1
+            }
+          },
+          "filetypes/tar": {
+            "kind": "filetype",
+            "rows": 244,
+            "selected": true,
+            "selected_threshold": 0.06313180923461914,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.06313180923461914,
+              "tp": 182,
+              "fp": 1
+            }
+          },
+          "filetypes/dockerfile": {
+            "kind": "filetype",
+            "rows": 196,
+            "selected": true,
+            "selected_threshold": 0.1385757327079773,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.1385757327079773,
+              "tp": 6,
+              "fp": 190
+            }
+          },
+          "filetypes/package-lock.json": {
+            "kind": "filetype",
+            "rows": 98,
+            "selected": true,
+            "selected_threshold": 0.2938859462738037,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.2938859462738037,
+              "tp": 4,
+              "fp": 14
+            }
+          },
+          "filetypes/pptx": {
+            "kind": "filetype",
+            "rows": 93,
+            "selected": false,
+            "reason": "too few benigns to derive a quantile",
+            "selected_threshold": null,
+            "standalone": {
+              "threshold": null,
+              "tp": 0,
+              "fp": 0
+            }
+          },
+          "filetypes/chrome-manifest": {
+            "kind": "filetype",
+            "rows": 58,
+            "selected": true,
+            "selected_threshold": 0.8901082277297974,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8901082277297974,
+              "tp": 5,
+              "fp": 1
+            }
+          },
+          "filetypes/crx": {
+            "kind": "filetype",
+            "rows": 63,
+            "selected": false,
+            "reason": "too few benigns to derive a quantile",
+            "selected_threshold": null,
+            "standalone": {
+              "threshold": null,
+              "tp": 0,
+              "fp": 0
+            }
+          }
+        },
+        "tp": 186181,
+        "fp": 4324,
+        "tn": 520020,
+        "fn": 111716,
+        "recall": 0.6249844744995754,
+        "precision": 0.9773024330070077,
         "fp_per_100M": 824649.4667622782
       }
     },
@@ -15664,6 +16467,3220 @@
         "recall": 0.673736224265434,
         "precision": 0.9789006486855583,
         "fp_per_100M": 825030.8957478297
+      }
+    },
+    {
+      "level": 2000,
+      "hostile": {
+        "target_per_million": 20.0,
+        "below_resolution": false,
+        "cp_floor_per_million": 5.713279289585204,
+        "extrapolated_routes": [
+          "filegroups/native",
+          "filetypes/pe",
+          "filetypes/elf",
+          "filetypes/python",
+          "filetypes/go",
+          "filetypes/python-bytecode",
+          "filetypes/shell",
+          "filetypes/csharp",
+          "filetypes/markdown",
+          "filetypes/tar.gz",
+          "filetypes/perl",
+          "filetypes/jpeg",
+          "filetypes/ruby",
+          "filetypes/makefile",
+          "filetypes/lua",
+          "filetypes/vbs",
+          "filetypes/deb",
+          "filetypes/groovy",
+          "filetypes/clojure"
+        ],
+        "thresholds": {
+          "general": 0.9969088435173035,
+          "filegroups/scripts": 0.9962440729141235,
+          "filegroups/native": 0.9991975764596179,
+          "filegroups/portable": 0.9999988079071045,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9771745204925537,
+          "filegroups/config": 0.999061644077301,
+          "filegroups/media": 0.8671467900276184,
+          "filetypes/pe": 0.9993021622205431,
+          "filetypes/java_class": 1.0,
+          "filetypes/javascript": 0.9634711742401123,
+          "filetypes/c": 0.992307722568512,
+          "filetypes/elf": 0.9938682321589386,
+          "filetypes/pdf": 0.37758001685142517,
+          "filetypes/python": 0.9979023462338605,
+          "filetypes/xml": 0.2533334493637085,
+          "filetypes/batch": 0.9927771091461182,
+          "filetypes/png": 0.13528257608413696,
+          "filetypes/php": 0.9953118562698364,
+          "filetypes/go": 0.6399033212418067,
+          "filetypes/zip": 0.9939855933189392,
+          "filetypes/rust": 0.7905694246292114,
+          "filetypes/kotlin": 0.6866006851196289,
+          "filetypes/python-bytecode": 0.953896019145619,
+          "filetypes/text": 0.22389566898345947,
+          "filetypes/shell": 0.9875919514331296,
+          "filetypes/csharp": 0.9944814819344313,
+          "filetypes/markdown": 0.5342731187241507,
+          "filetypes/xls": 0.7933555245399475,
+          "filetypes/xlsx": 0.8707722425460815,
+          "filetypes/tar.gz": 0.9887292875544246,
+          "filetypes/java": 0.9976025223731995,
+          "filetypes/package.json": 0.9983539581298828,
+          "filetypes/perl": 0.941735263190408,
+          "filetypes/json": 0.03829383850097656,
+          "filetypes/jpeg": 0.980950454805389,
+          "filetypes/html": 0.8294766545295715,
+          "filetypes/ruby": 0.9981314172601654,
+          "filetypes/makefile": 0.06097889088463247,
+          "filetypes/lua": 0.10307073385089285,
+          "filetypes/macho": 0.947270393371582,
+          "filetypes/plist": 0.8615944981575012,
+          "filetypes/vbs": 0.9940357006109093,
+          "filetypes/pkg-info": 0.06263196468353271,
+          "filetypes/ole": 0.32986289262771606,
+          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/deb": 0.14449363946914673,
+          "filetypes/jar": 0.04028582572937012,
+          "filetypes/groovy": 0.013714640157694897,
+          "filetypes/rtf": 0.05923277139663696,
+          "filetypes/lnk": 0.5052585005760193,
+          "filetypes/docx": 0.2326485514640808,
+          "filetypes/clojure": 0.9875231792264351,
+          "filetypes/tar": 0.06313180923461914,
+          "filetypes/dockerfile": 0.1385757327079773,
+          "filetypes/package-lock.json": 0.2938859462738037,
+          "filetypes/chrome-manifest": 0.8901082277297974
+        },
+        "diagnostics": {
+          "general": {
+            "kind": "general",
+            "rows": 822241,
+            "selected": true,
+            "selected_threshold": 0.9969088435173035,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9969088435173035,
+              "tp": 119006,
+              "fp": 11
+            }
+          },
+          "filegroups/scripts": {
+            "kind": "filegroup",
+            "rows": 162728,
+            "selected": true,
+            "selected_threshold": 0.9962440729141235,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9962440729141235,
+              "tp": 29792,
+              "fp": 3
+            }
+          },
+          "filegroups/native": {
+            "kind": "filegroup",
+            "rows": 221139,
+            "selected": true,
+            "selected_threshold": 0.9991975764596179,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9991975764596179,
+              "tp": 90872,
+              "fp": 2
+            }
+          },
+          "filegroups/portable": {
+            "kind": "filegroup",
+            "rows": 83985,
+            "selected": true,
+            "selected_threshold": 0.9999988079071045,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9999988079071045,
+              "tp": 11,
+              "fp": 18
+            }
+          },
+          "filegroups/documents": {
+            "kind": "filegroup",
+            "rows": 48133,
+            "selected": true,
+            "selected_threshold": 0.7054287195205688,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7054287195205688,
+              "tp": 15671,
+              "fp": 1
+            }
+          },
+          "filegroups/source": {
+            "kind": "filegroup",
+            "rows": 133666,
+            "selected": true,
+            "selected_threshold": 0.9771745204925537,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9771745204925537,
+              "tp": 1488,
+              "fp": 3
+            }
+          },
+          "filegroups/config": {
+            "kind": "filegroup",
+            "rows": 32773,
+            "selected": true,
+            "selected_threshold": 0.999061644077301,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.999061644077301,
+              "tp": 2259,
+              "fp": 1
+            }
+          },
+          "filegroups/media": {
+            "kind": "filegroup",
+            "rows": 22901,
+            "selected": true,
+            "selected_threshold": 0.8671467900276184,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8671467900276184,
+              "tp": 75,
+              "fp": 1
+            }
+          },
+          "filetypes/pe": {
+            "kind": "filetype",
+            "rows": 178631,
+            "selected": true,
+            "selected_threshold": 0.9993021622205431,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9993021622205431,
+              "tp": 75921,
+              "fp": 1
+            }
+          },
+          "filetypes/java_class": {
+            "kind": "filetype",
+            "rows": 83985,
+            "selected": true,
+            "selected_threshold": 1.0,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 1.0,
+              "tp": 0,
+              "fp": 11
+            }
+          },
+          "filetypes/javascript": {
+            "kind": "filetype",
+            "rows": 82322,
+            "selected": true,
+            "selected_threshold": 0.9634711742401123,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9634711742401123,
+              "tp": 8963,
+              "fp": 2
+            }
+          },
+          "filetypes/c": {
+            "kind": "filetype",
+            "rows": 76105,
+            "selected": true,
+            "selected_threshold": 0.992307722568512,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.992307722568512,
+              "tp": 179,
+              "fp": 2
+            }
+          },
+          "filetypes/elf": {
+            "kind": "filetype",
+            "rows": 40760,
+            "selected": true,
+            "selected_threshold": 0.9938682321589386,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9938682321589386,
+              "tp": 18857,
+              "fp": 1
+            }
+          },
+          "filetypes/pdf": {
+            "kind": "filetype",
+            "rows": 24909,
+            "selected": true,
+            "selected_threshold": 0.37758001685142517,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.37758001685142517,
+              "tp": 19260,
+              "fp": 1
+            }
+          },
+          "filetypes/python": {
+            "kind": "filetype",
+            "rows": 23113,
+            "selected": true,
+            "selected_threshold": 0.9979023462338605,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9979023462338605,
+              "tp": 1477,
+              "fp": 1
+            }
+          },
+          "filetypes/xml": {
+            "kind": "filetype",
+            "rows": 22622,
+            "selected": true,
+            "selected_threshold": 0.2533334493637085,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.2533334493637085,
+              "tp": 9,
+              "fp": 2
+            }
+          },
+          "filetypes/batch": {
+            "kind": "filetype",
+            "rows": 22730,
+            "selected": true,
+            "selected_threshold": 0.9927771091461182,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9927771091461182,
+              "tp": 21560,
+              "fp": 1
+            }
+          },
+          "filetypes/png": {
+            "kind": "filetype",
+            "rows": 19427,
+            "selected": true,
+            "selected_threshold": 0.13528257608413696,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.13528257608413696,
+              "tp": 58,
+              "fp": 1
+            }
+          },
+          "filetypes/php": {
+            "kind": "filetype",
+            "rows": 15662,
+            "selected": true,
+            "selected_threshold": 0.9953118562698364,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9953118562698364,
+              "tp": 295,
+              "fp": 1
+            }
+          },
+          "filetypes/go": {
+            "kind": "filetype",
+            "rows": 14863,
+            "selected": true,
+            "selected_threshold": 0.6399033212418067,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.6399033212418067,
+              "tp": 62,
+              "fp": 1
+            }
+          },
+          "filetypes/zip": {
+            "kind": "filetype",
+            "rows": 13422,
+            "selected": true,
+            "selected_threshold": 0.9939855933189392,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9939855933189392,
+              "tp": 4618,
+              "fp": 1
+            }
+          },
+          "filetypes/rust": {
+            "kind": "filetype",
+            "rows": 10596,
+            "selected": true,
+            "selected_threshold": 0.7905694246292114,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7905694246292114,
+              "tp": 4,
+              "fp": 1
+            }
+          },
+          "filetypes/kotlin": {
+            "kind": "filetype",
+            "rows": 10402,
+            "selected": true,
+            "selected_threshold": 0.6866006851196289,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.6866006851196289,
+              "tp": 1838,
+              "fp": 1
+            }
+          },
+          "filetypes/python-bytecode": {
+            "kind": "filetype",
+            "rows": 9560,
+            "selected": true,
+            "selected_threshold": 0.953896019145619,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.953896019145619,
+              "tp": 327,
+              "fp": 0
+            }
+          },
+          "filetypes/text": {
+            "kind": "filetype",
+            "rows": 8990,
+            "selected": true,
+            "selected_threshold": 0.22389566898345947,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.22389566898345947,
+              "tp": 17,
+              "fp": 4
+            }
+          },
+          "filetypes/shell": {
+            "kind": "filetype",
+            "rows": 8474,
+            "selected": true,
+            "selected_threshold": 0.9875919514331296,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9875919514331296,
+              "tp": 1210,
+              "fp": 0
+            }
+          },
+          "filetypes/csharp": {
+            "kind": "filetype",
+            "rows": 8217,
+            "selected": true,
+            "selected_threshold": 0.9944814819344313,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9944814819344313,
+              "tp": 44,
+              "fp": 0
+            }
+          },
+          "filetypes/markdown": {
+            "kind": "filetype",
+            "rows": 7569,
+            "selected": true,
+            "selected_threshold": 0.5342731187241507,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.5342731187241507,
+              "tp": 2,
+              "fp": 0
+            }
+          },
+          "filetypes/xls": {
+            "kind": "filetype",
+            "rows": 6763,
+            "selected": true,
+            "selected_threshold": 0.7933555245399475,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7933555245399475,
+              "tp": 3949,
+              "fp": 1
+            }
+          },
+          "filetypes/xlsx": {
+            "kind": "filetype",
+            "rows": 6662,
+            "selected": true,
+            "selected_threshold": 0.8707722425460815,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8707722425460815,
+              "tp": 3042,
+              "fp": 1
+            }
+          },
+          "filetypes/tar.gz": {
+            "kind": "filetype",
+            "rows": 5772,
+            "selected": true,
+            "selected_threshold": 0.9887292875544246,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9887292875544246,
+              "tp": 3166,
+              "fp": 1
+            }
+          },
+          "filetypes/java": {
+            "kind": "filetype",
+            "rows": 4475,
+            "selected": true,
+            "selected_threshold": 0.9976025223731995,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9976025223731995,
+              "tp": 1,
+              "fp": 1
+            }
+          },
+          "filetypes/package.json": {
+            "kind": "filetype",
+            "rows": 4380,
+            "selected": true,
+            "selected_threshold": 0.9983539581298828,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9983539581298828,
+              "tp": 2016,
+              "fp": 1
+            }
+          },
+          "filetypes/perl": {
+            "kind": "filetype",
+            "rows": 4150,
+            "selected": true,
+            "selected_threshold": 0.941735263190408,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.941735263190408,
+              "tp": 24,
+              "fp": 0
+            }
+          },
+          "filetypes/json": {
+            "kind": "filetype",
+            "rows": 4132,
+            "selected": true,
+            "selected_threshold": 0.03829383850097656,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.03829383850097656,
+              "tp": 89,
+              "fp": 4043
+            }
+          },
+          "filetypes/jpeg": {
+            "kind": "filetype",
+            "rows": 3474,
+            "selected": true,
+            "selected_threshold": 0.980950454805389,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.980950454805389,
+              "tp": 7,
+              "fp": 0
+            }
+          },
+          "filetypes/html": {
+            "kind": "filetype",
+            "rows": 3156,
+            "selected": true,
+            "selected_threshold": 0.8294766545295715,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8294766545295715,
+              "tp": 25,
+              "fp": 1
+            }
+          },
+          "filetypes/ruby": {
+            "kind": "filetype",
+            "rows": 3144,
+            "selected": true,
+            "selected_threshold": 0.9981314172601654,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9981314172601654,
+              "tp": 7,
+              "fp": 1
+            }
+          },
+          "filetypes/makefile": {
+            "kind": "filetype",
+            "rows": 2979,
+            "selected": true,
+            "selected_threshold": 0.06097889088463247,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.06097889088463247,
+              "tp": 0,
+              "fp": 0
+            }
+          },
+          "filetypes/lua": {
+            "kind": "filetype",
+            "rows": 2245,
+            "selected": true,
+            "selected_threshold": 0.10307073385089285,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.10307073385089285,
+              "tp": 4,
+              "fp": 0
+            }
+          },
+          "filetypes/macho": {
+            "kind": "filetype",
+            "rows": 1748,
+            "selected": true,
+            "selected_threshold": 0.947270393371582,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.947270393371582,
+              "tp": 257,
+              "fp": 1
+            }
+          },
+          "filetypes/plist": {
+            "kind": "filetype",
+            "rows": 1639,
+            "selected": true,
+            "selected_threshold": 0.8615944981575012,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8615944981575012,
+              "tp": 4,
+              "fp": 1
+            }
+          },
+          "filetypes/vbs": {
+            "kind": "filetype",
+            "rows": 1571,
+            "selected": true,
+            "selected_threshold": 0.9940357006109093,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9940357006109093,
+              "tp": 783,
+              "fp": 1
+            }
+          },
+          "filetypes/pkg-info": {
+            "kind": "filetype",
+            "rows": 1572,
+            "selected": true,
+            "selected_threshold": 0.06263196468353271,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.06263196468353271,
+              "tp": 1388,
+              "fp": 1
+            }
+          },
+          "filetypes/ole": {
+            "kind": "filetype",
+            "rows": 1519,
+            "selected": true,
+            "selected_threshold": 0.32986289262771606,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.32986289262771606,
+              "tp": 750,
+              "fp": 1
+            }
+          },
+          "filetypes/powershell": {
+            "kind": "filetype",
+            "rows": 888,
+            "selected": true,
+            "selected_threshold": 0.8938430547714233,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8938430547714233,
+              "tp": 398,
+              "fp": 1
+            }
+          },
+          "filetypes/deb": {
+            "kind": "filetype",
+            "rows": 856,
+            "selected": true,
+            "selected_threshold": 0.14449363946914673,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.14449363946914673,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/jar": {
+            "kind": "filetype",
+            "rows": 842,
+            "selected": true,
+            "selected_threshold": 0.04028582572937012,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.04028582572937012,
+              "tp": 370,
+              "fp": 1
+            }
+          },
+          "filetypes/groovy": {
+            "kind": "filetype",
+            "rows": 770,
+            "selected": true,
+            "selected_threshold": 0.013714640157694897,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.013714640157694897,
+              "tp": 3,
+              "fp": 0
+            }
+          },
+          "filetypes/rtf": {
+            "kind": "filetype",
+            "rows": 745,
+            "selected": true,
+            "selected_threshold": 0.05923277139663696,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.05923277139663696,
+              "tp": 665,
+              "fp": 1
+            }
+          },
+          "filetypes/lnk": {
+            "kind": "filetype",
+            "rows": 653,
+            "selected": true,
+            "selected_threshold": 0.5052585005760193,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.5052585005760193,
+              "tp": 438,
+              "fp": 1
+            }
+          },
+          "filetypes/docx": {
+            "kind": "filetype",
+            "rows": 611,
+            "selected": true,
+            "selected_threshold": 0.2326485514640808,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.2326485514640808,
+              "tp": 483,
+              "fp": 1
+            }
+          },
+          "filetypes/clojure": {
+            "kind": "filetype",
+            "rows": 387,
+            "selected": true,
+            "selected_threshold": 0.9875231792264351,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9875231792264351,
+              "tp": 13,
+              "fp": 0
+            }
+          },
+          "filetypes/tar": {
+            "kind": "filetype",
+            "rows": 244,
+            "selected": true,
+            "selected_threshold": 0.06313180923461914,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.06313180923461914,
+              "tp": 182,
+              "fp": 1
+            }
+          },
+          "filetypes/dockerfile": {
+            "kind": "filetype",
+            "rows": 196,
+            "selected": true,
+            "selected_threshold": 0.1385757327079773,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.1385757327079773,
+              "tp": 6,
+              "fp": 190
+            }
+          },
+          "filetypes/package-lock.json": {
+            "kind": "filetype",
+            "rows": 98,
+            "selected": true,
+            "selected_threshold": 0.2938859462738037,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.2938859462738037,
+              "tp": 4,
+              "fp": 14
+            }
+          },
+          "filetypes/pptx": {
+            "kind": "filetype",
+            "rows": 93,
+            "selected": false,
+            "reason": "too few benigns to derive a quantile",
+            "selected_threshold": null,
+            "standalone": {
+              "threshold": null,
+              "tp": 0,
+              "fp": 0
+            }
+          },
+          "filetypes/chrome-manifest": {
+            "kind": "filetype",
+            "rows": 58,
+            "selected": true,
+            "selected_threshold": 0.8901082277297974,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8901082277297974,
+              "tp": 5,
+              "fp": 1
+            }
+          },
+          "filetypes/crx": {
+            "kind": "filetype",
+            "rows": 63,
+            "selected": false,
+            "reason": "too few benigns to derive a quantile",
+            "selected_threshold": null,
+            "standalone": {
+              "threshold": null,
+              "tp": 0,
+              "fp": 0
+            }
+          }
+        },
+        "tp": 207335,
+        "fp": 4335,
+        "tn": 520009,
+        "fn": 90562,
+        "recall": 0.6959955957931768,
+        "precision": 0.9795200075589361,
+        "fp_per_100M": 826747.3261828113
+      }
+    },
+    {
+      "level": 5000,
+      "hostile": {
+        "target_per_million": 50.0,
+        "below_resolution": false,
+        "cp_floor_per_million": 5.713279289585204,
+        "extrapolated_routes": [
+          "filetypes/pe",
+          "filetypes/go",
+          "filetypes/rust",
+          "filetypes/python-bytecode",
+          "filetypes/shell",
+          "filetypes/csharp",
+          "filetypes/markdown",
+          "filetypes/tar.gz",
+          "filetypes/perl",
+          "filetypes/jpeg",
+          "filetypes/ruby",
+          "filetypes/makefile",
+          "filetypes/lua",
+          "filetypes/vbs",
+          "filetypes/deb",
+          "filetypes/jar",
+          "filetypes/groovy",
+          "filetypes/clojure"
+        ],
+        "thresholds": {
+          "general": 0.9944190382957458,
+          "filegroups/scripts": 0.9926706552505493,
+          "filegroups/native": 0.9985060691833496,
+          "filegroups/portable": 0.9999988079071045,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.95444655418396,
+          "filegroups/config": 0.9965453743934631,
+          "filegroups/media": 0.8058722019195557,
+          "filetypes/pe": 0.99913352303531,
+          "filetypes/java_class": 1.0,
+          "filetypes/javascript": 0.9577044248580933,
+          "filetypes/c": 0.9877442121505737,
+          "filetypes/elf": 0.9931958913803101,
+          "filetypes/pdf": 0.37758001685142517,
+          "filetypes/python": 0.9975798726081848,
+          "filetypes/xml": 0.2533334493637085,
+          "filetypes/batch": 0.9927771091461182,
+          "filetypes/png": 0.13528257608413696,
+          "filetypes/php": 0.9953118562698364,
+          "filetypes/go": 0.4614027030542704,
+          "filetypes/zip": 0.9939855933189392,
+          "filetypes/rust": 0.5882622582329748,
+          "filetypes/kotlin": 0.6866006851196289,
+          "filetypes/python-bytecode": 0.5642522033877897,
+          "filetypes/text": 0.22389566898345947,
+          "filetypes/shell": 0.9809656646917913,
+          "filetypes/csharp": 0.9885711389952808,
+          "filetypes/markdown": 0.42742616210152556,
+          "filetypes/xls": 0.7933555245399475,
+          "filetypes/xlsx": 0.8707722425460815,
+          "filetypes/tar.gz": 0.9884974267547879,
+          "filetypes/java": 0.9976025223731995,
+          "filetypes/package.json": 0.9983539581298828,
+          "filetypes/perl": 0.8771594500922206,
+          "filetypes/json": 0.03829383850097656,
+          "filetypes/jpeg": 0.9684191204170366,
+          "filetypes/html": 0.8294766545295715,
+          "filetypes/ruby": 0.997910447286309,
+          "filetypes/makefile": 0.028194336201353212,
+          "filetypes/lua": 0.06114091318335595,
+          "filetypes/macho": 0.947270393371582,
+          "filetypes/plist": 0.8615944981575012,
+          "filetypes/vbs": 0.9940000060623715,
+          "filetypes/pkg-info": 0.06263196468353271,
+          "filetypes/ole": 0.32986289262771606,
+          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/deb": 0.14449363946914665,
+          "filetypes/jar": 0.5284507301000773,
+          "filetypes/groovy": 0.01271422854281469,
+          "filetypes/rtf": 0.05923277139663696,
+          "filetypes/lnk": 0.5052585005760193,
+          "filetypes/docx": 0.2326485514640808,
+          "filetypes/clojure": 0.9683397740479248,
+          "filetypes/tar": 0.06313180923461914,
+          "filetypes/dockerfile": 0.1385757327079773,
+          "filetypes/package-lock.json": 0.2938859462738037,
+          "filetypes/chrome-manifest": 0.8901082277297974
+        },
+        "diagnostics": {
+          "general": {
+            "kind": "general",
+            "rows": 822241,
+            "selected": true,
+            "selected_threshold": 0.9944190382957458,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9944190382957458,
+              "tp": 144986,
+              "fp": 27
+            }
+          },
+          "filegroups/scripts": {
+            "kind": "filegroup",
+            "rows": 162728,
+            "selected": true,
+            "selected_threshold": 0.9926706552505493,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9926706552505493,
+              "tp": 32004,
+              "fp": 7
+            }
+          },
+          "filegroups/native": {
+            "kind": "filegroup",
+            "rows": 221139,
+            "selected": true,
+            "selected_threshold": 0.9985060691833496,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9985060691833496,
+              "tp": 115705,
+              "fp": 3
+            }
+          },
+          "filegroups/portable": {
+            "kind": "filegroup",
+            "rows": 83985,
+            "selected": true,
+            "selected_threshold": 0.9999988079071045,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9999988079071045,
+              "tp": 11,
+              "fp": 18
+            }
+          },
+          "filegroups/documents": {
+            "kind": "filegroup",
+            "rows": 48133,
+            "selected": true,
+            "selected_threshold": 0.7054287195205688,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7054287195205688,
+              "tp": 15671,
+              "fp": 1
+            }
+          },
+          "filegroups/source": {
+            "kind": "filegroup",
+            "rows": 133666,
+            "selected": true,
+            "selected_threshold": 0.95444655418396,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.95444655418396,
+              "tp": 1717,
+              "fp": 7
+            }
+          },
+          "filegroups/config": {
+            "kind": "filegroup",
+            "rows": 32773,
+            "selected": true,
+            "selected_threshold": 0.9965453743934631,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9965453743934631,
+              "tp": 2308,
+              "fp": 2
+            }
+          },
+          "filegroups/media": {
+            "kind": "filegroup",
+            "rows": 22901,
+            "selected": true,
+            "selected_threshold": 0.8058722019195557,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.8058722019195557,
+              "tp": 76,
+              "fp": 2
+            }
+          },
+          "filetypes/pe": {
+            "kind": "filetype",
+            "rows": 178631,
+            "selected": true,
+            "selected_threshold": 0.99913352303531,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.99913352303531,
+              "tp": 89399,
+              "fp": 2
+            }
+          },
+          "filetypes/java_class": {
+            "kind": "filetype",
+            "rows": 83985,
+            "selected": true,
+            "selected_threshold": 1.0,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 1.0,
+              "tp": 0,
+              "fp": 11
+            }
+          },
+          "filetypes/javascript": {
+            "kind": "filetype",
+            "rows": 82322,
+            "selected": true,
+            "selected_threshold": 0.9577044248580933,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9577044248580933,
+              "tp": 9093,
+              "fp": 4
+            }
+          },
+          "filetypes/c": {
+            "kind": "filetype",
+            "rows": 76105,
+            "selected": true,
+            "selected_threshold": 0.9877442121505737,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9877442121505737,
+              "tp": 212,
+              "fp": 4
+            }
+          },
+          "filetypes/elf": {
+            "kind": "filetype",
+            "rows": 40760,
+            "selected": true,
+            "selected_threshold": 0.9931958913803101,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9931958913803101,
+              "tp": 18880,
+              "fp": 2
+            }
+          },
+          "filetypes/pdf": {
+            "kind": "filetype",
+            "rows": 24909,
+            "selected": true,
+            "selected_threshold": 0.37758001685142517,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.37758001685142517,
+              "tp": 19260,
+              "fp": 1
+            }
+          },
+          "filetypes/python": {
+            "kind": "filetype",
+            "rows": 23113,
+            "selected": true,
+            "selected_threshold": 0.9975798726081848,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9975798726081848,
+              "tp": 1490,
+              "fp": 2
+            }
+          },
+          "filetypes/xml": {
+            "kind": "filetype",
+            "rows": 22622,
+            "selected": true,
+            "selected_threshold": 0.2533334493637085,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.2533334493637085,
+              "tp": 9,
+              "fp": 2
+            }
+          },
+          "filetypes/batch": {
+            "kind": "filetype",
+            "rows": 22730,
+            "selected": true,
+            "selected_threshold": 0.9927771091461182,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9927771091461182,
+              "tp": 21560,
+              "fp": 1
+            }
+          },
+          "filetypes/png": {
+            "kind": "filetype",
+            "rows": 19427,
+            "selected": true,
+            "selected_threshold": 0.13528257608413696,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.13528257608413696,
+              "tp": 58,
+              "fp": 1
+            }
+          },
+          "filetypes/php": {
+            "kind": "filetype",
+            "rows": 15662,
+            "selected": true,
+            "selected_threshold": 0.9953118562698364,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9953118562698364,
+              "tp": 295,
+              "fp": 1
+            }
+          },
+          "filetypes/go": {
+            "kind": "filetype",
+            "rows": 14863,
+            "selected": true,
+            "selected_threshold": 0.4614027030542704,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.4614027030542704,
+              "tp": 70,
+              "fp": 1
+            }
+          },
+          "filetypes/zip": {
+            "kind": "filetype",
+            "rows": 13422,
+            "selected": true,
+            "selected_threshold": 0.9939855933189392,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9939855933189392,
+              "tp": 4618,
+              "fp": 1
+            }
+          },
+          "filetypes/rust": {
+            "kind": "filetype",
+            "rows": 10596,
+            "selected": true,
+            "selected_threshold": 0.5882622582329748,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.5882622582329748,
+              "tp": 4,
+              "fp": 1
+            }
+          },
+          "filetypes/kotlin": {
+            "kind": "filetype",
+            "rows": 10402,
+            "selected": true,
+            "selected_threshold": 0.6866006851196289,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.6866006851196289,
+              "tp": 1838,
+              "fp": 1
+            }
+          },
+          "filetypes/python-bytecode": {
+            "kind": "filetype",
+            "rows": 9560,
+            "selected": true,
+            "selected_threshold": 0.5642522033877897,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.5642522033877897,
+              "tp": 330,
+              "fp": 2
+            }
+          },
+          "filetypes/text": {
+            "kind": "filetype",
+            "rows": 8990,
+            "selected": true,
+            "selected_threshold": 0.22389566898345947,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.22389566898345947,
+              "tp": 17,
+              "fp": 4
+            }
+          },
+          "filetypes/shell": {
+            "kind": "filetype",
+            "rows": 8474,
+            "selected": true,
+            "selected_threshold": 0.9809656646917913,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9809656646917913,
+              "tp": 1299,
+              "fp": 1
+            }
+          },
+          "filetypes/csharp": {
+            "kind": "filetype",
+            "rows": 8217,
+            "selected": true,
+            "selected_threshold": 0.9885711389952808,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9885711389952808,
+              "tp": 49,
+              "fp": 1
+            }
+          },
+          "filetypes/markdown": {
+            "kind": "filetype",
+            "rows": 7569,
+            "selected": true,
+            "selected_threshold": 0.42742616210152556,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.42742616210152556,
+              "tp": 3,
+              "fp": 1
+            }
+          },
+          "filetypes/xls": {
+            "kind": "filetype",
+            "rows": 6763,
+            "selected": true,
+            "selected_threshold": 0.7933555245399475,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7933555245399475,
+              "tp": 3949,
+              "fp": 1
+            }
+          },
+          "filetypes/xlsx": {
+            "kind": "filetype",
+            "rows": 6662,
+            "selected": true,
+            "selected_threshold": 0.8707722425460815,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8707722425460815,
+              "tp": 3042,
+              "fp": 1
+            }
+          },
+          "filetypes/tar.gz": {
+            "kind": "filetype",
+            "rows": 5772,
+            "selected": true,
+            "selected_threshold": 0.9884974267547879,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9884974267547879,
+              "tp": 3170,
+              "fp": 1
+            }
+          },
+          "filetypes/java": {
+            "kind": "filetype",
+            "rows": 4475,
+            "selected": true,
+            "selected_threshold": 0.9976025223731995,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9976025223731995,
+              "tp": 1,
+              "fp": 1
+            }
+          },
+          "filetypes/package.json": {
+            "kind": "filetype",
+            "rows": 4380,
+            "selected": true,
+            "selected_threshold": 0.9983539581298828,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9983539581298828,
+              "tp": 2016,
+              "fp": 1
+            }
+          },
+          "filetypes/perl": {
+            "kind": "filetype",
+            "rows": 4150,
+            "selected": true,
+            "selected_threshold": 0.8771594500922206,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.8771594500922206,
+              "tp": 25,
+              "fp": 0
+            }
+          },
+          "filetypes/json": {
+            "kind": "filetype",
+            "rows": 4132,
+            "selected": true,
+            "selected_threshold": 0.03829383850097656,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.03829383850097656,
+              "tp": 89,
+              "fp": 4043
+            }
+          },
+          "filetypes/jpeg": {
+            "kind": "filetype",
+            "rows": 3474,
+            "selected": true,
+            "selected_threshold": 0.9684191204170366,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9684191204170366,
+              "tp": 13,
+              "fp": 0
+            }
+          },
+          "filetypes/html": {
+            "kind": "filetype",
+            "rows": 3156,
+            "selected": true,
+            "selected_threshold": 0.8294766545295715,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8294766545295715,
+              "tp": 25,
+              "fp": 1
+            }
+          },
+          "filetypes/ruby": {
+            "kind": "filetype",
+            "rows": 3144,
+            "selected": true,
+            "selected_threshold": 0.997910447286309,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.997910447286309,
+              "tp": 7,
+              "fp": 1
+            }
+          },
+          "filetypes/makefile": {
+            "kind": "filetype",
+            "rows": 2979,
+            "selected": true,
+            "selected_threshold": 0.028194336201353212,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.028194336201353212,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/lua": {
+            "kind": "filetype",
+            "rows": 2245,
+            "selected": true,
+            "selected_threshold": 0.06114091318335595,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.06114091318335595,
+              "tp": 6,
+              "fp": 1
+            }
+          },
+          "filetypes/macho": {
+            "kind": "filetype",
+            "rows": 1748,
+            "selected": true,
+            "selected_threshold": 0.947270393371582,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.947270393371582,
+              "tp": 257,
+              "fp": 1
+            }
+          },
+          "filetypes/plist": {
+            "kind": "filetype",
+            "rows": 1639,
+            "selected": true,
+            "selected_threshold": 0.8615944981575012,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8615944981575012,
+              "tp": 4,
+              "fp": 1
+            }
+          },
+          "filetypes/vbs": {
+            "kind": "filetype",
+            "rows": 1571,
+            "selected": true,
+            "selected_threshold": 0.9940000060623715,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9940000060623715,
+              "tp": 783,
+              "fp": 1
+            }
+          },
+          "filetypes/pkg-info": {
+            "kind": "filetype",
+            "rows": 1572,
+            "selected": true,
+            "selected_threshold": 0.06263196468353271,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.06263196468353271,
+              "tp": 1388,
+              "fp": 1
+            }
+          },
+          "filetypes/ole": {
+            "kind": "filetype",
+            "rows": 1519,
+            "selected": true,
+            "selected_threshold": 0.32986289262771606,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.32986289262771606,
+              "tp": 750,
+              "fp": 1
+            }
+          },
+          "filetypes/powershell": {
+            "kind": "filetype",
+            "rows": 888,
+            "selected": true,
+            "selected_threshold": 0.8938430547714233,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8938430547714233,
+              "tp": 398,
+              "fp": 1
+            }
+          },
+          "filetypes/deb": {
+            "kind": "filetype",
+            "rows": 856,
+            "selected": true,
+            "selected_threshold": 0.14449363946914665,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.14449363946914665,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/jar": {
+            "kind": "filetype",
+            "rows": 842,
+            "selected": true,
+            "selected_threshold": 0.5284507301000773,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.5284507301000773,
+              "tp": 291,
+              "fp": 0
+            }
+          },
+          "filetypes/groovy": {
+            "kind": "filetype",
+            "rows": 770,
+            "selected": true,
+            "selected_threshold": 0.01271422854281469,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.01271422854281469,
+              "tp": 3,
+              "fp": 0
+            }
+          },
+          "filetypes/rtf": {
+            "kind": "filetype",
+            "rows": 745,
+            "selected": true,
+            "selected_threshold": 0.05923277139663696,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.05923277139663696,
+              "tp": 665,
+              "fp": 1
+            }
+          },
+          "filetypes/lnk": {
+            "kind": "filetype",
+            "rows": 653,
+            "selected": true,
+            "selected_threshold": 0.5052585005760193,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.5052585005760193,
+              "tp": 438,
+              "fp": 1
+            }
+          },
+          "filetypes/docx": {
+            "kind": "filetype",
+            "rows": 611,
+            "selected": true,
+            "selected_threshold": 0.2326485514640808,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.2326485514640808,
+              "tp": 483,
+              "fp": 1
+            }
+          },
+          "filetypes/clojure": {
+            "kind": "filetype",
+            "rows": 387,
+            "selected": true,
+            "selected_threshold": 0.9683397740479248,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9683397740479248,
+              "tp": 14,
+              "fp": 0
+            }
+          },
+          "filetypes/tar": {
+            "kind": "filetype",
+            "rows": 244,
+            "selected": true,
+            "selected_threshold": 0.06313180923461914,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.06313180923461914,
+              "tp": 182,
+              "fp": 1
+            }
+          },
+          "filetypes/dockerfile": {
+            "kind": "filetype",
+            "rows": 196,
+            "selected": true,
+            "selected_threshold": 0.1385757327079773,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.1385757327079773,
+              "tp": 6,
+              "fp": 190
+            }
+          },
+          "filetypes/package-lock.json": {
+            "kind": "filetype",
+            "rows": 98,
+            "selected": true,
+            "selected_threshold": 0.2938859462738037,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.2938859462738037,
+              "tp": 4,
+              "fp": 14
+            }
+          },
+          "filetypes/pptx": {
+            "kind": "filetype",
+            "rows": 93,
+            "selected": false,
+            "reason": "too few benigns to derive a quantile",
+            "selected_threshold": null,
+            "standalone": {
+              "threshold": null,
+              "tp": 0,
+              "fp": 0
+            }
+          },
+          "filetypes/chrome-manifest": {
+            "kind": "filetype",
+            "rows": 58,
+            "selected": true,
+            "selected_threshold": 0.8901082277297974,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8901082277297974,
+              "tp": 5,
+              "fp": 1
+            }
+          },
+          "filetypes/crx": {
+            "kind": "filetype",
+            "rows": 63,
+            "selected": false,
+            "reason": "too few benigns to derive a quantile",
+            "selected_threshold": null,
+            "standalone": {
+              "threshold": null,
+              "tp": 0,
+              "fp": 0
+            }
+          }
+        },
+        "tp": 223657,
+        "fp": 4369,
+        "tn": 519975,
+        "fn": 74240,
+        "recall": 0.7507863456161022,
+        "precision": 0.9808399042214484,
+        "fp_per_100M": 833231.6189371863
+      }
+    },
+    {
+      "level": 7500,
+      "hostile": {
+        "target_per_million": 75.0,
+        "below_resolution": false,
+        "cp_floor_per_million": 5.713279289585204,
+        "extrapolated_routes": [
+          "filetypes/rust",
+          "filetypes/kotlin",
+          "filetypes/python-bytecode",
+          "filetypes/shell",
+          "filetypes/csharp",
+          "filetypes/markdown",
+          "filetypes/tar.gz",
+          "filetypes/perl",
+          "filetypes/jpeg",
+          "filetypes/ruby",
+          "filetypes/makefile",
+          "filetypes/lua",
+          "filetypes/vbs",
+          "filetypes/deb",
+          "filetypes/jar",
+          "filetypes/groovy",
+          "filetypes/clojure"
+        ],
+        "thresholds": {
+          "general": 0.9923123121261597,
+          "filegroups/scripts": 0.9912147521972656,
+          "filegroups/native": 0.9983554482460022,
+          "filegroups/portable": 0.9999988079071045,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.945690393447876,
+          "filegroups/config": 0.9472449421882629,
+          "filegroups/media": 0.8058722019195557,
+          "filetypes/pe": 0.9992995262145996,
+          "filetypes/java_class": 1.0,
+          "filetypes/javascript": 0.9526916146278381,
+          "filetypes/c": 0.986393392086029,
+          "filetypes/elf": 0.9931958913803101,
+          "filetypes/pdf": 0.37758001685142517,
+          "filetypes/python": 0.9975798726081848,
+          "filetypes/xml": 0.2533334493637085,
+          "filetypes/batch": 0.9927771091461182,
+          "filetypes/png": 0.07854849100112915,
+          "filetypes/php": 0.9919825196266174,
+          "filetypes/go": 0.27328523993492126,
+          "filetypes/zip": 0.9939855933189392,
+          "filetypes/rust": 0.26280144590869425,
+          "filetypes/kotlin": 0.698730249733411,
+          "filetypes/python-bytecode": 0.4501355033087652,
+          "filetypes/text": 0.22389566898345947,
+          "filetypes/shell": 0.9761749319157347,
+          "filetypes/csharp": 0.9840911662722134,
+          "filetypes/markdown": 0.38534786648898117,
+          "filetypes/xls": 0.7933555245399475,
+          "filetypes/xlsx": 0.8707722425460815,
+          "filetypes/tar.gz": 0.9882731363600814,
+          "filetypes/java": 0.9976025223731995,
+          "filetypes/package.json": 0.9983539581298828,
+          "filetypes/perl": 0.8461275860556632,
+          "filetypes/json": 0.03829383850097656,
+          "filetypes/jpeg": 0.9602408144875194,
+          "filetypes/html": 0.8294766545295715,
+          "filetypes/ruby": 0.9977202256887461,
+          "filetypes/makefile": 0.02006044195115747,
+          "filetypes/lua": 0.04844604714307183,
+          "filetypes/macho": 0.947270393371582,
+          "filetypes/plist": 0.8615944981575012,
+          "filetypes/vbs": 0.9939674003947928,
+          "filetypes/pkg-info": 0.06263196468353271,
+          "filetypes/ole": 0.32986289262771606,
+          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/deb": 0.1444936394691462,
+          "filetypes/jar": 0.3929456953562015,
+          "filetypes/groovy": 0.012249581896077047,
+          "filetypes/rtf": 0.05923277139663696,
+          "filetypes/lnk": 0.5052585005760193,
+          "filetypes/docx": 0.2326485514640808,
+          "filetypes/clojure": 0.9577429603332023,
+          "filetypes/tar": 0.06313180923461914,
+          "filetypes/dockerfile": 0.1385757327079773,
+          "filetypes/package-lock.json": 0.2938859462738037,
+          "filetypes/chrome-manifest": 0.8901082277297974
+        },
+        "diagnostics": {
+          "general": {
+            "kind": "general",
+            "rows": 822241,
+            "selected": true,
+            "selected_threshold": 0.9923123121261597,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9923123121261597,
+              "tp": 155667,
+              "fp": 40
+            }
+          },
+          "filegroups/scripts": {
+            "kind": "filegroup",
+            "rows": 162728,
+            "selected": true,
+            "selected_threshold": 0.9912147521972656,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9912147521972656,
+              "tp": 32486,
+              "fp": 10
+            }
+          },
+          "filegroups/native": {
+            "kind": "filegroup",
+            "rows": 221139,
+            "selected": true,
+            "selected_threshold": 0.9983554482460022,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9983554482460022,
+              "tp": 119418,
+              "fp": 4
+            }
+          },
+          "filegroups/portable": {
+            "kind": "filegroup",
+            "rows": 83985,
+            "selected": true,
+            "selected_threshold": 0.9999988079071045,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9999988079071045,
+              "tp": 11,
+              "fp": 18
+            }
+          },
+          "filegroups/documents": {
+            "kind": "filegroup",
+            "rows": 48133,
+            "selected": true,
+            "selected_threshold": 0.7054287195205688,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7054287195205688,
+              "tp": 15671,
+              "fp": 1
+            }
+          },
+          "filegroups/source": {
+            "kind": "filegroup",
+            "rows": 133666,
+            "selected": true,
+            "selected_threshold": 0.945690393447876,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.945690393447876,
+              "tp": 1747,
+              "fp": 10
+            }
+          },
+          "filegroups/config": {
+            "kind": "filegroup",
+            "rows": 32773,
+            "selected": true,
+            "selected_threshold": 0.9472449421882629,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9472449421882629,
+              "tp": 2328,
+              "fp": 3
+            }
+          },
+          "filegroups/media": {
+            "kind": "filegroup",
+            "rows": 22901,
+            "selected": true,
+            "selected_threshold": 0.8058722019195557,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.8058722019195557,
+              "tp": 76,
+              "fp": 2
+            }
+          },
+          "filetypes/pe": {
+            "kind": "filetype",
+            "rows": 178631,
+            "selected": true,
+            "selected_threshold": 0.9992995262145996,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9992995262145996,
+              "tp": 76066,
+              "fp": 2
+            }
+          },
+          "filetypes/java_class": {
+            "kind": "filetype",
+            "rows": 83985,
+            "selected": true,
+            "selected_threshold": 1.0,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 1.0,
+              "tp": 0,
+              "fp": 11
+            }
+          },
+          "filetypes/javascript": {
+            "kind": "filetype",
+            "rows": 82322,
+            "selected": true,
+            "selected_threshold": 0.9526916146278381,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9526916146278381,
+              "tp": 9180,
+              "fp": 6
+            }
+          },
+          "filetypes/c": {
+            "kind": "filetype",
+            "rows": 76105,
+            "selected": true,
+            "selected_threshold": 0.986393392086029,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.986393392086029,
+              "tp": 219,
+              "fp": 6
+            }
+          },
+          "filetypes/elf": {
+            "kind": "filetype",
+            "rows": 40760,
+            "selected": true,
+            "selected_threshold": 0.9931958913803101,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9931958913803101,
+              "tp": 18880,
+              "fp": 2
+            }
+          },
+          "filetypes/pdf": {
+            "kind": "filetype",
+            "rows": 24909,
+            "selected": true,
+            "selected_threshold": 0.37758001685142517,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.37758001685142517,
+              "tp": 19260,
+              "fp": 1
+            }
+          },
+          "filetypes/python": {
+            "kind": "filetype",
+            "rows": 23113,
+            "selected": true,
+            "selected_threshold": 0.9975798726081848,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9975798726081848,
+              "tp": 1490,
+              "fp": 2
+            }
+          },
+          "filetypes/xml": {
+            "kind": "filetype",
+            "rows": 22622,
+            "selected": true,
+            "selected_threshold": 0.2533334493637085,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.2533334493637085,
+              "tp": 9,
+              "fp": 2
+            }
+          },
+          "filetypes/batch": {
+            "kind": "filetype",
+            "rows": 22730,
+            "selected": true,
+            "selected_threshold": 0.9927771091461182,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9927771091461182,
+              "tp": 21560,
+              "fp": 1
+            }
+          },
+          "filetypes/png": {
+            "kind": "filetype",
+            "rows": 19427,
+            "selected": true,
+            "selected_threshold": 0.07854849100112915,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.07854849100112915,
+              "tp": 60,
+              "fp": 2
+            }
+          },
+          "filetypes/php": {
+            "kind": "filetype",
+            "rows": 15662,
+            "selected": true,
+            "selected_threshold": 0.9919825196266174,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9919825196266174,
+              "tp": 315,
+              "fp": 2
+            }
+          },
+          "filetypes/go": {
+            "kind": "filetype",
+            "rows": 14863,
+            "selected": true,
+            "selected_threshold": 0.27328523993492126,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.27328523993492126,
+              "tp": 108,
+              "fp": 2
+            }
+          },
+          "filetypes/zip": {
+            "kind": "filetype",
+            "rows": 13422,
+            "selected": true,
+            "selected_threshold": 0.9939855933189392,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9939855933189392,
+              "tp": 4618,
+              "fp": 1
+            }
+          },
+          "filetypes/rust": {
+            "kind": "filetype",
+            "rows": 10596,
+            "selected": true,
+            "selected_threshold": 0.26280144590869425,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.26280144590869425,
+              "tp": 6,
+              "fp": 4
+            }
+          },
+          "filetypes/kotlin": {
+            "kind": "filetype",
+            "rows": 10402,
+            "selected": true,
+            "selected_threshold": 0.698730249733411,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.698730249733411,
+              "tp": 1838,
+              "fp": 0
+            }
+          },
+          "filetypes/python-bytecode": {
+            "kind": "filetype",
+            "rows": 9560,
+            "selected": true,
+            "selected_threshold": 0.4501355033087652,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.4501355033087652,
+              "tp": 331,
+              "fp": 2
+            }
+          },
+          "filetypes/text": {
+            "kind": "filetype",
+            "rows": 8990,
+            "selected": true,
+            "selected_threshold": 0.22389566898345947,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.22389566898345947,
+              "tp": 17,
+              "fp": 4
+            }
+          },
+          "filetypes/shell": {
+            "kind": "filetype",
+            "rows": 8474,
+            "selected": true,
+            "selected_threshold": 0.9761749319157347,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9761749319157347,
+              "tp": 1328,
+              "fp": 1
+            }
+          },
+          "filetypes/csharp": {
+            "kind": "filetype",
+            "rows": 8217,
+            "selected": true,
+            "selected_threshold": 0.9840911662722134,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9840911662722134,
+              "tp": 51,
+              "fp": 2
+            }
+          },
+          "filetypes/markdown": {
+            "kind": "filetype",
+            "rows": 7569,
+            "selected": true,
+            "selected_threshold": 0.38534786648898117,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.38534786648898117,
+              "tp": 3,
+              "fp": 1
+            }
+          },
+          "filetypes/xls": {
+            "kind": "filetype",
+            "rows": 6763,
+            "selected": true,
+            "selected_threshold": 0.7933555245399475,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7933555245399475,
+              "tp": 3949,
+              "fp": 1
+            }
+          },
+          "filetypes/xlsx": {
+            "kind": "filetype",
+            "rows": 6662,
+            "selected": true,
+            "selected_threshold": 0.8707722425460815,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8707722425460815,
+              "tp": 3042,
+              "fp": 1
+            }
+          },
+          "filetypes/tar.gz": {
+            "kind": "filetype",
+            "rows": 5772,
+            "selected": true,
+            "selected_threshold": 0.9882731363600814,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9882731363600814,
+              "tp": 3178,
+              "fp": 1
+            }
+          },
+          "filetypes/java": {
+            "kind": "filetype",
+            "rows": 4475,
+            "selected": true,
+            "selected_threshold": 0.9976025223731995,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9976025223731995,
+              "tp": 1,
+              "fp": 1
+            }
+          },
+          "filetypes/package.json": {
+            "kind": "filetype",
+            "rows": 4380,
+            "selected": true,
+            "selected_threshold": 0.9983539581298828,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9983539581298828,
+              "tp": 2016,
+              "fp": 1
+            }
+          },
+          "filetypes/perl": {
+            "kind": "filetype",
+            "rows": 4150,
+            "selected": true,
+            "selected_threshold": 0.8461275860556632,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.8461275860556632,
+              "tp": 26,
+              "fp": 0
+            }
+          },
+          "filetypes/json": {
+            "kind": "filetype",
+            "rows": 4132,
+            "selected": true,
+            "selected_threshold": 0.03829383850097656,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.03829383850097656,
+              "tp": 89,
+              "fp": 4043
+            }
+          },
+          "filetypes/jpeg": {
+            "kind": "filetype",
+            "rows": 3474,
+            "selected": true,
+            "selected_threshold": 0.9602408144875194,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9602408144875194,
+              "tp": 16,
+              "fp": 1
+            }
+          },
+          "filetypes/html": {
+            "kind": "filetype",
+            "rows": 3156,
+            "selected": true,
+            "selected_threshold": 0.8294766545295715,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8294766545295715,
+              "tp": 25,
+              "fp": 1
+            }
+          },
+          "filetypes/ruby": {
+            "kind": "filetype",
+            "rows": 3144,
+            "selected": true,
+            "selected_threshold": 0.9977202256887461,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9977202256887461,
+              "tp": 9,
+              "fp": 2
+            }
+          },
+          "filetypes/makefile": {
+            "kind": "filetype",
+            "rows": 2979,
+            "selected": true,
+            "selected_threshold": 0.02006044195115747,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.02006044195115747,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/lua": {
+            "kind": "filetype",
+            "rows": 2245,
+            "selected": true,
+            "selected_threshold": 0.04844604714307183,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.04844604714307183,
+              "tp": 6,
+              "fp": 1
+            }
+          },
+          "filetypes/macho": {
+            "kind": "filetype",
+            "rows": 1748,
+            "selected": true,
+            "selected_threshold": 0.947270393371582,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.947270393371582,
+              "tp": 257,
+              "fp": 1
+            }
+          },
+          "filetypes/plist": {
+            "kind": "filetype",
+            "rows": 1639,
+            "selected": true,
+            "selected_threshold": 0.8615944981575012,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8615944981575012,
+              "tp": 4,
+              "fp": 1
+            }
+          },
+          "filetypes/vbs": {
+            "kind": "filetype",
+            "rows": 1571,
+            "selected": true,
+            "selected_threshold": 0.9939674003947928,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9939674003947928,
+              "tp": 786,
+              "fp": 1
+            }
+          },
+          "filetypes/pkg-info": {
+            "kind": "filetype",
+            "rows": 1572,
+            "selected": true,
+            "selected_threshold": 0.06263196468353271,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.06263196468353271,
+              "tp": 1388,
+              "fp": 1
+            }
+          },
+          "filetypes/ole": {
+            "kind": "filetype",
+            "rows": 1519,
+            "selected": true,
+            "selected_threshold": 0.32986289262771606,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.32986289262771606,
+              "tp": 750,
+              "fp": 1
+            }
+          },
+          "filetypes/powershell": {
+            "kind": "filetype",
+            "rows": 888,
+            "selected": true,
+            "selected_threshold": 0.8938430547714233,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8938430547714233,
+              "tp": 398,
+              "fp": 1
+            }
+          },
+          "filetypes/deb": {
+            "kind": "filetype",
+            "rows": 856,
+            "selected": true,
+            "selected_threshold": 0.1444936394691462,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.1444936394691462,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/jar": {
+            "kind": "filetype",
+            "rows": 842,
+            "selected": true,
+            "selected_threshold": 0.3929456953562015,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.3929456953562015,
+              "tp": 311,
+              "fp": 0
+            }
+          },
+          "filetypes/groovy": {
+            "kind": "filetype",
+            "rows": 770,
+            "selected": true,
+            "selected_threshold": 0.012249581896077047,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.012249581896077047,
+              "tp": 3,
+              "fp": 0
+            }
+          },
+          "filetypes/rtf": {
+            "kind": "filetype",
+            "rows": 745,
+            "selected": true,
+            "selected_threshold": 0.05923277139663696,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.05923277139663696,
+              "tp": 665,
+              "fp": 1
+            }
+          },
+          "filetypes/lnk": {
+            "kind": "filetype",
+            "rows": 653,
+            "selected": true,
+            "selected_threshold": 0.5052585005760193,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.5052585005760193,
+              "tp": 438,
+              "fp": 1
+            }
+          },
+          "filetypes/docx": {
+            "kind": "filetype",
+            "rows": 611,
+            "selected": true,
+            "selected_threshold": 0.2326485514640808,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.2326485514640808,
+              "tp": 483,
+              "fp": 1
+            }
+          },
+          "filetypes/clojure": {
+            "kind": "filetype",
+            "rows": 387,
+            "selected": true,
+            "selected_threshold": 0.9577429603332023,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9577429603332023,
+              "tp": 14,
+              "fp": 0
+            }
+          },
+          "filetypes/tar": {
+            "kind": "filetype",
+            "rows": 244,
+            "selected": true,
+            "selected_threshold": 0.06313180923461914,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.06313180923461914,
+              "tp": 182,
+              "fp": 1
+            }
+          },
+          "filetypes/dockerfile": {
+            "kind": "filetype",
+            "rows": 196,
+            "selected": true,
+            "selected_threshold": 0.1385757327079773,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.1385757327079773,
+              "tp": 6,
+              "fp": 190
+            }
+          },
+          "filetypes/package-lock.json": {
+            "kind": "filetype",
+            "rows": 98,
+            "selected": true,
+            "selected_threshold": 0.2938859462738037,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.2938859462738037,
+              "tp": 4,
+              "fp": 14
+            }
+          },
+          "filetypes/pptx": {
+            "kind": "filetype",
+            "rows": 93,
+            "selected": false,
+            "reason": "too few benigns to derive a quantile",
+            "selected_threshold": null,
+            "standalone": {
+              "threshold": null,
+              "tp": 0,
+              "fp": 0
+            }
+          },
+          "filetypes/chrome-manifest": {
+            "kind": "filetype",
+            "rows": 58,
+            "selected": true,
+            "selected_threshold": 0.8901082277297974,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8901082277297974,
+              "tp": 5,
+              "fp": 1
+            }
+          },
+          "filetypes/crx": {
+            "kind": "filetype",
+            "rows": 63,
+            "selected": false,
+            "reason": "too few benigns to derive a quantile",
+            "selected_threshold": null,
+            "standalone": {
+              "threshold": null,
+              "tp": 0,
+              "fp": 0
+            }
+          }
+        },
+        "tp": 227403,
+        "fp": 4395,
+        "tn": 519949,
+        "fn": 70494,
+        "recall": 0.7633611617438242,
+        "precision": 0.9810395257940103,
+        "fp_per_100M": 838190.1957493554
+      }
+    },
+    {
+      "level": 10000,
+      "hostile": {
+        "target_per_million": 100.0,
+        "below_resolution": false,
+        "cp_floor_per_million": 5.713279289585204,
+        "extrapolated_routes": [
+          "filetypes/kotlin",
+          "filetypes/python-bytecode",
+          "filetypes/shell",
+          "filetypes/csharp",
+          "filetypes/markdown",
+          "filetypes/tar.gz",
+          "filetypes/perl",
+          "filetypes/jpeg",
+          "filetypes/ruby",
+          "filetypes/makefile",
+          "filetypes/lua",
+          "filetypes/vbs",
+          "filetypes/deb",
+          "filetypes/jar",
+          "filetypes/groovy",
+          "filetypes/clojure"
+        ],
+        "thresholds": {
+          "general": 0.9910471439361572,
+          "filegroups/scripts": 0.9885204434394836,
+          "filegroups/native": 0.9982929825782776,
+          "filegroups/portable": 0.9999988079071045,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9262991547584534,
+          "filegroups/config": 0.9472449421882629,
+          "filegroups/media": 0.7946338057518005,
+          "filetypes/pe": 0.9992995262145996,
+          "filetypes/java_class": 1.0,
+          "filetypes/javascript": 0.9477983713150024,
+          "filetypes/c": 0.9595204591751099,
+          "filetypes/elf": 0.9924458861351013,
+          "filetypes/pdf": 0.37758001685142517,
+          "filetypes/python": 0.9960784316062927,
+          "filetypes/xml": 0.014904975891113281,
+          "filetypes/batch": 0.9927771091461182,
+          "filetypes/png": 0.07854849100112915,
+          "filetypes/php": 0.9919825196266174,
+          "filetypes/go": 0.27328523993492126,
+          "filetypes/zip": 0.9939855933189392,
+          "filetypes/rust": 0.5024287700653076,
+          "filetypes/kotlin": 0.46581546052916983,
+          "filetypes/python-bytecode": 0.3846517916690619,
+          "filetypes/text": 0.22389566898345947,
+          "filetypes/shell": 0.971748422201114,
+          "filetypes/csharp": 0.9798420015707061,
+          "filetypes/markdown": 0.35725342039191565,
+          "filetypes/xls": 0.7933555245399475,
+          "filetypes/xlsx": 0.8707722425460815,
+          "filetypes/tar.gz": 0.9880290945529907,
+          "filetypes/java": 0.9976025223731995,
+          "filetypes/package.json": 0.9983539581298828,
+          "filetypes/perl": 0.8231328668017869,
+          "filetypes/json": 0.03829383850097656,
+          "filetypes/jpeg": 0.9530974385845743,
+          "filetypes/html": 0.8294766545295715,
+          "filetypes/ruby": 0.9975264982737885,
+          "filetypes/makefile": 0.015765331628150428,
+          "filetypes/lua": 0.04103802940687034,
+          "filetypes/macho": 0.947270393371582,
+          "filetypes/plist": 0.8615944981575012,
+          "filetypes/vbs": 0.9939330616103281,
+          "filetypes/pkg-info": 0.06263196468353271,
+          "filetypes/ole": 0.32986289262771606,
+          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/deb": 0.14449363946914467,
+          "filetypes/jar": 0.3184348960276206,
+          "filetypes/groovy": 0.011911412770065235,
+          "filetypes/rtf": 0.05923277139663696,
+          "filetypes/lnk": 0.5052585005760193,
+          "filetypes/docx": 0.2326485514640808,
+          "filetypes/clojure": 0.9492858464494078,
+          "filetypes/tar": 0.06313180923461914,
+          "filetypes/dockerfile": 0.1385757327079773,
+          "filetypes/package-lock.json": 0.2938859462738037,
+          "filetypes/chrome-manifest": 0.8901082277297974
+        },
+        "diagnostics": {
+          "general": {
+            "kind": "general",
+            "rows": 822241,
+            "selected": true,
+            "selected_threshold": 0.9910471439361572,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9910471439361572,
+              "tp": 160457,
+              "fp": 53
+            }
+          },
+          "filegroups/scripts": {
+            "kind": "filegroup",
+            "rows": 162728,
+            "selected": true,
+            "selected_threshold": 0.9885204434394836,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9885204434394836,
+              "tp": 33237,
+              "fp": 13
+            }
+          },
+          "filegroups/native": {
+            "kind": "filegroup",
+            "rows": 221139,
+            "selected": true,
+            "selected_threshold": 0.9982929825782776,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9982929825782776,
+              "tp": 120763,
+              "fp": 5
+            }
+          },
+          "filegroups/portable": {
+            "kind": "filegroup",
+            "rows": 83985,
+            "selected": true,
+            "selected_threshold": 0.9999988079071045,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9999988079071045,
+              "tp": 11,
+              "fp": 18
+            }
+          },
+          "filegroups/documents": {
+            "kind": "filegroup",
+            "rows": 48133,
+            "selected": true,
+            "selected_threshold": 0.7054287195205688,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7054287195205688,
+              "tp": 15671,
+              "fp": 1
+            }
+          },
+          "filegroups/source": {
+            "kind": "filegroup",
+            "rows": 133666,
+            "selected": true,
+            "selected_threshold": 0.9262991547584534,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9262991547584534,
+              "tp": 1797,
+              "fp": 13
+            }
+          },
+          "filegroups/config": {
+            "kind": "filegroup",
+            "rows": 32773,
+            "selected": true,
+            "selected_threshold": 0.9472449421882629,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9472449421882629,
+              "tp": 2328,
+              "fp": 3
+            }
+          },
+          "filegroups/media": {
+            "kind": "filegroup",
+            "rows": 22901,
+            "selected": true,
+            "selected_threshold": 0.7946338057518005,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.7946338057518005,
+              "tp": 76,
+              "fp": 3
+            }
+          },
+          "filetypes/pe": {
+            "kind": "filetype",
+            "rows": 178631,
+            "selected": true,
+            "selected_threshold": 0.9992995262145996,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9992995262145996,
+              "tp": 76066,
+              "fp": 2
+            }
+          },
+          "filetypes/java_class": {
+            "kind": "filetype",
+            "rows": 83985,
+            "selected": true,
+            "selected_threshold": 1.0,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 1.0,
+              "tp": 0,
+              "fp": 11
+            }
+          },
+          "filetypes/javascript": {
+            "kind": "filetype",
+            "rows": 82322,
+            "selected": true,
+            "selected_threshold": 0.9477983713150024,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9477983713150024,
+              "tp": 9314,
+              "fp": 7
+            }
+          },
+          "filetypes/c": {
+            "kind": "filetype",
+            "rows": 76105,
+            "selected": true,
+            "selected_threshold": 0.9595204591751099,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9595204591751099,
+              "tp": 251,
+              "fp": 8
+            }
+          },
+          "filetypes/elf": {
+            "kind": "filetype",
+            "rows": 40760,
+            "selected": true,
+            "selected_threshold": 0.9924458861351013,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9924458861351013,
+              "tp": 18959,
+              "fp": 3
+            }
+          },
+          "filetypes/pdf": {
+            "kind": "filetype",
+            "rows": 24909,
+            "selected": true,
+            "selected_threshold": 0.37758001685142517,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.37758001685142517,
+              "tp": 19260,
+              "fp": 1
+            }
+          },
+          "filetypes/python": {
+            "kind": "filetype",
+            "rows": 23113,
+            "selected": true,
+            "selected_threshold": 0.9960784316062927,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9960784316062927,
+              "tp": 1544,
+              "fp": 3
+            }
+          },
+          "filetypes/xml": {
+            "kind": "filetype",
+            "rows": 22622,
+            "selected": true,
+            "selected_threshold": 0.014904975891113281,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.014904975891113281,
+              "tp": 356,
+              "fp": 22266
+            }
+          },
+          "filetypes/batch": {
+            "kind": "filetype",
+            "rows": 22730,
+            "selected": true,
+            "selected_threshold": 0.9927771091461182,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9927771091461182,
+              "tp": 21560,
+              "fp": 1
+            }
+          },
+          "filetypes/png": {
+            "kind": "filetype",
+            "rows": 19427,
+            "selected": true,
+            "selected_threshold": 0.07854849100112915,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.07854849100112915,
+              "tp": 60,
+              "fp": 2
+            }
+          },
+          "filetypes/php": {
+            "kind": "filetype",
+            "rows": 15662,
+            "selected": true,
+            "selected_threshold": 0.9919825196266174,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.9919825196266174,
+              "tp": 315,
+              "fp": 2
+            }
+          },
+          "filetypes/go": {
+            "kind": "filetype",
+            "rows": 14863,
+            "selected": true,
+            "selected_threshold": 0.27328523993492126,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.27328523993492126,
+              "tp": 108,
+              "fp": 2
+            }
+          },
+          "filetypes/zip": {
+            "kind": "filetype",
+            "rows": 13422,
+            "selected": true,
+            "selected_threshold": 0.9939855933189392,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9939855933189392,
+              "tp": 4618,
+              "fp": 1
+            }
+          },
+          "filetypes/rust": {
+            "kind": "filetype",
+            "rows": 10596,
+            "selected": true,
+            "selected_threshold": 0.5024287700653076,
+            "method": "empirical",
+            "standalone": {
+              "threshold": 0.5024287700653076,
+              "tp": 4,
+              "fp": 2
+            }
+          },
+          "filetypes/kotlin": {
+            "kind": "filetype",
+            "rows": 10402,
+            "selected": true,
+            "selected_threshold": 0.46581546052916983,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.46581546052916983,
+              "tp": 1882,
+              "fp": 1
+            }
+          },
+          "filetypes/python-bytecode": {
+            "kind": "filetype",
+            "rows": 9560,
+            "selected": true,
+            "selected_threshold": 0.3846517916690619,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.3846517916690619,
+              "tp": 331,
+              "fp": 2
+            }
+          },
+          "filetypes/text": {
+            "kind": "filetype",
+            "rows": 8990,
+            "selected": true,
+            "selected_threshold": 0.22389566898345947,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.22389566898345947,
+              "tp": 17,
+              "fp": 4
+            }
+          },
+          "filetypes/shell": {
+            "kind": "filetype",
+            "rows": 8474,
+            "selected": true,
+            "selected_threshold": 0.971748422201114,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.971748422201114,
+              "tp": 1346,
+              "fp": 1
+            }
+          },
+          "filetypes/csharp": {
+            "kind": "filetype",
+            "rows": 8217,
+            "selected": true,
+            "selected_threshold": 0.9798420015707061,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9798420015707061,
+              "tp": 52,
+              "fp": 3
+            }
+          },
+          "filetypes/markdown": {
+            "kind": "filetype",
+            "rows": 7569,
+            "selected": true,
+            "selected_threshold": 0.35725342039191565,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.35725342039191565,
+              "tp": 3,
+              "fp": 1
+            }
+          },
+          "filetypes/xls": {
+            "kind": "filetype",
+            "rows": 6763,
+            "selected": true,
+            "selected_threshold": 0.7933555245399475,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.7933555245399475,
+              "tp": 3949,
+              "fp": 1
+            }
+          },
+          "filetypes/xlsx": {
+            "kind": "filetype",
+            "rows": 6662,
+            "selected": true,
+            "selected_threshold": 0.8707722425460815,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8707722425460815,
+              "tp": 3042,
+              "fp": 1
+            }
+          },
+          "filetypes/tar.gz": {
+            "kind": "filetype",
+            "rows": 5772,
+            "selected": true,
+            "selected_threshold": 0.9880290945529907,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9880290945529907,
+              "tp": 3184,
+              "fp": 1
+            }
+          },
+          "filetypes/java": {
+            "kind": "filetype",
+            "rows": 4475,
+            "selected": true,
+            "selected_threshold": 0.9976025223731995,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9976025223731995,
+              "tp": 1,
+              "fp": 1
+            }
+          },
+          "filetypes/package.json": {
+            "kind": "filetype",
+            "rows": 4380,
+            "selected": true,
+            "selected_threshold": 0.9983539581298828,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.9983539581298828,
+              "tp": 2016,
+              "fp": 1
+            }
+          },
+          "filetypes/perl": {
+            "kind": "filetype",
+            "rows": 4150,
+            "selected": true,
+            "selected_threshold": 0.8231328668017869,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.8231328668017869,
+              "tp": 29,
+              "fp": 0
+            }
+          },
+          "filetypes/json": {
+            "kind": "filetype",
+            "rows": 4132,
+            "selected": true,
+            "selected_threshold": 0.03829383850097656,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.03829383850097656,
+              "tp": 89,
+              "fp": 4043
+            }
+          },
+          "filetypes/jpeg": {
+            "kind": "filetype",
+            "rows": 3474,
+            "selected": true,
+            "selected_threshold": 0.9530974385845743,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9530974385845743,
+              "tp": 18,
+              "fp": 1
+            }
+          },
+          "filetypes/html": {
+            "kind": "filetype",
+            "rows": 3156,
+            "selected": true,
+            "selected_threshold": 0.8294766545295715,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8294766545295715,
+              "tp": 25,
+              "fp": 1
+            }
+          },
+          "filetypes/ruby": {
+            "kind": "filetype",
+            "rows": 3144,
+            "selected": true,
+            "selected_threshold": 0.9975264982737885,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9975264982737885,
+              "tp": 9,
+              "fp": 2
+            }
+          },
+          "filetypes/makefile": {
+            "kind": "filetype",
+            "rows": 2979,
+            "selected": true,
+            "selected_threshold": 0.015765331628150428,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.015765331628150428,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/lua": {
+            "kind": "filetype",
+            "rows": 2245,
+            "selected": true,
+            "selected_threshold": 0.04103802940687034,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.04103802940687034,
+              "tp": 6,
+              "fp": 1
+            }
+          },
+          "filetypes/macho": {
+            "kind": "filetype",
+            "rows": 1748,
+            "selected": true,
+            "selected_threshold": 0.947270393371582,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.947270393371582,
+              "tp": 257,
+              "fp": 1
+            }
+          },
+          "filetypes/plist": {
+            "kind": "filetype",
+            "rows": 1639,
+            "selected": true,
+            "selected_threshold": 0.8615944981575012,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8615944981575012,
+              "tp": 4,
+              "fp": 1
+            }
+          },
+          "filetypes/vbs": {
+            "kind": "filetype",
+            "rows": 1571,
+            "selected": true,
+            "selected_threshold": 0.9939330616103281,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9939330616103281,
+              "tp": 787,
+              "fp": 1
+            }
+          },
+          "filetypes/pkg-info": {
+            "kind": "filetype",
+            "rows": 1572,
+            "selected": true,
+            "selected_threshold": 0.06263196468353271,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.06263196468353271,
+              "tp": 1388,
+              "fp": 1
+            }
+          },
+          "filetypes/ole": {
+            "kind": "filetype",
+            "rows": 1519,
+            "selected": true,
+            "selected_threshold": 0.32986289262771606,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.32986289262771606,
+              "tp": 750,
+              "fp": 1
+            }
+          },
+          "filetypes/powershell": {
+            "kind": "filetype",
+            "rows": 888,
+            "selected": true,
+            "selected_threshold": 0.8938430547714233,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8938430547714233,
+              "tp": 398,
+              "fp": 1
+            }
+          },
+          "filetypes/deb": {
+            "kind": "filetype",
+            "rows": 856,
+            "selected": true,
+            "selected_threshold": 0.14449363946914467,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.14449363946914467,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/jar": {
+            "kind": "filetype",
+            "rows": 842,
+            "selected": true,
+            "selected_threshold": 0.3184348960276206,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.3184348960276206,
+              "tp": 319,
+              "fp": 0
+            }
+          },
+          "filetypes/groovy": {
+            "kind": "filetype",
+            "rows": 770,
+            "selected": true,
+            "selected_threshold": 0.011911412770065235,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.011911412770065235,
+              "tp": 3,
+              "fp": 0
+            }
+          },
+          "filetypes/rtf": {
+            "kind": "filetype",
+            "rows": 745,
+            "selected": true,
+            "selected_threshold": 0.05923277139663696,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.05923277139663696,
+              "tp": 665,
+              "fp": 1
+            }
+          },
+          "filetypes/lnk": {
+            "kind": "filetype",
+            "rows": 653,
+            "selected": true,
+            "selected_threshold": 0.5052585005760193,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.5052585005760193,
+              "tp": 438,
+              "fp": 1
+            }
+          },
+          "filetypes/docx": {
+            "kind": "filetype",
+            "rows": 611,
+            "selected": true,
+            "selected_threshold": 0.2326485514640808,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.2326485514640808,
+              "tp": 483,
+              "fp": 1
+            }
+          },
+          "filetypes/clojure": {
+            "kind": "filetype",
+            "rows": 387,
+            "selected": true,
+            "selected_threshold": 0.9492858464494078,
+            "method": "extrapolated",
+            "standalone": {
+              "threshold": 0.9492858464494078,
+              "tp": 14,
+              "fp": 0
+            }
+          },
+          "filetypes/tar": {
+            "kind": "filetype",
+            "rows": 244,
+            "selected": true,
+            "selected_threshold": 0.06313180923461914,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.06313180923461914,
+              "tp": 182,
+              "fp": 1
+            }
+          },
+          "filetypes/dockerfile": {
+            "kind": "filetype",
+            "rows": 196,
+            "selected": true,
+            "selected_threshold": 0.1385757327079773,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.1385757327079773,
+              "tp": 6,
+              "fp": 190
+            }
+          },
+          "filetypes/package-lock.json": {
+            "kind": "filetype",
+            "rows": 98,
+            "selected": true,
+            "selected_threshold": 0.2938859462738037,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.2938859462738037,
+              "tp": 4,
+              "fp": 14
+            }
+          },
+          "filetypes/pptx": {
+            "kind": "filetype",
+            "rows": 93,
+            "selected": false,
+            "reason": "too few benigns to derive a quantile",
+            "selected_threshold": null,
+            "standalone": {
+              "threshold": null,
+              "tp": 0,
+              "fp": 0
+            }
+          },
+          "filetypes/chrome-manifest": {
+            "kind": "filetype",
+            "rows": 58,
+            "selected": true,
+            "selected_threshold": 0.8901082277297974,
+            "method": "empirical_floor",
+            "standalone": {
+              "threshold": 0.8901082277297974,
+              "tp": 5,
+              "fp": 1
+            }
+          },
+          "filetypes/crx": {
+            "kind": "filetype",
+            "rows": 63,
+            "selected": false,
+            "reason": "too few benigns to derive a quantile",
+            "selected_threshold": null,
+            "standalone": {
+              "threshold": null,
+              "tp": 0,
+              "fp": 0
+            }
+          }
+        },
+        "tp": 230361,
+        "fp": 26679,
+        "tn": 497665,
+        "fn": 67536,
+        "recall": 0.7732907682856827,
+        "precision": 0.8962068160597573,
+        "fp_per_100M": 5088071.952763834
       }
     }
   ]

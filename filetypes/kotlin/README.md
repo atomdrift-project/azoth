@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.973192 | 0.974576 | 0.946777 | 48.03% | 0.0357 |
+| 0.973192 | 0.974576 | 0.946777 | — | 0.0357 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.972668 | 0.972481 | 0.943947 | 47.95% | 0.1907 | — |
+| 0.972668 | 0.972481 | 0.943947 | — | 0.1907 | — |
 
 ## Recall by FP level (per 100M benigns)
 

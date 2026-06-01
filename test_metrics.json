@@ -1,6 +1,6 @@
 {
   "schema": "azoth.evaluation.v1",
-  "timestamp": "2026-06-01T16:21:17.798831+00:00",
+  "timestamp": "2026-06-01T19:40:07.070906+00:00",
   "applied_from": "out/models/azoth/config.json",
   "partition": "test",
   "rows": 821686,
@@ -3329,6 +3329,1109 @@
         "fn": 111002,
         "recall": 0.6257341883972946,
         "precision": 0.9775399266781847,
+        "fp_per_100M": 812035.8027042468,
+        "below_resolution": true,
+        "cp_floor_per_million": 5.713279289585204
+      }
+    },
+    {
+      "level": 4,
+      "hostile": {
+        "target_per_million": 0.04,
+        "budget": 1,
+        "thresholds": {
+          "general": 0.9985973136250718,
+          "filegroups/scripts": 0.9976166408192311,
+          "filegroups/native": 0.9993506874450853,
+          "filegroups/portable": 0.9999988079063741,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
+          "filegroups/config": 0.999061644077301,
+          "filegroups/media": 0.8671467900276184,
+          "filetypes/pe": 0.9995451444821609,
+          "filetypes/java_class": 0.9999999999999601,
+          "filetypes/javascript": 0.9733644964198365,
+          "filetypes/c": 0.9955354928970337,
+          "filetypes/elf": 0.9939401066499493,
+          "filetypes/pdf": 0.37758001685142517,
+          "filetypes/python": 0.9979529353495152,
+          "filetypes/xml": 0.2533334493637085,
+          "filetypes/batch": 0.9927771091461182,
+          "filetypes/png": 0.13528257608413696,
+          "filetypes/php": 0.9953118562698364,
+          "filetypes/go": 0.7825130224227905,
+          "filetypes/zip": 0.9939855933189392,
+          "filetypes/rust": 0.7905694246292114,
+          "filetypes/kotlin": 0.6866006851196289,
+          "filetypes/python-bytecode": 0.8837788701057434,
+          "filetypes/text": 0.22389566898345947,
+          "filetypes/shell": 0.9940274654061453,
+          "filetypes/csharp": 0.9995144579041475,
+          "filetypes/markdown": 0.43448418378829956,
+          "filetypes/xls": 0.7933555245399475,
+          "filetypes/xlsx": 0.8707722425460815,
+          "filetypes/tar.gz": 0.9888375536549525,
+          "filetypes/java": 0.9976025223731995,
+          "filetypes/package.json": 0.9983539581298828,
+          "filetypes/perl": 0.796964704990387,
+          "filetypes/json": 0.03829383850097656,
+          "filetypes/jpeg": 0.9975257056591932,
+          "filetypes/html": 0.8294766545295715,
+          "filetypes/ruby": 0.9982670984229205,
+          "filetypes/makefile": 0.050270020961761475,
+          "filetypes/lua": 0.07938539981842041,
+          "filetypes/macho": 0.947270393371582,
+          "filetypes/plist": 0.8615944981575012,
+          "filetypes/vbs": 0.9940547199638878,
+          "filetypes/pkg-info": 0.06263196468353271,
+          "filetypes/ole": 0.32986289262771606,
+          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/deb": 0.14449363946914673,
+          "filetypes/jar": 0.04028582572937012,
+          "filetypes/groovy": 0.018980434246672603,
+          "filetypes/rtf": 0.05923277139663696,
+          "filetypes/lnk": 0.5052585005760193,
+          "filetypes/docx": 0.2326485514640808,
+          "filetypes/clojure": 0.8211286664009094,
+          "filetypes/tar": 0.06313180923461914,
+          "filetypes/dockerfile": 0.1385757327079773,
+          "filetypes/package-lock.json": 0.2938859462738037,
+          "filetypes/chrome-manifest": 0.8901082277297974
+        },
+        "diagnostics": {
+          "general": {
+            "kind": "general",
+            "rows": 821686,
+            "selected": true,
+            "selected_threshold": 0.9985973136250718,
+            "standalone": {
+              "threshold": 0.9985973136250718,
+              "tp": 72829,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9985973136250718,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 72829,
+              "fp": 1
+            }
+          },
+          "filegroups/scripts": {
+            "kind": "filegroup",
+            "rows": 162969,
+            "selected": true,
+            "selected_threshold": 0.9976166408192311,
+            "standalone": {
+              "threshold": 0.9976166408192311,
+              "tp": 28283,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9976166408192311,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 28283,
+              "fp": 1
+            }
+          },
+          "filegroups/native": {
+            "kind": "filegroup",
+            "rows": 220833,
+            "selected": true,
+            "selected_threshold": 0.9993506874450853,
+            "standalone": {
+              "threshold": 0.9993506874450853,
+              "tp": 78303,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9993506874450853,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 78303,
+              "fp": 0
+            }
+          },
+          "filegroups/portable": {
+            "kind": "filegroup",
+            "rows": 84031,
+            "selected": true,
+            "selected_threshold": 0.9999988079063741,
+            "standalone": {
+              "threshold": 0.9999988079063741,
+              "tp": 10,
+              "fp": 13
+            },
+            "best_marginal": {
+              "threshold": 0.9999988079063741,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 10,
+              "fp": 13
+            }
+          },
+          "filegroups/documents": {
+            "kind": "filegroup",
+            "rows": 48151,
+            "selected": true,
+            "selected_threshold": 0.7054287195205688,
+            "standalone": {
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7054287195205688,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 15298,
+              "fp": 0
+            }
+          },
+          "filegroups/source": {
+            "kind": "filegroup",
+            "rows": 133691,
+            "selected": true,
+            "selected_threshold": 0.9860523343086243,
+            "standalone": {
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9860523343086243,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1362,
+              "fp": 0
+            }
+          },
+          "filegroups/config": {
+            "kind": "filegroup",
+            "rows": 32708,
+            "selected": true,
+            "selected_threshold": 0.999061644077301,
+            "standalone": {
+              "threshold": 0.999061644077301,
+              "tp": 2133,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.999061644077301,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2133,
+              "fp": 2
+            }
+          },
+          "filegroups/media": {
+            "kind": "filegroup",
+            "rows": 23183,
+            "selected": true,
+            "selected_threshold": 0.8671467900276184,
+            "standalone": {
+              "threshold": 0.8671467900276184,
+              "tp": 76,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.8671467900276184,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 76,
+              "fp": 3
+            }
+          },
+          "filetypes/pe": {
+            "kind": "filetype",
+            "rows": 178205,
+            "selected": true,
+            "selected_threshold": 0.9995451444821609,
+            "standalone": {
+              "threshold": 0.9995451444821609,
+              "tp": 59600,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9995451444821609,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 59600,
+              "fp": 0
+            }
+          },
+          "filetypes/java_class": {
+            "kind": "filetype",
+            "rows": 84031,
+            "selected": true,
+            "selected_threshold": 0.9999999999999601,
+            "standalone": {
+              "threshold": 0.9999999999999601,
+              "tp": 0,
+              "fp": 14
+            },
+            "best_marginal": {
+              "threshold": 0.9999999999999601,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 14
+            }
+          },
+          "filetypes/javascript": {
+            "kind": "filetype",
+            "rows": 83198,
+            "selected": true,
+            "selected_threshold": 0.9733644964198365,
+            "standalone": {
+              "threshold": 0.9733644964198365,
+              "tp": 8902,
+              "fp": 7
+            },
+            "best_marginal": {
+              "threshold": 0.9733644964198365,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 8902,
+              "fp": 7
+            }
+          },
+          "filetypes/c": {
+            "kind": "filetype",
+            "rows": 76006,
+            "selected": true,
+            "selected_threshold": 0.9955354928970337,
+            "standalone": {
+              "threshold": 0.9955354928970337,
+              "tp": 155,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9955354928970337,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 155,
+              "fp": 0
+            }
+          },
+          "filetypes/elf": {
+            "kind": "filetype",
+            "rows": 40839,
+            "selected": true,
+            "selected_threshold": 0.9939401066499493,
+            "standalone": {
+              "threshold": 0.9939401066499493,
+              "tp": 18567,
+              "fp": 5
+            },
+            "best_marginal": {
+              "threshold": 0.9939401066499493,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 18567,
+              "fp": 5
+            }
+          },
+          "filetypes/pdf": {
+            "kind": "filetype",
+            "rows": 25187,
+            "selected": true,
+            "selected_threshold": 0.37758001685142517,
+            "standalone": {
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.37758001685142517,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 19493,
+              "fp": 4
+            }
+          },
+          "filetypes/python": {
+            "kind": "filetype",
+            "rows": 22854,
+            "selected": true,
+            "selected_threshold": 0.9979529353495152,
+            "standalone": {
+              "threshold": 0.9979529353495152,
+              "tp": 1477,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9979529353495152,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1477,
+              "fp": 1
+            }
+          },
+          "filetypes/xml": {
+            "kind": "filetype",
+            "rows": 22678,
+            "selected": true,
+            "selected_threshold": 0.2533334493637085,
+            "standalone": {
+              "threshold": 0.2533334493637085,
+              "tp": 8,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.2533334493637085,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 8,
+              "fp": 2
+            }
+          },
+          "filetypes/batch": {
+            "kind": "filetype",
+            "rows": 22531,
+            "selected": true,
+            "selected_threshold": 0.9927771091461182,
+            "standalone": {
+              "threshold": 0.9927771091461182,
+              "tp": 21404,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9927771091461182,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 21404,
+              "fp": 0
+            }
+          },
+          "filetypes/png": {
+            "kind": "filetype",
+            "rows": 19671,
+            "selected": true,
+            "selected_threshold": 0.13528257608413696,
+            "standalone": {
+              "threshold": 0.13528257608413696,
+              "tp": 58,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.13528257608413696,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 58,
+              "fp": 2
+            }
+          },
+          "filetypes/php": {
+            "kind": "filetype",
+            "rows": 15609,
+            "selected": true,
+            "selected_threshold": 0.9953118562698364,
+            "standalone": {
+              "threshold": 0.9953118562698364,
+              "tp": 330,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9953118562698364,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 330,
+              "fp": 0
+            }
+          },
+          "filetypes/go": {
+            "kind": "filetype",
+            "rows": 14896,
+            "selected": true,
+            "selected_threshold": 0.7825130224227905,
+            "standalone": {
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7825130224227905,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 58,
+              "fp": 0
+            }
+          },
+          "filetypes/zip": {
+            "kind": "filetype",
+            "rows": 13406,
+            "selected": true,
+            "selected_threshold": 0.9939855933189392,
+            "standalone": {
+              "threshold": 0.9939855933189392,
+              "tp": 4630,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9939855933189392,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 4630,
+              "fp": 1
+            }
+          },
+          "filetypes/rust": {
+            "kind": "filetype",
+            "rows": 10512,
+            "selected": true,
+            "selected_threshold": 0.7905694246292114,
+            "standalone": {
+              "threshold": 0.7905694246292114,
+              "tp": 2,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7905694246292114,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 0
+            }
+          },
+          "filetypes/kotlin": {
+            "kind": "filetype",
+            "rows": 10337,
+            "selected": true,
+            "selected_threshold": 0.6866006851196289,
+            "standalone": {
+              "threshold": 0.6866006851196289,
+              "tp": 1947,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.6866006851196289,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1947,
+              "fp": 0
+            }
+          },
+          "filetypes/python-bytecode": {
+            "kind": "filetype",
+            "rows": 9576,
+            "selected": true,
+            "selected_threshold": 0.8837788701057434,
+            "standalone": {
+              "threshold": 0.8837788701057434,
+              "tp": 331,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.8837788701057434,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 331,
+              "fp": 0
+            }
+          },
+          "filetypes/text": {
+            "kind": "filetype",
+            "rows": 8942,
+            "selected": true,
+            "selected_threshold": 0.22389566898345947,
+            "standalone": {
+              "threshold": 0.22389566898345947,
+              "tp": 24,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.22389566898345947,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 24,
+              "fp": 3
+            }
+          },
+          "filetypes/shell": {
+            "kind": "filetype",
+            "rows": 8370,
+            "selected": true,
+            "selected_threshold": 0.9940274654061453,
+            "standalone": {
+              "threshold": 0.9940274654061453,
+              "tp": 1051,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9940274654061453,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1051,
+              "fp": 0
+            }
+          },
+          "filetypes/csharp": {
+            "kind": "filetype",
+            "rows": 8353,
+            "selected": true,
+            "selected_threshold": 0.9995144579041475,
+            "standalone": {
+              "threshold": 0.9995144579041475,
+              "tp": 30,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9995144579041475,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 30,
+              "fp": 0
+            }
+          },
+          "filetypes/markdown": {
+            "kind": "filetype",
+            "rows": 7698,
+            "selected": true,
+            "selected_threshold": 0.43448418378829956,
+            "standalone": {
+              "threshold": 0.43448418378829956,
+              "tp": 0,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.43448418378829956,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 3
+            }
+          },
+          "filetypes/xls": {
+            "kind": "filetype",
+            "rows": 6727,
+            "selected": true,
+            "selected_threshold": 0.7933555245399475,
+            "standalone": {
+              "threshold": 0.7933555245399475,
+              "tp": 3810,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7933555245399475,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3810,
+              "fp": 0
+            }
+          },
+          "filetypes/xlsx": {
+            "kind": "filetype",
+            "rows": 6695,
+            "selected": true,
+            "selected_threshold": 0.8707722425460815,
+            "standalone": {
+              "threshold": 0.8707722425460815,
+              "tp": 3127,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.8707722425460815,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3127,
+              "fp": 2
+            }
+          },
+          "filetypes/tar.gz": {
+            "kind": "filetype",
+            "rows": 5599,
+            "selected": true,
+            "selected_threshold": 0.9888375536549525,
+            "standalone": {
+              "threshold": 0.9888375536549525,
+              "tp": 3008,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9888375536549525,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3008,
+              "fp": 1
+            }
+          },
+          "filetypes/java": {
+            "kind": "filetype",
+            "rows": 4469,
+            "selected": true,
+            "selected_threshold": 0.9976025223731995,
+            "standalone": {
+              "threshold": 0.9976025223731995,
+              "tp": 3,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9976025223731995,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3,
+              "fp": 0
+            }
+          },
+          "filetypes/package.json": {
+            "kind": "filetype",
+            "rows": 4359,
+            "selected": true,
+            "selected_threshold": 0.9983539581298828,
+            "standalone": {
+              "threshold": 0.9983539581298828,
+              "tp": 1931,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9983539581298828,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1931,
+              "fp": 0
+            }
+          },
+          "filetypes/perl": {
+            "kind": "filetype",
+            "rows": 4226,
+            "selected": true,
+            "selected_threshold": 0.796964704990387,
+            "standalone": {
+              "threshold": 0.796964704990387,
+              "tp": 31,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.796964704990387,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 31,
+              "fp": 3
+            }
+          },
+          "filetypes/json": {
+            "kind": "filetype",
+            "rows": 4024,
+            "selected": true,
+            "selected_threshold": 0.03829383850097656,
+            "standalone": {
+              "threshold": 0.03829383850097656,
+              "tp": 93,
+              "fp": 3931
+            },
+            "best_marginal": {
+              "threshold": 0.03829383850097656,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 93,
+              "fp": 3931
+            }
+          },
+          "filetypes/jpeg": {
+            "kind": "filetype",
+            "rows": 3512,
+            "selected": true,
+            "selected_threshold": 0.9975257056591932,
+            "standalone": {
+              "threshold": 0.9975257056591932,
+              "tp": 1,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9975257056591932,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1,
+              "fp": 0
+            }
+          },
+          "filetypes/html": {
+            "kind": "filetype",
+            "rows": 3251,
+            "selected": true,
+            "selected_threshold": 0.8294766545295715,
+            "standalone": {
+              "threshold": 0.8294766545295715,
+              "tp": 17,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.8294766545295715,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 17,
+              "fp": 0
+            }
+          },
+          "filetypes/ruby": {
+            "kind": "filetype",
+            "rows": 2993,
+            "selected": true,
+            "selected_threshold": 0.9982670984229205,
+            "standalone": {
+              "threshold": 0.9982670984229205,
+              "tp": 2,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9982670984229205,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 0
+            }
+          },
+          "filetypes/makefile": {
+            "kind": "filetype",
+            "rows": 3012,
+            "selected": true,
+            "selected_threshold": 0.050270020961761475,
+            "standalone": {
+              "threshold": 0.050270020961761475,
+              "tp": 0,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.050270020961761475,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 1
+            }
+          },
+          "filetypes/lua": {
+            "kind": "filetype",
+            "rows": 2309,
+            "selected": true,
+            "selected_threshold": 0.07938539981842041,
+            "standalone": {
+              "threshold": 0.07938539981842041,
+              "tp": 6,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.07938539981842041,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 6,
+              "fp": 0
+            }
+          },
+          "filetypes/macho": {
+            "kind": "filetype",
+            "rows": 1789,
+            "selected": true,
+            "selected_threshold": 0.947270393371582,
+            "standalone": {
+              "threshold": 0.947270393371582,
+              "tp": 254,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.947270393371582,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 254,
+              "fp": 0
+            }
+          },
+          "filetypes/plist": {
+            "kind": "filetype",
+            "rows": 1647,
+            "selected": true,
+            "selected_threshold": 0.8615944981575012,
+            "standalone": {
+              "threshold": 0.8615944981575012,
+              "tp": 2,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.8615944981575012,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/vbs": {
+            "kind": "filetype",
+            "rows": 1684,
+            "selected": true,
+            "selected_threshold": 0.9940547199638878,
+            "standalone": {
+              "threshold": 0.9940547199638878,
+              "tp": 873,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.9940547199638878,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 873,
+              "fp": 2
+            }
+          },
+          "filetypes/pkg-info": {
+            "kind": "filetype",
+            "rows": 1449,
+            "selected": true,
+            "selected_threshold": 0.06263196468353271,
+            "standalone": {
+              "threshold": 0.06263196468353271,
+              "tp": 1277,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.06263196468353271,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1277,
+              "fp": 4
+            }
+          },
+          "filetypes/ole": {
+            "kind": "filetype",
+            "rows": 1445,
+            "selected": true,
+            "selected_threshold": 0.32986289262771606,
+            "standalone": {
+              "threshold": 0.32986289262771606,
+              "tp": 668,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.32986289262771606,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 668,
+              "fp": 2
+            }
+          },
+          "filetypes/powershell": {
+            "kind": "filetype",
+            "rows": 879,
+            "selected": true,
+            "selected_threshold": 0.8938430547714233,
+            "standalone": {
+              "threshold": 0.8938430547714233,
+              "tp": 396,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.8938430547714233,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 396,
+              "fp": 2
+            }
+          },
+          "filetypes/deb": {
+            "kind": "filetype",
+            "rows": 867,
+            "selected": true,
+            "selected_threshold": 0.14449363946914673,
+            "standalone": {
+              "threshold": 0.14449363946914673,
+              "tp": 5,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.14449363946914673,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 5,
+              "fp": 1
+            }
+          },
+          "filetypes/jar": {
+            "kind": "filetype",
+            "rows": 811,
+            "selected": true,
+            "selected_threshold": 0.04028582572937012,
+            "standalone": {
+              "threshold": 0.04028582572937012,
+              "tp": 353,
+              "fp": 11
+            },
+            "best_marginal": {
+              "threshold": 0.04028582572937012,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 353,
+              "fp": 11
+            }
+          },
+          "filetypes/groovy": {
+            "kind": "filetype",
+            "rows": 806,
+            "selected": true,
+            "selected_threshold": 0.018980434246672603,
+            "standalone": {
+              "threshold": 0.018980434246672603,
+              "tp": 0,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.018980434246672603,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 0
+            }
+          },
+          "filetypes/rtf": {
+            "kind": "filetype",
+            "rows": 742,
+            "selected": true,
+            "selected_threshold": 0.05923277139663696,
+            "standalone": {
+              "threshold": 0.05923277139663696,
+              "tp": 682,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.05923277139663696,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 682,
+              "fp": 0
+            }
+          },
+          "filetypes/lnk": {
+            "kind": "filetype",
+            "rows": 631,
+            "selected": true,
+            "selected_threshold": 0.5052585005760193,
+            "standalone": {
+              "threshold": 0.5052585005760193,
+              "tp": 409,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.5052585005760193,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 409,
+              "fp": 0
+            }
+          },
+          "filetypes/docx": {
+            "kind": "filetype",
+            "rows": 559,
+            "selected": true,
+            "selected_threshold": 0.2326485514640808,
+            "standalone": {
+              "threshold": 0.2326485514640808,
+              "tp": 450,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.2326485514640808,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 450,
+              "fp": 4
+            }
+          },
+          "filetypes/clojure": {
+            "kind": "filetype",
+            "rows": 347,
+            "selected": true,
+            "selected_threshold": 0.8211286664009094,
+            "standalone": {
+              "threshold": 0.8211286664009094,
+              "tp": 4,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.8211286664009094,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 4,
+              "fp": 0
+            }
+          },
+          "filetypes/tar": {
+            "kind": "filetype",
+            "rows": 245,
+            "selected": true,
+            "selected_threshold": 0.06313180923461914,
+            "standalone": {
+              "threshold": 0.06313180923461914,
+              "tp": 178,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.06313180923461914,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 178,
+              "fp": 4
+            }
+          },
+          "filetypes/dockerfile": {
+            "kind": "filetype",
+            "rows": 220,
+            "selected": true,
+            "selected_threshold": 0.1385757327079773,
+            "standalone": {
+              "threshold": 0.1385757327079773,
+              "tp": 6,
+              "fp": 214
+            },
+            "best_marginal": {
+              "threshold": 0.1385757327079773,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 6,
+              "fp": 214
+            }
+          },
+          "filetypes/package-lock.json": {
+            "kind": "filetype",
+            "rows": 83,
+            "selected": true,
+            "selected_threshold": 0.2938859462738037,
+            "standalone": {
+              "threshold": 0.2938859462738037,
+              "tp": 5,
+              "fp": 19
+            },
+            "best_marginal": {
+              "threshold": 0.2938859462738037,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 5,
+              "fp": 19
+            }
+          },
+          "filetypes/chrome-manifest": {
+            "kind": "filetype",
+            "rows": 60,
+            "selected": true,
+            "selected_threshold": 0.8901082277297974,
+            "standalone": {
+              "threshold": 0.8901082277297974,
+              "tp": 2,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.8901082277297974,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 1
+            }
+          }
+        },
+        "tp": 185632,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 110954,
+        "recall": 0.6258960301565145,
+        "precision": 0.9775456039095084,
         "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
@@ -19875,6 +20978,4418 @@
         "recall": 0.674522735395467,
         "precision": 0.979135363185638,
         "fp_per_100M": 811845.3627880404,
+        "below_resolution": false,
+        "cp_floor_per_million": 5.713279289585204
+      }
+    },
+    {
+      "level": 2000,
+      "hostile": {
+        "target_per_million": 20.0,
+        "budget": 10,
+        "thresholds": {
+          "general": 0.9969088435173035,
+          "filegroups/scripts": 0.9962440729141235,
+          "filegroups/native": 0.9991975764596179,
+          "filegroups/portable": 0.9999988079071045,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9771745204925537,
+          "filegroups/config": 0.999061644077301,
+          "filegroups/media": 0.8671467900276184,
+          "filetypes/pe": 0.9993021622205431,
+          "filetypes/java_class": 1.0,
+          "filetypes/javascript": 0.9634711742401123,
+          "filetypes/c": 0.992307722568512,
+          "filetypes/elf": 0.9938682321589386,
+          "filetypes/pdf": 0.37758001685142517,
+          "filetypes/python": 0.9979023462338605,
+          "filetypes/xml": 0.2533334493637085,
+          "filetypes/batch": 0.9927771091461182,
+          "filetypes/png": 0.13528257608413696,
+          "filetypes/php": 0.9953118562698364,
+          "filetypes/go": 0.6399033212418067,
+          "filetypes/zip": 0.9939855933189392,
+          "filetypes/rust": 0.7905694246292114,
+          "filetypes/kotlin": 0.6866006851196289,
+          "filetypes/python-bytecode": 0.953896019145619,
+          "filetypes/text": 0.22389566898345947,
+          "filetypes/shell": 0.9875919514331296,
+          "filetypes/csharp": 0.9944814819344313,
+          "filetypes/markdown": 0.5342731187241507,
+          "filetypes/xls": 0.7933555245399475,
+          "filetypes/xlsx": 0.8707722425460815,
+          "filetypes/tar.gz": 0.9887292875544246,
+          "filetypes/java": 0.9976025223731995,
+          "filetypes/package.json": 0.9983539581298828,
+          "filetypes/perl": 0.941735263190408,
+          "filetypes/json": 0.03829383850097656,
+          "filetypes/jpeg": 0.980950454805389,
+          "filetypes/html": 0.8294766545295715,
+          "filetypes/ruby": 0.9981314172601654,
+          "filetypes/makefile": 0.06097889088463247,
+          "filetypes/lua": 0.10307073385089285,
+          "filetypes/macho": 0.947270393371582,
+          "filetypes/plist": 0.8615944981575012,
+          "filetypes/vbs": 0.9940357006109093,
+          "filetypes/pkg-info": 0.06263196468353271,
+          "filetypes/ole": 0.32986289262771606,
+          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/deb": 0.14449363946914673,
+          "filetypes/jar": 0.04028582572937012,
+          "filetypes/groovy": 0.013714640157694897,
+          "filetypes/rtf": 0.05923277139663696,
+          "filetypes/lnk": 0.5052585005760193,
+          "filetypes/docx": 0.2326485514640808,
+          "filetypes/clojure": 0.9875231792264351,
+          "filetypes/tar": 0.06313180923461914,
+          "filetypes/dockerfile": 0.1385757327079773,
+          "filetypes/package-lock.json": 0.2938859462738037,
+          "filetypes/chrome-manifest": 0.8901082277297974
+        },
+        "diagnostics": {
+          "general": {
+            "kind": "general",
+            "rows": 821686,
+            "selected": true,
+            "selected_threshold": 0.9969088435173035,
+            "standalone": {
+              "threshold": 0.9969088435173035,
+              "tp": 118345,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.9969088435173035,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 118345,
+              "fp": 4
+            }
+          },
+          "filegroups/scripts": {
+            "kind": "filegroup",
+            "rows": 162969,
+            "selected": true,
+            "selected_threshold": 0.9962440729141235,
+            "standalone": {
+              "threshold": 0.9962440729141235,
+              "tp": 29900,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.9962440729141235,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 29900,
+              "fp": 2
+            }
+          },
+          "filegroups/native": {
+            "kind": "filegroup",
+            "rows": 220833,
+            "selected": true,
+            "selected_threshold": 0.9991975764596179,
+            "standalone": {
+              "threshold": 0.9991975764596179,
+              "tp": 90525,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9991975764596179,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 90525,
+              "fp": 0
+            }
+          },
+          "filegroups/portable": {
+            "kind": "filegroup",
+            "rows": 84031,
+            "selected": true,
+            "selected_threshold": 0.9999988079071045,
+            "standalone": {
+              "threshold": 0.9999988079071045,
+              "tp": 10,
+              "fp": 13
+            },
+            "best_marginal": {
+              "threshold": 0.9999988079071045,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 10,
+              "fp": 13
+            }
+          },
+          "filegroups/documents": {
+            "kind": "filegroup",
+            "rows": 48151,
+            "selected": true,
+            "selected_threshold": 0.7054287195205688,
+            "standalone": {
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7054287195205688,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 15298,
+              "fp": 0
+            }
+          },
+          "filegroups/source": {
+            "kind": "filegroup",
+            "rows": 133691,
+            "selected": true,
+            "selected_threshold": 0.9771745204925537,
+            "standalone": {
+              "threshold": 0.9771745204925537,
+              "tp": 1586,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9771745204925537,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1586,
+              "fp": 0
+            }
+          },
+          "filegroups/config": {
+            "kind": "filegroup",
+            "rows": 32708,
+            "selected": true,
+            "selected_threshold": 0.999061644077301,
+            "standalone": {
+              "threshold": 0.999061644077301,
+              "tp": 2133,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.999061644077301,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2133,
+              "fp": 2
+            }
+          },
+          "filegroups/media": {
+            "kind": "filegroup",
+            "rows": 23183,
+            "selected": true,
+            "selected_threshold": 0.8671467900276184,
+            "standalone": {
+              "threshold": 0.8671467900276184,
+              "tp": 76,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.8671467900276184,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 76,
+              "fp": 3
+            }
+          },
+          "filetypes/pe": {
+            "kind": "filetype",
+            "rows": 178205,
+            "selected": true,
+            "selected_threshold": 0.9993021622205431,
+            "standalone": {
+              "threshold": 0.9993021622205431,
+              "tp": 75832,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9993021622205431,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 75832,
+              "fp": 1
+            }
+          },
+          "filetypes/java_class": {
+            "kind": "filetype",
+            "rows": 84031,
+            "selected": true,
+            "selected_threshold": 1.0,
+            "standalone": {
+              "threshold": 1.0,
+              "tp": 0,
+              "fp": 14
+            },
+            "best_marginal": {
+              "threshold": 1.0,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 14
+            }
+          },
+          "filetypes/javascript": {
+            "kind": "filetype",
+            "rows": 83198,
+            "selected": true,
+            "selected_threshold": 0.9634711742401123,
+            "standalone": {
+              "threshold": 0.9634711742401123,
+              "tp": 9194,
+              "fp": 14
+            },
+            "best_marginal": {
+              "threshold": 0.9634711742401123,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 9194,
+              "fp": 14
+            }
+          },
+          "filetypes/c": {
+            "kind": "filetype",
+            "rows": 76006,
+            "selected": true,
+            "selected_threshold": 0.992307722568512,
+            "standalone": {
+              "threshold": 0.992307722568512,
+              "tp": 189,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.992307722568512,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 189,
+              "fp": 0
+            }
+          },
+          "filetypes/elf": {
+            "kind": "filetype",
+            "rows": 40839,
+            "selected": true,
+            "selected_threshold": 0.9938682321589386,
+            "standalone": {
+              "threshold": 0.9938682321589386,
+              "tp": 18569,
+              "fp": 5
+            },
+            "best_marginal": {
+              "threshold": 0.9938682321589386,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 18569,
+              "fp": 5
+            }
+          },
+          "filetypes/pdf": {
+            "kind": "filetype",
+            "rows": 25187,
+            "selected": true,
+            "selected_threshold": 0.37758001685142517,
+            "standalone": {
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.37758001685142517,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 19493,
+              "fp": 4
+            }
+          },
+          "filetypes/python": {
+            "kind": "filetype",
+            "rows": 22854,
+            "selected": true,
+            "selected_threshold": 0.9979023462338605,
+            "standalone": {
+              "threshold": 0.9979023462338605,
+              "tp": 1478,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9979023462338605,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1478,
+              "fp": 1
+            }
+          },
+          "filetypes/xml": {
+            "kind": "filetype",
+            "rows": 22678,
+            "selected": true,
+            "selected_threshold": 0.2533334493637085,
+            "standalone": {
+              "threshold": 0.2533334493637085,
+              "tp": 8,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.2533334493637085,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 8,
+              "fp": 2
+            }
+          },
+          "filetypes/batch": {
+            "kind": "filetype",
+            "rows": 22531,
+            "selected": true,
+            "selected_threshold": 0.9927771091461182,
+            "standalone": {
+              "threshold": 0.9927771091461182,
+              "tp": 21404,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9927771091461182,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 21404,
+              "fp": 0
+            }
+          },
+          "filetypes/png": {
+            "kind": "filetype",
+            "rows": 19671,
+            "selected": true,
+            "selected_threshold": 0.13528257608413696,
+            "standalone": {
+              "threshold": 0.13528257608413696,
+              "tp": 58,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.13528257608413696,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 58,
+              "fp": 2
+            }
+          },
+          "filetypes/php": {
+            "kind": "filetype",
+            "rows": 15609,
+            "selected": true,
+            "selected_threshold": 0.9953118562698364,
+            "standalone": {
+              "threshold": 0.9953118562698364,
+              "tp": 330,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9953118562698364,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 330,
+              "fp": 0
+            }
+          },
+          "filetypes/go": {
+            "kind": "filetype",
+            "rows": 14896,
+            "selected": true,
+            "selected_threshold": 0.6399033212418067,
+            "standalone": {
+              "threshold": 0.6399033212418067,
+              "tp": 68,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.6399033212418067,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 68,
+              "fp": 0
+            }
+          },
+          "filetypes/zip": {
+            "kind": "filetype",
+            "rows": 13406,
+            "selected": true,
+            "selected_threshold": 0.9939855933189392,
+            "standalone": {
+              "threshold": 0.9939855933189392,
+              "tp": 4630,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9939855933189392,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 4630,
+              "fp": 1
+            }
+          },
+          "filetypes/rust": {
+            "kind": "filetype",
+            "rows": 10512,
+            "selected": true,
+            "selected_threshold": 0.7905694246292114,
+            "standalone": {
+              "threshold": 0.7905694246292114,
+              "tp": 2,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7905694246292114,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 0
+            }
+          },
+          "filetypes/kotlin": {
+            "kind": "filetype",
+            "rows": 10337,
+            "selected": true,
+            "selected_threshold": 0.6866006851196289,
+            "standalone": {
+              "threshold": 0.6866006851196289,
+              "tp": 1947,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.6866006851196289,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1947,
+              "fp": 0
+            }
+          },
+          "filetypes/python-bytecode": {
+            "kind": "filetype",
+            "rows": 9576,
+            "selected": true,
+            "selected_threshold": 0.953896019145619,
+            "standalone": {
+              "threshold": 0.953896019145619,
+              "tp": 331,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.953896019145619,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 331,
+              "fp": 0
+            }
+          },
+          "filetypes/text": {
+            "kind": "filetype",
+            "rows": 8942,
+            "selected": true,
+            "selected_threshold": 0.22389566898345947,
+            "standalone": {
+              "threshold": 0.22389566898345947,
+              "tp": 24,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.22389566898345947,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 24,
+              "fp": 3
+            }
+          },
+          "filetypes/shell": {
+            "kind": "filetype",
+            "rows": 8370,
+            "selected": true,
+            "selected_threshold": 0.9875919514331296,
+            "standalone": {
+              "threshold": 0.9875919514331296,
+              "tp": 1218,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9875919514331296,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1218,
+              "fp": 0
+            }
+          },
+          "filetypes/csharp": {
+            "kind": "filetype",
+            "rows": 8353,
+            "selected": true,
+            "selected_threshold": 0.9944814819344313,
+            "standalone": {
+              "threshold": 0.9944814819344313,
+              "tp": 56,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9944814819344313,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 56,
+              "fp": 0
+            }
+          },
+          "filetypes/markdown": {
+            "kind": "filetype",
+            "rows": 7698,
+            "selected": true,
+            "selected_threshold": 0.5342731187241507,
+            "standalone": {
+              "threshold": 0.5342731187241507,
+              "tp": 0,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.5342731187241507,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 2
+            }
+          },
+          "filetypes/xls": {
+            "kind": "filetype",
+            "rows": 6727,
+            "selected": true,
+            "selected_threshold": 0.7933555245399475,
+            "standalone": {
+              "threshold": 0.7933555245399475,
+              "tp": 3810,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7933555245399475,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3810,
+              "fp": 0
+            }
+          },
+          "filetypes/xlsx": {
+            "kind": "filetype",
+            "rows": 6695,
+            "selected": true,
+            "selected_threshold": 0.8707722425460815,
+            "standalone": {
+              "threshold": 0.8707722425460815,
+              "tp": 3127,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.8707722425460815,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3127,
+              "fp": 2
+            }
+          },
+          "filetypes/tar.gz": {
+            "kind": "filetype",
+            "rows": 5599,
+            "selected": true,
+            "selected_threshold": 0.9887292875544246,
+            "standalone": {
+              "threshold": 0.9887292875544246,
+              "tp": 3011,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9887292875544246,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3011,
+              "fp": 1
+            }
+          },
+          "filetypes/java": {
+            "kind": "filetype",
+            "rows": 4469,
+            "selected": true,
+            "selected_threshold": 0.9976025223731995,
+            "standalone": {
+              "threshold": 0.9976025223731995,
+              "tp": 3,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9976025223731995,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3,
+              "fp": 0
+            }
+          },
+          "filetypes/package.json": {
+            "kind": "filetype",
+            "rows": 4359,
+            "selected": true,
+            "selected_threshold": 0.9983539581298828,
+            "standalone": {
+              "threshold": 0.9983539581298828,
+              "tp": 1931,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9983539581298828,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1931,
+              "fp": 0
+            }
+          },
+          "filetypes/perl": {
+            "kind": "filetype",
+            "rows": 4226,
+            "selected": true,
+            "selected_threshold": 0.941735263190408,
+            "standalone": {
+              "threshold": 0.941735263190408,
+              "tp": 28,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.941735263190408,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 28,
+              "fp": 1
+            }
+          },
+          "filetypes/json": {
+            "kind": "filetype",
+            "rows": 4024,
+            "selected": true,
+            "selected_threshold": 0.03829383850097656,
+            "standalone": {
+              "threshold": 0.03829383850097656,
+              "tp": 93,
+              "fp": 3931
+            },
+            "best_marginal": {
+              "threshold": 0.03829383850097656,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 93,
+              "fp": 3931
+            }
+          },
+          "filetypes/jpeg": {
+            "kind": "filetype",
+            "rows": 3512,
+            "selected": true,
+            "selected_threshold": 0.980950454805389,
+            "standalone": {
+              "threshold": 0.980950454805389,
+              "tp": 11,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.980950454805389,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 11,
+              "fp": 0
+            }
+          },
+          "filetypes/html": {
+            "kind": "filetype",
+            "rows": 3251,
+            "selected": true,
+            "selected_threshold": 0.8294766545295715,
+            "standalone": {
+              "threshold": 0.8294766545295715,
+              "tp": 17,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.8294766545295715,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 17,
+              "fp": 0
+            }
+          },
+          "filetypes/ruby": {
+            "kind": "filetype",
+            "rows": 2993,
+            "selected": true,
+            "selected_threshold": 0.9981314172601654,
+            "standalone": {
+              "threshold": 0.9981314172601654,
+              "tp": 3,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9981314172601654,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3,
+              "fp": 0
+            }
+          },
+          "filetypes/makefile": {
+            "kind": "filetype",
+            "rows": 3012,
+            "selected": true,
+            "selected_threshold": 0.06097889088463247,
+            "standalone": {
+              "threshold": 0.06097889088463247,
+              "tp": 0,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.06097889088463247,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 1
+            }
+          },
+          "filetypes/lua": {
+            "kind": "filetype",
+            "rows": 2309,
+            "selected": true,
+            "selected_threshold": 0.10307073385089285,
+            "standalone": {
+              "threshold": 0.10307073385089285,
+              "tp": 6,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.10307073385089285,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 6,
+              "fp": 0
+            }
+          },
+          "filetypes/macho": {
+            "kind": "filetype",
+            "rows": 1789,
+            "selected": true,
+            "selected_threshold": 0.947270393371582,
+            "standalone": {
+              "threshold": 0.947270393371582,
+              "tp": 254,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.947270393371582,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 254,
+              "fp": 0
+            }
+          },
+          "filetypes/plist": {
+            "kind": "filetype",
+            "rows": 1647,
+            "selected": true,
+            "selected_threshold": 0.8615944981575012,
+            "standalone": {
+              "threshold": 0.8615944981575012,
+              "tp": 2,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.8615944981575012,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/vbs": {
+            "kind": "filetype",
+            "rows": 1684,
+            "selected": true,
+            "selected_threshold": 0.9940357006109093,
+            "standalone": {
+              "threshold": 0.9940357006109093,
+              "tp": 875,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.9940357006109093,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 875,
+              "fp": 2
+            }
+          },
+          "filetypes/pkg-info": {
+            "kind": "filetype",
+            "rows": 1449,
+            "selected": true,
+            "selected_threshold": 0.06263196468353271,
+            "standalone": {
+              "threshold": 0.06263196468353271,
+              "tp": 1277,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.06263196468353271,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1277,
+              "fp": 4
+            }
+          },
+          "filetypes/ole": {
+            "kind": "filetype",
+            "rows": 1445,
+            "selected": true,
+            "selected_threshold": 0.32986289262771606,
+            "standalone": {
+              "threshold": 0.32986289262771606,
+              "tp": 668,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.32986289262771606,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 668,
+              "fp": 2
+            }
+          },
+          "filetypes/powershell": {
+            "kind": "filetype",
+            "rows": 879,
+            "selected": true,
+            "selected_threshold": 0.8938430547714233,
+            "standalone": {
+              "threshold": 0.8938430547714233,
+              "tp": 396,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.8938430547714233,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 396,
+              "fp": 2
+            }
+          },
+          "filetypes/deb": {
+            "kind": "filetype",
+            "rows": 867,
+            "selected": true,
+            "selected_threshold": 0.14449363946914673,
+            "standalone": {
+              "threshold": 0.14449363946914673,
+              "tp": 5,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.14449363946914673,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 5,
+              "fp": 1
+            }
+          },
+          "filetypes/jar": {
+            "kind": "filetype",
+            "rows": 811,
+            "selected": true,
+            "selected_threshold": 0.04028582572937012,
+            "standalone": {
+              "threshold": 0.04028582572937012,
+              "tp": 353,
+              "fp": 11
+            },
+            "best_marginal": {
+              "threshold": 0.04028582572937012,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 353,
+              "fp": 11
+            }
+          },
+          "filetypes/groovy": {
+            "kind": "filetype",
+            "rows": 806,
+            "selected": true,
+            "selected_threshold": 0.013714640157694897,
+            "standalone": {
+              "threshold": 0.013714640157694897,
+              "tp": 0,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.013714640157694897,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 0
+            }
+          },
+          "filetypes/rtf": {
+            "kind": "filetype",
+            "rows": 742,
+            "selected": true,
+            "selected_threshold": 0.05923277139663696,
+            "standalone": {
+              "threshold": 0.05923277139663696,
+              "tp": 682,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.05923277139663696,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 682,
+              "fp": 0
+            }
+          },
+          "filetypes/lnk": {
+            "kind": "filetype",
+            "rows": 631,
+            "selected": true,
+            "selected_threshold": 0.5052585005760193,
+            "standalone": {
+              "threshold": 0.5052585005760193,
+              "tp": 409,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.5052585005760193,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 409,
+              "fp": 0
+            }
+          },
+          "filetypes/docx": {
+            "kind": "filetype",
+            "rows": 559,
+            "selected": true,
+            "selected_threshold": 0.2326485514640808,
+            "standalone": {
+              "threshold": 0.2326485514640808,
+              "tp": 450,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.2326485514640808,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 450,
+              "fp": 4
+            }
+          },
+          "filetypes/clojure": {
+            "kind": "filetype",
+            "rows": 347,
+            "selected": true,
+            "selected_threshold": 0.9875231792264351,
+            "standalone": {
+              "threshold": 0.9875231792264351,
+              "tp": 3,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9875231792264351,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3,
+              "fp": 0
+            }
+          },
+          "filetypes/tar": {
+            "kind": "filetype",
+            "rows": 245,
+            "selected": true,
+            "selected_threshold": 0.06313180923461914,
+            "standalone": {
+              "threshold": 0.06313180923461914,
+              "tp": 178,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.06313180923461914,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 178,
+              "fp": 4
+            }
+          },
+          "filetypes/dockerfile": {
+            "kind": "filetype",
+            "rows": 220,
+            "selected": true,
+            "selected_threshold": 0.1385757327079773,
+            "standalone": {
+              "threshold": 0.1385757327079773,
+              "tp": 6,
+              "fp": 214
+            },
+            "best_marginal": {
+              "threshold": 0.1385757327079773,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 6,
+              "fp": 214
+            }
+          },
+          "filetypes/package-lock.json": {
+            "kind": "filetype",
+            "rows": 83,
+            "selected": true,
+            "selected_threshold": 0.2938859462738037,
+            "standalone": {
+              "threshold": 0.2938859462738037,
+              "tp": 5,
+              "fp": 19
+            },
+            "best_marginal": {
+              "threshold": 0.2938859462738037,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 5,
+              "fp": 19
+            }
+          },
+          "filetypes/chrome-manifest": {
+            "kind": "filetype",
+            "rows": 60,
+            "selected": true,
+            "selected_threshold": 0.8901082277297974,
+            "standalone": {
+              "threshold": 0.8901082277297974,
+              "tp": 2,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.8901082277297974,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 1
+            }
+          }
+        },
+        "tp": 206591,
+        "fp": 4272,
+        "tn": 520828,
+        "fn": 89995,
+        "recall": 0.6965635599792304,
+        "precision": 0.979740400165036,
+        "fp_per_100M": 813559.3220338983,
+        "below_resolution": false,
+        "cp_floor_per_million": 5.713279289585204
+      }
+    },
+    {
+      "level": 5000,
+      "hostile": {
+        "target_per_million": 50.0,
+        "budget": 26,
+        "thresholds": {
+          "general": 0.9944190382957458,
+          "filegroups/scripts": 0.9926706552505493,
+          "filegroups/native": 0.9985060691833496,
+          "filegroups/portable": 0.9999988079071045,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.95444655418396,
+          "filegroups/config": 0.9965453743934631,
+          "filegroups/media": 0.8058722019195557,
+          "filetypes/pe": 0.99913352303531,
+          "filetypes/java_class": 1.0,
+          "filetypes/javascript": 0.9577044248580933,
+          "filetypes/c": 0.9877442121505737,
+          "filetypes/elf": 0.9931958913803101,
+          "filetypes/pdf": 0.37758001685142517,
+          "filetypes/python": 0.9975798726081848,
+          "filetypes/xml": 0.2533334493637085,
+          "filetypes/batch": 0.9927771091461182,
+          "filetypes/png": 0.13528257608413696,
+          "filetypes/php": 0.9953118562698364,
+          "filetypes/go": 0.4614027030542704,
+          "filetypes/zip": 0.9939855933189392,
+          "filetypes/rust": 0.5882622582329748,
+          "filetypes/kotlin": 0.6866006851196289,
+          "filetypes/python-bytecode": 0.5642522033877897,
+          "filetypes/text": 0.22389566898345947,
+          "filetypes/shell": 0.9809656646917913,
+          "filetypes/csharp": 0.9885711389952808,
+          "filetypes/markdown": 0.42742616210152556,
+          "filetypes/xls": 0.7933555245399475,
+          "filetypes/xlsx": 0.8707722425460815,
+          "filetypes/tar.gz": 0.9884974267547879,
+          "filetypes/java": 0.9976025223731995,
+          "filetypes/package.json": 0.9983539581298828,
+          "filetypes/perl": 0.8771594500922206,
+          "filetypes/json": 0.03829383850097656,
+          "filetypes/jpeg": 0.9684191204170366,
+          "filetypes/html": 0.8294766545295715,
+          "filetypes/ruby": 0.997910447286309,
+          "filetypes/makefile": 0.028194336201353212,
+          "filetypes/lua": 0.06114091318335595,
+          "filetypes/macho": 0.947270393371582,
+          "filetypes/plist": 0.8615944981575012,
+          "filetypes/vbs": 0.9940000060623715,
+          "filetypes/pkg-info": 0.06263196468353271,
+          "filetypes/ole": 0.32986289262771606,
+          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/deb": 0.14449363946914665,
+          "filetypes/jar": 0.5284507301000773,
+          "filetypes/groovy": 0.01271422854281469,
+          "filetypes/rtf": 0.05923277139663696,
+          "filetypes/lnk": 0.5052585005760193,
+          "filetypes/docx": 0.2326485514640808,
+          "filetypes/clojure": 0.9683397740479248,
+          "filetypes/tar": 0.06313180923461914,
+          "filetypes/dockerfile": 0.1385757327079773,
+          "filetypes/package-lock.json": 0.2938859462738037,
+          "filetypes/chrome-manifest": 0.8901082277297974
+        },
+        "diagnostics": {
+          "general": {
+            "kind": "general",
+            "rows": 821686,
+            "selected": true,
+            "selected_threshold": 0.9944190382957458,
+            "standalone": {
+              "threshold": 0.9944190382957458,
+              "tp": 144127,
+              "fp": 16
+            },
+            "best_marginal": {
+              "threshold": 0.9944190382957458,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 144127,
+              "fp": 16
+            }
+          },
+          "filegroups/scripts": {
+            "kind": "filegroup",
+            "rows": 162969,
+            "selected": true,
+            "selected_threshold": 0.9926706552505493,
+            "standalone": {
+              "threshold": 0.9926706552505493,
+              "tp": 32184,
+              "fp": 11
+            },
+            "best_marginal": {
+              "threshold": 0.9926706552505493,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 32184,
+              "fp": 11
+            }
+          },
+          "filegroups/native": {
+            "kind": "filegroup",
+            "rows": 220833,
+            "selected": true,
+            "selected_threshold": 0.9985060691833496,
+            "standalone": {
+              "threshold": 0.9985060691833496,
+              "tp": 115121,
+              "fp": 5
+            },
+            "best_marginal": {
+              "threshold": 0.9985060691833496,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 115121,
+              "fp": 5
+            }
+          },
+          "filegroups/portable": {
+            "kind": "filegroup",
+            "rows": 84031,
+            "selected": true,
+            "selected_threshold": 0.9999988079071045,
+            "standalone": {
+              "threshold": 0.9999988079071045,
+              "tp": 10,
+              "fp": 13
+            },
+            "best_marginal": {
+              "threshold": 0.9999988079071045,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 10,
+              "fp": 13
+            }
+          },
+          "filegroups/documents": {
+            "kind": "filegroup",
+            "rows": 48151,
+            "selected": true,
+            "selected_threshold": 0.7054287195205688,
+            "standalone": {
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7054287195205688,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 15298,
+              "fp": 0
+            }
+          },
+          "filegroups/source": {
+            "kind": "filegroup",
+            "rows": 133691,
+            "selected": true,
+            "selected_threshold": 0.95444655418396,
+            "standalone": {
+              "threshold": 0.95444655418396,
+              "tp": 1855,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.95444655418396,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1855,
+              "fp": 2
+            }
+          },
+          "filegroups/config": {
+            "kind": "filegroup",
+            "rows": 32708,
+            "selected": true,
+            "selected_threshold": 0.9965453743934631,
+            "standalone": {
+              "threshold": 0.9965453743934631,
+              "tp": 2191,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.9965453743934631,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2191,
+              "fp": 4
+            }
+          },
+          "filegroups/media": {
+            "kind": "filegroup",
+            "rows": 23183,
+            "selected": true,
+            "selected_threshold": 0.8058722019195557,
+            "standalone": {
+              "threshold": 0.8058722019195557,
+              "tp": 76,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.8058722019195557,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 76,
+              "fp": 3
+            }
+          },
+          "filetypes/pe": {
+            "kind": "filetype",
+            "rows": 178205,
+            "selected": true,
+            "selected_threshold": 0.99913352303531,
+            "standalone": {
+              "threshold": 0.99913352303531,
+              "tp": 89306,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.99913352303531,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 89306,
+              "fp": 1
+            }
+          },
+          "filetypes/java_class": {
+            "kind": "filetype",
+            "rows": 84031,
+            "selected": true,
+            "selected_threshold": 1.0,
+            "standalone": {
+              "threshold": 1.0,
+              "tp": 0,
+              "fp": 14
+            },
+            "best_marginal": {
+              "threshold": 1.0,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 14
+            }
+          },
+          "filetypes/javascript": {
+            "kind": "filetype",
+            "rows": 83198,
+            "selected": true,
+            "selected_threshold": 0.9577044248580933,
+            "standalone": {
+              "threshold": 0.9577044248580933,
+              "tp": 9317,
+              "fp": 16
+            },
+            "best_marginal": {
+              "threshold": 0.9577044248580933,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 9317,
+              "fp": 16
+            }
+          },
+          "filetypes/c": {
+            "kind": "filetype",
+            "rows": 76006,
+            "selected": true,
+            "selected_threshold": 0.9877442121505737,
+            "standalone": {
+              "threshold": 0.9877442121505737,
+              "tp": 210,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9877442121505737,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 210,
+              "fp": 0
+            }
+          },
+          "filetypes/elf": {
+            "kind": "filetype",
+            "rows": 40839,
+            "selected": true,
+            "selected_threshold": 0.9931958913803101,
+            "standalone": {
+              "threshold": 0.9931958913803101,
+              "tp": 18585,
+              "fp": 5
+            },
+            "best_marginal": {
+              "threshold": 0.9931958913803101,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 18585,
+              "fp": 5
+            }
+          },
+          "filetypes/pdf": {
+            "kind": "filetype",
+            "rows": 25187,
+            "selected": true,
+            "selected_threshold": 0.37758001685142517,
+            "standalone": {
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.37758001685142517,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 19493,
+              "fp": 4
+            }
+          },
+          "filetypes/python": {
+            "kind": "filetype",
+            "rows": 22854,
+            "selected": true,
+            "selected_threshold": 0.9975798726081848,
+            "standalone": {
+              "threshold": 0.9975798726081848,
+              "tp": 1492,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.9975798726081848,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1492,
+              "fp": 2
+            }
+          },
+          "filetypes/xml": {
+            "kind": "filetype",
+            "rows": 22678,
+            "selected": true,
+            "selected_threshold": 0.2533334493637085,
+            "standalone": {
+              "threshold": 0.2533334493637085,
+              "tp": 8,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.2533334493637085,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 8,
+              "fp": 2
+            }
+          },
+          "filetypes/batch": {
+            "kind": "filetype",
+            "rows": 22531,
+            "selected": true,
+            "selected_threshold": 0.9927771091461182,
+            "standalone": {
+              "threshold": 0.9927771091461182,
+              "tp": 21404,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9927771091461182,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 21404,
+              "fp": 0
+            }
+          },
+          "filetypes/png": {
+            "kind": "filetype",
+            "rows": 19671,
+            "selected": true,
+            "selected_threshold": 0.13528257608413696,
+            "standalone": {
+              "threshold": 0.13528257608413696,
+              "tp": 58,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.13528257608413696,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 58,
+              "fp": 2
+            }
+          },
+          "filetypes/php": {
+            "kind": "filetype",
+            "rows": 15609,
+            "selected": true,
+            "selected_threshold": 0.9953118562698364,
+            "standalone": {
+              "threshold": 0.9953118562698364,
+              "tp": 330,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9953118562698364,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 330,
+              "fp": 0
+            }
+          },
+          "filetypes/go": {
+            "kind": "filetype",
+            "rows": 14896,
+            "selected": true,
+            "selected_threshold": 0.4614027030542704,
+            "standalone": {
+              "threshold": 0.4614027030542704,
+              "tp": 82,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.4614027030542704,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 82,
+              "fp": 2
+            }
+          },
+          "filetypes/zip": {
+            "kind": "filetype",
+            "rows": 13406,
+            "selected": true,
+            "selected_threshold": 0.9939855933189392,
+            "standalone": {
+              "threshold": 0.9939855933189392,
+              "tp": 4630,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9939855933189392,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 4630,
+              "fp": 1
+            }
+          },
+          "filetypes/rust": {
+            "kind": "filetype",
+            "rows": 10512,
+            "selected": true,
+            "selected_threshold": 0.5882622582329748,
+            "standalone": {
+              "threshold": 0.5882622582329748,
+              "tp": 4,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.5882622582329748,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 4,
+              "fp": 0
+            }
+          },
+          "filetypes/kotlin": {
+            "kind": "filetype",
+            "rows": 10337,
+            "selected": true,
+            "selected_threshold": 0.6866006851196289,
+            "standalone": {
+              "threshold": 0.6866006851196289,
+              "tp": 1947,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.6866006851196289,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1947,
+              "fp": 0
+            }
+          },
+          "filetypes/python-bytecode": {
+            "kind": "filetype",
+            "rows": 9576,
+            "selected": true,
+            "selected_threshold": 0.5642522033877897,
+            "standalone": {
+              "threshold": 0.5642522033877897,
+              "tp": 335,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.5642522033877897,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 335,
+              "fp": 0
+            }
+          },
+          "filetypes/text": {
+            "kind": "filetype",
+            "rows": 8942,
+            "selected": true,
+            "selected_threshold": 0.22389566898345947,
+            "standalone": {
+              "threshold": 0.22389566898345947,
+              "tp": 24,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.22389566898345947,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 24,
+              "fp": 3
+            }
+          },
+          "filetypes/shell": {
+            "kind": "filetype",
+            "rows": 8370,
+            "selected": true,
+            "selected_threshold": 0.9809656646917913,
+            "standalone": {
+              "threshold": 0.9809656646917913,
+              "tp": 1294,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9809656646917913,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1294,
+              "fp": 0
+            }
+          },
+          "filetypes/csharp": {
+            "kind": "filetype",
+            "rows": 8353,
+            "selected": true,
+            "selected_threshold": 0.9885711389952808,
+            "standalone": {
+              "threshold": 0.9885711389952808,
+              "tp": 64,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9885711389952808,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 64,
+              "fp": 0
+            }
+          },
+          "filetypes/markdown": {
+            "kind": "filetype",
+            "rows": 7698,
+            "selected": true,
+            "selected_threshold": 0.42742616210152556,
+            "standalone": {
+              "threshold": 0.42742616210152556,
+              "tp": 0,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.42742616210152556,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 3
+            }
+          },
+          "filetypes/xls": {
+            "kind": "filetype",
+            "rows": 6727,
+            "selected": true,
+            "selected_threshold": 0.7933555245399475,
+            "standalone": {
+              "threshold": 0.7933555245399475,
+              "tp": 3810,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7933555245399475,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3810,
+              "fp": 0
+            }
+          },
+          "filetypes/xlsx": {
+            "kind": "filetype",
+            "rows": 6695,
+            "selected": true,
+            "selected_threshold": 0.8707722425460815,
+            "standalone": {
+              "threshold": 0.8707722425460815,
+              "tp": 3127,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.8707722425460815,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3127,
+              "fp": 2
+            }
+          },
+          "filetypes/tar.gz": {
+            "kind": "filetype",
+            "rows": 5599,
+            "selected": true,
+            "selected_threshold": 0.9884974267547879,
+            "standalone": {
+              "threshold": 0.9884974267547879,
+              "tp": 3020,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9884974267547879,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3020,
+              "fp": 1
+            }
+          },
+          "filetypes/java": {
+            "kind": "filetype",
+            "rows": 4469,
+            "selected": true,
+            "selected_threshold": 0.9976025223731995,
+            "standalone": {
+              "threshold": 0.9976025223731995,
+              "tp": 3,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9976025223731995,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3,
+              "fp": 0
+            }
+          },
+          "filetypes/package.json": {
+            "kind": "filetype",
+            "rows": 4359,
+            "selected": true,
+            "selected_threshold": 0.9983539581298828,
+            "standalone": {
+              "threshold": 0.9983539581298828,
+              "tp": 1931,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9983539581298828,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1931,
+              "fp": 0
+            }
+          },
+          "filetypes/perl": {
+            "kind": "filetype",
+            "rows": 4226,
+            "selected": true,
+            "selected_threshold": 0.8771594500922206,
+            "standalone": {
+              "threshold": 0.8771594500922206,
+              "tp": 30,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.8771594500922206,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 30,
+              "fp": 1
+            }
+          },
+          "filetypes/json": {
+            "kind": "filetype",
+            "rows": 4024,
+            "selected": true,
+            "selected_threshold": 0.03829383850097656,
+            "standalone": {
+              "threshold": 0.03829383850097656,
+              "tp": 93,
+              "fp": 3931
+            },
+            "best_marginal": {
+              "threshold": 0.03829383850097656,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 93,
+              "fp": 3931
+            }
+          },
+          "filetypes/jpeg": {
+            "kind": "filetype",
+            "rows": 3512,
+            "selected": true,
+            "selected_threshold": 0.9684191204170366,
+            "standalone": {
+              "threshold": 0.9684191204170366,
+              "tp": 16,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9684191204170366,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 16,
+              "fp": 0
+            }
+          },
+          "filetypes/html": {
+            "kind": "filetype",
+            "rows": 3251,
+            "selected": true,
+            "selected_threshold": 0.8294766545295715,
+            "standalone": {
+              "threshold": 0.8294766545295715,
+              "tp": 17,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.8294766545295715,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 17,
+              "fp": 0
+            }
+          },
+          "filetypes/ruby": {
+            "kind": "filetype",
+            "rows": 2993,
+            "selected": true,
+            "selected_threshold": 0.997910447286309,
+            "standalone": {
+              "threshold": 0.997910447286309,
+              "tp": 6,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.997910447286309,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 6,
+              "fp": 0
+            }
+          },
+          "filetypes/makefile": {
+            "kind": "filetype",
+            "rows": 3012,
+            "selected": true,
+            "selected_threshold": 0.028194336201353212,
+            "standalone": {
+              "threshold": 0.028194336201353212,
+              "tp": 0,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.028194336201353212,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 1
+            }
+          },
+          "filetypes/lua": {
+            "kind": "filetype",
+            "rows": 2309,
+            "selected": true,
+            "selected_threshold": 0.06114091318335595,
+            "standalone": {
+              "threshold": 0.06114091318335595,
+              "tp": 7,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.06114091318335595,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 7,
+              "fp": 0
+            }
+          },
+          "filetypes/macho": {
+            "kind": "filetype",
+            "rows": 1789,
+            "selected": true,
+            "selected_threshold": 0.947270393371582,
+            "standalone": {
+              "threshold": 0.947270393371582,
+              "tp": 254,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.947270393371582,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 254,
+              "fp": 0
+            }
+          },
+          "filetypes/plist": {
+            "kind": "filetype",
+            "rows": 1647,
+            "selected": true,
+            "selected_threshold": 0.8615944981575012,
+            "standalone": {
+              "threshold": 0.8615944981575012,
+              "tp": 2,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.8615944981575012,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/vbs": {
+            "kind": "filetype",
+            "rows": 1684,
+            "selected": true,
+            "selected_threshold": 0.9940000060623715,
+            "standalone": {
+              "threshold": 0.9940000060623715,
+              "tp": 875,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.9940000060623715,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 875,
+              "fp": 2
+            }
+          },
+          "filetypes/pkg-info": {
+            "kind": "filetype",
+            "rows": 1449,
+            "selected": true,
+            "selected_threshold": 0.06263196468353271,
+            "standalone": {
+              "threshold": 0.06263196468353271,
+              "tp": 1277,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.06263196468353271,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1277,
+              "fp": 4
+            }
+          },
+          "filetypes/ole": {
+            "kind": "filetype",
+            "rows": 1445,
+            "selected": true,
+            "selected_threshold": 0.32986289262771606,
+            "standalone": {
+              "threshold": 0.32986289262771606,
+              "tp": 668,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.32986289262771606,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 668,
+              "fp": 2
+            }
+          },
+          "filetypes/powershell": {
+            "kind": "filetype",
+            "rows": 879,
+            "selected": true,
+            "selected_threshold": 0.8938430547714233,
+            "standalone": {
+              "threshold": 0.8938430547714233,
+              "tp": 396,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.8938430547714233,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 396,
+              "fp": 2
+            }
+          },
+          "filetypes/deb": {
+            "kind": "filetype",
+            "rows": 867,
+            "selected": true,
+            "selected_threshold": 0.14449363946914665,
+            "standalone": {
+              "threshold": 0.14449363946914665,
+              "tp": 5,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.14449363946914665,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 5,
+              "fp": 1
+            }
+          },
+          "filetypes/jar": {
+            "kind": "filetype",
+            "rows": 811,
+            "selected": true,
+            "selected_threshold": 0.5284507301000773,
+            "standalone": {
+              "threshold": 0.5284507301000773,
+              "tp": 279,
+              "fp": 5
+            },
+            "best_marginal": {
+              "threshold": 0.5284507301000773,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 279,
+              "fp": 5
+            }
+          },
+          "filetypes/groovy": {
+            "kind": "filetype",
+            "rows": 806,
+            "selected": true,
+            "selected_threshold": 0.01271422854281469,
+            "standalone": {
+              "threshold": 0.01271422854281469,
+              "tp": 0,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.01271422854281469,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 0
+            }
+          },
+          "filetypes/rtf": {
+            "kind": "filetype",
+            "rows": 742,
+            "selected": true,
+            "selected_threshold": 0.05923277139663696,
+            "standalone": {
+              "threshold": 0.05923277139663696,
+              "tp": 682,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.05923277139663696,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 682,
+              "fp": 0
+            }
+          },
+          "filetypes/lnk": {
+            "kind": "filetype",
+            "rows": 631,
+            "selected": true,
+            "selected_threshold": 0.5052585005760193,
+            "standalone": {
+              "threshold": 0.5052585005760193,
+              "tp": 409,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.5052585005760193,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 409,
+              "fp": 0
+            }
+          },
+          "filetypes/docx": {
+            "kind": "filetype",
+            "rows": 559,
+            "selected": true,
+            "selected_threshold": 0.2326485514640808,
+            "standalone": {
+              "threshold": 0.2326485514640808,
+              "tp": 450,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.2326485514640808,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 450,
+              "fp": 4
+            }
+          },
+          "filetypes/clojure": {
+            "kind": "filetype",
+            "rows": 347,
+            "selected": true,
+            "selected_threshold": 0.9683397740479248,
+            "standalone": {
+              "threshold": 0.9683397740479248,
+              "tp": 4,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9683397740479248,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 4,
+              "fp": 0
+            }
+          },
+          "filetypes/tar": {
+            "kind": "filetype",
+            "rows": 245,
+            "selected": true,
+            "selected_threshold": 0.06313180923461914,
+            "standalone": {
+              "threshold": 0.06313180923461914,
+              "tp": 178,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.06313180923461914,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 178,
+              "fp": 4
+            }
+          },
+          "filetypes/dockerfile": {
+            "kind": "filetype",
+            "rows": 220,
+            "selected": true,
+            "selected_threshold": 0.1385757327079773,
+            "standalone": {
+              "threshold": 0.1385757327079773,
+              "tp": 6,
+              "fp": 214
+            },
+            "best_marginal": {
+              "threshold": 0.1385757327079773,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 6,
+              "fp": 214
+            }
+          },
+          "filetypes/package-lock.json": {
+            "kind": "filetype",
+            "rows": 83,
+            "selected": true,
+            "selected_threshold": 0.2938859462738037,
+            "standalone": {
+              "threshold": 0.2938859462738037,
+              "tp": 5,
+              "fp": 19
+            },
+            "best_marginal": {
+              "threshold": 0.2938859462738037,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 5,
+              "fp": 19
+            }
+          },
+          "filetypes/chrome-manifest": {
+            "kind": "filetype",
+            "rows": 60,
+            "selected": true,
+            "selected_threshold": 0.8901082277297974,
+            "standalone": {
+              "threshold": 0.8901082277297974,
+              "tp": 2,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.8901082277297974,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 1
+            }
+          }
+        },
+        "tp": 222698,
+        "fp": 4302,
+        "tn": 520798,
+        "fn": 73888,
+        "recall": 0.7508715853074657,
+        "precision": 0.9810484581497797,
+        "fp_per_100M": 819272.5195200914,
+        "below_resolution": false,
+        "cp_floor_per_million": 5.713279289585204
+      }
+    },
+    {
+      "level": 7500,
+      "hostile": {
+        "target_per_million": 75.0,
+        "budget": 39,
+        "thresholds": {
+          "general": 0.9923123121261597,
+          "filegroups/scripts": 0.9912147521972656,
+          "filegroups/native": 0.9983554482460022,
+          "filegroups/portable": 0.9999988079071045,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.945690393447876,
+          "filegroups/config": 0.9472449421882629,
+          "filegroups/media": 0.8058722019195557,
+          "filetypes/pe": 0.9992995262145996,
+          "filetypes/java_class": 1.0,
+          "filetypes/javascript": 0.9526916146278381,
+          "filetypes/c": 0.986393392086029,
+          "filetypes/elf": 0.9931958913803101,
+          "filetypes/pdf": 0.37758001685142517,
+          "filetypes/python": 0.9975798726081848,
+          "filetypes/xml": 0.2533334493637085,
+          "filetypes/batch": 0.9927771091461182,
+          "filetypes/png": 0.07854849100112915,
+          "filetypes/php": 0.9919825196266174,
+          "filetypes/go": 0.27328523993492126,
+          "filetypes/zip": 0.9939855933189392,
+          "filetypes/rust": 0.26280144590869425,
+          "filetypes/kotlin": 0.698730249733411,
+          "filetypes/python-bytecode": 0.4501355033087652,
+          "filetypes/text": 0.22389566898345947,
+          "filetypes/shell": 0.9761749319157347,
+          "filetypes/csharp": 0.9840911662722134,
+          "filetypes/markdown": 0.38534786648898117,
+          "filetypes/xls": 0.7933555245399475,
+          "filetypes/xlsx": 0.8707722425460815,
+          "filetypes/tar.gz": 0.9882731363600814,
+          "filetypes/java": 0.9976025223731995,
+          "filetypes/package.json": 0.9983539581298828,
+          "filetypes/perl": 0.8461275860556632,
+          "filetypes/json": 0.03829383850097656,
+          "filetypes/jpeg": 0.9602408144875194,
+          "filetypes/html": 0.8294766545295715,
+          "filetypes/ruby": 0.9977202256887461,
+          "filetypes/makefile": 0.02006044195115747,
+          "filetypes/lua": 0.04844604714307183,
+          "filetypes/macho": 0.947270393371582,
+          "filetypes/plist": 0.8615944981575012,
+          "filetypes/vbs": 0.9939674003947928,
+          "filetypes/pkg-info": 0.06263196468353271,
+          "filetypes/ole": 0.32986289262771606,
+          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/deb": 0.1444936394691462,
+          "filetypes/jar": 0.3929456953562015,
+          "filetypes/groovy": 0.012249581896077047,
+          "filetypes/rtf": 0.05923277139663696,
+          "filetypes/lnk": 0.5052585005760193,
+          "filetypes/docx": 0.2326485514640808,
+          "filetypes/clojure": 0.9577429603332023,
+          "filetypes/tar": 0.06313180923461914,
+          "filetypes/dockerfile": 0.1385757327079773,
+          "filetypes/package-lock.json": 0.2938859462738037,
+          "filetypes/chrome-manifest": 0.8901082277297974
+        },
+        "diagnostics": {
+          "general": {
+            "kind": "general",
+            "rows": 821686,
+            "selected": true,
+            "selected_threshold": 0.9923123121261597,
+            "standalone": {
+              "threshold": 0.9923123121261597,
+              "tp": 154507,
+              "fp": 33
+            },
+            "best_marginal": {
+              "threshold": 0.9923123121261597,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 154507,
+              "fp": 33
+            }
+          },
+          "filegroups/scripts": {
+            "kind": "filegroup",
+            "rows": 162969,
+            "selected": true,
+            "selected_threshold": 0.9912147521972656,
+            "standalone": {
+              "threshold": 0.9912147521972656,
+              "tp": 32689,
+              "fp": 18
+            },
+            "best_marginal": {
+              "threshold": 0.9912147521972656,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 32689,
+              "fp": 18
+            }
+          },
+          "filegroups/native": {
+            "kind": "filegroup",
+            "rows": 220833,
+            "selected": true,
+            "selected_threshold": 0.9983554482460022,
+            "standalone": {
+              "threshold": 0.9983554482460022,
+              "tp": 118805,
+              "fp": 7
+            },
+            "best_marginal": {
+              "threshold": 0.9983554482460022,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 118805,
+              "fp": 7
+            }
+          },
+          "filegroups/portable": {
+            "kind": "filegroup",
+            "rows": 84031,
+            "selected": true,
+            "selected_threshold": 0.9999988079071045,
+            "standalone": {
+              "threshold": 0.9999988079071045,
+              "tp": 10,
+              "fp": 13
+            },
+            "best_marginal": {
+              "threshold": 0.9999988079071045,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 10,
+              "fp": 13
+            }
+          },
+          "filegroups/documents": {
+            "kind": "filegroup",
+            "rows": 48151,
+            "selected": true,
+            "selected_threshold": 0.7054287195205688,
+            "standalone": {
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7054287195205688,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 15298,
+              "fp": 0
+            }
+          },
+          "filegroups/source": {
+            "kind": "filegroup",
+            "rows": 133691,
+            "selected": true,
+            "selected_threshold": 0.945690393447876,
+            "standalone": {
+              "threshold": 0.945690393447876,
+              "tp": 1891,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.945690393447876,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1891,
+              "fp": 3
+            }
+          },
+          "filegroups/config": {
+            "kind": "filegroup",
+            "rows": 32708,
+            "selected": true,
+            "selected_threshold": 0.9472449421882629,
+            "standalone": {
+              "threshold": 0.9472449421882629,
+              "tp": 2219,
+              "fp": 8
+            },
+            "best_marginal": {
+              "threshold": 0.9472449421882629,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2219,
+              "fp": 8
+            }
+          },
+          "filegroups/media": {
+            "kind": "filegroup",
+            "rows": 23183,
+            "selected": true,
+            "selected_threshold": 0.8058722019195557,
+            "standalone": {
+              "threshold": 0.8058722019195557,
+              "tp": 76,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.8058722019195557,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 76,
+              "fp": 3
+            }
+          },
+          "filetypes/pe": {
+            "kind": "filetype",
+            "rows": 178205,
+            "selected": true,
+            "selected_threshold": 0.9992995262145996,
+            "standalone": {
+              "threshold": 0.9992995262145996,
+              "tp": 75967,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9992995262145996,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 75967,
+              "fp": 1
+            }
+          },
+          "filetypes/java_class": {
+            "kind": "filetype",
+            "rows": 84031,
+            "selected": true,
+            "selected_threshold": 1.0,
+            "standalone": {
+              "threshold": 1.0,
+              "tp": 0,
+              "fp": 14
+            },
+            "best_marginal": {
+              "threshold": 1.0,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 14
+            }
+          },
+          "filetypes/javascript": {
+            "kind": "filetype",
+            "rows": 83198,
+            "selected": true,
+            "selected_threshold": 0.9526916146278381,
+            "standalone": {
+              "threshold": 0.9526916146278381,
+              "tp": 9400,
+              "fp": 16
+            },
+            "best_marginal": {
+              "threshold": 0.9526916146278381,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 9400,
+              "fp": 16
+            }
+          },
+          "filetypes/c": {
+            "kind": "filetype",
+            "rows": 76006,
+            "selected": true,
+            "selected_threshold": 0.986393392086029,
+            "standalone": {
+              "threshold": 0.986393392086029,
+              "tp": 215,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.986393392086029,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 215,
+              "fp": 0
+            }
+          },
+          "filetypes/elf": {
+            "kind": "filetype",
+            "rows": 40839,
+            "selected": true,
+            "selected_threshold": 0.9931958913803101,
+            "standalone": {
+              "threshold": 0.9931958913803101,
+              "tp": 18585,
+              "fp": 5
+            },
+            "best_marginal": {
+              "threshold": 0.9931958913803101,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 18585,
+              "fp": 5
+            }
+          },
+          "filetypes/pdf": {
+            "kind": "filetype",
+            "rows": 25187,
+            "selected": true,
+            "selected_threshold": 0.37758001685142517,
+            "standalone": {
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.37758001685142517,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 19493,
+              "fp": 4
+            }
+          },
+          "filetypes/python": {
+            "kind": "filetype",
+            "rows": 22854,
+            "selected": true,
+            "selected_threshold": 0.9975798726081848,
+            "standalone": {
+              "threshold": 0.9975798726081848,
+              "tp": 1492,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.9975798726081848,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1492,
+              "fp": 2
+            }
+          },
+          "filetypes/xml": {
+            "kind": "filetype",
+            "rows": 22678,
+            "selected": true,
+            "selected_threshold": 0.2533334493637085,
+            "standalone": {
+              "threshold": 0.2533334493637085,
+              "tp": 8,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.2533334493637085,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 8,
+              "fp": 2
+            }
+          },
+          "filetypes/batch": {
+            "kind": "filetype",
+            "rows": 22531,
+            "selected": true,
+            "selected_threshold": 0.9927771091461182,
+            "standalone": {
+              "threshold": 0.9927771091461182,
+              "tp": 21404,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9927771091461182,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 21404,
+              "fp": 0
+            }
+          },
+          "filetypes/png": {
+            "kind": "filetype",
+            "rows": 19671,
+            "selected": true,
+            "selected_threshold": 0.07854849100112915,
+            "standalone": {
+              "threshold": 0.07854849100112915,
+              "tp": 59,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.07854849100112915,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 59,
+              "fp": 3
+            }
+          },
+          "filetypes/php": {
+            "kind": "filetype",
+            "rows": 15609,
+            "selected": true,
+            "selected_threshold": 0.9919825196266174,
+            "standalone": {
+              "threshold": 0.9919825196266174,
+              "tp": 355,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9919825196266174,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 355,
+              "fp": 0
+            }
+          },
+          "filetypes/go": {
+            "kind": "filetype",
+            "rows": 14896,
+            "selected": true,
+            "selected_threshold": 0.27328523993492126,
+            "standalone": {
+              "threshold": 0.27328523993492126,
+              "tp": 119,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.27328523993492126,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 119,
+              "fp": 4
+            }
+          },
+          "filetypes/zip": {
+            "kind": "filetype",
+            "rows": 13406,
+            "selected": true,
+            "selected_threshold": 0.9939855933189392,
+            "standalone": {
+              "threshold": 0.9939855933189392,
+              "tp": 4630,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9939855933189392,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 4630,
+              "fp": 1
+            }
+          },
+          "filetypes/rust": {
+            "kind": "filetype",
+            "rows": 10512,
+            "selected": true,
+            "selected_threshold": 0.26280144590869425,
+            "standalone": {
+              "threshold": 0.26280144590869425,
+              "tp": 4,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.26280144590869425,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 4,
+              "fp": 0
+            }
+          },
+          "filetypes/kotlin": {
+            "kind": "filetype",
+            "rows": 10337,
+            "selected": true,
+            "selected_threshold": 0.698730249733411,
+            "standalone": {
+              "threshold": 0.698730249733411,
+              "tp": 1946,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.698730249733411,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1946,
+              "fp": 0
+            }
+          },
+          "filetypes/python-bytecode": {
+            "kind": "filetype",
+            "rows": 9576,
+            "selected": true,
+            "selected_threshold": 0.4501355033087652,
+            "standalone": {
+              "threshold": 0.4501355033087652,
+              "tp": 336,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.4501355033087652,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 336,
+              "fp": 0
+            }
+          },
+          "filetypes/text": {
+            "kind": "filetype",
+            "rows": 8942,
+            "selected": true,
+            "selected_threshold": 0.22389566898345947,
+            "standalone": {
+              "threshold": 0.22389566898345947,
+              "tp": 24,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.22389566898345947,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 24,
+              "fp": 3
+            }
+          },
+          "filetypes/shell": {
+            "kind": "filetype",
+            "rows": 8370,
+            "selected": true,
+            "selected_threshold": 0.9761749319157347,
+            "standalone": {
+              "threshold": 0.9761749319157347,
+              "tp": 1319,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9761749319157347,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1319,
+              "fp": 0
+            }
+          },
+          "filetypes/csharp": {
+            "kind": "filetype",
+            "rows": 8353,
+            "selected": true,
+            "selected_threshold": 0.9840911662722134,
+            "standalone": {
+              "threshold": 0.9840911662722134,
+              "tp": 67,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9840911662722134,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 67,
+              "fp": 0
+            }
+          },
+          "filetypes/markdown": {
+            "kind": "filetype",
+            "rows": 7698,
+            "selected": true,
+            "selected_threshold": 0.38534786648898117,
+            "standalone": {
+              "threshold": 0.38534786648898117,
+              "tp": 0,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.38534786648898117,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 3
+            }
+          },
+          "filetypes/xls": {
+            "kind": "filetype",
+            "rows": 6727,
+            "selected": true,
+            "selected_threshold": 0.7933555245399475,
+            "standalone": {
+              "threshold": 0.7933555245399475,
+              "tp": 3810,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7933555245399475,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3810,
+              "fp": 0
+            }
+          },
+          "filetypes/xlsx": {
+            "kind": "filetype",
+            "rows": 6695,
+            "selected": true,
+            "selected_threshold": 0.8707722425460815,
+            "standalone": {
+              "threshold": 0.8707722425460815,
+              "tp": 3127,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.8707722425460815,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3127,
+              "fp": 2
+            }
+          },
+          "filetypes/tar.gz": {
+            "kind": "filetype",
+            "rows": 5599,
+            "selected": true,
+            "selected_threshold": 0.9882731363600814,
+            "standalone": {
+              "threshold": 0.9882731363600814,
+              "tp": 3028,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9882731363600814,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3028,
+              "fp": 1
+            }
+          },
+          "filetypes/java": {
+            "kind": "filetype",
+            "rows": 4469,
+            "selected": true,
+            "selected_threshold": 0.9976025223731995,
+            "standalone": {
+              "threshold": 0.9976025223731995,
+              "tp": 3,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9976025223731995,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3,
+              "fp": 0
+            }
+          },
+          "filetypes/package.json": {
+            "kind": "filetype",
+            "rows": 4359,
+            "selected": true,
+            "selected_threshold": 0.9983539581298828,
+            "standalone": {
+              "threshold": 0.9983539581298828,
+              "tp": 1931,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9983539581298828,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1931,
+              "fp": 0
+            }
+          },
+          "filetypes/perl": {
+            "kind": "filetype",
+            "rows": 4226,
+            "selected": true,
+            "selected_threshold": 0.8461275860556632,
+            "standalone": {
+              "threshold": 0.8461275860556632,
+              "tp": 30,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.8461275860556632,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 30,
+              "fp": 1
+            }
+          },
+          "filetypes/json": {
+            "kind": "filetype",
+            "rows": 4024,
+            "selected": true,
+            "selected_threshold": 0.03829383850097656,
+            "standalone": {
+              "threshold": 0.03829383850097656,
+              "tp": 93,
+              "fp": 3931
+            },
+            "best_marginal": {
+              "threshold": 0.03829383850097656,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 93,
+              "fp": 3931
+            }
+          },
+          "filetypes/jpeg": {
+            "kind": "filetype",
+            "rows": 3512,
+            "selected": true,
+            "selected_threshold": 0.9602408144875194,
+            "standalone": {
+              "threshold": 0.9602408144875194,
+              "tp": 18,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9602408144875194,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 18,
+              "fp": 0
+            }
+          },
+          "filetypes/html": {
+            "kind": "filetype",
+            "rows": 3251,
+            "selected": true,
+            "selected_threshold": 0.8294766545295715,
+            "standalone": {
+              "threshold": 0.8294766545295715,
+              "tp": 17,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.8294766545295715,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 17,
+              "fp": 0
+            }
+          },
+          "filetypes/ruby": {
+            "kind": "filetype",
+            "rows": 2993,
+            "selected": true,
+            "selected_threshold": 0.9977202256887461,
+            "standalone": {
+              "threshold": 0.9977202256887461,
+              "tp": 6,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9977202256887461,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 6,
+              "fp": 0
+            }
+          },
+          "filetypes/makefile": {
+            "kind": "filetype",
+            "rows": 3012,
+            "selected": true,
+            "selected_threshold": 0.02006044195115747,
+            "standalone": {
+              "threshold": 0.02006044195115747,
+              "tp": 0,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.02006044195115747,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 2
+            }
+          },
+          "filetypes/lua": {
+            "kind": "filetype",
+            "rows": 2309,
+            "selected": true,
+            "selected_threshold": 0.04844604714307183,
+            "standalone": {
+              "threshold": 0.04844604714307183,
+              "tp": 8,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.04844604714307183,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 8,
+              "fp": 0
+            }
+          },
+          "filetypes/macho": {
+            "kind": "filetype",
+            "rows": 1789,
+            "selected": true,
+            "selected_threshold": 0.947270393371582,
+            "standalone": {
+              "threshold": 0.947270393371582,
+              "tp": 254,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.947270393371582,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 254,
+              "fp": 0
+            }
+          },
+          "filetypes/plist": {
+            "kind": "filetype",
+            "rows": 1647,
+            "selected": true,
+            "selected_threshold": 0.8615944981575012,
+            "standalone": {
+              "threshold": 0.8615944981575012,
+              "tp": 2,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.8615944981575012,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/vbs": {
+            "kind": "filetype",
+            "rows": 1684,
+            "selected": true,
+            "selected_threshold": 0.9939674003947928,
+            "standalone": {
+              "threshold": 0.9939674003947928,
+              "tp": 875,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.9939674003947928,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 875,
+              "fp": 2
+            }
+          },
+          "filetypes/pkg-info": {
+            "kind": "filetype",
+            "rows": 1449,
+            "selected": true,
+            "selected_threshold": 0.06263196468353271,
+            "standalone": {
+              "threshold": 0.06263196468353271,
+              "tp": 1277,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.06263196468353271,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1277,
+              "fp": 4
+            }
+          },
+          "filetypes/ole": {
+            "kind": "filetype",
+            "rows": 1445,
+            "selected": true,
+            "selected_threshold": 0.32986289262771606,
+            "standalone": {
+              "threshold": 0.32986289262771606,
+              "tp": 668,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.32986289262771606,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 668,
+              "fp": 2
+            }
+          },
+          "filetypes/powershell": {
+            "kind": "filetype",
+            "rows": 879,
+            "selected": true,
+            "selected_threshold": 0.8938430547714233,
+            "standalone": {
+              "threshold": 0.8938430547714233,
+              "tp": 396,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.8938430547714233,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 396,
+              "fp": 2
+            }
+          },
+          "filetypes/deb": {
+            "kind": "filetype",
+            "rows": 867,
+            "selected": true,
+            "selected_threshold": 0.1444936394691462,
+            "standalone": {
+              "threshold": 0.1444936394691462,
+              "tp": 5,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.1444936394691462,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 5,
+              "fp": 1
+            }
+          },
+          "filetypes/jar": {
+            "kind": "filetype",
+            "rows": 811,
+            "selected": true,
+            "selected_threshold": 0.3929456953562015,
+            "standalone": {
+              "threshold": 0.3929456953562015,
+              "tp": 296,
+              "fp": 5
+            },
+            "best_marginal": {
+              "threshold": 0.3929456953562015,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 296,
+              "fp": 5
+            }
+          },
+          "filetypes/groovy": {
+            "kind": "filetype",
+            "rows": 806,
+            "selected": true,
+            "selected_threshold": 0.012249581896077047,
+            "standalone": {
+              "threshold": 0.012249581896077047,
+              "tp": 0,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.012249581896077047,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 0
+            }
+          },
+          "filetypes/rtf": {
+            "kind": "filetype",
+            "rows": 742,
+            "selected": true,
+            "selected_threshold": 0.05923277139663696,
+            "standalone": {
+              "threshold": 0.05923277139663696,
+              "tp": 682,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.05923277139663696,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 682,
+              "fp": 0
+            }
+          },
+          "filetypes/lnk": {
+            "kind": "filetype",
+            "rows": 631,
+            "selected": true,
+            "selected_threshold": 0.5052585005760193,
+            "standalone": {
+              "threshold": 0.5052585005760193,
+              "tp": 409,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.5052585005760193,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 409,
+              "fp": 0
+            }
+          },
+          "filetypes/docx": {
+            "kind": "filetype",
+            "rows": 559,
+            "selected": true,
+            "selected_threshold": 0.2326485514640808,
+            "standalone": {
+              "threshold": 0.2326485514640808,
+              "tp": 450,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.2326485514640808,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 450,
+              "fp": 4
+            }
+          },
+          "filetypes/clojure": {
+            "kind": "filetype",
+            "rows": 347,
+            "selected": true,
+            "selected_threshold": 0.9577429603332023,
+            "standalone": {
+              "threshold": 0.9577429603332023,
+              "tp": 4,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9577429603332023,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 4,
+              "fp": 0
+            }
+          },
+          "filetypes/tar": {
+            "kind": "filetype",
+            "rows": 245,
+            "selected": true,
+            "selected_threshold": 0.06313180923461914,
+            "standalone": {
+              "threshold": 0.06313180923461914,
+              "tp": 178,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.06313180923461914,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 178,
+              "fp": 4
+            }
+          },
+          "filetypes/dockerfile": {
+            "kind": "filetype",
+            "rows": 220,
+            "selected": true,
+            "selected_threshold": 0.1385757327079773,
+            "standalone": {
+              "threshold": 0.1385757327079773,
+              "tp": 6,
+              "fp": 214
+            },
+            "best_marginal": {
+              "threshold": 0.1385757327079773,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 6,
+              "fp": 214
+            }
+          },
+          "filetypes/package-lock.json": {
+            "kind": "filetype",
+            "rows": 83,
+            "selected": true,
+            "selected_threshold": 0.2938859462738037,
+            "standalone": {
+              "threshold": 0.2938859462738037,
+              "tp": 5,
+              "fp": 19
+            },
+            "best_marginal": {
+              "threshold": 0.2938859462738037,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 5,
+              "fp": 19
+            }
+          },
+          "filetypes/chrome-manifest": {
+            "kind": "filetype",
+            "rows": 60,
+            "selected": true,
+            "selected_threshold": 0.8901082277297974,
+            "standalone": {
+              "threshold": 0.8901082277297974,
+              "tp": 2,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.8901082277297974,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 1
+            }
+          }
+        },
+        "tp": 226327,
+        "fp": 4329,
+        "tn": 520771,
+        "fn": 70259,
+        "recall": 0.7631074966451552,
+        "precision": 0.9812317910654828,
+        "fp_per_100M": 824414.3972576652,
+        "below_resolution": false,
+        "cp_floor_per_million": 5.713279289585204
+      }
+    },
+    {
+      "level": 10000,
+      "hostile": {
+        "target_per_million": 100.0,
+        "budget": 52,
+        "thresholds": {
+          "general": 0.9910471439361572,
+          "filegroups/scripts": 0.9885204434394836,
+          "filegroups/native": 0.9982929825782776,
+          "filegroups/portable": 0.9999988079071045,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9262991547584534,
+          "filegroups/config": 0.9472449421882629,
+          "filegroups/media": 0.7946338057518005,
+          "filetypes/pe": 0.9992995262145996,
+          "filetypes/java_class": 1.0,
+          "filetypes/javascript": 0.9477983713150024,
+          "filetypes/c": 0.9595204591751099,
+          "filetypes/elf": 0.9924458861351013,
+          "filetypes/pdf": 0.37758001685142517,
+          "filetypes/python": 0.9960784316062927,
+          "filetypes/xml": 0.014904975891113281,
+          "filetypes/batch": 0.9927771091461182,
+          "filetypes/png": 0.07854849100112915,
+          "filetypes/php": 0.9919825196266174,
+          "filetypes/go": 0.27328523993492126,
+          "filetypes/zip": 0.9939855933189392,
+          "filetypes/rust": 0.5024287700653076,
+          "filetypes/kotlin": 0.46581546052916983,
+          "filetypes/python-bytecode": 0.3846517916690619,
+          "filetypes/text": 0.22389566898345947,
+          "filetypes/shell": 0.971748422201114,
+          "filetypes/csharp": 0.9798420015707061,
+          "filetypes/markdown": 0.35725342039191565,
+          "filetypes/xls": 0.7933555245399475,
+          "filetypes/xlsx": 0.8707722425460815,
+          "filetypes/tar.gz": 0.9880290945529907,
+          "filetypes/java": 0.9976025223731995,
+          "filetypes/package.json": 0.9983539581298828,
+          "filetypes/perl": 0.8231328668017869,
+          "filetypes/json": 0.03829383850097656,
+          "filetypes/jpeg": 0.9530974385845743,
+          "filetypes/html": 0.8294766545295715,
+          "filetypes/ruby": 0.9975264982737885,
+          "filetypes/makefile": 0.015765331628150428,
+          "filetypes/lua": 0.04103802940687034,
+          "filetypes/macho": 0.947270393371582,
+          "filetypes/plist": 0.8615944981575012,
+          "filetypes/vbs": 0.9939330616103281,
+          "filetypes/pkg-info": 0.06263196468353271,
+          "filetypes/ole": 0.32986289262771606,
+          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/deb": 0.14449363946914467,
+          "filetypes/jar": 0.3184348960276206,
+          "filetypes/groovy": 0.011911412770065235,
+          "filetypes/rtf": 0.05923277139663696,
+          "filetypes/lnk": 0.5052585005760193,
+          "filetypes/docx": 0.2326485514640808,
+          "filetypes/clojure": 0.9492858464494078,
+          "filetypes/tar": 0.06313180923461914,
+          "filetypes/dockerfile": 0.1385757327079773,
+          "filetypes/package-lock.json": 0.2938859462738037,
+          "filetypes/chrome-manifest": 0.8901082277297974
+        },
+        "diagnostics": {
+          "general": {
+            "kind": "general",
+            "rows": 821686,
+            "selected": true,
+            "selected_threshold": 0.9910471439361572,
+            "standalone": {
+              "threshold": 0.9910471439361572,
+              "tp": 159500,
+              "fp": 44
+            },
+            "best_marginal": {
+              "threshold": 0.9910471439361572,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 159500,
+              "fp": 44
+            }
+          },
+          "filegroups/scripts": {
+            "kind": "filegroup",
+            "rows": 162969,
+            "selected": true,
+            "selected_threshold": 0.9885204434394836,
+            "standalone": {
+              "threshold": 0.9885204434394836,
+              "tp": 33346,
+              "fp": 23
+            },
+            "best_marginal": {
+              "threshold": 0.9885204434394836,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 33346,
+              "fp": 23
+            }
+          },
+          "filegroups/native": {
+            "kind": "filegroup",
+            "rows": 220833,
+            "selected": true,
+            "selected_threshold": 0.9982929825782776,
+            "standalone": {
+              "threshold": 0.9982929825782776,
+              "tp": 120093,
+              "fp": 8
+            },
+            "best_marginal": {
+              "threshold": 0.9982929825782776,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 120093,
+              "fp": 8
+            }
+          },
+          "filegroups/portable": {
+            "kind": "filegroup",
+            "rows": 84031,
+            "selected": true,
+            "selected_threshold": 0.9999988079071045,
+            "standalone": {
+              "threshold": 0.9999988079071045,
+              "tp": 10,
+              "fp": 13
+            },
+            "best_marginal": {
+              "threshold": 0.9999988079071045,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 10,
+              "fp": 13
+            }
+          },
+          "filegroups/documents": {
+            "kind": "filegroup",
+            "rows": 48151,
+            "selected": true,
+            "selected_threshold": 0.7054287195205688,
+            "standalone": {
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7054287195205688,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 15298,
+              "fp": 0
+            }
+          },
+          "filegroups/source": {
+            "kind": "filegroup",
+            "rows": 133691,
+            "selected": true,
+            "selected_threshold": 0.9262991547584534,
+            "standalone": {
+              "threshold": 0.9262991547584534,
+              "tp": 1929,
+              "fp": 6
+            },
+            "best_marginal": {
+              "threshold": 0.9262991547584534,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1929,
+              "fp": 6
+            }
+          },
+          "filegroups/config": {
+            "kind": "filegroup",
+            "rows": 32708,
+            "selected": true,
+            "selected_threshold": 0.9472449421882629,
+            "standalone": {
+              "threshold": 0.9472449421882629,
+              "tp": 2219,
+              "fp": 8
+            },
+            "best_marginal": {
+              "threshold": 0.9472449421882629,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2219,
+              "fp": 8
+            }
+          },
+          "filegroups/media": {
+            "kind": "filegroup",
+            "rows": 23183,
+            "selected": true,
+            "selected_threshold": 0.7946338057518005,
+            "standalone": {
+              "threshold": 0.7946338057518005,
+              "tp": 76,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.7946338057518005,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 76,
+              "fp": 3
+            }
+          },
+          "filetypes/pe": {
+            "kind": "filetype",
+            "rows": 178205,
+            "selected": true,
+            "selected_threshold": 0.9992995262145996,
+            "standalone": {
+              "threshold": 0.9992995262145996,
+              "tp": 75967,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9992995262145996,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 75967,
+              "fp": 1
+            }
+          },
+          "filetypes/java_class": {
+            "kind": "filetype",
+            "rows": 84031,
+            "selected": true,
+            "selected_threshold": 1.0,
+            "standalone": {
+              "threshold": 1.0,
+              "tp": 0,
+              "fp": 14
+            },
+            "best_marginal": {
+              "threshold": 1.0,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 14
+            }
+          },
+          "filetypes/javascript": {
+            "kind": "filetype",
+            "rows": 83198,
+            "selected": true,
+            "selected_threshold": 0.9477983713150024,
+            "standalone": {
+              "threshold": 0.9477983713150024,
+              "tp": 9535,
+              "fp": 19
+            },
+            "best_marginal": {
+              "threshold": 0.9477983713150024,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 9535,
+              "fp": 19
+            }
+          },
+          "filetypes/c": {
+            "kind": "filetype",
+            "rows": 76006,
+            "selected": true,
+            "selected_threshold": 0.9595204591751099,
+            "standalone": {
+              "threshold": 0.9595204591751099,
+              "tp": 247,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.9595204591751099,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 247,
+              "fp": 3
+            }
+          },
+          "filetypes/elf": {
+            "kind": "filetype",
+            "rows": 40839,
+            "selected": true,
+            "selected_threshold": 0.9924458861351013,
+            "standalone": {
+              "threshold": 0.9924458861351013,
+              "tp": 18673,
+              "fp": 6
+            },
+            "best_marginal": {
+              "threshold": 0.9924458861351013,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 18673,
+              "fp": 6
+            }
+          },
+          "filetypes/pdf": {
+            "kind": "filetype",
+            "rows": 25187,
+            "selected": true,
+            "selected_threshold": 0.37758001685142517,
+            "standalone": {
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.37758001685142517,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 19493,
+              "fp": 4
+            }
+          },
+          "filetypes/python": {
+            "kind": "filetype",
+            "rows": 22854,
+            "selected": true,
+            "selected_threshold": 0.9960784316062927,
+            "standalone": {
+              "threshold": 0.9960784316062927,
+              "tp": 1524,
+              "fp": 6
+            },
+            "best_marginal": {
+              "threshold": 0.9960784316062927,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1524,
+              "fp": 6
+            }
+          },
+          "filetypes/xml": {
+            "kind": "filetype",
+            "rows": 22678,
+            "selected": true,
+            "selected_threshold": 0.014904975891113281,
+            "standalone": {
+              "threshold": 0.014904975891113281,
+              "tp": 381,
+              "fp": 22297
+            },
+            "best_marginal": {
+              "threshold": 0.014904975891113281,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 381,
+              "fp": 22297
+            }
+          },
+          "filetypes/batch": {
+            "kind": "filetype",
+            "rows": 22531,
+            "selected": true,
+            "selected_threshold": 0.9927771091461182,
+            "standalone": {
+              "threshold": 0.9927771091461182,
+              "tp": 21404,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9927771091461182,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 21404,
+              "fp": 0
+            }
+          },
+          "filetypes/png": {
+            "kind": "filetype",
+            "rows": 19671,
+            "selected": true,
+            "selected_threshold": 0.07854849100112915,
+            "standalone": {
+              "threshold": 0.07854849100112915,
+              "tp": 59,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.07854849100112915,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 59,
+              "fp": 3
+            }
+          },
+          "filetypes/php": {
+            "kind": "filetype",
+            "rows": 15609,
+            "selected": true,
+            "selected_threshold": 0.9919825196266174,
+            "standalone": {
+              "threshold": 0.9919825196266174,
+              "tp": 355,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9919825196266174,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 355,
+              "fp": 0
+            }
+          },
+          "filetypes/go": {
+            "kind": "filetype",
+            "rows": 14896,
+            "selected": true,
+            "selected_threshold": 0.27328523993492126,
+            "standalone": {
+              "threshold": 0.27328523993492126,
+              "tp": 119,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.27328523993492126,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 119,
+              "fp": 4
+            }
+          },
+          "filetypes/zip": {
+            "kind": "filetype",
+            "rows": 13406,
+            "selected": true,
+            "selected_threshold": 0.9939855933189392,
+            "standalone": {
+              "threshold": 0.9939855933189392,
+              "tp": 4630,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9939855933189392,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 4630,
+              "fp": 1
+            }
+          },
+          "filetypes/rust": {
+            "kind": "filetype",
+            "rows": 10512,
+            "selected": true,
+            "selected_threshold": 0.5024287700653076,
+            "standalone": {
+              "threshold": 0.5024287700653076,
+              "tp": 4,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.5024287700653076,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 4,
+              "fp": 0
+            }
+          },
+          "filetypes/kotlin": {
+            "kind": "filetype",
+            "rows": 10337,
+            "selected": true,
+            "selected_threshold": 0.46581546052916983,
+            "standalone": {
+              "threshold": 0.46581546052916983,
+              "tp": 2013,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.46581546052916983,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2013,
+              "fp": 2
+            }
+          },
+          "filetypes/python-bytecode": {
+            "kind": "filetype",
+            "rows": 9576,
+            "selected": true,
+            "selected_threshold": 0.3846517916690619,
+            "standalone": {
+              "threshold": 0.3846517916690619,
+              "tp": 336,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.3846517916690619,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 336,
+              "fp": 0
+            }
+          },
+          "filetypes/text": {
+            "kind": "filetype",
+            "rows": 8942,
+            "selected": true,
+            "selected_threshold": 0.22389566898345947,
+            "standalone": {
+              "threshold": 0.22389566898345947,
+              "tp": 24,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.22389566898345947,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 24,
+              "fp": 3
+            }
+          },
+          "filetypes/shell": {
+            "kind": "filetype",
+            "rows": 8370,
+            "selected": true,
+            "selected_threshold": 0.971748422201114,
+            "standalone": {
+              "threshold": 0.971748422201114,
+              "tp": 1332,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.971748422201114,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1332,
+              "fp": 0
+            }
+          },
+          "filetypes/csharp": {
+            "kind": "filetype",
+            "rows": 8353,
+            "selected": true,
+            "selected_threshold": 0.9798420015707061,
+            "standalone": {
+              "threshold": 0.9798420015707061,
+              "tp": 68,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9798420015707061,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 68,
+              "fp": 0
+            }
+          },
+          "filetypes/markdown": {
+            "kind": "filetype",
+            "rows": 7698,
+            "selected": true,
+            "selected_threshold": 0.35725342039191565,
+            "standalone": {
+              "threshold": 0.35725342039191565,
+              "tp": 0,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.35725342039191565,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 3
+            }
+          },
+          "filetypes/xls": {
+            "kind": "filetype",
+            "rows": 6727,
+            "selected": true,
+            "selected_threshold": 0.7933555245399475,
+            "standalone": {
+              "threshold": 0.7933555245399475,
+              "tp": 3810,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.7933555245399475,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3810,
+              "fp": 0
+            }
+          },
+          "filetypes/xlsx": {
+            "kind": "filetype",
+            "rows": 6695,
+            "selected": true,
+            "selected_threshold": 0.8707722425460815,
+            "standalone": {
+              "threshold": 0.8707722425460815,
+              "tp": 3127,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.8707722425460815,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3127,
+              "fp": 2
+            }
+          },
+          "filetypes/tar.gz": {
+            "kind": "filetype",
+            "rows": 5599,
+            "selected": true,
+            "selected_threshold": 0.9880290945529907,
+            "standalone": {
+              "threshold": 0.9880290945529907,
+              "tp": 3033,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.9880290945529907,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3033,
+              "fp": 1
+            }
+          },
+          "filetypes/java": {
+            "kind": "filetype",
+            "rows": 4469,
+            "selected": true,
+            "selected_threshold": 0.9976025223731995,
+            "standalone": {
+              "threshold": 0.9976025223731995,
+              "tp": 3,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9976025223731995,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 3,
+              "fp": 0
+            }
+          },
+          "filetypes/package.json": {
+            "kind": "filetype",
+            "rows": 4359,
+            "selected": true,
+            "selected_threshold": 0.9983539581298828,
+            "standalone": {
+              "threshold": 0.9983539581298828,
+              "tp": 1931,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9983539581298828,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1931,
+              "fp": 0
+            }
+          },
+          "filetypes/perl": {
+            "kind": "filetype",
+            "rows": 4226,
+            "selected": true,
+            "selected_threshold": 0.8231328668017869,
+            "standalone": {
+              "threshold": 0.8231328668017869,
+              "tp": 31,
+              "fp": 3
+            },
+            "best_marginal": {
+              "threshold": 0.8231328668017869,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 31,
+              "fp": 3
+            }
+          },
+          "filetypes/json": {
+            "kind": "filetype",
+            "rows": 4024,
+            "selected": true,
+            "selected_threshold": 0.03829383850097656,
+            "standalone": {
+              "threshold": 0.03829383850097656,
+              "tp": 93,
+              "fp": 3931
+            },
+            "best_marginal": {
+              "threshold": 0.03829383850097656,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 93,
+              "fp": 3931
+            }
+          },
+          "filetypes/jpeg": {
+            "kind": "filetype",
+            "rows": 3512,
+            "selected": true,
+            "selected_threshold": 0.9530974385845743,
+            "standalone": {
+              "threshold": 0.9530974385845743,
+              "tp": 18,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9530974385845743,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 18,
+              "fp": 0
+            }
+          },
+          "filetypes/html": {
+            "kind": "filetype",
+            "rows": 3251,
+            "selected": true,
+            "selected_threshold": 0.8294766545295715,
+            "standalone": {
+              "threshold": 0.8294766545295715,
+              "tp": 17,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.8294766545295715,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 17,
+              "fp": 0
+            }
+          },
+          "filetypes/ruby": {
+            "kind": "filetype",
+            "rows": 2993,
+            "selected": true,
+            "selected_threshold": 0.9975264982737885,
+            "standalone": {
+              "threshold": 0.9975264982737885,
+              "tp": 6,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9975264982737885,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 6,
+              "fp": 0
+            }
+          },
+          "filetypes/makefile": {
+            "kind": "filetype",
+            "rows": 3012,
+            "selected": true,
+            "selected_threshold": 0.015765331628150428,
+            "standalone": {
+              "threshold": 0.015765331628150428,
+              "tp": 0,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.015765331628150428,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 2
+            }
+          },
+          "filetypes/lua": {
+            "kind": "filetype",
+            "rows": 2309,
+            "selected": true,
+            "selected_threshold": 0.04103802940687034,
+            "standalone": {
+              "threshold": 0.04103802940687034,
+              "tp": 8,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.04103802940687034,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 8,
+              "fp": 0
+            }
+          },
+          "filetypes/macho": {
+            "kind": "filetype",
+            "rows": 1789,
+            "selected": true,
+            "selected_threshold": 0.947270393371582,
+            "standalone": {
+              "threshold": 0.947270393371582,
+              "tp": 254,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.947270393371582,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 254,
+              "fp": 0
+            }
+          },
+          "filetypes/plist": {
+            "kind": "filetype",
+            "rows": 1647,
+            "selected": true,
+            "selected_threshold": 0.8615944981575012,
+            "standalone": {
+              "threshold": 0.8615944981575012,
+              "tp": 2,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.8615944981575012,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 1
+            }
+          },
+          "filetypes/vbs": {
+            "kind": "filetype",
+            "rows": 1684,
+            "selected": true,
+            "selected_threshold": 0.9939330616103281,
+            "standalone": {
+              "threshold": 0.9939330616103281,
+              "tp": 876,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.9939330616103281,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 876,
+              "fp": 2
+            }
+          },
+          "filetypes/pkg-info": {
+            "kind": "filetype",
+            "rows": 1449,
+            "selected": true,
+            "selected_threshold": 0.06263196468353271,
+            "standalone": {
+              "threshold": 0.06263196468353271,
+              "tp": 1277,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.06263196468353271,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 1277,
+              "fp": 4
+            }
+          },
+          "filetypes/ole": {
+            "kind": "filetype",
+            "rows": 1445,
+            "selected": true,
+            "selected_threshold": 0.32986289262771606,
+            "standalone": {
+              "threshold": 0.32986289262771606,
+              "tp": 668,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.32986289262771606,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 668,
+              "fp": 2
+            }
+          },
+          "filetypes/powershell": {
+            "kind": "filetype",
+            "rows": 879,
+            "selected": true,
+            "selected_threshold": 0.8938430547714233,
+            "standalone": {
+              "threshold": 0.8938430547714233,
+              "tp": 396,
+              "fp": 2
+            },
+            "best_marginal": {
+              "threshold": 0.8938430547714233,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 396,
+              "fp": 2
+            }
+          },
+          "filetypes/deb": {
+            "kind": "filetype",
+            "rows": 867,
+            "selected": true,
+            "selected_threshold": 0.14449363946914467,
+            "standalone": {
+              "threshold": 0.14449363946914467,
+              "tp": 5,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.14449363946914467,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 5,
+              "fp": 1
+            }
+          },
+          "filetypes/jar": {
+            "kind": "filetype",
+            "rows": 811,
+            "selected": true,
+            "selected_threshold": 0.3184348960276206,
+            "standalone": {
+              "threshold": 0.3184348960276206,
+              "tp": 301,
+              "fp": 6
+            },
+            "best_marginal": {
+              "threshold": 0.3184348960276206,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 301,
+              "fp": 6
+            }
+          },
+          "filetypes/groovy": {
+            "kind": "filetype",
+            "rows": 806,
+            "selected": true,
+            "selected_threshold": 0.011911412770065235,
+            "standalone": {
+              "threshold": 0.011911412770065235,
+              "tp": 0,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.011911412770065235,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 0,
+              "fp": 0
+            }
+          },
+          "filetypes/rtf": {
+            "kind": "filetype",
+            "rows": 742,
+            "selected": true,
+            "selected_threshold": 0.05923277139663696,
+            "standalone": {
+              "threshold": 0.05923277139663696,
+              "tp": 682,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.05923277139663696,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 682,
+              "fp": 0
+            }
+          },
+          "filetypes/lnk": {
+            "kind": "filetype",
+            "rows": 631,
+            "selected": true,
+            "selected_threshold": 0.5052585005760193,
+            "standalone": {
+              "threshold": 0.5052585005760193,
+              "tp": 409,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.5052585005760193,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 409,
+              "fp": 0
+            }
+          },
+          "filetypes/docx": {
+            "kind": "filetype",
+            "rows": 559,
+            "selected": true,
+            "selected_threshold": 0.2326485514640808,
+            "standalone": {
+              "threshold": 0.2326485514640808,
+              "tp": 450,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.2326485514640808,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 450,
+              "fp": 4
+            }
+          },
+          "filetypes/clojure": {
+            "kind": "filetype",
+            "rows": 347,
+            "selected": true,
+            "selected_threshold": 0.9492858464494078,
+            "standalone": {
+              "threshold": 0.9492858464494078,
+              "tp": 4,
+              "fp": 0
+            },
+            "best_marginal": {
+              "threshold": 0.9492858464494078,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 4,
+              "fp": 0
+            }
+          },
+          "filetypes/tar": {
+            "kind": "filetype",
+            "rows": 245,
+            "selected": true,
+            "selected_threshold": 0.06313180923461914,
+            "standalone": {
+              "threshold": 0.06313180923461914,
+              "tp": 178,
+              "fp": 4
+            },
+            "best_marginal": {
+              "threshold": 0.06313180923461914,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 178,
+              "fp": 4
+            }
+          },
+          "filetypes/dockerfile": {
+            "kind": "filetype",
+            "rows": 220,
+            "selected": true,
+            "selected_threshold": 0.1385757327079773,
+            "standalone": {
+              "threshold": 0.1385757327079773,
+              "tp": 6,
+              "fp": 214
+            },
+            "best_marginal": {
+              "threshold": 0.1385757327079773,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 6,
+              "fp": 214
+            }
+          },
+          "filetypes/package-lock.json": {
+            "kind": "filetype",
+            "rows": 83,
+            "selected": true,
+            "selected_threshold": 0.2938859462738037,
+            "standalone": {
+              "threshold": 0.2938859462738037,
+              "tp": 5,
+              "fp": 19
+            },
+            "best_marginal": {
+              "threshold": 0.2938859462738037,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 5,
+              "fp": 19
+            }
+          },
+          "filetypes/chrome-manifest": {
+            "kind": "filetype",
+            "rows": 60,
+            "selected": true,
+            "selected_threshold": 0.8901082277297974,
+            "standalone": {
+              "threshold": 0.8901082277297974,
+              "tp": 2,
+              "fp": 1
+            },
+            "best_marginal": {
+              "threshold": 0.8901082277297974,
+              "inc_tp": 0,
+              "inc_fp": 0,
+              "tp": 2,
+              "fp": 1
+            }
+          }
+        },
+        "tp": 229358,
+        "fp": 26651,
+        "tn": 498449,
+        "fn": 67228,
+        "recall": 0.7733271293992299,
+        "precision": 0.8958981910792199,
+        "fp_per_100M": 5075414.206817749,
         "below_resolution": false,
         "cp_floor_per_million": 5.713279289585204
       }
