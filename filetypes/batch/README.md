@@ -6,23 +6,23 @@ LightGBM specialist for `batch`. Member of the Azoth routed ensemble; bundle roo
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `batch` slice of the locked test partition: 22,011 malware / 520 benign (22,531 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999940 | 0.998434 | 0.998184 | — | 0.0030 |
+| 0.999940 | 0.998434 | 0.998184 | 98.51% | 0.0030 |
 
 ## Specialist Performance
 
 `filetypes/batch` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999986 | 0.999402 | 0.998455 | — | 0.0042 | — |
+| 0.999986 | 0.999402 | 0.998455 | 98.46% | 0.0042 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="batch: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 

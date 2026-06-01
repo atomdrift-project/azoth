@@ -6,15 +6,15 @@ LightGBM specialist for `json`. Member of the Azoth routed ensemble; bundle root
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `json` slice of the locked test partition: 93 malware / 3,935 benign (4,028 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.065329 | 0.490574 | 0.082474 | — | 0.0226 |
+| 0.065329 | 0.490574 | 0.082474 | 0.00% | 0.0226 |
 
 ## Specialist Performance
 
 `filetypes/json` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
 | 0.023088 | 0.500000 | 0.045135 | — | 0.0228 | — |
 
@@ -22,7 +22,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `json` 
 
 <img src="recall_curve.svg" alt="json: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 

@@ -6,23 +6,23 @@ LightGBM specialist for `lua`. Member of the Azoth routed ensemble; bundle root:
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `lua` slice of the locked test partition: 13 malware / 2,296 benign (2,309 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.758723 | 0.984522 | 0.818182 | — | 0.0048 |
+| 0.758723 | 0.984522 | 0.818182 | 69.23% | 0.0048 |
 
 ## Specialist Performance
 
 `filetypes/lua` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.787742 | 0.922558 | 0.769231 | — | 0.0038 | — |
+| 0.787742 | 0.922558 | 0.769231 | 38.46% | 0.0038 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="lua: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 

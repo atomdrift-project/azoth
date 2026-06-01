@@ -6,23 +6,23 @@ LightGBM specialist for `python`. Member of the Azoth routed ensemble; bundle ro
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `python` slice of the locked test partition: 2,343 malware / 20,510 benign (22,853 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.952485 | 0.990974 | 0.909735 | — | 0.0227 |
+| 0.952485 | 0.990974 | 0.909735 | 47.33% | 0.0227 |
 
 ## Specialist Performance
 
 `filetypes/python` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.972150 | 0.995242 | 0.925094 | — | 0.0142 | — |
+| 0.972150 | 0.995242 | 0.925094 | 42.30% | 0.0142 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="python: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 

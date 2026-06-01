@@ -6,23 +6,23 @@ LightGBM specialist for `zip`. Member of the Azoth routed ensemble; bundle root:
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `zip` slice of the locked test partition: 12,126 malware / 1,245 benign (13,371 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.984192 | 0.878095 | 0.971834 | — | 0.0465 |
+| 0.984192 | 0.878095 | 0.971834 | 32.22% | 0.0465 |
 
 ## Specialist Performance
 
 `filetypes/zip` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.983600 | 0.870155 | 0.972947 | — | 0.2730 | — |
+| 0.983600 | 0.870155 | 0.972947 | 31.76% | 0.2730 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="zip: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 

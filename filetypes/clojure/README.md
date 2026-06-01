@@ -6,23 +6,23 @@ LightGBM specialist for `clojure`. Member of the Azoth routed ensemble; bundle r
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `clojure` slice of the locked test partition: 7 malware / 340 benign (347 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.664053 | 0.833403 | 0.727273 | — | 0.0223 |
+| 0.664053 | 0.833403 | 0.727273 | 57.14% | 0.0223 |
 
 ## Specialist Performance
 
 `filetypes/clojure` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.664053 | 0.833403 | 0.727273 | — | 0.0223 | — |
+| 0.664053 | 0.833403 | 0.727273 | 57.14% | 0.0223 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="clojure: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 

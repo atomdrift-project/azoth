@@ -6,23 +6,23 @@ LightGBM specialist for `javascript`. Member of the Azoth routed ensemble; bundl
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `javascript` slice of the locked test partition: 12,360 malware / 70,684 benign (83,044 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.962079 | 0.988702 | 0.890704 | — | 0.0299 |
+| 0.962079 | 0.988702 | 0.890704 | 66.76% | 0.0299 |
 
 ## Specialist Performance
 
 `filetypes/javascript` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.970924 | 0.991358 | 0.913622 | — | 0.0207 | — |
+| 0.970924 | 0.991358 | 0.913622 | 66.17% | 0.0207 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="javascript: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 

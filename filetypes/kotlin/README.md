@@ -6,23 +6,23 @@ LightGBM specialist for `kotlin`. Member of the Azoth routed ensemble; bundle ro
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin` slice of the locked test partition: 3,927 malware / 6,300 benign (10,227 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.973192 | 0.974576 | 0.946777 | — | 0.0357 |
+| 0.973192 | 0.974576 | 0.946777 | 48.03% | 0.0357 |
 
 ## Specialist Performance
 
 `filetypes/kotlin` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.972668 | 0.972481 | 0.943947 | — | 0.1907 | — |
+| 0.972668 | 0.972481 | 0.943947 | 47.95% | 0.1907 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="kotlin: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 

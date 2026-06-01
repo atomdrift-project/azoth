@@ -6,23 +6,23 @@ LightGBM specialist for `jar`. Member of the Azoth routed ensemble; bundle root:
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `jar` slice of the locked test partition: 402 malware / 428 benign (830 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.984229 | 0.984813 | 0.950739 | — | 0.1016 |
+| 0.984229 | 0.984813 | 0.950739 | 55.47% | 0.1016 |
 
 ## Specialist Performance
 
 `filetypes/jar` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.984229 | 0.984813 | 0.950739 | — | 0.1016 | — |
+| 0.984229 | 0.984813 | 0.950739 | 55.47% | 0.1016 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="jar: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 

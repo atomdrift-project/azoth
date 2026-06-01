@@ -6,7 +6,7 @@ LightGBM specialist for `dockerfile`. Member of the Azoth routed ensemble; bundl
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `dockerfile` slice of the locked test partition: 6 malware / 214 benign (220 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
 | 0.027273 | 0.500000 | 0.053097 | — | 0.0389 |
 
@@ -14,7 +14,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `docker
 
 `filetypes/dockerfile` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
 | 0.027273 | 0.500000 | 0.053097 | — | 0.0389 | — |
 
@@ -22,7 +22,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `docker
 
 <img src="recall_curve.svg" alt="dockerfile: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 

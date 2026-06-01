@@ -6,23 +6,23 @@ LightGBM specialist for `pe`. Member of the Azoth routed ensemble; bundle root: 
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `pe` slice of the locked test partition: 155,642 malware / 19,955 benign (175,597 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999488 | 0.996354 | 0.991928 | — | 0.0221 |
+| 0.999488 | 0.996354 | 0.991928 | 65.64% | 0.0221 |
 
 ## Specialist Performance
 
 `filetypes/pe` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999566 | 0.996786 | 0.992091 | — | 0.0163 | PR +0.001266 / ROC -0.001414 |
+| 0.999566 | 0.996786 | 0.992091 | 58.53% | 0.0163 | PR +0.001266 / ROC -0.001414 |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="pe: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 

@@ -6,23 +6,23 @@ LightGBM specialist for `php`. Member of the Azoth routed ensemble; bundle root:
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `php` slice of the locked test partition: 561 malware / 15,056 benign (15,617 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.916493 | 0.990022 | 0.868726 | — | 0.0078 |
+| 0.916493 | 0.990022 | 0.868726 | 64.88% | 0.0078 |
 
 ## Specialist Performance
 
 `filetypes/php` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.916493 | 0.990022 | 0.868726 | — | 0.0078 | — |
+| 0.916493 | 0.990022 | 0.868726 | 64.88% | 0.0078 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="php: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 

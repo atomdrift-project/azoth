@@ -6,7 +6,7 @@ LightGBM specialist for `crx`. Member of the Azoth routed ensemble; bundle root:
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `crx` slice of the locked test partition: 39 malware / 10 benign (49 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
 | 0.986007 | 0.938462 | 0.935065 | — | 0.0846 |
 
@@ -14,7 +14,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `crx` s
 
 `filetypes/crx` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
 | 0.986007 | 0.938462 | 0.935065 | — | 0.0846 | — |
 

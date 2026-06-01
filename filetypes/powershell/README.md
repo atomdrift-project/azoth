@@ -6,23 +6,23 @@ LightGBM specialist for `powershell`. Member of the Azoth routed ensemble; bundl
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `powershell` slice of the locked test partition: 578 malware / 299 benign (877 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.982718 | 0.972029 | 0.949628 | — | 0.0616 |
+| 0.982718 | 0.972029 | 0.949628 | 40.48% | 0.0616 |
 
 ## Specialist Performance
 
 `filetypes/powershell` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.991074 | 0.985401 | 0.968013 | — | 0.0578 | — |
+| 0.991074 | 0.985401 | 0.968013 | 31.49% | 0.0578 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="powershell: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
 
 ## Routing
 
