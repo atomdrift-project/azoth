@@ -68,6 +68,7 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 | filetypes/lnk† | filetype_only | 4027 | 1055 | 70.60% | 0 | 0.00 | 283552.89 | 0.000 | 82.77% | 76.70% | `{"filetypes/lnk": 0.9666239845440031}` |
 | filetypes/vbs | joint_or_at_fp_0 | 9655 | 3301 | 63.81% | 0 | 0.00 | 90711.10 | 0.000 | 77.91% | 73.03% | `{"filetypes/vbs": 0.9959895014762878, "general": 0.9731259942054749}` |
 | filetypes/perl | joint_or_at_fp_0 | 310 | 33185 | 63.23% | 0 | 0.00 | 9026.96 | 0.000 | 77.47% | 99.66% | `{"filegroups/scripts": 0.9813587069511414, "filetypes/perl": 0.9944701194763184}` |
+| filetypes/pdf† | filetype_only | 178284 | 21735 | 62.15% | 0 | 0.00 | 13782.04 | 0.000 | 76.66% | 66.26% | `{"filetypes/pdf": 0.8455750675154717}` |
 | filetypes/macho† | filetype_only | 2518 | 11373 | 55.40% | 0 | 0.00 | 26337.27 | 0.000 | 71.30% | 91.92% | `{"filetypes/macho": 0.9950642199015115}` |
 | filetypes/javascript | joint_or_at_fp_0 | 99494 | 559855 | 55.07% | 0 | 0.00 | 535.09 | 0.000 | 71.03% | 93.22% | `{"filegroups/scripts": 0.9977161884307861, "filetypes/javascript": 0.9938919544219971, "general": 0.9983687996864319}` |
 | filetypes/jar | joint_or_at_fp_0 | 3083 | 3558 | 54.07% | 0 | 0.00 | 84161.65 | 0.000 | 70.19% | 78.68% | `{"filetypes/jar": 0.9076920747756958, "general": 0.9845328330993652}` |
@@ -77,4 +78,3 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 | filetypes/kotlin | joint_or_at_fp_0 | 32813 | 50489 | 46.02% | 0 | 0.00 | 5933.26 | 0.000 | 63.03% | 78.74% | `{"filegroups/source": 0.9639520645141602, "filetypes/kotlin": 0.8846541047096252, "general": 0.9302482008934021}` |
 | filetypes/xlsx | joint_or_at_fp_0 | 51918 | 1585 | 44.11% | 0 | 0.00 | 188826.69 | 0.000 | 61.22% | 45.77% | `{"filegroups/documents": 0.5877025127410889, "filetypes/xlsx": 0.92574143409729}` |
 | filetypes/php | joint_or_at_fp_0 | 4233 | 120277 | 43.96% | 0 | 0.00 | 2490.66 | 0.000 | 61.08% | 98.09% | `{"filegroups/scripts": 0.9966230392456055, "filetypes/php": 0.9997223019599915, "general": 0.98988938331604}` |
-| filetypes/python | joint_or_at_fp_0 | 18646 | 163686 | 43.70% | 0 | 0.00 | 1830.15 | 0.000 | 60.82% | 94.24% | `{"filegroups/scripts": 0.9982466697692871, "filetypes/python": 0.9998779296875, "general": 0.9953924417495728}` |

@@ -9114,36 +9114,36 @@
             "fp_at_3fp": 3
           },
           "filetypes/pdf": {
-            "pr_auc": 0.9990655215988369,
-            "recall_at_0fp": 0.0750233613669737,
-            "threshold_at_0fp": 0.5605707764625549,
+            "pr_auc": 0.999267386104522,
+            "recall_at_0fp": 0.7371957460063187,
+            "threshold_at_0fp": 0.5046210289001465,
             "fp_at_0fp": 0,
-            "recall_at_1fp": 0.11978819027277177,
-            "threshold_at_1fp": 0.18679356575012207,
+            "recall_at_1fp": 0.7373292395318827,
+            "threshold_at_1fp": 0.4970571994781494,
             "fp_at_1fp": 1,
-            "recall_at_3fp": 0.19712543941618832,
-            "threshold_at_3fp": 0.1508162021636963,
+            "recall_at_3fp": 0.8673964312730833,
+            "threshold_at_3fp": 0.382976233959198,
             "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.9973257758157488,
-          "recall_at_0fp": 0.06545632536821964,
+          "pr_auc": 0.9990662823870178,
+          "recall_at_0fp": 0.061629510968718014,
           "threshold_at_0fp": 0.9472273588180542,
           "fp_at_0fp": 0,
-          "recall_at_1fp": 0.07315445200907755,
-          "threshold_at_1fp": 0.8875188231468201,
+          "recall_at_1fp": 0.3082810483691541,
+          "threshold_at_1fp": 0.8874497413635254,
           "fp_at_1fp": 1,
-          "recall_at_3fp": 0.07355493258576959,
-          "threshold_at_3fp": 0.8532293438911438,
+          "recall_at_3fp": 0.6356961687358164,
+          "threshold_at_3fp": 0.8521989583969116,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 1933,
+          "tp": 15991,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.7115649890980288,
           "active_routes": [
             "general",
             "filegroups/documents",
@@ -9151,9 +9151,9 @@
           ]
         },
         "L1_hostile": {
-          "tp": 1933,
+          "tp": 15991,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.7115649890980288,
           "active_routes": [
             "general",
             "filegroups/documents",
@@ -9161,9 +9161,9 @@
           ]
         },
         "L2_hostile": {
-          "tp": 1933,
+          "tp": 15991,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.7115649890980288,
           "active_routes": [
             "general",
             "filegroups/documents",
@@ -9171,9 +9171,9 @@
           ]
         },
         "L3_hostile": {
-          "tp": 1933,
+          "tp": 15991,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.7115649890980288,
           "active_routes": [
             "general",
             "filegroups/documents",
@@ -9181,9 +9181,9 @@
           ]
         },
         "L5_hostile": {
-          "tp": 1933,
+          "tp": 15991,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.7115649890980288,
           "active_routes": [
             "general",
             "filegroups/documents",
@@ -9191,139 +9191,113 @@
           ]
         },
         "L10_hostile": {
-          "tp": 1933,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.0,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L20_hostile": {
-          "tp": 1933,
+          "tp": 856,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.03809015262759756,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L30_hostile": {
-          "tp": 1933,
+          "tp": 861,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.038312641836870914,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L40_hostile": {
-          "tp": 1933,
+          "tp": 6260,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.2785564900102345,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L50_hostile": {
-          "tp": 1933,
+          "tp": 9738,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.4333199839807769,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L60_hostile": {
-          "tp": 1933,
+          "tp": 11608,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.5165309482490099,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L70_hostile": {
-          "tp": 1933,
+          "tp": 12326,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.548480398700663,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L80_hostile": {
-          "tp": 1933,
+          "tp": 13588,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.6046366751212566,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L90_hostile": {
-          "tp": 1933,
+          "tp": 13682,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.6088194722555956,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L100_hostile": {
-          "tp": 1933,
+          "tp": 13953,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.6208783873982112,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L200_hostile": {
-          "tp": 1933,
+          "tp": 15018,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.6682685889734348,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L300_hostile": {
-          "tp": 1933,
+          "tp": 15198,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.6762782005072754,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L500_hostile": {
-          "tp": 1933,
+          "tp": 15330,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.6821519156320919,
           "active_routes": [
-            "general",
-            "filegroups/documents",
             "filetypes/pdf"
           ]
         },
         "L1000_hostile": {
-          "tp": 1933,
+          "tp": 15991,
           "fp": 0,
-          "recall": 0.0860143283050772,
+          "recall": 0.7115649890980288,
           "active_routes": [
             "general",
             "filegroups/documents",
@@ -9332,12 +9306,10 @@
         }
       },
       "deployed_or_summary": {
-        "tp": 1933,
+        "tp": 9738,
         "fp": 0,
-        "recall": 0.0860143283050772,
+        "recall": 0.4333199839807769,
         "active_routes": [
-          "general",
-          "filegroups/documents",
           "filetypes/pdf"
         ]
       }

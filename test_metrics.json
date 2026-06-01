@@ -1,6 +1,6 @@
 {
   "schema": "azoth.evaluation.v1",
-  "timestamp": "2026-06-01T09:46:39.108451+00:00",
+  "timestamp": "2026-06-01T13:09:34.695988+00:00",
   "applied_from": "out/models/azoth/config.json",
   "partition": "test",
   "rows": 821686,
@@ -44,7 +44,7 @@
           "filetypes/javascript": 0.9734140946264662,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939401138726052,
-          "filetypes/pdf": 0.7304162729311576,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.997952937774919,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -328,18 +328,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.7304162729311576,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.7304162729311576,
-              "tp": 1472,
-              "fp": 0
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.7304162729311576,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1472,
-              "fp": 0
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -1117,13 +1117,13 @@
             }
           }
         },
-        "tp": 168351,
-        "fp": 4263,
-        "tn": 520837,
-        "fn": 128235,
-        "recall": 0.5676296251340253,
-        "precision": 0.9753032778337795,
-        "fp_per_100M": 811845.3627880404,
+        "tp": 185715,
+        "fp": 4267,
+        "tn": 520833,
+        "fn": 110871,
+        "recall": 0.6261758815318322,
+        "precision": 0.97753997747155,
+        "fp_per_100M": 812607.1224528662,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -1147,7 +1147,7 @@
           "filetypes/javascript": 0.9733952998760399,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939401119455757,
-          "filetypes/pdf": 0.6146855714550657,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979529371674112,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -1431,18 +1431,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.6146855714550657,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.6146855714550657,
-              "tp": 1602,
-              "fp": 0
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.6146855714550657,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1602,
-              "fp": 0
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -2220,13 +2220,13 @@
             }
           }
         },
-        "tp": 168430,
-        "fp": 4263,
-        "tn": 520837,
-        "fn": 128156,
-        "recall": 0.5678959896960747,
-        "precision": 0.9753145755763117,
-        "fp_per_100M": 811845.3627880404,
+        "tp": 185779,
+        "fp": 4267,
+        "tn": 520833,
+        "fn": 110807,
+        "recall": 0.6263916705441255,
+        "precision": 0.9775475411216232,
+        "fp_per_100M": 812607.1224528662,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -2250,7 +2250,7 @@
           "filetypes/javascript": 0.9733791449840923,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939401095026478,
-          "filetypes/pdf": 0.5555378942368797,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979529363474332,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -2534,18 +2534,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.5555378942368797,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.5555378942368797,
-              "tp": 1686,
-              "fp": 0
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.5555378942368797,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1686,
-              "fp": 0
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -3323,13 +3323,13 @@
             }
           }
         },
-        "tp": 168506,
-        "fp": 4263,
-        "tn": 520837,
-        "fn": 128080,
-        "recall": 0.5681522391481729,
-        "precision": 0.9753254345397612,
-        "fp_per_100M": 811845.3627880404,
+        "tp": 185854,
+        "fp": 4267,
+        "tn": 520833,
+        "fn": 110732,
+        "recall": 0.6266445482929066,
+        "precision": 0.9775563982937182,
+        "fp_per_100M": 812607.1224528662,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -3353,7 +3353,7 @@
           "filetypes/javascript": 0.9733508748730583,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939401034478402,
-          "filetypes/pdf": 0.4888973521045966,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979529341942469,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -3637,18 +3637,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.4888973521045966,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.4888973521045966,
-              "tp": 1704,
-              "fp": 1
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.4888973521045966,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1704,
-              "fp": 1
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -4426,13 +4426,13 @@
             }
           }
         },
-        "tp": 168596,
-        "fp": 4264,
-        "tn": 520836,
-        "fn": 127990,
-        "recall": 0.5684556924467102,
-        "precision": 0.9753326391299317,
-        "fp_per_100M": 812035.8027042468,
+        "tp": 185942,
+        "fp": 4267,
+        "tn": 520833,
+        "fn": 110644,
+        "recall": 0.6269412581848098,
+        "precision": 0.9775667818031744,
+        "fp_per_100M": 812607.1224528662,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -4456,7 +4456,7 @@
           "filetypes/javascript": 0.9732916865339559,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.993940083297511,
-          "filetypes/pdf": 0.4107993337098641,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979529264526695,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -4740,18 +4740,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.4107993337098641,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.4107993337098641,
-              "tp": 1715,
-              "fp": 1
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.4107993337098641,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1715,
-              "fp": 1
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -5529,13 +5529,13 @@
             }
           }
         },
-        "tp": 168768,
-        "fp": 4264,
-        "tn": 520836,
-        "fn": 127818,
-        "recall": 0.5690356254172483,
-        "precision": 0.9753571593693652,
-        "fp_per_100M": 812035.8027042468,
+        "tp": 186111,
+        "fp": 4267,
+        "tn": 520833,
+        "fn": 110475,
+        "recall": 0.6275110760453966,
+        "precision": 0.977586695941758,
+        "fp_per_100M": 812607.1224528662,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -5559,7 +5559,7 @@
           "filetypes/javascript": 0.9731946804354468,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939400279228398,
-          "filetypes/pdf": 0.3448702914163527,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979529032869061,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -5843,18 +5843,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.3448702914163527,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.3448702914163527,
-              "tp": 1739,
-              "fp": 1
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.3448702914163527,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1739,
-              "fp": 1
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -6632,13 +6632,13 @@
             }
           }
         },
-        "tp": 169209,
-        "fp": 4264,
-        "tn": 520836,
-        "fn": 127377,
-        "recall": 0.5705225465800813,
-        "precision": 0.9754198059640405,
-        "fp_per_100M": 812035.8027042468,
+        "tp": 186548,
+        "fp": 4267,
+        "tn": 520833,
+        "fn": 110038,
+        "recall": 0.6289845103949613,
+        "precision": 0.977638026360611,
+        "fp_per_100M": 812607.1224528662,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -6662,7 +6662,7 @@
           "filetypes/javascript": 0.9731112995442863,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939399577234228,
-          "filetypes/pdf": 0.311175259215357,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.997952872019135,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -6946,18 +6946,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.311175259215357,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.311175259215357,
-              "tp": 1862,
-              "fp": 1
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.311175259215357,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1862,
-              "fp": 1
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -7735,13 +7735,13 @@
             }
           }
         },
-        "tp": 169577,
-        "fp": 4264,
-        "tn": 520836,
-        "fn": 127009,
-        "recall": 0.5717633334007673,
-        "precision": 0.9754718392093925,
-        "fp_per_100M": 812035.8027042468,
+        "tp": 186828,
+        "fp": 4267,
+        "tn": 520833,
+        "fn": 109758,
+        "recall": 0.6299285873237442,
+        "precision": 0.9776707920144431,
+        "fp_per_100M": 812607.1224528662,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -7765,7 +7765,7 @@
           "filetypes/javascript": 0.9730356933226021,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939398757489374,
-          "filetypes/pdf": 0.2892140954323484,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979528339660726,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -8049,18 +8049,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.2892140954323484,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.2892140954323484,
-              "tp": 2008,
-              "fp": 1
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.2892140954323484,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 2008,
-              "fp": 1
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -8838,13 +8838,13 @@
             }
           }
         },
-        "tp": 170075,
-        "fp": 4265,
-        "tn": 520835,
-        "fn": 126511,
-        "recall": 0.5734424416526741,
-        "precision": 0.9755363083629689,
-        "fp_per_100M": 812226.2426204532,
+        "tp": 187198,
+        "fp": 4268,
+        "tn": 520832,
+        "fn": 109388,
+        "recall": 0.6311761175510644,
+        "precision": 0.9777088360335516,
+        "fp_per_100M": 812797.5623690726,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -8868,7 +8868,7 @@
           "filetypes/javascript": 0.9729653878873803,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939397837338718,
-          "filetypes/pdf": 0.27321171916363224,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979527899128523,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -9152,18 +9152,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.27321171916363224,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.27321171916363224,
-              "tp": 2109,
-              "fp": 1
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.27321171916363224,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 2109,
-              "fp": 1
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -9941,13 +9941,13 @@
             }
           }
         },
-        "tp": 170337,
-        "fp": 4265,
-        "tn": 520835,
-        "fn": 126249,
-        "recall": 0.5743258279217495,
-        "precision": 0.9755730174912086,
-        "fp_per_100M": 812226.2426204532,
+        "tp": 187401,
+        "fp": 4268,
+        "tn": 520832,
+        "fn": 109185,
+        "recall": 0.631860573324432,
+        "precision": 0.9777324449963218,
+        "fp_per_100M": 812797.5623690726,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -9971,7 +9971,7 @@
           "filetypes/javascript": 0.9728990370983466,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.993939682835481,
-          "filetypes/pdf": 0.26076931221348876,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979527404009298,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -10255,18 +10255,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.26076931221348876,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.26076931221348876,
-              "tp": 2183,
-              "fp": 1
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.26076931221348876,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 2183,
-              "fp": 1
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -11044,13 +11044,13 @@
             }
           }
         },
-        "tp": 170690,
-        "fp": 4265,
-        "tn": 520835,
-        "fn": 125896,
-        "recall": 0.5755160391926794,
-        "precision": 0.9756223028778829,
-        "fp_per_100M": 812226.2426204532,
+        "tp": 187706,
+        "fp": 4268,
+        "tn": 520832,
+        "fn": 108880,
+        "recall": 0.6328889428361419,
+        "precision": 0.9777678227259942,
+        "fp_per_100M": 812797.5623690726,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -11074,7 +11074,7 @@
           "filetypes/javascript": 0.9728358041127434,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939395738959667,
-          "filetypes/pdf": 0.2506733714003055,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979526858346209,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -11358,18 +11358,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.2506733714003055,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.2506733714003055,
-              "tp": 2285,
-              "fp": 1
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.2506733714003055,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 2285,
-              "fp": 1
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -12147,13 +12147,13 @@
             }
           }
         },
-        "tp": 170956,
-        "fp": 4265,
-        "tn": 520835,
-        "fn": 125630,
-        "recall": 0.5764129122750231,
-        "precision": 0.9756593102424937,
-        "fp_per_100M": 812226.2426204532,
+        "tp": 187880,
+        "fp": 4268,
+        "tn": 520832,
+        "fn": 108706,
+        "recall": 0.6334756192133142,
+        "precision": 0.9777879551179299,
+        "fp_per_100M": 812797.5623690726,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -12177,7 +12177,7 @@
           "filetypes/javascript": 0.9727751230858938,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.993939457563221,
-          "filetypes/pdf": 0.24223006466758235,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979526265315984,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -12461,18 +12461,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.24223006466758235,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.24223006466758235,
-              "tp": 2327,
-              "fp": 1
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.24223006466758235,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 2327,
-              "fp": 1
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -13250,13 +13250,13 @@
             }
           }
         },
-        "tp": 171121,
-        "fp": 4264,
-        "tn": 520836,
-        "fn": 125465,
-        "recall": 0.5769692433223416,
-        "precision": 0.9756877726145338,
-        "fp_per_100M": 812035.8027042468,
+        "tp": 188029,
+        "fp": 4267,
+        "tn": 520833,
+        "fn": 108557,
+        "recall": 0.6339780030075594,
+        "precision": 0.9778102508632525,
+        "fp_per_100M": 812607.1224528662,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -13280,7 +13280,7 @@
           "filetypes/javascript": 0.9727165884464127,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939393343553399,
-          "filetypes/pdf": 0.23500782761936484,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979525627504964,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -13564,18 +13564,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.23500782761936484,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.23500782761936484,
-              "tp": 2401,
-              "fp": 1
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.23500782761936484,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 2401,
-              "fp": 1
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -14353,13 +14353,13 @@
             }
           }
         },
-        "tp": 171320,
-        "fp": 4264,
-        "tn": 520836,
-        "fn": 125266,
-        "recall": 0.5776402122824409,
-        "precision": 0.9757153271368689,
-        "fp_per_100M": 812035.8027042468,
+        "tp": 188159,
+        "fp": 4267,
+        "tn": 520833,
+        "fn": 108427,
+        "recall": 0.6344163244387799,
+        "precision": 0.9778252419111763,
+        "fp_per_100M": 812607.1224528662,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -14383,7 +14383,7 @@
           "filetypes/javascript": 0.9726598967410041,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939392046986663,
-          "filetypes/pdf": 0.2287211259838317,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979524947074969,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -14667,18 +14667,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.2287211259838317,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.2287211259838317,
-              "tp": 2456,
-              "fp": 1
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.2287211259838317,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 2456,
-              "fp": 1
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -15456,13 +15456,13 @@
             }
           }
         },
-        "tp": 171481,
-        "fp": 4264,
-        "tn": 520836,
-        "fn": 125105,
-        "recall": 0.578183056516491,
-        "precision": 0.9757375743264389,
-        "fp_per_100M": 812035.8027042468,
+        "tp": 188285,
+        "fp": 4267,
+        "tn": 520833,
+        "fn": 108301,
+        "recall": 0.6348411590567323,
+        "precision": 0.9778397523785782,
+        "fp_per_100M": 812607.1224528662,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -15486,7 +15486,7 @@
           "filetypes/javascript": 0.9721592152775868,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939376134648975,
-          "filetypes/pdf": 0.19116291055525284,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979516113400503,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -15770,18 +15770,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.19116291055525284,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.19116291055525284,
-              "tp": 2682,
-              "fp": 1
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.19116291055525284,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 2682,
-              "fp": 1
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -16559,13 +16559,13 @@
             }
           }
         },
-        "tp": 174682,
-        "fp": 4261,
-        "tn": 520839,
-        "fn": 121904,
-        "recall": 0.5889758788344696,
-        "precision": 0.9761879481175569,
-        "fp_per_100M": 811464.4829556275,
+        "tp": 191281,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 105305,
+        "recall": 0.6449427821947091,
+        "precision": 0.9781942775320259,
+        "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -16589,7 +16589,7 @@
           "filetypes/javascript": 0.9717288581428409,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939355962306581,
-          "filetypes/pdf": 0.171967647978195,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.997950419023152,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -16873,18 +16873,18 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.171967647978195,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.171967647978195,
-              "tp": 3194,
-              "fp": 2
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
+              "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.171967647978195,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 3194,
-              "fp": 2
+              "tp": 19493,
+              "fp": 4
             }
           },
           "filetypes/python": {
@@ -17662,13 +17662,13 @@
             }
           }
         },
-        "tp": 175841,
-        "fp": 4262,
-        "tn": 520838,
-        "fn": 120745,
-        "recall": 0.5928836829789673,
-        "precision": 0.9763357634242628,
-        "fp_per_100M": 811654.9228718339,
+        "tp": 191956,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 104630,
+        "recall": 0.6472186819337393,
+        "precision": 0.9782692895729284,
+        "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -17692,7 +17692,7 @@
           "filetypes/javascript": 0.970975758461149,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.993930596507095,
-          "filetypes/pdf": 0.15034071747696898,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979472881089707,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -17976,17 +17976,17 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.15034071747696898,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.15034071747696898,
-              "tp": 4430,
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
               "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.15034071747696898,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 4430,
+              "tp": 19493,
               "fp": 4
             }
           },
@@ -18765,12 +18765,12 @@
             }
           }
         },
-        "tp": 179261,
+        "tp": 194160,
         "fp": 4265,
         "tn": 520835,
-        "fn": 117325,
-        "recall": 0.6044149083233868,
-        "precision": 0.9767607859376873,
+        "fn": 102426,
+        "recall": 0.6546499160445874,
+        "precision": 0.9785057326445761,
         "fp_per_100M": 812226.2426204532,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
@@ -18795,7 +18795,7 @@
           "filetypes/javascript": 0.969399014765862,
           "filetypes/c": 0.9986207485198975,
           "filetypes/elf": 0.9939139574851186,
-          "filetypes/pdf": 0.12499547924715983,
+          "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.997936031203846,
           "filetypes/xml": 0.2533334493637085,
           "filetypes/batch": 0.9927771091461182,
@@ -19079,17 +19079,17 @@
             "kind": "filetype",
             "rows": 25187,
             "selected": true,
-            "selected_threshold": 0.12499547924715983,
+            "selected_threshold": 0.37758001685142517,
             "standalone": {
-              "threshold": 0.12499547924715983,
-              "tp": 5093,
+              "threshold": 0.37758001685142517,
+              "tp": 19493,
               "fp": 4
             },
             "best_marginal": {
-              "threshold": 0.12499547924715983,
+              "threshold": 0.37758001685142517,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 5093,
+              "tp": 19493,
               "fp": 4
             }
           },
@@ -19868,12 +19868,12 @@
             }
           }
         },
-        "tp": 185982,
+        "tp": 200225,
         "fp": 4267,
         "tn": 520833,
-        "fn": 110604,
-        "recall": 0.6270761263174931,
-        "precision": 0.9775714984047222,
+        "fn": 96361,
+        "recall": 0.6750992966626881,
+        "precision": 0.9791336580404123,
         "fp_per_100M": 812607.1224528662,
         "below_resolution": false,
         "cp_floor_per_million": 5.713279289585204
