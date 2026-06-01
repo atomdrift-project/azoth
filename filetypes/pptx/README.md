@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pptx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.938329 | 0.841026 | 0.861111 | 72.31% | 0.1336 |
+| 0.925544 | 0.827839 | 0.861111 | 75.38% | 0.1303 |
 
 ## Specialist Performance
 

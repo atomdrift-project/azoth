@@ -1,6 +1,6 @@
 {
   "schema": "azoth.evaluation.v1",
-  "timestamp": "2026-06-01T13:09:34.695988+00:00",
+  "timestamp": "2026-06-01T16:21:17.798831+00:00",
   "applied_from": "out/models/azoth/config.json",
   "partition": "test",
   "rows": 821686,
@@ -35,14 +35,14 @@
           "filegroups/scripts": 0.9976168349104868,
           "filegroups/native": 0.9993515527982694,
           "filegroups/portable": 0.9999988079070627,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9995492801664233,
           "filetypes/java_class": 0.9999999999999991,
           "filetypes/javascript": 0.9734140946264662,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939401138726052,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.997952937774919,
@@ -50,13 +50,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9605588212352965,
+          "filetypes/shell": 0.9940634582311193,
           "filetypes/csharp": 0.9995327984145285,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -166,17 +166,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -184,17 +184,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -292,17 +292,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -436,18 +436,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -544,18 +544,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9605588212352965,
+            "selected_threshold": 0.9940634582311193,
             "standalone": {
-              "threshold": 0.9605588212352965,
-              "tp": 1243,
-              "fp": 2
+              "threshold": 0.9940634582311193,
+              "tp": 1051,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9605588212352965,
+              "threshold": 0.9940634582311193,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1243,
-              "fp": 2
+              "tp": 1051,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -1117,13 +1117,13 @@
             }
           }
         },
-        "tp": 185715,
-        "fp": 4267,
-        "tn": 520833,
-        "fn": 110871,
-        "recall": 0.6261758815318322,
-        "precision": 0.97753997747155,
-        "fp_per_100M": 812607.1224528662,
+        "tp": 185446,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 111140,
+        "recall": 0.6252688933395373,
+        "precision": 0.9775235886352854,
+        "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -1138,14 +1138,14 @@
           "filegroups/scripts": 0.9976167737300659,
           "filegroups/native": 0.9993512323533555,
           "filegroups/portable": 0.99999880790693,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9995476097555095,
           "filetypes/java_class": 0.9999999999999932,
           "filetypes/javascript": 0.9733952998760399,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939401119455757,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979529371674112,
@@ -1153,13 +1153,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9605222991611988,
+          "filetypes/shell": 0.994050140912308,
           "filetypes/csharp": 0.9995262382399527,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -1269,17 +1269,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -1287,17 +1287,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -1395,17 +1395,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -1539,18 +1539,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -1647,18 +1647,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9605222991611988,
+            "selected_threshold": 0.994050140912308,
             "standalone": {
-              "threshold": 0.9605222991611988,
-              "tp": 1243,
-              "fp": 2
+              "threshold": 0.994050140912308,
+              "tp": 1051,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9605222991611988,
+              "threshold": 0.994050140912308,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1243,
-              "fp": 2
+              "tp": 1051,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -2220,13 +2220,13 @@
             }
           }
         },
-        "tp": 185779,
-        "fp": 4267,
-        "tn": 520833,
-        "fn": 110807,
-        "recall": 0.6263916705441255,
-        "precision": 0.9775475411216232,
-        "fp_per_100M": 812607.1224528662,
+        "tp": 185509,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 111077,
+        "recall": 0.6254813106485134,
+        "precision": 0.977531050254778,
+        "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -2241,14 +2241,14 @@
           "filegroups/scripts": 0.9976167086200481,
           "filegroups/native": 0.9993509490451419,
           "filegroups/portable": 0.9999988079067013,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9995462850681506,
           "filetypes/java_class": 0.9999999999999808,
           "filetypes/javascript": 0.9733791449840923,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939401095026478,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979529363474332,
@@ -2256,13 +2256,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9604913451866061,
+          "filetypes/shell": 0.9940383551433324,
           "filetypes/csharp": 0.999520192329514,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -2372,17 +2372,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -2390,17 +2390,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -2498,17 +2498,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -2642,18 +2642,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -2750,18 +2750,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9604913451866061,
+            "selected_threshold": 0.9940383551433324,
             "standalone": {
-              "threshold": 0.9604913451866061,
-              "tp": 1243,
-              "fp": 2
+              "threshold": 0.9940383551433324,
+              "tp": 1051,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9604913451866061,
+              "threshold": 0.9940383551433324,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1243,
-              "fp": 2
+              "tp": 1051,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -3323,13 +3323,13 @@
             }
           }
         },
-        "tp": 185854,
-        "fp": 4267,
-        "tn": 520833,
-        "fn": 110732,
-        "recall": 0.6266445482929066,
-        "precision": 0.9775563982937182,
-        "fp_per_100M": 812607.1224528662,
+        "tp": 185584,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 111002,
+        "recall": 0.6257341883972946,
+        "precision": 0.9775399266781847,
+        "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -3344,14 +3344,14 @@
           "filegroups/scripts": 0.9976165709445906,
           "filegroups/native": 0.9993504408861758,
           "filegroups/portable": 0.9999988079059464,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9995441237765504,
           "filetypes/java_class": 0.99999999999993,
           "filetypes/javascript": 0.9733508748730583,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939401034478402,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979529341942469,
@@ -3359,13 +3359,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9604378386927908,
+          "filetypes/shell": 0.9940171968676619,
           "filetypes/csharp": 0.9995089444959788,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -3475,17 +3475,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -3493,17 +3493,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -3601,17 +3601,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -3745,18 +3745,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -3853,18 +3853,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9604378386927908,
+            "selected_threshold": 0.9940171968676619,
             "standalone": {
-              "threshold": 0.9604378386927908,
-              "tp": 1243,
-              "fp": 2
+              "threshold": 0.9940171968676619,
+              "tp": 1051,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9604378386927908,
+              "threshold": 0.9940171968676619,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1243,
-              "fp": 2
+              "tp": 1051,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -4426,13 +4426,13 @@
             }
           }
         },
-        "tp": 185942,
-        "fp": 4267,
-        "tn": 520833,
-        "fn": 110644,
-        "recall": 0.6269412581848098,
-        "precision": 0.9775667818031744,
-        "fp_per_100M": 812607.1224528662,
+        "tp": 185672,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 110914,
+        "recall": 0.6260308982891978,
+        "precision": 0.977550332743661,
+        "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -4447,14 +4447,14 @@
           "filegroups/scripts": 0.9976162002798157,
           "filegroups/native": 0.9993493415756601,
           "filegroups/portable": 0.9999988079022581,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.999539999705537,
           "filetypes/java_class": 0.9999999999996004,
           "filetypes/javascript": 0.9732916865339559,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.993940083297511,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979529264526695,
@@ -4462,13 +4462,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9603276224177495,
+          "filetypes/shell": 0.9939713713155871,
           "filetypes/csharp": 0.9994834029209321,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -4578,17 +4578,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -4596,17 +4596,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -4704,17 +4704,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -4848,18 +4848,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -4956,18 +4956,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9603276224177495,
+            "selected_threshold": 0.9939713713155871,
             "standalone": {
-              "threshold": 0.9603276224177495,
-              "tp": 1243,
-              "fp": 2
+              "threshold": 0.9939713713155871,
+              "tp": 1052,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9603276224177495,
+              "threshold": 0.9939713713155871,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1243,
-              "fp": 2
+              "tp": 1052,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -5529,13 +5529,13 @@
             }
           }
         },
-        "tp": 186111,
-        "fp": 4267,
-        "tn": 520833,
-        "fn": 110475,
-        "recall": 0.6275110760453966,
-        "precision": 0.977586695941758,
-        "fp_per_100M": 812607.1224528662,
+        "tp": 185842,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 110744,
+        "recall": 0.6266040878531016,
+        "precision": 0.9775704080881192,
+        "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -5550,14 +5550,14 @@
           "filegroups/scripts": 0.9976153950325815,
           "filegroups/native": 0.9993474722266212,
           "filegroups/portable": 0.999998807886823,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9995339132017471,
           "filetypes/java_class": 0.9999999999977267,
           "filetypes/javascript": 0.9731946804354468,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939400279228398,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979529032869061,
@@ -5565,13 +5565,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9601502700075937,
+          "filetypes/shell": 0.9938933437784232,
           "filetypes/csharp": 0.9994375370178878,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -5681,17 +5681,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -5699,17 +5699,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -5807,17 +5807,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -5951,18 +5951,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -6059,18 +6059,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9601502700075937,
+            "selected_threshold": 0.9938933437784232,
             "standalone": {
-              "threshold": 0.9601502700075937,
-              "tp": 1243,
-              "fp": 2
+              "threshold": 0.9938933437784232,
+              "tp": 1054,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9601502700075937,
+              "threshold": 0.9938933437784232,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1243,
-              "fp": 2
+              "tp": 1054,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -6632,13 +6632,13 @@
             }
           }
         },
-        "tp": 186548,
-        "fp": 4267,
-        "tn": 520833,
-        "fn": 110038,
-        "recall": 0.6289845103949613,
-        "precision": 0.977638026360611,
-        "fp_per_100M": 812607.1224528662,
+        "tp": 186281,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 110305,
+        "recall": 0.6280842656093005,
+        "precision": 0.977622084022147,
+        "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -6653,14 +6653,14 @@
           "filegroups/scripts": 0.9976145380646004,
           "filegroups/native": 0.9993458195184204,
           "filegroups/portable": 0.9999988078602488,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9995290864165745,
           "filetypes/java_class": 0.9999999999937161,
           "filetypes/javascript": 0.9731112995442863,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939399577234228,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.997952872019135,
@@ -6668,13 +6668,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9599999564743789,
+          "filetypes/shell": 0.9938242897488716,
           "filetypes/csharp": 0.9993952666272462,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -6784,17 +6784,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -6802,17 +6802,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -6910,17 +6910,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -7054,18 +7054,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -7162,18 +7162,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9599999564743789,
+            "selected_threshold": 0.9938242897488716,
             "standalone": {
-              "threshold": 0.9599999564743789,
-              "tp": 1243,
-              "fp": 2
+              "threshold": 0.9938242897488716,
+              "tp": 1081,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9599999564743789,
+              "threshold": 0.9938242897488716,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1243,
-              "fp": 2
+              "tp": 1081,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -7735,13 +7735,13 @@
             }
           }
         },
-        "tp": 186828,
-        "fp": 4267,
-        "tn": 520833,
-        "fn": 109758,
-        "recall": 0.6299285873237442,
-        "precision": 0.9776707920144431,
-        "fp_per_100M": 812607.1224528662,
+        "tp": 186588,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 109998,
+        "recall": 0.6291193785276445,
+        "precision": 0.9776580806069625,
+        "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -7756,14 +7756,14 @@
           "filegroups/scripts": 0.9976136456807347,
           "filegroups/native": 0.9993442934470324,
           "filegroups/portable": 0.9999988078222283,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.999524930444597,
           "filetypes/java_class": 0.9999999999870728,
           "filetypes/javascript": 0.9730356933226021,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939398757489374,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979528339660726,
@@ -7771,13 +7771,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9598648867701697,
+          "filetypes/shell": 0.9937604856614946,
           "filetypes/csharp": 0.9993551740054969,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -7887,17 +7887,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -7905,17 +7905,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -8013,17 +8013,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -8157,18 +8157,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -8265,18 +8265,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9598648867701697,
+            "selected_threshold": 0.9937604856614946,
             "standalone": {
-              "threshold": 0.9598648867701697,
-              "tp": 1244,
-              "fp": 2
+              "threshold": 0.9937604856614946,
+              "tp": 1083,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9598648867701697,
+              "threshold": 0.9937604856614946,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1244,
-              "fp": 2
+              "tp": 1083,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -8838,13 +8838,13 @@
             }
           }
         },
-        "tp": 187198,
-        "fp": 4268,
-        "tn": 520832,
-        "fn": 109388,
-        "recall": 0.6311761175510644,
-        "precision": 0.9777088360335516,
-        "fp_per_100M": 812797.5623690726,
+        "tp": 186959,
+        "fp": 4265,
+        "tn": 520835,
+        "fn": 109627,
+        "recall": 0.6303702804582819,
+        "precision": 0.9776963142701753,
+        "fp_per_100M": 812226.2426204532,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -8859,14 +8859,14 @@
           "filegroups/scripts": 0.997612726001528,
           "filegroups/native": 0.9993428551197544,
           "filegroups/portable": 0.9999988077725417,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9995212112827335,
           "filetypes/java_class": 0.99999999997738,
           "filetypes/javascript": 0.9729653878873803,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939397837338718,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979527899128523,
@@ -8874,13 +8874,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.959740127155491,
+          "filetypes/shell": 0.9937003212410519,
           "filetypes/csharp": 0.9993166266403951,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -8990,17 +8990,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -9008,17 +9008,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -9116,17 +9116,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -9260,18 +9260,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -9368,18 +9368,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.959740127155491,
+            "selected_threshold": 0.9937003212410519,
             "standalone": {
-              "threshold": 0.959740127155491,
-              "tp": 1244,
-              "fp": 2
+              "threshold": 0.9937003212410519,
+              "tp": 1086,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.959740127155491,
+              "threshold": 0.9937003212410519,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1244,
-              "fp": 2
+              "tp": 1086,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -9941,13 +9941,13 @@
             }
           }
         },
-        "tp": 187401,
-        "fp": 4268,
-        "tn": 520832,
-        "fn": 109185,
-        "recall": 0.631860573324432,
-        "precision": 0.9777324449963218,
-        "fp_per_100M": 812797.5623690726,
+        "tp": 187165,
+        "fp": 4265,
+        "tn": 520835,
+        "fn": 109421,
+        "recall": 0.6310648513416007,
+        "precision": 0.9777203155200335,
+        "fp_per_100M": 812226.2426204532,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -9962,14 +9962,14 @@
           "filegroups/scripts": 0.9976117839686339,
           "filegroups/native": 0.9993414830595734,
           "filegroups/portable": 0.9999988077110169,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9995178068412085,
           "filetypes/java_class": 0.9999999999642702,
           "filetypes/javascript": 0.9728990370983466,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.993939682835481,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979527404009298,
@@ -9977,13 +9977,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9596230126242264,
+          "filetypes/shell": 0.9936429068083609,
           "filetypes/csharp": 0.9992792675809614,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -10093,17 +10093,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -10111,17 +10111,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -10219,17 +10219,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -10363,18 +10363,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -10471,18 +10471,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9596230126242264,
+            "selected_threshold": 0.9936429068083609,
             "standalone": {
-              "threshold": 0.9596230126242264,
-              "tp": 1244,
-              "fp": 2
+              "threshold": 0.9936429068083609,
+              "tp": 1087,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9596230126242264,
+              "threshold": 0.9936429068083609,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1244,
-              "fp": 2
+              "tp": 1087,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -11044,13 +11044,13 @@
             }
           }
         },
-        "tp": 187706,
-        "fp": 4268,
-        "tn": 520832,
-        "fn": 108880,
-        "recall": 0.6328889428361419,
-        "precision": 0.9777678227259942,
-        "fp_per_100M": 812797.5623690726,
+        "tp": 187471,
+        "fp": 4265,
+        "tn": 520835,
+        "fn": 109115,
+        "recall": 0.6320965925566278,
+        "precision": 0.9777558726582384,
+        "fp_per_100M": 812226.2426204532,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -11065,14 +11065,14 @@
           "filegroups/scripts": 0.9976108229307572,
           "filegroups/native": 0.9993401637630355,
           "filegroups/portable": 0.9999988076375114,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9995146436319193,
           "filetypes/java_class": 0.9999999999474115,
           "filetypes/javascript": 0.9728358041127434,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939395738959667,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979526858346209,
@@ -11080,13 +11080,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9595118957700453,
+          "filetypes/shell": 0.9935876827611677,
           "filetypes/csharp": 0.9992428686137879,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -11196,17 +11196,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -11214,17 +11214,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -11322,17 +11322,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -11466,18 +11466,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -11574,18 +11574,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9595118957700453,
+            "selected_threshold": 0.9935876827611677,
             "standalone": {
-              "threshold": 0.9595118957700453,
-              "tp": 1244,
-              "fp": 2
+              "threshold": 0.9935876827611677,
+              "tp": 1089,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9595118957700453,
+              "threshold": 0.9935876827611677,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1244,
-              "fp": 2
+              "tp": 1089,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -12147,13 +12147,13 @@
             }
           }
         },
-        "tp": 187880,
-        "fp": 4268,
-        "tn": 520832,
-        "fn": 108706,
-        "recall": 0.6334756192133142,
-        "precision": 0.9777879551179299,
-        "fp_per_100M": 812797.5623690726,
+        "tp": 187647,
+        "fp": 4265,
+        "tn": 520835,
+        "fn": 108939,
+        "recall": 0.6326900123404341,
+        "precision": 0.97777627245821,
+        "fp_per_100M": 812226.2426204532,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -12168,14 +12168,14 @@
           "filegroups/scripts": 0.997609845317625,
           "filegroups/native": 0.9993388880147321,
           "filegroups/portable": 0.9999988075519037,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9995116732564305,
           "filetypes/java_class": 0.9999999999264985,
           "filetypes/javascript": 0.9727751230858938,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.993939457563221,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979526265315984,
@@ -12183,13 +12183,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9594056677940589,
+          "filetypes/shell": 0.9935342670741159,
           "filetypes/csharp": 0.9992072718524846,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -12299,17 +12299,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -12317,17 +12317,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -12425,17 +12425,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -12569,18 +12569,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -12677,18 +12677,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9594056677940589,
+            "selected_threshold": 0.9935342670741159,
             "standalone": {
-              "threshold": 0.9594056677940589,
-              "tp": 1244,
-              "fp": 2
+              "threshold": 0.9935342670741159,
+              "tp": 1089,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9594056677940589,
+              "threshold": 0.9935342670741159,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1244,
-              "fp": 2
+              "tp": 1089,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -13250,13 +13250,13 @@
             }
           }
         },
-        "tp": 188029,
-        "fp": 4267,
-        "tn": 520833,
-        "fn": 108557,
-        "recall": 0.6339780030075594,
-        "precision": 0.9778102508632525,
-        "fp_per_100M": 812607.1224528662,
+        "tp": 187796,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 108790,
+        "recall": 0.6331923961346794,
+        "precision": 0.9777986046027283,
+        "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -13271,14 +13271,14 @@
           "filegroups/scripts": 0.9976088529780518,
           "filegroups/native": 0.9993376491575304,
           "filegroups/portable": 0.9999988074540879,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9995088617901563,
           "filetypes/java_class": 0.9999999999012462,
           "filetypes/javascript": 0.9727165884464127,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939393343553399,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979525627504964,
@@ -13286,13 +13286,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9593035370563997,
+          "filetypes/shell": 0.9934823836983225,
           "filetypes/csharp": 0.9991723619130239,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -13402,17 +13402,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -13420,17 +13420,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -13528,17 +13528,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -13672,18 +13672,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -13780,18 +13780,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9593035370563997,
+            "selected_threshold": 0.9934823836983225,
             "standalone": {
-              "threshold": 0.9593035370563997,
-              "tp": 1244,
-              "fp": 2
+              "threshold": 0.9934823836983225,
+              "tp": 1091,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9593035370563997,
+              "threshold": 0.9934823836983225,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1244,
-              "fp": 2
+              "tp": 1091,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -14353,13 +14353,13 @@
             }
           }
         },
-        "tp": 188159,
-        "fp": 4267,
-        "tn": 520833,
-        "fn": 108427,
-        "recall": 0.6344163244387799,
-        "precision": 0.9778252419111763,
-        "fp_per_100M": 812607.1224528662,
+        "tp": 187928,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 108658,
+        "recall": 0.6336374609725342,
+        "precision": 0.9778138528138528,
+        "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -14374,14 +14374,14 @@
           "filegroups/scripts": 0.9976078473691066,
           "filegroups/native": 0.9993364421764761,
           "filegroups/portable": 0.9999988073439694,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9995061843371799,
           "filetypes/java_class": 0.9999999998713873,
           "filetypes/javascript": 0.9726598967410041,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939392046986663,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979524947074969,
@@ -14389,13 +14389,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9592049132471909,
+          "filetypes/shell": 0.9934318246301191,
           "filetypes/csharp": 0.9991380509956217,
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
@@ -14505,17 +14505,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -14523,17 +14523,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -14631,17 +14631,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -14775,18 +14775,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -14883,18 +14883,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9592049132471909,
+            "selected_threshold": 0.9934318246301191,
             "standalone": {
-              "threshold": 0.9592049132471909,
-              "tp": 1245,
-              "fp": 2
+              "threshold": 0.9934318246301191,
+              "tp": 1093,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9592049132471909,
+              "threshold": 0.9934318246301191,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1245,
-              "fp": 2
+              "tp": 1093,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -15456,13 +15456,13 @@
             }
           }
         },
-        "tp": 188285,
-        "fp": 4267,
-        "tn": 520833,
-        "fn": 108301,
-        "recall": 0.6348411590567323,
-        "precision": 0.9778397523785782,
-        "fp_per_100M": 812607.1224528662,
+        "tp": 188055,
+        "fp": 4264,
+        "tn": 520836,
+        "fn": 108531,
+        "recall": 0.6340656672938035,
+        "precision": 0.9778285036839833,
+        "fp_per_100M": 812035.8027042468,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -15477,14 +15477,14 @@
           "filegroups/scripts": 0.997597248829587,
           "filegroups/native": 0.9993255371326483,
           "filegroups/portable": 0.9999988055504263,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9994840068429605,
           "filetypes/java_class": 0.9999999992687444,
           "filetypes/javascript": 0.9721592152775868,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939376134648975,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979516113400503,
@@ -15492,13 +15492,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9583436840271835,
+          "filetypes/shell": 0.9929746532848882,
           "filetypes/csharp": 0.9988173764407355,
           "filetypes/markdown": 0.8921958301922209,
           "filetypes/xls": 0.7933555245399475,
@@ -15608,17 +15608,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -15626,17 +15626,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -15734,17 +15734,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -15878,18 +15878,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -15986,18 +15986,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9583436840271835,
+            "selected_threshold": 0.9929746532848882,
             "standalone": {
-              "threshold": 0.9583436840271835,
-              "tp": 1246,
-              "fp": 2
+              "threshold": 0.9929746532848882,
+              "tp": 1101,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9583436840271835,
+              "threshold": 0.9929746532848882,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1246,
-              "fp": 2
+              "tp": 1101,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -16559,13 +16559,13 @@
             }
           }
         },
-        "tp": 191281,
-        "fp": 4264,
-        "tn": 520836,
-        "fn": 105305,
-        "recall": 0.6449427821947091,
-        "precision": 0.9781942775320259,
-        "fp_per_100M": 812035.8027042468,
+        "tp": 191056,
+        "fp": 4261,
+        "tn": 520839,
+        "fn": 105530,
+        "recall": 0.6441841489483657,
+        "precision": 0.978184182636432,
+        "fp_per_100M": 811464.4829556275,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -16580,14 +16580,14 @@
           "filegroups/scripts": 0.9975859695496001,
           "filegroups/native": 0.9993158958858882,
           "filegroups/portable": 0.9999988024625258,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.999466419406238,
           "filetypes/java_class": 0.99999999797889,
           "filetypes/javascript": 0.9717288581428409,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939355962306581,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.997950419023152,
@@ -16595,13 +16595,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9576137564955909,
+          "filetypes/shell": 0.9925700586413662,
           "filetypes/csharp": 0.9985218401533376,
           "filetypes/markdown": 0.8182684828095989,
           "filetypes/xls": 0.7933555245399475,
@@ -16711,17 +16711,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -16729,17 +16729,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -16837,17 +16837,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -16981,18 +16981,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -17089,18 +17089,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9576137564955909,
+            "selected_threshold": 0.9925700586413662,
             "standalone": {
-              "threshold": 0.9576137564955909,
-              "tp": 1247,
-              "fp": 2
+              "threshold": 0.9925700586413662,
+              "tp": 1108,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9576137564955909,
+              "threshold": 0.9925700586413662,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1247,
-              "fp": 2
+              "tp": 1108,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -17662,13 +17662,13 @@
             }
           }
         },
-        "tp": 191956,
-        "fp": 4264,
-        "tn": 520836,
-        "fn": 104630,
-        "recall": 0.6472186819337393,
-        "precision": 0.9782692895729284,
-        "fp_per_100M": 812035.8027042468,
+        "tp": 191737,
+        "fp": 4261,
+        "tn": 520839,
+        "fn": 104849,
+        "recall": 0.6464802789072984,
+        "precision": 0.9782599822447168,
+        "fp_per_100M": 811464.4829556275,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -17683,14 +17683,14 @@
           "filegroups/scripts": 0.9975621194557824,
           "filegroups/native": 0.9992986027551225,
           "filegroups/portable": 0.9999987922710667,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.9988971948623657,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9860523343086243,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9994377246512086,
           "filetypes/java_class": 0.9999999927248803,
           "filetypes/javascript": 0.970975758461149,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.993930596507095,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.9979472881089707,
@@ -17698,13 +17698,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.7825130224227905,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.956352016655437,
+          "filetypes/shell": 0.9918437144358943,
           "filetypes/csharp": 0.9979720233808347,
           "filetypes/markdown": 0.7322992990527772,
           "filetypes/xls": 0.7933555245399475,
@@ -17814,17 +17814,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -17832,17 +17832,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.9988971948623657,
+            "selected_threshold": 0.9860523343086243,
             "standalone": {
-              "threshold": 0.9988971948623657,
-              "tp": 84,
+              "threshold": 0.9860523343086243,
+              "tp": 1362,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9988971948623657,
+              "threshold": 0.9860523343086243,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 84,
+              "tp": 1362,
               "fp": 0
             }
           },
@@ -17940,17 +17940,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -18084,18 +18084,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.7825130224227905,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.7825130224227905,
+              "tp": 58,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.7825130224227905,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 58,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -18192,18 +18192,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.956352016655437,
+            "selected_threshold": 0.9918437144358943,
             "standalone": {
-              "threshold": 0.956352016655437,
-              "tp": 1250,
-              "fp": 2
+              "threshold": 0.9918437144358943,
+              "tp": 1146,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.956352016655437,
+              "threshold": 0.9918437144358943,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1250,
-              "fp": 2
+              "tp": 1146,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -18765,13 +18765,13 @@
             }
           }
         },
-        "tp": 194160,
-        "fp": 4265,
-        "tn": 520835,
-        "fn": 102426,
-        "recall": 0.6546499160445874,
-        "precision": 0.9785057326445761,
-        "fp_per_100M": 812226.2426204532,
+        "tp": 193974,
+        "fp": 4262,
+        "tn": 520838,
+        "fn": 102612,
+        "recall": 0.6540227792276102,
+        "precision": 0.9785003732924393,
+        "fp_per_100M": 811654.9228718339,
         "below_resolution": true,
         "cp_floor_per_million": 5.713279289585204
       }
@@ -18786,14 +18786,14 @@
           "filegroups/scripts": 0.9966174960136414,
           "filegroups/native": 0.9992611921773964,
           "filegroups/portable": 0.999998742471457,
-          "filegroups/documents": 0.5760533809661865,
-          "filegroups/source": 0.996658444404602,
+          "filegroups/documents": 0.7054287195205688,
+          "filegroups/source": 0.9799614548683167,
           "filegroups/config": 0.999061644077301,
           "filegroups/media": 0.8671467900276184,
           "filetypes/pe": 0.9993829707219155,
           "filetypes/java_class": 0.9999999586358042,
           "filetypes/javascript": 0.969399014765862,
-          "filetypes/c": 0.9986207485198975,
+          "filetypes/c": 0.9955354928970337,
           "filetypes/elf": 0.9939139574851186,
           "filetypes/pdf": 0.37758001685142517,
           "filetypes/python": 0.997936031203846,
@@ -18801,13 +18801,13 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.9422527551651001,
+          "filetypes/go": 0.8180799709874758,
           "filetypes/zip": 0.9939855933189392,
           "filetypes/rust": 0.7905694246292114,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
-          "filetypes/shell": 0.9537530000625566,
+          "filetypes/shell": 0.9902705652468813,
           "filetypes/csharp": 0.9967234997150963,
           "filetypes/markdown": 0.627285751315145,
           "filetypes/xls": 0.7933555245399475,
@@ -18917,17 +18917,17 @@
             "kind": "filegroup",
             "rows": 48151,
             "selected": true,
-            "selected_threshold": 0.5760533809661865,
+            "selected_threshold": 0.7054287195205688,
             "standalone": {
-              "threshold": 0.5760533809661865,
-              "tp": 12998,
+              "threshold": 0.7054287195205688,
+              "tp": 15298,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.5760533809661865,
+              "threshold": 0.7054287195205688,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 12998,
+              "tp": 15298,
               "fp": 0
             }
           },
@@ -18935,17 +18935,17 @@
             "kind": "filegroup",
             "rows": 133691,
             "selected": true,
-            "selected_threshold": 0.996658444404602,
+            "selected_threshold": 0.9799614548683167,
             "standalone": {
-              "threshold": 0.996658444404602,
-              "tp": 1355,
+              "threshold": 0.9799614548683167,
+              "tp": 1552,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.996658444404602,
+              "threshold": 0.9799614548683167,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1355,
+              "tp": 1552,
               "fp": 0
             }
           },
@@ -19043,17 +19043,17 @@
             "kind": "filetype",
             "rows": 76006,
             "selected": true,
-            "selected_threshold": 0.9986207485198975,
+            "selected_threshold": 0.9955354928970337,
             "standalone": {
-              "threshold": 0.9986207485198975,
-              "tp": 139,
+              "threshold": 0.9955354928970337,
+              "tp": 155,
               "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9986207485198975,
+              "threshold": 0.9955354928970337,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 139,
+              "tp": 155,
               "fp": 0
             }
           },
@@ -19187,18 +19187,18 @@
             "kind": "filetype",
             "rows": 14896,
             "selected": true,
-            "selected_threshold": 0.9422527551651001,
+            "selected_threshold": 0.8180799709874758,
             "standalone": {
-              "threshold": 0.9422527551651001,
-              "tp": 20,
-              "fp": 1
+              "threshold": 0.8180799709874758,
+              "tp": 57,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9422527551651001,
+              "threshold": 0.8180799709874758,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 20,
-              "fp": 1
+              "tp": 57,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -19295,18 +19295,18 @@
             "kind": "filetype",
             "rows": 8370,
             "selected": true,
-            "selected_threshold": 0.9537530000625566,
+            "selected_threshold": 0.9902705652468813,
             "standalone": {
-              "threshold": 0.9537530000625566,
-              "tp": 1257,
-              "fp": 3
+              "threshold": 0.9902705652468813,
+              "tp": 1165,
+              "fp": 0
             },
             "best_marginal": {
-              "threshold": 0.9537530000625566,
+              "threshold": 0.9902705652468813,
               "inc_tp": 0,
               "inc_fp": 0,
-              "tp": 1257,
-              "fp": 3
+              "tp": 1165,
+              "fp": 0
             }
           },
           "filetypes/csharp": {
@@ -19868,13 +19868,13 @@
             }
           }
         },
-        "tp": 200225,
-        "fp": 4267,
-        "tn": 520833,
-        "fn": 96361,
-        "recall": 0.6750992966626881,
-        "precision": 0.9791336580404123,
-        "fp_per_100M": 812607.1224528662,
+        "tp": 200054,
+        "fp": 4263,
+        "tn": 520837,
+        "fn": 96532,
+        "recall": 0.674522735395467,
+        "precision": 0.979135363185638,
+        "fp_per_100M": 811845.3627880404,
         "below_resolution": false,
         "cp_floor_per_million": 5.713279289585204
       }

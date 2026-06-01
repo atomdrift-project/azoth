@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.995075 | 0.963196 | 0.991292 | 98.55% | 0.0279 |
+| 0.995017 | 0.962217 | 0.991292 | 98.55% | 0.0284 |
 
 ## Specialist Performance
 

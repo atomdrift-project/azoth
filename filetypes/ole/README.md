@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ole` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.992155 | 0.988493 | 0.980449 | 94.57% | 0.1954 |
+| 0.991028 | 0.987145 | 0.966596 | 92.86% | 0.1810 |
 
 ## Specialist Performance
 

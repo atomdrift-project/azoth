@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xls` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.996953 | 0.995219 | 0.982043 | 94.19% | 0.0413 |
+| 0.997862 | 0.996402 | 0.983313 | 94.23% | 0.0162 |
 
 ## Specialist Performance
 
