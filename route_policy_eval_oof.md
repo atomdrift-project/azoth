@@ -31,13 +31,13 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | zst | 1312 | 2046 | `general` | general: 97.41% | 0 | 28.96% | -68.45% | general: 98.78% | — | 1.000 |
 | pkg-info | 1277 | 172 | `general,filetypes/pkg-info` | general: 78.54% | 0 | 82.07% | 3.52% | filetypes/pkg-info: 99.92% | 1.000 | 1.000 |
 | vbs | 1257 | 427 | `general,filetypes/vbs` | filetypes/vbs: 60.94% | 0 | 64.84% | 3.90% | filetypes/vbs: 68.89% | 0.997 | 0.997 |
-| go | 1182 | 13714 | `general,filegroups/source,filetypes/go` | filetypes/go: 6.51% | 0 | 4.82% | -1.69% | filetypes/go: 6.68% | 0.720 | 0.711 |
+| go | 1182 | 13714 | `general,filegroups/source,filetypes/go` | filetypes/go: 6.43% | 0 | 5.84% | -0.59% | filetypes/go: 7.87% | 0.736 | 0.726 |
 | 7z | 743 | 16 | `general` | general: 89.37% | 0 | 73.49% | -15.88% | general: 90.17% | — | 0.999 |
 | ole | 708 | 737 | `general,filegroups/documents,filetypes/ole` | filegroups/documents: 93.08% | 0 | 86.30% | -6.78% | filetypes/ole: 93.93% | 0.998 | 0.997 |
 | rtf | 691 | 51 | `general,filegroups/documents,filetypes/rtf` | filetypes/rtf: 98.70% | 0 | 98.70% | 0.00% | filetypes/rtf: 98.70% | 1.000 | 1.000 |
 | png | 673 | 18998 | `general,filegroups/media,filetypes/png` | filegroups/media: 1.49% | 0 | 1.63% | 0.15% | filetypes/png: 8.62% | 0.134 | 0.135 |
 | msi | 591 | 16 | `general` | general: 56.01% | 0 | 0.51% | -55.50% | general: 66.16% | — | 0.995 |
-| powershell | 580 | 299 | `general,filegroups/scripts,filetypes/powershell` | filetypes/powershell: 31.55% | 0 | 48.97% | 17.41% | filetypes/powershell: 52.07% | 0.991 | 0.985 |
+| powershell | 580 | 299 | `general,filegroups/scripts,filetypes/powershell` | filegroups/scripts: 29.66% | 0 | 41.90% | 12.24% | filetypes/powershell: 59.31% | 0.991 | 0.985 |
 | php | 554 | 15055 | `general,filegroups/scripts,filetypes/php` | filetypes/php: 64.44% | 0 | 42.42% | -22.02% | filetypes/php: 64.98% | 0.915 | 0.906 |
 | docx | 501 | 58 | `general,filegroups/documents,filetypes/docx` | filetypes/docx: 88.82% | 0 | 81.64% | -7.19% | filegroups/documents: 90.42% | 0.995 | 0.993 |
 | lnk | 500 | 131 | `general,filetypes/lnk` | filetypes/lnk: 82.80% | 0 | 67.80% | -15.00% | filetypes/lnk: 83.00% | 0.994 | 0.992 |
@@ -49,7 +49,7 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | csharp | 241 | 8112 | `general,filegroups/source,filetypes/csharp` | filetypes/csharp: 29.46% | 0 | 22.41% | -7.05% | filetypes/csharp: 31.12% | 0.612 | 0.585 |
 | java_class | 219 | 83812 | `general,filegroups/portable,filetypes/java_class` | general: 47.03% | 0 | 15.53% | -31.51% | general: 69.41% | 0.001 | 0.053 |
 | text | 170 | 8772 | `general,filetypes/text` | general: 14.12% | 0 | 10.59% | -3.53% | general: 14.71% | 0.204 | 0.236 |
-| rust | 166 | 10346 | `general,filegroups/source,filetypes/rust` | general: 2.41% | 0 | 1.81% | -0.60% | filegroups/source: 3.01% | 0.116 | 0.082 |
+| rust | 166 | 10346 | `general,filegroups/source,filetypes/rust` | filetypes/rust: 6.02% | 0 | 2.41% | -3.61% | filetypes/rust: 6.02% | 0.090 | 0.085 |
 | jpeg | 149 | 3363 | `general,filegroups/media,filetypes/jpeg` | filetypes/jpeg: 14.09% | 0 | 9.40% | -4.70% | filetypes/jpeg: 14.09% | 0.259 | 0.258 |
 | json | 93 | 3931 | `general,filegroups/config,filetypes/json` | filegroups/config: 4.30% | 0 | 4.30% | 0.00% | filegroups/config: 4.30% | 0.045 | 0.090 |
 | cab | 85 | 12 | `general` | general: 21.18% | 0 | 0.00% | -21.18% | general: 51.76% | — | 0.973 |
@@ -131,16 +131,16 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | deb | `` | 0 | 0.00% | 4.65% | -4.65% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.74% | 14.09% | -3.36% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | docx | `general,filegroups/documents,filetypes/docx` | 0 | 87.23% | 88.82% | -1.60% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `` | 0 | 0.00% | 0.00% | 0.00% |
@@ -171,7 +171,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 56.12% | 50.57% | 5.55% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L1 hostile
 
@@ -215,15 +215,15 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -252,7 +252,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 54.71% | 50.57% | 4.14% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L2 hostile
 
@@ -296,15 +296,15 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -333,7 +333,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 54.73% | 50.57% | 4.16% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L3 hostile
 
@@ -377,15 +377,15 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -414,7 +414,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 54.74% | 50.57% | 4.17% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L4 hostile
 
@@ -457,15 +457,15 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | bz2 | `general` | 0 | 66.67% | 66.67% | 0.00% |
@@ -495,7 +495,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 54.75% | 50.57% | 4.18% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L5 hostile
 
@@ -538,15 +538,15 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | bz2 | `general` | 0 | 66.67% | 66.67% | 0.00% |
@@ -576,7 +576,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 54.76% | 50.57% | 4.19% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L10 hostile
 
@@ -620,14 +620,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | bz2 | `general` | 0 | 66.67% | 66.67% | 0.00% |
@@ -657,7 +657,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 54.84% | 50.57% | 4.27% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L20 hostile
 
@@ -701,14 +701,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | bz2 | `general` | 0 | 66.67% | 66.67% | 0.00% |
@@ -738,7 +738,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 54.93% | 50.57% | 4.36% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L30 hostile
 
@@ -783,14 +783,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -819,7 +819,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 55.03% | 50.57% | 4.45% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L40 hostile
 
@@ -864,14 +864,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -900,7 +900,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 55.09% | 50.57% | 4.52% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L50 hostile
 
@@ -945,14 +945,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -981,7 +981,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 53.46% | 50.57% | 2.89% |
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L60 hostile
 
@@ -1026,14 +1026,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -1062,7 +1062,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 53.51% | 50.57% | 2.94% |
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L70 hostile
 
@@ -1107,14 +1107,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -1143,7 +1143,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 53.55% | 50.57% | 2.98% |
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L80 hostile
 
@@ -1188,14 +1188,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -1224,7 +1224,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 53.59% | 50.57% | 3.02% |
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L90 hostile
 
@@ -1269,14 +1269,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -1305,7 +1305,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 53.62% | 50.57% | 3.05% |
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L100 hostile
 
@@ -1350,14 +1350,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -1386,7 +1386,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 53.66% | 50.57% | 3.09% |
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L200 hostile
 
@@ -1431,14 +1431,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -1467,7 +1467,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 53.98% | 50.57% | 3.40% |
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L300 hostile
 
@@ -1513,14 +1513,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | pe | `filetypes/pe` | 0 | 45.63% | 50.57% | -4.94% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -1548,7 +1548,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | package.json | `general,filegroups/config,filetypes/package.json` | 0 | 90.28% | 87.45% | 2.83% |
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L500 hostile
 
@@ -1593,14 +1593,14 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | pdf | `filetypes/pdf` | 0 | 68.22% | 73.72% | -5.50% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.07% | 14.09% | -4.03% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
+| go | `filetypes/go` | 0 | 4.82% | 6.43% | -1.61% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -1629,7 +1629,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 56.12% | 50.57% | 5.55% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L1000 hostile
 
@@ -1672,16 +1672,16 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | docx | `filetypes/docx` | 0 | 81.84% | 88.82% | -6.99% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.74% | 14.09% | -3.36% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
-| rust | `filetypes/rust` | 0 | 1.20% | 2.41% | -1.20% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -1710,7 +1710,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 56.12% | 50.57% | 5.55% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L2000 hostile
 
@@ -1753,16 +1753,16 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | docx | `filetypes/docx` | 0 | 82.04% | 88.82% | -6.79% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.74% | 14.09% | -3.36% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -1791,7 +1791,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 56.12% | 50.57% | 5.55% |
-| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 48.97% | 31.55% | 17.41% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L5000 hostile
 
@@ -1812,7 +1812,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pyproject.toml | `` | 0 | 0.00% | 50.00% | -50.00% |
 | msi | `general` | 0 | 14.55% | 56.01% | -41.46% |
 | zig | `general` | 0 | 0.00% | 40.00% | -40.00% |
-| powershell | `filetypes/powershell` | 0 | 0.00% | 31.55% | -31.55% |
 | java_class | `general` | 0 | 15.53% | 47.03% | -31.51% |
 | java | `filegroups/source,filetypes/java` | 0 | 30.00% | 60.00% | -30.00% |
 | data | `general` | 0 | 0.00% | 28.12% | -28.12% |
@@ -1835,16 +1834,16 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | docx | `filetypes/docx` | 0 | 82.44% | 88.82% | -6.39% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.74% | 14.09% | -3.36% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -1874,6 +1873,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 56.12% | 50.57% | 5.55% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L7500 hostile
 
@@ -1903,7 +1903,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 73.76% | 89.37% | -15.61% |
 | crx | `general,filetypes/crx` | 0 | 76.92% | 92.31% | -15.38% |
 | lua | `general,filegroups/scripts,filetypes/lua` | 0 | 53.85% | 69.23% | -15.38% |
-| powershell | `filetypes/powershell` | 0 | 16.38% | 31.55% | -15.17% |
 | zst | `general` | 0 | 82.39% | 97.41% | -15.02% |
 | cab | `general` | 0 | 7.06% | 21.18% | -14.12% |
 | zip | `general,filetypes/zip` | 0 | 20.33% | 33.40% | -13.07% |
@@ -1916,17 +1915,17 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | docx | `filetypes/docx` | 0 | 84.03% | 88.82% | -4.79% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
 | javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 63.07% | 66.74% | -3.67% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.74% | 14.09% | -3.36% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 11.18% | 12.30% | -1.12% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -1956,6 +1955,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 56.12% | 50.57% | 5.55% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |
 
 ## Deployed OR-rule at L10000 hostile
 
@@ -1992,23 +1992,22 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | markdown | `general,filetypes/markdown` | 0 | 2.44% | 9.76% | -7.32% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| powershell | `filetypes/powershell` | 0 | 25.52% | 31.55% | -6.03% |
 | cab | `general` | 0 | 15.29% | 21.18% | -5.88% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | docx | `filetypes/docx` | 0 | 84.03% | 88.82% | -4.79% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
+| rust | `general,filegroups/source,filetypes/rust` | 0 | 2.41% | 6.02% | -3.61% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.74% | 14.09% | -3.36% |
 | javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.29% | 67.27% | -2.98% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
-| go | `general,filegroups/source,filetypes/go` | 0 | 4.91% | 6.51% | -1.61% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 11.18% | 12.30% | -1.12% |
 | doc | `general,filegroups/documents` | 0 | 98.32% | 99.39% | -1.07% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 43.97% | 44.82% | -0.85% |
 | xls | `general,filegroups/documents,filetypes/xls` | 0 | 93.42% | 94.19% | -0.76% |
-| rust | `general,filegroups/source,filetypes/rust` | 0 | 1.81% | 2.41% | -0.60% |
+| go | `general,filegroups/source,filetypes/go` | 0 | 5.84% | 6.43% | -0.59% |
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 86.88% | 87.44% | -0.56% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 98.06% | 98.47% | -0.41% |
 | cargo.toml | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -2038,3 +2037,4 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg-info | `general,filetypes/pkg-info` | 0 | 82.07% | 78.54% | 3.52% |
 | vbs | `general,filetypes/vbs` | 0 | 64.84% | 60.94% | 3.90% |
 | pe | `general,filegroups/native,filetypes/pe` | 0 | 56.12% | 50.57% | 5.55% |
+| powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 41.90% | 29.66% | 12.24% |

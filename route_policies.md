@@ -35,12 +35,12 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 | filetypes/jar | joint_or_at_fp_0 | 3083 | 3558 | 54.07% | 0 | 0.00 | 84161.65 | 0.000 | 70.19% | 78.68% | `{"filetypes/jar": 0.9076920747756958, "general": 0.9845328330993652}` |
 | filetypes/pe† | max_rule | 1263848 | 159938 | 53.41% | 0 | 0.00 | 1873.04 | 0.000 | 69.63% | 58.64% | `{"filegroups/native": 0.9994085401380736, "filetypes/pe": 0.9994085401380736, "general": 0.9994085401380736}` |
 | filetypes/pptx | joint_or_at_fp_0 | 454 | 192 | 52.20% | 0 | 0.00 | 1548167.96 | 0.000 | 68.60% | 66.41% | `{"filegroups/documents": 0.7346557974815369, "filetypes/pptx": 0.09874933958053589}` |
-| filetypes/powershell | learned_blend_at_fp_0 | 4850 | 2301 | 46.95% | 0 | 0.00 | 130107.91 | 0.000 | 63.90% | 64.02% | `{}` |
 | filetypes/kotlin | joint_or_at_fp_0 | 32813 | 50489 | 46.50% | 0 | 0.00 | 5933.26 | 0.000 | 63.48% | 78.92% | `{"filegroups/source": 0.8264152407646179, "filetypes/kotlin": 0.8846541047096252, "general": 0.9302482008934021}` |
 | filetypes/macho† | filetype_only | 2518 | 11373 | 45.31% | 0 | 0.00 | 26337.27 | 0.000 | 62.37% | 90.09% | `{"filetypes/macho": 0.9970421904176612}` |
 | filetypes/xlsx | joint_or_at_fp_0 | 51918 | 1585 | 44.47% | 0 | 0.00 | 188826.69 | 0.000 | 61.56% | 46.12% | `{"filegroups/documents": 0.41709890961647034, "filetypes/xlsx": 0.92574143409729}` |
 | filetypes/php | joint_or_at_fp_0 | 4233 | 120277 | 43.96% | 0 | 0.00 | 2490.66 | 0.000 | 61.08% | 98.09% | `{"filegroups/scripts": 0.9966230392456055, "filetypes/php": 0.9997223019599915, "general": 0.98988938331604}` |
 | filetypes/python | joint_or_at_fp_0 | 18646 | 163686 | 43.70% | 0 | 0.00 | 1830.15 | 0.000 | 60.82% | 94.24% | `{"filegroups/scripts": 0.9982466697692871, "filetypes/python": 0.9998779296875, "general": 0.9953924417495728}` |
+| filetypes/pdf† | filetype_only | 178284 | 21735 | 43.39% | 0 | 0.00 | 13782.04 | 0.000 | 60.52% | 49.54% | `{"filetypes/pdf": 0.876527627769314}` |
 
 ## L100 Hostile
 
@@ -74,7 +74,7 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 | filetypes/jar | joint_or_at_fp_0 | 3083 | 3558 | 54.07% | 0 | 0.00 | 84161.65 | 0.000 | 70.19% | 78.68% | `{"filetypes/jar": 0.9076920747756958, "general": 0.9845328330993652}` |
 | filetypes/pe† | max_rule | 1263848 | 159938 | 53.60% | 0 | 0.00 | 1873.04 | 0.000 | 69.79% | 58.81% | `{"filegroups/native": 0.999402974349452, "filetypes/pe": 0.999402974349452, "general": 0.999402974349452}` |
 | filetypes/pptx | joint_or_at_fp_0 | 454 | 192 | 52.20% | 0 | 0.00 | 1548167.96 | 0.000 | 68.60% | 66.41% | `{"filegroups/documents": 0.7346557974815369, "filetypes/pptx": 0.09874933958053589}` |
-| filetypes/powershell | learned_blend_at_fp_0 | 4850 | 2301 | 46.95% | 0 | 0.00 | 130107.91 | 0.000 | 63.90% | 64.02% | `{}` |
 | filetypes/kotlin | joint_or_at_fp_0 | 32813 | 50489 | 46.50% | 0 | 0.00 | 5933.26 | 0.000 | 63.48% | 78.92% | `{"filegroups/source": 0.8264152407646179, "filetypes/kotlin": 0.8846541047096252, "general": 0.9302482008934021}` |
 | filetypes/xlsx | joint_or_at_fp_0 | 51918 | 1585 | 44.47% | 0 | 0.00 | 188826.69 | 0.000 | 61.56% | 46.12% | `{"filegroups/documents": 0.41709890961647034, "filetypes/xlsx": 0.92574143409729}` |
 | filetypes/php | joint_or_at_fp_0 | 4233 | 120277 | 43.96% | 0 | 0.00 | 2490.66 | 0.000 | 61.08% | 98.09% | `{"filegroups/scripts": 0.9966230392456055, "filetypes/php": 0.9997223019599915, "general": 0.98988938331604}` |
+| filetypes/python | joint_or_at_fp_0 | 18646 | 163686 | 43.70% | 0 | 0.00 | 1830.15 | 0.000 | 60.82% | 94.24% | `{"filegroups/scripts": 0.9982466697692871, "filetypes/python": 0.9998779296875, "general": 0.9953924417495728}` |

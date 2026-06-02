@@ -4,11 +4,11 @@ LightGBM specialist for `tar`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `tar` slice of the locked test partition: 153 malware / 62 benign (215 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `tar` slice of the locked test partition: 2,752 malware / 2,376 benign (5,128 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.974320 | 0.958149 | 0.970297 | 96.08% | 0.0648 |
+| 0.989965 | 0.987413 | 0.947230 | 46.73% | 0.0518 |
 
 ## Specialist Performance
 
@@ -26,7 +26,7 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `tar` are scored by `general`, `filetypes/tar`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `tar` are scored by `general`, `filetypes/tar`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

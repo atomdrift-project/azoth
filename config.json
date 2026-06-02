@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-06-02T00:13:02.880614+00:00",
+  "timestamp": "2026-06-02T02:14:53.925571+00:00",
   "schema": "azoth.routed_ensemble.v1",
   "max_id": 1637343931,
   "calibration_snapshot_id": 1637343931,
   "score_table": "out/models/azoth/score_table.npz",
-  "score_table_hash": "bcc8595beab827f51db85b08cf60a3560f59dac60669bd23862c87a19d05e09d",
-  "model_set_hash": "9c5050c6d2b3f9c3856de9fd34f413c10a97c0be60dff7d9ef245a16a00eb7e1",
+  "score_table_hash": "ab3005ef0259874d6869b87182b7c5693ed661f470f6783c602c34ca9e7abb37",
+  "model_set_hash": "3da3f77de2a502021fce87a9d740e0a46607aa94fa0286412ba99112e4644428",
   "search": {
     "method": "quantile_severity_v1",
     "objective": "per-route observed (1-q*1e-6) benign-score quantile; GPD tail extrapolation when below empirical floor"
@@ -313,11 +313,6 @@
       "route": "filetypes/xlsx",
       "kind": "filetype",
       "rows": 53503
-    },
-    {
-      "route": "filetypes/tar.gz",
-      "kind": "filetype",
-      "rows": 44918
     },
     {
       "route": "filetypes/java",
@@ -830,18 +825,6 @@
               "fp": 0
             }
           },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": false,
-            "reason": "quantile derivation failed",
-            "selected_threshold": null,
-            "standalone": {
-              "threshold": null,
-              "tp": 0,
-              "fp": 0
-            }
-          },
           "filetypes/java": {
             "kind": "filetype",
             "rows": 4475,
@@ -1206,7 +1189,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/vbs",
@@ -1233,9 +1215,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -1244,7 +1226,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888375915936012,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -1259,7 +1240,7 @@
           "filetypes/vbs": 0.9940547317240669,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.01986157829810528,
@@ -1505,11 +1486,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -1529,11 +1510,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -1630,18 +1611,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888375915936012,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888375915936012,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -1817,11 +1786,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -1982,13 +1951,13 @@
             }
           }
         },
-        "tp": 186012,
-        "fp": 4324,
-        "tn": 520020,
-        "fn": 111885,
-        "recall": 0.6244171643218965,
-        "precision": 0.9772822797579018,
-        "fp_per_100M": 824649.4667622782
+        "tp": 184143,
+        "fp": 4323,
+        "tn": 520021,
+        "fn": 113754,
+        "recall": 0.6181431837178623,
+        "precision": 0.9770621756709433,
+        "fp_per_100M": 824458.7522695025
       }
     },
     {
@@ -2009,7 +1978,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/vbs",
@@ -2036,9 +2004,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -2047,7 +2015,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888375803583362,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -2062,7 +2029,7 @@
           "filetypes/vbs": 0.994054728075471,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.019432223525516653,
@@ -2308,11 +2275,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -2332,11 +2299,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -2433,18 +2400,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888375803583362,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888375803583362,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -2620,11 +2575,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -2785,13 +2740,13 @@
             }
           }
         },
-        "tp": 186070,
-        "fp": 4324,
-        "tn": 520020,
-        "fn": 111827,
-        "recall": 0.6246118624893839,
-        "precision": 0.977289200289925,
-        "fp_per_100M": 824649.4667622782
+        "tp": 184201,
+        "fp": 4323,
+        "tn": 520021,
+        "fn": 113696,
+        "recall": 0.6183378818853497,
+        "precision": 0.9770692325645541,
+        "fp_per_100M": 824458.7522695025
       }
     },
     {
@@ -2812,7 +2767,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/vbs",
@@ -2839,9 +2793,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -2850,7 +2804,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888375675697377,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -2865,7 +2818,7 @@
           "filetypes/vbs": 0.9940547241246793,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.019170740903260777,
@@ -3111,11 +3064,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -3135,11 +3088,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -3236,18 +3189,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888375675697377,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888375675697377,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -3423,11 +3364,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -3588,13 +3529,13 @@
             }
           }
         },
-        "tp": 186138,
-        "fp": 4324,
-        "tn": 520020,
-        "fn": 111759,
-        "recall": 0.6248401293064382,
-        "precision": 0.9772973086494944,
-        "fp_per_100M": 824649.4667622782
+        "tp": 184269,
+        "fp": 4323,
+        "tn": 520021,
+        "fn": 113628,
+        "recall": 0.6185661487024039,
+        "precision": 0.9770775006362942,
+        "fp_per_100M": 824458.7522695025
       }
     },
     {
@@ -3615,7 +3556,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/vbs",
@@ -3642,9 +3582,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -3653,7 +3593,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888375536549525,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -3668,7 +3607,7 @@
           "filetypes/vbs": 0.9940547199638878,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.018980434246672603,
@@ -3914,11 +3853,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -3938,11 +3877,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -4039,18 +3978,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888375536549525,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888375536549525,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -4226,11 +4153,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -4391,13 +4318,13 @@
             }
           }
         },
-        "tp": 186181,
-        "fp": 4324,
-        "tn": 520020,
-        "fn": 111716,
-        "recall": 0.6249844744995754,
-        "precision": 0.9773024330070077,
-        "fp_per_100M": 824649.4667622782
+        "tp": 184312,
+        "fp": 4323,
+        "tn": 520021,
+        "fn": 113585,
+        "recall": 0.6187104938955411,
+        "precision": 0.9770827258992234,
+        "fp_per_100M": 824458.7522695025
       }
     },
     {
@@ -4418,7 +4345,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/vbs",
@@ -4445,9 +4371,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -4456,7 +4382,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888375388378846,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -4471,7 +4396,7 @@
           "filetypes/vbs": 0.9940547156396241,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.0188300255313555,
@@ -4717,11 +4642,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -4741,11 +4666,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -4842,18 +4767,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888375388378846,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888375388378846,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -5029,11 +4942,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -5194,13 +5107,13 @@
             }
           }
         },
-        "tp": 186219,
-        "fp": 4324,
-        "tn": 520020,
-        "fn": 111678,
-        "recall": 0.6251120353679291,
-        "precision": 0.9773069595839259,
-        "fp_per_100M": 824649.4667622782
+        "tp": 184350,
+        "fp": 4323,
+        "tn": 520021,
+        "fn": 113547,
+        "recall": 0.6188380547638949,
+        "precision": 0.9770873415910066,
+        "fp_per_100M": 824458.7522695025
       }
     },
     {
@@ -5221,7 +5134,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/vbs",
@@ -5248,9 +5160,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -5259,7 +5171,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.988837454971338,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -5274,7 +5185,7 @@
           "filetypes/vbs": 0.994054692316428,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.018346770398328535,
@@ -5520,11 +5431,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -5544,11 +5455,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -5645,18 +5556,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.988837454971338,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.988837454971338,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -5832,11 +5731,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -5997,13 +5896,13 @@
             }
           }
         },
-        "tp": 186367,
-        "fp": 4324,
-        "tn": 520020,
-        "fn": 111530,
-        "recall": 0.6256088513815178,
-        "precision": 0.977324572213686,
-        "fp_per_100M": 824649.4667622782
+        "tp": 184498,
+        "fp": 4323,
+        "tn": 520021,
+        "fn": 113399,
+        "recall": 0.6193348707774835,
+        "precision": 0.9771053007875183,
+        "fp_per_100M": 824458.7522695025
       }
     },
     {
@@ -6024,7 +5923,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/vbs",
@@ -6051,9 +5949,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -6062,7 +5960,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888372556417641,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -6077,7 +5974,7 @@
           "filetypes/vbs": 0.9940546404641387,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.017838264374902716,
@@ -6323,11 +6220,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -6347,11 +6244,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -6448,18 +6345,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888372556417641,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888372556417641,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -6635,11 +6520,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -6800,13 +6685,13 @@
             }
           }
         },
-        "tp": 186832,
-        "fp": 4324,
-        "tn": 520020,
-        "fn": 111065,
-        "recall": 0.6271697935863738,
-        "precision": 0.9773797317374291,
-        "fp_per_100M": 824649.4667622782
+        "tp": 184966,
+        "fp": 4323,
+        "tn": 520021,
+        "fn": 112931,
+        "recall": 0.6209058835772095,
+        "precision": 0.9771619058688038,
+        "fp_per_100M": 824458.7522695025
       }
     },
     {
@@ -6827,7 +6712,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/vbs",
@@ -6854,9 +6738,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -6865,7 +6749,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888370287538447,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -6880,7 +6763,7 @@
           "filetypes/vbs": 0.9940545843171706,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.01752857761484499,
@@ -7126,11 +7009,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -7150,11 +7033,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -7251,18 +7134,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888370287538447,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888370287538447,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -7438,11 +7309,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -7603,13 +7474,13 @@
             }
           }
         },
-        "tp": 187117,
-        "fp": 4324,
-        "tn": 520020,
-        "fn": 110780,
-        "recall": 0.6281265000990275,
-        "precision": 0.9774134067415026,
-        "fp_per_100M": 824649.4667622782
+        "tp": 185253,
+        "fp": 4323,
+        "tn": 520021,
+        "fn": 112644,
+        "recall": 0.6218693038197767,
+        "precision": 0.9771964805671604,
+        "fp_per_100M": 824458.7522695025
       }
     },
     {
@@ -7630,7 +7501,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/lua",
@@ -7658,9 +7528,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -7669,7 +7539,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888367818857704,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -7684,7 +7553,7 @@
           "filetypes/vbs": 0.994054525185775,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.017303188059746615,
@@ -7930,11 +7799,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -7954,11 +7823,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -8055,18 +7924,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888367818857704,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888367818857704,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -8242,11 +8099,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -8407,13 +8264,13 @@
             }
           }
         },
-        "tp": 187469,
-        "fp": 4323,
-        "tn": 520021,
-        "fn": 110428,
-        "recall": 0.6293081165637787,
-        "precision": 0.9774599566196713,
-        "fp_per_100M": 824458.7522695025
+        "tp": 185610,
+        "fp": 4322,
+        "tn": 520022,
+        "fn": 112287,
+        "recall": 0.6230677046093113,
+        "precision": 0.9772444875007897,
+        "fp_per_100M": 824268.0377767268
       }
     },
     {
@@ -8434,7 +8291,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/lua",
@@ -8462,9 +8318,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -8473,7 +8329,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.98883651900992,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -8488,7 +8343,7 @@
           "filetypes/vbs": 0.9940544637311821,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.017125051603376615,
@@ -8734,11 +8589,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -8758,11 +8613,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -8859,18 +8714,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.98883651900992,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.98883651900992,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -9046,11 +8889,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -9211,13 +9054,13 @@
             }
           }
         },
-        "tp": 187690,
-        "fp": 4323,
-        "tn": 520021,
-        "fn": 110207,
-        "recall": 0.630049983719205,
-        "precision": 0.9774858993922286,
-        "fp_per_100M": 824458.7522695025
+        "tp": 185833,
+        "fp": 4322,
+        "tn": 520022,
+        "fn": 112064,
+        "recall": 0.6238162854946508,
+        "precision": 0.977271173516342,
+        "fp_per_100M": 824268.0377767268
       }
     },
     {
@@ -9238,7 +9081,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/lua",
@@ -9266,9 +9108,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -9277,7 +9119,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888362426305588,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -9292,7 +9133,7 @@
           "filetypes/vbs": 0.9940544003594519,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.016977319647593008,
@@ -9538,11 +9379,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -9562,11 +9403,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -9663,18 +9504,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888362426305588,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888362426305588,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -9850,11 +9679,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -10015,13 +9844,13 @@
             }
           }
         },
-        "tp": 188024,
-        "fp": 4323,
-        "tn": 520021,
-        "fn": 109873,
-        "recall": 0.631171176614736,
-        "precision": 0.9775249938912486,
-        "fp_per_100M": 824458.7522695025
+        "tp": 186170,
+        "fp": 4322,
+        "tn": 520022,
+        "fn": 111727,
+        "recall": 0.6249475489850519,
+        "precision": 0.9773113831551982,
+        "fp_per_100M": 824268.0377767268
       }
     },
     {
@@ -10042,7 +9871,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/lua",
@@ -10070,9 +9898,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -10081,7 +9909,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.98883595449174,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -10096,7 +9923,7 @@
           "filetypes/vbs": 0.9940543353476927,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.016850860667441462,
@@ -10342,11 +10169,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -10366,11 +10193,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -10467,18 +10294,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.98883595449174,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.98883595449174,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -10654,11 +10469,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -10819,13 +10634,13 @@
             }
           }
         },
-        "tp": 188185,
-        "fp": 4323,
-        "tn": 520021,
-        "fn": 109712,
-        "recall": 0.6317116318727614,
-        "precision": 0.9775437903879319,
-        "fp_per_100M": 824458.7522695025
+        "tp": 186334,
+        "fp": 4322,
+        "tn": 520022,
+        "fn": 111563,
+        "recall": 0.6254980748379474,
+        "precision": 0.9773308996307486,
+        "fp_per_100M": 824268.0377767268
       }
     },
     {
@@ -10846,7 +10661,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/makefile",
@@ -10875,9 +10689,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -10886,7 +10700,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888356558875709,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -10901,7 +10714,7 @@
           "filetypes/vbs": 0.9940542688981288,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.016740153110598573,
@@ -11147,11 +10960,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -11171,11 +10984,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -11272,18 +11085,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888356558875709,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888356558875709,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -11459,11 +11260,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -11624,13 +11425,13 @@
             }
           }
         },
-        "tp": 188322,
-        "fp": 4322,
-        "tn": 520022,
-        "fn": 109575,
-        "recall": 0.6321715223718265,
-        "precision": 0.9775648346172214,
-        "fp_per_100M": 824268.0377767268
+        "tp": 186473,
+        "fp": 4321,
+        "tn": 520023,
+        "fn": 111424,
+        "recall": 0.6259646790669258,
+        "precision": 0.977352537291529,
+        "fp_per_100M": 824077.323283951
       }
     },
     {
@@ -11651,7 +11452,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/makefile",
@@ -11680,9 +11480,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -11691,7 +11491,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888353478216599,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -11706,7 +11505,7 @@
           "filetypes/vbs": 0.994054201165389,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.01664159639954936,
@@ -11952,11 +11751,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -11976,11 +11775,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -12077,18 +11876,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888353478216599,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888353478216599,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -12264,11 +12051,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -12429,13 +12216,13 @@
             }
           }
         },
-        "tp": 188459,
-        "fp": 4322,
-        "tn": 520022,
-        "fn": 109438,
-        "recall": 0.6326314128708916,
-        "precision": 0.9775807781887219,
-        "fp_per_100M": 824268.0377767268
+        "tp": 186611,
+        "fp": 4321,
+        "tn": 520023,
+        "fn": 111286,
+        "recall": 0.6264279264309476,
+        "precision": 0.9773689062074455,
+        "fp_per_100M": 824077.323283951
       }
     },
     {
@@ -12456,7 +12243,6 @@
           "filetypes/python",
           "filetypes/shell",
           "filetypes/csharp",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/makefile",
@@ -12485,9 +12271,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -12496,7 +12282,6 @@
           "filetypes/markdown": 0.43448418378829956,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.988835031098147,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -12511,7 +12296,7 @@
           "filetypes/vbs": 0.9940541322718577,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.01655270872591405,
@@ -12757,11 +12542,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -12781,11 +12566,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -12882,18 +12667,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.988835031098147,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.988835031098147,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -13069,11 +12842,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -13234,13 +13007,13 @@
             }
           }
         },
-        "tp": 188601,
-        "fp": 4322,
-        "tn": 520022,
-        "fn": 109296,
-        "recall": 0.6331080876947401,
-        "precision": 0.977597279743732,
-        "fp_per_100M": 824268.0377767268
+        "tp": 186754,
+        "fp": 4321,
+        "tn": 520023,
+        "fn": 111143,
+        "recall": 0.6269079581197528,
+        "precision": 0.9773858432552662,
+        "fp_per_100M": 824077.323283951
       }
     },
     {
@@ -13261,7 +13034,6 @@
           "filetypes/shell",
           "filetypes/csharp",
           "filetypes/markdown",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/makefile",
@@ -13290,9 +13062,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -13301,7 +13073,6 @@
           "filetypes/markdown": 0.8921958301922209,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888314947081068,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -13316,7 +13087,7 @@
           "filetypes/vbs": 0.9940533953692223,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.01595045997413859,
@@ -13562,11 +13333,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -13586,11 +13357,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -13687,18 +13458,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888314947081068,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888314947081068,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -13874,11 +13633,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -14039,13 +13798,13 @@
             }
           }
         },
-        "tp": 191627,
-        "fp": 4323,
-        "tn": 520021,
-        "fn": 106270,
-        "recall": 0.6432659610536527,
-        "precision": 0.9779382495534575,
-        "fp_per_100M": 824458.7522695025
+        "tp": 189994,
+        "fp": 4322,
+        "tn": 520022,
+        "fn": 107903,
+        "recall": 0.6377842005793949,
+        "precision": 0.9777578789188744,
+        "fp_per_100M": 824268.0377767268
       }
     },
     {
@@ -14066,7 +13825,6 @@
           "filetypes/shell",
           "filetypes/csharp",
           "filetypes/markdown",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/makefile",
@@ -14095,9 +13853,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.7645729184150696,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -14106,7 +13864,6 @@
           "filetypes/markdown": 0.8182684828095989,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.988827469393841,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -14121,7 +13878,7 @@
           "filetypes/vbs": 0.9940525974324419,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.015583682677323813,
@@ -14367,11 +14124,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
+            "selected_threshold": 0.7645729184150696,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
+              "threshold": 0.7645729184150696,
+              "tp": 80,
               "fp": 1
             }
           },
@@ -14391,11 +14148,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -14492,18 +14249,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.988827469393841,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.988827469393841,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -14679,11 +14424,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -14844,13 +14589,13 @@
             }
           }
         },
-        "tp": 192330,
-        "fp": 4323,
-        "tn": 520021,
-        "fn": 105567,
-        "recall": 0.6456258371181985,
-        "precision": 0.978017116443685,
-        "fp_per_100M": 824458.7522695025
+        "tp": 190697,
+        "fp": 4322,
+        "tn": 520022,
+        "fn": 107200,
+        "recall": 0.6401440766439407,
+        "precision": 0.9778380568047216,
+        "fp_per_100M": 824268.0377767268
       }
     },
     {
@@ -14868,10 +14613,10 @@
           "filetypes/javascript",
           "filetypes/elf",
           "filetypes/python",
+          "filetypes/go",
           "filetypes/shell",
           "filetypes/csharp",
           "filetypes/markdown",
-          "filetypes/tar.gz",
           "filetypes/jpeg",
           "filetypes/ruby",
           "filetypes/makefile",
@@ -14900,9 +14645,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.7825130224227905,
+          "filetypes/go": 0.9714477496692075,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -14911,7 +14656,6 @@
           "filetypes/markdown": 0.7322992990527772,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9888184258118868,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.796964704990387,
@@ -14926,7 +14670,7 @@
           "filetypes/vbs": 0.9940508837157632,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.015105766928994012,
@@ -15172,12 +14916,12 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.7825130224227905,
-            "method": "empirical_floor",
+            "selected_threshold": 0.9714477496692075,
+            "method": "extrapolated",
             "standalone": {
-              "threshold": 0.7825130224227905,
-              "tp": 53,
-              "fp": 1
+              "threshold": 0.9714477496692075,
+              "tp": 46,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -15196,11 +14940,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -15297,18 +15041,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9888184258118868,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9888184258118868,
-              "tp": 3164,
               "fp": 1
             }
           },
@@ -15484,11 +15216,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -15649,13 +15381,13 @@
             }
           }
         },
-        "tp": 194679,
-        "fp": 4324,
-        "tn": 520020,
-        "fn": 103218,
-        "recall": 0.653511112901439,
-        "precision": 0.9782716843464672,
-        "fp_per_100M": 824649.4667622782
+        "tp": 193103,
+        "fp": 4322,
+        "tn": 520022,
+        "fn": 104794,
+        "recall": 0.6482206937297119,
+        "precision": 0.9781081423325313,
+        "fp_per_100M": 824268.0377767268
       }
     },
     {
@@ -15676,7 +15408,6 @@
           "filetypes/shell",
           "filetypes/csharp",
           "filetypes/markdown",
-          "filetypes/tar.gz",
           "filetypes/perl",
           "filetypes/jpeg",
           "filetypes/ruby",
@@ -15707,9 +15438,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.8180799709874758,
+          "filetypes/go": 0.8867791374140436,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.8837788701057434,
           "filetypes/text": 0.22389566898345947,
@@ -15718,7 +15449,6 @@
           "filetypes/markdown": 0.627285751315145,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9887920281415978,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.9858833651192691,
@@ -15733,7 +15463,7 @@
           "filetypes/vbs": 0.9940461731571084,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.014427913043965866,
@@ -15979,11 +15709,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.8180799709874758,
+            "selected_threshold": 0.8867791374140436,
             "method": "extrapolated",
             "standalone": {
-              "threshold": 0.8180799709874758,
-              "tp": 51,
+              "threshold": 0.8867791374140436,
+              "tp": 61,
               "fp": 0
             }
           },
@@ -16003,11 +15733,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -16104,18 +15834,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9887920281415978,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9887920281415978,
-              "tp": 3165,
               "fp": 1
             }
           },
@@ -16291,11 +16009,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -16456,13 +16174,13 @@
             }
           }
         },
-        "tp": 200704,
-        "fp": 4326,
-        "tn": 520018,
-        "fn": 97193,
-        "recall": 0.673736224265434,
-        "precision": 0.9789006486855583,
-        "fp_per_100M": 825030.8957478297
+        "tp": 199291,
+        "fp": 4325,
+        "tn": 520019,
+        "fn": 98606,
+        "recall": 0.6689929740816457,
+        "precision": 0.9787590366179475,
+        "fp_per_100M": 824840.181255054
       }
     },
     {
@@ -16481,7 +16199,6 @@
           "filetypes/shell",
           "filetypes/csharp",
           "filetypes/markdown",
-          "filetypes/tar.gz",
           "filetypes/perl",
           "filetypes/jpeg",
           "filetypes/ruby",
@@ -16512,9 +16229,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.6399033212418067,
+          "filetypes/go": 0.8062611218396242,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.7905694246292114,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.953896019145619,
           "filetypes/text": 0.22389566898345947,
@@ -16523,7 +16240,6 @@
           "filetypes/markdown": 0.5342731187241507,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9887292875544246,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.941735263190408,
@@ -16538,7 +16254,7 @@
           "filetypes/vbs": 0.9940357006109093,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914673,
           "filetypes/jar": 0.04028582572937012,
           "filetypes/groovy": 0.013714640157694897,
@@ -16784,12 +16500,12 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.6399033212418067,
+            "selected_threshold": 0.8062611218396242,
             "method": "extrapolated",
             "standalone": {
-              "threshold": 0.6399033212418067,
-              "tp": 62,
-              "fp": 1
+              "threshold": 0.8062611218396242,
+              "tp": 69,
+              "fp": 0
             }
           },
           "filetypes/zip": {
@@ -16808,11 +16524,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.7905694246292114,
+            "selected_threshold": 0.7776010632514954,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.7905694246292114,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -16909,18 +16625,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9887292875544246,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9887292875544246,
-              "tp": 3166,
               "fp": 1
             }
           },
@@ -17096,11 +16800,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -17261,13 +16965,13 @@
             }
           }
         },
-        "tp": 207335,
-        "fp": 4335,
-        "tn": 520009,
-        "fn": 90562,
-        "recall": 0.6959955957931768,
-        "precision": 0.9795200075589361,
-        "fp_per_100M": 826747.3261828113
+        "tp": 206039,
+        "fp": 4333,
+        "tn": 520011,
+        "fn": 91858,
+        "recall": 0.69164509880932,
+        "precision": 0.9794031525107905,
+        "fp_per_100M": 826365.8971972598
       }
     },
     {
@@ -17279,12 +16983,10 @@
         "extrapolated_routes": [
           "filetypes/pe",
           "filetypes/go",
-          "filetypes/rust",
           "filetypes/python-bytecode",
           "filetypes/shell",
           "filetypes/csharp",
           "filetypes/markdown",
-          "filetypes/tar.gz",
           "filetypes/perl",
           "filetypes/jpeg",
           "filetypes/ruby",
@@ -17316,9 +17018,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.13528257608413696,
           "filetypes/php": 0.9953118562698364,
-          "filetypes/go": 0.4614027030542704,
+          "filetypes/go": 0.7058476591716224,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.5882622582329748,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.6866006851196289,
           "filetypes/python-bytecode": 0.5642522033877897,
           "filetypes/text": 0.22389566898345947,
@@ -17327,7 +17029,6 @@
           "filetypes/markdown": 0.42742616210152556,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9884974267547879,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.8771594500922206,
@@ -17342,7 +17043,7 @@
           "filetypes/vbs": 0.9940000060623715,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914665,
           "filetypes/jar": 0.5284507301000773,
           "filetypes/groovy": 0.01271422854281469,
@@ -17588,11 +17289,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.4614027030542704,
+            "selected_threshold": 0.7058476591716224,
             "method": "extrapolated",
             "standalone": {
-              "threshold": 0.4614027030542704,
-              "tp": 70,
+              "threshold": 0.7058476591716224,
+              "tp": 92,
               "fp": 1
             }
           },
@@ -17612,11 +17313,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.5882622582329748,
-            "method": "extrapolated",
+            "selected_threshold": 0.7776010632514954,
+            "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.5882622582329748,
-              "tp": 4,
+              "threshold": 0.7776010632514954,
+              "tp": 3,
               "fp": 1
             }
           },
@@ -17713,18 +17414,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9884974267547879,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9884974267547879,
-              "tp": 3170,
               "fp": 1
             }
           },
@@ -17900,11 +17589,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -18065,13 +17754,13 @@
             }
           }
         },
-        "tp": 223657,
-        "fp": 4369,
-        "tn": 519975,
-        "fn": 74240,
-        "recall": 0.7507863456161022,
-        "precision": 0.9808399042214484,
-        "fp_per_100M": 833231.6189371863
+        "tp": 222667,
+        "fp": 4368,
+        "tn": 519976,
+        "fn": 75230,
+        "recall": 0.7474630493089893,
+        "precision": 0.9807606756667474,
+        "fp_per_100M": 833040.9044444106
       }
     },
     {
@@ -18081,13 +17770,11 @@
         "below_resolution": false,
         "cp_floor_per_million": 5.713279289585204,
         "extrapolated_routes": [
-          "filetypes/rust",
           "filetypes/kotlin",
           "filetypes/python-bytecode",
           "filetypes/shell",
           "filetypes/csharp",
           "filetypes/markdown",
-          "filetypes/tar.gz",
           "filetypes/perl",
           "filetypes/jpeg",
           "filetypes/ruby",
@@ -18119,9 +17806,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.07854849100112915,
           "filetypes/php": 0.9919825196266174,
-          "filetypes/go": 0.27328523993492126,
+          "filetypes/go": 0.7000661492347717,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.26280144590869425,
+          "filetypes/rust": 0.7776010632514954,
           "filetypes/kotlin": 0.698730249733411,
           "filetypes/python-bytecode": 0.4501355033087652,
           "filetypes/text": 0.22389566898345947,
@@ -18130,7 +17817,6 @@
           "filetypes/markdown": 0.38534786648898117,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9882731363600814,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.8461275860556632,
@@ -18145,7 +17831,7 @@
           "filetypes/vbs": 0.9939674003947928,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.1444936394691462,
           "filetypes/jar": 0.3929456953562015,
           "filetypes/groovy": 0.012249581896077047,
@@ -18391,11 +18077,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.27328523993492126,
+            "selected_threshold": 0.7000661492347717,
             "method": "empirical",
             "standalone": {
-              "threshold": 0.27328523993492126,
-              "tp": 108,
+              "threshold": 0.7000661492347717,
+              "tp": 94,
               "fp": 2
             }
           },
@@ -18415,12 +18101,12 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.26280144590869425,
-            "method": "extrapolated",
+            "selected_threshold": 0.7776010632514954,
+            "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.26280144590869425,
-              "tp": 6,
-              "fp": 4
+              "threshold": 0.7776010632514954,
+              "tp": 3,
+              "fp": 1
             }
           },
           "filetypes/kotlin": {
@@ -18516,18 +18202,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9882731363600814,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9882731363600814,
-              "tp": 3178,
               "fp": 1
             }
           },
@@ -18703,11 +18377,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -18868,13 +18542,13 @@
             }
           }
         },
-        "tp": 227403,
-        "fp": 4395,
-        "tn": 519949,
-        "fn": 70494,
-        "recall": 0.7633611617438242,
-        "precision": 0.9810395257940103,
-        "fp_per_100M": 838190.1957493554
+        "tp": 226597,
+        "fp": 4391,
+        "tn": 519953,
+        "fn": 71300,
+        "recall": 0.7606555285887404,
+        "precision": 0.9809903544772889,
+        "fp_per_100M": 837427.3377782524
       }
     },
     {
@@ -18889,7 +18563,6 @@
           "filetypes/shell",
           "filetypes/csharp",
           "filetypes/markdown",
-          "filetypes/tar.gz",
           "filetypes/perl",
           "filetypes/jpeg",
           "filetypes/ruby",
@@ -18921,9 +18594,9 @@
           "filetypes/batch": 0.9927771091461182,
           "filetypes/png": 0.07854849100112915,
           "filetypes/php": 0.9919825196266174,
-          "filetypes/go": 0.27328523993492126,
+          "filetypes/go": 0.7000661492347717,
           "filetypes/zip": 0.9939855933189392,
-          "filetypes/rust": 0.5024287700653076,
+          "filetypes/rust": 0.3541107177734375,
           "filetypes/kotlin": 0.46581546052916983,
           "filetypes/python-bytecode": 0.3846517916690619,
           "filetypes/text": 0.22389566898345947,
@@ -18932,7 +18605,6 @@
           "filetypes/markdown": 0.35725342039191565,
           "filetypes/xls": 0.7933555245399475,
           "filetypes/xlsx": 0.8707722425460815,
-          "filetypes/tar.gz": 0.9880290945529907,
           "filetypes/java": 0.9976025223731995,
           "filetypes/package.json": 0.9983539581298828,
           "filetypes/perl": 0.8231328668017869,
@@ -18947,7 +18619,7 @@
           "filetypes/vbs": 0.9939330616103281,
           "filetypes/pkg-info": 0.06263196468353271,
           "filetypes/ole": 0.32986289262771606,
-          "filetypes/powershell": 0.8938430547714233,
+          "filetypes/powershell": 0.9354557991027832,
           "filetypes/deb": 0.14449363946914467,
           "filetypes/jar": 0.3184348960276206,
           "filetypes/groovy": 0.011911412770065235,
@@ -19193,11 +18865,11 @@
             "kind": "filetype",
             "rows": 14863,
             "selected": true,
-            "selected_threshold": 0.27328523993492126,
+            "selected_threshold": 0.7000661492347717,
             "method": "empirical",
             "standalone": {
-              "threshold": 0.27328523993492126,
-              "tp": 108,
+              "threshold": 0.7000661492347717,
+              "tp": 94,
               "fp": 2
             }
           },
@@ -19217,11 +18889,11 @@
             "kind": "filetype",
             "rows": 10596,
             "selected": true,
-            "selected_threshold": 0.5024287700653076,
+            "selected_threshold": 0.3541107177734375,
             "method": "empirical",
             "standalone": {
-              "threshold": 0.5024287700653076,
-              "tp": 4,
+              "threshold": 0.3541107177734375,
+              "tp": 8,
               "fp": 2
             }
           },
@@ -19318,18 +18990,6 @@
             "standalone": {
               "threshold": 0.8707722425460815,
               "tp": 3042,
-              "fp": 1
-            }
-          },
-          "filetypes/tar.gz": {
-            "kind": "filetype",
-            "rows": 5772,
-            "selected": true,
-            "selected_threshold": 0.9880290945529907,
-            "method": "extrapolated",
-            "standalone": {
-              "threshold": 0.9880290945529907,
-              "tp": 3184,
               "fp": 1
             }
           },
@@ -19505,11 +19165,11 @@
             "kind": "filetype",
             "rows": 888,
             "selected": true,
-            "selected_threshold": 0.8938430547714233,
+            "selected_threshold": 0.9354557991027832,
             "method": "empirical_floor",
             "standalone": {
-              "threshold": 0.8938430547714233,
-              "tp": 398,
+              "threshold": 0.9354557991027832,
+              "tp": 325,
               "fp": 1
             }
           },
@@ -19670,13 +19330,13 @@
             }
           }
         },
-        "tp": 230361,
-        "fp": 26679,
-        "tn": 497665,
-        "fn": 67536,
-        "recall": 0.7732907682856827,
-        "precision": 0.8962068160597573,
-        "fp_per_100M": 5088071.952763834
+        "tp": 229638,
+        "fp": 26678,
+        "tn": 497666,
+        "fn": 68259,
+        "recall": 0.7708637549220032,
+        "precision": 0.8959175392874421,
+        "fp_per_100M": 5087881.238271059
       }
     }
   ]
