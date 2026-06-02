@@ -20,7 +20,7 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | xlsx | 6526 | 169 | `general,filegroups/documents,filetypes/xlsx` | filetypes/xlsx: 43.15% | 0 | 44.91% | 1.76% | filetypes/xlsx: 46.08% | 0.999 | 0.999 |
 | xls | 4076 | 2651 | `general,filegroups/documents,filetypes/xls` | filegroups/documents: 94.19% | 0 | 93.42% | -0.76% | filetypes/xls: 94.23% | 0.999 | 0.997 |
 | kotlin | 4037 | 6300 | `general,filegroups/source,filetypes/kotlin` | filetypes/kotlin: 49.69% | 0 | 47.36% | -2.33% | filetypes/kotlin: 49.69% | 0.974 | 0.967 |
-| tar.gz | 3662 | 1937 | `general,filetypes/tar.gz` | filetypes/tar.gz: 81.87% | 0 | 75.86% | -6.01% | filetypes/tar.gz: 83.78% | 0.999 | 0.999 |
+| tar | 3845 | 2377 | `general,filetypes/tar` | filetypes/tar: 97.80% | 17 | 89.31% | — | filetypes/tar: 97.80% | 0.996 | 0.993 |
 | doc | 3449 | 7 | `general,filegroups/documents` | filegroups/documents: 99.39% | 0 | 98.32% | -1.07% | filegroups/documents: 99.51% | — | 1.000 |
 | unknown | 2681 | 32957 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 1.16% | — | 0.347 |
 | python | 2345 | 20509 | `general,filegroups/scripts,filetypes/python` | general: 44.82% | 0 | 43.97% | -0.85% | filetypes/python: 63.37% | 0.972 | 0.963 |
@@ -48,7 +48,6 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | macho | 327 | 1462 | `general,filegroups/native,filetypes/macho` | filetypes/macho: 81.65% | 0 | 46.79% | -34.86% | filetypes/macho: 82.26% | 0.986 | 0.940 |
 | csharp | 241 | 8112 | `general,filegroups/source,filetypes/csharp` | filetypes/csharp: 29.46% | 0 | 22.41% | -7.05% | filetypes/csharp: 31.12% | 0.612 | 0.585 |
 | java_class | 219 | 83812 | `general,filegroups/portable,filetypes/java_class` | general: 47.03% | 0 | 15.53% | -31.51% | general: 69.41% | 0.001 | 0.053 |
-| tar | 182 | 63 | `general,filetypes/tar` | filetypes/tar: 97.80% | 0 | 95.05% | -2.75% | filetypes/tar: 97.80% | 0.996 | 0.995 |
 | text | 170 | 8772 | `general,filetypes/text` | general: 14.12% | 0 | 10.59% | -3.53% | general: 14.71% | 0.204 | 0.236 |
 | rust | 166 | 10346 | `general,filegroups/source,filetypes/rust` | general: 2.41% | 0 | 1.81% | -0.60% | filegroups/source: 3.01% | 0.116 | 0.082 |
 | jpeg | 149 | 3363 | `general,filegroups/media,filetypes/jpeg` | filetypes/jpeg: 14.09% | 0 | 9.40% | -4.70% | filetypes/jpeg: 14.09% | 0.259 | 0.258 |
@@ -88,7 +87,6 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | github-actions | 1 | 832 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.125 |
 | ooxml | 1 | 6 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.250 |
 | systemd | 1 | 159 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.009 |
-| tar.bz2 | 1 | 29 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 | xpi | 1 | 5 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 
 ## Deployed OR-rule at L0 hostile
@@ -101,7 +99,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | desktop-entry | `` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
 | rar | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | doc | `` | 0 | 0.00% | 99.39% | -99.39% |
 | zst | `` | 0 | 0.00% | 97.41% | -97.41% |
@@ -131,13 +128,11 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | deb | `` | 0 | 0.00% | 4.65% | -4.65% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.74% | 14.09% | -3.36% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
@@ -165,6 +160,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -186,7 +182,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -217,12 +212,10 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
@@ -248,6 +241,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -269,7 +263,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -300,12 +293,10 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
@@ -331,6 +322,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -352,7 +344,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -383,12 +374,10 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
@@ -414,6 +403,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -435,7 +425,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -465,12 +454,10 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
@@ -497,6 +484,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -518,7 +506,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -548,12 +535,10 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
@@ -580,6 +565,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -601,7 +587,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -633,11 +618,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -663,6 +646,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `general,filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -684,7 +668,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -716,11 +699,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -746,6 +727,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -767,7 +749,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -800,11 +781,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -829,6 +808,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -850,7 +830,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -883,11 +862,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -912,6 +889,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -933,7 +911,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -966,11 +943,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -995,6 +970,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -1016,7 +992,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -1049,11 +1024,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -1078,6 +1051,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -1099,7 +1073,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -1132,11 +1105,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -1161,6 +1132,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -1182,7 +1154,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -1215,11 +1186,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -1244,6 +1213,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -1265,7 +1235,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -1298,11 +1267,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -1327,6 +1294,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -1348,7 +1316,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -1381,11 +1348,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -1410,6 +1375,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -1431,7 +1397,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -1464,11 +1429,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | docx | `filetypes/docx` | 0 | 81.84% | 88.82% | -6.99% |
 | pdf | `filetypes/pdf` | 0 | 66.83% | 73.72% | -6.89% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -1493,6 +1456,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `general,filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -1514,7 +1478,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -1547,12 +1510,10 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | docx | `filetypes/docx` | 0 | 81.84% | 88.82% | -6.99% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | pdf | `filetypes/pdf` | 0 | 67.63% | 73.72% | -6.09% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | pe | `filetypes/pe` | 0 | 45.63% | 50.57% | -4.94% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 9.40% | 14.09% | -4.70% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -1577,6 +1538,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `general,filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -1597,7 +1559,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `filetypes/ruby` | 0 | 0.00% | 83.33% | -83.33% |
@@ -1629,12 +1590,10 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | docx | `filetypes/docx` | 0 | 81.84% | 88.82% | -6.99% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | pdf | `filetypes/pdf` | 0 | 68.22% | 73.72% | -5.50% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.07% | 14.09% | -4.03% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.82% | 6.51% | -1.69% |
@@ -1659,6 +1618,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `general,filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -1680,7 +1640,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `general,filegroups/scripts,filetypes/ruby` | 0 | 8.33% | 83.33% | -75.00% |
@@ -1712,11 +1671,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | docx | `filetypes/docx` | 0 | 81.84% | 88.82% | -6.99% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.74% | 14.09% | -3.36% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
@@ -1742,6 +1699,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `general,filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -1763,7 +1721,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `general,filegroups/scripts,filetypes/ruby` | 0 | 8.33% | 83.33% | -75.00% |
@@ -1795,11 +1752,9 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | docx | `filetypes/docx` | 0 | 82.04% | 88.82% | -6.79% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.74% | 14.09% | -3.36% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
@@ -1825,6 +1780,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `general,filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -1846,7 +1802,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | chm | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
 | ruby | `general,filegroups/scripts,filetypes/ruby` | 0 | 8.33% | 83.33% | -75.00% |
@@ -1878,12 +1833,10 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | c | `general,filegroups/source,filetypes/c` | 0 | 5.28% | 12.30% | -7.02% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | docx | `filetypes/docx` | 0 | 82.44% | 88.82% | -6.39% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.74% | 14.09% | -3.36% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
@@ -1910,6 +1863,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `general,filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -1929,7 +1883,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | --- | --- | ---: | ---: | --- | ---: |
 | desktop-entry | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | msg | `` | 0 | 0.00% | 100.00% | -100.00% |
-| tar.bz2 | `general` | 0 | 0.00% | 100.00% | -100.00% |
 | xpi | `` | 0 | 0.00% | 100.00% | -100.00% |
 | chm | `general` | 0 | 3.33% | 100.00% | -96.67% |
 | asar | `` | 0 | 0.00% | 94.12% | -94.12% |
@@ -1959,14 +1912,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | markdown | `general,filetypes/markdown` | 0 | 2.44% | 9.76% | -7.32% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | docx | `filetypes/docx` | 0 | 84.03% | 88.82% | -4.79% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 77.37% | 81.65% | -4.28% |
 | javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 63.07% | 66.74% | -3.67% |
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.74% | 14.09% | -3.36% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
@@ -1994,6 +1945,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `general,filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |
@@ -2041,7 +1993,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 22.41% | 29.46% | -7.05% |
 | ole | `general,filegroups/documents` | 0 | 86.30% | 93.08% | -6.78% |
 | powershell | `filetypes/powershell` | 0 | 25.52% | 31.55% | -6.03% |
-| tar.gz | `general,filetypes/tar.gz` | 0 | 75.86% | 81.87% | -6.01% |
 | cab | `general` | 0 | 15.29% | 21.18% | -5.88% |
 | python-bytecode | `general,filetypes/python-bytecode` | 0 | 92.13% | 97.96% | -5.83% |
 | docx | `filetypes/docx` | 0 | 84.03% | 88.82% | -4.79% |
@@ -2049,7 +2000,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | text | `general` | 0 | 10.59% | 14.12% | -3.53% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 10.74% | 14.09% | -3.36% |
 | javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.29% | 67.27% | -2.98% |
-| tar | `general,filetypes/tar` | 0 | 95.05% | 97.80% | -2.75% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 47.36% | 49.69% | -2.33% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 71.64% | 73.72% | -2.08% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 88.91% | 90.89% | -1.98% |
@@ -2077,7 +2027,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rtf | `general,filegroups/documents,filetypes/rtf` | 0 | 98.70% | 98.70% | 0.00% |
 | swift | `general,filegroups/source` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| tar.bz2 | `general` | 0 | 100.00% | 100.00% | 0.00% |
+| tar | `general,filetypes/tar` | 17 | 89.31% | — | — |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | whl | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 1.63% | 1.49% | 0.15% |

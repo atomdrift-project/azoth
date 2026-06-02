@@ -27,7 +27,6 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 | filetypes/docx† | filetype_only | 4268 | 412 | 80.58% | 0 | 0.00 | 724482.37 | 0.000 | 89.24% | 82.29% | `{"filetypes/docx": 0.49349499834883714}` |
 | filetypes/chrome-manifest | joint_or_at_fp_0 | 59 | 435 | 76.27% | 0 | 0.00 | 686308.16 | 0.000 | 86.54% | 97.17% | `{"filetypes/chrome-manifest": 0.9049327373504639}` |
 | filetypes/crx | joint_or_at_fp_0 | 379 | 79 | 76.25% | 0 | 0.00 | 3721067.61 | 0.000 | 86.53% | 80.35% | `{"filetypes/crx": 0.9353027939796448, "general": 0.9746719598770142}` |
-| filetypes/tar.gz | joint_or_at_fp_0 | 29792 | 15126 | 75.54% | 0 | 0.00 | 19803.22 | 0.000 | 86.07% | 83.78% | `{"filetypes/tar.gz": 0.9940734505653381, "general": 0.9977642893791199}` |
 | filetypes/7z† | or_general_primary | 5809 | 108 | 72.71% | 0 | 0.00 | 2735708.87 | 0.000 | 84.20% | 73.21% | `{"general": 0.9640197665360211}` |
 | filetypes/lnk† | filetype_only | 4027 | 1055 | 70.23% | 0 | 0.00 | 283552.89 | 0.000 | 82.51% | 76.41% | `{"filetypes/lnk": 0.9755334746801442}` |
 | filetypes/vbs | joint_or_at_fp_0 | 9655 | 3301 | 63.81% | 0 | 0.00 | 90711.10 | 0.000 | 77.91% | 73.03% | `{"filetypes/vbs": 0.9959895014762878, "general": 0.9731259942054749}` |
@@ -41,6 +40,7 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 | filetypes/macho† | filetype_only | 2518 | 11373 | 45.31% | 0 | 0.00 | 26337.27 | 0.000 | 62.37% | 90.09% | `{"filetypes/macho": 0.9970421904176612}` |
 | filetypes/xlsx | joint_or_at_fp_0 | 51918 | 1585 | 44.47% | 0 | 0.00 | 188826.69 | 0.000 | 61.56% | 46.12% | `{"filegroups/documents": 0.41709890961647034, "filetypes/xlsx": 0.92574143409729}` |
 | filetypes/php | joint_or_at_fp_0 | 4233 | 120277 | 43.96% | 0 | 0.00 | 2490.66 | 0.000 | 61.08% | 98.09% | `{"filegroups/scripts": 0.9966230392456055, "filetypes/php": 0.9997223019599915, "general": 0.98988938331604}` |
+| filetypes/python | joint_or_at_fp_0 | 18646 | 163686 | 43.70% | 0 | 0.00 | 1830.15 | 0.000 | 60.82% | 94.24% | `{"filegroups/scripts": 0.9982466697692871, "filetypes/python": 0.9998779296875, "general": 0.9953924417495728}` |
 
 ## L100 Hostile
 
@@ -64,7 +64,6 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 | filetypes/docx† | filetype_only | 4268 | 412 | 80.60% | 0 | 0.00 | 724482.37 | 0.000 | 89.26% | 82.31% | `{"filetypes/docx": 0.48797113247748913}` |
 | filetypes/chrome-manifest | joint_or_at_fp_0 | 59 | 435 | 76.27% | 0 | 0.00 | 686308.16 | 0.000 | 86.54% | 97.17% | `{"filetypes/chrome-manifest": 0.9049327373504639}` |
 | filetypes/crx | joint_or_at_fp_0 | 379 | 79 | 76.25% | 0 | 0.00 | 3721067.61 | 0.000 | 86.53% | 80.35% | `{"filetypes/crx": 0.9353027939796448, "general": 0.9746719598770142}` |
-| filetypes/tar.gz | joint_or_at_fp_0 | 29792 | 15126 | 75.54% | 0 | 0.00 | 19803.22 | 0.000 | 86.07% | 83.78% | `{"filetypes/tar.gz": 0.9940734505653381, "general": 0.9977642893791199}` |
 | filetypes/7z† | or_general_primary | 5809 | 108 | 72.71% | 0 | 0.00 | 2735708.87 | 0.000 | 84.20% | 73.21% | `{"general": 0.96400865753016}` |
 | filetypes/lnk† | filetype_only | 4027 | 1055 | 70.60% | 0 | 0.00 | 283552.89 | 0.000 | 82.77% | 76.70% | `{"filetypes/lnk": 0.9666239845440031}` |
 | filetypes/vbs | joint_or_at_fp_0 | 9655 | 3301 | 63.81% | 0 | 0.00 | 90711.10 | 0.000 | 77.91% | 73.03% | `{"filetypes/vbs": 0.9959895014762878, "general": 0.9731259942054749}` |
@@ -78,3 +77,4 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 | filetypes/powershell | learned_blend_at_fp_0 | 4850 | 2301 | 46.95% | 0 | 0.00 | 130107.91 | 0.000 | 63.90% | 64.02% | `{}` |
 | filetypes/kotlin | joint_or_at_fp_0 | 32813 | 50489 | 46.50% | 0 | 0.00 | 5933.26 | 0.000 | 63.48% | 78.92% | `{"filegroups/source": 0.8264152407646179, "filetypes/kotlin": 0.8846541047096252, "general": 0.9302482008934021}` |
 | filetypes/xlsx | joint_or_at_fp_0 | 51918 | 1585 | 44.47% | 0 | 0.00 | 188826.69 | 0.000 | 61.56% | 46.12% | `{"filegroups/documents": 0.41709890961647034, "filetypes/xlsx": 0.92574143409729}` |
+| filetypes/php | joint_or_at_fp_0 | 4233 | 120277 | 43.96% | 0 | 0.00 | 2490.66 | 0.000 | 61.08% | 98.09% | `{"filegroups/scripts": 0.9966230392456055, "filetypes/php": 0.9997223019599915, "general": 0.98988938331604}` |

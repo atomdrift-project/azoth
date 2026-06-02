@@ -29,6 +29,7 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`rtf`](filetypes/rtf/README.md) | 691 / 51 | 0.995017 | 0.962217 | 0.991292 | 98.55% | — |
 | [`batch`](filetypes/batch/README.md) | 22,011 / 520 | 0.999940 | 0.998434 | 0.998184 | 98.51% | — |
 | [`python-bytecode`](filetypes/python-bytecode/README.md) | 343 / 9,233 | 0.982102 | 0.986615 | 0.989691 | 97.67% | — |
+| [`tar`](filetypes/tar/README.md) | 153 / 62 | 0.974320 | 0.958149 | 0.970297 | 96.08% | — |
 | [`xls`](filetypes/xls/README.md) | 4,076 / 2,651 | 0.996323 | 0.992531 | 0.983313 | 94.23% | — |
 | [`ole`](filetypes/ole/README.md) | 700 / 737 | 0.991028 | 0.987145 | 0.966596 | 92.86% | — |
 | [`elf`](filetypes/elf/README.md) | 20,227 / 20,699 | 0.999294 | 0.999353 | 0.987453 | 91.07% | PR +0.005994 / ROC +0.006053 |
@@ -52,6 +53,7 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`xlsx`](filetypes/xlsx/README.md) | 6,526 / 169 | 0.998234 | 0.953044 | 0.997782 | 45.14% | — |
 | [`powershell`](filetypes/powershell/README.md) | 578 / 299 | 0.982718 | 0.972029 | 0.949628 | 40.48% | — |
 | [`csharp`](filetypes/csharp/README.md) | 241 / 8,112 | 0.636093 | 0.934390 | 0.578199 | 32.37% | — |
+| [`zip`](filetypes/zip/README.md) | 12,126 / 1,245 | 0.984192 | 0.878095 | 0.971834 | 32.22% | — |
 | [`text`](filetypes/text/README.md) | 171 / 8,772 | 0.216145 | 0.794111 | 0.262626 | 15.20% | — |
 | [`jpeg`](filetypes/jpeg/README.md) | 149 / 3,363 | 0.245616 | 0.626634 | 0.331658 | 14.09% | — |
 | [`c`](filetypes/c/README.md) | 1,780 / 74,226 | 0.257355 | 0.718849 | 0.336832 | 12.70% | — |
@@ -75,7 +77,7 @@ The corpus-weighted ensemble curve weights each filetype's ensemble recall by th
 
 ## Provenance
 
-Calibration snapshot `1637343931`, score-table `db0577dd7a1b`, model-set `9c5050c6d2b3`. 1 general, 7 filegroup, 51 filetype routes.
+Calibration snapshot `1637343931`, score-table `bcc8595beab8`, model-set `9c5050c6d2b3`. 1 general, 7 filegroup, 51 filetype routes.
 
 ## Limits
 

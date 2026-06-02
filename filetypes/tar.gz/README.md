@@ -2,31 +2,13 @@
 
 LightGBM specialist for `tar.gz`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Ensemble Performance
+## Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `tar.gz` slice of the locked test partition: 2,599 malware / 1,887 benign (4,486 rows).
-
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.994646 | 0.992421 | 0.970855 | 75.38% | 0.0505 |
-
-## Specialist Performance
-
-`filetypes/tar.gz` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
-
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|---:|
-| 0.997917 | 0.997255 | 0.978526 | 74.34% | 0.0196 | — |
-
-## Recall by FP level (per 100M benigns)
-
-<img src="recall_curve.svg" alt="tar.gz: recall by FP level (per 100M benigns)" height="300" />
-
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
+Training-time benchmark only (no test-partition rows for `tar.gz`). ROC 0.998298, PR 0.998746, F1 0.9829 on 4,486 rows (2,599 mal / 1,887 ben).
 
 ## Routing
 
-Files matching `tar.gz` are scored by `general`, `filetypes/tar.gz`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `tar.gz` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

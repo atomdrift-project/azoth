@@ -16442,21 +16442,21 @@
       }
     },
     "tar": {
-      "malware": 182,
-      "benign": 63,
+      "malware": 3845,
+      "benign": 2377,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.9924923097591432,
-            "recall_at_0fp": 0.8296703296703297,
-            "threshold_at_0fp": 0.772355318069458,
+            "pr_auc": 0.9928634554772717,
+            "recall_at_0fp": 0.7014304291287387,
+            "threshold_at_0fp": 0.9887579679489136,
             "fp_at_0fp": 0,
-            "recall_at_1fp": 0.8736263736263736,
-            "threshold_at_1fp": 0.6131426692008972,
+            "recall_at_1fp": 0.718335500650195,
+            "threshold_at_1fp": 0.9876236319541931,
             "fp_at_1fp": 1,
-            "recall_at_3fp": 0.9065934065934066,
-            "threshold_at_3fp": 0.4978465735912323,
+            "recall_at_3fp": 0.8059817945383615,
+            "threshold_at_3fp": 0.9785244464874268,
             "fp_at_3fp": 3
           },
           "filetypes/tar": {
@@ -16473,230 +16473,230 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.9950440322983727,
-          "recall_at_0fp": 0.9505494505494505,
-          "threshold_at_0fp": 0.802480161190033,
+          "pr_auc": 0.9929505728614232,
+          "recall_at_0fp": 0.7022106631989596,
+          "threshold_at_0fp": 0.9887579679489136,
           "fp_at_0fp": 0,
-          "recall_at_1fp": 0.9505494505494505,
-          "threshold_at_1fp": 0.7582917213439941,
+          "recall_at_1fp": 0.7191157347204161,
+          "threshold_at_1fp": 0.9876236319541931,
           "fp_at_1fp": 1,
-          "recall_at_3fp": 0.9505494505494505,
-          "threshold_at_3fp": 0.5607738494873047,
+          "recall_at_3fp": 0.8070221066319896,
+          "threshold_at_3fp": 0.9785244464874268,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L1_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L2_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L3_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L4_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L5_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L10_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L20_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L30_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L40_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L50_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L60_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L70_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L80_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L90_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L100_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L200_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L300_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L500_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L1000_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L2000_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L5000_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L7500_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L10000_hostile": {
-          "tp": 173,
-          "fp": 0,
-          "recall": 0.9505494505494505,
+          "tp": 3434,
+          "fp": 17,
+          "recall": 0.8931079323797139,
           "active_routes": [
             "general",
             "filetypes/tar"
@@ -16704,517 +16704,12 @@
         }
       },
       "deployed_or_summary": {
-        "tp": 173,
-        "fp": 0,
-        "recall": 0.9505494505494505,
+        "tp": 3434,
+        "fp": 17,
+        "recall": 0.8931079323797139,
         "active_routes": [
           "general",
           "filetypes/tar"
-        ]
-      }
-    },
-    "tar.bz2": {
-      "malware": 1,
-      "benign": 29,
-      "file_group": "",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": 1.0,
-            "recall_at_0fp": 1.0,
-            "threshold_at_0fp": 0.9911044239997864,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 1.0,
-            "threshold_at_1fp": 0.6955733895301819,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 1.0,
-            "threshold_at_3fp": 0.30599215626716614,
-            "fp_at_3fp": 3
-          }
-        },
-        "max_rule": {
-          "pr_auc": 1.0,
-          "recall_at_0fp": 1.0,
-          "threshold_at_0fp": 0.9911044239997864,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 1.0,
-          "threshold_at_1fp": 0.6955733895301819,
-          "fp_at_1fp": 1,
-          "recall_at_3fp": 1.0,
-          "threshold_at_3fp": 0.30599215626716614,
-          "fp_at_3fp": 3
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L1_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L2_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L3_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L4_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L5_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L10_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L20_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L30_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L40_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L50_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L60_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L70_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L80_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L90_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L100_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L200_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L300_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L500_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L1000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L2000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L5000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L7500_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L10000_hostile": {
-          "tp": 1,
-          "fp": 0,
-          "recall": 1.0,
-          "active_routes": [
-            "general"
-          ]
-        }
-      },
-      "deployed_or_summary": {
-        "tp": 0,
-        "fp": 0,
-        "recall": 0.0,
-        "active_routes": [
-          "general"
-        ]
-      }
-    },
-    "tar.gz": {
-      "malware": 3662,
-      "benign": 1937,
-      "file_group": "",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": 0.9941405400820065,
-            "recall_at_0fp": 0.7007099945385036,
-            "threshold_at_0fp": 0.9887579679489136,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.7184598580010922,
-            "threshold_at_1fp": 0.9876236319541931,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.809393773894047,
-            "threshold_at_3fp": 0.9785244464874268,
-            "fp_at_3fp": 3
-          },
-          "filetypes/tar.gz": {
-            "pr_auc": 0.9989411786454595,
-            "recall_at_0fp": 0.8186783178590934,
-            "threshold_at_0fp": 0.9895095825195312,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.837793555434189,
-            "threshold_at_1fp": 0.9868710041046143,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.8418896777717094,
-            "threshold_at_3fp": 0.9856318235397339,
-            "fp_at_3fp": 3
-          }
-        },
-        "max_rule": {
-          "pr_auc": 0.9987056460043793,
-          "recall_at_0fp": 0.8279628618241398,
-          "threshold_at_0fp": 0.9895095825195312,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 0.8402512288367012,
-          "threshold_at_1fp": 0.987630307674408,
-          "fp_at_1fp": 1,
-          "recall_at_3fp": 0.8495357728017476,
-          "threshold_at_3fp": 0.9855643510818481,
-          "fp_at_3fp": 3
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L1_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L2_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L3_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L4_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L5_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L10_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L20_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L30_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L40_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L50_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L60_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L70_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L80_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L90_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L100_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L200_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L300_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L500_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L1000_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L2000_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L5000_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L7500_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        },
-        "L10000_hostile": {
-          "tp": 2778,
-          "fp": 0,
-          "recall": 0.758601856908793,
-          "active_routes": [
-            "general",
-            "filetypes/tar.gz"
-          ]
-        }
-      },
-      "deployed_or_summary": {
-        "tp": 2778,
-        "fp": 0,
-        "recall": 0.758601856908793,
-        "active_routes": [
-          "general",
-          "filetypes/tar.gz"
         ]
       }
     },
