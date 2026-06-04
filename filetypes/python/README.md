@@ -4,11 +4,11 @@ LightGBM specialist for `python`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `python` slice of the locked test partition: 2,343 malware / 20,510 benign (22,853 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `python` slice of the locked test partition: 2,362 malware / 22,592 benign (24,954 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.952485 | 0.990974 | 0.909735 | 47.33% | 0.0227 |
+| 0.958004 | 0.990974 | 0.907305 | 51.95% | 0.0189 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.972150 | 0.995242 | 0.925094 | 42.30% | 0.0142 | — |
+| 0.969111 | 0.993934 | 0.923719 | 23.88% | 0.0139 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `python` are scored by `general`, `filegroups/scripts`, `filetype
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 159,551 (16,303 mal / 143,248 ben) |
-| Feature spec | 76116 features (`general_shared`) |
+| Train rows | 174,954 (16,431 mal / 158,523 ben) |
+| Feature spec | 21496 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

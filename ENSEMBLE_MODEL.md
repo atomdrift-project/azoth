@@ -33,7 +33,7 @@ Per filetype per level, `azoth_route_policy_search.py` picks one of these policy
 
 ## Severity levels (L0..L20)
 
-L0..L20 are observation-derived strictness grades, not optimization targets. For each route, level Lk's threshold is set so that roughly qk benigns per million would be flagged on the dev partition. Strict levels (where `n_benign · qk · 10⁻⁶ < 1` falls below empirical resolution) use a generalized Pareto fit to the benign-score upper tail; looser levels use direct empirical quantiles.
+L0..L20 are measured strictness grades, not optimization targets. L0 is the 0-FP point (loosest threshold flagging no calibration benign). For each higher route level Lk, the threshold is the loosest score admitting at most the level's FP budget plus one benign (the +1 slack) — a real measured ceiling, never an extrapolation, so it can't overshoot on live traffic. Where benign volume can't separate adjacent levels, they share one ceiling (a flat run); finer steps emerge only as benign volume grows.
 
 Litmus reads the per-level thresholds from `route_policies.json` and assigns severity per file.
 

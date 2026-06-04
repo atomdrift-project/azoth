@@ -4,11 +4,11 @@ LightGBM specialist for `docx`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `docx` slice of the locked test partition: 501 malware / 58 benign (559 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `docx` slice of the locked test partition: 562 malware / 58 benign (620 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.993115 | 0.952543 | 0.959677 | 89.02% | 0.0467 |
+| 0.995047 | 0.961728 | 0.969259 | 88.61% | 0.1471 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `docx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.994699 | 0.962386 | 0.960646 | 88.82% | 0.1452 | — |
+| 0.995047 | 0.961728 | 0.969259 | 88.61% | 0.1471 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `docx` are scored by `filetypes/docx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `docx` are scored by `general`, `filegroups/documents`, `filetypes/docx`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,122 (3,768 mal / 354 ben) |
-| Feature spec | 76116 features (`general_shared`) |
+| Train rows | 4,570 (4,195 mal / 375 ben) |
+| Feature spec | 21496 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

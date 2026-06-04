@@ -2,15 +2,13 @@
 
 LightGBM specialist for `java_class`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
-
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 219 malware / 83,812 benign (84,031 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 221 malware / 88,038 benign (88,259 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.891368 | 0.938837 | 0.882483 | 46.58% | 0.0022 |
+| 0.889600 | 0.960752 | 0.907801 | 39.82% | 0.0014 |
 
 ## Specialist Performance
 
@@ -18,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java_c
 
 | PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.002493 | 0.052492 | 0.005199 | 0.00% | 0.0067 | — |
+| 0.614308 | 0.976629 | 0.778656 | 0.45% | 0.0012 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -35,8 +33,8 @@ Files matching `java_class` are scored by `general`. The ensemble's per-row scor
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 588,329 (1,392 mal / 586,937 ben) |
-| Feature spec | 76116 features (`general_shared`) |
+| Train rows | 618,320 (1,416 mal / 616,904 ben) |
+| Feature spec | 21496 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

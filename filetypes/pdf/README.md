@@ -4,11 +4,11 @@ LightGBM specialist for `pdf`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` slice of the locked test partition: 22,470 malware / 2,715 benign (25,185 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` slice of the locked test partition: 22,499 malware / 2,922 benign (25,421 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999074 | 0.992609 | 0.991870 | 74.08% | 0.0307 |
+| 0.999061 | 0.993830 | 0.993202 | 11.17% | 0.0664 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999213 | 0.993647 | 0.990967 | 73.72% | 0.1301 | PR +0.005913 / ROC +0.002447 |
+| 0.998865 | 0.992795 | 0.993071 | 6.31% | 0.5029 | PR +0.005565 / ROC +0.001595 |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,21 +26,21 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `pdf` are scored by `general`, `filegroups/documents`, `filetypes/pdf`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `pdf` are scored by `general`, `filegroups/documents`, `filetypes/pdf`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 174,838 (155,816 mal / 19,022 ben) |
-| Feature spec | 76116 features (`general_shared`) |
+| Train rows | 176,330 (155,987 mal / 20,343 ben) |
+| Feature spec | 21496 features (`general_shared`) |
 | n_estimators | 400 |
-| num_leaves | 96 |
+| num_leaves | 128 |
 | max_depth | 12 |
-| min_child_samples | 40 |
+| min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |
-| device | auto |
+| device | cpu |

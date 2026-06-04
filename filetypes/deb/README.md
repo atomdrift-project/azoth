@@ -4,11 +4,11 @@ LightGBM specialist for `deb`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `deb` slice of the locked test partition: 42 malware / 849 benign (891 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `deb` slice of the locked test partition: 45 malware / 874 benign (919 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.483167 | 0.962687 | 0.596774 | 11.90% | 0.0379 |
+| 0.095950 | 0.699771 | 0.188235 | 11.11% | 0.0463 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `deb` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.483167 | 0.962687 | 0.596774 | 11.90% | 0.0379 | — |
+| 0.095950 | 0.699771 | 0.188235 | 11.11% | 0.0463 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `deb` are scored by none. The ensemble's per-row score is whateve
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,023 (289 mal / 5,734 ben) |
-| Feature spec | 76116 features (`general_shared`) |
+| Train rows | 6,376 (313 mal / 6,063 ben) |
+| Feature spec | 21496 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
