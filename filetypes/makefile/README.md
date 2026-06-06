@@ -4,37 +4,37 @@ LightGBM specialist for `makefile`. Member of the Azoth routed ensemble; bundle 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `makefile` slice of the locked test partition: 67 malware / 3,260 benign (3,327 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `makefile` slice of the locked test partition: 68 malware / 3,263 benign (3,331 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.512894 | 0.882955 | 0.563107 | 14.93% | 0.0138 |
+| 0.020220 | 0.495099 | 0.040012 | 98.53% | 0.0491 |
 
 ## Specialist Performance
 
 `filetypes/makefile` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.106909 | 0.870932 | 0.221344 | 0.00% | 0.0201 | — |
+| 0.020220 | 0.495099 | 0.040012 | 98.53% | 0.0491 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="makefile: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
 
 ## Routing
 
-Files matching `makefile` are scored by `general`, `filegroups/source`, `filetypes/makefile`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `makefile` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 22,875 (431 mal / 22,444 ben) |
-| Feature spec | 21496 features (`general_shared`) |
+| Train rows | 22,479 (16 mal / 22,463 ben) |
+| Feature spec | 8595 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

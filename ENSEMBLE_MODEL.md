@@ -18,7 +18,7 @@ The Ensemble Performance row in the bundle README shows the **best combiner per 
 - `stacked_lr` / `stacked_xgb` — a small stacker (logistic regression or XGBoost) over the per-route calibrated probs. Wins when routes carry complementary signal that linear/tree combination can exploit.
 - `naive_max` — raw `max` across routes, kept as a sanity check; rejected from the picker because raw scores don't share a probability calibration.
 
-**Selection criterion**: maximize **recall at L4 (0.04 FP/M)** on the dev partition (matching the deployment FP/M target), with **PR AUC** as a secondary tiebreak. The picker is constrained by a floor: no combiner may report worse than `specialist_priority`, on either dev or test. If a combiner would clear the floor on dev but regress below it on test (sampling variance), the report falls back to `specialist_priority`. This guarantees the **ensemble ≥ specialist** invariant in every row of the bundle README.
+**Selection criterion**: maximize **recall at L50 (0.5 FP/M)** on the dev partition (matching the deployment FP/M target), with **PR AUC** as a secondary tiebreak. The picker is constrained by a floor: no combiner may report worse than `specialist_priority`, on either dev or test. If a combiner would clear the floor on dev but regress below it on test (sampling variance), the report falls back to `specialist_priority`. This guarantees the **ensemble ≥ specialist** invariant in every row of the bundle README.
 
 ## Routing policies
 
@@ -37,4 +37,4 @@ L0..L20 are measured strictness grades, not optimization targets. L0 is the 0-FP
 
 Litmus reads the per-level thresholds from `route_policies.json` and assigns severity per file.
 
-Default deploy level: L4 (0.04 FP/M) (litmus loads the hostile threshold at that level; any suspicious band is derived consumer-side). Per-route thresholds and observed FP/100M live in [route_policies.md](route_policies.md) and each `filetypes/<name>/README.md`.
+Default deploy level: L50 (0.5 FP/M) (litmus loads the hostile threshold at that level; any suspicious band is derived consumer-side). Per-route thresholds and observed FP/100M live in [route_policies.md](route_policies.md) and each `filetypes/<name>/README.md`.

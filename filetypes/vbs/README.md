@@ -6,23 +6,23 @@ LightGBM specialist for `vbs`. Member of the Azoth routed ensemble; bundle root:
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `vbs` slice of the locked test partition: 1,428 malware / 426 benign (1,854 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.994165 | 0.986979 | 0.986072 | 42.30% | 0.0272 |
+| 0.991114 | 0.977677 | 0.963605 | 44.33% | 0.0439 |
 
 ## Specialist Performance
 
 `filetypes/vbs` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.997391 | 0.992898 | 0.987121 | 38.31% | 0.0621 | — |
+| 0.994608 | 0.982642 | 0.963605 | 36.20% | 0.0741 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="vbs: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
 
 ## Routing
 
@@ -33,8 +33,8 @@ Files matching `vbs` are scored by `general`, `filetypes/vbs`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 12,523 (9,655 mal / 2,868 ben) |
-| Feature spec | 21496 features (`general_shared`) |
+| Train rows | 11,784 (8,917 mal / 2,867 ben) |
+| Feature spec | 8595 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

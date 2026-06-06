@@ -4,7 +4,7 @@ LightGBM specialist for `c`, `cpp`, `csharp`, `go`, `java`, `kotlin`, `makefile`
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `source`). ROC 0.998577, PR 0.982606, F1 0.9348 on 145,586 rows (7,349 mal / 138,237 ben).
+Training-time benchmark only (no test-partition rows for `source`). ROC 0.929885, PR 0.682388, F1 0.6292 on 145,850 rows (7,423 mal / 138,427 ben).
 
 ## Routing
 
@@ -15,8 +15,8 @@ Files matching `source` are scored by none. The ensemble's per-row score is what
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,015,648 (52,346 mal / 963,302 ben) |
-| Feature spec | 21496 features (`general_shared`) |
+| Train rows | 986,475 (21,831 mal / 964,644 ben) |
+| Feature spec | 8595 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

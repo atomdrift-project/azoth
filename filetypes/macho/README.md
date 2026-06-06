@@ -6,23 +6,23 @@ LightGBM specialist for `macho`. Member of the Azoth routed ensemble; bundle roo
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `macho` slice of the locked test partition: 334 malware / 1,486 benign (1,820 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.946065 | 0.970268 | 0.956386 | 83.53% | 0.2749 |
+| 0.973738 | 0.987729 | 0.950156 | 78.14% | 0.0586 |
 
 ## Specialist Performance
 
 `filetypes/macho` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.995295 | 0.998862 | 0.966565 | 82.04% | 0.0103 | — |
+| 0.992980 | 0.997750 | 0.963964 | 74.85% | 0.0104 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="macho: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
 
 ## Routing
 
@@ -33,8 +33,8 @@ Files matching `macho` are scored by `general`, `filegroups/native`, `filetypes/
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 12,342 (2,249 mal / 10,093 ben) |
-| Feature spec | 21496 features (`general_shared`) |
+| Train rows | 12,339 (2,244 mal / 10,095 ben) |
+| Feature spec | 8595 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

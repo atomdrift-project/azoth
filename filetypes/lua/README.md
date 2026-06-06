@@ -6,35 +6,35 @@ LightGBM specialist for `lua`. Member of the Azoth routed ensemble; bundle root:
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `lua` slice of the locked test partition: 13 malware / 2,321 benign (2,334 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.768786 | 0.922381 | 0.818182 | 38.46% | 0.0027 |
+| 0.706119 | 0.962317 | 0.818182 | 69.23% | 0.0131 |
 
 ## Specialist Performance
 
 `filetypes/lua` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.768786 | 0.922381 | 0.818182 | 38.46% | 0.0027 | — |
+| 0.704118 | 0.805091 | 0.818182 | 69.23% | 0.0018 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="lua: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
 
 ## Routing
 
-Files matching `lua` are scored by `filegroups/scripts`, `filetypes/lua`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `lua` are scored by `general`, `filegroups/scripts`, `filetypes/lua`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 16,062 (84 mal / 15,978 ben) |
-| Feature spec | 21496 features (`general_shared`) |
+| Train rows | 16,041 (63 mal / 15,978 ben) |
+| Feature spec | 8595 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

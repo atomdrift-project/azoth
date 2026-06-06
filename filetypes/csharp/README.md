@@ -6,23 +6,23 @@ LightGBM specialist for `csharp`. Member of the Azoth routed ensemble; bundle ro
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `csharp` slice of the locked test partition: 242 malware / 8,141 benign (8,383 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.541540 | 0.914501 | 0.563591 | 29.34% | 0.0213 |
+| 0.403490 | 0.687490 | 0.502674 | 26.45% | 0.0267 |
 
 ## Specialist Performance
 
 `filetypes/csharp` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.603546 | 0.885711 | 0.573333 | 28.93% | 0.0183 | — |
+| 0.460305 | 0.826511 | 0.521994 | 26.03% | 0.0231 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="csharp: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
 
 ## Routing
 
@@ -33,8 +33,8 @@ Files matching `csharp` are scored by `general`, `filegroups/source`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 57,999 (1,574 mal / 56,425 ben) |
-| Feature spec | 21496 features (`general_shared`) |
+| Train rows | 56,999 (575 mal / 56,424 ben) |
+| Feature spec | 8595 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -4,25 +4,25 @@ LightGBM specialist for `xls`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xls` slice of the locked test partition: 4,625 malware / 2,652 benign (7,277 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xls` slice of the locked test partition: 4,629 malware / 2,652 benign (7,281 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.997915 | 0.996455 | 0.984058 | 93.10% | 0.0448 |
+| 0.992549 | 0.985416 | 0.976319 | 94.08% | 0.1411 |
 
 ## Specialist Performance
 
 `filetypes/xls` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L4 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998678 | 0.997434 | 0.985717 | 92.95% | 0.0346 | — |
+| 0.993658 | 0.986734 | 0.977010 | 94.04% | 0.0307 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="xls: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L4 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
 
 ## Routing
 
@@ -33,8 +33,8 @@ Files matching `xls` are scored by `general`, `filegroups/documents`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 50,526 (32,431 mal / 18,095 ben) |
-| Feature spec | 21496 features (`general_shared`) |
+| Train rows | 49,589 (31,494 mal / 18,095 ben) |
+| Feature spec | 8595 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
