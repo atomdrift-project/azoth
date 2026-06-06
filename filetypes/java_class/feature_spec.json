@@ -88,7 +88,8 @@
     "well-known/malware",
     "well-known/malware/rat",
     "well-known/tool",
-    "well-known/tool/development"
+    "well-known/tool/development",
+    "well-known/lib/jline"
   ],
   "filetype_vocab": [
     "java_class"

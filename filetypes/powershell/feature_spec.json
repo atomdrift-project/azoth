@@ -199,7 +199,8 @@
     "well-known/malware/miner",
     "well-known/malware/supply-chain",
     "well-known/tool",
-    "well-known/tool/offensive"
+    "well-known/tool/offensive",
+    "micro-behaviors/communications/s7"
   ],
   "filetype_vocab": [
     "powershell"

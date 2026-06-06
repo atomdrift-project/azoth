@@ -563,7 +563,19 @@
     "well-known/tool/offensive",
     "well-known/tool/sysadmin",
     "well-known/tools",
-    "well-known/tools/sysadmin"
+    "well-known/tools/sysadmin",
+    "metadata/library/react",
+    "micro-behaviors/communications/s7",
+    "micro-behaviors/hardware/flash",
+    "micro-behaviors/process/argument",
+    "objectives/credential-access/api-harvest",
+    "objectives/exfiltration/sensitive-data",
+    "objectives/impact/deface",
+    "supply-chain/install-hook/install",
+    "well-known/lib/jline",
+    "well-known/malware/ransomware",
+    "well-known/tool/detection",
+    "well-known/tool/reverse-engineering"
   ],
   "filetype_vocab": [
     "7z",

@@ -25,6 +25,7 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 | filetypes/crx | learned_blend_at_fp_0 | 643 | 79 | 64.54% | 0 | 0.00 | 3721067.61 | 0.000 | 78.45% | 68.42% | `{}` |
 | filetypes/macho | joint_or_at_fp_0 | 2584 | 11581 | 63.82% | 0 | 0.00 | 25864.30 | 0.000 | 77.91% | 93.40% | `{"filegroups/native": 0.9987778067588806, "filetypes/macho": 0.995280921459198, "general": 0.9831417202949524}` |
 | filetypes/perl | learned_blend_at_fp_0 | 316 | 39244 | 62.97% | 0 | 0.00 | 7633.31 | 0.000 | 77.28% | 99.70% | `{}` |
+| filetypes/javascript | joint_or_at_fp_0 | 117620 | 582691 | 61.37% | 0 | 0.00 | 514.12 | 0.000 | 76.06% | 93.51% | `{"filegroups/scripts": 0.9993817806243896, "filetypes/javascript": 0.9740317463874817, "general": 0.9994640946388245}` |
 | filetypes/java_class | joint_or_at_fp_0 | 1638 | 704991 | 61.11% | 0 | 0.00 | 424.93 | 0.000 | 75.86% | 99.91% | `{"filetypes/java_class": 0.972117006778717, "general": 0.9854030013084412}` |
 | filetypes/powershell | joint_or_at_fp_0 | 5236 | 2370 | 55.81% | 0 | 0.00 | 126322.35 | 0.000 | 71.64% | 69.58% | `{"filegroups/scripts": 0.9985805749893188, "filetypes/powershell": 0.9950449466705322, "general": 0.9980418086051941}` |
 | filetypes/lnk | joint_or_at_fp_0 | 4347 | 1055 | 55.58% | 0 | 0.00 | 283552.89 | 0.000 | 71.45% | 64.25% | `{"filetypes/lnk": 0.9943863153457642, "general": 0.9990662932395935}` |
@@ -35,7 +36,6 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 | filetypes/doc | calibrate_inherited | 32643 | 76 | 46.43% | 0 | 0.00 | 3865076.67 | 0.000 | 63.42% | 46.56% | `{"filegroups/documents": 0.9985501170158386, "general": 0.9998894929885864}` |
 | filetypes/php | joint_or_at_fp_0 | 4811 | 145642 | 46.00% | 0 | 0.00 | 2056.89 | 0.000 | 63.01% | 98.27% | `{"filegroups/scripts": 0.998264729976654, "filetypes/php": 0.998719334602356, "general": 0.9766716361045837}` |
 | filetypes/ole | joint_or_at_fp_0 | 6892 | 6219 | 45.59% | 0 | 0.00 | 48159.04 | 0.000 | 62.63% | 71.40% | `{"filegroups/documents": 0.9971538782119751, "filetypes/ole": 0.9978785514831543, "general": 0.9993857145309448}` |
-| filetypes/javascript | learned_blend_at_fp_0 | 117620 | 582691 | 43.62% | 0 | 0.00 | 514.12 | 0.000 | 60.74% | 90.53% | `{}` |
 | filetypes/msi | joint_or_at_fp_0 | 5307 | 172 | 43.51% | 0 | 0.00 | 1726624.81 | 0.000 | 60.64% | 45.28% | `{"filetypes/msi": 0.9261299967765808, "general": 0.9945985078811646}` |
 | filetypes/lua | joint_or_at_fp_0 | 97 | 18299 | 43.30% | 0 | 0.00 | 16369.68 | 0.000 | 60.43% | 99.70% | `{"filegroups/scripts": 0.9782118797302246, "filetypes/lua": 0.9987921118736267, "general": 0.97865229845047}` |
 | filetypes/vbs | joint_or_at_fp_0 | 11088 | 3293 | 41.61% | 0 | 0.00 | 90931.37 | 0.000 | 58.77% | 54.98% | `{"filetypes/vbs": 0.9825754165649414, "general": 0.9964069724082947}` |
@@ -62,6 +62,7 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 | filetypes/crx | learned_blend_at_fp_0 | 643 | 79 | 64.54% | 0 | 0.00 | 3721067.61 | 0.000 | 78.45% | 68.42% | `{}` |
 | filetypes/macho | joint_or_at_fp_0 | 2584 | 11581 | 63.82% | 0 | 0.00 | 25864.30 | 0.000 | 77.91% | 93.40% | `{"filegroups/native": 0.9987778067588806, "filetypes/macho": 0.995280921459198, "general": 0.9831417202949524}` |
 | filetypes/perl | learned_blend_at_fp_0 | 316 | 39244 | 62.97% | 0 | 0.00 | 7633.31 | 0.000 | 77.28% | 99.70% | `{}` |
+| filetypes/javascript | joint_or_at_fp_0 | 117620 | 582691 | 61.37% | 0 | 0.00 | 514.12 | 0.000 | 76.06% | 93.51% | `{"filegroups/scripts": 0.9993817806243896, "filetypes/javascript": 0.9740317463874817, "general": 0.9994640946388245}` |
 | filetypes/java_class | joint_or_at_fp_0 | 1638 | 704991 | 61.11% | 0 | 0.00 | 424.93 | 0.000 | 75.86% | 99.91% | `{"filetypes/java_class": 0.972117006778717, "general": 0.9854030013084412}` |
 | filetypes/powershell | joint_or_at_fp_0 | 5236 | 2370 | 55.81% | 0 | 0.00 | 126322.35 | 0.000 | 71.64% | 69.58% | `{"filegroups/scripts": 0.9985805749893188, "filetypes/powershell": 0.9950449466705322, "general": 0.9980418086051941}` |
 | filetypes/lnk | joint_or_at_fp_0 | 4347 | 1055 | 55.58% | 0 | 0.00 | 283552.89 | 0.000 | 71.45% | 64.25% | `{"filetypes/lnk": 0.9943863153457642, "general": 0.9990662932395935}` |
@@ -72,7 +73,6 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 | filetypes/doc | calibrate_inherited | 32643 | 76 | 46.46% | 0 | 0.00 | 3865076.67 | 0.000 | 63.45% | 46.59% | `{"filegroups/documents": 0.9985501170158386, "general": 0.9998229742050171}` |
 | filetypes/php | joint_or_at_fp_0 | 4811 | 145642 | 46.00% | 0 | 0.00 | 2056.89 | 0.000 | 63.01% | 98.27% | `{"filegroups/scripts": 0.998264729976654, "filetypes/php": 0.998719334602356, "general": 0.9766716361045837}` |
 | filetypes/ole | joint_or_at_fp_0 | 6892 | 6219 | 45.59% | 0 | 0.00 | 48159.04 | 0.000 | 62.63% | 71.40% | `{"filegroups/documents": 0.9971538782119751, "filetypes/ole": 0.9978785514831543, "general": 0.9993857145309448}` |
-| filetypes/javascript | learned_blend_at_fp_0 | 117620 | 582691 | 43.62% | 0 | 0.00 | 514.12 | 0.000 | 60.74% | 90.53% | `{}` |
 | filetypes/msi | joint_or_at_fp_0 | 5307 | 172 | 43.51% | 0 | 0.00 | 1726624.81 | 0.000 | 60.64% | 45.28% | `{"filetypes/msi": 0.9261299967765808, "general": 0.9945985078811646}` |
 | filetypes/lua | joint_or_at_fp_0 | 97 | 18299 | 43.30% | 0 | 0.00 | 16369.68 | 0.000 | 60.43% | 99.70% | `{"filegroups/scripts": 0.9782118797302246, "filetypes/lua": 0.9987921118736267, "general": 0.97865229845047}` |
 | filetypes/vbs | joint_or_at_fp_0 | 11088 | 3293 | 41.61% | 0 | 0.00 | 90931.37 | 0.000 | 58.77% | 54.98% | `{"filetypes/vbs": 0.9825754165649414, "general": 0.9964069724082947}` |

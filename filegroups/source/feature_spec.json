@@ -309,7 +309,8 @@
     "well-known/malware/virus",
     "well-known/tool",
     "well-known/tool/offensive",
-    "well-known/tool/sysadmin"
+    "well-known/tool/sysadmin",
+    "micro-behaviors/process/argument"
   ],
   "filetype_vocab": [
     "c",

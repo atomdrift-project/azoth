@@ -10,14 +10,14 @@
     1.0
   ],
   "y": [
-    0.013701606907988792,
-    0.013701606907988792,
-    0.028846153846153848,
-    0.028846153846153848,
-    0.10499490316004077,
+    0.012972775443084231,
+    0.012972775443084231,
+    0.05084745762711865,
+    0.30434782608695654,
+    0.30434782608695654,
     1.0
   ],
   "out_of_bounds": "clip",
-  "n_train": 88520,
-  "fit_log": "isotonic on 88520 rows (1304 malware, 87216 benign); empirical max x=1.000 y=0.105; method=isotonic+anchor, breakpoints=6"
+  "n_train": 11087,
+  "fit_log": "isotonic on 11087 rows (155 malware, 10932 benign); empirical max x=0.215 y=0.304; method=isotonic+anchor, breakpoints=6"
 }

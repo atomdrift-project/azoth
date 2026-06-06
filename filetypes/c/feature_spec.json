@@ -208,7 +208,8 @@
     "well-known/malware/rat",
     "well-known/malware/rootkit",
     "well-known/malware/virus",
-    "well-known/tool"
+    "well-known/tool",
+    "micro-behaviors/process/argument"
   ],
   "filetype_vocab": [
     "c",

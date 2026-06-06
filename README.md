@@ -4,7 +4,7 @@ Static malware detection by routed ensemble. A general LightGBM model scores eve
 
 The point of routing is that the evidence differs by format. A PE's section table is signal. A PDF's stream dictionary is signal. A shell script's token distribution is signal. One generalist trained over all of them learns averages; a specialist trained on one of them learns the format.
 
-Thresholds and isotonic calibrators were fit on a 6,720,544-row all partition (12.5% of the labeled corpus). The numbers in this README come from a locked 837,332-row test partition, disjoint from training and calibration. The bundle is loaded at scan time by [litmus](https://codeberg.org/atomdrift/litmus). EMBER 2024 reference: Joyce et al., *KDD'25*.
+Thresholds and isotonic calibrators were fit on a 837,980-row dev partition (12.5% of the labeled corpus). The numbers in this README come from a locked 837,332-row test partition, disjoint from training and calibration. The bundle is loaded at scan time by [litmus](https://codeberg.org/atomdrift/litmus). EMBER 2024 reference: Joyce et al., *KDD'25*.
 
 ## Use
 
@@ -41,7 +41,7 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`macho`](filetypes/macho/README.md) | 334 / 1,486 | 0.973738 | 0.987729 | 0.950156 | 78.14% | — |
 | [`perl`](filetypes/perl/README.md) | 36 / 4,913 | 0.913371 | 0.995214 | 0.895522 | 72.22% | — |
 | [`java_class`](filetypes/java_class/README.md) | 221 / 88,047 | 0.918092 | 0.964565 | 0.924883 | 71.95% | — |
-| [`javascript`](filetypes/javascript/README.md) | 14,438 / 73,486 | 0.947179 | 0.974736 | 0.909866 | 60.70% | — |
+| [`javascript`](filetypes/javascript/README.md) | 14,438 / 73,486 | 0.950441 | 0.976331 | 0.910620 | 63.26% | — |
 | [`pe`](filetypes/pe/README.md) | 163,459 / 19,929 | 0.999552 | 0.996557 | 0.991645 | 59.36% | PR +0.001252 / ROC -0.001643 |
 | [`jar`](filetypes/jar/README.md) | 445 / 452 | 0.966684 | 0.961798 | 0.906250 | 54.83% | — |
 | [`kotlin`](filetypes/kotlin/README.md) | 3,901 / 6,364 | 0.949256 | 0.956926 | 0.893154 | 52.65% | — |
@@ -64,6 +64,7 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`xml`](filetypes/xml/README.md) | 393 / 25,634 | 0.251497 | 0.643517 | 0.376754 | 1.78% | — |
 | [`batch`](filetypes/batch/README.md) | 22,079 / 556 | 0.997429 | 0.950240 | 0.997236 | 1.31% | — |
 | [`json`](filetypes/json/README.md) | 103 / 3,859 | 0.035524 | 0.572865 | 0.089744 | 0.00% | — |
+| **Weighted avg** (by test pop) | **773,511** | **0.7830** | **0.8859** | **0.7939** | **48.7%** | — |
 
 PR AUC summarizes recall against precision across operating points. Recall@L50 is the selection-budget headline; for filetypes whose calibration slice cannot resolve L50 (0.5 FP/M) empirically, that level shares an operating point with its neighbours (its measured ceiling). EMBER 2024 deltas are reported where Joyce et al. publish per-filetype numbers (Table 5, All files → X).
 
@@ -71,11 +72,11 @@ PR AUC summarizes recall against precision across operating points. Recall@L50 i
 
 <img src="recall_curve.svg" alt="Corpus-weighted recall by FP level (per 100M benigns)" height="300" />
 
-The corpus-weighted ensemble curve weights each filetype's ensemble recall by the number of labeled files in that filetype, answering: "If I draw a random file from the labeled corpus, what fraction of malware do we catch at this FP budget?" The general curve is the single-model baseline on the full evaluated dataset. The vertical dashed line marks the L50 deploy operating point.
+The corpus-weighted ensemble curve weights each filetype's ensemble recall by the number of labeled files in that filetype, answering: "If I draw a random file from the labeled corpus, what fraction of malware do we catch at this FP budget?" The general curve is the single-model baseline on the full evaluated dataset. filetypes/elf is shown for comparison — a single strong route that resolves across levels, so the corpus-weighted line (dominated by large, near-flat routes like pe) can be read against it. The vertical dashed line marks the L50 deploy operating point.
 
 ## Provenance
 
-Calibration snapshot `1658771605`, score-table `02f59097455e`, model-set `19acbcd12d15`. 1 general, 7 filegroup, 46 filetype routes.
+Calibration snapshot `1658771605`, score-table `5cb3cb2e924e`, model-set `18761aff9808`. 1 general, 7 filegroup, 46 filetype routes.
 
 ## Limits
 

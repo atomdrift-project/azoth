@@ -3,23 +3,21 @@
   "method": "isotonic+anchor",
   "x": [
     0.012301206588745117,
-    0.026608049869537354,
-    0.02763909101486206,
-    0.27075666189193726,
-    0.28342515230178833,
+    0.01613086462020874,
+    0.15351933240890503,
+    0.743569016456604,
     0.994365930557251,
     1.0
   ],
   "y": [
-    0.0880503144654088,
-    0.0880503144654088,
-    0.42735042735042733,
-    0.42735042735042733,
+    0.13414634146341464,
+    0.5,
+    0.5,
     1.0,
     1.0,
     1.0
   ],
   "out_of_bounds": "clip",
-  "n_train": 6370,
-  "fit_log": "isotonic on 6370 rows (5868 malware, 502 benign); empirical max x=0.994 y=1.000; method=isotonic+anchor, breakpoints=7"
+  "n_train": 830,
+  "fit_log": "isotonic on 830 rows (754 malware, 76 benign); empirical max x=0.994 y=1.000; method=isotonic+anchor, breakpoints=6"
 }
