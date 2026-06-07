@@ -4,11 +4,11 @@ LightGBM specialist for `python-bytecode`. Member of the Azoth routed ensemble; 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `python-bytecode` slice of the locked test partition: 354 malware / 10,858 benign (11,212 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `python-bytecode` slice of the locked test partition: 378 malware / 15,284 benign (15,662 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.980249 | 0.991574 | 0.985673 | 97.18% | 0.0009 |
+| 0.922643 | 0.955519 | 0.951591 | 91.27% | 0.0022 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.980249 | 0.991574 | 0.985673 | 97.18% | 0.0009 | — |
+| 0.922643 | 0.955519 | 0.951591 | 91.27% | 0.0022 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `python-bytecode` are scored by `general`, `filetypes/python-byte
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 78,732 (2,302 mal / 76,430 ben) |
-| Feature spec | 8595 features (`general_shared`) |
+| Train rows | 107,043 (2,310 mal / 104,733 ben) |
+| Feature spec | 80203 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

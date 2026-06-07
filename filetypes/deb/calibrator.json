@@ -3,21 +3,21 @@
   "method": "isotonic",
   "x": [
     0.0,
-    4.8041343688964844e-05,
-    5.2809715270996094e-05,
-    0.3415619134902954,
-    0.8602050542831421,
-    0.9995381832122803
+    2.944469451904297e-05,
+    3.635883331298828e-05,
+    0.5983577370643616,
+    0.8986819982528687,
+    0.9993322491645813
   ],
   "y": [
     0.0,
     0.0,
-    0.053691275167785234,
-    0.053691275167785234,
+    0.05759162303664921,
+    0.05759162303664921,
     1.0,
     1.0
   ],
   "out_of_bounds": "clip",
-  "n_train": 902,
-  "fit_log": "isotonic on 902 rows (44 malware, 858 benign); empirical max x=1.000 y=1.000; method=isotonic, breakpoints=6"
+  "n_train": 925,
+  "fit_log": "isotonic on 925 rows (48 malware, 877 benign); empirical max x=0.999 y=1.000; method=isotonic, breakpoints=6"
 }

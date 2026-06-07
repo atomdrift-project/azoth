@@ -4,11 +4,11 @@ LightGBM specialist for `msi`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `msi` slice of the locked test partition: 553 malware / 11 benign (564 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `msi` slice of the locked test partition: 554 malware / 13 benign (567 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.997199 | 0.866349 | 0.991928 | — | 0.1921 |
+| 0.996826 | 0.884129 | 0.989286 | — | 0.1883 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `msi` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.997199 | 0.866349 | 0.991928 | — | 0.1921 | — |
+| 0.999184 | 0.978388 | 0.988453 | — | 0.1899 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `msi` are scored by `general`, `filetypes/msi`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,141 (3,982 mal / 159 ben) |
-| Feature spec | 8595 features (`general_shared`) |
+| Train rows | 4,161 (3,995 mal / 166 ben) |
+| Feature spec | 80203 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
