@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `msi` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.996721 | 0.869620 | 0.989286 | — | 0.2043 |
+| 0.998479 | 0.940989 | 0.990063 | — | 0.0190 |
 
 ## Specialist Performance
 
@@ -20,7 +20,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `msi` s
 
 ## Routing
 
-Files matching `msi` are scored by `general`, `filetypes/msi`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `msi` are scored by `general`, `filetypes/msi`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

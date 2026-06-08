@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `docker
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.046703 | 0.351291 | 0.133333 | 18.18% | 0.0681 |
+| 0.160032 | 0.606622 | 0.171429 | 9.09% | 0.0402 |
 
 ## Specialist Performance
 
@@ -26,7 +26,7 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `dockerfile` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `dockerfile` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

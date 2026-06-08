@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `docx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.990957 | 0.934924 | 0.961573 | 84.19% | 0.0574 |
+| 0.996308 | 0.966053 | 0.965766 | 88.81% | 0.0448 |
 
 ## Specialist Performance
 
@@ -26,7 +26,7 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `docx` are scored by `general`, `filegroups/documents`, `filetypes/docx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `docx` are scored by `general`, `filegroups/documents`, `filetypes/docx`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
