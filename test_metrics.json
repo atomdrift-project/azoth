@@ -1,6 +1,6 @@
 {
   "schema": "azoth.evaluation.v1",
-  "timestamp": "2026-06-08T15:42:58.946034+00:00",
+  "timestamp": "2026-06-08T18:57:59.328834+00:00",
   "applied_from": "out/models/azoth/config.json",
   "partition": "test",
   "rows": 860189,

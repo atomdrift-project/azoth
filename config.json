@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-06-08T15:42:25.551561+00:00",
+  "timestamp": "2026-06-08T18:57:25.637548+00:00",
   "schema": "azoth.routed_ensemble.v1",
   "max_id": 1670971082,
   "calibration_snapshot_id": 1670971082,
   "score_table": "out/models/azoth/score_table.npz",
   "score_table_hash": "de76934601db33f6a0c73a294b679aa7e5213fb9e2dfaa8f00164a68d7b8714d",
-  "model_set_hash": "1e59b8951c7e888d02ca8d51459160b223307f308418027a9b995cee2a85c20c",
+  "model_set_hash": "77cf25ef356437a02233b6e30fc639ab2fe1ae782dedb8556c191827afc9df58",
   "search": {
     "method": "quantile_severity_v1",
     "objective": "per-route (1-q*1e-6) interpolated benign-score quantile; strict levels cluster at the 1-FP ceiling below resolution (no tail extrapolation)"
