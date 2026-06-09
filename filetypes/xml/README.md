@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xml` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.135591 | 0.690276 | 0.178899 | 2.85% | 0.0271 |
+| 0.236301 | 0.696699 | 0.337043 | 2.65% | 0.0260 |
 
 ## Specialist Performance
 

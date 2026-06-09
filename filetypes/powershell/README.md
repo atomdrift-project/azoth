@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `powers
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.985446 | 0.970121 | 0.950301 | 80.90% | 0.0871 |
+| 0.989650 | 0.981262 | 0.956329 | 84.48% | 0.0826 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `powers
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.985446 | 0.970121 | 0.950301 | 80.90% | 0.0871 | — |
+| 0.989650 | 0.981262 | 0.956329 | 84.48% | 0.0826 | — |
 
 ## Recall by FP level (per 100M benigns)
 

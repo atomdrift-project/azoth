@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.165212 | 0.698217 | 0.206186 | 8.79% | 0.0433 |
+| 0.223605 | 0.703803 | 0.310777 | 10.75% | 0.0421 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.201487 | 0.796913 | 0.219114 | 8.47% | 0.0381 | — |
+| 0.274845 | 0.831944 | 0.288770 | 11.07% | 0.0842 | — |
 
 ## Recall by FP level (per 100M benigns)
 
