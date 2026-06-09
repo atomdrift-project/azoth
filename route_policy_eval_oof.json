@@ -1,8 +1,8 @@
 {
   "schema": "azoth.route_policy_eval.v1",
   "partition": "test",
-  "score_table": "out/models/azoth/score_table.npz",
-  "route_policies": "out/models/azoth/route_policies.json",
+  "score_table": "/home/t/collimator/out/models/azoth-candidate-filetypes-c-9445b9b1b5c81388/score_table.npz",
+  "route_policies": "/home/t/collimator/out/models/azoth-candidate-filetypes-c-9445b9b1b5c81388/route_policies.json",
   "rows": 905195,
   "malware": 312695,
   "benign": 592500,
@@ -1370,7 +1370,7 @@
             "fp_at_3fp": 3
           },
           "filetypes/c": {
-            "pr_auc": 0.2542600118381529,
+            "pr_auc": 0.25426001131455267,
             "recall_at_0fp": 0.11063627730294397,
             "threshold_at_0fp": 0.978651225566864,
             "fp_at_0fp": 0,
@@ -1383,7 +1383,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.2554194735576619,
+          "pr_auc": 0.2554194709778299,
           "recall_at_0fp": 0.08547008547008547,
           "threshold_at_0fp": 0.9990828037261963,
           "fp_at_0fp": 0,
@@ -5765,7 +5765,7 @@
       }
     },
     "gem": {
-      "malware": 4,
+      "malware": 21,
       "benign": 0,
       "file_group": "",
       "slice_metrics": {
@@ -5773,26 +5773,26 @@
           "general": {
             "pr_auc": null,
             "recall_at_0fp": 1.0,
-            "threshold_at_0fp": 0.9984856843948364,
+            "threshold_at_0fp": 0.9823510050773621,
             "fp_at_0fp": 0,
             "recall_at_1fp": 1.0,
-            "threshold_at_1fp": 0.9984856843948364,
+            "threshold_at_1fp": 0.9823510050773621,
             "fp_at_1fp": 0,
             "recall_at_3fp": 1.0,
-            "threshold_at_3fp": 0.9984856843948364,
+            "threshold_at_3fp": 0.9823510050773621,
             "fp_at_3fp": 0
           }
         },
         "max_rule": {
           "pr_auc": null,
           "recall_at_0fp": 1.0,
-          "threshold_at_0fp": 0.9984856843948364,
+          "threshold_at_0fp": 0.9823510050773621,
           "fp_at_0fp": 0,
           "recall_at_1fp": 1.0,
-          "threshold_at_1fp": 0.9984856843948364,
+          "threshold_at_1fp": 0.9823510050773621,
           "fp_at_1fp": 0,
           "recall_at_3fp": 1.0,
-          "threshold_at_3fp": 0.9984856843948364,
+          "threshold_at_3fp": 0.9823510050773621,
           "fp_at_3fp": 0
         }
       },
@@ -5918,65 +5918,65 @@
           ]
         },
         "L1000_hostile": {
-          "tp": 1,
+          "tp": 2,
           "fp": 0,
-          "recall": 0.25,
+          "recall": 0.09523809523809523,
           "active_routes": [
             "general"
           ]
         },
         "L2000_hostile": {
-          "tp": 2,
+          "tp": 9,
           "fp": 0,
-          "recall": 0.5,
+          "recall": 0.42857142857142855,
           "active_routes": [
             "general"
           ]
         },
         "L5000_hostile": {
-          "tp": 4,
+          "tp": 19,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.9047619047619048,
           "active_routes": [
             "general"
           ]
         },
         "L7500_hostile": {
-          "tp": 4,
+          "tp": 20,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.9523809523809523,
           "active_routes": [
             "general"
           ]
         },
         "L10000_hostile": {
-          "tp": 4,
+          "tp": 20,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.9523809523809523,
           "active_routes": [
             "general"
           ]
         },
         "L15000_hostile": {
-          "tp": 4,
+          "tp": 20,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.9523809523809523,
           "active_routes": [
             "general"
           ]
         },
         "L20000_hostile": {
-          "tp": 4,
+          "tp": 20,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.9523809523809523,
           "active_routes": [
             "general"
           ]
         },
         "L25000_hostile": {
-          "tp": 4,
+          "tp": 20,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.9523809523809523,
           "active_routes": [
             "general"
           ]
@@ -18911,288 +18911,288 @@
       }
     },
     "tar": {
-      "malware": 2819,
+      "malware": 2802,
       "benign": 3332,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.9854254616944806,
-            "recall_at_0fp": 0.7534586732884001,
+            "pr_auc": 0.9852741344299683,
+            "recall_at_0fp": 0.7523197715917203,
             "threshold_at_0fp": 0.9960625171661377,
             "fp_at_0fp": 0,
-            "recall_at_1fp": 0.8332742107130188,
+            "recall_at_1fp": 0.8326195574589579,
             "threshold_at_1fp": 0.990688145160675,
             "fp_at_1fp": 1,
-            "recall_at_3fp": 0.8630720113515431,
+            "recall_at_3fp": 0.8622412562455389,
             "threshold_at_3fp": 0.9791803956031799,
             "fp_at_3fp": 3
           },
           "filetypes/tar": {
-            "pr_auc": 0.9952189089698036,
-            "recall_at_0fp": 0.8385952465413267,
+            "pr_auc": 0.9951662064878044,
+            "recall_at_0fp": 0.8379728765167738,
             "threshold_at_0fp": 0.9906514883041382,
             "fp_at_0fp": 0,
-            "recall_at_1fp": 0.8559772969137992,
+            "recall_at_1fp": 0.8554603854389722,
             "threshold_at_1fp": 0.9808212518692017,
             "fp_at_1fp": 1,
-            "recall_at_3fp": 0.9006739978715856,
+            "recall_at_3fp": 0.9000713775874375,
             "threshold_at_3fp": 0.8747459650039673,
             "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.9876243026214226,
-          "recall_at_0fp": 0.828307910606598,
+          "pr_auc": 0.9874964703520747,
+          "recall_at_0fp": 0.8276231263383298,
           "threshold_at_0fp": 0.9960638880729675,
           "fp_at_0fp": 0,
-          "recall_at_1fp": 0.8566867683575736,
+          "recall_at_1fp": 0.8561741613133476,
           "threshold_at_1fp": 0.9906054139137268,
           "fp_at_1fp": 1,
-          "recall_at_3fp": 0.875842497339482,
+          "recall_at_3fp": 0.875089221984297,
           "threshold_at_3fp": 0.9808854460716248,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L1_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L2_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L3_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L4_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L5_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L10_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L20_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L30_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L40_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L50_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L60_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L70_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L80_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L90_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L100_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L200_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L300_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L500_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L1000_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L2000_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L5000_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L7500_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L10000_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L15000_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L20000_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
           ]
         },
         "L25000_hostile": {
-          "tp": 2375,
+          "tp": 2359,
           "fp": 0,
-          "recall": 0.8424973394820858,
+          "recall": 0.8418986438258387,
           "active_routes": [
             "general",
             "filetypes/tar"
@@ -19200,9 +19200,9 @@
         }
       },
       "deployed_or_summary": {
-        "tp": 2375,
+        "tp": 2359,
         "fp": 0,
-        "recall": 0.8424973394820858,
+        "recall": 0.8418986438258387,
         "active_routes": [
           "general",
           "filetypes/tar"
@@ -20067,20 +20067,20 @@
       }
     },
     "whl": {
-      "malware": 15,
+      "malware": 25,
       "benign": 109,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.6165163125507953,
-            "recall_at_0fp": 0.3333333333333333,
-            "threshold_at_0fp": 0.9963321685791016,
+            "pr_auc": 0.7732462654962655,
+            "recall_at_0fp": 0.52,
+            "threshold_at_0fp": 0.9928591847419739,
             "fp_at_0fp": 0,
-            "recall_at_1fp": 0.3333333333333333,
+            "recall_at_1fp": 0.52,
             "threshold_at_1fp": 0.98691725730896,
             "fp_at_1fp": 1,
-            "recall_at_3fp": 0.4,
+            "recall_at_3fp": 0.56,
             "threshold_at_3fp": 0.8370007872581482,
             "fp_at_3fp": 3
           },
@@ -20098,240 +20098,240 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.5955515558382942,
-          "recall_at_0fp": 0.3333333333333333,
-          "threshold_at_0fp": 0.9963321685791016,
+          "pr_auc": 0.757269691518906,
+          "recall_at_0fp": 0.52,
+          "threshold_at_0fp": 0.9928591847419739,
           "fp_at_0fp": 0,
-          "recall_at_1fp": 0.3333333333333333,
+          "recall_at_1fp": 0.52,
           "threshold_at_1fp": 0.98691725730896,
           "fp_at_1fp": 1,
-          "recall_at_3fp": 0.4,
+          "recall_at_3fp": 0.56,
           "threshold_at_3fp": 0.8370007872581482,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L1_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L2_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L3_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L4_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L5_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L10_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L20_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L30_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L40_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L50_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L60_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L70_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L80_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L90_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L100_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L200_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L300_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L500_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L1000_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L2000_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L5000_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L7500_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L10000_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L15000_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L20000_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         },
         "L25000_hostile": {
-          "tp": 5,
+          "tp": 10,
           "fp": 0,
-          "recall": 0.3333333333333333,
+          "recall": 0.4,
           "active_routes": [
             "general"
           ]
         }
       },
       "deployed_or_summary": {
-        "tp": 5,
+        "tp": 10,
         "fp": 0,
-        "recall": 0.3333333333333333,
+        "recall": 0.4,
         "active_routes": [
           "general"
         ]
@@ -22239,288 +22239,288 @@
       }
     },
     "zip": {
-      "malware": 12686,
+      "malware": 12676,
       "benign": 1501,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.9671832468890684,
-            "recall_at_0fp": 0.3434494718587419,
+            "pr_auc": 0.9671388519022902,
+            "recall_at_0fp": 0.34332597033764595,
             "threshold_at_0fp": 0.9952883124351501,
             "fp_at_0fp": 0,
-            "recall_at_1fp": 0.3711965946712912,
+            "recall_at_1fp": 0.3708583149258441,
             "threshold_at_1fp": 0.9927131533622742,
             "fp_at_1fp": 1,
-            "recall_at_3fp": 0.38270534447422355,
+            "recall_at_3fp": 0.38237614389397284,
             "threshold_at_3fp": 0.9903117418289185,
             "fp_at_3fp": 3
           },
           "filetypes/zip": {
-            "pr_auc": 0.9954568530084418,
-            "recall_at_0fp": 0.3764780072520889,
+            "pr_auc": 0.9954504031487943,
+            "recall_at_0fp": 0.3761438939728621,
             "threshold_at_0fp": 0.9934117794036865,
             "fp_at_0fp": 0,
-            "recall_at_1fp": 0.4385937253665458,
+            "recall_at_1fp": 0.43830861470495425,
             "threshold_at_1fp": 0.9859074354171753,
             "fp_at_1fp": 1,
-            "recall_at_3fp": 0.500315308213779,
+            "recall_at_3fp": 0.5000788892395077,
             "threshold_at_3fp": 0.9661266803741455,
             "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.9858496066883425,
-          "recall_at_0fp": 0.3819959009932209,
+          "pr_auc": 0.9858308635346327,
+          "recall_at_0fp": 0.38166614073840327,
           "threshold_at_0fp": 0.9953075051307678,
           "fp_at_0fp": 0,
-          "recall_at_1fp": 0.4114772189815545,
+          "recall_at_1fp": 0.41117071631429475,
           "threshold_at_1fp": 0.9934117794036865,
           "fp_at_1fp": 1,
-          "recall_at_3fp": 0.4417468075043355,
+          "recall_at_3fp": 0.4414641842852635,
           "threshold_at_3fp": 0.9904787540435791,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L1_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L2_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L3_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L4_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L5_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L10_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L20_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L30_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L40_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L50_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L60_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L70_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L80_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L90_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L100_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L200_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L300_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L500_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L1000_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L2000_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L5000_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L7500_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L10000_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L15000_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L20000_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
           ]
         },
         "L25000_hostile": {
-          "tp": 3750,
+          "tp": 3743,
           "fp": 0,
-          "recall": 0.2956014504177834,
+          "recall": 0.29528242347743766,
           "active_routes": [
             "general",
             "filetypes/zip"
@@ -22528,9 +22528,9 @@
         }
       },
       "deployed_or_summary": {
-        "tp": 3750,
+        "tp": 3743,
         "fp": 0,
-        "recall": 0.2956014504177834,
+        "recall": 0.29528242347743766,
         "active_routes": [
           "general",
           "filetypes/zip"

@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-06-09T14:16:15.504582+00:00",
+  "timestamp": "2026-06-09T16:29:38.104048+00:00",
   "schema": "azoth.routed_ensemble.v1",
   "max_id": 1679491877,
   "calibration_snapshot_id": 1679491877,
-  "score_table": "out/models/azoth/score_table.npz",
-  "score_table_hash": "03c9003d9bacffcb6494e449f48469dcac209c48057b97f5af088696d6bc893a",
-  "model_set_hash": "c49ac3632e6adcd9c6c1e1b7c9a3fa8dc5395a935a9f2e25f19529052bdced11",
+  "score_table": "/home/t/collimator/out/models/azoth-candidate-filetypes-c-9445b9b1b5c81388/score_table.npz",
+  "score_table_hash": "e1c363b3c5239259148eac2debbce314b3933c4a2d70cb02dbb7846626a46e48",
+  "model_set_hash": "282016a8ca911ffe7f193642727177de8c16cad88ac6dda001279e68767c87c7",
   "search": {
     "method": "quantile_severity_v1",
     "objective": "per-route (1-q*1e-6) interpolated benign-score quantile; strict levels cluster at the 1-FP ceiling below resolution (no tail extrapolation)"
@@ -17,7 +17,7 @@
   "fit_rows": 905238,
   "fit_malware": 314282,
   "fit_benign": 590956,
-  "root": "out/models/azoth",
+  "root": "/home/t/collimator/out/models/azoth-candidate-filetypes-c-9445b9b1b5c81388",
   "filetype_to_group": {
     "batch": "scripts",
     "javascript": "scripts",
@@ -100,7 +100,7 @@
     "docx": 5256,
     "elf": 356791,
     "elixir": 10943,
-    "gem": 34,
+    "gem": 197,
     "github-actions": 8327,
     "go": 135236,
     "groovy": 6723,
@@ -152,13 +152,13 @@
     "shell": 78720,
     "swift": 31830,
     "systemd": 1345,
-    "tar": 57817,
+    "tar": 57654,
     "text": 107764,
     "unknown": 69447,
     "vbs": 14645,
-    "vsix": 2,
+    "vsix": 3,
     "vsix_manifest": 53,
-    "whl": 823,
+    "whl": 915,
     "xls": 58240,
     "xlsb": 2,
     "xlsm": 3,
@@ -167,7 +167,7 @@
     "xpi": 79,
     "xz": 37166,
     "zig": 229,
-    "zip": 115056,
+    "zip": 114963,
     "zst": 26682
   },
   "models": [
@@ -16144,7 +16144,7 @@
           "filegroups/config": 0.9958683252477557,
           "filegroups/media": 0.9986979521226832,
           "filetypes/pe": 0.30085331201553345,
-          "filetypes/c": 0.9761938395261761,
+          "filetypes/c": 0.976193893396854,
           "filetypes/javascript": 0.9320316542373873,
           "filetypes/java_class": 0.9233031835556408,
           "filetypes/elf": 0.0040461220778524876,
@@ -16305,10 +16305,10 @@
             "kind": "filetype",
             "rows": 97385,
             "selected": true,
-            "selected_threshold": 0.9761938395261761,
+            "selected_threshold": 0.976193893396854,
             "method": "empirical",
             "standalone": {
-              "threshold": 0.9761938395261761,
+              "threshold": 0.976193893396854,
               "tp": 239,
               "fp": 2
             }
@@ -17710,7 +17710,7 @@
           "filegroups/config": 0.9343330275565334,
           "filegroups/media": 0.993063308089966,
           "filetypes/pe": 0.9947474378585816,
-          "filetypes/c": 0.9437587100415987,
+          "filetypes/c": 0.9437586587369008,
           "filetypes/javascript": 0.890213870340364,
           "filetypes/java_class": 0.760544671976581,
           "filetypes/elf": 0.9356258787810615,
@@ -17871,10 +17871,10 @@
             "kind": "filetype",
             "rows": 97385,
             "selected": true,
-            "selected_threshold": 0.9437587100415987,
+            "selected_threshold": 0.9437586587369008,
             "method": "empirical",
             "standalone": {
-              "threshold": 0.9437587100415987,
+              "threshold": 0.9437586587369008,
               "tp": 262,
               "fp": 8
             }
@@ -18493,7 +18493,7 @@
           "filegroups/config": 0.838236818409254,
           "filegroups/media": 0.992543364393711,
           "filetypes/pe": 0.9922588173866334,
-          "filetypes/c": 0.8940563113689348,
+          "filetypes/c": 0.8940563423037455,
           "filetypes/javascript": 0.8568152044354822,
           "filetypes/java_class": 0.6169960320122299,
           "filetypes/elf": 0.912153972804537,
@@ -18654,10 +18654,10 @@
             "kind": "filetype",
             "rows": 97385,
             "selected": true,
-            "selected_threshold": 0.8940563113689348,
+            "selected_threshold": 0.8940563423037455,
             "method": "empirical",
             "standalone": {
-              "threshold": 0.8940563113689348,
+              "threshold": 0.8940563423037455,
               "tp": 267,
               "fp": 10
             }
@@ -19276,7 +19276,7 @@
           "filegroups/config": 0.6895181198149761,
           "filegroups/media": 0.981264454102534,
           "filetypes/pe": 0.9915940276145935,
-          "filetypes/c": 0.7297766684293516,
+          "filetypes/c": 0.729776642024494,
           "filetypes/javascript": 0.8038479916036572,
           "filetypes/java_class": 0.3671808987157941,
           "filetypes/elf": 0.8924976588487542,
@@ -19437,10 +19437,10 @@
             "kind": "filetype",
             "rows": 97385,
             "selected": true,
-            "selected_threshold": 0.7297766684293516,
+            "selected_threshold": 0.729776642024494,
             "method": "empirical",
             "standalone": {
-              "threshold": 0.7297766684293516,
+              "threshold": 0.729776642024494,
               "tp": 334,
               "fp": 15
             }
@@ -20842,7 +20842,7 @@
           "filegroups/config": 0.5176978136897256,
           "filegroups/media": 0.9380699543357098,
           "filetypes/pe": 0.991493245124817,
-          "filetypes/c": 0.5082234556972892,
+          "filetypes/c": 0.5082234436273486,
           "filetypes/javascript": 0.7481270420253399,
           "filetypes/java_class": 0.13141462551806937,
           "filetypes/elf": 0.8581338062882382,
@@ -21003,10 +21003,10 @@
             "kind": "filetype",
             "rows": 97385,
             "selected": true,
-            "selected_threshold": 0.5082234556972892,
+            "selected_threshold": 0.5082234436273486,
             "method": "empirical",
             "standalone": {
-              "threshold": 0.5082234556972892,
+              "threshold": 0.5082234436273486,
               "tp": 372,
               "fp": 24
             }

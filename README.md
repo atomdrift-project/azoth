@@ -33,7 +33,7 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`xls`](filetypes/xls/README.md) | 4,671 / 2,652 | 0.997489 | 0.994983 | 0.983843 | 96.75% | — |
 | [`ole`](filetypes/ole/README.md) | 809 / 792 | 0.991560 | 0.990686 | 0.971928 | 95.06% | — |
 | [`macho`](filetypes/macho/README.md) | 339 / 1,575 | 0.989074 | 0.995414 | 0.960486 | 93.51% | — |
-| [`tar`](filetypes/tar/README.md) | 2,823 / 3,332 | 0.992084 | 0.990826 | 0.972332 | 91.71% | — |
+| [`tar`](filetypes/tar/README.md) | 2,802 / 3,332 | 0.991980 | 0.990758 | 0.972122 | 91.65% | — |
 | [`perl`](filetypes/perl/README.md) | 39 / 5,403 | 0.780660 | 0.938491 | 0.833333 | 87.18% | — |
 | [`python-bytecode`](filetypes/python-bytecode/README.md) | 401 / 23,635 | 0.881610 | 0.933825 | 0.926372 | 86.28% | — |
 | [`shell`](filetypes/shell/README.md) | 1,937 / 7,925 | 0.981003 | 0.991566 | 0.948758 | 85.70% | — |
@@ -43,13 +43,14 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`docx`](filetypes/docx/README.md) | 568 / 58 | 0.985098 | 0.902623 | 0.951424 | 82.92% | — |
 | [`jar`](filetypes/jar/README.md) | 458 / 481 | 0.957082 | 0.949764 | 0.894063 | 81.22% | — |
 | [`pe`](filetypes/pe/README.md) | 164,518 / 20,130 | 0.999732 | 0.997979 | 0.992642 | 80.18% | PR +0.001432 / ROC -0.000221 |
+| [`whl`](filetypes/whl/README.md) | 25 / 109 | 0.827203 | 0.859450 | 0.863636 | 80.00% | — |
 | [`pdf`](filetypes/pdf/README.md) | 22,502 / 2,947 | 0.994101 | 0.959645 | 0.980548 | 75.08% | PR +0.000801 / ROC -0.031555 |
 | [`java_class`](filetypes/java_class/README.md) | 238 / 93,690 | 0.867556 | 0.976400 | 0.896104 | 71.85% | — |
 | [`makefile`](filetypes/makefile/README.md) | 85 / 3,834 | 0.063499 | 0.724748 | 0.116923 | 67.06% | — |
 | [`php`](filetypes/php/README.md) | 708 / 19,409 | 0.787665 | 0.896228 | 0.811641 | 65.54% | — |
 | [`javascript`](filetypes/javascript/README.md) | 14,813 / 79,726 | 0.952145 | 0.970806 | 0.913010 | 63.80% | — |
-| [`kotlin`](filetypes/kotlin/README.md) | 3,937 / 6,848 | 0.908790 | 0.917234 | 0.856320 | 58.24% | — |
-| [`zip`](filetypes/zip/README.md) | 12,698 / 1,500 | 0.993517 | 0.951094 | 0.969769 | 54.99% | — |
+| [`kotlin`](filetypes/kotlin/README.md) | 3,937 / 6,848 | 0.952628 | 0.953752 | 0.907835 | 53.44% | — |
+| [`zip`](filetypes/zip/README.md) | 12,676 / 1,500 | 0.995341 | 0.965585 | 0.978018 | 52.64% | — |
 | [`python`](filetypes/python/README.md) | 2,760 / 26,860 | 0.811413 | 0.898790 | 0.816367 | 48.59% | — |
 | [`batch`](filetypes/batch/README.md) | 22,100 / 708 | 0.999008 | 0.985415 | 0.997197 | 40.72% | — |
 | [`xlsx`](filetypes/xlsx/README.md) | 7,472 / 201 | 0.989237 | 0.715955 | 0.986728 | 40.28% | — |
@@ -67,7 +68,7 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`xml`](filetypes/xml/README.md) | 491 / 27,109 | 0.236301 | 0.696699 | 0.337043 | 2.65% | — |
 | [`applescript`](filetypes/applescript/README.md) | 26 / 36 | 0.621083 | 0.695513 | 0.650000 | — | — |
 | [`json`](filetypes/json/README.md) | 129 / 5,421 | 0.050291 | 0.692587 | 0.125330 | 0.00% | — |
-| **Weighted avg** (by test pop) | **842,402** | **0.7585** | **0.8934** | **0.7724** | **56.8%** | — |
+| **Weighted avg** (by test pop) | **842,493** | **0.7591** | **0.8941** | **0.7732** | **56.7%** | — |
 
 PR AUC summarizes recall against precision across operating points. Recall@L50 is the selection-budget headline; for filetypes whose calibration slice cannot resolve L50 (0.5 FP/M) empirically, that level shares an operating point with its neighbours (its measured ceiling). EMBER 2024 deltas are reported where Joyce et al. publish per-filetype numbers (Table 5, All files → X).
 
@@ -79,7 +80,7 @@ The corpus-weighted ensemble curve weights each filetype's ensemble recall by th
 
 ## Provenance
 
-Calibration snapshot `1679491877`, score-table `03c9003d9bac`, model-set `c49ac3632e6a`. 1 general, 7 filegroup, 51 filetype routes.
+Calibration snapshot `1679491877`, score-table `e1c363b3c523`, model-set `282016a8ca91`. 1 general, 7 filegroup, 51 filetype routes.
 
 ## Limits
 
