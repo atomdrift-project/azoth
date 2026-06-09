@@ -4,11 +4,11 @@ LightGBM specialist for `makefile`. Member of the Azoth routed ensemble; bundle 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `makefile` slice of the locked test partition: 75 malware / 3,434 benign (3,509 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `makefile` slice of the locked test partition: 85 malware / 3,834 benign (3,919 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.059061 | 0.675469 | 0.066351 | 84.00% | 0.0775 |
+| 0.098032 | 0.766731 | 0.215768 | 4.71% | 0.0204 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `makefi
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.059061 | 0.675469 | 0.066351 | 84.00% | 0.0775 | — |
+| 0.027713 | 0.581652 | 0.055804 | 2.35% | 0.0260 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `makefile` are scored by `filegroups/source`, `filetypes/makefile`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `makefile` are scored by `general`, `filegroups/source`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 23,605 (16 mal / 23,589 ben) |
-| Feature spec | 80203 features (`general_shared`) |
+| Train rows | 26,422 (17 mal / 26,405 ben) |
+| Feature spec | 9527 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

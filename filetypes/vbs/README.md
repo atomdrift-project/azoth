@@ -4,11 +4,11 @@ LightGBM specialist for `vbs`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `vbs` slice of the locked test partition: 1,436 malware / 426 benign (1,862 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `vbs` slice of the locked test partition: 1,450 malware / 428 benign (1,878 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.995835 | 0.986581 | 0.976552 | 89.14% | 0.0709 |
+| 0.990760 | 0.969214 | 0.954019 | 87.10% | 0.0766 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `vbs` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.995835 | 0.986581 | 0.976552 | 89.14% | 0.0709 | — |
+| 0.990760 | 0.969214 | 0.954019 | 87.10% | 0.0766 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `vbs` are scored by `general`, `filetypes/vbs`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 11,849 (8,969 mal / 2,880 ben) |
-| Feature spec | 80203 features (`general_shared`) |
+| Train rows | 11,950 (9,050 mal / 2,900 ben) |
+| Feature spec | 9527 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

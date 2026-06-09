@@ -4,11 +4,11 @@ LightGBM specialist for `lnk`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 542 malware / 131 benign (673 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 543 malware / 132 benign (675 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.983600 | 0.946938 | 0.941489 | 84.50% | 0.1420 |
+| 0.986677 | 0.947828 | 0.941071 | 86.00% | 0.0704 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.983600 | 0.946938 | 0.941489 | 84.50% | 0.1420 | — |
+| 0.980944 | 0.941515 | 0.931818 | 84.53% | 0.1354 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,20 +26,20 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `lnk` are scored by `general`, `filetypes/lnk`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `lnk` are scored by `general`, `filetypes/lnk`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,200 (3,276 mal / 924 ben) |
-| Feature spec | 80203 features (`general_shared`) |
+| Train rows | 4,232 (3,306 mal / 926 ben) |
+| Feature spec | 9527 features (`general_shared`) |
 | n_estimators | 400 |
-| num_leaves | 96 |
+| num_leaves | 112 |
 | max_depth | 12 |
 | min_child_samples | 100 |
-| learning_rate | 0.05 |
+| learning_rate | 0.04 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |

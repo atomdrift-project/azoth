@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `html` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 1.000000 | 100.00% | 0.0045 |
+| 1.000000 | 1.000000 | 1.000000 | 100.00% | 0.3655 |
 
 ## Specialist Performance
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `html` are scored by `general`, `filetypes/html`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `html` are scored by `general`, `filegroups/documents`, `filetypes/html`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,752 (126 mal / 9,626 ben) |
-| Feature spec | 80203 features (`general_shared`) |
+| Train rows | 9,754 (126 mal / 9,628 ben) |
+| Feature spec | 9527 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

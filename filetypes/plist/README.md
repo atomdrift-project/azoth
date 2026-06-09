@@ -2,13 +2,15 @@
 
 LightGBM specialist for `plist`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `plist` slice of the locked test partition: 75 malware / 1,600 benign (1,675 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `plist` slice of the locked test partition: 77 malware / 1,610 benign (1,687 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.095012 | 0.485788 | 0.106152 | 5.33% | 0.0514 |
+| 0.076549 | 0.519811 | 0.115418 | 7.79% | 0.0558 |
 
 ## Specialist Performance
 
@@ -16,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `plist`
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.078945 | 0.488433 | 0.112588 | 5.33% | 0.0479 | — |
+| 0.147387 | 0.626970 | 0.263959 | 5.19% | 0.0485 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +28,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `plist` are scored by `general`, `filegroups/config`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `plist` are scored by `general`, `filetypes/plist`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 11,218 (42 mal / 11,176 ben) |
-| Feature spec | 80203 features (`general_shared`) |
+| Train rows | 11,277 (42 mal / 11,235 ben) |
+| Feature spec | 9527 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

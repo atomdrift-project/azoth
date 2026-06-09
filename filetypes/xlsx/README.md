@@ -4,11 +4,11 @@ LightGBM specialist for `xlsx`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` slice of the locked test partition: 7,425 malware / 198 benign (7,623 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` slice of the locked test partition: 7,472 malware / 201 benign (7,673 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.989308 | 0.713179 | 0.986842 | 44.01% | 0.0248 |
+| 0.997355 | 0.933198 | 0.996199 | 52.45% | 0.0082 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.987033 | 0.705208 | 0.986842 | 31.80% | 0.6667 | — |
+| 0.986852 | 0.698444 | 0.986728 | 37.55% | 0.6672 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,17 +26,17 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `xlsx` are scored by `filegroups/documents`, `filetypes/xlsx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xlsx` are scored by `general`, `filegroups/documents`, `filetypes/xlsx`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 17,733 (16,092 mal / 1,641 ben) |
-| Feature spec | 80203 features (`general_shared`) |
-| n_estimators | 300 |
-| num_leaves | 128 |
+| Train rows | 17,835 (16,183 mal / 1,652 ben) |
+| Feature spec | 9527 features (`general_shared`) |
+| n_estimators | 250 |
+| num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |

@@ -2,11 +2,9 @@
 
 LightGBM specialist for `dex`, `java_class`, `pyc`, `wasm`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
-
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `portable`). ROC 0.053484, PR 0.002368, F1 0.0052 on 88,296 rows (229 mal / 88,067 ben).
+Training-time benchmark only (no test-partition rows for `portable`). ROC 0.961884, PR 0.876626, F1 0.8929 on 93,928 rows (238 mal / 93,690 ben).
 
 ## Routing
 
@@ -17,8 +15,8 @@ Files matching `portable` are scored by none. The ensemble's per-row score is wh
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 618,367 (1,284 mal / 617,083 ben) |
-| Feature spec | 80203 features (`general_shared`) |
+| Train rows | 657,347 (1,296 mal / 656,051 ben) |
+| Feature spec | 9527 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -4,11 +4,11 @@ LightGBM specialist for `package.json`. Member of the Azoth routed ensemble; bun
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `package.json` slice of the locked test partition: 2,246 malware / 2,728 benign (4,974 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `package.json` slice of the locked test partition: 2,265 malware / 2,939 benign (5,204 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.997079 | 0.996256 | 0.992632 | 98.84% | 0.0064 |
+| 0.996038 | 0.994621 | 0.991351 | 98.68% | 0.0072 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `packag
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.997079 | 0.996256 | 0.992632 | 98.84% | 0.0064 | — |
+| 0.996038 | 0.994621 | 0.991351 | 98.68% | 0.0072 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,20 +26,20 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `package.json` are scored by `general`, `filegroups/config`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `package.json` are scored by `general`, `filegroups/config`, `filetypes/package.json`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 34,825 (16,114 mal / 18,711 ben) |
-| Feature spec | 80203 features (`general_shared`) |
+| Train rows | 36,453 (16,201 mal / 20,252 ben) |
+| Feature spec | 9527 features (`general_shared`) |
 | n_estimators | 400 |
-| num_leaves | 128 |
+| num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
-| learning_rate | 0.03 |
+| learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |

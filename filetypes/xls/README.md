@@ -4,11 +4,11 @@ LightGBM specialist for `xls`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xls` slice of the locked test partition: 4,647 malware / 2,652 benign (7,299 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xls` slice of the locked test partition: 4,671 malware / 2,652 benign (7,323 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.997711 | 0.994856 | 0.984495 | 96.23% | 0.0244 |
+| 0.996209 | 0.992593 | 0.981157 | 95.80% | 0.0291 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xls` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.997711 | 0.994856 | 0.984495 | 96.23% | 0.0244 | — |
+| 0.994971 | 0.988929 | 0.979001 | 95.63% | 0.0304 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `xls` are scored by `filegroups/documents`, `filetypes/xls`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xls` are scored by `general`, `filegroups/documents`, `filetypes/xls`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 49,703 (31,608 mal / 18,095 ben) |
-| Feature spec | 80203 features (`general_shared`) |
+| Train rows | 49,920 (31,811 mal / 18,109 ben) |
+| Feature spec | 9527 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
