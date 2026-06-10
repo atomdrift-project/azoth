@@ -4,11 +4,11 @@ LightGBM specialist for `lua`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `lua` slice of the locked test partition: 13 malware / 2,359 benign (2,372 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `lua` slice of the locked test partition: 13 malware / 2,388 benign (2,401 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.687562 | 0.798953 | 0.782609 | 69.23% | 0.0021 |
+| 0.679508 | 0.861906 | 0.782609 | 69.23% | 0.0026 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lua` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.687562 | 0.798953 | 0.782609 | 69.23% | 0.0021 | — |
+| 0.679508 | 0.861906 | 0.782609 | 69.23% | 0.0026 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `lua` are scored by `general`, `filegroups/scripts`, `filetypes/l
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 16,299 (63 mal / 16,236 ben) |
-| Feature spec | 9527 features (`general_shared`) |
+| Train rows | 16,477 (64 mal / 16,413 ben) |
+| Feature spec | 9519 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

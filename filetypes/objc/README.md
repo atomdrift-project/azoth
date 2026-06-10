@@ -4,11 +4,11 @@ LightGBM specialist for `objc`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `objc` slice of the locked test partition: 5 malware / 2,798 benign (2,803 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `objc` slice of the locked test partition: 5 malware / 2,808 benign (2,813 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.134404 | 0.699285 | 0.363636 | 100.00% | 0.0025 |
+| 0.134400 | 0.699288 | 0.363636 | 100.00% | 0.0025 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `objc` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.134404 | 0.699285 | 0.363636 | 100.00% | 0.0025 | — |
+| 0.134400 | 0.699288 | 0.363636 | 100.00% | 0.0025 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `objc` are scored by `general`. The ensemble's per-row score is w
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 19,693 (11 mal / 19,682 ben) |
-| Feature spec | 9527 features (`general_shared`) |
+| Train rows | 19,784 (12 mal / 19,772 ben) |
+| Feature spec | 9519 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

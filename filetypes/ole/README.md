@@ -4,11 +4,11 @@ LightGBM specialist for `ole`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ole` slice of the locked test partition: 809 malware / 792 benign (1,601 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ole` slice of the locked test partition: 813 malware / 799 benign (1,612 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.991560 | 0.990686 | 0.971928 | 95.06% | 0.0886 |
+| 0.992103 | 0.989840 | 0.983323 | 97.54% | 0.0261 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ole` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.991560 | 0.990674 | 0.971928 | 95.06% | 0.0886 | — |
+| 0.986668 | 0.986805 | 0.952555 | 90.53% | 0.0953 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,17 +26,17 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `ole` are scored by `filegroups/documents`, `filetypes/ole`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `ole` are scored by `general`, `filegroups/documents`, `filetypes/ole`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 10,678 (5,133 mal / 5,545 ben) |
-| Feature spec | 9527 features (`general_shared`) |
+| Train rows | 10,719 (5,137 mal / 5,582 ben) |
+| Feature spec | 9519 features (`general_shared`) |
 | n_estimators | 400 |
-| num_leaves | 96 |
+| num_leaves | 128 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
