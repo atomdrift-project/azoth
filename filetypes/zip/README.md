@@ -4,11 +4,11 @@ LightGBM specialist for `zip`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `zip` slice of the locked test partition: 12,722 malware / 1,543 benign (14,265 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `zip` slice of the locked test partition: 12,704 malware / 1,536 benign (14,240 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.977777 | 0.845316 | 0.951743 | 54.54% | 0.0725 |
+| 0.992934 | 0.951935 | 0.974662 | 51.66% | 0.0442 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `zip` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.975174 | 0.810253 | 0.951743 | 53.25% | 0.3132 | — |
+| 0.993775 | 0.955479 | 0.978837 | 51.28% | 0.1725 | — |
 
 ## Recall by FP level (per 100M benigns)
 

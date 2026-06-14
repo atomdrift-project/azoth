@@ -4,11 +4,11 @@ LightGBM specialist for `tar`, `tar.gz`. Member of the Azoth routed ensemble; bu
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `tar` slice of the locked test partition: 2,806 malware / 3,396 benign (6,202 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `tar` slice of the locked test partition: 2,803 malware / 3,396 benign (6,199 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.990485 | 0.988615 | 0.972081 | 92.94% | 0.0289 |
+| 0.990702 | 0.988846 | 0.972610 | 93.04% | 0.0284 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `tar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.993727 | 0.991392 | 0.974220 | 93.26% | 0.0328 | — |
+| 0.993836 | 0.991524 | 0.974747 | 93.36% | 0.0322 | — |
 
 ## Recall by FP level (per 100M benigns)
 
