@@ -14,7 +14,7 @@ Input is a JSON report produced by `cleave`. Output is one verdict — `benign` 
 
 `config.json` records the deployed thresholds. Each route lives in its own subdirectory: `general/`, one of 7 `filegroups/<name>/`, or one of 44 `filetypes/<name>/`. A route directory carries two files: `model.txt` (LightGBM) and `feature_spec.json` (the features the model expects). Scores are the model's raw probabilities — there is no separate probability calibrator.
 
-Further reading: [DESIGN.md](DESIGN.md) for architecture and FP-budget design, [ENSEMBLE_MODEL.md](ENSEMBLE_MODEL.md) for routing details, [GENERALIST_MODEL.md](GENERALIST_MODEL.md) for the single-model baseline. License: Apache 2.0.
+Further reading: [ENSEMBLE_MODEL.md](ENSEMBLE_MODEL.md) for routing details, [GENERALIST_MODEL.md](GENERALIST_MODEL.md) for the single-model baseline. License: Apache 2.0.
 
 ## Per-filetype Ensemble Performance
 
@@ -54,22 +54,22 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`ruby`](filetypes/ruby/README.md) | 25 / 3,513 | 0.483429 | 0.734728 | 0.615385 | 48.00% | — |
 | [`python`](filetypes/python/README.md) | 2,918 / 29,621 | 0.777281 | 0.878626 | 0.792965 | 47.02% | — |
 | [`xlsx`](filetypes/xlsx/README.md) | 7,859 / 210 | 0.989563 | 0.723395 | 0.986816 | 43.11% | — |
-| [`cargo.toml`](filetypes/cargo.toml/README.md) | 30 / 242 | 0.414646 | 0.751309 | 0.425532 | 33.33% | — |
+| `cargo.toml` | 30 / 242 | 0.414646 | 0.751309 | 0.425532 | 33.33% | — |
 | [`csharp`](filetypes/csharp/README.md) | 457 / 9,815 | 0.349777 | 0.729584 | 0.371773 | 22.10% | — |
-| [`c`](filetypes/c/README.md) | 2,205 / 104,725 | 0.178436 | 0.613174 | 0.303628 | 19.00% | — |
-| [`jpeg`](filetypes/jpeg/README.md) | 183 / 3,996 | 0.194551 | 0.620173 | 0.228228 | 18.58% | — |
+| `c` | 2,205 / 104,725 | 0.178436 | 0.613174 | 0.303628 | 19.00% | — |
+| `jpeg` | 183 / 3,996 | 0.194551 | 0.620173 | 0.228228 | 18.58% | — |
 | [`deb`](filetypes/deb/README.md) | 54 / 1,008 | 0.144851 | 0.568471 | 0.169492 | 16.67% | — |
 | [`go`](filetypes/go/README.md) | 1,432 / 16,708 | 0.260379 | 0.701534 | 0.273354 | 8.59% | — |
 | [`plist`](filetypes/plist/README.md) | 83 / 1,637 | 0.142860 | 0.683476 | 0.248996 | 7.23% | — |
-| [`java`](filetypes/java/README.md) | 447 / 10,298 | 0.172645 | 0.731921 | 0.260355 | 5.82% | — |
-| [`rust`](filetypes/rust/README.md) | 243 / 12,565 | 0.079066 | 0.597762 | 0.110638 | 5.76% | — |
+| `java` | 447 / 10,298 | 0.172645 | 0.731921 | 0.260355 | 5.82% | — |
+| `rust` | 243 / 12,565 | 0.079066 | 0.597762 | 0.110638 | 5.76% | — |
 | [`png`](filetypes/png/README.md) | 1,115 / 24,068 | 0.108311 | 0.546295 | 0.127395 | 5.38% | — |
 | [`xml`](filetypes/xml/README.md) | 536 / 33,302 | 0.108818 | 0.585172 | 0.149750 | 5.22% | — |
-| [`text`](filetypes/text/README.md) | 745 / 15,124 | 0.122661 | 0.659140 | 0.161672 | 4.56% | — |
-| [`makefile`](filetypes/makefile/README.md) | 94 / 4,264 | 0.024629 | 0.490000 | 0.042400 | 1.06% | — |
+| `text` | 745 / 15,124 | 0.122661 | 0.659140 | 0.161672 | 4.56% | — |
+| `makefile` | 94 / 4,264 | 0.024629 | 0.490000 | 0.042400 | 1.06% | — |
 | [`gem`](filetypes/gem/README.md) | 27 / 48 | 0.982353 | 0.988426 | 0.941176 | — | — |
 | [`applescript`](filetypes/applescript/README.md) | 26 / 40 | 0.557110 | 0.561538 | 0.565217 | — | — |
-| [`json`](filetypes/json/README.md) | 146 / 7,802 | 0.043264 | 0.692383 | 0.124041 | 0.00% | — |
+| `json` | 146 / 7,802 | 0.043264 | 0.692383 | 0.124041 | 0.00% | — |
 | **Weighted avg** (by test pop) | **914,861** | **0.7197** | **0.8681** | **0.7386** | **54.9%** | — |
 
 PR AUC summarizes recall against precision across operating points. Recall@L50 is the selection-budget headline; for filetypes whose calibration slice cannot resolve L50 (0.5 FP/M) empirically, that level shares an operating point with its neighbours (its measured ceiling). EMBER 2024 deltas are reported where Joyce et al. publish per-filetype numbers (Table 5, All files → X).
