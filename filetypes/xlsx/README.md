@@ -4,11 +4,11 @@ LightGBM specialist for `xlsx`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` slice of the locked test partition: 7,500 malware / 201 benign (7,701 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` slice of the locked test partition: 7,859 malware / 210 benign (8,069 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.989124 | 0.704629 | 0.986777 | 48.71% | 0.0249 |
+| 0.989563 | 0.723395 | 0.986816 | 43.11% | 0.0248 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.986849 | 0.701076 | 0.986777 | 31.79% | 0.6710 | — |
+| 0.986905 | 0.696670 | 0.986816 | 37.27% | 0.6701 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `xlsx` are scored by `filegroups/documents`, `filetypes/xlsx`. Th
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 17,935 (16,275 mal / 1,660 ben) |
-| Feature spec | 9519 features (`general_shared`) |
+| Train rows | 18,744 (16,999 mal / 1,745 ben) |
+| Feature spec | 9425 features (`general_shared`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |

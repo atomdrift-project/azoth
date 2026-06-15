@@ -4,11 +4,11 @@ LightGBM specialist for `plist`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `plist` slice of the locked test partition: 82 malware / 1,623 benign (1,705 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `plist` slice of the locked test partition: 83 malware / 1,637 benign (1,720 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.123874 | 0.680244 | 0.187970 | 6.10% | 0.0444 |
+| 0.142860 | 0.683476 | 0.248996 | 7.23% | 0.0447 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `plist`
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.116849 | 0.658492 | 0.188100 | 4.88% | 0.0496 | — |
+| 0.131255 | 0.587178 | 0.243478 | 4.82% | 0.0518 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,21 +26,21 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `plist` are scored by `filegroups/config`, `filetypes/plist`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `plist` are scored by `general`, `filegroups/config`, `filetypes/plist`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 11,369 (42 mal / 11,327 ben) |
-| Feature spec | 9519 features (`general_shared`) |
+| Train rows | 11,458 (42 mal / 11,416 ben) |
+| Feature spec | 9425 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 2.0 |
-| early_stopping_rounds | 25 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
+| early_stopping_rounds | 50 |
 | device | auto |

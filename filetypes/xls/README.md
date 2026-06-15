@@ -4,11 +4,11 @@ LightGBM specialist for `xls`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xls` slice of the locked test partition: 4,697 malware / 2,652 benign (7,349 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xls` slice of the locked test partition: 4,944 malware / 2,652 benign (7,596 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.996478 | 0.993103 | 0.981650 | 95.74% | 0.0202 |
+| 0.995151 | 0.988857 | 0.979735 | 95.95% | 0.0326 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xls` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.994165 | 0.989708 | 0.978710 | 95.59% | 0.0307 | — |
+| 0.995151 | 0.988857 | 0.979735 | 95.95% | 0.0326 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,21 +26,21 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `xls` are scored by `filegroups/documents`, `filetypes/xls`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xls` are scored by `filegroups/documents`, `filetypes/xls`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 50,080 (31,971 mal / 18,109 ben) |
-| Feature spec | 9519 features (`general_shared`) |
+| Train rows | 51,642 (33,532 mal / 18,110 ben) |
+| Feature spec | 9425 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
+| reg_alpha / reg_lambda | 0 / 1 |
 | early_stopping_rounds | 25 |
 | device | auto |

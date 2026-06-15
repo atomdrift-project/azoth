@@ -6,11 +6,11 @@ LightGBM specialist for `xml`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xml` slice of the locked test partition: 507 malware / 28,364 benign (28,871 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xml` slice of the locked test partition: 536 malware / 33,302 benign (33,838 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.227565 | 0.643907 | 0.320127 | 9.07% | 0.0160 |
+| 0.108818 | 0.585172 | 0.149750 | 5.22% | 0.0145 |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xml` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.049353 | 0.476542 | 0.142857 | 8.68% | 0.0183 | — |
+| 0.099935 | 0.484679 | 0.147899 | 4.85% | 0.0161 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -28,15 +28,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `xml` are scored by `general`, `filegroups/config`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xml` are scored by `filegroups/config`, `filetypes/xml`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 198,282 (288 mal / 197,994 ben) |
-| Feature spec | 9519 features (`general_shared`) |
+| Train rows | 232,483 (292 mal / 232,191 ben) |
+| Feature spec | 9425 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
@@ -44,5 +44,5 @@ Files matching `xml` are scored by `general`, `filegroups/config`. The ensemble'
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 25 |
+| early_stopping_rounds | 50 |
 | device | auto |
