@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ole` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.990359 | 0.988385 | 0.963899 | 93.82% | 0.0259 |
+| 0.991681 | 0.990023 | 0.976275 | 96.04% | 0.1475 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ole` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.990549 | 0.989684 | 0.963899 | 93.58% | 0.1155 | — |
+| 0.989646 | 0.987295 | 0.975639 | 95.92% | 0.1095 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,7 +26,7 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `ole` are scored by `filetypes/ole`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `ole` are scored by `general`, `filegroups/documents`, `filetypes/ole`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

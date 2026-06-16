@@ -4,11 +4,11 @@ LightGBM specialist for `kotlin`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin` slice of the locked test partition: 3,923 malware / 7,339 benign (11,262 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin` slice of the locked test partition: 3,913 malware / 7,339 benign (11,252 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.904745 | 0.921106 | 0.821485 | 58.63% | 0.0867 |
+| 0.950593 | 0.959966 | 0.908487 | 66.14% | 0.0518 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.904288 | 0.919424 | 0.821957 | 58.31% | 0.1511 | — |
+| 0.946062 | 0.950749 | 0.907655 | 65.24% | 0.1328 | — |
 
 ## Recall by FP level (per 100M benigns)
 

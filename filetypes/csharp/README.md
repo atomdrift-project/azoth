@@ -4,11 +4,11 @@ LightGBM specialist for `csharp`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `csharp` slice of the locked test partition: 457 malware / 9,815 benign (10,272 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `csharp` slice of the locked test partition: 458 malware / 9,815 benign (10,273 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.349777 | 0.729584 | 0.371773 | 22.10% | 0.0415 |
+| 0.456735 | 0.805533 | 0.470588 | 24.02% | 0.0349 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `csharp
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.349969 | 0.729184 | 0.372414 | 22.15% | 0.0414 | — |
+| 0.468792 | 0.829066 | 0.478372 | 24.72% | 0.0337 | — |
 
 ## Recall by FP level (per 100M benigns)
 

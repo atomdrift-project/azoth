@@ -2,7 +2,7 @@
 
 General malware detector used for every routed decision.
 
-- Inputs: shared `feature_spec.json` (7,705 features) extracted from cleave reports.
+- Inputs: shared `feature_spec.json` (7,740 features) extracted from cleave reports.
 - Feature families:
   - aggregate finding counts
   - ATT&CK/MBC n-grams

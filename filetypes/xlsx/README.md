@@ -4,11 +4,11 @@ LightGBM specialist for `xlsx`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` slice of the locked test partition: 7,859 malware / 210 benign (8,069 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xlsx` slice of the locked test partition: 7,860 malware / 210 benign (8,070 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.989563 | 0.723395 | 0.986816 | 43.11% | 0.0248 |
+| 0.989562 | 0.723318 | 0.986817 | 43.12% | 0.0248 |
 
 ## Specialist Performance
 
@@ -26,7 +26,7 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `xlsx` are scored by `filegroups/documents`, `filetypes/xlsx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xlsx` are scored by `general`, `filegroups/documents`, `filetypes/xlsx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
