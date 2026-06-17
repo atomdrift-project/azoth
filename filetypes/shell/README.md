@@ -33,14 +33,14 @@ Files matching `shell` are scored by `filegroups/scripts`, `filetypes/shell`. Th
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 72,836 (12,784 mal / 60,052 ben) |
-| Feature spec | 9425 features (`general_shared`) |
-| n_estimators | 250 |
+| Train rows | 73,948 (12,797 mal / 61,151 ben) |
+| Feature spec | 9413 features (`general_shared`) |
+| n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0 / 1 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |
 | device | auto |

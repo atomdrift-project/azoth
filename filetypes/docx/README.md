@@ -33,8 +33,8 @@ Files matching `docx` are scored by `filegroups/documents`, `filetypes/docx`. Th
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,027 (3,628 mal / 399 ben) |
-| Feature spec | 9425 features (`general_shared`) |
+| Train rows | 4,028 (3,628 mal / 400 ben) |
+| Feature spec | 9413 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

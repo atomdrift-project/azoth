@@ -27,8 +27,8 @@ Files matching `applescript` are scored by `general`, `filetypes/applescript`. T
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 370 (39 mal / 331 ben) |
-| Feature spec | 9425 features (`general_shared`) |
+| Train rows | 373 (40 mal / 333 ben) |
+| Feature spec | 9413 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -35,8 +35,8 @@ Files matching `java_class` are scored by `general`, `filegroups/portable`, `fil
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 696,527 (1,424 mal / 695,103 ben) |
-| Feature spec | 9425 features (`general_shared`) |
+| Train rows | 711,484 (1,433 mal / 710,051 ben) |
+| Feature spec | 9413 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
@@ -44,5 +44,5 @@ Files matching `java_class` are scored by `general`, `filegroups/portable`, `fil
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| early_stopping_rounds | 25 |
 | device | auto |

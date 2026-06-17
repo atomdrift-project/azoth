@@ -33,8 +33,8 @@ Files matching `lnk` are scored by `general`, `filetypes/lnk`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,419 (3,486 mal / 933 ben) |
-| Feature spec | 9425 features (`general_shared`) |
+| Train rows | 4,410 (3,477 mal / 933 ben) |
+| Feature spec | 9413 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -33,14 +33,14 @@ Files matching `go` are scored by `filetypes/go`. The ensemble's per-row score i
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 116,937 (1,229 mal / 115,708 ben) |
-| Feature spec | 9425 features (`general_shared`) |
-| n_estimators | 250 |
+| Train rows | 116,084 (1,261 mal / 114,823 ben) |
+| Feature spec | 9413 features (`general_shared`) |
+| n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0 / 1 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |
 | device | auto |

@@ -27,8 +27,8 @@ Files matching `gem` are scored by `filetypes/gem`. The ensemble's per-row score
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 586 (173 mal / 413 ben) |
-| Feature spec | 9425 features (`general_shared`) |
+| Train rows | 969 (190 mal / 779 ben) |
+| Feature spec | 9413 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

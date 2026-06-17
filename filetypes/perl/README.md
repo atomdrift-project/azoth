@@ -33,8 +33,8 @@ Files matching `perl` are scored by `general`, `filegroups/scripts`, `filetypes/
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 38,305 (252 mal / 38,053 ben) |
-| Feature spec | 9425 features (`general_shared`) |
+| Train rows | 39,009 (252 mal / 38,757 ben) |
+| Feature spec | 9413 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

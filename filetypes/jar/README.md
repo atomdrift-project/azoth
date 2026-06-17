@@ -33,8 +33,8 @@ Files matching `jar` are scored by `general`, `filetypes/jar`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,573 (2,687 mal / 3,886 ben) |
-| Feature spec | 9425 features (`general_shared`) |
+| Train rows | 7,116 (2,688 mal / 4,428 ben) |
+| Feature spec | 9413 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

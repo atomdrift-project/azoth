@@ -33,14 +33,14 @@ Files matching `ole` are scored by `general`, `filegroups/documents`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 10,935 (5,183 mal / 5,752 ben) |
-| Feature spec | 9425 features (`general_shared`) |
-| n_estimators | 250 |
-| num_leaves | 96 |
+| Train rows | 10,951 (5,182 mal / 5,769 ben) |
+| Feature spec | 9413 features (`general_shared`) |
+| n_estimators | 400 |
+| num_leaves | 128 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0 / 1 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |
 | device | auto |

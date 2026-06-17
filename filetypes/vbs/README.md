@@ -33,14 +33,14 @@ Files matching `vbs` are scored by `general`, `filetypes/vbs`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 12,460 (9,548 mal / 2,912 ben) |
-| Feature spec | 9425 features (`general_shared`) |
-| n_estimators | 250 |
-| num_leaves | 96 |
+| Train rows | 12,487 (9,574 mal / 2,913 ben) |
+| Feature spec | 9413 features (`general_shared`) |
+| n_estimators | 400 |
+| num_leaves | 128 |
 | max_depth | 12 |
 | min_child_samples | 100 |
-| learning_rate | 0.05 |
+| learning_rate | 0.02 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0 / 1 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |
 | device | auto |

@@ -33,8 +33,8 @@ Files matching `python-bytecode` are scored by `general`, `filetypes/python-byte
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 242,276 (2,430 mal / 239,846 ben) |
-| Feature spec | 9425 features (`general_shared`) |
+| Train rows | 264,321 (2,430 mal / 261,891 ben) |
+| Feature spec | 9413 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

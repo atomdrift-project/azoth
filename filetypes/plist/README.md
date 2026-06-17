@@ -33,8 +33,8 @@ Files matching `plist` are scored by `filegroups/config`, `filetypes/plist`. The
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 11,458 (42 mal / 11,416 ben) |
-| Feature spec | 9425 features (`general_shared`) |
+| Train rows | 11,468 (42 mal / 11,426 ben) |
+| Feature spec | 9413 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

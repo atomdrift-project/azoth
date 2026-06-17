@@ -35,8 +35,8 @@ Files matching `deb` are scored by `filetypes/deb`. The ensemble's per-row score
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,991 (23 mal / 6,968 ben) |
-| Feature spec | 9425 features (`general_shared`) |
+| Train rows | 7,149 (23 mal / 7,126 ben) |
+| Feature spec | 9413 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
