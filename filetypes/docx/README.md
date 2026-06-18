@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `docx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.990296 | 0.929222 | 0.960471 | 82.02% | 0.0559 |
+| 0.988738 | 0.917932 | 0.954740 | 80.67% | 0.0566 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `docx` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.989469 | 0.917810 | 0.950479 | 79.66% | 0.1841 | — |
+| 0.989818 | 0.921171 | 0.950479 | 79.66% | 0.1839 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `docx` are scored by `filegroups/documents`, `filetypes/docx`. Th
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,028 (3,628 mal / 400 ben) |
-| Feature spec | 9413 features (`general_shared`) |
+| Train rows | 3,876 (3,628 mal / 248 ben) |
+| Feature spec | 9388 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

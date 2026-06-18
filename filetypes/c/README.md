@@ -4,7 +4,7 @@ LightGBM specialist for `c`. Member of the Azoth routed ensemble; bundle root: [
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `c` slice of the locked test partition: 2,205 malware / 104,725 benign (106,930 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `c` slice of the locked test partition: 2,255 malware / 105,462 benign (107,717 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
@@ -33,8 +33,8 @@ Files matching `c` are scored by none. The ensemble's per-row score is whatever 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 739,059 (3,672 mal / 735,387 ben) |
-| Feature spec | 9413 features (`general_shared`) |
+| Train rows | 747,118 (3,718 mal / 743,400 ben) |
+| Feature spec | 9388 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

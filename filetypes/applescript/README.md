@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apples
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.557110 | 0.561538 | 0.565217 | — | 0.2969 |
+| 0.583084 | 0.539423 | 0.590909 | — | 0.2806 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apples
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.557110 | 0.561538 | 0.565217 | — | 0.2969 | — |
+| — | — | — | — | - | — |
 
 ## Routing
 
-Files matching `applescript` are scored by `general`, `filetypes/applescript`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `applescript` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 373 (40 mal / 333 ben) |
-| Feature spec | 9413 features (`general_shared`) |
+| Train rows | 240 (42 mal / 198 ben) |
+| Feature spec | 9388 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

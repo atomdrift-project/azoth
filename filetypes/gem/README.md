@@ -4,11 +4,11 @@ LightGBM specialist for `gem`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `gem` slice of the locked test partition: 27 malware / 48 benign (75 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `gem` slice of the locked test partition: 29 malware / 97 benign (126 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.982353 | 0.988426 | 0.941176 | — | 0.0388 |
+| 0.991668 | 0.997156 | 0.965517 | 96.55% | 0.0197 |
 
 ## Specialist Performance
 
@@ -16,7 +16,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `gem` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.982353 | 0.988426 | 0.941176 | — | 0.0388 | — |
+| 0.991668 | 0.997156 | 0.965517 | 96.55% | 0.0197 | — |
+
+## Recall by FP level (per 100M benigns)
+
+<img src="recall_curve.svg" alt="gem: recall by FP level (per 100M benigns)" height="300" />
+
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
 
 ## Routing
 
@@ -27,8 +33,8 @@ Files matching `gem` are scored by `filetypes/gem`. The ensemble's per-row score
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 969 (190 mal / 779 ben) |
-| Feature spec | 9413 features (`general_shared`) |
+| Train rows | 817 (186 mal / 631 ben) |
+| Feature spec | 9388 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

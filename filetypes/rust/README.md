@@ -2,13 +2,15 @@
 
 LightGBM specialist for `rust`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `rust` slice of the locked test partition: 243 malware / 12,565 benign (12,808 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `rust` slice of the locked test partition: 244 malware / 12,619 benign (12,863 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.065022 | 0.602839 | 0.099138 | 4.12% | 0.0206 |
+| 0.068253 | 0.603878 | 0.105946 | 4.10% | 0.0208 |
 
 ## Specialist Performance
 
@@ -33,8 +35,8 @@ Files matching `rust` are scored by `general`, `filegroups/source`. The ensemble
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 88,116 (129 mal / 87,987 ben) |
-| Feature spec | 9413 features (`general_shared`) |
+| Train rows | 88,264 (133 mal / 88,131 ben) |
+| Feature spec | 9388 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
@@ -42,5 +44,5 @@ Files matching `rust` are scored by `general`, `filegroups/source`. The ensemble
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| early_stopping_rounds | 25 |
 | device | auto |

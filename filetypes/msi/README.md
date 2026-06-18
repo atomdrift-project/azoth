@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `msi` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.996218 | 0.862969 | 0.988196 | — | 0.2032 |
+| 0.996272 | 0.864050 | 0.988196 | — | 0.1988 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `msi` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.997024 | 0.876280 | 0.989865 | — | 0.2032 | — |
+| 0.996272 | 0.864050 | 0.988196 | — | 0.1988 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `msi` are scored by `general`, `filetypes/msi`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,410 (4,214 mal / 196 ben) |
-| Feature spec | 9413 features (`general_shared`) |
+| Train rows | 4,406 (4,214 mal / 192 ben) |
+| Feature spec | 9388 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

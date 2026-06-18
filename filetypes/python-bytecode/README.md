@@ -4,11 +4,11 @@ LightGBM specialist for `python-bytecode`. Member of the Azoth routed ensemble; 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `python-bytecode` slice of the locked test partition: 443 malware / 33,989 benign (34,432 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `python-bytecode` slice of the locked test partition: 443 malware / 37,355 benign (37,798 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.833241 | 0.910026 | 0.891386 | 79.91% | 0.0025 |
+| 0.820398 | 0.914595 | 0.888889 | 79.91% | 0.0046 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.833241 | 0.910026 | 0.891386 | 79.91% | 0.0025 | — |
+| 0.835361 | 0.918050 | 0.891656 | 79.68% | 0.0023 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `python-bytecode` are scored by `general`, `filetypes/python-bytecode`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `python-bytecode` are scored by `general`, `filetypes/python-bytecode`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 264,321 (2,430 mal / 261,891 ben) |
-| Feature spec | 9413 features (`general_shared`) |
+| Train rows | 274,874 (2,430 mal / 272,444 ben) |
+| Feature spec | 9388 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

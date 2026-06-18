@@ -4,7 +4,7 @@ LightGBM specialist for `jpeg`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 183 malware / 3,996 benign (4,179 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 183 malware / 4,001 benign (4,184 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
@@ -33,8 +33,8 @@ Files matching `jpeg` are scored by none. The ensemble's per-row score is whatev
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 28,492 (262 mal / 28,230 ben) |
-| Feature spec | 9413 features (`general_shared`) |
+| Train rows | 28,497 (262 mal / 28,235 ben) |
+| Feature spec | 9388 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

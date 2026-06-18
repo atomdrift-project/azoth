@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999180 | 0.992390 | 0.990326 | 98.07% | 0.0263 |
+| 0.998848 | 0.990229 | 0.989666 | 100.00% | 0.0269 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999180 | 0.992390 | 0.990326 | 98.07% | 0.0263 | — |
+| 0.998848 | 0.990229 | 0.989666 | 100.00% | 0.0269 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `rtf` are scored by `filegroups/documents`, `filetypes/rtf`. The 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 5,773 (5,304 mal / 469 ben) |
-| Feature spec | 9413 features (`general_shared`) |
+| Train rows | 5,774 (5,305 mal / 469 ben) |
+| Feature spec | 9388 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |
