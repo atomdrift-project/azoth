@@ -35,8 +35,8 @@ Files matching `xml` are scored by `general`, `filegroups/config`. The ensemble'
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 235,675 (285 mal / 235,390 ben) |
-| Feature spec | 9388 features (`general_shared`) |
+| Train rows | 237,720 (285 mal / 237,435 ben) |
+| Feature spec | 9374 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

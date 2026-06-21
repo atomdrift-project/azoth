@@ -33,8 +33,8 @@ Files matching `pe` are scored by `general`, `filegroups/native`, `filetypes/pe`
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,338,475 (1,191,936 mal / 146,539 ben) |
-| Feature spec | 9388 features (`general_shared`) |
+| Train rows | 1,339,961 (1,191,935 mal / 148,026 ben) |
+| Feature spec | 9374 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

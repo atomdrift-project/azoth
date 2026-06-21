@@ -33,8 +33,8 @@ Files matching `objc` are scored by `general`. The ensemble's per-row score is w
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 20,184 (16 mal / 20,168 ben) |
-| Feature spec | 9388 features (`general_shared`) |
+| Train rows | 20,190 (16 mal / 20,174 ben) |
+| Feature spec | 9374 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

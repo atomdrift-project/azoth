@@ -27,8 +27,8 @@ Files matching `npm` are scored by `general`, `filetypes/npm`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,115 (906 mal / 209 ben) |
-| Feature spec | 9388 features (`general_shared`) |
+| Train rows | 1,144 (920 mal / 224 ben) |
+| Feature spec | 9374 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

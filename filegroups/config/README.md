@@ -4,7 +4,7 @@ LightGBM specialist for `ini`, `json`, `package.json`, `plist`, `toml`, `xml`, `
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `config`). ROC 0.904965, PR 0.803291, F1 0.8531 on 50,121 rows (3,158 mal / 46,963 ben).
+Training-time benchmark only (no test-partition rows for `config`). ROC 0.901621, PR 0.801724, F1 0.8529 on 50,695 rows (3,160 mal / 47,535 ben).
 
 ## Routing
 
@@ -15,8 +15,8 @@ Files matching `config` are scored by none. The ensemble's per-row score is what
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 345,412 (17,018 mal / 328,394 ben) |
-| Feature spec | 9388 features (`general_shared`) |
+| Train rows | 349,375 (17,043 mal / 332,332 ben) |
+| Feature spec | 9374 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

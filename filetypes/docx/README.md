@@ -34,7 +34,7 @@ Files matching `docx` are scored by `filegroups/documents`, `filetypes/docx`. Th
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 3,876 (3,628 mal / 248 ben) |
-| Feature spec | 9388 features (`general_shared`) |
+| Feature spec | 9374 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

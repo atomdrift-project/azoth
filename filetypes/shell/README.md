@@ -33,8 +33,8 @@ Files matching `shell` are scored by `general`, `filegroups/scripts`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 74,476 (12,824 mal / 61,652 ben) |
-| Feature spec | 9388 features (`general_shared`) |
+| Train rows | 74,718 (12,824 mal / 61,894 ben) |
+| Feature spec | 9374 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

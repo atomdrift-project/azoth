@@ -2,6 +2,8 @@
 
 LightGBM specialist for `png`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
+
 ## Ensemble Performance
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `png` slice of the locked test partition: 1,116 malware / 24,087 benign (25,203 rows).
@@ -33,8 +35,8 @@ Files matching `png` are scored by `filegroups/media`, `filetypes/png`. The ense
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 166,443 (445 mal / 165,998 ben) |
-| Feature spec | 9388 features (`general_shared`) |
+| Train rows | 167,166 (445 mal / 166,721 ben) |
+| Feature spec | 9374 features (`general_shared`) |
 | n_estimators | 300 |
 | num_leaves | 96 |
 | max_depth | 12 |

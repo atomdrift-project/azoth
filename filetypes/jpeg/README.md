@@ -33,8 +33,8 @@ Files matching `jpeg` are scored by none. The ensemble's per-row score is whatev
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 28,497 (262 mal / 28,235 ben) |
-| Feature spec | 9388 features (`general_shared`) |
+| Train rows | 28,765 (262 mal / 28,503 ben) |
+| Feature spec | 9374 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

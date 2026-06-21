@@ -33,8 +33,8 @@ Files matching `ole` are scored by `general`, `filegroups/documents`. The ensemb
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 10,959 (5,182 mal / 5,777 ben) |
-| Feature spec | 9388 features (`general_shared`) |
+| Train rows | 10,969 (5,182 mal / 5,787 ben) |
+| Feature spec | 9374 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

@@ -28,7 +28,7 @@ Files matching `msi` are scored by `general`, `filetypes/msi`. The ensemble's pe
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 4,406 (4,214 mal / 192 ben) |
-| Feature spec | 9388 features (`general_shared`) |
+| Feature spec | 9374 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
