@@ -33,8 +33,8 @@ Files matching `zip` are scored by `general`, `filetypes/zip`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 80,189 (64,072 mal / 16,117 ben) |
-| Feature spec | 9374 features (`general_shared`) |
+| Train rows | 79,620 (63,081 mal / 16,539 ben) |
+| Feature spec | 9341 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

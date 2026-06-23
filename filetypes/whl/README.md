@@ -33,8 +33,8 @@ Files matching `whl` are scored by `filetypes/whl`. The ensemble's per-row score
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,579 (650 mal / 3,929 ben) |
-| Feature spec | 9374 features (`general_shared`) |
+| Train rows | 5,870 (1,861 mal / 4,009 ben) |
+| Feature spec | 9341 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

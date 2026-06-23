@@ -33,8 +33,8 @@ Files matching `php` are scored by `general`, `filegroups/scripts`, `filetypes/p
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 150,976 (3,855 mal / 147,121 ben) |
-| Feature spec | 9374 features (`general_shared`) |
+| Train rows | 154,535 (3,862 mal / 150,673 ben) |
+| Feature spec | 9341 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

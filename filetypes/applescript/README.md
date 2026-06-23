@@ -27,8 +27,8 @@ Files matching `applescript` are scored by `general`. The ensemble's per-row sco
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 241 (42 mal / 199 ben) |
-| Feature spec | 9374 features (`general_shared`) |
+| Train rows | 263 (45 mal / 218 ben) |
+| Feature spec | 9341 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

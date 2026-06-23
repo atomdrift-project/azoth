@@ -2,6 +2,8 @@
 
 LightGBM specialist for `objc`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
+
 ## Ensemble Performance
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `objc` slice of the locked test partition: 5 malware / 2,847 benign (2,852 rows).
@@ -33,8 +35,8 @@ Files matching `objc` are scored by `general`. The ensemble's per-row score is w
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 20,190 (16 mal / 20,174 ben) |
-| Feature spec | 9374 features (`general_shared`) |
+| Train rows | 20,221 (16 mal / 20,205 ben) |
+| Feature spec | 9341 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

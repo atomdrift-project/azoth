@@ -33,8 +33,8 @@ Files matching `javascript` are scored by `general`, `filegroups/scripts`, `file
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 712,772 (102,413 mal / 610,359 ben) |
-| Feature spec | 9374 features (`general_shared`) |
+| Train rows | 726,515 (101,995 mal / 624,520 ben) |
+| Feature spec | 9341 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

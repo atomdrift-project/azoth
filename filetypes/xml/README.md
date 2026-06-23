@@ -2,8 +2,6 @@
 
 LightGBM specialist for `xml`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
-
 ## Ensemble Performance
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `xml` slice of the locked test partition: 583 malware / 33,471 benign (34,054 rows).
@@ -35,8 +33,8 @@ Files matching `xml` are scored by `general`, `filegroups/config`. The ensemble'
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 237,720 (285 mal / 237,435 ben) |
-| Feature spec | 9374 features (`general_shared`) |
+| Train rows | 224,093 (285 mal / 223,808 ben) |
+| Feature spec | 9341 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

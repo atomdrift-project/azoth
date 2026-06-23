@@ -33,8 +33,8 @@ Files matching `vbs` are scored by `general`, `filetypes/vbs`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 12,568 (9,647 mal / 2,921 ben) |
-| Feature spec | 9374 features (`general_shared`) |
+| Train rows | 12,645 (9,702 mal / 2,943 ben) |
+| Feature spec | 9341 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |
