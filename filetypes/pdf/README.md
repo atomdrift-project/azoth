@@ -33,8 +33,8 @@ Files matching `pdf` are scored by `general`, `filegroups/documents`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 138,950 (117,367 mal / 21,583 ben) |
-| Feature spec | 9341 features (`general_shared`) |
+| Train rows | 138,955 (117,367 mal / 21,588 ben) |
+| Feature spec | 9338 features (`general_shared`) |
 | n_estimators | 300 |
 | num_leaves | 128 |
 | max_depth | 12 |

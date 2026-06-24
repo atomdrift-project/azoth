@@ -34,7 +34,7 @@ Files matching `html` are scored by `general`, `filegroups/documents`, `filetype
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 14,032 (223 mal / 13,809 ben) |
-| Feature spec | 9341 features (`general_shared`) |
+| Feature spec | 9338 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

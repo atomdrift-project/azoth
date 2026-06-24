@@ -34,7 +34,7 @@ Files matching `xlsx` are scored by `filegroups/documents`, `filetypes/xlsx`. Th
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 18,803 (17,053 mal / 1,750 ben) |
-| Feature spec | 9341 features (`general_shared`) |
+| Feature spec | 9338 features (`general_shared`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |

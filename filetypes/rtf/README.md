@@ -34,7 +34,7 @@ Files matching `rtf` are scored by `filegroups/documents`, `filetypes/rtf`. The 
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 5,784 (5,314 mal / 470 ben) |
-| Feature spec | 9341 features (`general_shared`) |
+| Feature spec | 9338 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

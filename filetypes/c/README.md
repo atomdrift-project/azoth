@@ -33,8 +33,8 @@ Files matching `c` are scored by none. The ensemble's per-row score is whatever 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 761,925 (3,723 mal / 758,202 ben) |
-| Feature spec | 9341 features (`general_shared`) |
+| Train rows | 765,360 (3,723 mal / 761,637 ben) |
+| Feature spec | 9338 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

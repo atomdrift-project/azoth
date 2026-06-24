@@ -33,8 +33,8 @@ Files matching `ruby` are scored by `filegroups/scripts`, `filetypes/ruby`. The 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 33,769 (124 mal / 33,645 ben) |
-| Feature spec | 9341 features (`general_shared`) |
+| Train rows | 34,380 (124 mal / 34,256 ben) |
+| Feature spec | 9338 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

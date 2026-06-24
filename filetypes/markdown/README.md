@@ -33,8 +33,8 @@ Files matching `markdown` are scored by `general`. The ensemble's per-row score 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 39,688 (36 mal / 39,652 ben) |
-| Feature spec | 9341 features (`general_shared`) |
+| Train rows | 40,626 (34 mal / 40,592 ben) |
+| Feature spec | 9338 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
