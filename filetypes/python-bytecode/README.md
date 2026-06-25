@@ -2,31 +2,13 @@
 
 LightGBM specialist for `python-bytecode`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Ensemble Performance
+## Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `python-bytecode` slice of the locked test partition: 443 malware / 37,355 benign (37,798 rows).
-
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.820398 | 0.914595 | 0.888889 | 79.91% | 0.0046 |
-
-## Specialist Performance
-
-`filetypes/python-bytecode` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
-
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|---:|
-| 0.835361 | 0.918050 | 0.891656 | 79.68% | 0.0023 | — |
-
-## Recall by FP level (per 100M benigns)
-
-<img src="recall_curve.svg" alt="python-bytecode: recall by FP level (per 100M benigns)" height="300" />
-
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Training-time benchmark only (no test-partition rows for `python-bytecode`). ROC 0.921131, PR 0.781843, F1 0.8582 on 55,928 rows (445 mal / 55,483 ben).
 
 ## Routing
 
-Files matching `python-bytecode` are scored by `general`, `filetypes/python-bytecode`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `python-bytecode` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

@@ -4,31 +4,13 @@ LightGBM specialist for `objc`. Member of the Azoth routed ensemble; bundle root
 
 > Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
 
-## Ensemble Performance
+## Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `objc` slice of the locked test partition: 5 malware / 2,847 benign (2,852 rows).
-
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.710704 | 0.907727 | 0.800000 | 80.00% | 0.0026 |
-
-## Specialist Performance
-
-`filetypes/objc` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
-
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|---:|
-| — | — | — | — | - | — |
-
-## Recall by FP level (per 100M benigns)
-
-<img src="recall_curve.svg" alt="objc: recall by FP level (per 100M benigns)" height="300" />
-
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Training-time benchmark only (no test-partition rows for `objc`). ROC 0.314788, PR 0.101255, F1 0.2857 on 2,879 rows (5 mal / 2,874 ben).
 
 ## Routing
 
-Files matching `objc` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `objc` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

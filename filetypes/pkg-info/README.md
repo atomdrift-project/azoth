@@ -2,31 +2,13 @@
 
 LightGBM specialist for `pkg-info`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Ensemble Performance
+## Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pkg-info` slice of the locked test partition: 1,278 malware / 338 benign (1,616 rows).
-
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.997198 | 0.990821 | 0.983320 | 97.18% | 0.0210 |
-
-## Specialist Performance
-
-`filetypes/pkg-info` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
-
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|---:|
-| 0.997324 | 0.989545 | 0.984114 | 96.95% | 0.0266 | — |
-
-## Recall by FP level (per 100M benigns)
-
-<img src="recall_curve.svg" alt="pkg-info: recall by FP level (per 100M benigns)" height="300" />
-
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Training-time benchmark only (no test-partition rows for `pkg-info`). ROC 0.985514, PR 0.992849, F1 0.9831 on 1,742 rows (1,264 mal / 478 ben).
 
 ## Routing
 
-Files matching `pkg-info` are scored by `filetypes/pkg-info`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `pkg-info` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

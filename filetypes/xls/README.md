@@ -2,31 +2,13 @@
 
 LightGBM specialist for `xls`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Ensemble Performance
+## Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xls` slice of the locked test partition: 4,945 malware / 2,652 benign (7,597 rows).
-
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.996209 | 0.991713 | 0.979411 | 95.96% | 0.0318 |
-
-## Specialist Performance
-
-`filetypes/xls` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
-
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|---:|
-| 0.996209 | 0.991713 | 0.979411 | 95.96% | 0.0318 | — |
-
-## Recall by FP level (per 100M benigns)
-
-<img src="recall_curve.svg" alt="xls: recall by FP level (per 100M benigns)" height="300" />
-
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Training-time benchmark only (no test-partition rows for `xls`). ROC 0.991117, PR 0.995896, F1 0.9782 on 7,608 rows (4,956 mal / 2,652 ben).
 
 ## Routing
 
-Files matching `xls` are scored by `general`, `filetypes/xls`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xls` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

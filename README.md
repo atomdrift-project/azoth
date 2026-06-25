@@ -29,18 +29,14 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`rtf`](filetypes/rtf/README.md) | 829 / 55 | 0.998848 | 0.990229 | 0.989666 | 100.00% | — |
 | [`package.json`](filetypes/package.json/README.md) | 2,344 / 3,158 | 0.996262 | 0.995181 | 0.991219 | 98.63% | — |
 | [`elf`](filetypes/elf/README.md) | 23,425 / 24,529 | 0.999748 | 0.999734 | 0.995958 | 97.88% | PR +0.006448 / ROC +0.006434 |
-| [`pkg-info`](filetypes/pkg-info/README.md) | 1,278 / 338 | 0.997198 | 0.990821 | 0.983320 | 97.18% | — |
 | [`gem`](filetypes/gem/README.md) | 29 / 97 | 0.991668 | 0.997156 | 0.965517 | 96.55% | — |
-| [`xls`](filetypes/xls/README.md) | 4,945 / 2,652 | 0.996209 | 0.991713 | 0.979411 | 95.96% | — |
 | [`macho`](filetypes/macho/README.md) | 342 / 1,644 | 0.990628 | 0.996526 | 0.971599 | 95.61% | — |
-| [`ole`](filetypes/ole/README.md) | 858 / 822 | 0.984820 | 0.978892 | 0.972813 | 95.57% | — |
 | [`tar`](filetypes/tar/README.md) | 2,807 / 5,186 | 0.991008 | 0.991790 | 0.971387 | 91.02% | — |
+| `ole_doc` | 10,588 / 3,518 | 0.994263 | 0.981213 | 0.964140 | 90.98% | — |
 | [`vbs`](filetypes/vbs/README.md) | 1,531 / 429 | 0.994544 | 0.983745 | 0.969317 | 86.74% | — |
 | [`shell`](filetypes/shell/README.md) | 2,039 / 8,665 | 0.978053 | 0.990506 | 0.941031 | 84.80% | — |
 | [`powershell`](filetypes/powershell/README.md) | 715 / 332 | 0.982442 | 0.960626 | 0.940159 | 83.36% | — |
-| [`docx`](filetypes/docx/README.md) | 595 / 62 | 0.988738 | 0.917932 | 0.954740 | 80.67% | — |
 | [`perl`](filetypes/perl/README.md) | 41 / 5,536 | 0.804328 | 0.911486 | 0.857143 | 80.49% | — |
-| [`python-bytecode`](filetypes/python-bytecode/README.md) | 443 / 37,355 | 0.820398 | 0.914595 | 0.888889 | 79.91% | — |
 | [`jar`](filetypes/jar/README.md) | 483 / 674 | 0.941571 | 0.941602 | 0.887417 | 78.26% | — |
 | [`lnk`](filetypes/lnk/README.md) | 566 / 132 | 0.979200 | 0.913059 | 0.921803 | 76.68% | — |
 | [`whl`](filetypes/whl/README.md) | 104 / 607 | 0.887052 | 0.936953 | 0.835165 | 75.96% | — |
@@ -52,7 +48,6 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`zip`](filetypes/zip/README.md) | 13,116 / 2,211 | 0.970894 | 0.848844 | 0.936552 | 55.23% | — |
 | [`ruby`](filetypes/ruby/README.md) | 25 / 3,536 | 0.469768 | 0.671024 | 0.585366 | 48.00% | — |
 | [`python`](filetypes/python/README.md) | 2,922 / 29,969 | 0.769201 | 0.878419 | 0.782097 | 44.35% | — |
-| [`xlsx`](filetypes/xlsx/README.md) | 7,861 / 210 | 0.989283 | 0.716172 | 0.986819 | 39.16% | — |
 | [`cargo.toml`](filetypes/cargo.toml/README.md) | 30 / 244 | 0.434866 | 0.795082 | 0.418605 | 33.33% | — |
 | [`csharp`](filetypes/csharp/README.md) | 458 / 9,814 | 0.374324 | 0.784269 | 0.389439 | 23.80% | — |
 | [`deb`](filetypes/deb/README.md) | 54 / 1,023 | 0.153316 | 0.634427 | 0.169492 | 22.22% | — |
@@ -71,7 +66,7 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`c`](filetypes/c/README.md) | 2,255 / 105,462 | — | — | — | — | — |
 | [`java_class`](filetypes/java_class/README.md) | 262 / 101,848 | — | — | — | — | — |
 | [`jpeg`](filetypes/jpeg/README.md) | 183 / 4,001 | — | — | — | — | — |
-| **Weighted avg** (by test pop) | **927,225** | **0.7924** | **0.8923** | **0.7940** | **57.3%** | — |
+| **Weighted avg** (by test pop) | **883,912** | **0.7892** | **0.8934** | **0.7868** | **56.3%** | — |
 
 PR AUC summarizes recall against precision across operating points. Recall@L50 is the selection-budget headline; for filetypes whose calibration slice cannot resolve L50 (0.5 FP/M) empirically, that level shares an operating point with its neighbours (its measured ceiling). EMBER 2024 deltas are reported where Joyce et al. publish per-filetype numbers (Table 5, All files → X).
 
@@ -83,7 +78,7 @@ The corpus-weighted ensemble curve weights each filetype's ensemble recall by th
 
 ## Provenance
 
-Calibration snapshot `1872261008`, score-table `5c333a9cd738`, model-set `4f11eb5b7803`. 1 general, 7 filegroup, 53 filetype routes.
+Calibration snapshot `1872261008`, score-table `d926f089cd46`, model-set `4f11eb5b7803`. 1 general, 7 filegroup, 53 filetype routes.
 
 ## Limits
 

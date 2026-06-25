@@ -1293,12 +1293,12 @@
     },
     "c": {
       "malware": 2266,
-      "benign": 109310,
+      "benign": 109307,
       "file_group": "source",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.2478686202641524,
+            "pr_auc": 0.2478693153663258,
             "recall_at_0fp": 0.047219770520741396,
             "threshold_at_0fp": 0.9715464115142822,
             "fp_at_0fp": 0,
@@ -1310,7 +1310,7 @@
             "fp_at_3fp": 3
           },
           "filegroups/source": {
-            "pr_auc": 0.24279345952272,
+            "pr_auc": 0.24279400634011575,
             "recall_at_0fp": 0.0997352162400706,
             "threshold_at_0fp": 0.9944434762001038,
             "fp_at_0fp": 0,
@@ -1322,7 +1322,7 @@
             "fp_at_3fp": 3
           },
           "filetypes/c": {
-            "pr_auc": 0.14487551126329556,
+            "pr_auc": 0.1448763502770902,
             "recall_at_0fp": 0.0,
             "threshold_at_0fp": null,
             "fp_at_0fp": 0,
@@ -1335,7 +1335,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.21418631216768846,
+          "pr_auc": 0.2141871583023092,
           "recall_at_0fp": 0.000441306266548985,
           "threshold_at_0fp": 0.9999943971633911,
           "fp_at_0fp": 0,
@@ -1827,12 +1827,12 @@
     },
     "cargo.toml": {
       "malware": 18,
-      "benign": 278,
+      "benign": 281,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.4778541433176554,
+            "pr_auc": 0.4775469472409947,
             "recall_at_0fp": 0.2777777777777778,
             "threshold_at_0fp": 0.9154359102249146,
             "fp_at_0fp": 0,
@@ -2315,7 +2315,7 @@
         "active_routes": []
       }
     },
-    "chrome-manifest": {
+    "chrome_manifest": {
       "malware": 10,
       "benign": 31,
       "file_group": "",
@@ -2332,257 +2332,245 @@
             "recall_at_3fp": 1.0,
             "threshold_at_3fp": 0.0146400835365057,
             "fp_at_3fp": 3
-          },
-          "filetypes/chrome-manifest": {
-            "pr_auc": 1.0,
-            "recall_at_0fp": 1.0,
-            "threshold_at_0fp": 0.9717177152633667,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 1.0,
-            "threshold_at_1fp": 0.1127578616142273,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 1.0,
-            "threshold_at_3fp": 0.09715330600738525,
-            "fp_at_3fp": 3
           }
         },
         "max_rule": {
           "pr_auc": 1.0,
           "recall_at_0fp": 1.0,
-          "threshold_at_0fp": 0.9717177152633667,
+          "threshold_at_0fp": 0.06344245374202728,
           "fp_at_0fp": 0,
           "recall_at_1fp": 1.0,
-          "threshold_at_1fp": 0.1127578616142273,
+          "threshold_at_1fp": 0.01616545207798481,
           "fp_at_1fp": 1,
           "recall_at_3fp": 1.0,
-          "threshold_at_3fp": 0.09715330600738525,
+          "threshold_at_3fp": 0.0146400835365057,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L1_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L2_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L3_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L4_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L5_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L10_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L20_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L30_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L40_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L50_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L60_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L70_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L80_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L90_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L100_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L200_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L300_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L500_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L1000_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L2000_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L5000_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L7500_hostile": {
-          "tp": 10,
+          "tp": 0,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L10000_hostile": {
-          "tp": 10,
+          "tp": 2,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.2,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L15000_hostile": {
-          "tp": 10,
+          "tp": 2,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.2,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L20000_hostile": {
-          "tp": 10,
+          "tp": 2,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.2,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         },
         "L25000_hostile": {
-          "tp": 10,
+          "tp": 2,
           "fp": 0,
-          "recall": 1.0,
+          "recall": 0.2,
           "active_routes": [
-            "filetypes/chrome-manifest"
+            "general"
           ]
         }
       },
       "deployed_or_summary": {
-        "tp": 10,
+        "tp": 0,
         "fp": 0,
-        "recall": 1.0,
+        "recall": 0.0,
         "active_routes": [
-          "filetypes/chrome-manifest"
+          "general"
         ]
       }
     },
@@ -4531,9 +4519,9 @@
         ]
       }
     },
-    "desktop-entry": {
+    "desktop_entry": {
       "malware": 1,
-      "benign": 530,
+      "benign": 535,
       "file_group": "",
       "slice_metrics": {
         "routes": {
@@ -5005,161 +4993,6 @@
         "active_routes": []
       }
     },
-    "doc": {
-      "malware": 4183,
-      "benign": 7,
-      "file_group": "documents",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": 0.9999637206251318,
-            "recall_at_0fp": 0.9005498446091322,
-            "threshold_at_0fp": 0.6223846077919006,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.9782452785082477,
-            "threshold_at_1fp": 0.0006831247010268271,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.9978484341381784,
-            "threshold_at_3fp": 6.44199681119062e-05,
-            "fp_at_3fp": 3
-          },
-          "filegroups/documents": {
-            "pr_auc": 0.9999899162476498,
-            "recall_at_0fp": 0.9660530719579249,
-            "threshold_at_0fp": 0.15715694427490234,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.9961749940234281,
-            "threshold_at_1fp": 2.1696090698242188e-05,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 1.0,
-            "threshold_at_3fp": 4.5299530029296875e-06,
-            "fp_at_3fp": 3
-          }
-        },
-        "max_rule": {
-          "pr_auc": 0.9999801444681095,
-          "recall_at_0fp": 0.9646186947167105,
-          "threshold_at_0fp": 0.7155380845069885,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 0.9782452785082477,
-          "threshold_at_1fp": 0.0006831247010268271,
-          "fp_at_1fp": 1,
-          "recall_at_3fp": 0.9978484341381784,
-          "threshold_at_3fp": 6.44199681119062e-05,
-          "fp_at_3fp": 3
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 4021,
-          "fp": 0,
-          "recall": 0.9612718144872101,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L1_hostile": {
-          "tp": 4021,
-          "fp": 0,
-          "recall": 0.9612718144872101,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L2_hostile": {
-          "tp": 4021,
-          "fp": 0,
-          "recall": 0.9612718144872101,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L3_hostile": {
-          "tp": 4021,
-          "fp": 0,
-          "recall": 0.9612718144872101,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L4_hostile": {
-          "tp": 4021,
-          "fp": 0,
-          "recall": 0.9612718144872101,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L5_hostile": {
-          "tp": 4021,
-          "fp": 0,
-          "recall": 0.9612718144872101,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L10_hostile": {
-          "tp": 4038,
-          "fp": 0,
-          "recall": 0.9653358833373177,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L20_hostile": {
-          "tp": 4039,
-          "fp": 0,
-          "recall": 0.9655749462108535,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L30_hostile": {
-          "tp": 4040,
-          "fp": 0,
-          "recall": 0.9658140090843892,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L40_hostile": {
-          "tp": 4040,
-          "fp": 0,
-          "recall": 0.9658140090843892,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L50_hostile": {
-          "tp": 4040,
-          "fp": 0,
-          "recall": 0.9658140090843892,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        }
-      },
-      "deployed_or_summary": {
-        "tp": 4040,
-        "fp": 0,
-        "recall": 0.9658140090843892,
-        "active_routes": [
-          "general",
-          "filegroups/documents"
-        ]
-      }
-    },
     "dockerfile": {
       "malware": 12,
       "benign": 276,
@@ -5456,317 +5289,6 @@
         "active_routes": [
           "general",
           "filetypes/dockerfile"
-        ]
-      }
-    },
-    "docx": {
-      "malware": 580,
-      "benign": 55,
-      "file_group": "documents",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": 0.9960797861541664,
-            "recall_at_0fp": 0.8293103448275863,
-            "threshold_at_0fp": 0.06133138760924339,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.8293103448275863,
-            "threshold_at_1fp": 0.027624940499663353,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.8344827586206897,
-            "threshold_at_3fp": 5.233936462900601e-05,
-            "fp_at_3fp": 3
-          },
-          "filegroups/documents": {
-            "pr_auc": 0.9933086002385645,
-            "recall_at_0fp": 0.8293103448275863,
-            "threshold_at_0fp": 0.5391706824302673,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.8293103448275863,
-            "threshold_at_1fp": 0.019256949424743652,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.8362068965517241,
-            "threshold_at_3fp": 8.380413055419922e-05,
-            "fp_at_3fp": 3
-          },
-          "filetypes/docx": {
-            "pr_auc": 0.9961990666240991,
-            "recall_at_0fp": 0.8293103448275863,
-            "threshold_at_0fp": 0.5880919098854065,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.8293103448275863,
-            "threshold_at_1fp": 0.1914770007133484,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.8293103448275863,
-            "threshold_at_3fp": 0.1914770007133484,
-            "fp_at_3fp": 3
-          }
-        },
-        "max_rule": {
-          "pr_auc": 0.9961990666240991,
-          "recall_at_0fp": 0.8293103448275863,
-          "threshold_at_0fp": 0.5880919098854065,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 0.8293103448275863,
-          "threshold_at_1fp": 0.1914770007133484,
-          "fp_at_1fp": 1,
-          "recall_at_3fp": 0.8293103448275863,
-          "threshold_at_3fp": 0.1914770007133484,
-          "fp_at_3fp": 3
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L1_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L2_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L3_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L4_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L5_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L10_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L20_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L30_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L40_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L50_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L60_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L70_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L80_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L90_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L100_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L200_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L300_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L500_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L1000_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L2000_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L5000_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L7500_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L10000_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L15000_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L20000_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        },
-        "L25000_hostile": {
-          "tp": 481,
-          "fp": 0,
-          "recall": 0.8293103448275863,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/docx"
-          ]
-        }
-      },
-      "deployed_or_summary": {
-        "tp": 481,
-        "fp": 0,
-        "recall": 0.8293103448275863,
-        "active_routes": [
-          "filegroups/documents",
-          "filetypes/docx"
         ]
       }
     },
@@ -6408,9 +5930,9 @@
         ]
       }
     },
-    "github-actions": {
+    "github_actions": {
       "malware": 1,
-      "benign": 1222,
+      "benign": 1228,
       "file_group": "",
       "slice_metrics": {
         "routes": {
@@ -7007,33 +6529,33 @@
       }
     },
     "go.mod": {
-      "malware": 1,
+      "malware": 20,
       "benign": 16,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.07692307692307693,
-            "recall_at_0fp": 0.0,
-            "threshold_at_0fp": null,
+            "pr_auc": 0.7401280124674088,
+            "recall_at_0fp": 0.05,
+            "threshold_at_0fp": 7.0179889917199034e-06,
             "fp_at_0fp": 0,
-            "recall_at_1fp": 0.0,
+            "recall_at_1fp": 0.05,
             "threshold_at_1fp": 5.6851185945561156e-06,
             "fp_at_1fp": 1,
-            "recall_at_3fp": 0.0,
+            "recall_at_3fp": 0.05,
             "threshold_at_3fp": 5.6851185945561156e-06,
             "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.07692307692307693,
-          "recall_at_0fp": 0.0,
-          "threshold_at_0fp": null,
+          "pr_auc": 0.7401280124674088,
+          "recall_at_0fp": 0.05,
+          "threshold_at_0fp": 7.0179889917199034e-06,
           "fp_at_0fp": 0,
-          "recall_at_1fp": 0.0,
+          "recall_at_1fp": 0.05,
           "threshold_at_1fp": 5.6851185945561156e-06,
           "fp_at_1fp": 1,
-          "recall_at_3fp": 0.0,
+          "recall_at_3fp": 0.05,
           "threshold_at_3fp": 5.6851185945561156e-06,
           "fp_at_3fp": 3
         }
@@ -7265,220 +6787,7 @@
         ]
       }
     },
-    "gomod": {
-      "malware": 19,
-      "benign": 0,
-      "file_group": "",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": null,
-            "recall_at_0fp": 1.0,
-            "threshold_at_0fp": 5.6851185945561156e-06,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 1.0,
-            "threshold_at_1fp": 5.6851185945561156e-06,
-            "fp_at_1fp": 0,
-            "recall_at_3fp": 1.0,
-            "threshold_at_3fp": 5.6851185945561156e-06,
-            "fp_at_3fp": 0
-          }
-        },
-        "max_rule": {
-          "pr_auc": null,
-          "recall_at_0fp": 1.0,
-          "threshold_at_0fp": 5.6851185945561156e-06,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 1.0,
-          "threshold_at_1fp": 5.6851185945561156e-06,
-          "fp_at_1fp": 0,
-          "recall_at_3fp": 1.0,
-          "threshold_at_3fp": 5.6851185945561156e-06,
-          "fp_at_3fp": 0
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L1_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L2_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L3_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L4_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L5_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L10_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L20_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L30_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L40_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L50_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L60_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L70_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L80_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L90_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L100_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L200_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L300_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L500_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L1000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L2000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L5000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L7500_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L10000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L15000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L20000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L25000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        }
-      },
-      "deployed_or_summary": {
-        "tp": 0,
-        "fp": 0,
-        "recall": 0.0,
-        "active_routes": []
-      }
-    },
-    "gosum": {
+    "go.sum": {
       "malware": 6,
       "benign": 8,
       "file_group": "",
@@ -8010,12 +7319,12 @@
     },
     "gyp": {
       "malware": 1,
-      "benign": 10,
+      "benign": 20,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.25,
+            "pr_auc": 0.07142857142857142,
             "recall_at_0fp": 0.0,
             "threshold_at_0fp": null,
             "fp_at_0fp": 0,
@@ -8028,7 +7337,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.25,
+          "pr_auc": 0.07142857142857142,
           "recall_at_0fp": 0.0,
           "threshold_at_0fp": null,
           "fp_at_0fp": 0,
@@ -9816,12 +9125,12 @@
     },
     "javascript": {
       "malware": 15578,
-      "benign": 92945,
+      "benign": 93001,
       "file_group": "scripts",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.9351120672081679,
+            "pr_auc": 0.9351061139490359,
             "recall_at_0fp": 0.5485299781743485,
             "threshold_at_0fp": 0.9704927802085876,
             "fp_at_0fp": 0,
@@ -9833,7 +9142,7 @@
             "fp_at_3fp": 3
           },
           "filegroups/scripts": {
-            "pr_auc": 0.9405493490882323,
+            "pr_auc": 0.9405496069795413,
             "recall_at_0fp": 0.49300295288226986,
             "threshold_at_0fp": 0.9931684732437134,
             "fp_at_0fp": 0,
@@ -9845,7 +9154,7 @@
             "fp_at_3fp": 3
           },
           "filetypes/javascript": {
-            "pr_auc": 0.9445387745359982,
+            "pr_auc": 0.9445389473182119,
             "recall_at_0fp": 0.6005905764539735,
             "threshold_at_0fp": 0.9843147397041321,
             "fp_at_0fp": 0,
@@ -9858,7 +9167,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.9411854247421796,
+          "pr_auc": 0.9411847661550304,
           "recall_at_0fp": 0.5538580048786751,
           "threshold_at_0fp": 0.9931684732437134,
           "fp_at_0fp": 0,
@@ -10494,12 +9803,12 @@
     },
     "json": {
       "malware": 184,
-      "benign": 10303,
+      "benign": 10723,
       "file_group": "config",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.04956066242698376,
+            "pr_auc": 0.04207123314808585,
             "recall_at_0fp": 0.010869565217391304,
             "threshold_at_0fp": 0.7273561954498291,
             "fp_at_0fp": 0,
@@ -10536,7 +9845,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.06460510319591084,
+          "pr_auc": 0.0643048595598106,
           "recall_at_0fp": 0.0,
           "threshold_at_0fp": null,
           "fp_at_0fp": 0,
@@ -10805,12 +10114,12 @@
     },
     "kotlin": {
       "malware": 3896,
-      "benign": 7368,
+      "benign": 7362,
       "file_group": "source",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.8912889188210157,
+            "pr_auc": 0.8913289560523395,
             "recall_at_0fp": 0.35523613963039014,
             "threshold_at_0fp": 0.774186909198761,
             "fp_at_0fp": 0,
@@ -10822,7 +10131,7 @@
             "fp_at_3fp": 3
           },
           "filegroups/source": {
-            "pr_auc": 0.8948075437102404,
+            "pr_auc": 0.8948924170923676,
             "recall_at_0fp": 0.4753593429158111,
             "threshold_at_0fp": 0.8730359673500061,
             "fp_at_0fp": 0,
@@ -10834,7 +10143,7 @@
             "fp_at_3fp": 3
           },
           "filetypes/kotlin": {
-            "pr_auc": 0.8957942748342891,
+            "pr_auc": 0.8958636428759119,
             "recall_at_0fp": 0.535164271047228,
             "threshold_at_0fp": 0.45540857315063477,
             "fp_at_0fp": 0,
@@ -10847,7 +10156,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.8987264349258207,
+          "pr_auc": 0.8987996712981032,
           "recall_at_0fp": 0.5346509240246407,
           "threshold_at_0fp": 0.8754502534866333,
           "fp_at_0fp": 0,
@@ -12376,7 +11685,7 @@
     },
     "markdown": {
       "malware": 11,
-      "benign": 5924,
+      "benign": 5925,
       "file_group": "",
       "slice_metrics": {
         "routes": {
@@ -12645,528 +11954,26 @@
         ]
       }
     },
-    "msg": {
-      "malware": 3,
-      "benign": 0,
-      "file_group": "",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": null,
-            "recall_at_0fp": 1.0,
-            "threshold_at_0fp": 5.6851185945561156e-06,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 1.0,
-            "threshold_at_1fp": 5.6851185945561156e-06,
-            "fp_at_1fp": 0,
-            "recall_at_3fp": 1.0,
-            "threshold_at_3fp": 5.6851185945561156e-06,
-            "fp_at_3fp": 0
-          }
-        },
-        "max_rule": {
-          "pr_auc": null,
-          "recall_at_0fp": 1.0,
-          "threshold_at_0fp": 5.6851185945561156e-06,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 1.0,
-          "threshold_at_1fp": 5.6851185945561156e-06,
-          "fp_at_1fp": 0,
-          "recall_at_3fp": 1.0,
-          "threshold_at_3fp": 5.6851185945561156e-06,
-          "fp_at_3fp": 0
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L1_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L2_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L3_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L4_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L5_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L10_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L20_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L30_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L40_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L50_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L60_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L70_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L80_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L90_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L100_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L200_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L300_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L500_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L1000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L2000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L5000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L7500_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L10000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L15000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L20000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L25000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        }
-      },
-      "deployed_or_summary": {
-        "tp": 0,
-        "fp": 0,
-        "recall": 0.0,
-        "active_routes": []
-      }
-    },
-    "msi": {
-      "malware": 588,
-      "benign": 16,
-      "file_group": "",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": 0.994067469587454,
-            "recall_at_0fp": 0.5986394557823129,
-            "threshold_at_0fp": 0.9357388019561768,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.6326530612244898,
-            "threshold_at_1fp": 0.8974801301956177,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.7193877551020408,
-            "threshold_at_3fp": 0.6128529906272888,
-            "fp_at_3fp": 3
-          },
-          "filetypes/msi": {
-            "pr_auc": 0.9966336062242311,
-            "recall_at_0fp": 0.7874149659863946,
-            "threshold_at_0fp": 0.5943489074707031,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.7993197278911565,
-            "threshold_at_1fp": 0.5617891550064087,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.7993197278911565,
-            "threshold_at_3fp": 0.5207856297492981,
-            "fp_at_3fp": 3
-          }
-        },
-        "max_rule": {
-          "pr_auc": 0.9956006086280756,
-          "recall_at_0fp": 0.608843537414966,
-          "threshold_at_0fp": 0.9291319251060486,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 0.6394557823129252,
-          "threshold_at_1fp": 0.8974801301956177,
-          "fp_at_1fp": 1,
-          "recall_at_3fp": 0.7993197278911565,
-          "threshold_at_3fp": 0.5943489074707031,
-          "fp_at_3fp": 3
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L1_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L2_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L3_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L4_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L5_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L10_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L20_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L30_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L40_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L50_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L60_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L70_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L80_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L90_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L100_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L200_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L300_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L500_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L1000_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L2000_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L5000_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L7500_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L10000_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L15000_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L20000_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        },
-        "L25000_hostile": {
-          "tp": 355,
-          "fp": 0,
-          "recall": 0.6037414965986394,
-          "active_routes": [
-            "general",
-            "filetypes/msi"
-          ]
-        }
-      },
-      "deployed_or_summary": {
-        "tp": 355,
-        "fp": 0,
-        "recall": 0.6037414965986394,
-        "active_routes": [
-          "general",
-          "filetypes/msi"
-        ]
-      }
-    },
     "npm": {
       "malware": 249,
-      "benign": 152,
+      "benign": 168,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.9353434177328077,
-            "recall_at_0fp": 0.6104417670682731,
-            "threshold_at_0fp": 0.8498193621635437,
+            "pr_auc": 0.929706854963547,
+            "recall_at_0fp": 0.5903614457831325,
+            "threshold_at_0fp": 0.9439595341682434,
             "fp_at_0fp": 0,
-            "recall_at_1fp": 0.6224899598393574,
-            "threshold_at_1fp": 0.6449204087257385,
+            "recall_at_1fp": 0.6104417670682731,
+            "threshold_at_1fp": 0.8498193621635437,
             "fp_at_1fp": 1,
-            "recall_at_3fp": 0.6345381526104418,
-            "threshold_at_3fp": 0.5060087442398071,
+            "recall_at_3fp": 0.6305220883534136,
+            "threshold_at_3fp": 0.5887275338172913,
             "fp_at_3fp": 3
           },
           "filetypes/npm": {
-            "pr_auc": 0.9589655143451685,
+            "pr_auc": 0.9594277528638351,
             "recall_at_0fp": 0.6305220883534136,
             "threshold_at_0fp": 0.9706128835678101,
             "fp_at_0fp": 0,
@@ -13179,15 +11986,15 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.9575431986267672,
+          "pr_auc": 0.9559263641755839,
           "recall_at_0fp": 0.642570281124498,
           "threshold_at_0fp": 0.9706128835678101,
           "fp_at_0fp": 0,
-          "recall_at_1fp": 0.714859437751004,
-          "threshold_at_1fp": 0.9049814343452454,
+          "recall_at_1fp": 0.6987951807228916,
+          "threshold_at_1fp": 0.9317790269851685,
           "fp_at_1fp": 1,
           "recall_at_3fp": 0.7429718875502008,
-          "threshold_at_3fp": 0.8179123401641846,
+          "threshold_at_3fp": 0.8195790648460388,
           "fp_at_3fp": 3
         }
       },
@@ -13705,14 +12512,14 @@
         ]
       }
     },
-    "objc": {
+    "objective_c": {
       "malware": 5,
-      "benign": 2874,
+      "benign": 2876,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.30109685941671555,
+            "pr_auc": 0.3010963293595066,
             "recall_at_0fp": 0.2,
             "threshold_at_0fp": 0.005220457911491394,
             "fp_at_0fp": 0,
@@ -13722,30 +12529,18 @@
             "recall_at_3fp": 0.4,
             "threshold_at_3fp": 7.931675099825952e-06,
             "fp_at_3fp": 3
-          },
-          "filetypes/objc": {
-            "pr_auc": 0.10336535747651303,
-            "recall_at_0fp": 0.0,
-            "threshold_at_0fp": null,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.2,
-            "threshold_at_1fp": 1.0,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.2,
-            "threshold_at_3fp": 0.0005986690521240234,
-            "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.10336535747651303,
-          "recall_at_0fp": 0.0,
-          "threshold_at_0fp": null,
+          "pr_auc": 0.3010963293595066,
+          "recall_at_0fp": 0.2,
+          "threshold_at_0fp": 0.005220457911491394,
           "fp_at_0fp": 0,
           "recall_at_1fp": 0.2,
-          "threshold_at_1fp": 1.0,
+          "threshold_at_1fp": 1.7539572581881657e-05,
           "fp_at_1fp": 1,
-          "recall_at_3fp": 0.2,
-          "threshold_at_3fp": 0.0005986690521240234,
+          "recall_at_3fp": 0.4,
+          "threshold_at_3fp": 7.931675099825952e-06,
           "fp_at_3fp": 3
         }
       },
@@ -14179,528 +12974,418 @@
         "active_routes": []
       }
     },
-    "ole": {
-      "malware": 858,
-      "benign": 840,
-      "file_group": "documents",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": 0.9896194242532629,
-            "recall_at_0fp": 0.7703962703962703,
-            "threshold_at_0fp": 0.17155064642429352,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.7797202797202797,
-            "threshold_at_1fp": 0.05290840193629265,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.8123543123543123,
-            "threshold_at_3fp": 8.044046808208805e-06,
-            "fp_at_3fp": 3
-          },
-          "filegroups/documents": {
-            "pr_auc": 0.9866126714291678,
-            "recall_at_0fp": 0.7797202797202797,
-            "threshold_at_0fp": 0.2003459334373474,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.7797202797202797,
-            "threshold_at_1fp": 0.06820279359817505,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.7902097902097902,
-            "threshold_at_3fp": 1.5497207641601562e-05,
-            "fp_at_3fp": 3
-          },
-          "filetypes/ole": {
-            "pr_auc": 0.9818860237448687,
-            "recall_at_0fp": 0.7797202797202797,
-            "threshold_at_0fp": 0.6593287587165833,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.7797202797202797,
-            "threshold_at_1fp": 0.28473925590515137,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.789044289044289,
-            "threshold_at_3fp": 0.0039983391761779785,
-            "fp_at_3fp": 3
-          }
-        },
-        "max_rule": {
-          "pr_auc": 0.9818860237448687,
-          "recall_at_0fp": 0.7797202797202797,
-          "threshold_at_0fp": 0.6635392904281616,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 0.7797202797202797,
-          "threshold_at_1fp": 0.28473925590515137,
-          "fp_at_1fp": 1,
-          "recall_at_3fp": 0.789044289044289,
-          "threshold_at_3fp": 0.0039983391761779785,
-          "fp_at_3fp": 3
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L1_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L2_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L3_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L4_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L5_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L10_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L20_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L30_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L40_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L50_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L60_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L70_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L80_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L90_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L100_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L200_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L300_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L500_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L1000_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L2000_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L5000_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L7500_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L10000_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L15000_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L20000_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        },
-        "L25000_hostile": {
-          "tp": 664,
-          "fp": 0,
-          "recall": 0.7738927738927739,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/ole"
-          ]
-        }
-      },
-      "deployed_or_summary": {
-        "tp": 664,
-        "fp": 0,
-        "recall": 0.7738927738927739,
-        "active_routes": [
-          "filegroups/documents",
-          "filetypes/ole"
-        ]
-      }
-    },
-    "ooxml": {
-      "malware": 1,
-      "benign": 5,
+    "ole_doc": {
+      "malware": 10588,
+      "benign": 3518,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.16666666666666666,
-            "recall_at_0fp": 0.0,
-            "threshold_at_0fp": null,
+            "pr_auc": 0.9942740082972265,
+            "recall_at_0fp": 0.6624480544012089,
+            "threshold_at_0fp": 0.9293429851531982,
             "fp_at_0fp": 0,
-            "recall_at_1fp": 0.0,
-            "threshold_at_1fp": 7.285021183633944e-06,
+            "recall_at_1fp": 0.67434831885153,
+            "threshold_at_1fp": 0.8974801301956177,
             "fp_at_1fp": 1,
-            "recall_at_3fp": 0.0,
-            "threshold_at_3fp": 7.285021183633944e-06,
+            "recall_at_3fp": 0.8548356630147337,
+            "threshold_at_3fp": 0.6212611794471741,
             "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.16666666666666666,
-          "recall_at_0fp": 0.0,
-          "threshold_at_0fp": null,
+          "pr_auc": 0.9942740082972265,
+          "recall_at_0fp": 0.6624480544012089,
+          "threshold_at_0fp": 0.9293429851531982,
           "fp_at_0fp": 0,
-          "recall_at_1fp": 0.0,
-          "threshold_at_1fp": 7.285021183633944e-06,
+          "recall_at_1fp": 0.67434831885153,
+          "threshold_at_1fp": 0.8974801301956177,
           "fp_at_1fp": 1,
-          "recall_at_3fp": 0.0,
-          "threshold_at_3fp": 7.285021183633944e-06,
+          "recall_at_3fp": 0.8548356630147337,
+          "threshold_at_3fp": 0.6212611794471741,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 0,
+          "tp": 104,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.009822440498677748,
+          "active_routes": [
+            "general"
+          ]
         },
         "L1_hostile": {
-          "tp": 0,
+          "tp": 104,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.009822440498677748,
+          "active_routes": [
+            "general"
+          ]
         },
         "L2_hostile": {
-          "tp": 0,
+          "tp": 104,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.009822440498677748,
+          "active_routes": [
+            "general"
+          ]
         },
         "L3_hostile": {
-          "tp": 0,
+          "tp": 104,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.009822440498677748,
+          "active_routes": [
+            "general"
+          ]
         },
         "L4_hostile": {
-          "tp": 0,
+          "tp": 309,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.029183981866263694,
+          "active_routes": [
+            "general"
+          ]
         },
         "L5_hostile": {
-          "tp": 0,
+          "tp": 309,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.029183981866263694,
+          "active_routes": [
+            "general"
+          ]
         },
         "L10_hostile": {
-          "tp": 0,
+          "tp": 309,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.029183981866263694,
+          "active_routes": [
+            "general"
+          ]
         },
         "L20_hostile": {
-          "tp": 0,
+          "tp": 312,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.029467321496033247,
+          "active_routes": [
+            "general"
+          ]
         },
         "L30_hostile": {
-          "tp": 0,
+          "tp": 312,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.029467321496033247,
+          "active_routes": [
+            "general"
+          ]
         },
         "L40_hostile": {
-          "tp": 0,
+          "tp": 312,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.029467321496033247,
+          "active_routes": [
+            "general"
+          ]
         },
         "L50_hostile": {
-          "tp": 0,
+          "tp": 312,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.029467321496033247,
+          "active_routes": [
+            "general"
+          ]
         },
         "L60_hostile": {
-          "tp": 0,
+          "tp": 312,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.029467321496033247,
+          "active_routes": [
+            "general"
+          ]
         },
         "L70_hostile": {
-          "tp": 0,
+          "tp": 313,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.02956176803928976,
+          "active_routes": [
+            "general"
+          ]
         },
         "L80_hostile": {
-          "tp": 0,
+          "tp": 313,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.02956176803928976,
+          "active_routes": [
+            "general"
+          ]
         },
         "L90_hostile": {
-          "tp": 0,
+          "tp": 550,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.05194559879108425,
+          "active_routes": [
+            "general"
+          ]
         },
         "L100_hostile": {
-          "tp": 0,
+          "tp": 551,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.05204004533434076,
+          "active_routes": [
+            "general"
+          ]
         },
         "L200_hostile": {
-          "tp": 0,
+          "tp": 1352,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.12769172648281074,
+          "active_routes": [
+            "general"
+          ]
         },
         "L300_hostile": {
-          "tp": 0,
+          "tp": 2145,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
+          "recall": 0.20258783528522856,
+          "active_routes": [
+            "general"
+          ]
         },
         "L500_hostile": {
-          "tp": 0,
+          "tp": 2258,
           "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L1000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L2000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L5000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L7500_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L10000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L15000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L20000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L25000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
+          "recall": 0.21326029467321497,
           "active_routes": [
             "general"
           ]
         }
       },
       "deployed_or_summary": {
-        "tp": 0,
+        "tp": 312,
         "fp": 0,
-        "recall": 0.0,
-        "active_routes": []
+        "recall": 0.029467321496033247,
+        "active_routes": [
+          "general"
+        ]
+      }
+    },
+    "ooxml": {
+      "malware": 8541,
+      "benign": 295,
+      "file_group": "",
+      "slice_metrics": {
+        "routes": {
+          "general": {
+            "pr_auc": 0.9902586288779144,
+            "recall_at_0fp": 0.30792647231003395,
+            "threshold_at_0fp": 0.888227105140686,
+            "fp_at_0fp": 0,
+            "recall_at_1fp": 0.3391874487764899,
+            "threshold_at_1fp": 0.0814741775393486,
+            "fp_at_1fp": 1,
+            "recall_at_3fp": 0.3423486711157944,
+            "threshold_at_3fp": 0.07188611477613449,
+            "fp_at_3fp": 3
+          }
+        },
+        "max_rule": {
+          "pr_auc": 0.9902586288779144,
+          "recall_at_0fp": 0.30792647231003395,
+          "threshold_at_0fp": 0.888227105140686,
+          "fp_at_0fp": 0,
+          "recall_at_1fp": 0.3391874487764899,
+          "threshold_at_1fp": 0.0814741775393486,
+          "fp_at_1fp": 1,
+          "recall_at_3fp": 0.3423486711157944,
+          "threshold_at_3fp": 0.07188611477613449,
+          "fp_at_3fp": 3
+        }
+      },
+      "deployed_or_by_level": {
+        "L0_hostile": {
+          "tp": 5,
+          "fp": 0,
+          "recall": 0.000585411544315654,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L1_hostile": {
+          "tp": 5,
+          "fp": 0,
+          "recall": 0.000585411544315654,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L2_hostile": {
+          "tp": 5,
+          "fp": 0,
+          "recall": 0.000585411544315654,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L3_hostile": {
+          "tp": 5,
+          "fp": 0,
+          "recall": 0.000585411544315654,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L4_hostile": {
+          "tp": 5,
+          "fp": 0,
+          "recall": 0.000585411544315654,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L5_hostile": {
+          "tp": 5,
+          "fp": 0,
+          "recall": 0.000585411544315654,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L10_hostile": {
+          "tp": 5,
+          "fp": 0,
+          "recall": 0.000585411544315654,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L20_hostile": {
+          "tp": 12,
+          "fp": 0,
+          "recall": 0.0014049877063575693,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L30_hostile": {
+          "tp": 12,
+          "fp": 0,
+          "recall": 0.0014049877063575693,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L40_hostile": {
+          "tp": 12,
+          "fp": 0,
+          "recall": 0.0014049877063575693,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L50_hostile": {
+          "tp": 12,
+          "fp": 0,
+          "recall": 0.0014049877063575693,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L60_hostile": {
+          "tp": 12,
+          "fp": 0,
+          "recall": 0.0014049877063575693,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L70_hostile": {
+          "tp": 12,
+          "fp": 0,
+          "recall": 0.0014049877063575693,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L80_hostile": {
+          "tp": 12,
+          "fp": 0,
+          "recall": 0.0014049877063575693,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L90_hostile": {
+          "tp": 12,
+          "fp": 0,
+          "recall": 0.0014049877063575693,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L100_hostile": {
+          "tp": 12,
+          "fp": 0,
+          "recall": 0.0014049877063575693,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L200_hostile": {
+          "tp": 1986,
+          "fp": 0,
+          "recall": 0.23252546540217772,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L300_hostile": {
+          "tp": 2260,
+          "fp": 0,
+          "recall": 0.26460601803067557,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L500_hostile": {
+          "tp": 2260,
+          "fp": 0,
+          "recall": 0.26460601803067557,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L1000_hostile": {
+          "tp": 2268,
+          "fp": 0,
+          "recall": 0.2655426765015806,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L2000_hostile": {
+          "tp": 2404,
+          "fp": 0,
+          "recall": 0.2814658705069664,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L5000_hostile": {
+          "tp": 2519,
+          "fp": 0,
+          "recall": 0.2949303360262264,
+          "active_routes": [
+            "general"
+          ]
+        }
+      },
+      "deployed_or_summary": {
+        "tp": 12,
+        "fp": 0,
+        "recall": 0.0014049877063575693,
+        "active_routes": [
+          "general"
+        ]
       }
     },
     "package-lock.json": {
@@ -15614,12 +14299,12 @@
     },
     "pe": {
       "malware": 169035,
-      "benign": 22112,
+      "benign": 22111,
       "file_group": "native",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.9982532477370655,
+            "pr_auc": 0.9982538875074216,
             "recall_at_0fp": 0.2775046587984737,
             "threshold_at_0fp": 0.999423623085022,
             "fp_at_0fp": 0,
@@ -15631,7 +14316,7 @@
             "fp_at_3fp": 3
           },
           "filegroups/native": {
-            "pr_auc": 0.9991770288489181,
+            "pr_auc": 0.9991773992019952,
             "recall_at_0fp": 0.3260744816162333,
             "threshold_at_0fp": 0.9993765950202942,
             "fp_at_0fp": 0,
@@ -15643,7 +14328,7 @@
             "fp_at_3fp": 3
           },
           "filetypes/pe": {
-            "pr_auc": 0.999324953110972,
+            "pr_auc": 0.9993255315774536,
             "recall_at_0fp": 0.648084716183039,
             "threshold_at_0fp": 0.9942628741264343,
             "fp_at_0fp": 0,
@@ -15656,7 +14341,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.9991017520917334,
+          "pr_auc": 0.9991021208772976,
           "recall_at_0fp": 0.3748158665365161,
           "threshold_at_0fp": 0.999423623085022,
           "fp_at_0fp": 0,
@@ -16575,7 +15260,234 @@
         ]
       }
     },
-    "pkg": {
+    "pkg_info": {
+      "malware": 1264,
+      "benign": 484,
+      "file_group": "",
+      "slice_metrics": {
+        "routes": {
+          "general": {
+            "pr_auc": 0.9991502208293781,
+            "recall_at_0fp": 0.9493670886075949,
+            "threshold_at_0fp": 0.9519060850143433,
+            "fp_at_0fp": 0,
+            "recall_at_1fp": 0.9651898734177216,
+            "threshold_at_1fp": 0.1364581435918808,
+            "fp_at_1fp": 1,
+            "recall_at_3fp": 0.9667721518987342,
+            "threshold_at_3fp": 0.01590496115386486,
+            "fp_at_3fp": 3
+          }
+        },
+        "max_rule": {
+          "pr_auc": 0.9991502208293781,
+          "recall_at_0fp": 0.9493670886075949,
+          "threshold_at_0fp": 0.9519060850143433,
+          "fp_at_0fp": 0,
+          "recall_at_1fp": 0.9651898734177216,
+          "threshold_at_1fp": 0.1364581435918808,
+          "fp_at_1fp": 1,
+          "recall_at_3fp": 0.9667721518987342,
+          "threshold_at_3fp": 0.01590496115386486,
+          "fp_at_3fp": 3
+        }
+      },
+      "deployed_or_by_level": {
+        "L0_hostile": {
+          "tp": 16,
+          "fp": 0,
+          "recall": 0.012658227848101266,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L1_hostile": {
+          "tp": 16,
+          "fp": 0,
+          "recall": 0.012658227848101266,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L2_hostile": {
+          "tp": 16,
+          "fp": 0,
+          "recall": 0.012658227848101266,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L3_hostile": {
+          "tp": 16,
+          "fp": 0,
+          "recall": 0.012658227848101266,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L4_hostile": {
+          "tp": 16,
+          "fp": 0,
+          "recall": 0.012658227848101266,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L5_hostile": {
+          "tp": 19,
+          "fp": 0,
+          "recall": 0.015031645569620253,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L10_hostile": {
+          "tp": 27,
+          "fp": 0,
+          "recall": 0.021360759493670885,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L20_hostile": {
+          "tp": 37,
+          "fp": 0,
+          "recall": 0.029272151898734177,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L30_hostile": {
+          "tp": 37,
+          "fp": 0,
+          "recall": 0.029272151898734177,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L40_hostile": {
+          "tp": 40,
+          "fp": 0,
+          "recall": 0.03164556962025317,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L50_hostile": {
+          "tp": 47,
+          "fp": 0,
+          "recall": 0.037183544303797465,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L60_hostile": {
+          "tp": 49,
+          "fp": 0,
+          "recall": 0.038765822784810125,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L70_hostile": {
+          "tp": 50,
+          "fp": 0,
+          "recall": 0.03955696202531646,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L80_hostile": {
+          "tp": 50,
+          "fp": 0,
+          "recall": 0.03955696202531646,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L90_hostile": {
+          "tp": 63,
+          "fp": 0,
+          "recall": 0.049841772151898736,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L100_hostile": {
+          "tp": 64,
+          "fp": 0,
+          "recall": 0.05063291139240506,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L200_hostile": {
+          "tp": 228,
+          "fp": 0,
+          "recall": 0.18037974683544303,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L300_hostile": {
+          "tp": 279,
+          "fp": 0,
+          "recall": 0.22072784810126583,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L500_hostile": {
+          "tp": 299,
+          "fp": 0,
+          "recall": 0.23655063291139242,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L1000_hostile": {
+          "tp": 339,
+          "fp": 0,
+          "recall": 0.26819620253164556,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L2000_hostile": {
+          "tp": 429,
+          "fp": 0,
+          "recall": 0.33939873417721517,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L5000_hostile": {
+          "tp": 635,
+          "fp": 0,
+          "recall": 0.502373417721519,
+          "active_routes": [
+            "general"
+          ]
+        },
+        "L7500_hostile": {
+          "tp": 852,
+          "fp": 0,
+          "recall": 0.6740506329113924,
+          "active_routes": [
+            "general"
+          ]
+        }
+      },
+      "deployed_or_summary": {
+        "tp": 47,
+        "fp": 0,
+        "recall": 0.037183544303797465,
+        "active_routes": [
+          "general"
+        ]
+      }
+    },
+    "pkg_macos": {
       "malware": 1,
       "benign": 9,
       "file_group": "",
@@ -16831,283 +15743,6 @@
         "recall": 0.0,
         "active_routes": [
           "general"
-        ]
-      }
-    },
-    "pkg-info": {
-      "malware": 1264,
-      "benign": 478,
-      "file_group": "",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": 0.9991551434891436,
-            "recall_at_0fp": 0.9493670886075949,
-            "threshold_at_0fp": 0.9519060850143433,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.9651898734177216,
-            "threshold_at_1fp": 0.1364581435918808,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.9667721518987342,
-            "threshold_at_3fp": 0.01590496115386486,
-            "fp_at_3fp": 3
-          },
-          "filetypes/pkg-info": {
-            "pr_auc": 0.9986111435337937,
-            "recall_at_0fp": 0.9667721518987342,
-            "threshold_at_0fp": 0.1592998504638672,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.9667721518987342,
-            "threshold_at_1fp": 0.11553466320037842,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.9667721518987342,
-            "threshold_at_3fp": 0.006831526756286621,
-            "fp_at_3fp": 3
-          }
-        },
-        "max_rule": {
-          "pr_auc": 0.9986053024467474,
-          "recall_at_0fp": 0.9596518987341772,
-          "threshold_at_0fp": 0.9535146355628967,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 0.9667721518987342,
-          "threshold_at_1fp": 0.3760511875152588,
-          "fp_at_1fp": 1,
-          "recall_at_3fp": 0.9667721518987342,
-          "threshold_at_3fp": 0.01590496115386486,
-          "fp_at_3fp": 3
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "general",
-            "filetypes/pkg-info"
-          ]
-        },
-        "L1_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "general",
-            "filetypes/pkg-info"
-          ]
-        },
-        "L2_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "general",
-            "filetypes/pkg-info"
-          ]
-        },
-        "L3_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "general",
-            "filetypes/pkg-info"
-          ]
-        },
-        "L4_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "general",
-            "filetypes/pkg-info"
-          ]
-        },
-        "L5_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "general",
-            "filetypes/pkg-info"
-          ]
-        },
-        "L10_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L20_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L30_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L40_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L50_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L60_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L70_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L80_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L90_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L100_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L200_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L300_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L500_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L1000_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L2000_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L5000_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L7500_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L10000_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L15000_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L20000_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        },
-        "L25000_hostile": {
-          "tp": 1222,
-          "fp": 0,
-          "recall": 0.9667721518987342,
-          "active_routes": [
-            "filetypes/pkg-info"
-          ]
-        }
-      },
-      "deployed_or_summary": {
-        "tp": 1222,
-        "fp": 0,
-        "recall": 0.9667721518987342,
-        "active_routes": [
-          "filetypes/pkg-info"
         ]
       }
     },
@@ -18100,121 +16735,19 @@
         ]
       }
     },
-    "pptx": {
-      "malware": 80,
-      "benign": 23,
-      "file_group": "documents",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": 0.8307439644154777,
-            "recall_at_0fp": 0.025,
-            "threshold_at_0fp": 0.9820234775543213,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.175,
-            "threshold_at_1fp": 1.0799161827890202e-05,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.4375,
-            "threshold_at_3fp": 7.1698823376209475e-06,
-            "fp_at_3fp": 3
-          },
-          "filegroups/documents": {
-            "pr_auc": 0.8438604179107364,
-            "recall_at_0fp": 0.1,
-            "threshold_at_0fp": 0.7479118704795837,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.1625,
-            "threshold_at_1fp": 1.2040138244628906e-05,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.4625,
-            "threshold_at_3fp": 4.76837158203125e-06,
-            "fp_at_3fp": 3
-          }
-        },
-        "max_rule": {
-          "pr_auc": 0.8406794371851128,
-          "recall_at_0fp": 0.075,
-          "threshold_at_0fp": 0.8872588872909546,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 0.1625,
-          "threshold_at_1fp": 1.2040138244628906e-05,
-          "fp_at_1fp": 1,
-          "recall_at_3fp": 0.4625,
-          "threshold_at_3fp": 7.1698823376209475e-06,
-          "fp_at_3fp": 3
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 7,
-          "fp": 0,
-          "recall": 0.0875,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L1_hostile": {
-          "tp": 7,
-          "fp": 0,
-          "recall": 0.0875,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L2_hostile": {
-          "tp": 7,
-          "fp": 0,
-          "recall": 0.0875,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L3_hostile": {
-          "tp": 7,
-          "fp": 0,
-          "recall": 0.0875,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L4_hostile": {
-          "tp": 7,
-          "fp": 0,
-          "recall": 0.0875,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        },
-        "L5_hostile": {
-          "tp": 7,
-          "fp": 0,
-          "recall": 0.0875,
-          "active_routes": [
-            "general",
-            "filegroups/documents"
-          ]
-        }
-      },
-      "deployed_or_summary": null
-    },
     "pyproject.toml": {
       "malware": 6,
-      "benign": 21,
+      "benign": 20,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.42992898913951544,
+            "pr_auc": 0.49364178419905974,
             "recall_at_0fp": 0.16666666666666666,
             "threshold_at_0fp": 4.304235699237324e-05,
             "fp_at_0fp": 0,
             "recall_at_1fp": 0.16666666666666666,
-            "threshold_at_1fp": 8.883540431270376e-06,
+            "threshold_at_1fp": 5.6851185945561156e-06,
             "fp_at_1fp": 1,
             "recall_at_3fp": 0.16666666666666666,
             "threshold_at_3fp": 5.6851185945561156e-06,
@@ -18222,12 +16755,12 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.42992898913951544,
+          "pr_auc": 0.49364178419905974,
           "recall_at_0fp": 0.16666666666666666,
           "threshold_at_0fp": 4.304235699237324e-05,
           "fp_at_0fp": 0,
           "recall_at_1fp": 0.16666666666666666,
-          "threshold_at_1fp": 8.883540431270376e-06,
+          "threshold_at_1fp": 5.6851185945561156e-06,
           "fp_at_1fp": 1,
           "recall_at_3fp": 0.16666666666666666,
           "threshold_at_3fp": 5.6851185945561156e-06,
@@ -18463,12 +16996,12 @@
     },
     "python": {
       "malware": 2584,
-      "benign": 33590,
+      "benign": 33589,
       "file_group": "scripts",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.8163340138923192,
+            "pr_auc": 0.8163324228827621,
             "recall_at_0fp": 0.32004643962848295,
             "threshold_at_0fp": 0.9937243461608887,
             "fp_at_0fp": 0,
@@ -18480,7 +17013,7 @@
             "fp_at_3fp": 3
           },
           "filegroups/scripts": {
-            "pr_auc": 0.8215309768243602,
+            "pr_auc": 0.8215311843981928,
             "recall_at_0fp": 0.3761609907120743,
             "threshold_at_0fp": 0.9973414540290833,
             "fp_at_0fp": 0,
@@ -18492,7 +17025,7 @@
             "fp_at_3fp": 3
           },
           "filetypes/python": {
-            "pr_auc": 0.8202704349716473,
+            "pr_auc": 0.8202710186430312,
             "recall_at_0fp": 0.2929566563467492,
             "threshold_at_0fp": 0.9998856782913208,
             "fp_at_0fp": 0,
@@ -18505,7 +17038,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.8226918751041083,
+          "pr_auc": 0.8226903252634884,
           "recall_at_0fp": 0.29411764705882354,
           "threshold_at_0fp": 0.9998856782913208,
           "fp_at_0fp": 0,
@@ -18800,14 +17333,14 @@
         ]
       }
     },
-    "python-bytecode": {
+    "python_bytecode": {
       "malware": 445,
-      "benign": 55483,
+      "benign": 56346,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.7753105429163012,
+            "pr_auc": 0.7747660089600976,
             "recall_at_0fp": 0.6898876404494382,
             "threshold_at_0fp": 0.7754840850830078,
             "fp_at_0fp": 0,
@@ -18817,257 +17350,245 @@
             "recall_at_3fp": 0.7056179775280899,
             "threshold_at_3fp": 0.502333402633667,
             "fp_at_3fp": 3
-          },
-          "filetypes/python-bytecode": {
-            "pr_auc": 0.7793919852043187,
-            "recall_at_0fp": 0.7325842696629213,
-            "threshold_at_0fp": 0.9974320530891418,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.7460674157303371,
-            "threshold_at_1fp": 0.8178358674049377,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.7573033707865169,
-            "threshold_at_3fp": 0.2707405090332031,
-            "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.7791888480640335,
-          "recall_at_0fp": 0.7325842696629213,
-          "threshold_at_0fp": 0.9974320530891418,
+          "pr_auc": 0.7747660089600976,
+          "recall_at_0fp": 0.6898876404494382,
+          "threshold_at_0fp": 0.7754840850830078,
           "fp_at_0fp": 0,
-          "recall_at_1fp": 0.748314606741573,
-          "threshold_at_1fp": 0.8178358674049377,
+          "recall_at_1fp": 0.6966292134831461,
+          "threshold_at_1fp": 0.656817615032196,
           "fp_at_1fp": 1,
-          "recall_at_3fp": 0.750561797752809,
-          "threshold_at_3fp": 0.5952415466308594,
+          "recall_at_3fp": 0.7056179775280899,
+          "threshold_at_3fp": 0.502333402633667,
           "fp_at_3fp": 3
         }
       },
       "deployed_or_by_level": {
         "L0_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L1_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L2_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L3_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L4_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L5_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L10_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L20_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L30_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L40_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L50_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L60_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L70_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L80_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L90_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L100_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L200_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L300_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L500_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L1000_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L2000_hostile": {
-          "tp": 326,
+          "tp": 0,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.0,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L5000_hostile": {
-          "tp": 326,
+          "tp": 21,
           "fp": 0,
-          "recall": 0.7325842696629213,
+          "recall": 0.04719101123595506,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L7500_hostile": {
-          "tp": 331,
-          "fp": 1,
-          "recall": 0.7438202247191011,
+          "tp": 45,
+          "fp": 0,
+          "recall": 0.10112359550561797,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L10000_hostile": {
-          "tp": 331,
-          "fp": 1,
-          "recall": 0.7438202247191011,
+          "tp": 55,
+          "fp": 0,
+          "recall": 0.12359550561797752,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L15000_hostile": {
-          "tp": 331,
-          "fp": 1,
-          "recall": 0.7438202247191011,
+          "tp": 88,
+          "fp": 0,
+          "recall": 0.19775280898876405,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L20000_hostile": {
-          "tp": 331,
-          "fp": 1,
-          "recall": 0.7438202247191011,
+          "tp": 103,
+          "fp": 0,
+          "recall": 0.23146067415730337,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         },
         "L25000_hostile": {
-          "tp": 331,
-          "fp": 1,
-          "recall": 0.7438202247191011,
+          "tp": 132,
+          "fp": 0,
+          "recall": 0.2966292134831461,
           "active_routes": [
-            "filetypes/python-bytecode"
+            "general"
           ]
         }
       },
       "deployed_or_summary": {
-        "tp": 326,
+        "tp": 0,
         "fp": 0,
-        "recall": 0.7325842696629213,
+        "recall": 0.0,
         "active_routes": [
-          "filetypes/python-bytecode"
+          "general"
         ]
       }
     },
@@ -20592,12 +19113,12 @@
     },
     "svg": {
       "malware": 1,
-      "benign": 3736,
+      "benign": 3849,
       "file_group": "media",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.015625,
+            "pr_auc": 0.00641025641025641,
             "recall_at_0fp": 0.0,
             "threshold_at_0fp": null,
             "fp_at_0fp": 0,
@@ -20622,7 +19143,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.015625,
+          "pr_auc": 0.00641025641025641,
           "recall_at_0fp": 0.0,
           "threshold_at_0fp": null,
           "fp_at_0fp": 0,
@@ -21188,14 +19709,14 @@
         ]
       }
     },
-    "systemd": {
+    "systemd_service": {
       "malware": 2,
-      "benign": 218,
+      "benign": 235,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.007859493814549996,
+            "pr_auc": 0.007467266775777415,
             "recall_at_0fp": 0.0,
             "threshold_at_0fp": null,
             "fp_at_0fp": 0,
@@ -21208,7 +19729,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.007859493814549996,
+          "pr_auc": 0.007467266775777415,
           "recall_at_0fp": 0.0,
           "threshold_at_0fp": null,
           "fp_at_0fp": 0,
@@ -21449,24 +19970,24 @@
     },
     "tar": {
       "malware": 2775,
-      "benign": 6054,
+      "benign": 6037,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.9822914321897537,
+            "pr_auc": 0.9823944200778899,
             "recall_at_0fp": 0.5491891891891892,
             "threshold_at_0fp": 0.9965833425521851,
             "fp_at_0fp": 0,
             "recall_at_1fp": 0.8252252252252252,
             "threshold_at_1fp": 0.9737555980682373,
             "fp_at_1fp": 1,
-            "recall_at_3fp": 0.8562162162162162,
-            "threshold_at_3fp": 0.9329994320869446,
+            "recall_at_3fp": 0.865945945945946,
+            "threshold_at_3fp": 0.9069088697433472,
             "fp_at_3fp": 3
           },
           "filetypes/tar": {
-            "pr_auc": 0.9934742975187456,
+            "pr_auc": 0.9935219778248403,
             "recall_at_0fp": 0.8294266137756942,
             "threshold_at_0fp": 0.9935164451599121,
             "fp_at_0fp": 0,
@@ -21479,7 +20000,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.9889385981920921,
+          "pr_auc": 0.9890194156723403,
           "recall_at_0fp": 0.8097297297297297,
           "threshold_at_0fp": 0.9965699911117554,
           "fp_at_0fp": 0,
@@ -21748,12 +20269,12 @@
     },
     "text": {
       "malware": 494,
-      "benign": 18647,
+      "benign": 18693,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.08516172608734604,
+            "pr_auc": 0.08510622033093933,
             "recall_at_0fp": 0.04251012145748988,
             "threshold_at_0fp": 0.8878207802772522,
             "fp_at_0fp": 0,
@@ -21765,7 +20286,7 @@
             "fp_at_3fp": 3
           },
           "filetypes/text": {
-            "pr_auc": 0.08256370068598234,
+            "pr_auc": 0.08256588851143817,
             "recall_at_0fp": 0.05060728744939271,
             "threshold_at_0fp": 0.9983036518096924,
             "fp_at_0fp": 0,
@@ -21778,7 +20299,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.08334848752269447,
+          "pr_auc": 0.08329421878156298,
           "recall_at_0fp": 0.05060728744939271,
           "threshold_at_0fp": 0.9983036518096924,
           "fp_at_0fp": 0,
@@ -22046,33 +20567,33 @@
     },
     "unknown": {
       "malware": 1796,
-      "benign": 5858,
+      "benign": 5335,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.24498727737809853,
-            "recall_at_0fp": 0.0016703786191536749,
-            "threshold_at_0fp": 0.035248976200819016,
+            "pr_auc": 0.25266253076167605,
+            "recall_at_0fp": 0.0,
+            "threshold_at_0fp": null,
             "fp_at_0fp": 0,
-            "recall_at_1fp": 0.005567928730512249,
-            "threshold_at_1fp": 0.0059997448697686195,
+            "recall_at_1fp": 0.0,
+            "threshold_at_1fp": 0.881891131401062,
             "fp_at_1fp": 1,
-            "recall_at_3fp": 0.016146993318485525,
-            "threshold_at_3fp": 9.978271009458695e-06,
+            "recall_at_3fp": 0.0016703786191536749,
+            "threshold_at_3fp": 0.035248976200819016,
             "fp_at_3fp": 3
           }
         },
         "max_rule": {
-          "pr_auc": 0.24498727737809853,
-          "recall_at_0fp": 0.0016703786191536749,
-          "threshold_at_0fp": 0.035248976200819016,
+          "pr_auc": 0.25266253076167605,
+          "recall_at_0fp": 0.0,
+          "threshold_at_0fp": null,
           "fp_at_0fp": 0,
-          "recall_at_1fp": 0.005567928730512249,
-          "threshold_at_1fp": 0.0059997448697686195,
+          "recall_at_1fp": 0.0,
+          "threshold_at_1fp": 0.881891131401062,
           "fp_at_1fp": 1,
-          "recall_at_3fp": 0.016146993318485525,
-          "threshold_at_3fp": 9.978271009458695e-06,
+          "recall_at_3fp": 0.0016703786191536749,
+          "threshold_at_3fp": 0.035248976200819016,
           "fp_at_3fp": 3
         }
       },
@@ -22246,46 +20767,6 @@
           ]
         },
         "L5000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L7500_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L10000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L15000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L20000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": [
-            "general"
-          ]
-        },
-        "L25000_hostile": {
           "tp": 0,
           "fp": 0,
           "recall": 0.0,
@@ -23136,867 +21617,14 @@
         ]
       }
     },
-    "xls": {
-      "malware": 4956,
-      "benign": 2652,
-      "file_group": "documents",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": 0.9948342487303796,
-            "recall_at_0fp": 0.890637610976594,
-            "threshold_at_0fp": 0.32194873690605164,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.8926553672316384,
-            "threshold_at_1fp": 0.277849942445755,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.9047619047619048,
-            "threshold_at_3fp": 0.16068033874034882,
-            "fp_at_3fp": 3
-          },
-          "filegroups/documents": {
-            "pr_auc": 0.9928452834062224,
-            "recall_at_0fp": 0.9463276836158192,
-            "threshold_at_0fp": 0.5086307525634766,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.9505649717514124,
-            "threshold_at_1fp": 0.10819923877716064,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.9519774011299436,
-            "threshold_at_3fp": 0.04846316576004028,
-            "fp_at_3fp": 3
-          },
-          "filetypes/xls": {
-            "pr_auc": 0.9960187235755227,
-            "recall_at_0fp": 0.9469330104923325,
-            "threshold_at_0fp": 0.727150022983551,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.9479418886198547,
-            "threshold_at_1fp": 0.6498887538909912,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.9507667473769169,
-            "threshold_at_3fp": 0.3596276044845581,
-            "fp_at_3fp": 3
-          }
-        },
-        "max_rule": {
-          "pr_auc": 0.9959379864044904,
-          "recall_at_0fp": 0.9473365617433414,
-          "threshold_at_0fp": 0.7648439407348633,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 0.9481436642453591,
-          "threshold_at_1fp": 0.6498887538909912,
-          "fp_at_1fp": 1,
-          "recall_at_3fp": 0.9507667473769169,
-          "threshold_at_3fp": 0.3596276044845581,
-          "fp_at_3fp": 3
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L1_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L2_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L3_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L4_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L5_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L10_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L20_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L30_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L40_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L50_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L60_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L70_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L80_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L90_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L100_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L200_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L300_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L500_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L1000_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L2000_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L5000_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L7500_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L10000_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L15000_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L20000_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        },
-        "L25000_hostile": {
-          "tp": 4685,
-          "fp": 0,
-          "recall": 0.945318805488297,
-          "active_routes": [
-            "filegroups/documents",
-            "filetypes/xls"
-          ]
-        }
-      },
-      "deployed_or_summary": {
-        "tp": 4685,
-        "fp": 0,
-        "recall": 0.945318805488297,
-        "active_routes": [
-          "filegroups/documents",
-          "filetypes/xls"
-        ]
-      }
-    },
-    "xlsm": {
-      "malware": 1,
-      "benign": 0,
-      "file_group": "",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": null,
-            "recall_at_0fp": 1.0,
-            "threshold_at_0fp": 7.482175078621367e-06,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 1.0,
-            "threshold_at_1fp": 7.482175078621367e-06,
-            "fp_at_1fp": 0,
-            "recall_at_3fp": 1.0,
-            "threshold_at_3fp": 7.482175078621367e-06,
-            "fp_at_3fp": 0
-          }
-        },
-        "max_rule": {
-          "pr_auc": null,
-          "recall_at_0fp": 1.0,
-          "threshold_at_0fp": 7.482175078621367e-06,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 1.0,
-          "threshold_at_1fp": 7.482175078621367e-06,
-          "fp_at_1fp": 0,
-          "recall_at_3fp": 1.0,
-          "threshold_at_3fp": 7.482175078621367e-06,
-          "fp_at_3fp": 0
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L1_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L2_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L3_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L4_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L5_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L10_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L20_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L30_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L40_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L50_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L60_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L70_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L80_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L90_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L100_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L200_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L300_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L500_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L1000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L2000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L5000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L7500_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L10000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L15000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L20000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        },
-        "L25000_hostile": {
-          "tp": 0,
-          "fp": 0,
-          "recall": 0.0,
-          "active_routes": []
-        }
-      },
-      "deployed_or_summary": {
-        "tp": 0,
-        "fp": 0,
-        "recall": 0.0,
-        "active_routes": []
-      }
-    },
-    "xlsx": {
-      "malware": 7879,
-      "benign": 212,
-      "file_group": "documents",
-      "slice_metrics": {
-        "routes": {
-          "general": {
-            "pr_auc": 0.9942829909753608,
-            "recall_at_0fp": 0.3066378982104328,
-            "threshold_at_0fp": 0.0814741775393486,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.30917629140753905,
-            "threshold_at_1fp": 0.07250800728797913,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.3098108897068156,
-            "threshold_at_3fp": 0.03749685361981392,
-            "fp_at_3fp": 3
-          },
-          "filegroups/documents": {
-            "pr_auc": 0.9939735604624051,
-            "recall_at_0fp": 0.30955705038710496,
-            "threshold_at_0fp": 0.168390154838562,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.3100647290265262,
-            "threshold_at_1fp": 0.05855637788772583,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.3100647290265262,
-            "threshold_at_3fp": 0.023905575275421143,
-            "fp_at_3fp": 3
-          },
-          "filetypes/xlsx": {
-            "pr_auc": 0.9951043343755407,
-            "recall_at_0fp": 0.3087955324279731,
-            "threshold_at_0fp": 0.557662844657898,
-            "fp_at_0fp": 0,
-            "recall_at_1fp": 0.3099378093666709,
-            "threshold_at_1fp": 0.09525328874588013,
-            "fp_at_1fp": 1,
-            "recall_at_3fp": 0.3099378093666709,
-            "threshold_at_3fp": 0.07328474521636963,
-            "fp_at_3fp": 3
-          }
-        },
-        "max_rule": {
-          "pr_auc": 0.9951045941389657,
-          "recall_at_0fp": 0.3090493717476837,
-          "threshold_at_0fp": 0.6155714392662048,
-          "fp_at_0fp": 0,
-          "recall_at_1fp": 0.3100647290265262,
-          "threshold_at_1fp": 0.25862300395965576,
-          "fp_at_1fp": 1,
-          "recall_at_3fp": 0.3100647290265262,
-          "threshold_at_3fp": 0.07328474521636963,
-          "fp_at_3fp": 3
-        }
-      },
-      "deployed_or_by_level": {
-        "L0_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L1_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L2_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L3_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L4_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L5_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L10_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L20_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L30_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L40_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L50_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L60_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L70_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L80_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L90_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L100_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L200_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L300_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L500_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L1000_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L2000_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L5000_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L7500_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L10000_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L15000_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L20000_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        },
-        "L25000_hostile": {
-          "tp": 2381,
-          "fp": 0,
-          "recall": 0.3021957101154969,
-          "active_routes": [
-            "general",
-            "filegroups/documents",
-            "filetypes/xlsx"
-          ]
-        }
-      },
-      "deployed_or_summary": {
-        "tp": 2381,
-        "fp": 0,
-        "recall": 0.3021957101154969,
-        "active_routes": [
-          "general",
-          "filegroups/documents",
-          "filetypes/xlsx"
-        ]
-      }
-    },
     "xml": {
       "malware": 505,
-      "benign": 31866,
+      "benign": 31753,
       "file_group": "config",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.08702603061595708,
+            "pr_auc": 0.08709622309293161,
             "recall_at_0fp": 0.019801980198019802,
             "threshold_at_0fp": 0.9472045302391052,
             "fp_at_0fp": 0,
@@ -24008,7 +21636,7 @@
             "fp_at_3fp": 3
           },
           "filegroups/config": {
-            "pr_auc": 0.1114263671437379,
+            "pr_auc": 0.11151828705126007,
             "recall_at_0fp": 0.02574257425742574,
             "threshold_at_0fp": 0.7840997576713562,
             "fp_at_0fp": 0,
@@ -24020,7 +21648,7 @@
             "fp_at_3fp": 3
           },
           "filetypes/xml": {
-            "pr_auc": 0.08753050103798819,
+            "pr_auc": 0.08762190103971235,
             "recall_at_0fp": 0.033663366336633666,
             "threshold_at_0fp": 0.03757578134536743,
             "fp_at_0fp": 0,
@@ -24033,7 +21661,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.11264318291586845,
+          "pr_auc": 0.11274361760728344,
           "recall_at_0fp": 0.019801980198019802,
           "threshold_at_0fp": 0.9592856764793396,
           "fp_at_0fp": 0,
@@ -25079,12 +22707,12 @@
     },
     "zip": {
       "malware": 12975,
-      "benign": 2343,
+      "benign": 2342,
       "file_group": "",
       "slice_metrics": {
         "routes": {
           "general": {
-            "pr_auc": 0.9523883685063151,
+            "pr_auc": 0.9524382979597635,
             "recall_at_0fp": 0.3402697495183044,
             "threshold_at_0fp": 0.987409770488739,
             "fp_at_0fp": 0,
@@ -25096,7 +22724,7 @@
             "fp_at_3fp": 3
           },
           "filetypes/zip": {
-            "pr_auc": 0.9619179323798666,
+            "pr_auc": 0.9619584168984104,
             "recall_at_0fp": 0.2925626204238921,
             "threshold_at_0fp": 0.9988564252853394,
             "fp_at_0fp": 0,
@@ -25109,7 +22737,7 @@
           }
         },
         "max_rule": {
-          "pr_auc": 0.9607398190471726,
+          "pr_auc": 0.9607790644999044,
           "recall_at_0fp": 0.2957225433526012,
           "threshold_at_0fp": 0.9988564252853394,
           "fp_at_0fp": 0,

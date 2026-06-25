@@ -2,31 +2,13 @@
 
 LightGBM specialist for `chrome-manifest`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-## Ensemble Performance
+## Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `chrome-manifest` slice of the locked test partition: 11 malware / 58 benign (69 rows).
-
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.907713 | 0.971787 | 0.842105 | 81.82% | 0.0667 |
-
-## Specialist Performance
-
-`filetypes/chrome-manifest` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
-
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|---:|
-| 0.907713 | 0.971787 | 0.842105 | 81.82% | 0.0667 | — |
-
-## Recall by FP level (per 100M benigns)
-
-<img src="recall_curve.svg" alt="chrome-manifest: recall by FP level (per 100M benigns)" height="300" />
-
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Training-time benchmark only (no test-partition rows for `chrome-manifest`). ROC 1.000000, PR 1.000000, F1 1.0000 on 41 rows (10 mal / 31 ben).
 
 ## Routing
 
-Files matching `chrome-manifest` are scored by `filetypes/chrome-manifest`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `chrome-manifest` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
