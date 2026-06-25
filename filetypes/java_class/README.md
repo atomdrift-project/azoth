@@ -33,8 +33,8 @@ Files matching `java_class` are scored by none. The ensemble's per-row score is 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 725,484 (1,379 mal / 724,105 ben) |
-| Feature spec | 9338 features (`general_shared`) |
+| Train rows | 732,815 (1,396 mal / 731,419 ben) |
+| Feature spec | 9330 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

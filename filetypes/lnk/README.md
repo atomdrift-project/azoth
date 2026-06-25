@@ -33,8 +33,8 @@ Files matching `lnk` are scored by `general`. The ensemble's per-row score is wh
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,423 (3,490 mal / 933 ben) |
-| Feature spec | 9338 features (`general_shared`) |
+| Train rows | 4,425 (3,492 mal / 933 ben) |
+| Feature spec | 9330 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

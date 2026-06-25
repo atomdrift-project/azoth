@@ -33,8 +33,8 @@ Files matching `chrome-manifest` are scored by `filetypes/chrome-manifest`. The 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 320 (78 mal / 242 ben) |
-| Feature spec | 9338 features (`general_shared`) |
+| Train rows | 324 (78 mal / 246 ben) |
+| Feature spec | 9330 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

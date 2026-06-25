@@ -33,8 +33,8 @@ Files matching `xls` are scored by `general`, `filetypes/xls`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 51,714 (33,604 mal / 18,110 ben) |
-| Feature spec | 9338 features (`general_shared`) |
+| Train rows | 51,716 (33,606 mal / 18,110 ben) |
+| Feature spec | 9330 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

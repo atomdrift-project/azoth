@@ -35,8 +35,8 @@ Files matching `makefile` are scored by `general`, `filegroups/source`. The ense
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 31,524 (19 mal / 31,505 ben) |
-| Feature spec | 9338 features (`general_shared`) |
+| Train rows | 31,581 (19 mal / 31,562 ben) |
+| Feature spec | 9330 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

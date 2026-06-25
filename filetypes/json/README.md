@@ -33,8 +33,8 @@ Files matching `json` are scored by `general`, `filegroups/config`. The ensemble
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 69,174 (28 mal / 69,146 ben) |
-| Feature spec | 9338 features (`general_shared`) |
+| Train rows | 73,542 (37 mal / 73,505 ben) |
+| Feature spec | 9330 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

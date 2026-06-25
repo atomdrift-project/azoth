@@ -33,8 +33,8 @@ Files matching `png` are scored by `filegroups/media`, `filetypes/png`. The ense
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 169,810 (443 mal / 169,367 ben) |
-| Feature spec | 9338 features (`general_shared`) |
+| Train rows | 170,203 (443 mal / 169,760 ben) |
+| Feature spec | 9330 features (`general_shared`) |
 | n_estimators | 300 |
 | num_leaves | 96 |
 | max_depth | 12 |
