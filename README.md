@@ -78,7 +78,7 @@ The corpus-weighted ensemble curve weights each filetype's ensemble recall by th
 
 ## Provenance
 
-Calibration snapshot `1872261008`, score-table `d926f089cd46`, model-set `4f11eb5b7803`. 1 general, 7 filegroup, 53 filetype routes.
+Calibration snapshot `1872261008`, score-table `869574201212`, model-set `4f11eb5b7803`. 1 general, 7 filegroup, 53 filetype routes.
 
 ## Limits
 

@@ -15,19 +15,19 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | elf | 23502 | 35713 | `general,filegroups/native,filetypes/elf` | filetypes/elf: 89.83% | 0 | 90.50% | 0.67% | filetypes/elf: 95.09% | 0.999 | 0.999 |
 | pdf | 22516 | 3103 | `general,filegroups/documents,filetypes/pdf` | filetypes/pdf: 74.39% | 0 | 73.59% | -0.80% | filetypes/pdf: 74.40% | 0.991 | 0.991 |
 | batch | 22123 | 765 | `general,filegroups/scripts,filetypes/batch` | general: 2.12% | 0 | 2.56% | 0.44% | general: 2.22% | 0.985 | 0.985 |
-| javascript | 15578 | 93001 | `general,filegroups/scripts,filetypes/javascript` | filetypes/javascript: 60.06% | 0 | 60.49% | 0.43% | filetypes/javascript: 64.79% | 0.945 | 0.941 |
-| zip | 12975 | 2342 | `general,filetypes/zip` | general: 34.03% | 0 | 30.37% | -3.66% | filetypes/zip: 38.25% | 0.962 | 0.961 |
+| javascript | 15583 | 93137 | `general,filegroups/scripts,filetypes/javascript` | filetypes/javascript: 60.06% | 0 | 60.47% | 0.41% | filetypes/javascript: 64.79% | 0.945 | 0.941 |
+| zip | 12972 | 2340 | `general,filetypes/zip` | general: 34.03% | 0 | 30.37% | -3.66% | general: 39.16% | 0.962 | 0.961 |
 | ole_doc | 10588 | 3518 | `general` | general: 66.24% | 0 | 2.95% | -63.30% | general: 67.43% | — | 0.994 |
 | ooxml | 8541 | 295 | `general` | general: 30.79% | 0 | 0.14% | -30.65% | general: 33.92% | — | 0.990 |
-| kotlin | 3896 | 7362 | `general,filegroups/source,filetypes/kotlin` | filetypes/kotlin: 53.52% | 0 | 53.31% | -0.21% | filetypes/kotlin: 57.06% | 0.896 | 0.899 |
-| tar | 2775 | 6037 | `general,filetypes/tar` | filetypes/tar: 82.94% | 0 | 82.99% | 0.05% | filetypes/tar: 88.14% | 0.994 | 0.989 |
+| kotlin | 3896 | 7233 | `general,filegroups/source,filetypes/kotlin` | filetypes/kotlin: 53.52% | 0 | 53.31% | -0.21% | filetypes/kotlin: 57.06% | 0.897 | 0.900 |
+| tar | 2774 | 6035 | `general,filetypes/tar` | filetypes/tar: 82.94% | 0 | 82.98% | 0.05% | filetypes/tar: 88.13% | 0.994 | 0.989 |
 | rar | 2719 | 1 | `general` | general: 99.96% | 0 | 16.66% | -83.30% | general: 100.00% | — | 1.000 |
-| python | 2584 | 33589 | `general,filegroups/scripts,filetypes/python` | filegroups/scripts: 37.62% | 0 | 41.49% | 3.87% | filetypes/python: 59.25% | 0.820 | 0.823 |
+| python | 2584 | 33582 | `general,filegroups/scripts,filetypes/python` | filegroups/scripts: 37.62% | 0 | 41.49% | 3.87% | filetypes/python: 59.25% | 0.820 | 0.823 |
 | package.json | 2379 | 3513 | `general,filegroups/config,filetypes/package.json` | filegroups/config: 90.21% | 0 | 84.07% | -6.14% | filegroups/config: 92.52% | 0.996 | 0.996 |
-| c | 2266 | 109307 | `general,filegroups/source,filetypes/c` | filegroups/source: 9.97% | 0 | 10.02% | 0.04% | filegroups/source: 11.34% | 0.145 | 0.214 |
-| shell | 2055 | 9616 | `general,filegroups/scripts,filetypes/shell` | filetypes/shell: 80.00% | 0 | 76.16% | -3.84% | filetypes/shell: 80.15% | 0.961 | 0.959 |
+| c | 2267 | 109293 | `general,filegroups/source,filetypes/c` | filegroups/source: 9.97% | 0 | 10.01% | 0.04% | filegroups/source: 11.34% | 0.145 | 0.214 |
+| shell | 2055 | 9603 | `general,filegroups/scripts,filetypes/shell` | filetypes/shell: 80.00% | 0 | 76.16% | -3.84% | filetypes/shell: 80.15% | 0.961 | 0.959 |
 | go | 1938 | 18127 | `general,filegroups/source,filetypes/go` | filetypes/go: 4.64% | 0 | 4.54% | -0.10% | filetypes/go: 4.64% | 0.213 | 0.209 |
-| unknown | 1796 | 5335 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.253 |
+| unknown | 1788 | 5200 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.255 |
 | vbs | 1553 | 434 | `general,filetypes/vbs` | filetypes/vbs: 42.69% | 0 | 31.17% | -11.53% | general: 50.35% | 0.991 | 0.991 |
 | zst | 1283 | 11047 | `general` | general: 93.06% | 0 | 17.15% | -75.92% | general: 93.22% | — | 0.988 |
 | pkg_info | 1264 | 484 | `general` | general: 94.94% | 0 | 3.72% | -91.22% | general: 96.52% | — | 0.999 |
@@ -35,51 +35,51 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | png | 1090 | 24532 | `general,filegroups/media,filetypes/png` | general: 5.41% | 0 | 5.23% | -0.18% | general: 5.41% | 0.126 | 0.125 |
 | rtf | 830 | 55 | `general,filegroups/documents,filetypes/rtf` | filegroups/documents: 97.11% | 0 | 97.11% | 0.00% | filegroups/documents: 97.11% | 0.999 | 0.999 |
 | php | 773 | 22018 | `general,filegroups/scripts,filetypes/php` | filetypes/php: 46.57% | 0 | 45.28% | -1.29% | filetypes/php: 49.94% | 0.753 | 0.756 |
-| powershell | 717 | 334 | `general,filegroups/scripts,filetypes/powershell` | filegroups/scripts: 38.21% | 0 | 40.31% | 2.09% | filegroups/scripts: 59.97% | 0.977 | 0.973 |
+| powershell | 717 | 333 | `general,filegroups/scripts,filetypes/powershell` | filegroups/scripts: 38.21% | 0 | 40.31% | 2.09% | filegroups/scripts: 59.97% | 0.977 | 0.974 |
 | lnk | 567 | 132 | `general,filetypes/lnk` | filetypes/lnk: 76.54% | 0 | 71.43% | -5.11% | filetypes/lnk: 76.54% | 0.991 | 0.990 |
 | gz | 558 | 12421 | `general` | general: 41.04% | 0 | 0.00% | -41.04% | general: 42.11% | — | 0.684 |
-| xml | 505 | 31753 | `general,filegroups/config,filetypes/xml` | filetypes/xml: 3.37% | 0 | 3.37% | 0.00% | filetypes/xml: 5.54% | 0.088 | 0.113 |
-| text | 494 | 18693 | `general,filetypes/text` | filetypes/text: 5.06% | 0 | 3.44% | -1.62% | general: 5.47% | 0.083 | 0.083 |
+| xml | 505 | 31443 | `general,filegroups/config,filetypes/xml` | filetypes/xml: 3.37% | 0 | 3.37% | 0.00% | filetypes/xml: 5.54% | 0.088 | 0.113 |
+| text | 494 | 18760 | `general,filetypes/text` | filetypes/text: 5.06% | 0 | 3.44% | -1.62% | general: 5.47% | 0.083 | 0.083 |
 | jar | 481 | 1159 | `general,filetypes/jar` | filetypes/jar: 49.90% | 0 | 50.52% | 0.62% | filetypes/jar: 53.64% | 0.937 | 0.933 |
 | java | 456 | 15874 | `general,filegroups/source,filetypes/java` | filegroups/source: 1.32% | 0 | 1.10% | -0.22% | filegroups/source: 1.97% | 0.080 | 0.081 |
 | csharp | 452 | 9833 | `general,filegroups/source,filetypes/csharp` | filegroups/source: 16.59% | 0 | 17.04% | 0.44% | filetypes/csharp: 20.80% | 0.410 | 0.409 |
 | python_bytecode | 445 | 56346 | `general` | general: 68.99% | 0 | 0.00% | -68.99% | general: 69.66% | — | 0.775 |
 | macho | 346 | 1794 | `general,filegroups/native,filetypes/macho` | filetypes/macho: 64.45% | 0 | 65.32% | 0.87% | filetypes/macho: 81.50% | 0.983 | 0.973 |
-| whl | 336 | 652 | `general,filetypes/whl` | filetypes/whl: 57.14% | 0 | 62.20% | 5.06% | filetypes/whl: 67.86% | 0.948 | 0.948 |
+| whl | 339 | 652 | `general,filetypes/whl` | filetypes/whl: 57.14% | 0 | 62.54% | 5.39% | filetypes/whl: 67.86% | 0.948 | 0.948 |
 | java_class | 266 | 104445 | `general,filegroups/portable,filetypes/java_class` | filegroups/portable: 62.78% | 0 | 48.12% | -14.66% | filetypes/java_class: 70.68% | 0.847 | 0.852 |
-| npm | 249 | 168 | `general,filetypes/npm` | filetypes/npm: 63.05% | 0 | 63.86% | 0.80% | filetypes/npm: 71.08% | 0.959 | 0.956 |
-| rust | 246 | 12733 | `general,filegroups/source,filetypes/rust` | filegroups/source: 2.44% | 0 | 1.63% | -0.81% | general: 2.85% | 0.012 | 0.059 |
+| npm | 250 | 169 | `general,filetypes/npm` | filetypes/npm: 63.05% | 0 | 62.80% | -0.25% | filetypes/npm: 71.08% | 0.959 | 0.956 |
+| rust | 246 | 12731 | `general,filegroups/source,filetypes/rust` | filegroups/source: 2.44% | 0 | 1.63% | -0.81% | general: 2.85% | 0.012 | 0.059 |
 | apk_android | 236 | 1 | `general` | general: 36.86% | 0 | 0.00% | -36.86% | general: 100.00% | — | 0.996 |
 | crx | 199 | 28 | `general,filetypes/crx` | filetypes/crx: 100.00% | 0 | 100.00% | 0.00% | filetypes/crx: 100.00% | 1.000 | 1.000 |
-| json | 184 | 10723 | `general,filegroups/config,filetypes/json` | filegroups/config: 1.63% | 0 | 1.63% | 0.00% | filegroups/config: 1.63% | 0.073 | 0.064 |
+| json | 186 | 10800 | `general,filegroups/config,filetypes/json` | filegroups/config: 1.63% | 0 | 1.61% | -0.02% | filegroups/config: 1.63% | 0.073 | 0.064 |
 | jpeg | 179 | 4123 | `general,filegroups/media,filetypes/jpeg` | filetypes/jpeg: 11.17% | 0 | 11.17% | 0.00% | filetypes/jpeg: 11.73% | 0.218 | 0.231 |
-| makefile | 102 | 4578 | `general,filegroups/source,filetypes/makefile` | general: 0.98% | 0 | 0.98% | 0.00% | general: 0.98% | 0.017 | 0.017 |
+| makefile | 102 | 4581 | `general,filegroups/source,filetypes/makefile` | general: 0.98% | 0 | 0.98% | 0.00% | general: 0.98% | 0.017 | 0.017 |
 | cab | 90 | 1 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 | plist | 84 | 1677 | `general,filegroups/config,filetypes/plist` | filegroups/config: 3.57% | 0 | 2.38% | -1.19% | filegroups/config: 3.57% | 0.108 | 0.109 |
 | gem | 74 | 125 | `general,filetypes/gem` | filetypes/gem: 94.59% | 0 | 91.89% | -2.70% | filetypes/gem: 95.95% | 0.997 | 0.996 |
 | data | 66 | 1511 | `general` | general: 9.09% | 0 | 0.00% | -9.09% | general: 21.21% | — | 0.338 |
 | deb | 43 | 1476 | `general,filetypes/deb` | general: 11.63% | 0 | 11.63% | 0.00% | general: 11.63% | 0.157 | 0.144 |
-| perl | 43 | 5682 | `general,filegroups/scripts,filetypes/perl` | filetypes/perl: 72.09% | 0 | 72.09% | 0.00% | filetypes/perl: 72.09% | 0.808 | 0.820 |
+| perl | 43 | 5681 | `general,filegroups/scripts,filetypes/perl` | filetypes/perl: 72.09% | 0 | 72.09% | 0.00% | filetypes/perl: 72.09% | 0.809 | 0.823 |
 | html | 31 | 1993 | `general,filegroups/documents,filetypes/html` | general: 100.00% | 0 | 100.00% | 0.00% | general: 100.00% | 1.000 | 1.000 |
 | chm | 29 | 4 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 | ruby | 26 | 4769 | `general,filegroups/scripts,filetypes/ruby` | general: 26.92% | 0 | 26.92% | 0.00% | general: 26.92% | 0.363 | 0.381 |
 | asar | 21 | 1 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 | go.mod | 20 | 16 | `general` | general: 5.00% | 0 | 0.00% | -5.00% | general: 5.00% | — | 0.740 |
-| cargo.toml | 18 | 281 | `general,filetypes/cargo.toml` | general: 27.78% | 0 | 27.78% | 0.00% | general: 27.78% | 0.507 | 0.507 |
+| cargo.toml | 18 | 282 | `general,filetypes/cargo.toml` | general: 27.78% | 0 | 27.78% | 0.00% | general: 27.78% | 0.507 | 0.507 |
 | groovy | 16 | 1005 | `general,filetypes/groovy` | general: 6.25% | 0 | 6.25% | 0.00% | general: 6.25% | 0.081 | 0.080 |
 | package-lock.json | 14 | 103 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.177 |
 | xz | 14 | 5217 | `general` | general: 78.57% | 0 | 7.14% | -71.43% | general: 78.57% | — | 0.847 |
-| lua | 13 | 2451 | `general,filegroups/scripts,filetypes/lua` | general: 69.23% | 0 | 46.15% | -23.08% | general: 69.23% | 0.723 | 0.734 |
-| dockerfile | 12 | 276 | `general,filetypes/dockerfile` | filetypes/dockerfile: 25.00% | 0 | 33.33% | 8.33% | filetypes/dockerfile: 33.33% | 0.417 | 0.412 |
-| markdown | 11 | 5925 | `general,filetypes/markdown` | general: 72.73% | 0 | 0.00% | -72.73% | general: 72.73% | 0.455 | 0.692 |
+| lua | 13 | 2449 | `general,filegroups/scripts,filetypes/lua` | general: 69.23% | 0 | 46.15% | -23.08% | general: 69.23% | 0.723 | 0.734 |
+| dockerfile | 12 | 275 | `general,filetypes/dockerfile` | filetypes/dockerfile: 25.00% | 0 | 33.33% | 8.33% | filetypes/dockerfile: 33.33% | 0.417 | 0.408 |
+| markdown | 11 | 5938 | `general,filetypes/markdown` | general: 72.73% | 0 | 0.00% | -72.73% | general: 72.73% | 0.455 | 0.692 |
 | chrome_manifest | 10 | 31 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 | swift | 7 | 4112 | `general,filegroups/source` | general: 14.29% | 0 | 0.00% | -14.29% | general: 14.29% | — | 0.177 |
 | go.sum | 6 | 8 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.580 |
 | pyproject.toml | 6 | 20 | `general` | general: 16.67% | 0 | 0.00% | -16.67% | general: 16.67% | — | 0.494 |
 | zig | 6 | 21 | `general` | general: 16.67% | 0 | 0.00% | -16.67% | general: 33.33% | — | 0.476 |
 | objective_c | 5 | 2876 | `general` | general: 20.00% | 0 | 0.00% | -20.00% | general: 20.00% | — | 0.301 |
-| vsix | 4 | 129 | `general` | general: 25.00% | 0 | 0.00% | -25.00% | general: 50.00% | — | 0.579 |
-| clojure | 3 | 864 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
+| vsix | 4 | 131 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 25.00% | — | 0.387 |
+| clojure | 3 | 868 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 | crate | 3 | 387 | `general` | general: 33.33% | 0 | 0.00% | -33.33% | general: 33.33% | — | 0.346 |
 | nupkg | 2 | 21 | `general` | general: 50.00% | 0 | 0.00% | -50.00% | general: 50.00% | — | 0.559 |
 | systemd_service | 2 | 235 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.007 |
@@ -91,7 +91,7 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | gyp | 1 | 20 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.071 |
 | odf | 1 | 0 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | — |
 | pkg_macos | 1 | 9 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.167 |
-| svg | 1 | 3849 | `general,filegroups/media` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.006 |
+| svg | 1 | 4158 | `general,filegroups/media` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.002 |
 | xpi | 1 | 14 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 
 ## Deployed OR-rule at L0 hostile
@@ -122,7 +122,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -143,10 +142,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -156,9 +157,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -168,19 +168,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L1 hostile
@@ -211,7 +211,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -232,10 +231,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -245,9 +246,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -257,19 +257,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L2 hostile
@@ -300,7 +300,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -321,10 +320,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -334,9 +335,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -346,19 +346,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L3 hostile
@@ -389,7 +389,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -410,10 +409,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -423,9 +424,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -435,19 +435,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L4 hostile
@@ -478,7 +478,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -499,10 +498,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -512,9 +513,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -524,19 +524,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L5 hostile
@@ -567,7 +567,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -588,10 +587,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -601,9 +602,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -613,19 +613,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L10 hostile
@@ -656,7 +656,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -677,10 +676,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -690,9 +691,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -702,19 +702,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L20 hostile
@@ -745,7 +745,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -766,10 +765,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -779,9 +780,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -791,19 +791,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L30 hostile
@@ -834,7 +834,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -855,10 +854,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -868,9 +869,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -880,19 +880,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L40 hostile
@@ -923,7 +923,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -944,10 +943,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -957,9 +958,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -969,19 +969,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L50 hostile
@@ -1012,7 +1012,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -1033,10 +1032,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -1046,9 +1047,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -1058,19 +1058,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L60 hostile
@@ -1101,7 +1101,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -1122,10 +1121,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -1135,9 +1136,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -1147,19 +1147,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L70 hostile
@@ -1190,7 +1190,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -1211,10 +1210,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -1224,9 +1225,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -1236,19 +1236,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L80 hostile
@@ -1279,7 +1279,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -1300,10 +1299,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -1313,9 +1314,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -1325,19 +1325,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L90 hostile
@@ -1368,7 +1368,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -1389,10 +1388,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -1402,9 +1403,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -1414,19 +1414,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L100 hostile
@@ -1457,7 +1457,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -1478,10 +1477,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -1491,9 +1492,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -1503,19 +1503,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L200 hostile
@@ -1545,7 +1545,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -1567,10 +1566,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -1580,9 +1581,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -1592,19 +1592,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L300 hostile
@@ -1634,7 +1634,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | gz | `general` | 0 | 0.18% | 41.04% | -40.86% |
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -1656,10 +1655,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -1669,9 +1670,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -1681,19 +1681,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L500 hostile
@@ -1723,7 +1723,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | gz | `general` | 0 | 0.18% | 41.04% | -40.86% |
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -1745,10 +1744,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -1758,9 +1759,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -1770,19 +1770,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L1000 hostile
@@ -1811,7 +1811,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 50.95% | 86.68% | -35.74% |
 | zst | `general` | 0 | 59.16% | 93.06% | -33.90% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -1833,10 +1832,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -1846,9 +1847,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -1858,19 +1858,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L2000 hostile
@@ -1899,7 +1899,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | 7z | `general` | 0 | 57.99% | 86.68% | -28.69% |
 | zst | `general` | 0 | 67.97% | 93.06% | -25.10% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pe | `filegroups/native,filetypes/pe` | 0 | 46.13% | 64.81% | -18.68% |
@@ -1921,10 +1920,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crx | `general,filetypes/crx` | 0 | 100.00% | 100.00% | 0.00% |
@@ -1934,9 +1935,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -1946,19 +1946,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.49% | 60.06% | 0.43% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 0 | 60.47% | 60.06% | 0.41% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L5000 hostile
@@ -1984,7 +1984,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pkg_info | `general` | 0 | 50.24% | 94.94% | -44.70% |
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | gz | `general` | 0 | 13.80% | 41.04% | -27.24% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | 7z | `general` | 0 | 65.38% | 86.68% | -21.31% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
@@ -2007,10 +2006,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crate | `general` | 0 | 33.33% | 33.33% | 0.00% |
@@ -2021,9 +2022,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -2034,19 +2034,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | swift | `general,filegroups/source` | 0 | 14.29% | 14.29% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | unknown | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.97% | 64.79% | 0.18% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.95% | 64.79% | 0.15% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L7500 hostile
@@ -2071,7 +2071,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | xz | `general` | 0 | 28.57% | 78.57% | -50.00% |
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
 | pkg_info | `general` | 0 | 67.41% | 94.94% | -27.53% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | gz | `general` | 0 | 17.03% | 41.04% | -24.01% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
@@ -2094,10 +2093,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crate | `general` | 0 | 33.33% | 33.33% | 0.00% |
@@ -2108,9 +2109,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -2120,19 +2120,19 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | swift | `general,filegroups/source` | 0 | 14.29% | 14.29% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
+| vsix | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.97% | 64.79% | 0.18% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.95% | 64.79% | 0.15% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L10000 hostile
@@ -2156,7 +2156,6 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | xz | `general` | 0 | 28.57% | 78.57% | -50.00% |
 | apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
-| vsix | `general` | 0 | 0.00% | 25.00% | -25.00% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | gz | `general` | 0 | 19.00% | 41.04% | -22.04% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
@@ -2179,10 +2178,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crate | `general` | 0 | 33.33% | 33.33% | 0.00% |
@@ -2193,9 +2194,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -2206,18 +2206,17 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | swift | `general,filegroups/source` | 0 | 14.29% | 14.29% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.37% | 3.37% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.97% | 64.79% | 0.18% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.95% | 64.79% | 0.15% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
 | elf | `general,filegroups/native,filetypes/elf` | 0 | 90.50% | 89.83% | 0.67% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | python | `general,filegroups/scripts,filetypes/python` | 0 | 41.49% | 37.62% | 3.87% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L15000 hostile
@@ -2262,10 +2261,12 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | png | `general,filegroups/media,filetypes/png` | 0 | 5.23% | 5.41% | -0.18% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | crate | `general` | 0 | 33.33% | 33.33% | 0.00% |
@@ -2278,9 +2279,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -2291,17 +2291,16 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | swift | `general,filegroups/source` | 0 | 14.29% | 14.29% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.97% | 64.79% | 0.18% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.95% | 64.79% | 0.15% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.56% | 3.37% | 0.20% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L20000 hostile
@@ -2339,14 +2338,15 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | shell | `general,filegroups/scripts,filetypes/shell` | 0 | 76.16% | 80.00% | -3.84% |
 | zip | `general,filetypes/zip` | 0 | 30.37% | 34.03% | -3.66% |
 | gem | `general,filetypes/gem` | 0 | 91.89% | 94.59% | -2.70% |
-| text | `general,filetypes/text` | 0 | 3.44% | 5.06% | -1.62% |
 | plist | `filegroups/config,filetypes/plist` | 0 | 2.38% | 3.57% | -1.19% |
 | pe | `general,filegroups/native,filetypes/pe` | 1 | 65.77% | 66.67% | -0.90% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 0 | 1.10% | 1.32% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
 | go | `general,filegroups/source,filetypes/go` | 0 | 4.54% | 4.64% | -0.10% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | applescript | `general` | 0 | 100.00% | 100.00% | 0.00% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -2360,9 +2360,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -2374,18 +2373,18 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | svg | `general,filegroups/media` | 0 | 0.00% | 0.00% | 0.00% |
 | swift | `general,filegroups/source` | 0 | 14.29% | 14.29% | 0.00% |
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.97% | 64.79% | 0.18% |
+| text | `filetypes/text` | 0 | 5.06% | 5.06% | 0.00% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.95% | 64.79% | 0.15% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.56% | 3.37% | 0.20% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | php | `general,filegroups/scripts,filetypes/php` | 0 | 49.29% | 46.57% | 2.72% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
 
 ## Deployed OR-rule at L25000 hostile
@@ -2426,8 +2425,10 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | pe | `general,filegroups/native,filetypes/pe` | 1 | 65.77% | 66.67% | -0.90% |
 | rust | `general,filegroups/source` | 0 | 1.63% | 2.44% | -0.81% |
 | pdf | `general,filegroups/documents,filetypes/pdf` | 0 | 73.59% | 74.39% | -0.80% |
+| npm | `filetypes/npm` | 0 | 62.80% | 63.05% | -0.25% |
 | java | `general,filegroups/source,filetypes/java` | 1 | 1.75% | 1.97% | -0.22% |
 | kotlin | `general,filegroups/source,filetypes/kotlin` | 0 | 53.31% | 53.52% | -0.21% |
+| json | `general,filegroups/config` | 0 | 1.61% | 1.63% | -0.02% |
 | applescript | `general` | 0 | 100.00% | 100.00% | 0.00% |
 | cargo.toml | `filetypes/cargo.toml` | 0 | 27.78% | 27.78% | 0.00% |
 | conda | `general` | 0 | 0.00% | 0.00% | 0.00% |
@@ -2442,9 +2443,8 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | go.sum | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | groovy | `general` | 0 | 6.25% | 6.25% | 0.00% |
 | gyp | `general` | 0 | 0.00% | 0.00% | 0.00% |
-| html | `filegroups/documents,filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
+| html | `filetypes/html` | 0 | 100.00% | 100.00% | 0.00% |
 | jpeg | `general,filegroups/media,filetypes/jpeg` | 0 | 11.17% | 11.17% | 0.00% |
-| json | `general,filegroups/config` | 0 | 1.63% | 1.63% | 0.00% |
 | makefile | `filegroups/source` | 0 | 0.98% | 0.98% | 0.00% |
 | package-lock.json | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | perl | `filegroups/scripts,filetypes/perl` | 0 | 72.09% | 72.09% | 0.00% |
@@ -2458,16 +2458,15 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | systemd_service | `general` | 0 | 0.00% | 0.00% | 0.00% |
 | text | `filetypes/text` | 0 | 5.06% | 5.06% | 0.00% |
 | xpi | `general` | 0 | 100.00% | 100.00% | 0.00% |
-| c | `general,filegroups/source` | 0 | 10.02% | 9.97% | 0.04% |
-| tar | `general,filetypes/tar` | 0 | 82.99% | 82.94% | 0.05% |
-| javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.97% | 64.79% | 0.18% |
+| c | `general,filegroups/source` | 0 | 10.01% | 9.97% | 0.04% |
+| tar | `general,filetypes/tar` | 0 | 82.98% | 82.94% | 0.05% |
+| javascript | `general,filegroups/scripts,filetypes/javascript` | 1 | 64.95% | 64.79% | 0.15% |
 | xml | `filegroups/config,filetypes/xml` | 0 | 3.56% | 3.37% | 0.20% |
 | csharp | `general,filegroups/source,filetypes/csharp` | 0 | 17.04% | 16.59% | 0.44% |
 | batch | `general,filegroups/scripts,filetypes/batch` | 0 | 2.56% | 2.12% | 0.44% |
 | jar | `general,filetypes/jar` | 0 | 50.52% | 49.90% | 0.62% |
-| npm | `general,filetypes/npm` | 0 | 63.86% | 63.05% | 0.80% |
 | macho | `general,filegroups/native,filetypes/macho` | 0 | 65.32% | 64.45% | 0.87% |
 | powershell | `general,filegroups/scripts,filetypes/powershell` | 0 | 40.31% | 38.21% | 2.09% |
 | php | `general,filegroups/scripts,filetypes/php` | 0 | 49.29% | 46.57% | 2.72% |
-| whl | `general,filetypes/whl` | 0 | 62.20% | 57.14% | 5.06% |
+| whl | `general,filetypes/whl` | 0 | 62.54% | 57.14% | 5.39% |
 | dockerfile | `general,filetypes/dockerfile` | 0 | 33.33% | 25.00% | 8.33% |
