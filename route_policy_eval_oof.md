@@ -15,19 +15,19 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | elf | 23502 | 35713 | `general,filegroups/native,filetypes/elf` | filetypes/elf: 89.83% | 0 | 90.50% | 0.67% | filetypes/elf: 95.09% | 0.999 | 0.999 |
 | pdf | 22516 | 3103 | `general,filegroups/documents,filetypes/pdf` | filetypes/pdf: 74.39% | 0 | 73.59% | -0.80% | filetypes/pdf: 74.40% | 0.991 | 0.991 |
 | batch | 22123 | 765 | `general,filegroups/scripts,filetypes/batch` | general: 2.12% | 0 | 2.56% | 0.44% | general: 2.22% | 0.985 | 0.985 |
-| javascript | 15583 | 93137 | `general,filegroups/scripts,filetypes/javascript` | filetypes/javascript: 60.06% | 0 | 60.47% | 0.41% | filetypes/javascript: 64.79% | 0.945 | 0.941 |
-| zip | 12972 | 2340 | `general,filetypes/zip` | general: 34.03% | 0 | 30.37% | -3.66% | general: 39.16% | 0.962 | 0.961 |
+| javascript | 15583 | 93155 | `general,filegroups/scripts,filetypes/javascript` | filetypes/javascript: 60.06% | 0 | 60.47% | 0.41% | filetypes/javascript: 64.79% | 0.945 | 0.941 |
+| zip | 12973 | 2097 | `general,filetypes/zip` | general: 34.03% | 0 | 30.37% | -3.66% | general: 39.16% | 0.962 | 0.961 |
 | ole_doc | 10588 | 3518 | `general` | general: 66.24% | 0 | 2.95% | -63.30% | general: 67.43% | — | 0.994 |
 | ooxml | 8541 | 295 | `general` | general: 30.79% | 0 | 0.14% | -30.65% | general: 33.92% | — | 0.990 |
-| kotlin | 3896 | 7233 | `general,filegroups/source,filetypes/kotlin` | filetypes/kotlin: 53.52% | 0 | 53.31% | -0.21% | filetypes/kotlin: 57.06% | 0.897 | 0.900 |
+| kotlin | 3896 | 6945 | `general,filegroups/source,filetypes/kotlin` | filetypes/kotlin: 53.52% | 0 | 53.31% | -0.21% | filetypes/kotlin: 57.06% | 0.900 | 0.903 |
 | tar | 2774 | 6035 | `general,filetypes/tar` | filetypes/tar: 82.94% | 0 | 82.98% | 0.05% | filetypes/tar: 88.13% | 0.994 | 0.989 |
 | rar | 2719 | 1 | `general` | general: 99.96% | 0 | 16.66% | -83.30% | general: 100.00% | — | 1.000 |
-| python | 2584 | 33582 | `general,filegroups/scripts,filetypes/python` | filegroups/scripts: 37.62% | 0 | 41.49% | 3.87% | filetypes/python: 59.25% | 0.820 | 0.823 |
+| python | 2584 | 33565 | `general,filegroups/scripts,filetypes/python` | filegroups/scripts: 37.62% | 0 | 41.49% | 3.87% | filetypes/python: 59.25% | 0.820 | 0.823 |
 | package.json | 2379 | 3513 | `general,filegroups/config,filetypes/package.json` | filegroups/config: 90.21% | 0 | 84.07% | -6.14% | filegroups/config: 92.52% | 0.996 | 0.996 |
-| c | 2267 | 109293 | `general,filegroups/source,filetypes/c` | filegroups/source: 9.97% | 0 | 10.01% | 0.04% | filegroups/source: 11.34% | 0.145 | 0.214 |
-| shell | 2055 | 9603 | `general,filegroups/scripts,filetypes/shell` | filetypes/shell: 80.00% | 0 | 76.16% | -3.84% | filetypes/shell: 80.15% | 0.961 | 0.959 |
-| go | 1938 | 18127 | `general,filegroups/source,filetypes/go` | filetypes/go: 4.64% | 0 | 4.54% | -0.10% | filetypes/go: 4.64% | 0.213 | 0.209 |
-| unknown | 1788 | 5200 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.255 |
+| c | 2267 | 109286 | `general,filegroups/source,filetypes/c` | filegroups/source: 9.97% | 0 | 10.01% | 0.04% | filegroups/source: 11.34% | 0.145 | 0.214 |
+| shell | 2055 | 9594 | `general,filegroups/scripts,filetypes/shell` | filetypes/shell: 80.00% | 0 | 76.16% | -3.84% | filetypes/shell: 80.15% | 0.961 | 0.960 |
+| go | 1938 | 18126 | `general,filegroups/source,filetypes/go` | filetypes/go: 4.64% | 0 | 4.54% | -0.10% | filetypes/go: 4.64% | 0.213 | 0.209 |
+| unknown | 1788 | 5059 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.259 |
 | vbs | 1553 | 434 | `general,filetypes/vbs` | filetypes/vbs: 42.69% | 0 | 31.17% | -11.53% | general: 50.35% | 0.991 | 0.991 |
 | zst | 1283 | 11047 | `general` | general: 93.06% | 0 | 17.15% | -75.92% | general: 93.22% | — | 0.988 |
 | pkg_info | 1264 | 484 | `general` | general: 94.94% | 0 | 3.72% | -91.22% | general: 96.52% | — | 0.999 |
@@ -38,8 +38,8 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | powershell | 717 | 333 | `general,filegroups/scripts,filetypes/powershell` | filegroups/scripts: 38.21% | 0 | 40.31% | 2.09% | filegroups/scripts: 59.97% | 0.977 | 0.974 |
 | lnk | 567 | 132 | `general,filetypes/lnk` | filetypes/lnk: 76.54% | 0 | 71.43% | -5.11% | filetypes/lnk: 76.54% | 0.991 | 0.990 |
 | gz | 558 | 12421 | `general` | general: 41.04% | 0 | 0.00% | -41.04% | general: 42.11% | — | 0.684 |
-| xml | 505 | 31443 | `general,filegroups/config,filetypes/xml` | filetypes/xml: 3.37% | 0 | 3.37% | 0.00% | filetypes/xml: 5.54% | 0.088 | 0.113 |
-| text | 494 | 18760 | `general,filetypes/text` | filetypes/text: 5.06% | 0 | 3.44% | -1.62% | general: 5.47% | 0.083 | 0.083 |
+| xml | 505 | 31311 | `general,filegroups/config,filetypes/xml` | filetypes/xml: 3.37% | 0 | 3.37% | 0.00% | filetypes/xml: 5.54% | 0.088 | 0.113 |
+| text | 494 | 18891 | `general,filetypes/text` | filetypes/text: 5.06% | 0 | 3.44% | -1.62% | general: 5.47% | 0.083 | 0.083 |
 | jar | 481 | 1159 | `general,filetypes/jar` | filetypes/jar: 49.90% | 0 | 50.52% | 0.62% | filetypes/jar: 53.64% | 0.937 | 0.933 |
 | java | 456 | 15874 | `general,filegroups/source,filetypes/java` | filegroups/source: 1.32% | 0 | 1.10% | -0.22% | filegroups/source: 1.97% | 0.080 | 0.081 |
 | csharp | 452 | 9833 | `general,filegroups/source,filetypes/csharp` | filegroups/source: 16.59% | 0 | 17.04% | 0.44% | filetypes/csharp: 20.80% | 0.410 | 0.409 |
@@ -49,29 +49,29 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | java_class | 266 | 104445 | `general,filegroups/portable,filetypes/java_class` | filegroups/portable: 62.78% | 0 | 48.12% | -14.66% | filetypes/java_class: 70.68% | 0.847 | 0.852 |
 | npm | 250 | 169 | `general,filetypes/npm` | filetypes/npm: 63.05% | 0 | 62.80% | -0.25% | filetypes/npm: 71.08% | 0.959 | 0.956 |
 | rust | 246 | 12731 | `general,filegroups/source,filetypes/rust` | filegroups/source: 2.44% | 0 | 1.63% | -0.81% | general: 2.85% | 0.012 | 0.059 |
-| apk_android | 236 | 1 | `general` | general: 36.86% | 0 | 0.00% | -36.86% | general: 100.00% | — | 0.996 |
+| apk_android | 235 | 1 | `general` | general: 37.02% | 0 | 0.00% | -37.02% | general: 100.00% | — | 0.996 |
 | crx | 199 | 28 | `general,filetypes/crx` | filetypes/crx: 100.00% | 0 | 100.00% | 0.00% | filetypes/crx: 100.00% | 1.000 | 1.000 |
-| json | 186 | 10800 | `general,filegroups/config,filetypes/json` | filegroups/config: 1.63% | 0 | 1.61% | -0.02% | filegroups/config: 1.63% | 0.073 | 0.064 |
+| json | 186 | 10821 | `general,filegroups/config,filetypes/json` | filegroups/config: 1.63% | 0 | 1.61% | -0.02% | filegroups/config: 1.63% | 0.073 | 0.064 |
 | jpeg | 179 | 4123 | `general,filegroups/media,filetypes/jpeg` | filetypes/jpeg: 11.17% | 0 | 11.17% | 0.00% | filetypes/jpeg: 11.73% | 0.218 | 0.231 |
-| makefile | 102 | 4581 | `general,filegroups/source,filetypes/makefile` | general: 0.98% | 0 | 0.98% | 0.00% | general: 0.98% | 0.017 | 0.017 |
+| makefile | 102 | 4585 | `general,filegroups/source,filetypes/makefile` | general: 0.98% | 0 | 0.98% | 0.00% | general: 0.98% | 0.017 | 0.017 |
 | cab | 90 | 1 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 | plist | 84 | 1677 | `general,filegroups/config,filetypes/plist` | filegroups/config: 3.57% | 0 | 2.38% | -1.19% | filegroups/config: 3.57% | 0.108 | 0.109 |
 | gem | 74 | 125 | `general,filetypes/gem` | filetypes/gem: 94.59% | 0 | 91.89% | -2.70% | filetypes/gem: 95.95% | 0.997 | 0.996 |
-| data | 66 | 1511 | `general` | general: 9.09% | 0 | 0.00% | -9.09% | general: 21.21% | — | 0.338 |
+| data | 66 | 1509 | `general` | general: 9.09% | 0 | 0.00% | -9.09% | general: 21.21% | — | 0.338 |
 | deb | 43 | 1476 | `general,filetypes/deb` | general: 11.63% | 0 | 11.63% | 0.00% | general: 11.63% | 0.157 | 0.144 |
-| perl | 43 | 5681 | `general,filegroups/scripts,filetypes/perl` | filetypes/perl: 72.09% | 0 | 72.09% | 0.00% | filetypes/perl: 72.09% | 0.809 | 0.823 |
+| perl | 43 | 5691 | `general,filegroups/scripts,filetypes/perl` | filetypes/perl: 72.09% | 0 | 72.09% | 0.00% | filetypes/perl: 72.09% | 0.809 | 0.823 |
 | html | 31 | 1993 | `general,filegroups/documents,filetypes/html` | general: 100.00% | 0 | 100.00% | 0.00% | general: 100.00% | 1.000 | 1.000 |
 | chm | 29 | 4 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 | ruby | 26 | 4769 | `general,filegroups/scripts,filetypes/ruby` | general: 26.92% | 0 | 26.92% | 0.00% | general: 26.92% | 0.363 | 0.381 |
 | asar | 21 | 1 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 | go.mod | 20 | 16 | `general` | general: 5.00% | 0 | 0.00% | -5.00% | general: 5.00% | — | 0.740 |
-| cargo.toml | 18 | 282 | `general,filetypes/cargo.toml` | general: 27.78% | 0 | 27.78% | 0.00% | general: 27.78% | 0.507 | 0.507 |
+| cargo.toml | 18 | 290 | `general,filetypes/cargo.toml` | general: 27.78% | 0 | 27.78% | 0.00% | general: 27.78% | 0.507 | 0.507 |
 | groovy | 16 | 1005 | `general,filetypes/groovy` | general: 6.25% | 0 | 6.25% | 0.00% | general: 6.25% | 0.081 | 0.080 |
 | package-lock.json | 14 | 103 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.177 |
 | xz | 14 | 5217 | `general` | general: 78.57% | 0 | 7.14% | -71.43% | general: 78.57% | — | 0.847 |
-| lua | 13 | 2449 | `general,filegroups/scripts,filetypes/lua` | general: 69.23% | 0 | 46.15% | -23.08% | general: 69.23% | 0.723 | 0.734 |
-| dockerfile | 12 | 275 | `general,filetypes/dockerfile` | filetypes/dockerfile: 25.00% | 0 | 33.33% | 8.33% | filetypes/dockerfile: 33.33% | 0.417 | 0.408 |
-| markdown | 11 | 5938 | `general,filetypes/markdown` | general: 72.73% | 0 | 0.00% | -72.73% | general: 72.73% | 0.455 | 0.692 |
+| lua | 13 | 2440 | `general,filegroups/scripts,filetypes/lua` | general: 69.23% | 0 | 46.15% | -23.08% | general: 69.23% | 0.723 | 0.734 |
+| dockerfile | 12 | 276 | `general,filetypes/dockerfile` | filetypes/dockerfile: 25.00% | 0 | 33.33% | 8.33% | filetypes/dockerfile: 33.33% | 0.417 | 0.408 |
+| markdown | 11 | 5932 | `general,filetypes/markdown` | general: 72.73% | 0 | 0.00% | -72.73% | general: 72.73% | 0.455 | 0.692 |
 | chrome_manifest | 10 | 31 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 | swift | 7 | 4112 | `general,filegroups/source` | general: 14.29% | 0 | 0.00% | -14.29% | general: 14.29% | — | 0.177 |
 | go.sum | 6 | 8 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.580 |
@@ -79,9 +79,9 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | zig | 6 | 21 | `general` | general: 16.67% | 0 | 0.00% | -16.67% | general: 33.33% | — | 0.476 |
 | objective_c | 5 | 2876 | `general` | general: 20.00% | 0 | 0.00% | -20.00% | general: 20.00% | — | 0.301 |
 | vsix | 4 | 131 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 25.00% | — | 0.387 |
-| clojure | 3 | 868 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
+| clojure | 3 | 869 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 | crate | 3 | 387 | `general` | general: 33.33% | 0 | 0.00% | -33.33% | general: 33.33% | — | 0.346 |
-| nupkg | 2 | 21 | `general` | general: 50.00% | 0 | 0.00% | -50.00% | general: 50.00% | — | 0.559 |
+| nupkg | 2 | 264 | `general` | general: 50.00% | 0 | 0.00% | -50.00% | general: 50.00% | — | 0.559 |
 | systemd_service | 2 | 235 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.007 |
 | applescript | 1 | 5 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 | conda | 1 | 160 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.023 |
@@ -91,7 +91,7 @@ Columns: best single route's recall at FP budget, vs deployed OR-rule's recall a
 | gyp | 1 | 20 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.071 |
 | odf | 1 | 0 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | — |
 | pkg_macos | 1 | 9 | `general` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.167 |
-| svg | 1 | 4158 | `general,filegroups/media` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.002 |
+| svg | 1 | 4566 | `general,filegroups/media` | general: 0.00% | 0 | 0.00% | 0.00% | general: 0.00% | — | 0.002 |
 | xpi | 1 | 14 | `general` | general: 100.00% | 0 | 0.00% | -100.00% | general: 100.00% | — | 1.000 |
 
 ## Deployed OR-rule at L0 hostile
@@ -119,7 +119,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 23.88% | 86.68% | -62.80% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -208,7 +208,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 23.88% | 86.68% | -62.80% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -297,7 +297,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 23.97% | 86.68% | -62.71% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -386,7 +386,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 23.97% | 86.68% | -62.71% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -475,7 +475,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 23.97% | 86.68% | -62.71% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -564,7 +564,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 23.97% | 86.68% | -62.71% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -653,7 +653,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 24.05% | 86.68% | -62.63% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.06% | 30.79% | -30.73% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -742,7 +742,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 24.14% | 86.68% | -62.54% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -831,7 +831,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 24.23% | 86.68% | -62.46% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -920,7 +920,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 24.31% | 86.68% | -62.37% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -1009,7 +1009,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 24.48% | 86.68% | -62.20% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -1098,7 +1098,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 24.57% | 86.68% | -62.11% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -1187,7 +1187,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 24.83% | 86.68% | -61.86% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -1276,7 +1276,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | 7z | `general` | 0 | 25.09% | 86.68% | -61.60% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -1365,7 +1365,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole_doc | `general` | 0 | 5.19% | 66.24% | -61.05% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -1454,7 +1454,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole_doc | `general` | 0 | 5.20% | 66.24% | -61.04% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | ooxml | `general` | 0 | 0.14% | 30.79% | -30.65% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -1543,7 +1543,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | ole_doc | `general` | 0 | 12.77% | 66.24% | -53.48% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 0.00% | 41.04% | -41.04% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
@@ -1632,7 +1632,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | zst | `general` | 0 | 44.27% | 93.06% | -48.79% |
 | ole_doc | `general` | 0 | 20.26% | 66.24% | -45.99% |
 | gz | `general` | 0 | 0.18% | 41.04% | -40.86% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
@@ -1721,7 +1721,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | zst | `general` | 0 | 45.91% | 93.06% | -47.16% |
 | ole_doc | `general` | 0 | 21.33% | 66.24% | -44.92% |
 | gz | `general` | 0 | 0.18% | 41.04% | -40.86% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
@@ -1807,7 +1807,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | rar | `general` | 0 | 44.87% | 99.96% | -55.09% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | gz | `general` | 0 | 1.08% | 41.04% | -39.96% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | 7z | `general` | 0 | 50.95% | 86.68% | -35.74% |
 | zst | `general` | 0 | 59.16% | 93.06% | -33.90% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
@@ -1894,7 +1894,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | xz | `general` | 0 | 21.43% | 78.57% | -57.14% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | rar | `general` | 0 | 53.33% | 99.96% | -46.63% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | gz | `general` | 0 | 5.20% | 41.04% | -35.84% |
 | crate | `general` | 0 | 0.00% | 33.33% | -33.33% |
 | 7z | `general` | 0 | 57.99% | 86.68% | -28.69% |
@@ -1982,7 +1982,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | xz | `general` | 0 | 21.43% | 78.57% | -57.14% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | pkg_info | `general` | 0 | 50.24% | 94.94% | -44.70% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | gz | `general` | 0 | 13.80% | 41.04% | -27.24% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | 7z | `general` | 0 | 65.38% | 86.68% | -21.31% |
@@ -2069,7 +2069,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | python_bytecode | `general` | 0 | 10.11% | 68.99% | -58.88% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | xz | `general` | 0 | 28.57% | 78.57% | -50.00% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | pkg_info | `general` | 0 | 67.41% | 94.94% | -27.53% |
 | gz | `general` | 0 | 17.03% | 41.04% | -24.01% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
@@ -2155,7 +2155,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | python_bytecode | `general` | 0 | 12.36% | 68.99% | -56.63% |
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | xz | `general` | 0 | 28.57% | 78.57% | -50.00% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | gz | `general` | 0 | 19.00% | 41.04% | -22.04% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
@@ -2238,7 +2238,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | xz | `general` | 0 | 28.57% | 78.57% | -50.00% |
 | python_bytecode | `general` | 0 | 19.78% | 68.99% | -49.21% |
-| apk_android | `` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `` | 0 | 0.00% | 37.02% | -37.02% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | gz | `general` | 0 | 21.86% | 41.04% | -19.18% |
@@ -2321,7 +2321,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | nupkg | `general` | 0 | 0.00% | 50.00% | -50.00% |
 | xz | `general` | 0 | 28.57% | 78.57% | -50.00% |
 | python_bytecode | `general` | 0 | 23.15% | 68.99% | -45.84% |
-| apk_android | `general` | 0 | 0.00% | 36.86% | -36.86% |
+| apk_android | `general` | 0 | 0.00% | 37.02% | -37.02% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | gz | `general` | 0 | 23.12% | 41.04% | -17.92% |
@@ -2404,7 +2404,7 @@ Per filetype, the OR-rule operating point and the gap to the best single route's
 | xz | `general` | 0 | 28.57% | 78.57% | -50.00% |
 | chm | `general` | 0 | 55.17% | 100.00% | -44.83% |
 | python_bytecode | `general` | 0 | 29.66% | 68.99% | -39.33% |
-| apk_android | `general` | 0 | 0.42% | 36.86% | -36.44% |
+| apk_android | `general` | 0 | 0.43% | 37.02% | -36.60% |
 | lua | `filegroups/scripts,filetypes/lua` | 0 | 46.15% | 69.23% | -23.08% |
 | objective_c | `general` | 0 | 0.00% | 20.00% | -20.00% |
 | pyproject.toml | `general` | 0 | 0.00% | 16.67% | -16.67% |
