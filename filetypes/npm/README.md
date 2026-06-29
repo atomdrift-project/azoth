@@ -4,11 +4,11 @@ LightGBM specialist for `npm`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `npm` slice of the locked test partition: 172 malware / 28 benign (200 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `npm` slice of the locked test partition: 250 malware / 169 benign (419 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.976968 | 0.864306 | 0.955307 | — | 0.1458 |
+| 0.989385 | 0.984142 | 0.955466 | 90.80% | 0.0519 |
 
 ## Specialist Performance
 
@@ -16,7 +16,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `npm` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.976968 | 0.864306 | 0.955307 | — | 0.1458 | — |
+| 0.989385 | 0.984142 | 0.955466 | 90.80% | 0.0519 | — |
+
+## Recall by FP level (per 100M benigns)
+
+<img src="recall_curve.svg" alt="npm: recall by FP level (per 100M benigns)" height="300" />
+
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
 
 ## Routing
 
@@ -27,8 +33,8 @@ Files matching `npm` are scored by `general`, `filetypes/npm`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,405 (1,405 mal / 1,000 ben) |
-| Feature spec | 9330 features (`general_shared`) |
+| Train rows | 4,827 (1,982 mal / 2,845 ben) |
+| Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
@@ -36,5 +42,5 @@ Files matching `npm` are scored by `general`, `filetypes/npm`. The ensemble's pe
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| early_stopping_rounds | 25 |
 | device | auto |

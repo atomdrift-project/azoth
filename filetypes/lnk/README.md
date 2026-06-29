@@ -4,11 +4,11 @@ LightGBM specialist for `lnk`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 566 malware / 132 benign (698 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 567 malware / 132 benign (699 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.979200 | 0.913059 | 0.921803 | 76.68% | 0.1298 |
+| 0.975740 | 0.898596 | 0.904084 | 75.31% | 0.1215 |
 
 ## Specialist Performance
 
@@ -33,8 +33,8 @@ Files matching `lnk` are scored by `general`. The ensemble's per-row score is wh
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,425 (3,492 mal / 933 ben) |
-| Feature spec | 9330 features (`general_shared`) |
+| Train rows | 4,440 (3,502 mal / 938 ben) |
+| Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
@@ -42,5 +42,5 @@ Files matching `lnk` are scored by `general`. The ensemble's per-row score is wh
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| early_stopping_rounds | 25 |
 | device | auto |

@@ -4,11 +4,11 @@ LightGBM specialist for `rtf`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` slice of the locked test partition: 829 malware / 55 benign (884 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` slice of the locked test partition: 830 malware / 55 benign (885 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998848 | 0.990229 | 0.989666 | 100.00% | 0.0269 |
+| 0.999098 | 0.986221 | 0.988478 | 97.95% | 0.0278 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998848 | 0.990229 | 0.989666 | 100.00% | 0.0269 | — |
+| — | — | — | — | - | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,20 +26,20 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `rtf` are scored by `filegroups/documents`, `filetypes/rtf`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `rtf` are scored by `general`, `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 5,785 (5,314 mal / 471 ben) |
-| Feature spec | 9330 features (`general_shared`) |
+| Train rows | 6,044 (5,313 mal / 731 ben) |
+| Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |
 | min_child_samples | 100 |
-| learning_rate | 0.03 |
+| learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |

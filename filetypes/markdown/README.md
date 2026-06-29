@@ -4,11 +4,11 @@ LightGBM specialist for `markdown`. Member of the Azoth routed ensemble; bundle 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `markdown` slice of the locked test partition: 10 malware / 4,786 benign (4,796 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `markdown` slice of the locked test partition: 11 malware / 5,933 benign (5,944 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.955556 | 0.999896 | 0.909091 | 100.00% | 0.0048 |
+| 0.752405 | 0.994997 | 0.842105 | 81.82% | 0.0077 |
 
 ## Specialist Performance
 
@@ -33,8 +33,8 @@ Files matching `markdown` are scored by `general`. The ensemble's per-row score 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 41,517 (34 mal / 41,483 ben) |
-| Feature spec | 9330 features (`general_shared`) |
+| Train rows | 67,185 (77 mal / 67,108 ben) |
+| Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

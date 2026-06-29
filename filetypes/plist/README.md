@@ -2,13 +2,15 @@
 
 LightGBM specialist for `plist`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `plist` slice of the locked test partition: 83 malware / 1,641 benign (1,724 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `plist` slice of the locked test partition: 84 malware / 1,677 benign (1,761 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.188978 | 0.780453 | 0.345455 | 9.64% | 0.0415 |
+| 0.106874 | 0.644682 | 0.149733 | 4.76% | 0.0443 |
 
 ## Specialist Performance
 
@@ -16,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `plist`
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.189372 | 0.666490 | 0.345455 | 4.82% | 0.0516 | — |
+| 0.109345 | 0.622515 | 0.149733 | 3.57% | 0.0489 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +35,8 @@ Files matching `plist` are scored by `filegroups/config`, `filetypes/plist`. The
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 11,719 (39 mal / 11,680 ben) |
-| Feature spec | 9330 features (`general_shared`) |
+| Train rows | 83,763 (42 mal / 83,721 ben) |
+| Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

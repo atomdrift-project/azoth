@@ -4,11 +4,11 @@ LightGBM specialist for `png`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `png` slice of the locked test partition: 1,116 malware / 24,087 benign (25,203 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `png` slice of the locked test partition: 1,090 malware / 24,532 benign (25,622 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.109764 | 0.559741 | 0.114420 | 5.56% | 0.0403 |
+| 0.117939 | 0.587128 | 0.125443 | 5.50% | 0.0404 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `png` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.111115 | 0.566546 | 0.116920 | 5.38% | 0.0421 | — |
+| 0.117939 | 0.587128 | 0.125443 | 5.50% | 0.0404 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `png` are scored by `filegroups/media`, `filetypes/png`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `png` are scored by `general`, `filegroups/media`, `filetypes/png`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 170,203 (443 mal / 169,760 ben) |
-| Feature spec | 9330 features (`general_shared`) |
+| Train rows | 269,043 (442 mal / 268,601 ben) |
+| Feature spec | 229 features (`general_shared`) |
 | n_estimators | 300 |
 | num_leaves | 96 |
 | max_depth | 12 |

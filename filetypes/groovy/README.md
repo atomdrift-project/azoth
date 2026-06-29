@@ -4,11 +4,11 @@ LightGBM specialist for `groovy`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 16 malware / 990 benign (1,006 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 16 malware / 1,005 benign (1,021 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.216618 | 0.858333 | 0.342857 | 18.75% | 0.0152 |
+| 0.108251 | 0.535137 | 0.166667 | 12.50% | 0.0234 |
 
 ## Specialist Performance
 
@@ -33,8 +33,8 @@ Files matching `groovy` are scored by `general`. The ensemble's per-row score is
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,750 (9 mal / 6,741 ben) |
-| Feature spec | 9330 features (`general_shared`) |
+| Train rows | 8,445 (28 mal / 8,417 ben) |
+| Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

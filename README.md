@@ -1,10 +1,10 @@
 # Azoth
 
-Static malware detection by routed ensemble. A general LightGBM model scores every file. Per-filetype specialists score files in their domain — PE, ELF, JavaScript, PDF, and 49 more. A file is flagged when any route's score crosses its operating-point threshold.
+Static malware detection by routed ensemble. A general LightGBM model scores every file. Per-filetype specialists score files in their domain — PE, ELF, JavaScript, PDF, and 52 more. A file is flagged when any route's score crosses its operating-point threshold.
 
 The point of routing is that the evidence differs by format. A PE's section table is signal. A PDF's stream dictionary is signal. A shell script's token distribution is signal. One generalist trained over all of them learns averages; a specialist trained on one of them learns the format.
 
-Thresholds were fit on a 1,077,447-row dev partition (12.5% of the labeled corpus). The numbers in this README come from a locked 1,076,574-row test partition, disjoint from training and calibration. The bundle is loaded at scan time by [litmus](https://codeberg.org/atomdrift/litmus). EMBER 2024 reference: Joyce et al., *KDD'25*.
+Thresholds were fit on a 1,554,317-row dev partition (12.5% of the labeled corpus). The numbers in this README come from a locked 1,553,012-row test partition, disjoint from training and calibration. The bundle is loaded at scan time by [litmus](https://codeberg.org/atomdrift/litmus). EMBER 2024 reference: Joyce et al., *KDD'25*.
 
 ## Use
 
@@ -12,7 +12,7 @@ Input is a JSON report produced by `cleave`. Output is one verdict — `benign` 
 
 ## Bundle layout
 
-`config.json` records the deployed thresholds. Each route lives in its own subdirectory: `general/`, one of 7 `filegroups/<name>/`, or one of 53 `filetypes/<name>/`. A route directory carries two files: `model.txt` (LightGBM) and `feature_spec.json` (the features the model expects). Scores are the model's raw probabilities — there is no separate probability calibrator.
+`config.json` records the deployed thresholds. Each route lives in its own subdirectory: `general/`, one of 7 `filegroups/<name>/`, or one of 56 `filetypes/<name>/`. A route directory carries two files: `model.txt` (LightGBM) and `feature_spec.json` (the features the model expects). Scores are the model's raw probabilities — there is no separate probability calibrator.
 
 Further reading: [ENSEMBLE_MODEL.md](ENSEMBLE_MODEL.md) for routing details, [GENERALIST_MODEL.md](GENERALIST_MODEL.md) for the single-model baseline. License: Apache 2.0.
 
@@ -26,47 +26,51 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 
 | File type | Test mal / ben | PR AUC | ROC AUC | F1 | Recall @ L50 | Δ vs EMBER 2024 |
 |---|---:|---:|---:|---:|---:|---:|
-| [`rtf`](filetypes/rtf/README.md) | 829 / 55 | 0.998848 | 0.990229 | 0.989666 | 100.00% | — |
-| [`package.json`](filetypes/package.json/README.md) | 2,344 / 3,158 | 0.996262 | 0.995181 | 0.991219 | 98.63% | — |
-| [`elf`](filetypes/elf/README.md) | 23,425 / 24,529 | 0.999748 | 0.999734 | 0.995958 | 97.88% | PR +0.006448 / ROC +0.006434 |
-| [`gem`](filetypes/gem/README.md) | 29 / 97 | 0.991668 | 0.997156 | 0.965517 | 96.55% | — |
-| [`macho`](filetypes/macho/README.md) | 342 / 1,644 | 0.990628 | 0.996526 | 0.971599 | 95.61% | — |
-| [`tar`](filetypes/tar/README.md) | 2,807 / 5,186 | 0.991008 | 0.991790 | 0.971387 | 91.02% | — |
-| `ole_doc` | 10,588 / 3,518 | 0.994263 | 0.981213 | 0.964140 | 90.98% | — |
-| [`vbs`](filetypes/vbs/README.md) | 1,531 / 429 | 0.994544 | 0.983745 | 0.969317 | 86.74% | — |
-| [`shell`](filetypes/shell/README.md) | 2,039 / 8,665 | 0.978053 | 0.990506 | 0.941031 | 84.80% | — |
-| [`powershell`](filetypes/powershell/README.md) | 715 / 332 | 0.982442 | 0.960626 | 0.940159 | 83.36% | — |
-| [`perl`](filetypes/perl/README.md) | 41 / 5,536 | 0.804328 | 0.911486 | 0.857143 | 80.49% | — |
-| [`jar`](filetypes/jar/README.md) | 483 / 674 | 0.941571 | 0.941602 | 0.887417 | 78.26% | — |
-| [`lnk`](filetypes/lnk/README.md) | 566 / 132 | 0.979200 | 0.913059 | 0.921803 | 76.68% | — |
-| [`whl`](filetypes/whl/README.md) | 104 / 607 | 0.887052 | 0.936953 | 0.835165 | 75.96% | — |
-| [`pe`](filetypes/pe/README.md) | 168,802 / 20,889 | 0.999425 | 0.995467 | 0.990536 | 75.20% | PR +0.001125 / ROC -0.002733 |
-| [`pdf`](filetypes/pdf/README.md) | 22,516 / 3,091 | 0.989491 | 0.926535 | 0.966748 | 74.82% | PR -0.003809 / ROC -0.064665 |
-| [`php`](filetypes/php/README.md) | 743 / 20,913 | 0.733997 | 0.883101 | 0.760099 | 62.45% | — |
-| [`javascript`](filetypes/javascript/README.md) | 15,559 / 85,935 | 0.941720 | 0.972645 | 0.901999 | 59.48% | — |
-| [`kotlin`](filetypes/kotlin/README.md) | 3,901 / 7,344 | 0.907548 | 0.915430 | 0.869286 | 58.32% | — |
-| [`zip`](filetypes/zip/README.md) | 13,116 / 2,211 | 0.970894 | 0.848844 | 0.936552 | 55.23% | — |
-| [`ruby`](filetypes/ruby/README.md) | 25 / 3,536 | 0.469768 | 0.671024 | 0.585366 | 48.00% | — |
-| [`python`](filetypes/python/README.md) | 2,922 / 29,969 | 0.769201 | 0.878419 | 0.782097 | 44.35% | — |
-| [`cargo.toml`](filetypes/cargo.toml/README.md) | 30 / 244 | 0.434866 | 0.795082 | 0.418605 | 33.33% | — |
-| [`csharp`](filetypes/csharp/README.md) | 458 / 9,814 | 0.374324 | 0.784269 | 0.389439 | 23.80% | — |
-| [`deb`](filetypes/deb/README.md) | 54 / 1,023 | 0.153316 | 0.634427 | 0.169492 | 22.22% | — |
-| [`batch`](filetypes/batch/README.md) | 22,130 / 751 | 0.994076 | 0.910754 | 0.995103 | 21.54% | — |
-| [`xml`](filetypes/xml/README.md) | 583 / 33,471 | 0.203471 | 0.622033 | 0.291725 | 12.35% | — |
-| [`plist`](filetypes/plist/README.md) | 83 / 1,641 | 0.188978 | 0.780453 | 0.345455 | 9.64% | — |
-| [`go`](filetypes/go/README.md) | 1,937 / 16,583 | 0.522987 | 0.843839 | 0.512793 | 6.81% | — |
-| [`png`](filetypes/png/README.md) | 1,116 / 24,087 | 0.109764 | 0.559741 | 0.114420 | 5.56% | — |
-| [`text`](filetypes/text/README.md) | 752 / 15,564 | 0.107235 | 0.579433 | 0.128649 | 4.52% | — |
-| [`java`](filetypes/java/README.md) | 448 / 11,425 | 0.155522 | 0.745996 | 0.221840 | 4.46% | — |
-| [`rust`](filetypes/rust/README.md) | 244 / 12,619 | 0.068253 | 0.603878 | 0.105946 | 4.10% | — |
-| [`makefile`](filetypes/makefile/README.md) | 101 / 4,367 | 0.029240 | 0.498590 | 0.074766 | 0.99% | — |
-| [`json`](filetypes/json/README.md) | 148 / 8,085 | 0.018976 | 0.456131 | 0.039526 | 0.68% | — |
-| [`npm`](filetypes/npm/README.md) | 172 / 28 | 0.976968 | 0.864306 | 0.955307 | — | — |
-| `applescript` | 26 / 40 | 0.583084 | 0.539423 | 0.590909 | — | — |
-| [`c`](filetypes/c/README.md) | 2,255 / 105,462 | — | — | — | — | — |
-| [`java_class`](filetypes/java_class/README.md) | 262 / 101,848 | — | — | — | — | — |
-| [`jpeg`](filetypes/jpeg/README.md) | 183 / 4,001 | — | — | — | — | — |
-| **Weighted avg** (by test pop) | **883,912** | **0.7892** | **0.8934** | **0.7868** | **56.3%** | — |
+| [`html`](filetypes/html/README.md) | 31 / 1,993 | 1.000000 | 1.000000 | 1.000000 | 100.00% | — |
+| [`rtf`](filetypes/rtf/README.md) | 830 / 55 | 0.999098 | 0.986221 | 0.988478 | 97.95% | — |
+| [`pkg_info`](filetypes/pkg_info/README.md) | 1,264 / 484 | 0.998356 | 0.995977 | 0.982315 | 97.23% | — |
+| [`package.json`](filetypes/package.json/README.md) | 2,379 / 3,512 | 0.997523 | 0.997258 | 0.989878 | 96.93% | — |
+| [`registry`](filetypes/registry/README.md) | 42 / 4,160 | 0.775017 | 0.998060 | 0.756757 | 95.24% | — |
+| [`gem`](filetypes/gem/README.md) | 74 / 125 | 0.961984 | 0.960216 | 0.957746 | 94.59% | — |
+| [`macho`](filetypes/macho/README.md) | 346 / 1,794 | 0.983369 | 0.994704 | 0.946108 | 91.62% | — |
+| [`elf`](filetypes/elf/README.md) | 23,502 / 35,713 | 0.999938 | 0.999956 | 0.998064 | 91.43% | PR +0.006638 / ROC +0.006656 |
+| [`tar`](filetypes/tar/README.md) | 2,774 / 6,035 | 0.991590 | 0.993042 | 0.974744 | 91.31% | — |
+| [`ole_doc`](filetypes/ole_doc/README.md) | 10,588 / 3,518 | 0.994263 | 0.981213 | 0.964140 | 90.98% | — |
+| [`npm`](filetypes/npm/README.md) | 250 / 169 | 0.989385 | 0.984142 | 0.955466 | 90.80% | — |
+| [`vbs`](filetypes/vbs/README.md) | 1,553 / 434 | 0.992209 | 0.971292 | 0.957454 | 88.35% | — |
+| [`jar`](filetypes/jar/README.md) | 481 / 1,159 | 0.958461 | 0.969880 | 0.923574 | 85.24% | — |
+| [`whl`](filetypes/whl/README.md) | 339 / 652 | 0.948916 | 0.953945 | 0.906298 | 84.96% | — |
+| [`shell`](filetypes/shell/README.md) | 2,055 / 9,594 | 0.970904 | 0.987080 | 0.925608 | 83.84% | — |
+| [`powershell`](filetypes/powershell/README.md) | 717 / 333 | 0.987303 | 0.973890 | 0.949650 | 81.45% | — |
+| [`perl`](filetypes/perl/README.md) | 43 / 5,691 | 0.806096 | 0.958104 | 0.839506 | 79.07% | — |
+| [`pe`](filetypes/pe/README.md) | 169,035 / 22,111 | 0.999584 | 0.996939 | 0.992922 | 77.63% | PR +0.001284 / ROC -0.001261 |
+| [`pdf`](filetypes/pdf/README.md) | 22,516 / 3,103 | 0.997834 | 0.985852 | 0.986752 | 76.49% | PR +0.004534 / ROC -0.005348 |
+| [`lnk`](filetypes/lnk/README.md) | 567 / 132 | 0.975740 | 0.898596 | 0.904084 | 75.31% | — |
+| [`java_class`](filetypes/java_class/README.md) | 266 / 104,445 | 0.830619 | 0.954711 | 0.867188 | 72.56% | — |
+| [`python_bytecode`](filetypes/python_bytecode/README.md) | 445 / 56,346 | 0.768788 | 0.885057 | 0.836272 | 66.74% | — |
+| [`php`](filetypes/php/README.md) | 773 / 22,018 | 0.788798 | 0.908070 | 0.792227 | 63.26% | — |
+| [`kotlin`](filetypes/kotlin/README.md) | 3,896 / 6,920 | 0.955423 | 0.961603 | 0.901782 | 61.45% | — |
+| [`javascript`](filetypes/javascript/README.md) | 15,583 / 93,214 | 0.944588 | 0.976975 | 0.898102 | 61.03% | — |
+| [`python`](filetypes/python/README.md) | 2,584 / 33,556 | 0.818080 | 0.927506 | 0.802658 | 57.89% | — |
+| [`zip`](filetypes/zip/README.md) | 12,973 / 2,097 | 0.993860 | 0.965653 | 0.975384 | 55.05% | — |
+| [`ooxml`](filetypes/ooxml/README.md) | 8,541 / 295 | 0.987044 | 0.722723 | 0.983024 | 39.84% | — |
+| [`ruby`](filetypes/ruby/README.md) | 26 / 4,769 | 0.362894 | 0.774642 | 0.450000 | 34.62% | — |
+| [`csharp`](filetypes/csharp/README.md) | 452 / 9,833 | 0.409328 | 0.843619 | 0.400691 | 25.22% | — |
+| [`jpeg`](filetypes/jpeg/README.md) | 179 / 4,123 | 0.197596 | 0.592137 | 0.239234 | 21.23% | — |
+| [`deb`](filetypes/deb/README.md) | 43 / 1,476 | 0.175565 | 0.742768 | 0.208333 | 18.60% | — |
+| [`batch`](filetypes/batch/README.md) | 22,123 / 765 | 0.989857 | 0.821600 | 0.990518 | 14.71% | — |
+| [`go`](filetypes/go/README.md) | 1,938 / 18,126 | 0.242392 | 0.670368 | 0.232938 | 6.91% | — |
+| [`text`](filetypes/text/README.md) | 494 / 18,924 | 0.080226 | 0.496782 | 0.108209 | 5.67% | — |
+| [`png`](filetypes/png/README.md) | 1,090 / 24,532 | 0.117939 | 0.587128 | 0.125443 | 5.50% | — |
+| [`java`](filetypes/java/README.md) | 456 / 15,874 | 0.080299 | 0.459816 | 0.137405 | 5.26% | — |
+| [`xml`](filetypes/xml/README.md) | 504 / 31,117 | 0.179242 | 0.517772 | 0.267537 | 4.76% | — |
+| [`plist`](filetypes/plist/README.md) | 84 / 1,677 | 0.106874 | 0.644682 | 0.149733 | 4.76% | — |
+| [`rust`](filetypes/rust/README.md) | 246 / 12,733 | 0.073727 | 0.574489 | 0.099010 | 4.47% | — |
+| [`makefile`](filetypes/makefile/README.md) | 102 / 4,585 | 0.033679 | 0.441990 | 0.048193 | 2.94% | — |
+| [`json`](filetypes/json/README.md) | 187 / 10,867 | 0.038455 | 0.605379 | 0.051125 | 1.60% | — |
+| [`crx`](filetypes/crx/README.md) | 199 / 28 | 1.000000 | 1.000000 | 1.000000 | — | — |
+| [`c`](filetypes/c/README.md) | 2,267 / 109,281 | — | — | — | — | — |
+| **Weighted avg** (by test pop) | **1,003,205** | **0.7854** | **0.8913** | **0.7894** | **59.4%** | — |
 
 PR AUC summarizes recall against precision across operating points. Recall@L50 is the selection-budget headline; for filetypes whose calibration slice cannot resolve L50 (0.5 FP/M) empirically, that level shares an operating point with its neighbours (its measured ceiling). EMBER 2024 deltas are reported where Joyce et al. publish per-filetype numbers (Table 5, All files → X).
 
@@ -78,7 +82,7 @@ The corpus-weighted ensemble curve weights each filetype's ensemble recall by th
 
 ## Provenance
 
-Calibration snapshot `1872261008`, score-table `ca3dc1380066`, model-set `4f11eb5b7803`. 1 general, 7 filegroup, 53 filetype routes.
+Calibration snapshot `1938482389`, score-table `28758023b455`, model-set `4bdd823703f8`. 1 general, 7 filegroup, 56 filetype routes.
 
 ## Limits
 

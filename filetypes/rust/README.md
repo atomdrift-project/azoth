@@ -6,11 +6,11 @@ LightGBM specialist for `rust`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `rust` slice of the locked test partition: 244 malware / 12,619 benign (12,863 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `rust` slice of the locked test partition: 246 malware / 12,733 benign (12,979 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.068253 | 0.603878 | 0.105946 | 4.10% | 0.0208 |
+| 0.073727 | 0.574489 | 0.099010 | 4.47% | 0.0266 |
 
 ## Specialist Performance
 
@@ -35,8 +35,8 @@ Files matching `rust` are scored by `general`, `filegroups/source`. The ensemble
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 89,036 (136 mal / 88,900 ben) |
-| Feature spec | 9330 features (`general_shared`) |
+| Train rows | 277,257 (178 mal / 277,079 ben) |
+| Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
