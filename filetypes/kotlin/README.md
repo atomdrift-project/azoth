@@ -33,7 +33,7 @@ Files matching `kotlin` are scored by `general`, `filegroups/source`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 83,603 (16,934 mal / 66,669 ben) |
+| Train rows | 80,988 (16,908 mal / 64,080 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

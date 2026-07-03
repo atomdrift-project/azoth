@@ -35,7 +35,7 @@ Files matching `rust` are scored by `general`, `filegroups/source`. The ensemble
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 277,257 (178 mal / 277,079 ben) |
+| Train rows | 277,669 (185 mal / 277,484 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

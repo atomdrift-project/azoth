@@ -33,7 +33,7 @@ Files matching `ooxml` are scored by `general`. The ensemble's per-row score is 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 23,485 (20,823 mal / 2,662 ben) |
+| Train rows | 23,524 (20,853 mal / 2,671 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

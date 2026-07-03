@@ -35,7 +35,7 @@ Files matching `xml` are scored by `general`, `filegroups/config`, `filetypes/xm
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 366,383 (295 mal / 366,088 ben) |
+| Train rows | 352,993 (286 mal / 352,707 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

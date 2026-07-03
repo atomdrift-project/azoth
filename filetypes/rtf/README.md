@@ -33,7 +33,7 @@ Files matching `rtf` are scored by `general`, `filegroups/documents`. The ensemb
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,044 (5,313 mal / 731 ben) |
+| Train rows | 6,046 (5,314 mal / 732 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |

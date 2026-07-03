@@ -33,7 +33,7 @@ Files matching `clojure` are scored by `general`. The ensemble's per-row score i
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 7,357 (53 mal / 7,304 ben) |
+| Train rows | 7,247 (50 mal / 7,197 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

@@ -33,7 +33,7 @@ Files matching `lua` are scored by `general`, `filegroups/scripts`. The ensemble
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 22,313 (85 mal / 22,228 ben) |
+| Train rows | 22,419 (89 mal / 22,330 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

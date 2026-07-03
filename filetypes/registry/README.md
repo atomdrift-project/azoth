@@ -33,7 +33,7 @@ Files matching `registry` are scored by `general`, `filetypes/registry`. The ens
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 29,366 (342 mal / 29,024 ben) |
+| Train rows | 63,677 (449 mal / 63,228 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

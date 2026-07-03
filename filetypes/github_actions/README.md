@@ -1,6 +1,6 @@
 # `filetype/github_actions`
 
-LightGBM specialist for `github-actions`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
+LightGBM specialist for `github_actions`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
 ## Ensemble Performance
 
@@ -33,7 +33,7 @@ Files matching `github_actions` are scored by `general`. The ensemble's per-row 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 12,748 (102 mal / 12,646 ben) |
+| Train rows | 3,029 (25 mal / 3,004 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

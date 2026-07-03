@@ -2,6 +2,8 @@
 
 LightGBM specialist for `makefile`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
+
 ## Ensemble Performance
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `makefile` slice of the locked test partition: 102 malware / 4,585 benign (4,687 rows).
@@ -33,7 +35,7 @@ Files matching `makefile` are scored by `general`, `filegroups/source`. The ense
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 50,656 (24 mal / 50,632 ben) |
+| Train rows | 50,838 (24 mal / 50,814 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

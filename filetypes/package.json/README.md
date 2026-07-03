@@ -33,7 +33,7 @@ Files matching `package.json` are scored by `general`, `filegroups/config`, `fil
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 52,073 (17,478 mal / 34,595 ben) |
+| Train rows | 55,575 (17,515 mal / 38,060 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

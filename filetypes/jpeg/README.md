@@ -33,7 +33,7 @@ Files matching `jpeg` are scored by `general`, `filetypes/jpeg`. The ensemble's 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 38,474 (270 mal / 38,204 ben) |
+| Train rows | 38,533 (264 mal / 38,269 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

@@ -33,7 +33,7 @@ Files matching `png` are scored by `general`, `filegroups/media`, `filetypes/png
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 269,043 (442 mal / 268,601 ben) |
+| Train rows | 315,039 (438 mal / 314,601 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 300 |
 | num_leaves | 96 |

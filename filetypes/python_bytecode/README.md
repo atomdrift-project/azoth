@@ -33,7 +33,7 @@ Files matching `python_bytecode` are scored by `general`. The ensemble's per-row
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 503,515 (2,262 mal / 501,253 ben) |
+| Train rows | 577,803 (2,118 mal / 575,685 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

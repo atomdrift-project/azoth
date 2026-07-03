@@ -33,7 +33,7 @@ Files matching `text` are scored by `general`, `filetypes/text`. The ensemble's 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 200,934 (227 mal / 200,707 ben) |
+| Train rows | 213,547 (232 mal / 213,315 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 250 |
 | num_leaves | 96 |

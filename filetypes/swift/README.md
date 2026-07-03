@@ -2,8 +2,6 @@
 
 LightGBM specialist for `swift`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
-
 ## Ensemble Performance
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `swift` slice of the locked test partition: 7 malware / 4,112 benign (4,119 rows).
@@ -35,7 +33,7 @@ Files matching `swift` are scored by `general`, `filegroups/source`. The ensembl
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 32,686 (34 mal / 32,652 ben) |
+| Train rows | 32,808 (43 mal / 32,765 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

@@ -33,7 +33,7 @@ Files matching `gem` are scored by `general`. The ensemble's per-row score is wh
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,647 (756 mal / 1,891 ben) |
+| Train rows | 2,759 (746 mal / 2,013 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

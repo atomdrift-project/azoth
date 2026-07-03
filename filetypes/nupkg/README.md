@@ -33,7 +33,7 @@ Files matching `nupkg` are scored by `general`. The ensemble's per-row score is 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,029 (44 mal / 1,985 ben) |
+| Train rows | 2,052 (51 mal / 2,001 ben) |
 | Feature spec | 229 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
