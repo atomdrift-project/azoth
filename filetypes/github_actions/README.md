@@ -4,29 +4,29 @@ LightGBM specialist for `github_actions`. Member of the Azoth routed ensemble; b
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `github_actions` slice of the locked test partition: 1 malware / 1,228 benign (1,229 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `github_actions` slice of the locked test partition: 8 malware / 2,007 benign (2,015 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.333333 | 0.998779 | 0.500000 | 100.00% | 0.0138 |
+| 0.073083 | 0.935632 | 0.184211 | — | 0.0327 |
 
 ## Specialist Performance
 
 `filetypes/github_actions` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| — | — | — | — | - | — |
+| 0.598383 | 0.936275 | 0.769231 | — | 0.0069 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="github_actions: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
-Files matching `github_actions` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `github_actions` are scored by none. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

@@ -4,29 +4,29 @@ LightGBM specialist for `macho`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `macho` slice of the locked test partition: 346 malware / 1,794 benign (2,140 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `macho` slice of the locked test partition: 361 malware / 2,670 benign (3,031 rows).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier |
+| PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.983369 | 0.994704 | 0.946108 | 91.62% | 0.0147 |
+| 0.950025 | 0.989253 | 0.882353 | — | 0.0213 |
 
 ## Specialist Performance
 
 `filetypes/macho` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
 
-| PR AUC | ROC AUC | F1 | Recall @ L50 | Brier | Δ vs EMBER 2024 |
+| PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.983369 | 0.994704 | 0.946108 | 91.62% | 0.0147 | — |
+| 0.950025 | 0.989253 | 0.882353 | — | 0.0213 | — |
 
 ## Recall by FP level (per 100M benigns)
 
 <img src="recall_curve.svg" alt="macho: recall by FP level (per 100M benigns)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L50 deploy operating point.
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
-Files matching `macho` are scored by `general`, `filegroups/native`, `filetypes/macho`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `macho` are scored by `filegroups/native`, `filetypes/macho`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
