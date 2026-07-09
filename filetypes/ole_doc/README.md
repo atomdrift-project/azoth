@@ -4,11 +4,11 @@ LightGBM specialist for `doc`, `msi`, `ole`, `xls`. Member of the Azoth routed e
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ole_doc` slice of the locked test partition: 10,603 malware / 3,886 benign (14,489 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ole_doc` slice of the locked test partition: 10,604 malware / 3,890 benign (14,494 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.995156 | 0.986356 | 0.963480 | — | 0.0334 |
+| 0.996123 | 0.989342 | 0.965977 | 93.16% | 0.0311 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ole_do
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.994929 | 0.984502 | 0.963860 | — | 0.0509 | — |
+| 0.995688 | 0.987280 | 0.966027 | 93.13% | 0.0511 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `ole_doc` are scored by `filetypes/ole_doc`. The ensemble's per-r
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 99,064 (72,374 mal / 26,690 ben) |
-| Feature spec | 229 features (`general_shared`) |
+| Train rows | 99,164 (72,395 mal / 26,769 ben) |
+| Feature spec | 9309 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

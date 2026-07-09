@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `csharp
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.347453 | 0.721789 | 0.404531 | — | 0.0310 |
+| 0.334164 | 0.711335 | 0.394737 | 22.75% | 0.0308 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `csharp
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.347453 | 0.721789 | 0.404531 | — | 0.0310 | — |
+| 0.334164 | 0.711335 | 0.394737 | 22.75% | 0.0308 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,20 +26,20 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `csharp` are scored by `filegroups/source`, `filetypes/csharp`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `csharp` are scored by `general`, `filegroups/source`, `filetypes/csharp`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 78,326 (873 mal / 77,453 ben) |
-| Feature spec | 229 features (`general_shared`) |
+| Train rows | 79,131 (873 mal / 78,258 ben) |
+| Feature spec | 9309 features (`general_shared`) |
 | n_estimators | 400 |
-| num_leaves | 96 |
+| num_leaves | 128 |
 | max_depth | 12 |
 | min_child_samples | 100 |
-| learning_rate | 0.05 |
+| learning_rate | 0.03 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |

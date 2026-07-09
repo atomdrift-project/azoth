@@ -4,11 +4,11 @@ LightGBM specialist for `pe`. Member of the Azoth routed ensemble; bundle root: 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pe` slice of the locked test partition: 169,146 malware / 23,659 benign (192,805 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pe` slice of the locked test partition: 169,208 malware / 24,020 benign (193,228 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999189 | 0.994228 | 0.987825 | — | 0.0502 |
+| 0.998918 | 0.992506 | 0.987082 | 67.49% | 0.0562 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pe` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999189 | 0.994228 | 0.987825 | — | 0.0502 | PR +0.000889 / ROC -0.003972 |
+| 0.998918 | 0.992506 | 0.987082 | 67.49% | 0.0562 | PR +0.000618 / ROC -0.005694 |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `pe` are scored by `general`, `filegroups/native`, `filetypes/pe`
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,357,946 (1,192,488 mal / 165,458 ben) |
-| Feature spec | 229 features (`general_shared`) |
+| Train rows | 1,362,564 (1,192,964 mal / 169,600 ben) |
+| Feature spec | 9309 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

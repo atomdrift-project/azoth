@@ -4,11 +4,11 @@ LightGBM specialist for `json`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `json` slice of the locked test partition: 202 malware / 18,700 benign (18,902 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `json` slice of the locked test partition: 204 malware / 19,305 benign (19,509 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.085120 | 0.593853 | 0.129630 | — | 0.0099 |
+| 0.082913 | 0.525969 | 0.128440 | 6.86% | 0.0096 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `json` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.083666 | 0.507476 | 0.129630 | — | 0.0104 | — |
+| 0.082709 | 0.542234 | 0.128440 | 6.86% | 0.0098 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `json` are scored by `filegroups/config`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `json` are scored by `filetypes/json`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 132,532 (127 mal / 132,405 ben) |
-| Feature spec | 229 features (`general_shared`) |
+| Train rows | 175,570 (128 mal / 175,442 ben) |
+| Feature spec | 9309 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
@@ -42,5 +42,5 @@ Files matching `json` are scored by `filegroups/config`. The ensemble's per-row 
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| early_stopping_rounds | 25 |
 | device | auto |
