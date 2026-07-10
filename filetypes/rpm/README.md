@@ -4,11 +4,11 @@ LightGBM specialist for `rpm`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `rpm` slice of the locked test partition: 10 malware / 459 benign (469 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `rpm` slice of the locked test partition: 10 malware / 466 benign (476 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.269956 | 0.870261 | 0.375000 | 30.00% | 0.0214 |
+| 0.272316 | 0.842489 | 0.357143 | 20.00% | 0.0313 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rpm` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.269956 | 0.870261 | 0.375000 | 30.00% | 0.0214 | — |
+| 0.272316 | 0.842489 | 0.357143 | 20.00% | 0.0313 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `rpm` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `rpm` are scored by `general`, `filetypes/rpm`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,323 (66 mal / 3,257 ben) |
-| Feature spec | 9309 features (`general_shared`) |
+| Train rows | 3,335 (66 mal / 3,269 ben) |
+| Feature spec | 9307 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

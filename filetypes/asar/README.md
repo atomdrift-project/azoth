@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asar` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.992260 | 0.963636 | 0.956522 | — | 0.0615 |
+| 1.000000 | 1.000000 | 1.000000 | — | 0.0911 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asar` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.988864 | 0.945455 | 0.952381 | — | 0.0801 | — |
+| 0.998024 | 0.990909 | 0.977778 | — | 0.0653 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `asar` are scored by `general`, `filetypes/asar`. The ensemble's 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 231 (159 mal / 72 ben) |
-| Feature spec | 9309 features (`general_shared`) |
+| Train rows | 233 (159 mal / 74 ben) |
+| Feature spec | 9307 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

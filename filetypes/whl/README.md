@@ -4,11 +4,11 @@ LightGBM specialist for `whl`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `whl` slice of the locked test partition: 429 malware / 766 benign (1,195 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `whl` slice of the locked test partition: 432 malware / 798 benign (1,230 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.933950 | 0.935079 | 0.875453 | 70.16% | 0.0843 |
+| 0.926356 | 0.928033 | 0.869359 | 65.05% | 0.0922 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `whl` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.933950 | 0.935079 | 0.875453 | 70.16% | 0.0843 | — |
+| 0.926356 | 0.928033 | 0.869359 | 65.05% | 0.0922 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `whl` are scored by `general`, `filetypes/whl`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 7,845 (2,754 mal / 5,091 ben) |
-| Feature spec | 9309 features (`general_shared`) |
+| Train rows | 7,937 (2,781 mal / 5,156 ben) |
+| Feature spec | 9307 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

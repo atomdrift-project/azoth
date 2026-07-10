@@ -4,11 +4,11 @@ LightGBM specialist for `nupkg`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `nupkg` slice of the locked test partition: 8 malware / 281 benign (289 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `nupkg` slice of the locked test partition: 8 malware / 292 benign (300 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.739980 | 0.987100 | 0.750000 | 75.00% | 0.0626 |
+| 0.437905 | 0.979452 | 0.571429 | 50.00% | 0.0521 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `nupkg`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.739980 | 0.987100 | 0.750000 | 75.00% | 0.0626 | — |
+| 0.437905 | 0.979452 | 0.571429 | 50.00% | 0.0521 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `nupkg` are scored by `general`, `filetypes/nupkg`. The ensemble'
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,208 (64 mal / 2,144 ben) |
-| Feature spec | 9309 features (`general_shared`) |
+| Train rows | 2,248 (65 mal / 2,183 ben) |
+| Feature spec | 9307 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

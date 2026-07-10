@@ -34,7 +34,7 @@ Files matching `html` are scored by `filetypes/html`. The ensemble's per-row sco
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 14,154 (217 mal / 13,937 ben) |
-| Feature spec | 9309 features (`general_shared`) |
+| Feature spec | 9307 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

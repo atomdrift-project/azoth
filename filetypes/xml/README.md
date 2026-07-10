@@ -6,11 +6,11 @@ LightGBM specialist for `xml`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xml` slice of the locked test partition: 506 malware / 49,354 benign (49,860 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xml` slice of the locked test partition: 505 malware / 49,566 benign (50,071 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.186224 | 0.675730 | 0.270866 | 2.57% | 0.0108 |
+| 0.141770 | 0.632392 | 0.253669 | 1.78% | 0.0115 |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xml` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.120001 | 0.493629 | 0.226837 | 0.99% | 0.0574 | — |
+| 0.135191 | 0.577315 | 0.250765 | 0.99% | 0.0118 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -35,8 +35,8 @@ Files matching `xml` are scored by `general`, `filegroups/config`. The ensemble'
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 347,558 (285 mal / 347,273 ben) |
-| Feature spec | 9309 features (`general_shared`) |
+| Train rows | 346,769 (285 mal / 346,484 ben) |
+| Feature spec | 9307 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

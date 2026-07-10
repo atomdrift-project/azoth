@@ -4,11 +4,11 @@ LightGBM specialist for `registry`. Member of the Azoth routed ensemble; bundle 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `registry` slice of the locked test partition: 68 malware / 10,091 benign (10,159 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `registry` slice of the locked test partition: 74 malware / 12,612 benign (12,686 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.896783 | 0.998915 | 0.828571 | 75.00% | 0.0055 |
+| 0.918040 | 0.999163 | 0.840580 | 72.97% | 0.0019 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `regist
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.911480 | 0.998980 | 0.828571 | 67.65% | 0.0025 | — |
+| 0.918040 | 0.999163 | 0.840580 | 72.97% | 0.0019 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `registry` are scored by `general`, `filetypes/registry`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `registry` are scored by `general`, `filetypes/registry`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 88,408 (528 mal / 87,880 ben) |
-| Feature spec | 9309 features (`general_shared`) |
+| Train rows | 96,475 (535 mal / 95,940 ben) |
+| Feature spec | 9307 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |
