@@ -6,11 +6,11 @@ LightGBM specialist for `svg`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `svg` slice of the locked test partition: 3 malware / 26,454 benign (26,457 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `svg` slice of the locked test partition: 3 malware / 29,716 benign (29,719 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.000113 | 0.500170 | 0.000227 | 100.00% | 0.0001 |
+| 0.000254 | 0.630899 | 0.000661 | 0.00% | 0.0003 |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `svg` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.000113 | 0.500000 | 0.000227 | 100.00% | 0.0001 | — |
+| 0.000101 | 0.500000 | 0.000203 | 100.00% | 0.0001 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -28,14 +28,14 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `svg` are scored by `general`, `filetypes/svg`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `svg` are scored by `filegroups/media`, `filetypes/svg`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 186,251 (9 mal / 186,242 ben) |
+| Train rows | 207,100 (9 mal / 207,091 ben) |
 | Feature spec | 9307 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
