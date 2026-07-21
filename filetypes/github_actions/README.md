@@ -4,11 +4,11 @@ LightGBM specialist for `github_actions`. Member of the Azoth routed ensemble; b
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `github_actions` slice of the locked test partition: 9 malware / 2,082 benign (2,091 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `github_actions` slice of the locked test partition: 9 malware / 2,141 benign (2,150 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.549097 | 0.961148 | 0.705882 | 66.67% | 0.0031 |
+| 0.290521 | 0.917484 | 0.533333 | 44.44% | 0.0041 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `github
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.608345 | 0.911074 | 0.750000 | 75.00% | 0.0067 | — |
+| 0.327088 | 0.829122 | 0.571429 | 50.00% | 0.0080 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `github_actions` are scored by `general`, `filetypes/github_actio
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,260 (25 mal / 4,235 ben) |
-| Feature spec | 9307 features (`general_shared`) |
+| Train rows | 5,293 (23 mal / 5,270 ben) |
+| Feature spec | 9308 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
