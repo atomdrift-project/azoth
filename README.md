@@ -4,7 +4,7 @@ Static malware detection by routed ensemble. A general LightGBM model scores eve
 
 The point of routing is that the evidence differs by format. A PE's section table is signal. A PDF's stream dictionary is signal. A shell script's token distribution is signal. One generalist trained over all of them learns averages; a specialist trained on one of them learns the format.
 
-Thresholds were fit on a 1,795,811-row dev partition (12.5% of the labeled corpus). The numbers in this README come from a locked 1,794,414-row test partition, disjoint from training and calibration. The bundle is loaded at scan time by [litmus](https://codeberg.org/atomdrift/litmus). EMBER 2024 reference: Joyce et al., *KDD'25*.
+Thresholds were fit on a 1,795,811-row dev partition (12.5% of the labeled corpus). The numbers in this README come from a locked 1,794,414-row test partition, disjoint from training and calibration. The bundle is loaded at scan time by [litmus](https://github.com/atomdrift-project/litmus). EMBER 2024 reference: Joyce et al., *KDD'25*.
 
 ## Use
 

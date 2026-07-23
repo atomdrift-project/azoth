@@ -26,7 +26,7 @@ rclone lsd r2:azoth-training
 ## 2. Stand up hopper
 
 ```bash
-git clone https://codeberg.org/atomdrift/hopper.git
+git clone https://github.com/atomdrift-project/hopper.git
 cd hopper && make install
 
 sudo -u postgres psql -c "CREATE ROLE hopper LOGIN PASSWORD 'changeme'; \
@@ -40,7 +40,7 @@ hopper init
 ## 3. Load the corpus
 
 ```bash
-git clone https://codeberg.org/atomdrift/azoth-trainer.git
+git clone https://github.com/atomdrift-project/azoth-trainer.git
 cd azoth-trainer
 make r2-load DB="$DATABASE_URL"
 hopper stats
