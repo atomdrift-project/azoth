@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `batch`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.989253 | 0.853443 | 0.991380 | 33.25% | 0.0162 |
+| 0.994745 | 0.928906 | 0.994813 | 33.23% | 0.0095 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `batch`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.986786 | 0.744286 | 0.991467 | 16.78% | 0.7975 | — |
+| 0.993107 | 0.874589 | 0.994813 | 16.79% | 0.7972 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `batch` are scored by `general`, `filegroups/scripts`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 34,024 (26,958 mal / 7,066 ben) |
-| Feature spec | 9308 features (`general_shared`) |
+| Train rows | 34,078 (26,970 mal / 7,108 ben) |
+| Feature spec | 9310 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

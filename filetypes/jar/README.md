@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.915896 | 0.965436 | 0.882227 | 62.75% | 0.0404 |
+| 0.943951 | 0.967667 | 0.919305 | 81.27% | 0.0285 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.915896 | 0.965436 | 0.882227 | 62.75% | 0.0404 | — |
+| 0.943951 | 0.967667 | 0.919305 | 81.27% | 0.0285 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `jar` are scored by `general`, `filetypes/jar`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 22,865 (2,855 mal / 20,010 ben) |
-| Feature spec | 9308 features (`general_shared`) |
+| Train rows | 23,859 (2,864 mal / 20,995 ben) |
+| Feature spec | 9310 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

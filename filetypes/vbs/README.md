@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `vbs` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.994775 | 0.981502 | 0.960127 | 86.87% | 0.0710 |
+| 0.994197 | 0.979888 | 0.958347 | 85.91% | 0.0719 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `vbs` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.994775 | 0.981502 | 0.960127 | 86.87% | 0.0710 | — |
+| 0.994197 | 0.979888 | 0.958347 | 85.91% | 0.0719 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `vbs` are scored by `general`, `filetypes/vbs`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 13,033 (9,906 mal / 3,127 ben) |
-| Feature spec | 9308 features (`general_shared`) |
+| Train rows | 13,077 (9,932 mal / 3,145 ben) |
+| Feature spec | 9310 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -4,7 +4,7 @@ LightGBM specialist for `html`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `html` slice of the locked test partition: 31 malware / 2,011 benign (2,042 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `html` slice of the locked test partition: 31 malware / 2,012 benign (2,043 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
@@ -33,8 +33,8 @@ Files matching `html` are scored by `filetypes/html`. The ensemble's per-row sco
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 14,168 (217 mal / 13,951 ben) |
-| Feature spec | 9308 features (`general_shared`) |
+| Train rows | 17,298 (218 mal / 17,080 ben) |
+| Feature spec | 9310 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
