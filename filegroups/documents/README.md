@@ -4,7 +4,7 @@ LightGBM specialist for `doc`, `docx`, `html`, `ole`, `pdf`, `ppt`, `pptx`, `rtf
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `documents`). ROC 0.891183, PR 0.973788, F1 0.9135 on 52,349 rows (41,956 mal / 10,393 ben).
+Training-time benchmark only (no test-partition rows for `documents`). ROC 0.919774, PR 0.971818, F1 0.9059 on 57,357 rows (41,957 mal / 15,400 ben).
 
 ## Routing
 
@@ -15,8 +15,8 @@ Files matching `documents` are scored by none. The ensemble's per-row score is w
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 284,433 (211,967 mal / 72,466 ben) |
-| Feature spec | 9310 features (`general_shared`) |
+| Train rows | 319,154 (211,972 mal / 107,182 ben) |
+| Feature spec | 9304 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

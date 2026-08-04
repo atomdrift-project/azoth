@@ -4,11 +4,11 @@ LightGBM specialist for `chrome-manifest`. Member of the Azoth routed ensemble; 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `chrome_manifest` slice of the locked test partition: 12 malware / 123 benign (135 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `chrome_manifest` slice of the locked test partition: 12 malware / 126 benign (138 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.900397 | 0.975610 | 0.846154 | 91.67% | 0.0463 |
+| 0.836459 | 0.964286 | 0.818182 | 75.00% | 0.0459 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chrome
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.900397 | 0.975610 | 0.846154 | 91.67% | 0.0463 | — |
+| 0.836459 | 0.964286 | 0.818182 | 75.00% | 0.0459 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `chrome_manifest` are scored by `filetypes/chrome_manifest`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `chrome_manifest` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 924 (90 mal / 834 ben) |
-| Feature spec | 9310 features (`general_shared`) |
+| Train rows | 948 (90 mal / 858 ben) |
+| Feature spec | 9304 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

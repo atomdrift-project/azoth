@@ -4,11 +4,11 @@ LightGBM specialist for `applescript`. Member of the Azoth routed ensemble; bund
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `applescript` slice of the locked test partition: 9 malware / 52 benign (61 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `applescript` slice of the locked test partition: 9 malware / 59 benign (68 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.905282 | 0.900641 | 0.941176 | 88.89% | 0.0168 |
+| 0.903595 | 0.898305 | 0.941176 | 88.89% | 0.0150 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apples
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.905282 | 0.912393 | 0.941176 | 88.89% | 0.0163 | — |
+| 0.903595 | 0.917137 | 0.941176 | 88.89% | 0.0146 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `applescript` are scored by `filetypes/applescript`. The ensemble
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 471 (47 mal / 424 ben) |
-| Feature spec | 9310 features (`general_shared`) |
+| Train rows | 507 (47 mal / 460 ben) |
+| Feature spec | 9304 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

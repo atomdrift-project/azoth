@@ -4,11 +4,11 @@ LightGBM specialist for `rpm`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `rpm` slice of the locked test partition: 10 malware / 477 benign (487 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `rpm` slice of the locked test partition: 8 malware / 5,437 benign (5,445 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.100277 | 0.763836 | 0.181818 | 10.00% | 0.0628 |
+| 0.450935 | 0.915854 | 0.555556 | 25.00% | 0.0065 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rpm` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| — | — | — | — | - | — |
+| 0.450935 | 0.915854 | 0.555556 | 25.00% | 0.0065 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `rpm` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `rpm` are scored by `filetypes/rpm`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 11,654 (66 mal / 11,588 ben) |
-| Feature spec | 9310 features (`general_shared`) |
+| Train rows | 37,603 (67 mal / 37,536 ben) |
+| Feature spec | 9304 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
