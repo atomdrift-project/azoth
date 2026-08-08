@@ -33,8 +33,8 @@ Files matching `elf` are scored by `general`, `filegroups/native`, `filetypes/el
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 779,260 (169,113 mal / 610,147 ben) |
-| Feature spec | 9304 features (`general_shared`) |
+| Train rows | 800,427 (169,198 mal / 631,229 ben) |
+| Feature spec | 2861 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

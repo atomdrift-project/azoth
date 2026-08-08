@@ -33,8 +33,8 @@ Files matching `groovy` are scored by `filetypes/groovy`. The ensemble's per-row
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,228 (54 mal / 9,174 ben) |
-| Feature spec | 9304 features (`general_shared`) |
+| Train rows | 9,235 (54 mal / 9,181 ben) |
+| Feature spec | 294 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

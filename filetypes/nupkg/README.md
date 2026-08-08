@@ -33,8 +33,8 @@ Files matching `nupkg` are scored by `general`, `filetypes/nupkg`. The ensemble'
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,796 (73 mal / 2,723 ben) |
-| Feature spec | 9304 features (`general_shared`) |
+| Train rows | 3,349 (74 mal / 3,275 ben) |
+| Feature spec | 1986 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

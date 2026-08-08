@@ -33,8 +33,8 @@ Files matching `applescript` are scored by `filetypes/applescript`. The ensemble
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 507 (47 mal / 460 ben) |
-| Feature spec | 9304 features (`general_shared`) |
+| Train rows | 512 (44 mal / 468 ben) |
+| Feature spec | 347 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

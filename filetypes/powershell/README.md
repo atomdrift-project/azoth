@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `powers
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.970522 | 0.954529 | 0.935282 | 64.82% | 0.0690 |
+| 0.977385 | 0.967140 | 0.936228 | 75.24% | 0.0669 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `powers
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.975752 | 0.959915 | 0.939625 | 62.38% | 0.0650 | — |
+| 0.986352 | 0.980762 | 0.941980 | 73.75% | 0.0586 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `powershell` are scored by `general`, `filegroups/scripts`, `file
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,008 (4,902 mal / 4,106 ben) |
-| Feature spec | 9304 features (`general_shared`) |
+| Train rows | 9,119 (4,898 mal / 4,221 ben) |
+| Feature spec | 1545 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

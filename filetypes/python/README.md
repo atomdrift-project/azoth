@@ -33,8 +33,8 @@ Files matching `python` are scored by `general`, `filegroups/scripts`, `filetype
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 543,530 (16,377 mal / 527,153 ben) |
-| Feature spec | 9304 features (`general_shared`) |
+| Train rows | 553,955 (16,326 mal / 537,629 ben) |
+| Feature spec | 1902 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

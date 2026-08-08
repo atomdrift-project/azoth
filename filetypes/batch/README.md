@@ -33,8 +33,8 @@ Files matching `batch` are scored by `general`, `filegroups/scripts`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 34,204 (26,977 mal / 7,227 ben) |
-| Feature spec | 9304 features (`general_shared`) |
+| Train rows | 34,221 (26,969 mal / 7,252 ben) |
+| Feature spec | 1307 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

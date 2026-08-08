@@ -33,8 +33,8 @@ Files matching `chrome_manifest` are scored by `general`. The ensemble's per-row
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 948 (90 mal / 858 ben) |
-| Feature spec | 9304 features (`general_shared`) |
+| Train rows | 968 (86 mal / 882 ben) |
+| Feature spec | 207 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

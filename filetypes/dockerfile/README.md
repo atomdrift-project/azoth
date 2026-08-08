@@ -33,8 +33,8 @@ Files matching `dockerfile` are scored by `general`, `filetypes/dockerfile`. The
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,988 (57 mal / 3,931 ben) |
-| Feature spec | 9304 features (`general_shared`) |
+| Train rows | 4,024 (57 mal / 3,967 ben) |
+| Feature spec | 431 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -33,8 +33,8 @@ Files matching `perl` are scored by `general`, `filetypes/perl`. The ensemble's 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 65,834 (260 mal / 65,574 ben) |
-| Feature spec | 9304 features (`general_shared`) |
+| Train rows | 66,092 (260 mal / 65,832 ben) |
+| Feature spec | 1097 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

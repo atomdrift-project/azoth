@@ -33,8 +33,8 @@ Files matching `ole_doc` are scored by `filetypes/ole_doc`. The ensemble's per-r
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 99,629 (72,499 mal / 27,130 ben) |
-| Feature spec | 9304 features (`general_shared`) |
+| Train rows | 99,679 (72,498 mal / 27,181 ben) |
+| Feature spec | 9276 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
