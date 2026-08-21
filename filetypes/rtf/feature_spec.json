@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "a4346af581bc3c5429bc41f08ee066ec021ace35dbe4dbde659723a9ceb8cc29",
+  "feature_layout_hash": "7217d02f2249097bc4c5367c216fdbc99d0c13bb9c021050791e2634fe523c68",
   "presence_vocab": [
     "metadata",
     "metadata/document",
@@ -13,7 +13,9 @@
     "metadata/encoded-payload/url",
     "metadata/encoded-payload/xor",
     "metadata/encoded-payload/xor-base64",
+    "metadata/file",
     "metadata/file-extension-mismatch",
+    "metadata/file/magic",
     "objectives",
     "objectives/anti-analysis",
     "objectives/anti-analysis/analysis-bomb",
@@ -415,7 +417,9 @@
     "present:metadata/encoded-payload/url",
     "present:metadata/encoded-payload/xor",
     "present:metadata/encoded-payload/xor-base64",
+    "present:metadata/file",
     "present:metadata/file-extension-mismatch",
+    "present:metadata/file/magic",
     "present:objectives",
     "present:objectives/anti-analysis",
     "present:objectives/anti-analysis/analysis-bomb",
@@ -440,7 +444,9 @@
     "maxcrit:metadata/encoded-payload/url",
     "maxcrit:metadata/encoded-payload/xor",
     "maxcrit:metadata/encoded-payload/xor-base64",
+    "maxcrit:metadata/file",
     "maxcrit:metadata/file-extension-mismatch",
+    "maxcrit:metadata/file/magic",
     "maxcrit:objectives",
     "maxcrit:objectives/anti-analysis",
     "maxcrit:objectives/anti-analysis/analysis-bomb",
@@ -613,6 +619,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 207,
+  "total_features": 211,
   "standardized": false
 }

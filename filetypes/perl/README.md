@@ -4,11 +4,11 @@ LightGBM specialist for `perl`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `perl` slice of the locked test partition: 46 malware / 9,393 benign (9,439 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `perl` slice of the locked test partition: 45 malware / 9,427 benign (9,472 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.798813 | 0.885239 | 0.867470 | 76.09% | 0.0023 |
+| 0.796011 | 0.902793 | 0.847059 | 68.89% | 0.0028 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `perl` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.798813 | 0.885239 | 0.867470 | 76.09% | 0.0023 | — |
+| 0.796011 | 0.902793 | 0.847059 | 68.89% | 0.0028 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `perl` are scored by `general`, `filetypes/perl`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `perl` are scored by `general`, `filegroups/scripts`, `filetypes/perl`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 66,092 (260 mal / 65,832 ben) |
-| Feature spec | 1097 features (`route_specific`) |
+| Train rows | 66,833 (257 mal / 66,576 ben) |
+| Feature spec | 1107 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

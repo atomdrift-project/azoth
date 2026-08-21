@@ -2,15 +2,13 @@
 
 LightGBM specialist for `c`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
-
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `c` slice of the locked test partition: 2,302 malware / 203,481 benign (205,783 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `c` slice of the locked test partition: 2,289 malware / 206,000 benign (208,289 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| — | — | — | — | - |
+| 0.231575 | 0.671526 | 0.330150 | 9.17% | 0.0092 |
 
 ## Specialist Performance
 
@@ -28,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `c` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `c` are scored by `filegroups/source`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,446,628 (3,790 mal / 1,442,838 ben) |
-| Feature spec | 1626 features (`route_specific`) |
+| Train rows | 1,461,015 (3,787 mal / 1,457,228 ben) |
+| Feature spec | 1642 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

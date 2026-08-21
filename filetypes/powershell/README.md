@@ -4,11 +4,11 @@ LightGBM specialist for `powershell`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `powershell` slice of the locked test partition: 739 malware / 615 benign (1,354 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `powershell` slice of the locked test partition: 739 malware / 626 benign (1,365 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.977385 | 0.967140 | 0.936228 | 75.24% | 0.0669 |
+| 0.966779 | 0.947694 | 0.935933 | 61.03% | 0.0687 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `powers
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.986352 | 0.980762 | 0.941980 | 73.75% | 0.0586 | — |
+| 0.973655 | 0.956372 | 0.939625 | 54.40% | 0.0672 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `powershell` are scored by `general`, `filegroups/scripts`, `file
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,119 (4,898 mal / 4,221 ben) |
-| Feature spec | 1545 features (`route_specific`) |
+| Train rows | 9,491 (4,918 mal / 4,573 ben) |
+| Feature spec | 1567 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

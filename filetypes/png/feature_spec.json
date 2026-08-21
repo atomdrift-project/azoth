@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "a4d4ae31e6b71a40fe437d9211dcfe6ff2a84401fd91c0f3031342b8f0801868",
+  "feature_layout_hash": "8d1a32b13206d39f9adea94064f76feaa546821ec91513c34fb9bb1a0e9cb071",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -26,6 +26,7 @@
     "objectives/evasion",
     "objectives/evasion/masquerade",
     "well-known",
+    "well-known/app",
     "well-known/malware",
     "well-known/malware/dropper"
   ],
@@ -36,6 +37,7 @@
     "H(Cm)",
     "H(Db)",
     "K",
+    "K(Am)",
     "K(Mc)",
     "KO(As)",
     "Md",
@@ -91,8 +93,7 @@
     "png_unknown_chunk_count"
   ],
   "crit_unigram_vocab": [
-    "n:objectives",
-    "n:objectives/anti-static"
+    "n:objectives"
   ],
   "crit_bigram_vocab": [
     "n:objectives + n:objectives/anti-static"
@@ -163,8 +164,11 @@
     "n:objectives/evasion + s:metadata/file-extension-mismatch",
     "n:objectives/evasion/masquerade + s:metadata",
     "n:objectives/evasion/masquerade + s:metadata/file-extension-mismatch",
+    "n:well-known + n:well-known/app",
+    "n:well-known + n:well-known/app/infrastructure",
     "n:well-known + n:well-known/malware",
     "n:well-known + n:well-known/malware/dropper",
+    "n:well-known/app + n:well-known/app/infrastructure",
     "n:well-known/malware + n:well-known/malware/dropper",
     "s:metadata + s:metadata/file-extension-mismatch",
     "s:metadata + s:objectives",
@@ -211,6 +215,7 @@
     "present:objectives/evasion",
     "present:objectives/evasion/masquerade",
     "present:well-known",
+    "present:well-known/app",
     "present:well-known/malware",
     "present:well-known/malware/dropper",
     "maxcrit:metadata",
@@ -236,6 +241,7 @@
     "maxcrit:objectives/evasion",
     "maxcrit:objectives/evasion/masquerade",
     "maxcrit:well-known",
+    "maxcrit:well-known/app",
     "maxcrit:well-known/malware",
     "maxcrit:well-known/malware/dropper",
     "agg:max_crit",
@@ -295,7 +301,6 @@
     "agg:mbc_behavior_count",
     "agg:has_attack_and_objective",
     "crit:n:objectives",
-    "crit:n:objectives/anti-static",
     "mbcbi:B0032 + B0032.001",
     "ext:third_party_max_crit",
     "ext:third_party_count",
@@ -415,6 +420,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 226,
+  "total_features": 227,
   "standardized": false
 }

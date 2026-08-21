@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "61b11ba853115744b00567cad4f39a1d29a0944aa5827458a84200cf3e3d1bd0",
+  "feature_layout_hash": "7e84f408bb35bc268e0cb937b955e7d885152f622e24f085a4663b1e06dadbaa",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -204,12 +204,10 @@
   ],
   "attack_bigram_vocab": [
     "T1027 + T1027.003",
-    "T1027 + T1195.002",
-    "T1090.004 + T1573"
+    "T1027 + T1195.002"
   ],
   "attack_trigram_vocab": [],
   "mbc_bigram_vocab": [
-    "B0030 + C0027",
     "B0032 + E1014"
   ],
   "mbc_trigram_vocab": [
@@ -224,6 +222,8 @@
     "n:metadata + n:metadata/encoded-payload",
     "n:metadata + n:metadata/file",
     "n:metadata + n:metadata/file/profile",
+    "n:metadata + n:micro-behaviors",
+    "n:metadata + n:micro-behaviors/fs",
     "n:metadata + n:well-known",
     "n:metadata + n:well-known/lib",
     "n:metadata + n:well-known/lib/benign-runtime-bundles",
@@ -431,7 +431,6 @@
     "crit:s:objectives",
     "crit:s:objectives/command-and-control",
     "critbi:s:objectives + s:objectives/command-and-control",
-    "mbcbi:B0030 + C0027",
     "ext:third_party_max_crit",
     "ext:third_party_count",
     "ext:well_known_max_crit",
@@ -545,6 +544,8 @@
     "tierbi:n:metadata + n:metadata/build/artifact",
     "tierbi:n:metadata + n:metadata/encoded-payload",
     "tierbi:n:metadata + n:metadata/file",
+    "tierbi:n:metadata + n:micro-behaviors",
+    "tierbi:n:metadata + n:micro-behaviors/fs",
     "tierbi:n:metadata/build + n:metadata/build/artifact",
     "tierbi:n:micro-behaviors + n:micro-behaviors/communications",
     "tierbi:n:micro-behaviors + n:micro-behaviors/communications/http",
@@ -589,6 +590,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 294,
+  "total_features": 295,
   "standardized": false
 }

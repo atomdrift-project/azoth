@@ -4,11 +4,11 @@ LightGBM specialist for `groovy`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 18 malware / 1,366 benign (1,384 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 17 malware / 1,367 benign (1,384 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.237245 | 0.469192 | 0.363636 | 22.22% | 0.0123 |
+| 0.245828 | 0.548582 | 0.380952 | 23.53% | 0.0118 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `groovy
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.237245 | 0.469192 | 0.363636 | 22.22% | 0.0123 | — |
+| 0.245828 | 0.548582 | 0.380952 | 23.53% | 0.0118 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `groovy` are scored by `filetypes/groovy`. The ensemble's per-row
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,235 (54 mal / 9,181 ben) |
-| Feature spec | 294 features (`route_specific`) |
+| Train rows | 9,294 (54 mal / 9,240 ben) |
+| Feature spec | 295 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

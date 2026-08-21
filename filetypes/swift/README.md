@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `swift`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.669485 | 0.900163 | 0.800000 | 66.67% | 0.0013 |
+| 0.573584 | 0.849442 | 0.714286 | 55.56% | 0.0040 |
 
 ## Specialist Performance
 
@@ -33,8 +33,8 @@ Files matching `swift` are scored by `general`, `filegroups/source`. The ensembl
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 37,883 (32 mal / 37,851 ben) |
-| Feature spec | 388 features (`route_specific`) |
+| Train rows | 39,044 (32 mal / 39,012 ben) |
+| Feature spec | 406 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

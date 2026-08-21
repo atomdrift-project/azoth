@@ -4,11 +4,11 @@ LightGBM specialist for `7z`. Member of the Azoth routed ensemble; bundle root: 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `7z` slice of the locked test partition: 1,167 malware / 20 benign (1,187 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `7z` slice of the locked test partition: 1,167 malware / 21 benign (1,188 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998689 | 0.929692 | 0.992769 | — | 0.0602 |
+| 0.999015 | 0.947301 | 0.991925 | — | 0.0535 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `7z` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| — | — | — | — | - | — |
+| 0.999015 | 0.947301 | 0.991925 | — | 0.0535 | — |
 
 ## Routing
 
-Files matching `7z` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `7z` are scored by `general`, `filetypes/7z`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 7,608 (7,381 mal / 227 ben) |
-| Feature spec | 3141 features (`route_specific`) |
+| Train rows | 7,656 (7,386 mal / 270 ben) |
+| Feature spec | 3188 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -6,11 +6,11 @@ LightGBM specialist for `java_class`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 283 malware / 212,788 benign (213,071 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 283 malware / 212,944 benign (213,227 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| — | — | — | — | - |
+| 0.783194 | 0.947992 | 0.838207 | 32.51% | 0.0019 |
 
 ## Specialist Performance
 
@@ -28,15 +28,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `java_class` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `java_class` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,498,966 (1,471 mal / 1,497,495 ben) |
-| Feature spec | 859 features (`route_specific`) |
+| Train rows | 1,507,115 (1,482 mal / 1,505,633 ben) |
+| Feature spec | 903 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -4,11 +4,11 @@ LightGBM specialist for `github_actions`. Member of the Azoth routed ensemble; b
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `github_actions` slice of the locked test partition: 9 malware / 2,182 benign (2,191 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `github_actions` slice of the locked test partition: 9 malware / 2,193 benign (2,202 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.103125 | 0.780477 | 0.266667 | 0.00% | 0.0099 |
+| 0.222553 | 0.781679 | 0.333333 | 11.11% | 0.0095 |
 
 ## Specialist Performance
 
@@ -33,8 +33,8 @@ Files matching `github_actions` are scored by `general`. The ensemble's per-row 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,724 (21 mal / 6,703 ben) |
-| Feature spec | 281 features (`route_specific`) |
+| Train rows | 8,371 (20 mal / 8,351 ben) |
+| Feature spec | 291 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

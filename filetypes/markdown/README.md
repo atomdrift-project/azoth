@@ -2,13 +2,15 @@
 
 LightGBM specialist for `markdown`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `markdown` slice of the locked test partition: 13 malware / 15,302 benign (15,315 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `markdown` slice of the locked test partition: 13 malware / 15,388 benign (15,401 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.344697 | 0.764955 | 0.476190 | 23.08% | 0.0012 |
+| 0.320406 | 0.672967 | 0.521739 | 7.69% | 0.0019 |
 
 ## Specialist Performance
 
@@ -33,8 +35,8 @@ Files matching `markdown` are scored by `general`. The ensemble's per-row score 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 108,091 (23 mal / 108,068 ben) |
-| Feature spec | 423 features (`route_specific`) |
+| Train rows | 113,763 (27 mal / 113,736 ben) |
+| Feature spec | 438 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

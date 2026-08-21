@@ -4,11 +4,11 @@ LightGBM specialist for `html`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `html` slice of the locked test partition: 31 malware / 7,406 benign (7,437 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `html` slice of the locked test partition: 31 malware / 7,966 benign (7,997 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.968133 | 0.989072 | 0.983607 | 96.77% | 0.0426 |
+| 0.975434 | 0.999599 | 0.983607 | 96.77% | 0.0002 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `html` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| — | — | — | — | - | — |
+| 0.975434 | 0.999599 | 0.983607 | 96.77% | 0.0002 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `html` are scored by `general`, `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `html` are scored by `filetypes/html`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 55,613 (218 mal / 55,395 ben) |
-| Feature spec | 318 features (`route_specific`) |
+| Train rows | 58,992 (224 mal / 58,768 ben) |
+| Feature spec | 324 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

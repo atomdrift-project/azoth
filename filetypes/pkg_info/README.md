@@ -4,11 +4,11 @@ LightGBM specialist for `pkg-info`, `pkg_info`. Member of the Azoth routed ensem
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pkg_info` slice of the locked test partition: 1,270 malware / 2,022 benign (3,292 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pkg_info` slice of the locked test partition: 1,270 malware / 2,027 benign (3,297 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.995836 | 0.996842 | 0.980423 | 72.44% | 0.0133 |
+| 0.995275 | 0.996598 | 0.980800 | 49.92% | 0.0141 |
 
 ## Specialist Performance
 
@@ -33,8 +33,8 @@ Files matching `pkg_info` are scored by `general`. The ensemble's per-row score 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 22,637 (9,060 mal / 13,577 ben) |
-| Feature spec | 9276 features (`general_shared`) |
+| Train rows | 23,159 (9,060 mal / 14,099 ben) |
+| Feature spec | 9245 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

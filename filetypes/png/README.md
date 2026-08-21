@@ -6,11 +6,11 @@ LightGBM specialist for `png`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `png` slice of the locked test partition: 1,093 malware / 61,602 benign (62,695 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `png` slice of the locked test partition: 1,088 malware / 62,705 benign (63,793 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| — | — | — | — | - |
+| 0.087754 | 0.660729 | 0.104439 | 1.47% | 0.0204 |
 
 ## Specialist Performance
 
@@ -28,15 +28,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `png` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `png` are scored by `general`, `filegroups/media`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 436,367 (436 mal / 435,931 ben) |
-| Feature spec | 226 features (`route_specific`) |
+| Train rows | 448,437 (436 mal / 448,001 ben) |
+| Feature spec | 227 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

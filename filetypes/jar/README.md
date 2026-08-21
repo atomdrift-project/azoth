@@ -4,11 +4,11 @@ LightGBM specialist for `jar`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `jar` slice of the locked test partition: 504 malware / 3,178 benign (3,682 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `jar` slice of the locked test partition: 505 malware / 3,199 benign (3,704 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.869544 | 0.939559 | 0.844211 | 28.57% | 0.0390 |
+| 0.889498 | 0.950622 | 0.870488 | 52.67% | 0.0331 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| — | — | — | — | - | — |
+| 0.912460 | 0.963167 | 0.887712 | 51.88% | 0.0338 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `jar` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `jar` are scored by `general`, `filetypes/jar`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 25,067 (2,869 mal / 22,198 ben) |
-| Feature spec | 2051 features (`route_specific`) |
+| Train rows | 27,595 (2,877 mal / 24,718 ben) |
+| Feature spec | 2050 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

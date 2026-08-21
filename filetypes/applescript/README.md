@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apples
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.903595 | 0.898305 | 0.941176 | 88.89% | 0.0150 |
+| 0.903595 | 0.897363 | 0.941176 | 88.89% | 0.0150 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apples
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.903595 | 0.917137 | 0.941176 | 88.89% | 0.0146 | — |
+| 0.903595 | 0.923729 | 0.941176 | 88.89% | 0.0146 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -34,7 +34,7 @@ Files matching `applescript` are scored by `filetypes/applescript`. The ensemble
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 512 (44 mal / 468 ben) |
-| Feature spec | 347 features (`route_specific`) |
+| Feature spec | 350 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
