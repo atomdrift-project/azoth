@@ -12967,8 +12967,7 @@
       "n_benign": 3199,
       "ensemble_policy": "joint_or_at_fp_0",
       "ensemble_allowed_routes": [
-        "general",
-        "filetypes/jar"
+        "general"
       ],
       "general": {
         "roc_auc": 0.9379759764035172,

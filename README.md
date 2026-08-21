@@ -1,10 +1,10 @@
 # Azoth
 
-Static malware detection by routed ensemble. A general LightGBM model scores every file. Per-filetype specialists score files in their domain — PE, ELF, JavaScript, PDF, and 60 more. A file is flagged when any route's score crosses its operating-point threshold.
+Static malware detection by routed ensemble. A general LightGBM model scores every file. Per-filetype specialists score files in their domain — PE, ELF, JavaScript, PDF, and 59 more. A file is flagged when any route's score crosses its operating-point threshold.
 
 The point of routing is that the evidence differs by format. A PE's section table is signal. A PDF's stream dictionary is signal. A shell script's token distribution is signal. One generalist trained over all of them learns averages; a specialist trained on one of them learns the format.
 
-Thresholds were fit on a 17,074,459-row all partition (12.5% of the labeled corpus). The numbers in this README come from a locked 2,129,520-row test partition, disjoint from training and calibration. The bundle is loaded at scan time by [litmus](https://github.com/atomdrift-project/litmus). EMBER 2024 reference: Joyce et al., *KDD'25*.
+Thresholds were fit on a 2,130,423-row dev partition (12.5% of the labeled corpus). The numbers in this README come from a locked 2,129,520-row test partition, disjoint from training and calibration. The bundle is loaded at scan time by [litmus](https://github.com/atomdrift-project/litmus). EMBER 2024 reference: Joyce et al., *KDD'25*.
 
 ## Use
 
@@ -12,7 +12,7 @@ Input is a JSON report produced by `cleave`. Output is one verdict — `benign` 
 
 ## Bundle layout
 
-`config.json` records the deployed thresholds. Each route lives in its own subdirectory: `general/`, one of 7 `filegroups/<name>/`, or one of 64 `filetypes/<name>/`. A route directory carries two files: `model.txt` (LightGBM) and `feature_spec.json` (the features the model expects). Scores are the model's raw probabilities — there is no separate probability calibrator.
+`config.json` records the deployed thresholds. Each route lives in its own subdirectory: `general/`, one of 7 `filegroups/<name>/`, or one of 63 `filetypes/<name>/`. A route directory carries two files: `model.txt` (LightGBM) and `feature_spec.json` (the features the model expects). Scores are the model's raw probabilities — there is no separate probability calibrator.
 
 Further reading: [ENSEMBLE_MODEL.md](ENSEMBLE_MODEL.md) for routing details, [GENERALIST_MODEL.md](GENERALIST_MODEL.md) for the single-model baseline. License: Apache 2.0.
 
@@ -46,7 +46,7 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`kotlin`](filetypes/kotlin/README.md) | 3,889 / 10,501 | 0.961563 | 0.977026 | 0.922490 | 55.54% | — |
 | [`python`](filetypes/python/README.md) | 2,869 / 76,332 | 0.770994 | 0.918573 | 0.788755 | 53.75% | — |
 | [`whl`](filetypes/whl/README.md) | 468 / 1,195 | 0.880907 | 0.909387 | 0.819565 | 52.99% | — |
-| [`jar`](filetypes/jar/README.md) | 505 / 3,199 | 0.889498 | 0.950622 | 0.870488 | 52.67% | — |
+| `jar` | 505 / 3,199 | 0.889498 | 0.950622 | 0.870488 | 52.67% | — |
 | [`pkg_info`](filetypes/pkg_info/README.md) | 1,270 / 2,027 | 0.995275 | 0.996598 | 0.980800 | 49.92% | — |
 | [`javascript`](filetypes/javascript/README.md) | 17,227 / 181,624 | 0.910422 | 0.967656 | 0.866027 | 49.69% | — |
 | [`crx`](filetypes/crx/README.md) | 297 / 484 | 0.911407 | 0.919815 | 0.851351 | 43.77% | — |
@@ -85,7 +85,7 @@ The corpus-weighted ensemble curve weights each filetype's ensemble recall by th
 
 ## Provenance
 
-Calibration snapshot `3084319633`, score-table `859f6f881e88`, model-set `d8661a0d4c88`. 1 general, 7 filegroup, 64 filetype routes.
+Calibration snapshot `3084319633`, score-table `e23a10b41ea9`, model-set `adb91827c4d0`. 1 general, 7 filegroup, 63 filetype routes.
 
 ## Limits
 
