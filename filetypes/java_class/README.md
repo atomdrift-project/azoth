@@ -2,15 +2,13 @@
 
 LightGBM specialist for `java_class`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
-
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 283 malware / 212,944 benign (213,227 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 287 malware / 214,359 benign (214,646 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.783194 | 0.947992 | 0.838207 | 32.51% | 0.0019 |
+| 0.791513 | 0.954734 | 0.846300 | 34.49% | 0.0018 |
 
 ## Specialist Performance
 
@@ -35,8 +33,8 @@ Files matching `java_class` are scored by `general`. The ensemble's per-row scor
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,507,115 (1,482 mal / 1,505,633 ben) |
-| Feature spec | 903 features (`route_specific`) |
+| Train rows | 1,508,925 (1,488 mal / 1,507,437 ben) |
+| Feature spec | 904 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "8dfa358be93fcc22cb7e25b198c767dc9cbb4a1d5bfa426de772c669b53fb8c7",
+  "feature_layout_hash": "a4e6f4700f59d2831f369f3f4cfb27bd535060d43c086f69a42a84269ec362db",
   "presence_vocab": [
     "metadata",
     "metadata/document",
@@ -36,6 +36,7 @@
     "objectives",
     "objectives/anti-static",
     "objectives/anti-static/excessive-line-length",
+    "objectives/anti-static/obfuscation",
     "objectives/command-and-control",
     "objectives/command-and-control/dropper",
     "objectives/command-and-control/infrastructure",
@@ -391,6 +392,7 @@
     "present:objectives",
     "present:objectives/anti-static",
     "present:objectives/anti-static/excessive-line-length",
+    "present:objectives/anti-static/obfuscation",
     "present:objectives/command-and-control",
     "present:objectives/command-and-control/dropper",
     "present:objectives/command-and-control/infrastructure",
@@ -436,6 +438,7 @@
     "maxcrit:objectives",
     "maxcrit:objectives/anti-static",
     "maxcrit:objectives/anti-static/excessive-line-length",
+    "maxcrit:objectives/anti-static/obfuscation",
     "maxcrit:objectives/command-and-control",
     "maxcrit:objectives/command-and-control/dropper",
     "maxcrit:objectives/command-and-control/infrastructure",
@@ -683,6 +686,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 324,
+  "total_features": 326,
   "standardized": false
 }

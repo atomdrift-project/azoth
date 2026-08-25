@@ -260,16 +260,10 @@
   "crit_trigram_vocab": [],
   "attack_bigram_vocab": [
     "T1027 + T1195.002",
-    "T1027.004 + T1059",
-    "T1027.004 + T1059.004",
     "T1059 + T1059.004",
-    "T1059 + T1070.004",
     "T1059.004 + T1195.002"
   ],
-  "attack_trigram_vocab": [
-    "T1027.004 + T1059 + T1059.004",
-    "T1059 + T1059.004 + T1070.004"
-  ],
+  "attack_trigram_vocab": [],
   "mbc_bigram_vocab": [
     "B0030 + B0032"
   ],
@@ -502,7 +496,7 @@
     "n:micro-behaviors/communications + n:objectives/command-and-control/dropper",
     "n:micro-behaviors/communications + n:objectives/execution",
     "n:micro-behaviors/communications + n:well-known",
-    "n:micro-behaviors/communications + n:well-known/app",
+    "n:micro-behaviors/communications + n:well-known/tool",
     "n:micro-behaviors/communications + s:objectives",
     "n:micro-behaviors/communications/http + n:micro-behaviors/communications/url",
     "n:micro-behaviors/communications/http + n:micro-behaviors/data",
@@ -524,7 +518,7 @@
     "n:micro-behaviors/communications/http + n:objectives/command-and-control/dropper",
     "n:micro-behaviors/communications/http + n:objectives/execution",
     "n:micro-behaviors/communications/http + n:well-known",
-    "n:micro-behaviors/communications/http + n:well-known/app",
+    "n:micro-behaviors/communications/http + n:well-known/tool",
     "n:micro-behaviors/communications/http + s:objectives",
     "n:micro-behaviors/communications/ssh + n:micro-behaviors/process",
     "n:micro-behaviors/communications/ssh + n:micro-behaviors/process/create",
@@ -604,7 +598,6 @@
     "n:micro-behaviors/fs + n:well-known/app/localai",
     "n:micro-behaviors/fs + n:well-known/app/samba",
     "n:micro-behaviors/fs + n:well-known/tool",
-    "n:micro-behaviors/fs + n:well-known/tool/development",
     "n:micro-behaviors/fs + n:well-known/tool/reverse-engineering",
     "n:micro-behaviors/fs + s:objectives",
     "n:micro-behaviors/fs + s:objectives/anti-static",

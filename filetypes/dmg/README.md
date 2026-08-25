@@ -4,11 +4,11 @@ LightGBM specialist for `dmg`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `dmg` slice of the locked test partition: 2 malware / 40 benign (42 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `dmg` slice of the locked test partition: 2 malware / 45 benign (47 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.700000 | 0.962500 | 0.666667 | — | 0.2405 |
+| 1.000000 | 1.000000 | 1.000000 | — | 0.0506 |
 
 ## Specialist Performance
 
@@ -16,11 +16,11 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dmg` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| — | — | — | — | - | — |
+| 1.000000 | 1.000000 | 1.000000 | — | 0.0506 | — |
 
 ## Routing
 
-Files matching `dmg` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `dmg` are scored by `general`, `filetypes/dmg`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

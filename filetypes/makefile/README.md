@@ -6,11 +6,11 @@ LightGBM specialist for `makefile`. Member of the Azoth routed ensemble; bundle 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `makefile` slice of the locked test partition: 102 malware / 7,800 benign (7,902 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `makefile` slice of the locked test partition: 102 malware / 7,834 benign (7,936 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.024760 | 0.387944 | 0.050926 | 0.98% | 0.0150 |
+| 0.023231 | 0.389066 | 0.049180 | 0.98% | 0.0155 |
 
 ## Specialist Performance
 
@@ -35,7 +35,7 @@ Files matching `makefile` are scored by `general`, `filegroups/source`. The ense
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 54,004 (21 mal / 53,983 ben) |
+| Train rows | 54,023 (21 mal / 54,002 ben) |
 | Feature spec | 633 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

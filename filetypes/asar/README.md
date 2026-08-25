@@ -4,11 +4,11 @@ LightGBM specialist for `asar`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `asar` slice of the locked test partition: 22 malware / 17 benign (39 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `asar` slice of the locked test partition: 22 malware / 25 benign (47 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.996212 | 0.994652 | 0.976744 | — | 0.0296 |
+| 0.996212 | 0.996364 | 0.976744 | — | 0.0215 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asar` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.996212 | 0.994652 | 0.976744 | — | 0.0296 | — |
+| 0.996212 | 0.996364 | 0.976744 | — | 0.0215 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `asar` are scored by `general`, `filetypes/asar`. The ensemble's 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 358 (162 mal / 196 ben) |
-| Feature spec | 1478 features (`route_specific`) |
+| Train rows | 362 (163 mal / 199 ben) |
+| Feature spec | 1482 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

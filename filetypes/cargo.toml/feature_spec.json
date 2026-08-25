@@ -53,6 +53,7 @@
     "well-known"
   ],
   "skeleton_vocab": [
+    "KLi",
     "MdBk",
     "MdPa",
     "OS"
@@ -200,6 +201,7 @@
     "n:well-known + n:well-known/dual-use",
     "n:well-known + n:well-known/dual-use/remote-admin",
     "n:well-known + n:well-known/lib",
+    "n:well-known + n:well-known/lib/data",
     "n:well-known + n:well-known/lib/development",
     "n:well-known + n:well-known/lib/network",
     "n:well-known + n:well-known/lib/platform",
@@ -208,6 +210,7 @@
     "n:well-known + n:well-known/tool/reverse-engineering",
     "n:well-known/app + n:well-known/app/communication",
     "n:well-known/dual-use + n:well-known/dual-use/remote-admin",
+    "n:well-known/lib + n:well-known/lib/data",
     "n:well-known/lib + n:well-known/lib/development",
     "n:well-known/lib + n:well-known/lib/network",
     "n:well-known/lib + n:well-known/lib/platform",

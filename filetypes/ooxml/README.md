@@ -4,11 +4,11 @@ LightGBM specialist for `docx`, `pptx`, `xlsx`. Member of the Azoth routed ensem
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml` slice of the locked test partition: 8,561 malware / 352 benign (8,913 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml` slice of the locked test partition: 8,563 malware / 352 benign (8,915 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.993178 | 0.884542 | 0.989744 | 33.59% | 0.0202 |
+| 0.991759 | 0.852270 | 0.984191 | 33.81% | 0.0284 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.992541 | 0.866625 | 0.989859 | 33.38% | 0.6306 | — |
+| 0.990777 | 0.807498 | 0.984361 | 33.58% | 0.6298 | — |
 
 ## Recall by FP level (per 100M benigns)
 

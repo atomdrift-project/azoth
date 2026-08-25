@@ -6,11 +6,11 @@ LightGBM specialist for `png`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `png` slice of the locked test partition: 1,088 malware / 62,705 benign (63,793 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `png` slice of the locked test partition: 1,087 malware / 64,556 benign (65,643 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.087754 | 0.660729 | 0.104439 | 1.47% | 0.0204 |
+| 0.074327 | 0.558300 | 0.104901 | 5.52% | 0.0176 |
 
 ## Specialist Performance
 
@@ -35,8 +35,8 @@ Files matching `png` are scored by `general`, `filegroups/media`. The ensemble's
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 448,437 (436 mal / 448,001 ben) |
-| Feature spec | 227 features (`route_specific`) |
+| Train rows | 449,279 (436 mal / 448,843 ben) |
+| Feature spec | 225 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

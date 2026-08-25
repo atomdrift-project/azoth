@@ -4,11 +4,11 @@ LightGBM specialist for `json`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `json` slice of the locked test partition: 202 malware / 28,951 benign (29,153 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `json` slice of the locked test partition: 203 malware / 31,118 benign (31,321 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.056421 | 0.694280 | 0.075085 | 3.47% | 0.0081 |
+| 0.049009 | 0.416193 | 0.082949 | 3.94% | 0.0086 |
 
 ## Specialist Performance
 
@@ -33,8 +33,8 @@ Files matching `json` are scored by `general`, `filegroups/config`. The ensemble
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 217,903 (89 mal / 217,814 ben) |
-| Feature spec | 743 features (`route_specific`) |
+| Train rows | 218,486 (91 mal / 218,395 ben) |
+| Feature spec | 753 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

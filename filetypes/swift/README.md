@@ -4,11 +4,11 @@ LightGBM specialist for `swift`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `swift` slice of the locked test partition: 9 malware / 5,332 benign (5,341 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `swift` slice of the locked test partition: 9 malware / 5,507 benign (5,516 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.573584 | 0.849442 | 0.714286 | 55.56% | 0.0040 |
+| 0.559435 | 0.896041 | 0.714286 | 55.56% | 0.0044 |
 
 ## Specialist Performance
 
@@ -33,8 +33,8 @@ Files matching `swift` are scored by `general`, `filegroups/source`. The ensembl
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 39,044 (32 mal / 39,012 ben) |
-| Feature spec | 406 features (`route_specific`) |
+| Train rows | 39,047 (32 mal / 39,015 ben) |
+| Feature spec | 408 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

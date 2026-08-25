@@ -4,11 +4,11 @@ LightGBM specialist for `xpi`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xpi` slice of the locked test partition: 14 malware / 161 benign (175 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xpi` slice of the locked test partition: 16 malware / 300 benign (316 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.602668 | 0.831633 | 0.645161 | 28.57% | 0.0664 |
+| 0.586162 | 0.876458 | 0.645161 | 12.50% | 0.0290 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xpi` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| — | — | — | — | - | — |
+| 0.586162 | 0.876458 | 0.645161 | 12.50% | 0.0290 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `xpi` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xpi` are scored by `general`, `filetypes/xpi`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,272 (147 mal / 2,125 ben) |
-| Feature spec | 1252 features (`route_specific`) |
+| Train rows | 2,275 (149 mal / 2,126 ben) |
+| Feature spec | 1257 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

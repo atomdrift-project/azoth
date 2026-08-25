@@ -4,11 +4,11 @@ LightGBM specialist for `chrome-manifest`. Member of the Azoth routed ensemble; 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `chrome_manifest` slice of the locked test partition: 12 malware / 128 benign (140 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `chrome_manifest` slice of the locked test partition: 12 malware / 136 benign (148 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.877770 | 0.972656 | 0.818182 | 66.67% | 0.0339 |
+| 0.912067 | 0.975490 | 0.869565 | 75.00% | 0.0359 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chrome
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.877770 | 0.972656 | 0.818182 | 66.67% | 0.0339 | — |
+| 0.912067 | 0.975490 | 0.869565 | 75.00% | 0.0359 | — |
 
 ## Recall by FP level (per 100M benigns)
 

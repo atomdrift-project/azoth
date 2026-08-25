@@ -4,11 +4,11 @@ LightGBM specialist for `groovy`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 17 malware / 1,367 benign (1,384 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 17 malware / 1,377 benign (1,394 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.245828 | 0.548582 | 0.380952 | 23.53% | 0.0118 |
+| 0.245674 | 0.531441 | 0.380952 | 23.53% | 0.0116 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `groovy
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.245828 | 0.548582 | 0.380952 | 23.53% | 0.0118 | — |
+| 0.245674 | 0.531441 | 0.380952 | 23.53% | 0.0116 | — |
 
 ## Recall by FP level (per 100M benigns)
 
