@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `php` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.713158 | 0.923493 | 0.762376 | 44.35% | 0.0090 |
+| 0.714266 | 0.915478 | 0.768908 | 42.35% | 0.0094 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `php` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.727403 | 0.923398 | 0.766268 | 43.29% | 0.0042 | — |
+| 0.725759 | 0.921782 | 0.756164 | 40.24% | 0.0043 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `php` are scored by `general`, `filegroups/scripts`, `filetypes/p
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 540,007 (4,469 mal / 535,538 ben) |
-| Feature spec | 1534 features (`route_specific`) |
+| Train rows | 541,039 (4,627 mal / 536,412 ben) |
+| Feature spec | 1533 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

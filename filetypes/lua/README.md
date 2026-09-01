@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lua` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.904275 | 0.946365 | 0.909091 | 83.33% | 0.0008 |
+| 0.904366 | 0.955080 | 0.909091 | 83.33% | 0.0008 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lua` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.904275 | 0.946365 | 0.909091 | 83.33% | 0.0008 | — |
+| 0.904366 | 0.955080 | 0.909091 | 83.33% | 0.0008 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `lua` are scored by `filegroups/scripts`, `filetypes/lua`. The en
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 24,279 (84 mal / 24,195 ben) |
-| Feature spec | 964 features (`route_specific`) |
+| Train rows | 24,291 (84 mal / 24,207 ben) |
+| Feature spec | 959 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

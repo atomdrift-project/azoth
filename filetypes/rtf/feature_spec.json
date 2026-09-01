@@ -51,7 +51,10 @@
     "Th"
   ],
   "bigram_vocab": [],
-  "ghost_vocab": [],
+  "ghost_vocab": [
+    "metadata/file",
+    "metadata/file/magic"
+  ],
   "skeleton_vocab": [
     "MdPd",
     "MdPdTh",
@@ -293,12 +296,16 @@
     "n:metadata/document + n:metadata/encoded-payload/xor",
     "n:metadata/document + s:metadata",
     "n:metadata/document + s:metadata/file-extension-mismatch",
+    "n:metadata/document + s:objectives",
+    "n:metadata/document + s:objectives/anti-static",
     "n:metadata/document/rtf + n:metadata/encoded-payload",
     "n:metadata/document/rtf + n:metadata/encoded-payload/hex",
     "n:metadata/document/rtf + n:metadata/encoded-payload/hex-base64",
     "n:metadata/document/rtf + n:metadata/encoded-payload/xor",
     "n:metadata/document/rtf + s:metadata",
     "n:metadata/document/rtf + s:metadata/file-extension-mismatch",
+    "n:metadata/document/rtf + s:objectives",
+    "n:metadata/document/rtf + s:objectives/anti-static",
     "n:metadata/encoded-payload + n:metadata/encoded-payload/hex",
     "n:metadata/encoded-payload + n:metadata/encoded-payload/hex-base64",
     "n:metadata/encoded-payload + n:metadata/encoded-payload/url",

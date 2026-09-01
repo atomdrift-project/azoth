@@ -4,11 +4,11 @@ LightGBM specialist for `gem`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `gem` slice of the locked test partition: 97 malware / 382 benign (479 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `gem` slice of the locked test partition: 97 malware / 387 benign (484 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.956124 | 0.969585 | 0.962567 | 92.78% | 0.0154 |
+| 0.954055 | 0.967993 | 0.962567 | 92.78% | 0.0155 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `gem` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.956124 | 0.969585 | 0.962567 | 92.78% | 0.0154 | — |
+| 0.954055 | 0.967993 | 0.962567 | 92.78% | 0.0155 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `gem` are scored by `filetypes/gem`. The ensemble's per-row score
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,951 (801 mal / 3,150 ben) |
-| Feature spec | 1741 features (`route_specific`) |
+| Train rows | 5,022 (862 mal / 4,160 ben) |
+| Feature spec | 1770 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

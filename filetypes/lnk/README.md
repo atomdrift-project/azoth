@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.995148 | 0.984660 | 0.983435 | 82.64% | 0.0320 |
+| 0.993971 | 0.980022 | 0.980017 | 81.77% | 0.0318 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.997574 | 0.990241 | 0.983521 | 82.29% | 0.1133 | — |
+| 0.997521 | 0.990042 | 0.984293 | 81.60% | 0.1124 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `lnk` are scored by `general`, `filetypes/lnk`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,568 (3,589 mal / 979 ben) |
-| Feature spec | 413 features (`route_specific`) |
+| Train rows | 4,615 (3,608 mal / 1,007 ben) |
+| Feature spec | 407 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

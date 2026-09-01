@@ -33,7 +33,7 @@ Files matching `chrome_manifest` are scored by `filetypes/chrome_manifest`. The 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,005 (86 mal / 919 ben) |
+| Train rows | 1,011 (86 mal / 925 ben) |
 | Feature spec | 207 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

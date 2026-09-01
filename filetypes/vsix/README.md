@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.393712 | 0.865505 | 0.444444 | 25.00% | 0.0457 |
+| 0.440572 | 0.866071 | 0.480000 | 31.25% | 0.0474 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.393712 | 0.865505 | 0.444444 | 25.00% | 0.0457 | — |
+| 0.440572 | 0.866071 | 0.480000 | 31.25% | 0.0474 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `vsix` are scored by `filetypes/vsix`. The ensemble's per-row sco
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,764 (159 mal / 4,605 ben) |
-| Feature spec | 1801 features (`route_specific`) |
+| Train rows | 4,997 (165 mal / 4,832 ben) |
+| Feature spec | 1791 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

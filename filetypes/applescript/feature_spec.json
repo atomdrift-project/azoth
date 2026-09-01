@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "e46ecb727d81c3004cc3cf3ea97dcbe5c545b89f125e322d07ebbc51bfe162f8",
+  "feature_layout_hash": "6a14ea4e563614ad311ca7fd544a663b18c6c6d61efc1637856c90a7ec89c03b",
   "presence_vocab": [
     "metadata",
     "metadata/encoded-payload",
@@ -75,7 +75,9 @@
     "metadata/package/license",
     "metadata/package/testing"
   ],
-  "skeleton_vocab": [],
+  "skeleton_vocab": [
+    "HPo"
+  ],
   "rare_element_vocab": [
     "O(CCaCoLaPAlDy)H(CmFOsPo)",
     "O(CCaCoPAlDy)H(CmFOsPo)Md"
@@ -1602,8 +1604,6 @@
     "h:objectives/persistence/system + s:objectives/discovery/host",
     "n:metadata + n:metadata/encoded-payload",
     "n:metadata + n:metadata/encoded-payload/base64",
-    "n:metadata + n:metadata/file",
-    "n:metadata + n:metadata/file/profile",
     "n:metadata + n:micro-behaviors/fs/chmod",
     "n:metadata + n:micro-behaviors/os",
     "n:metadata + n:micro-behaviors/os/service",
@@ -1678,7 +1678,6 @@
     "n:metadata/encoded-payload/base64 + s:objectives/credential-access/validation",
     "n:metadata/encoded-payload/base64 + s:objectives/discovery",
     "n:metadata/encoded-payload/base64 + s:objectives/discovery/host",
-    "n:metadata/file + n:metadata/file/profile",
     "n:micro-behaviors + n:micro-behaviors/communications",
     "n:micro-behaviors + n:micro-behaviors/communications/http",
     "n:micro-behaviors + n:micro-behaviors/fs",
@@ -2395,7 +2394,6 @@
     "tierbi:h:objectives/command-and-control/dropper + n:micro-behaviors/process",
     "tierbi:h:objectives/command-and-control/dropper + n:micro-behaviors/process/create",
     "tierbi:n:metadata + n:metadata/encoded-payload",
-    "tierbi:n:metadata + n:metadata/file",
     "tierbi:n:metadata + n:micro-behaviors/os",
     "tierbi:n:metadata + n:micro-behaviors/os/service",
     "tierbi:n:metadata + n:micro-behaviors/process",
@@ -2486,6 +2484,7 @@
     "tierbi:s:micro-behaviors + s:micro-behaviors/communications",
     "tierbi:s:micro-behaviors + s:objectives/anti-analysis",
     "tierbi:s:objectives/evasion + s:objectives/evasion/masquerade",
+    "skeleton:HPo",
     "struct:packaged_capability",
     "struct:entropy_std_dev",
     "struct:entropy_max_diff",

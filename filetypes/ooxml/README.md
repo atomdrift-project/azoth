@@ -4,11 +4,11 @@ LightGBM specialist for `docx`, `pptx`, `xlsx`. Member of the Azoth routed ensem
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml` slice of the locked test partition: 8,563 malware / 352 benign (8,915 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml` slice of the locked test partition: 8,564 malware / 352 benign (8,916 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.991759 | 0.852270 | 0.984191 | 33.81% | 0.0284 |
+| 0.993815 | 0.890985 | 0.989118 | 33.84% | 0.0202 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.990777 | 0.807498 | 0.984361 | 33.58% | 0.6298 | — |
+| 0.993267 | 0.867949 | 0.990494 | 33.60% | 0.6296 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `ooxml` are scored by `general`, `filetypes/ooxml`. The ensemble'
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 23,572 (20,881 mal / 2,691 ben) |
-| Feature spec | 262 features (`route_specific`) |
+| Train rows | 23,586 (20,889 mal / 2,697 ben) |
+| Feature spec | 266 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

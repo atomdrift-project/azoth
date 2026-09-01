@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `csharp
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.336792 | 0.686770 | 0.403909 | 23.39% | 0.0281 |
+| 0.331616 | 0.670207 | 0.404643 | 23.39% | 0.0275 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `csharp
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.336792 | 0.686770 | 0.403909 | 23.39% | 0.0281 | — |
+| 0.331616 | 0.670207 | 0.404643 | 23.39% | 0.0275 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `csharp` are scored by `general`, `filegroups/source`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 87,692 (864 mal / 86,828 ben) |
-| Feature spec | 1151 features (`route_specific`) |
+| Train rows | 89,342 (867 mal / 88,475 ben) |
+| Feature spec | 1193 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

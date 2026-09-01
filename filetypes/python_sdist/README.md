@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 1.000000 | — | 0.0996 |
+| 1.000000 | 1.000000 | 1.000000 | — | 0.0762 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 1.000000 | — | 0.0572 | — |
+| 1.000000 | 1.000000 | 1.000000 | — | 0.0411 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `python_sdist` are scored by `general`, `filetypes/python_sdist`.
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 303 (66 mal / 237 ben) |
-| Feature spec | 1303 features (`route_specific`) |
+| Train rows | 414 (73 mal / 341 ben) |
+| Feature spec | 1385 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

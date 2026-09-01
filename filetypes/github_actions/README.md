@@ -4,11 +4,11 @@ LightGBM specialist for `github_actions`. Member of the Azoth routed ensemble; b
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `github_actions` slice of the locked test partition: 9 malware / 2,312 benign (2,321 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `github_actions` slice of the locked test partition: 9 malware / 2,314 benign (2,323 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.277524 | 0.831603 | 0.428571 | 11.11% | 0.0046 |
+| 0.248954 | 0.647124 | 0.363636 | 22.22% | 0.0085 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `github
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.299694 | 0.680344 | 0.461538 | 12.50% | 0.0061 | — |
+| 0.288012 | 0.666860 | 0.461538 | 12.50% | 0.0058 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `github_actions` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `github_actions` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 8,516 (21 mal / 8,495 ben) |
-| Feature spec | 295 features (`route_specific`) |
+| Train rows | 9,102 (21 mal / 9,081 ben) |
+| Feature spec | 317 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

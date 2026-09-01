@@ -4,11 +4,11 @@ LightGBM specialist for `package.json`. Member of the Azoth routed ensemble; bun
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `package.json` slice of the locked test partition: 2,546 malware / 7,763 benign (10,309 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `package.json` slice of the locked test partition: 2,546 malware / 7,785 benign (10,331 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.976233 | 0.980204 | 0.972919 | 83.39% | 0.0182 |
+| 0.977756 | 0.983345 | 0.973568 | 83.70% | 0.0198 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `packag
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.980503 | 0.984733 | 0.976800 | 70.93% | 0.0134 | — |
+| 0.980475 | 0.983708 | 0.976224 | 71.52% | 0.0134 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `package.json` are scored by `general`, `filegroups/config`, `fil
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 72,372 (17,654 mal / 54,718 ben) |
-| Feature spec | 560 features (`route_specific`) |
+| Train rows | 73,915 (17,835 mal / 56,080 ben) |
+| Feature spec | 565 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -91,9 +91,7 @@
     "s:objectives",
     "s:objectives/anti-static"
   ],
-  "crit_bigram_vocab": [
-    "n:objectives + n:objectives/anti-static"
-  ],
+  "crit_bigram_vocab": [],
   "crit_trigram_vocab": [],
   "attack_bigram_vocab": [
     "T1036.005 + T1036.008"

@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "2cd0c2b94a496b9a7a806cbb071ef7901b75fa65b274c8d4a4d1113d5de4cdca",
+  "feature_layout_hash": "dee62d9bcd2161d87054e876b8d50fb346c89325a1ace79ac8998f9ffd4c9a0e",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -56,6 +56,7 @@
     "HDb",
     "K",
     "KOAs",
+    "MdBi",
     "OAs",
     "OAsHDb",
     "OErAsMd",
@@ -390,6 +391,7 @@
     "tierbi:s:objectives/evasion + s:objectives/evasion/masquerade",
     "skeleton:HCm",
     "skeleton:HDb",
+    "skeleton:MdBi",
     "skeleton:OAs",
     "skeleton:OAsHDb",
     "skeleton:OErMd",
@@ -413,6 +415,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 225,
+  "total_features": 226,
   "standardized": false
 }

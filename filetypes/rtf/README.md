@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998304 | 0.985038 | 0.989051 | 97.83% | 0.0379 |
+| 0.998413 | 0.986045 | 0.988450 | 97.71% | 0.0275 |
 
 ## Specialist Performance
 
@@ -33,7 +33,7 @@ Files matching `rtf` are scored by `filegroups/documents`, `filetypes/rtf`. The 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,097 (5,316 mal / 781 ben) |
+| Train rows | 6,104 (5,318 mal / 786 ben) |
 | Feature spec | 211 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
