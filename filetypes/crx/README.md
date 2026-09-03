@@ -33,8 +33,8 @@ Files matching `crx` are scored by `general`, `filetypes/crx`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,646 (1,177 mal / 5,469 ben) |
-| Feature spec | 1556 features (`route_specific`) |
+| Train rows | 6,647 (1,177 mal / 5,470 ben) |
+| Feature spec | 1554 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

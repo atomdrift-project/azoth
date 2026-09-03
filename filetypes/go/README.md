@@ -33,7 +33,7 @@ Files matching `go` are scored by `general`, `filegroups/source`, `filetypes/go`
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 205,109 (2,824 mal / 202,285 ben) |
+| Train rows | 205,139 (2,835 mal / 202,304 ben) |
 | Feature spec | 1459 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

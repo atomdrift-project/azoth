@@ -10,7 +10,7 @@ Generalist model scored on each filetype's slice of the locked test partition (1
 
 | File type | Files | ROC AUC | PR AUC | F1 | EMBER ROC (All files → X) | Δ ROC | EMBER PR | Δ PR |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| **all files** | 2187006 | 0.959605 | 0.909103 | 0.8943 | 0.9969 | -0.037295 | 0.9971 | -0.087997 |
+| **all files** | 2196156 | 0.934743 | 0.894418 | 0.8939 | 0.9969 | -0.062157 | 0.9971 | -0.102682 |
 | `rtf` | 929 | 0.989311 | 0.998705 | 0.9897 | — | - | — | - |
 | `html` | 8,508 | 0.967750 | 0.967859 | 0.9836 | — | - | — | - |
 | `pkg_info` | 3,379 | 0.997563 | 0.996811 | 0.9812 | — | - | — | - |
@@ -63,7 +63,7 @@ Generalist model scored on each filetype's slice of the locked test partition (1
 ## Training
 
 - Algorithm: LightGBM binary classifier: estimators=?, num_leaves=?, max_depth=?, min_child_samples=?, learning_rate=?, subsample=?, colsample=?, reg_alpha=?, reg_lambda=?, early_stop=?, device=cpu.
-- Feature spec: `general/feature_spec.json` (9,232 features)
+- Feature spec: `general/feature_spec.json` (9,228 features)
 - Split: 75% train / 12.5% dev / 12.5% test, SHA256-deterministic. The model is fit on train. Calibrators and L0..L20 thresholds are fit on dev. The numbers above come from test.
 
 ## Training-time evaluation

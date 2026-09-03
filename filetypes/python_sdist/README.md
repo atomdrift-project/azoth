@@ -27,8 +27,8 @@ Files matching `python_sdist` are scored by `general`, `filetypes/python_sdist`.
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 414 (73 mal / 341 ben) |
-| Feature spec | 1385 features (`route_specific`) |
+| Train rows | 676 (85 mal / 591 ben) |
+| Feature spec | 1442 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

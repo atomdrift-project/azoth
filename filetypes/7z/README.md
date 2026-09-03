@@ -28,7 +28,7 @@ Files matching `7z` are scored by `general`, `filetypes/7z`. The ensemble's per-
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 7,678 (7,400 mal / 278 ben) |
-| Feature spec | 3187 features (`route_specific`) |
+| Feature spec | 3188 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

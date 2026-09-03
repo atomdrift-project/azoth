@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "6a14ea4e563614ad311ca7fd544a663b18c6c6d61efc1637856c90a7ec89c03b",
+  "feature_layout_hash": "95b1fdb63be3c4f9dedb967d2095801f056d16e95730e37c618c80beea7c14f2",
   "presence_vocab": [
     "metadata",
     "metadata/encoded-payload",
@@ -10,7 +10,6 @@
     "metadata/import",
     "metadata/package",
     "metadata/package/license",
-    "metadata/package/quality",
     "metadata/package/testing",
     "micro-behaviors",
     "micro-behaviors/communications",
@@ -2161,7 +2160,6 @@
     "present:metadata/import",
     "present:metadata/package",
     "present:metadata/package/license",
-    "present:metadata/package/quality",
     "present:metadata/package/testing",
     "present:micro-behaviors",
     "present:micro-behaviors/communications",
@@ -2216,7 +2214,6 @@
     "maxcrit:metadata/import",
     "maxcrit:metadata/package",
     "maxcrit:metadata/package/license",
-    "maxcrit:metadata/package/quality",
     "maxcrit:metadata/package/testing",
     "maxcrit:micro-behaviors",
     "maxcrit:micro-behaviors/communications",
@@ -2505,6 +2502,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 350,
+  "total_features": 348,
   "standardized": false
 }

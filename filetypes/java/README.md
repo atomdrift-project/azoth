@@ -33,8 +33,8 @@ Files matching `java` are scored by `general`, `filegroups/source`, `filetypes/j
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 160,461 (303 mal / 160,158 ben) |
-| Feature spec | 904 features (`route_specific`) |
+| Train rows | 160,494 (299 mal / 160,195 ben) |
+| Feature spec | 907 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

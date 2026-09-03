@@ -27,8 +27,8 @@ Files matching `apk_android` are scored by `general`, `filetypes/apk_android`. T
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,167 (986 mal / 181 ben) |
-| Feature spec | 1634 features (`route_specific`) |
+| Train rows | 1,170 (986 mal / 184 ben) |
+| Feature spec | 1623 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

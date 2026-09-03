@@ -33,8 +33,8 @@ Files matching `rpm` are scored by `general`, `filetypes/rpm`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 50,992 (63 mal / 50,929 ben) |
-| Feature spec | 2150 features (`route_specific`) |
+| Train rows | 51,608 (63 mal / 51,545 ben) |
+| Feature spec | 2149 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

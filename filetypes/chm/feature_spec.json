@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "6e7f6b48fb4ca56678dd9ad4ef330e7478e1ea6e42f3b05275a499fab30520c3",
+  "feature_layout_hash": "c5f8617042516b3861bbcabd74bab1f834c13e718620358ec4cfe9a447f06e82",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -117,6 +117,7 @@
     "batch",
     "cab",
     "chm",
+    "data",
     "docx",
     "elixir",
     "html",
@@ -153,7 +154,8 @@
     "anti-analysis/archive",
     "anti-analysis/archive/path-traversal",
     "metadata/file/metrics",
-    "objectives/credential-access/phishing"
+    "objectives/credential-access/phishing",
+    "well-known/tool/offensive"
   ],
   "skeleton_vocab": [],
   "rare_element_vocab": [
@@ -2059,6 +2061,7 @@
     "n:metadata/file + n:micro-behaviors/data",
     "n:metadata/file + n:micro-behaviors/os",
     "n:metadata/file + n:micro-behaviors/os/sysinfo",
+    "n:metadata/file + n:micro-behaviors/process",
     "n:metadata/file + n:micro-behaviors/ui",
     "n:metadata/file + n:micro-behaviors/ui/window",
     "n:metadata/file + n:objectives",
@@ -2342,6 +2345,8 @@
     "n:micro-behaviors/os/com + s:objectives/anti-static",
     "n:micro-behaviors/os/com + s:objectives/anti-static/obfuscation",
     "n:micro-behaviors/os/env + n:micro-behaviors/process",
+    "n:micro-behaviors/os/env + n:micro-behaviors/ui",
+    "n:micro-behaviors/os/env + n:micro-behaviors/ui/window",
     "n:micro-behaviors/os/random + n:micro-behaviors/os/sysinfo",
     "n:micro-behaviors/os/random + n:micro-behaviors/process",
     "n:micro-behaviors/os/random + n:micro-behaviors/process/create",
@@ -2984,6 +2989,7 @@
     "score:hopper_score",
     "score:density",
     "inter:batch*score",
+    "inter:data*score",
     "inter:docx*score",
     "inter:html*score",
     "inter:javascript*score",
@@ -3104,6 +3110,7 @@
     "tierbi:n:metadata/binary/metrics + s:objectives/anti-static/obfuscation",
     "tierbi:n:metadata/file + n:micro-behaviors/communications/http",
     "tierbi:n:metadata/file + n:micro-behaviors/os",
+    "tierbi:n:metadata/file + n:micro-behaviors/process",
     "tierbi:n:metadata/signed + n:metadata/signed/leaf",
     "tierbi:n:metadata/signed + n:micro-behaviors",
     "tierbi:n:metadata/signed + n:micro-behaviors/dylib",
@@ -3373,6 +3380,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 825,
+  "total_features": 827,
   "standardized": false
 }

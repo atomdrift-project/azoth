@@ -53,7 +53,6 @@
   ],
   "bigram_vocab": [],
   "ghost_vocab": [
-    "metadata/package/files",
     "well-known",
     "well-known/lib"
   ],
@@ -84,6 +83,7 @@
     "s:objectives/supply-chain"
   ],
   "crit_bigram_vocab": [
+    "n:objectives + n:objectives/command-and-control",
     "n:objectives + n:objectives/evasion",
     "n:objectives + n:well-known",
     "n:objectives + n:well-known/lib",

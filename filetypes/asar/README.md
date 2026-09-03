@@ -27,8 +27,8 @@ Files matching `asar` are scored by `general`, `filetypes/asar`. The ensemble's 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 373 (166 mal / 207 ben) |
-| Feature spec | 1485 features (`route_specific`) |
+| Train rows | 377 (167 mal / 210 ben) |
+| Feature spec | 1486 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -33,7 +33,7 @@ Files matching `cargo.toml` are scored by `filetypes/cargo.toml`. The ensemble's
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 7,461 (62 mal / 7,399 ben) |
+| Train rows | 7,549 (62 mal / 7,487 ben) |
 | Feature spec | 192 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

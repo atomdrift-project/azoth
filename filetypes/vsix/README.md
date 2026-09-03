@@ -33,8 +33,8 @@ Files matching `vsix` are scored by `filetypes/vsix`. The ensemble's per-row sco
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,997 (165 mal / 4,832 ben) |
-| Feature spec | 1791 features (`route_specific`) |
+| Train rows | 5,029 (166 mal / 4,863 ben) |
+| Feature spec | 1790 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -33,8 +33,8 @@ Files matching `crate` are scored by `general`, `filetypes/crate`. The ensemble'
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,879 (98 mal / 9,781 ben) |
-| Feature spec | 1617 features (`route_specific`) |
+| Train rows | 14,569 (96 mal / 14,473 ben) |
+| Feature spec | 1587 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

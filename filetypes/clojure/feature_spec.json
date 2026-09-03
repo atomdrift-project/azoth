@@ -73,7 +73,9 @@
     "Th"
   ],
   "bigram_vocab": [],
-  "ghost_vocab": [],
+  "ghost_vocab": [
+    "well-known"
+  ],
   "skeleton_vocab": [
     "HPo"
   ],

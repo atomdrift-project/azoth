@@ -34,7 +34,7 @@ Files matching `csharp` are scored by `general`, `filegroups/source`, `filetypes
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 89,342 (867 mal / 88,475 ben) |
-| Feature spec | 1193 features (`route_specific`) |
+| Feature spec | 1195 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

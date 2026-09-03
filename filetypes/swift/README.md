@@ -34,7 +34,7 @@ Files matching `swift` are scored by `filegroups/source`. The ensemble's per-row
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 39,090 (32 mal / 39,058 ben) |
-| Feature spec | 412 features (`route_specific`) |
+| Feature spec | 416 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

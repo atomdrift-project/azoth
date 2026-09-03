@@ -33,8 +33,8 @@ Files matching `github_actions` are scored by `general`. The ensemble's per-row 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,102 (21 mal / 9,081 ben) |
-| Feature spec | 317 features (`route_specific`) |
+| Train rows | 9,508 (21 mal / 9,487 ben) |
+| Feature spec | 320 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

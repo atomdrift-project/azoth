@@ -33,8 +33,8 @@ Files matching `xpi` are scored by `general`, `filetypes/xpi`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,402 (139 mal / 2,263 ben) |
-| Feature spec | 1261 features (`route_specific`) |
+| Train rows | 2,418 (140 mal / 2,278 ben) |
+| Feature spec | 1258 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

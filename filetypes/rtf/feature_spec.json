@@ -53,7 +53,8 @@
   "bigram_vocab": [],
   "ghost_vocab": [
     "metadata/file",
-    "metadata/file/magic"
+    "metadata/file/magic",
+    "metadata/file/profile"
   ],
   "skeleton_vocab": [
     "MdPd",

@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "ba0f87dc809299b66e8e68ee2bed52faad3db0724f3cfe1b3e215435f5beab8e",
+  "feature_layout_hash": "93759ad9b6c34366d40f336b963b1582cce8f49b8a706548e9e9915e1d8b4401",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -43,8 +43,7 @@
     "well-known/malware/stealer",
     "well-known/malware/trojan",
     "well-known/tool",
-    "well-known/tool/development",
-    "well-known/tool/reverse-engineering"
+    "well-known/tool/development"
   ],
   "filetype_vocab": [
     "plist"
@@ -249,14 +248,12 @@
     "n:well-known + n:well-known/malware/trojan",
     "n:well-known + n:well-known/tool",
     "n:well-known + n:well-known/tool/development",
-    "n:well-known + n:well-known/tool/reverse-engineering",
     "n:well-known/app + n:well-known/app/development",
     "n:well-known/app + n:well-known/app/macos-benign",
     "n:well-known/app + n:well-known/app/media",
     "n:well-known/lib + n:well-known/lib/format",
     "n:well-known/malware + n:well-known/malware/trojan",
     "n:well-known/tool + n:well-known/tool/development",
-    "n:well-known/tool + n:well-known/tool/reverse-engineering",
     "s:metadata + s:metadata/file-extension-mismatch",
     "s:micro-behaviors + s:micro-behaviors/communications",
     "s:micro-behaviors + s:micro-behaviors/communications/http",
@@ -332,7 +329,6 @@
     "present:well-known/malware/trojan",
     "present:well-known/tool",
     "present:well-known/tool/development",
-    "present:well-known/tool/reverse-engineering",
     "maxcrit:metadata",
     "maxcrit:metadata/binary",
     "maxcrit:metadata/binary/bundle",
@@ -374,7 +370,6 @@
     "maxcrit:well-known/malware/trojan",
     "maxcrit:well-known/tool",
     "maxcrit:well-known/tool/development",
-    "maxcrit:well-known/tool/reverse-engineering",
     "agg:max_crit",
     "agg:category_breadth",
     "agg:path_breadth_any",
@@ -556,6 +551,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 264,
+  "total_features": 262,
   "standardized": false
 }

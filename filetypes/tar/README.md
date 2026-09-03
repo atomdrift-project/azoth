@@ -33,8 +33,8 @@ Files matching `tar` are scored by `general`, `filetypes/tar`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 89,938 (30,170 mal / 59,768 ben) |
-| Feature spec | 2574 features (`route_specific`) |
+| Train rows | 90,505 (29,891 mal / 60,614 ben) |
+| Feature spec | 2587 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

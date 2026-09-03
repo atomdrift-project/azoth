@@ -27,7 +27,7 @@ Files matching `dmg` are scored by `general`, `filetypes/dmg`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 257 (55 mal / 202 ben) |
+| Train rows | 259 (56 mal / 203 ben) |
 | Feature spec | 1752 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

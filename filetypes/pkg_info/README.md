@@ -33,8 +33,8 @@ Files matching `pkg_info` are scored by `general`. The ensemble's per-row score 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 23,536 (9,060 mal / 14,476 ben) |
-| Feature spec | 9232 features (`general_shared`) |
+| Train rows | 22,815 (8,313 mal / 14,502 ben) |
+| Feature spec | 485 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -35,7 +35,7 @@ Files matching `png` are scored by `general`, `filegroups/media`. The ensemble's
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 459,176 (436 mal / 458,740 ben) |
+| Train rows | 460,098 (436 mal / 459,662 ben) |
 | Feature spec | 226 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

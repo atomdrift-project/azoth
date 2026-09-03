@@ -2,8 +2,6 @@
 
 LightGBM specialist for `plist`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
-
 ## Ensemble Performance
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `plist` slice of the locked test partition: 84 malware / 12,517 benign (12,601 rows).
@@ -35,8 +33,8 @@ Files matching `plist` are scored by `filegroups/config`, `filetypes/plist`. The
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 88,235 (39 mal / 88,196 ben) |
-| Feature spec | 264 features (`route_specific`) |
+| Train rows | 88,254 (39 mal / 88,215 ben) |
+| Feature spec | 262 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

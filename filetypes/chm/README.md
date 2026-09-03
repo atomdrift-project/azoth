@@ -27,8 +27,8 @@ Files matching `chm` are scored by `general`, `filetypes/chm`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 231 (187 mal / 44 ben) |
-| Feature spec | 825 features (`route_specific`) |
+| Train rows | 232 (187 mal / 45 ben) |
+| Feature spec | 827 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

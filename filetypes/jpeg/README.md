@@ -2,6 +2,8 @@
 
 LightGBM specialist for `jpeg`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
+
 ## Ensemble Performance
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 179 malware / 5,580 benign (5,759 rows).
@@ -33,7 +35,7 @@ Files matching `jpeg` are scored by `general`, `filegroups/media`, `filetypes/jp
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 39,815 (260 mal / 39,555 ben) |
+| Train rows | 39,819 (260 mal / 39,559 ben) |
 | Feature spec | 212 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

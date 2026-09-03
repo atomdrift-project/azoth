@@ -33,7 +33,7 @@ Files matching `powershell` are scored by `general`, `filegroups/scripts`, `file
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,718 (4,926 mal / 4,792 ben) |
+| Train rows | 9,744 (4,926 mal / 4,818 ben) |
 | Feature spec | 1570 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

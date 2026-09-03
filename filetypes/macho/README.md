@@ -33,8 +33,8 @@ Files matching `macho` are scored by `filegroups/native`, `filetypes/macho`. The
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 30,219 (2,442 mal / 27,777 ben) |
-| Feature spec | 2023 features (`route_specific`) |
+| Train rows | 30,326 (2,443 mal / 27,883 ben) |
+| Feature spec | 2015 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

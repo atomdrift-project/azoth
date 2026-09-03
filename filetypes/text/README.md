@@ -33,8 +33,8 @@ Files matching `text` are scored by `general`. The ensemble's per-row score is w
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 281,257 (175 mal / 281,082 ben) |
-| Feature spec | 713 features (`route_specific`) |
+| Train rows | 281,901 (174 mal / 281,727 ben) |
+| Feature spec | 711 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

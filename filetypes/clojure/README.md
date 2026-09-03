@@ -33,7 +33,7 @@ Files matching `clojure` are scored by `general`, `filetypes/clojure`. The ensem
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 8,387 (49 mal / 8,338 ben) |
+| Train rows | 8,389 (49 mal / 8,340 ben) |
 | Feature spec | 304 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
