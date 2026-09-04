@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apk_an
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.953514 | 0.747089 | 0.930070 | — | 0.3687 |
+| 0.983441 | 0.916840 | 0.956217 | — | 0.0692 |
 
 ## Specialist Performance
 
@@ -16,18 +16,18 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apk_an
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.953514 | 0.747089 | 0.930070 | — | 0.3687 | — |
+| 0.947190 | 0.717675 | 0.928814 | — | 0.3710 | — |
 
 ## Routing
 
-Files matching `apk_android` are scored by `general`, `filetypes/apk_android`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `apk_android` are scored by `general`, `filetypes/apk_android`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,170 (986 mal / 184 ben) |
+| Train rows | 1,171 (986 mal / 185 ben) |
 | Feature spec | 1623 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

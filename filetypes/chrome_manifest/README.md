@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chrome
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.912067 | 0.975490 | 0.869565 | 75.00% | 0.0359 |
+| 0.868194 | 0.960784 | 0.818182 | 58.33% | 0.0384 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chrome
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.912067 | 0.975490 | 0.869565 | 75.00% | 0.0359 | — |
+| 0.868194 | 0.960784 | 0.818182 | 58.33% | 0.0384 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,14 +26,14 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `chrome_manifest` are scored by `filetypes/chrome_manifest`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `chrome_manifest` are scored by `general`, `filetypes/chrome_manifest`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,012 (86 mal / 926 ben) |
+| Train rows | 1,013 (86 mal / 927 ben) |
 | Feature spec | 211 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

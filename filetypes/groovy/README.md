@@ -4,11 +4,11 @@ LightGBM specialist for `groovy`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 17 malware / 1,377 benign (1,394 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 17 malware / 1,378 benign (1,395 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.245673 | 0.531398 | 0.380952 | 23.53% | 0.0116 |
+| 0.214209 | 0.568236 | 0.347826 | 11.76% | 0.0115 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `groovy
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.245673 | 0.531398 | 0.380952 | 23.53% | 0.0116 | — |
+| 0.214209 | 0.568236 | 0.347826 | 11.76% | 0.0115 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,14 +26,14 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `groovy` are scored by `filetypes/groovy`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `groovy` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,301 (54 mal / 9,247 ben) |
+| Train rows | 9,302 (54 mal / 9,248 ben) |
 | Feature spec | 300 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "9a163f44a99b1c6e754d0b8c45d80d7c9fb6d291d71420a220fd7693e5092ff5",
+  "feature_layout_hash": "0d92765855cf5e700f48dbb3c52f49a056105a20984b5031279c007884b9100f",
   "presence_vocab": [
     "metadata",
     "metadata/encoded-payload",
@@ -77,7 +77,9 @@
     "well-known"
   ],
   "skeleton_vocab": [
-    "HPo"
+    "HPo",
+    "KAm",
+    "Md"
   ],
   "rare_element_vocab": [
     "H(PoU)Md",
@@ -312,11 +314,13 @@
     "n:objectives + n:objectives/command-and-control/backdoor",
     "n:objectives/command-and-control + n:objectives/command-and-control/backdoor",
     "n:well-known + n:well-known/app",
+    "n:well-known + n:well-known/app/ai",
     "n:well-known + n:well-known/app/communication",
     "n:well-known + n:well-known/lib",
     "n:well-known + n:well-known/lib/ai",
     "n:well-known + n:well-known/tool",
     "n:well-known + n:well-known/tool/development",
+    "n:well-known/app + n:well-known/app/ai",
     "n:well-known/app + n:well-known/app/communication",
     "n:well-known/lib + n:well-known/lib/ai",
     "n:well-known/tool + n:well-known/tool/development",
@@ -617,6 +621,7 @@
     "tierbi:n:objectives + n:objectives/command-and-control",
     "tierbi:s:objectives + s:objectives/command-and-control",
     "skeleton:HPo",
+    "skeleton:Md",
     "struct:packaged_capability",
     "struct:entropy_std_dev",
     "struct:entropy_max_diff",
@@ -637,6 +642,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 304,
+  "total_features": 305,
   "standardized": false
 }

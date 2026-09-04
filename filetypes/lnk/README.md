@@ -4,11 +4,11 @@ LightGBM specialist for `lnk`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 576 malware / 140 benign (716 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 578 malware / 145 benign (723 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.993971 | 0.980022 | 0.980017 | 81.77% | 0.0318 |
+| 0.997898 | 0.991821 | 0.987952 | 82.53% | 0.1100 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.997521 | 0.990042 | 0.984293 | 81.60% | 0.1124 | — |
+| 0.997898 | 0.991821 | 0.987952 | 82.53% | 0.1100 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,7 +26,7 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `lnk` are scored by `general`, `filetypes/lnk`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `lnk` are scored by `general`, `filetypes/lnk`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

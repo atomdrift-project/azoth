@@ -154,8 +154,7 @@
     "anti-analysis/archive",
     "anti-analysis/archive/path-traversal",
     "metadata/file/metrics",
-    "objectives/credential-access/phishing",
-    "well-known/tool/offensive"
+    "objectives/credential-access/phishing"
   ],
   "skeleton_vocab": [],
   "rare_element_vocab": [

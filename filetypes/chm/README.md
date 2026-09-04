@@ -4,11 +4,11 @@ LightGBM specialist for `chm`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `chm` slice of the locked test partition: 40 malware / 8 benign (48 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `chm` slice of the locked test partition: 40 malware / 9 benign (49 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.991440 | 0.962500 | 0.962963 | — | 0.0969 |
+| 0.989604 | 0.952778 | 0.962963 | — | 0.1319 |
 
 ## Specialist Performance
 
@@ -16,18 +16,18 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chm` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.991440 | 0.962500 | 0.962963 | — | 0.1095 | — |
+| 0.988294 | 0.951389 | 0.951220 | — | 0.1145 | — |
 
 ## Routing
 
-Files matching `chm` are scored by `general`, `filetypes/chm`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `chm` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 232 (187 mal / 45 ben) |
+| Train rows | 233 (187 mal / 46 ben) |
 | Feature spec | 827 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

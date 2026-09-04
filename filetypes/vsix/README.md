@@ -4,11 +4,11 @@ LightGBM specialist for `vsix`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` slice of the locked test partition: 16 malware / 441 benign (457 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` slice of the locked test partition: 17 malware / 470 benign (487 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.440572 | 0.866071 | 0.480000 | 31.25% | 0.0474 |
+| 0.444859 | 0.889987 | 0.437500 | 23.53% | 0.0355 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.440572 | 0.866071 | 0.480000 | 31.25% | 0.0474 | — |
+| 0.444859 | 0.889987 | 0.437500 | 23.53% | 0.0355 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,14 +26,14 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `vsix` are scored by `filetypes/vsix`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `vsix` are scored by `general`, `filetypes/vsix`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 5,029 (166 mal / 4,863 ben) |
+| Train rows | 5,043 (167 mal / 4,876 ben) |
 | Feature spec | 1790 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

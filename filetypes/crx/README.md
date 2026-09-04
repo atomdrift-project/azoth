@@ -4,11 +4,11 @@ LightGBM specialist for `crx`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `crx` slice of the locked test partition: 299 malware / 701 benign (1,000 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `crx` slice of the locked test partition: 293 malware / 769 benign (1,062 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.911389 | 0.925789 | 0.854369 | 42.81% | 0.0827 |
+| 0.945958 | 0.964514 | 0.888889 | 46.42% | 0.0531 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `crx` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.927888 | 0.938177 | 0.871622 | 41.81% | 0.0623 | — |
+| 0.945958 | 0.964514 | 0.888889 | 46.42% | 0.0531 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,7 +26,7 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `crx` are scored by `general`, `filetypes/crx`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `crx` are scored by `general`, `filetypes/crx`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

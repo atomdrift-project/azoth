@@ -4,11 +4,11 @@ LightGBM specialist for `xpi`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xpi` slice of the locked test partition: 16 malware / 300 benign (316 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xpi` slice of the locked test partition: 14 malware / 327 benign (341 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.588232 | 0.892083 | 0.640000 | 12.50% | 0.0289 |
+| 0.586242 | 0.870686 | 0.692308 | 14.29% | 0.0291 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xpi` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.588232 | 0.892083 | 0.640000 | 12.50% | 0.0289 | — |
+| 0.586242 | 0.870686 | 0.692308 | 14.29% | 0.0291 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `xpi` are scored by `general`, `filetypes/xpi`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,418 (140 mal / 2,278 ben) |
-| Feature spec | 1258 features (`route_specific`) |
+| Train rows | 2,421 (140 mal / 2,281 ben) |
+| Feature spec | 1257 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

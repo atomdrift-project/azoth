@@ -4,11 +4,11 @@ LightGBM specialist for `deb`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `deb` slice of the locked test partition: 58 malware / 3,303 benign (3,361 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `deb` slice of the locked test partition: 58 malware / 3,403 benign (3,461 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.153106 | 0.654953 | 0.228571 | 10.34% | 0.0161 |
+| 0.135068 | 0.544466 | 0.189189 | 10.34% | 0.0161 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `deb` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.153106 | 0.654953 | 0.228571 | 10.34% | 0.0161 | — |
+| 0.135077 | 0.544581 | 0.189189 | 10.34% | 0.0161 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,14 +26,14 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `deb` are scored by `filetypes/deb`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `deb` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 23,274 (38 mal / 23,236 ben) |
+| Train rows | 23,319 (38 mal / 23,281 ben) |
 | Feature spec | 2276 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

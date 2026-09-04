@@ -4,11 +4,11 @@ LightGBM specialist for `php`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `php` slice of the locked test partition: 850 malware / 76,410 benign (77,260 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `php` slice of the locked test partition: 853 malware / 76,628 benign (77,481 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.714266 | 0.915478 | 0.768908 | 42.35% | 0.0094 |
+| 0.730427 | 0.927411 | 0.762619 | 46.07% | 0.0042 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `php` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.725759 | 0.921782 | 0.756164 | 40.24% | 0.0043 | — |
+| 0.730427 | 0.927411 | 0.762619 | 46.07% | 0.0042 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,14 +26,14 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `php` are scored by `general`, `filegroups/scripts`, `filetypes/php`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `php` are scored by `general`, `filegroups/scripts`, `filetypes/php`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 541,631 (4,630 mal / 537,001 ben) |
+| Train rows | 541,764 (4,620 mal / 537,144 ben) |
 | Feature spec | 1533 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

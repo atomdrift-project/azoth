@@ -4,11 +4,11 @@ LightGBM specialist for `kotlin`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin` slice of the locked test partition: 3,890 malware / 10,561 benign (14,451 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin` slice of the locked test partition: 3,889 malware / 10,617 benign (14,506 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.910301 | 0.933736 | 0.878993 | 58.43% | 0.0534 |
+| 0.952278 | 0.972336 | 0.897159 | 53.82% | 0.0456 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.898971 | 0.909665 | 0.875302 | 58.43% | 0.1212 | — |
+| 0.953149 | 0.975111 | 0.898397 | 52.46% | 0.1140 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,7 +33,7 @@ Files matching `kotlin` are scored by `general`, `filegroups/source`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 90,049 (16,889 mal / 73,160 ben) |
+| Train rows | 90,051 (16,889 mal / 73,162 ben) |
 | Feature spec | 1339 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

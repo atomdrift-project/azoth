@@ -4,11 +4,11 @@ LightGBM specialist for `ruby`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` slice of the locked test partition: 52 malware / 22,146 benign (22,198 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` slice of the locked test partition: 52 malware / 22,167 benign (22,219 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.608116 | 0.839788 | 0.731707 | 57.69% | 0.0024 |
+| 0.574422 | 0.879645 | 0.682927 | 50.00% | 0.0045 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.608116 | 0.839788 | 0.731707 | 57.69% | 0.0024 | — |
+| 0.594847 | 0.874611 | 0.707317 | 48.08% | 0.0013 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,14 +26,14 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `ruby` are scored by `filegroups/scripts`, `filetypes/ruby`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `ruby` are scored by `filegroups/scripts`, `filetypes/ruby`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 157,340 (224 mal / 157,116 ben) |
+| Train rows | 157,350 (224 mal / 157,126 ben) |
 | Feature spec | 1306 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

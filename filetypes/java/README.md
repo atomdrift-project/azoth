@@ -4,11 +4,11 @@ LightGBM specialist for `java`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `java` slice of the locked test partition: 461 malware / 22,665 benign (23,126 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `java` slice of the locked test partition: 461 malware / 22,708 benign (23,169 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.095199 | 0.482715 | 0.155598 | 1.08% | 0.0200 |
+| 0.131023 | 0.664261 | 0.161959 | 5.21% | 0.0186 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.100548 | 0.570932 | 0.150870 | 0.00% | 0.0188 | — |
+| 0.131023 | 0.664261 | 0.161959 | 5.21% | 0.0186 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,14 +26,14 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `java` are scored by `general`, `filegroups/source`, `filetypes/java`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `java` are scored by `general`, `filegroups/source`, `filetypes/java`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 160,494 (299 mal / 160,195 ben) |
+| Train rows | 160,510 (299 mal / 160,211 ben) |
 | Feature spec | 907 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
