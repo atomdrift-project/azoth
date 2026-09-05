@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "9a14187a54f0bd3d832fb7921c1ff03cc0db0699a7f7bff17cf74fbc6bf27364",
+  "feature_layout_hash": "1ad4acfb49eb80e524e9fab10a037777c2f2d627af2b219241bd97b402387035",
   "presence_vocab": [
     "binary",
     "binary/embedded",
@@ -26,6 +26,7 @@
     "metadata/binary/metrics",
     "metadata/binary/resource",
     "metadata/binary/section",
+    "metadata/binary/symbols",
     "metadata/binary/vendor",
     "metadata/build",
     "metadata/build/cmake",
@@ -1162,6 +1163,7 @@
     "n:objectives/anti-static + n:objectives/execution + n:objectives/impact",
     "n:objectives/anti-static + n:objectives/execution + n:objectives/persistence",
     "n:objectives/anti-static + n:objectives/execution + n:well-known",
+    "n:objectives/anti-static + n:objectives/execution + n:well-known/app",
     "n:objectives/anti-static + n:objectives/execution + n:well-known/lib",
     "n:objectives/anti-static + n:objectives/execution + s:objectives",
     "n:objectives/anti-static + n:objectives/impact + n:objectives/persistence",
@@ -1459,7 +1461,6 @@
     "n:well-known + n:well-known/tool + s:objectives/command-and-control",
     "n:well-known + s:objectives + s:objectives/anti-static",
     "n:well-known + s:objectives + s:objectives/command-and-control",
-    "n:well-known + s:objectives + s:objectives/evasion",
     "n:well-known + s:objectives + s:objectives/impact",
     "n:well-known/lib + s:objectives + s:objectives/anti-static",
     "n:well-known/lib + s:objectives + s:objectives/command-and-control",
@@ -4790,8 +4791,8 @@
     "n:metadata/lang + n:objectives/command-and-control/dropper",
     "n:metadata/lang + n:objectives/discovery",
     "n:metadata/lang + n:objectives/evasion",
-    "n:metadata/lang + n:objectives/evasion/anti-av",
     "n:metadata/lang + n:objectives/execution",
+    "n:metadata/lang + n:objectives/execution/compile",
     "n:metadata/lang + n:well-known",
     "n:metadata/lang + n:well-known/lib",
     "n:metadata/lang + n:well-known/lib/runtime",
@@ -8263,6 +8264,7 @@
     "present:metadata/binary/metrics",
     "present:metadata/binary/resource",
     "present:metadata/binary/section",
+    "present:metadata/binary/symbols",
     "present:metadata/binary/vendor",
     "present:metadata/build",
     "present:metadata/build/cmake",
@@ -8594,6 +8596,7 @@
     "maxcrit:metadata/binary/metrics",
     "maxcrit:metadata/binary/resource",
     "maxcrit:metadata/binary/section",
+    "maxcrit:metadata/binary/symbols",
     "maxcrit:metadata/binary/vendor",
     "maxcrit:metadata/build",
     "maxcrit:metadata/build/cmake",
@@ -10195,6 +10198,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 1954,
+  "total_features": 1956,
   "standardized": false
 }

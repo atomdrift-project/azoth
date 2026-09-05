@@ -4,11 +4,11 @@ LightGBM specialist for `dmg`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `dmg` slice of the locked test partition: 3 malware / 48 benign (51 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `dmg` slice of the locked test partition: 3 malware / 50 benign (53 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.866667 | 0.986111 | 0.800000 | — | 0.0499 |
+| 0.805556 | 0.986667 | 0.857143 | 33.33% | 0.0663 |
 
 ## Specialist Performance
 
@@ -16,19 +16,25 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dmg` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.866667 | 0.986111 | 0.800000 | — | 0.0499 | — |
+| 0.805556 | 0.986667 | 0.857143 | 33.33% | 0.0663 | — |
+
+## Recall by FP level (per 100M benigns)
+
+<img src="recall_curve.svg" alt="dmg: recall by FP level (per 100M benigns)" height="300" />
+
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
-Files matching `dmg` are scored by `filetypes/dmg`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `dmg` are scored by `general`, `filetypes/dmg`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 259 (56 mal / 203 ben) |
-| Feature spec | 1752 features (`route_specific`) |
+| Train rows | 269 (56 mal / 213 ben) |
+| Feature spec | 1753 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

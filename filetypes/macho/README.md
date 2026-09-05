@@ -4,11 +4,11 @@ LightGBM specialist for `macho`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `macho` slice of the locked test partition: 365 malware / 4,018 benign (4,383 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `macho` slice of the locked test partition: 367 malware / 4,045 benign (4,412 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.966201 | 0.988398 | 0.943662 | 70.41% | 0.0097 |
+| 0.964608 | 0.986403 | 0.943978 | 65.40% | 0.0096 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `macho`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.966201 | 0.988398 | 0.943662 | 70.41% | 0.0097 | — |
+| 0.964608 | 0.986403 | 0.943978 | 65.40% | 0.0096 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `macho` are scored by `filegroups/native`, `filetypes/macho`. The
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 30,346 (2,443 mal / 27,903 ben) |
-| Feature spec | 2013 features (`route_specific`) |
+| Train rows | 30,622 (2,455 mal / 28,167 ben) |
+| Feature spec | 2014 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

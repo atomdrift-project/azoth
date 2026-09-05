@@ -4,11 +4,11 @@ LightGBM specialist for `clojure`. Member of the Azoth routed ensemble; bundle r
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `clojure` slice of the locked test partition: 7 malware / 1,137 benign (1,144 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `clojure` slice of the locked test partition: 7 malware / 1,138 benign (1,145 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.557641 | 0.876555 | 0.666667 | 42.86% | 0.0035 |
+| 0.626564 | 0.899950 | 0.666667 | 42.86% | 0.0035 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `clojur
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.557641 | 0.876555 | 0.666667 | 42.86% | 0.0035 | — |
+| 0.626564 | 0.899950 | 0.666667 | 42.86% | 0.0035 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `clojure` are scored by `general`, `filetypes/clojure`. The ensem
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 8,393 (49 mal / 8,344 ben) |
-| Feature spec | 305 features (`route_specific`) |
+| Train rows | 8,396 (49 mal / 8,347 ben) |
+| Feature spec | 304 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

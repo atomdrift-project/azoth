@@ -98,7 +98,6 @@
     "h:objectives + s:objectives/anti-static",
     "h:objectives/command-and-control + s:objectives/anti-static",
     "s:objectives + s:objectives/anti-analysis",
-    "s:objectives + s:objectives/anti-static",
     "s:objectives/anti-analysis + s:objectives/anti-static"
   ],
   "crit_trigram_vocab": [

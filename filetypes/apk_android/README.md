@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apk_an
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.983441 | 0.916840 | 0.956217 | — | 0.0692 |
+| 0.983590 | 0.933264 | 0.955437 | — | 0.0641 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apk_an
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.947190 | 0.717675 | 0.928814 | — | 0.3710 | — |
+| 0.947230 | 0.719239 | 0.929078 | — | 0.3924 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `apk_android` are scored by `general`, `filetypes/apk_android`. T
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,171 (986 mal / 185 ben) |
-| Feature spec | 1623 features (`route_specific`) |
+| Train rows | 1,174 (986 mal / 188 ben) |
+| Feature spec | 1624 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
