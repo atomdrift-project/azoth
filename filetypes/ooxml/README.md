@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.993797 | 0.893250 | 0.989936 | 30.15% | 0.0187 |
+| 0.991268 | 0.840694 | 0.980812 | 29.53% | 0.0334 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.993342 | 0.869110 | 0.990051 | 29.09% | 0.6301 | — |
+| 0.990023 | 0.790946 | 0.980925 | 28.40% | 0.6297 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,7 +33,7 @@ Files matching `ooxml` are scored by `general`, `filetypes/ooxml`. The ensemble'
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 23,591 (20,889 mal / 2,702 ben) |
+| Train rows | 23,600 (20,890 mal / 2,710 ben) |
 | Feature spec | 266 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

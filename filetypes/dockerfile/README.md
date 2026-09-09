@@ -4,11 +4,11 @@ LightGBM specialist for `dockerfile`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `dockerfile` slice of the locked test partition: 22 malware / 600 benign (622 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `dockerfile` slice of the locked test partition: 22 malware / 609 benign (631 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.216828 | 0.613561 | 0.300000 | 9.09% | 0.0319 |
+| 0.193756 | 0.589640 | 0.277778 | 9.09% | 0.0317 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `docker
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.216828 | 0.613561 | 0.300000 | 9.09% | 0.0319 | — |
+| 0.193756 | 0.589640 | 0.277778 | 9.09% | 0.0317 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `dockerfile` are scored by `general`, `filetypes/dockerfile`. The
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,135 (60 mal / 4,075 ben) |
-| Feature spec | 459 features (`route_specific`) |
+| Train rows | 4,197 (60 mal / 4,137 ben) |
+| Feature spec | 468 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -4,11 +4,11 @@ LightGBM specialist for `jpeg`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 180 malware / 5,606 benign (5,786 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 193 malware / 5,610 benign (5,803 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.216413 | 0.620118 | 0.287037 | 10.56% | 0.0271 |
+| 0.196573 | 0.624315 | 0.257261 | 10.36% | 0.0297 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.216413 | 0.620118 | 0.287037 | 10.56% | 0.0271 | — |
+| 0.208077 | 0.619634 | 0.264317 | 9.84% | 0.0291 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,14 +26,14 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `jpeg` are scored by `general`, `filegroups/media`, `filetypes/jpeg`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `jpeg` are scored by `general`, `filegroups/media`, `filetypes/jpeg`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 39,831 (260 mal / 39,571 ben) |
+| Train rows | 39,868 (261 mal / 39,607 ben) |
 | Feature spec | 212 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

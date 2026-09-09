@@ -2,8 +2,8 @@
 
 Best calibrated decision policy per filetype route. `*_with_escape` policies start from the specialist/group model, then allow general/group/type escape thresholds only when they add detections inside the route FP budget.
 
-- Calibration snapshot: `3998018903`
-- Rows: 17755836 (2694836 malware, 15061000 benign)
+- Calibration snapshot: `4265996154`
+- Rows: 18146634 (2680655 malware, 15465979 benign)
 
 ## L50 Hostile
 
@@ -11,36 +11,36 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 
 | Route | Policy | Malware | Benign | Recall | FP | FP/100M | 95% CI upper (FP/100M) | Global FP/100M | F1 | Accuracy | Thresholds |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| filetypes/asar | joint_or_at_fp_0 | 189 | 249 | 97.35% | 0 | 0.00 | 1195896.96 | 0.000 | 98.66% | 98.86% | `{"filetypes/asar": 0.8714922666549683, "general": 0.9096137881278992}` |
-| filetypes/rtf | joint_or_at_fp_0 | 6252 | 886 | 97.12% | 0 | 0.00 | 337547.79 | 0.000 | 98.54% | 97.48% | `{"filegroups/documents": 0.9582754373550415, "filetypes/rtf": 0.980923056602478, "general": 0.8226900100708008}` |
-| filetypes/applescript | joint_or_at_fp_0 | 55 | 527 | 94.55% | 0 | 0.00 | 566837.53 | 0.000 | 97.20% | 99.48% | `{"general": 0.8578193783760071}` |
-| filetypes/7z | joint_or_at_fp_0 | 9026 | 309 | 91.20% | 0 | 0.00 | 964808.22 | 0.000 | 95.40% | 91.49% | `{"filetypes/7z": 0.7272136211395264, "general": 0.9919013977050781}` |
-| filetypes/elf | joint_or_at_fp_0 | 196690 | 820051 | 87.04% | 0 | 0.00 | 365.31 | 0.000 | 93.07% | 97.49% | `{"filegroups/native": 0.996111273765564, "filetypes/elf": 0.999891459941864, "general": 0.992966890335083}` |
-| filetypes/chm | joint_or_at_fp_0 | 244 | 58 | 86.48% | 0 | 0.00 | 5033933.83 | 0.000 | 92.75% | 89.07% | `{"filetypes/chm": 0.880485475063324, "general": 0.06417316198348999}` |
-| filetypes/html | learned_blend_at_fp_0 | 314 | 113748 | 77.71% | 0 | 0.00 | 2633.62 | 0.000 | 87.46% | 99.94% | `{}` |
-| filetypes/pkg_info | joint_or_at_fp_0 | 11038 | 16719 | 73.65% | 0 | 0.00 | 17916.53 | 0.000 | 84.83% | 89.52% | `{"filetypes/pkg_info": 0.9994839429855347, "general": 0.9942713379859924}` |
-| filetypes/tar | joint_or_at_fp_0 | 33968 | 77321 | 68.56% | 0 | 0.00 | 3874.33 | 0.000 | 81.35% | 90.40% | `{"filetypes/tar": 0.9986763596534729, "general": 0.9949512481689453}` |
-| filetypes/shell | joint_or_at_fp_0 | 18672 | 160880 | 65.20% | 0 | 0.00 | 1862.07 | 0.000 | 78.94% | 96.38% | `{"filegroups/scripts": 0.9986487627029419, "filetypes/shell": 0.9967365860939026, "general": 0.9952974915504456}` |
-| filetypes/macho | joint_or_at_fp_0 | 2844 | 32232 | 62.06% | 0 | 0.00 | 9293.85 | 0.000 | 76.59% | 96.92% | `{"filegroups/native": 0.9688791036605835, "filetypes/macho": 0.9879056215286255}` |
-| filetypes/ole_doc | joint_or_at_fp_0 | 87706 | 31288 | 60.49% | 0 | 0.00 | 9574.24 | 0.000 | 75.38% | 70.88% | `{"filetypes/ole_doc": 0.999387800693512, "general": 0.9990237951278687}` |
-| filetypes/lua | joint_or_at_fp_0 | 106 | 27774 | 55.66% | 0 | 0.00 | 10785.52 | 0.000 | 71.52% | 99.83% | `{"filegroups/scripts": 0.9940053820610046, "filetypes/lua": 0.8269254565238953}` |
-| filetypes/kotlin | joint_or_at_fp_0 | 32343 | 83873 | 54.41% | 0 | 0.00 | 3571.68 | 0.000 | 70.47% | 87.31% | `{"filegroups/source": 0.993887722492218, "filetypes/kotlin": 0.9205230474472046, "general": 0.9730113744735718}` |
-| filetypes/powershell | joint_or_at_fp_0 | 6038 | 5542 | 53.25% | 0 | 0.00 | 54040.47 | 0.000 | 69.49% | 75.62% | `{"filegroups/scripts": 0.997689962387085, "filetypes/powershell": 0.9975726008415222, "general": 0.9916506409645081}` |
-| filetypes/swift | joint_or_at_fp_0 | 69 | 44580 | 52.17% | 0 | 0.00 | 6719.68 | 0.000 | 68.57% | 99.93% | `{"filegroups/source": 0.09026411920785904}` |
-| filetypes/python_sdist | joint_or_at_fp_0 | 737 | 706 | 51.56% | 0 | 0.00 | 423425.70 | 0.000 | 68.04% | 75.26% | `{"filetypes/python_sdist": 0.9855461120605469, "general": 0.9464699625968933}` |
-| filetypes/gem | joint_or_at_fp_0 | 2080 | 10182 | 44.95% | 0 | 0.00 | 29417.52 | 0.000 | 62.02% | 90.66% | `{"filetypes/gem": 0.9518187642097473, "general": 0.9938482642173767}` |
-| filetypes/lnk | joint_or_at_fp_0 | 4688 | 1152 | 44.60% | 0 | 0.00 | 259708.38 | 0.000 | 61.69% | 55.53% | `{"filetypes/lnk": 0.995326578617096, "general": 0.9981127977371216}` |
-| filetypes/javascript | joint_or_at_fp_0 | 142851 | 1662779 | 44.20% | 0 | 0.00 | 180.16 | 0.000 | 61.31% | 95.59% | `{"filegroups/scripts": 0.9986636638641357, "filetypes/javascript": 0.9982583522796631, "general": 0.997397780418396}` |
-| filetypes/python | joint_or_at_fp_0 | 23397 | 645373 | 43.53% | 0 | 0.00 | 464.19 | 0.000 | 60.66% | 98.02% | `{"filegroups/scripts": 0.9989362359046936, "filetypes/python": 0.9963087439537048, "general": 0.9962235689163208}` |
-| filetypes/clojure | joint_or_at_fp_0 | 110 | 9485 | 40.91% | 0 | 0.00 | 31578.91 | 0.000 | 58.06% | 99.32% | `{"filetypes/clojure": 0.9984393119812012, "general": 0.03260482847690582}` |
-| filetypes/perl | joint_or_at_fp_0 | 396 | 78322 | 39.90% | 0 | 0.00 | 3824.82 | 0.000 | 57.04% | 99.70% | `{"filetypes/perl": 0.9996488690376282, "general": 0.9816994071006775}` |
-| filetypes/php | joint_or_at_fp_0 | 6794 | 614096 | 39.09% | 0 | 0.00 | 487.83 | 0.000 | 56.21% | 99.33% | `{"filegroups/scripts": 0.9990638494491577, "filetypes/php": 0.996876060962677, "general": 0.9954624772071838}` |
-| filetypes/pe | joint_or_at_fp_0 | 1379228 | 236962 | 35.12% | 0 | 0.00 | 1264.22 | 0.000 | 51.98% | 44.63% | `{"filegroups/native": 0.9997800588607788, "filetypes/pe": 0.9997308254241943, "general": 0.9996027946472168}` |
-| filetypes/npm | joint_or_at_fp_0 | 10751 | 38580 | 35.00% | 0 | 0.00 | 7764.69 | 0.000 | 51.85% | 85.83% | `{"filetypes/npm": 0.9990649819374084, "general": 0.9996231198310852}` |
-| filetypes/jar | joint_or_at_fp_0 | 3937 | 30048 | 32.56% | 0 | 0.00 | 9969.33 | 0.000 | 49.13% | 92.19% | `{"filetypes/jar": 0.995728075504303, "general": 0.9725269079208374}` |
-| filetypes/dmg | joint_or_at_fp_0 | 63 | 264 | 31.75% | 0 | 0.00 | 1128333.10 | 0.000 | 48.19% | 86.85% | `{"filetypes/dmg": 0.9801228642463684, "general": 0.9782789945602417}` |
-| filetypes/ruby | joint_or_at_fp_0 | 401 | 179473 | 30.92% | 0 | 0.00 | 1669.17 | 0.000 | 47.24% | 99.85% | `{"filetypes/ruby": 0.9937001466751099, "general": 0.9274932146072388}` |
-| filetypes/package.json | joint_or_at_fp_0 | 21386 | 66427 | 30.09% | 0 | 0.00 | 4509.71 | 0.000 | 46.25% | 82.97% | `{"filegroups/config": 0.999991238117218, "filetypes/package.json": 0.9999343156814575, "general": 0.9990639686584473}` |
+| filetypes/asar | joint_or_at_fp_0 | 191 | 287 | 97.38% | 0 | 0.00 | 1038380.37 | 0.000 | 98.67% | 98.95% | `{"filetypes/asar": 0.877382755279541, "general": 0.8244227766990662}` |
+| filetypes/rtf | joint_or_at_fp_0 | 6252 | 885 | 97.26% | 0 | 0.00 | 337928.55 | 0.000 | 98.61% | 97.60% | `{"filegroups/documents": 0.9444311261177063, "filetypes/rtf": 0.985369086265564}` |
+| filetypes/applescript | joint_or_at_fp_0 | 55 | 527 | 92.73% | 0 | 0.00 | 566837.53 | 0.000 | 96.23% | 99.31% | `{"filetypes/applescript": 0.961675226688385, "general": 0.9387657046318054}` |
+| filetypes/7z | joint_or_at_fp_0 | 9047 | 329 | 91.89% | 0 | 0.00 | 906423.91 | 0.000 | 95.77% | 92.17% | `{"filetypes/7z": 0.7093846201896667, "general": 0.9723973274230957}` |
+| filetypes/elf | joint_or_at_fp_0 | 196805 | 847549 | 88.10% | 0 | 0.00 | 353.46 | 0.000 | 93.67% | 97.76% | `{"filegroups/native": 0.9945619702339172, "filetypes/elf": 0.9998200535774231, "general": 0.9955693483352661}` |
+| filetypes/chm | joint_or_at_fp_0 | 244 | 71 | 85.66% | 0 | 0.00 | 4131565.87 | 0.000 | 92.27% | 88.89% | `{"filetypes/chm": 0.9045122861862183, "general": 0.37594228982925415}` |
+| filetypes/cab | learned_blend_at_fp_0 | 880 | 84 | 80.34% | 0 | 0.00 | 3503503.06 | 0.000 | 89.10% | 82.05% | `{}` |
+| filetypes/dmg | joint_or_at_fp_0 | 63 | 313 | 69.84% | 0 | 0.00 | 952537.31 | 0.000 | 82.24% | 94.95% | `{"filetypes/dmg": 0.953292727470398, "general": 0.9934636354446411}` |
+| filetypes/shell | joint_or_at_fp_0 | 18756 | 164166 | 65.55% | 0 | 0.00 | 1824.80 | 0.000 | 79.19% | 96.47% | `{"filegroups/scripts": 0.9991629719734192, "filetypes/shell": 0.9963274002075195, "general": 0.9938265681266785}` |
+| filetypes/macho | joint_or_at_fp_0 | 2858 | 33932 | 61.34% | 0 | 0.00 | 8828.24 | 0.000 | 76.04% | 97.00% | `{"filegroups/native": 0.964705765247345, "filetypes/macho": 0.9877621531486511}` |
+| filetypes/lua | joint_or_at_fp_0 | 106 | 27782 | 61.32% | 0 | 0.00 | 10782.42 | 0.000 | 76.02% | 99.85% | `{"filetypes/lua": 0.6480605602264404}` |
+| filetypes/tar | joint_or_at_fp_0 | 34314 | 82193 | 59.72% | 0 | 0.00 | 3644.69 | 0.000 | 74.78% | 88.14% | `{"filetypes/tar": 0.9995732307434082, "general": 0.9971647262573242}` |
+| filetypes/kotlin | joint_or_at_fp_0 | 32351 | 84060 | 53.20% | 0 | 0.00 | 3563.74 | 0.000 | 69.46% | 87.00% | `{"filegroups/source": 0.9893109202384949, "filetypes/kotlin": 0.9309629201889038, "general": 0.9947842955589294}` |
+| filetypes/swift | joint_or_at_fp_0 | 69 | 44608 | 52.17% | 0 | 0.00 | 6715.46 | 0.000 | 68.57% | 99.93% | `{"filegroups/source": 0.32530489563941956}` |
+| filetypes/python_sdist | joint_or_at_fp_0 | 951 | 806 | 49.95% | 0 | 0.00 | 370989.07 | 0.000 | 66.62% | 72.91% | `{"filetypes/python_sdist": 0.9906394481658936, "general": 0.971674382686615}` |
+| filetypes/ole_doc | joint_or_at_fp_0 | 87709 | 31328 | 49.31% | 0 | 0.00 | 9562.02 | 0.000 | 66.05% | 62.65% | `{"filetypes/ole_doc": 0.9993537068367004, "general": 0.9989978075027466}` |
+| filetypes/pe | joint_or_at_fp_0 | 1379460 | 249378 | 47.17% | 0 | 0.00 | 1201.27 | 0.000 | 64.10% | 55.26% | `{"filegroups/native": 0.9997759461402893, "filetypes/pe": 0.9994805455207825, "general": 0.9995736479759216}` |
+| filetypes/python | joint_or_at_fp_0 | 23619 | 650854 | 45.36% | 0 | 0.00 | 460.28 | 0.000 | 62.41% | 98.09% | `{"filegroups/scripts": 0.9993122816085815, "filetypes/python": 0.99659663438797, "general": 0.9914003014564514}` |
+| filetypes/gem | joint_or_at_fp_0 | 2105 | 41044 | 45.32% | 0 | 0.00 | 7298.56 | 0.000 | 62.37% | 97.33% | `{"filetypes/gem": 0.997404932975769, "general": 0.955265998840332}` |
+| filetypes/powershell | joint_or_at_fp_0 | 6049 | 5611 | 45.00% | 0 | 0.00 | 53376.10 | 0.000 | 62.07% | 71.47% | `{"filegroups/scripts": 0.9985575079917908, "filetypes/powershell": 0.9960235357284546, "general": 0.9981186985969543}` |
+| filetypes/npm | joint_or_at_fp_0 | 17444 | 98151 | 44.73% | 0 | 0.00 | 3052.12 | 0.000 | 61.81% | 91.66% | `{"filetypes/npm": 0.9993144869804382, "general": 0.9993318319320679}` |
+| filetypes/javascript | joint_or_at_fp_0 | 144939 | 1704828 | 41.81% | 0 | 0.00 | 175.72 | 0.000 | 58.97% | 95.44% | `{"filegroups/scripts": 0.9988857507705688, "filetypes/javascript": 0.9988902807235718, "general": 0.9969733357429504}` |
+| filetypes/clojure | joint_or_at_fp_0 | 110 | 9505 | 40.91% | 0 | 0.00 | 31512.47 | 0.000 | 58.06% | 99.32% | `{"filetypes/clojure": 0.9982877969741821, "general": 0.01750543713569641}` |
+| filetypes/perl | joint_or_at_fp_0 | 397 | 78543 | 30.98% | 0 | 0.00 | 3814.06 | 0.000 | 47.31% | 99.65% | `{"filetypes/perl": 0.9997957348823547, "general": 0.9915205240249634}` |
+| filetypes/apk_android | joint_or_at_fp_0 | 2900 | 245 | 29.90% | 0 | 0.00 | 1215302.68 | 0.000 | 46.03% | 35.36% | `{"filetypes/apk_android": 0.9270797967910767, "general": 0.5010213255882263}` |
+| filetypes/ooxml | joint_or_at_fp_0 | 67992 | 3136 | 29.82% | 0 | 0.00 | 95481.56 | 0.000 | 45.94% | 32.91% | `{"filetypes/ooxml": 0.9984638690948486, "general": 0.992874026298523}` |
+| filetypes/rar | calibrate_inherited | 22206 | 43 | 29.65% | 0 | 0.00 | 6729675.34 | 0.000 | 45.74% | 29.79% | `{"general": 0.9993818992838515}` |
+| filetypes/lnk | joint_or_at_fp_0 | 4693 | 1155 | 29.24% | 0 | 0.00 | 259034.68 | 0.000 | 45.24% | 43.21% | `{"filetypes/lnk": 0.9932800531387329, "general": 0.9992448687553406}` |
+| filetypes/ruby | learned_blend_at_fp_0 | 402 | 183691 | 28.86% | 0 | 0.00 | 1630.84 | 0.000 | 44.79% | 99.84% | `{}` |
+| filetypes/chrome_manifest | joint_or_at_fp_0 | 101 | 1114 | 28.71% | 0 | 0.00 | 268555.46 | 0.000 | 44.62% | 94.07% | `{"filetypes/chrome_manifest": 0.9885585904121399, "general": 0.9303878545761108}` |
 
 ## L100 Hostile
 
@@ -48,33 +48,33 @@ Rows marked † are below data resolution: the per-filetype calibration sample i
 
 | Route | Policy | Malware | Benign | Recall | FP | FP/100M | 95% CI upper (FP/100M) | Global FP/100M | F1 | Accuracy | Thresholds |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| filetypes/asar | joint_or_at_fp_0 | 189 | 249 | 97.35% | 0 | 0.00 | 1195896.96 | 0.000 | 98.66% | 98.86% | `{"filetypes/asar": 0.8714922666549683, "general": 0.9096137881278992}` |
-| filetypes/rtf | joint_or_at_fp_0 | 6252 | 886 | 97.12% | 0 | 0.00 | 337547.79 | 0.000 | 98.54% | 97.48% | `{"filegroups/documents": 0.9582754373550415, "filetypes/rtf": 0.980923056602478, "general": 0.8226900100708008}` |
-| filetypes/applescript | joint_or_at_fp_0 | 55 | 527 | 94.55% | 0 | 0.00 | 566837.53 | 0.000 | 97.20% | 99.48% | `{"general": 0.8578193783760071}` |
-| filetypes/7z | joint_or_at_fp_0 | 9026 | 309 | 91.20% | 0 | 0.00 | 964808.22 | 0.000 | 95.40% | 91.49% | `{"filetypes/7z": 0.7272136211395264, "general": 0.9919013977050781}` |
-| filetypes/elf | joint_or_at_fp_0 | 196690 | 820051 | 87.04% | 0 | 0.00 | 365.31 | 0.000 | 93.07% | 97.49% | `{"filegroups/native": 0.996111273765564, "filetypes/elf": 0.999891459941864, "general": 0.992966890335083}` |
-| filetypes/chm | joint_or_at_fp_0 | 244 | 58 | 86.48% | 0 | 0.00 | 5033933.83 | 0.000 | 92.75% | 89.07% | `{"filetypes/chm": 0.880485475063324, "general": 0.06417316198348999}` |
-| filetypes/html | learned_blend_at_fp_0 | 314 | 113748 | 77.71% | 0 | 0.00 | 2633.62 | 0.000 | 87.46% | 99.94% | `{}` |
-| filetypes/pkg_info | joint_or_at_fp_0 | 11038 | 16719 | 73.65% | 0 | 0.00 | 17916.53 | 0.000 | 84.83% | 89.52% | `{"filetypes/pkg_info": 0.9994839429855347, "general": 0.9942713379859924}` |
-| filetypes/tar | joint_or_at_fp_0 | 33968 | 77321 | 68.56% | 0 | 0.00 | 3874.33 | 0.000 | 81.35% | 90.40% | `{"filetypes/tar": 0.9986763596534729, "general": 0.9949512481689453}` |
-| filetypes/shell | joint_or_at_fp_0 | 18672 | 160880 | 65.20% | 0 | 0.00 | 1862.07 | 0.000 | 78.94% | 96.38% | `{"filegroups/scripts": 0.9986487627029419, "filetypes/shell": 0.9967365860939026, "general": 0.9952974915504456}` |
-| filetypes/macho | joint_or_at_fp_0 | 2844 | 32232 | 62.06% | 0 | 0.00 | 9293.85 | 0.000 | 76.59% | 96.92% | `{"filegroups/native": 0.9688791036605835, "filetypes/macho": 0.9879056215286255}` |
-| filetypes/ole_doc | joint_or_at_fp_0 | 87706 | 31288 | 60.49% | 0 | 0.00 | 9574.24 | 0.000 | 75.38% | 70.88% | `{"filetypes/ole_doc": 0.999387800693512, "general": 0.9990237951278687}` |
-| filetypes/lua | joint_or_at_fp_0 | 106 | 27774 | 55.66% | 0 | 0.00 | 10785.52 | 0.000 | 71.52% | 99.83% | `{"filegroups/scripts": 0.9940053820610046, "filetypes/lua": 0.8269254565238953}` |
-| filetypes/kotlin | joint_or_at_fp_0 | 32343 | 83873 | 54.41% | 0 | 0.00 | 3571.68 | 0.000 | 70.47% | 87.31% | `{"filegroups/source": 0.993887722492218, "filetypes/kotlin": 0.9205230474472046, "general": 0.9730113744735718}` |
-| filetypes/powershell | joint_or_at_fp_0 | 6038 | 5542 | 53.25% | 0 | 0.00 | 54040.47 | 0.000 | 69.49% | 75.62% | `{"filegroups/scripts": 0.997689962387085, "filetypes/powershell": 0.9975726008415222, "general": 0.9916506409645081}` |
-| filetypes/swift | joint_or_at_fp_0 | 69 | 44580 | 52.17% | 0 | 0.00 | 6719.68 | 0.000 | 68.57% | 99.93% | `{"filegroups/source": 0.09026411920785904}` |
-| filetypes/python_sdist | joint_or_at_fp_0 | 737 | 706 | 51.56% | 0 | 0.00 | 423425.70 | 0.000 | 68.04% | 75.26% | `{"filetypes/python_sdist": 0.9855461120605469, "general": 0.9464699625968933}` |
-| filetypes/gem | joint_or_at_fp_0 | 2080 | 10182 | 44.95% | 0 | 0.00 | 29417.52 | 0.000 | 62.02% | 90.66% | `{"filetypes/gem": 0.9518187642097473, "general": 0.9938482642173767}` |
-| filetypes/lnk | joint_or_at_fp_0 | 4688 | 1152 | 44.60% | 0 | 0.00 | 259708.38 | 0.000 | 61.69% | 55.53% | `{"filetypes/lnk": 0.995326578617096, "general": 0.9981127977371216}` |
-| filetypes/javascript | joint_or_at_fp_0 | 142851 | 1662779 | 44.20% | 0 | 0.00 | 180.16 | 0.000 | 61.31% | 95.59% | `{"filegroups/scripts": 0.9986636638641357, "filetypes/javascript": 0.9982583522796631, "general": 0.997397780418396}` |
-| filetypes/python | joint_or_at_fp_0 | 23397 | 645373 | 43.53% | 0 | 0.00 | 464.19 | 0.000 | 60.66% | 98.02% | `{"filegroups/scripts": 0.9989362359046936, "filetypes/python": 0.9963087439537048, "general": 0.9962235689163208}` |
-| filetypes/clojure | joint_or_at_fp_0 | 110 | 9485 | 40.91% | 0 | 0.00 | 31578.91 | 0.000 | 58.06% | 99.32% | `{"filetypes/clojure": 0.9984393119812012, "general": 0.03260482847690582}` |
-| filetypes/perl | joint_or_at_fp_0 | 396 | 78322 | 39.90% | 0 | 0.00 | 3824.82 | 0.000 | 57.04% | 99.70% | `{"filetypes/perl": 0.9996488690376282, "general": 0.9816994071006775}` |
-| filetypes/php | joint_or_at_fp_0 | 6794 | 614096 | 39.09% | 0 | 0.00 | 487.83 | 0.000 | 56.21% | 99.33% | `{"filegroups/scripts": 0.9990638494491577, "filetypes/php": 0.996876060962677, "general": 0.9954624772071838}` |
-| filetypes/pe | joint_or_at_fp_0 | 1379228 | 236962 | 35.12% | 0 | 0.00 | 1264.22 | 0.000 | 51.98% | 44.63% | `{"filegroups/native": 0.9997800588607788, "filetypes/pe": 0.9997308254241943, "general": 0.9996027946472168}` |
-| filetypes/npm | joint_or_at_fp_0 | 10751 | 38580 | 35.00% | 0 | 0.00 | 7764.69 | 0.000 | 51.85% | 85.83% | `{"filetypes/npm": 0.9990649819374084, "general": 0.9996231198310852}` |
-| filetypes/rar | calibrate_inherited | 22199 | 44 | 34.02% | 0 | 0.00 | 6581877.11 | 0.000 | 50.76% | 34.15% | `{"general": 0.9992884898267459}` |
-| filetypes/jar | joint_or_at_fp_0 | 3937 | 30048 | 32.56% | 0 | 0.00 | 9969.33 | 0.000 | 49.13% | 92.19% | `{"filetypes/jar": 0.995728075504303, "general": 0.9725269079208374}` |
-| filetypes/dmg | joint_or_at_fp_0 | 63 | 264 | 31.75% | 0 | 0.00 | 1128333.10 | 0.000 | 48.19% | 86.85% | `{"filetypes/dmg": 0.9801228642463684, "general": 0.9782789945602417}` |
-| filetypes/ruby | joint_or_at_fp_0 | 401 | 179473 | 30.92% | 0 | 0.00 | 1669.17 | 0.000 | 47.24% | 99.85% | `{"filetypes/ruby": 0.9937001466751099, "general": 0.9274932146072388}` |
+| filetypes/asar | joint_or_at_fp_0 | 191 | 287 | 97.38% | 0 | 0.00 | 1038380.37 | 0.000 | 98.67% | 98.95% | `{"filetypes/asar": 0.877382755279541, "general": 0.8244227766990662}` |
+| filetypes/rtf | joint_or_at_fp_0 | 6252 | 885 | 97.26% | 0 | 0.00 | 337928.55 | 0.000 | 98.61% | 97.60% | `{"filegroups/documents": 0.9444311261177063, "filetypes/rtf": 0.985369086265564}` |
+| filetypes/applescript | joint_or_at_fp_0 | 55 | 527 | 92.73% | 0 | 0.00 | 566837.53 | 0.000 | 96.23% | 99.31% | `{"filetypes/applescript": 0.961675226688385, "general": 0.9387657046318054}` |
+| filetypes/7z | joint_or_at_fp_0 | 9047 | 329 | 91.89% | 0 | 0.00 | 906423.91 | 0.000 | 95.77% | 92.17% | `{"filetypes/7z": 0.7093846201896667, "general": 0.9723973274230957}` |
+| filetypes/elf | joint_or_at_fp_0 | 196805 | 847549 | 88.10% | 0 | 0.00 | 353.46 | 0.000 | 93.67% | 97.76% | `{"filegroups/native": 0.9945619702339172, "filetypes/elf": 0.9998200535774231, "general": 0.9955693483352661}` |
+| filetypes/chm | joint_or_at_fp_0 | 244 | 71 | 85.66% | 0 | 0.00 | 4131565.87 | 0.000 | 92.27% | 88.89% | `{"filetypes/chm": 0.9045122861862183, "general": 0.37594228982925415}` |
+| filetypes/cab | learned_blend_at_fp_0 | 880 | 84 | 80.34% | 0 | 0.00 | 3503503.06 | 0.000 | 89.10% | 82.05% | `{}` |
+| filetypes/dmg | joint_or_at_fp_0 | 63 | 313 | 69.84% | 0 | 0.00 | 952537.31 | 0.000 | 82.24% | 94.95% | `{"filetypes/dmg": 0.953292727470398, "general": 0.9934636354446411}` |
+| filetypes/shell | joint_or_at_fp_0 | 18756 | 164166 | 65.55% | 0 | 0.00 | 1824.80 | 0.000 | 79.19% | 96.47% | `{"filegroups/scripts": 0.9991629719734192, "filetypes/shell": 0.9963274002075195, "general": 0.9938265681266785}` |
+| filetypes/macho | joint_or_at_fp_0 | 2858 | 33932 | 61.34% | 0 | 0.00 | 8828.24 | 0.000 | 76.04% | 97.00% | `{"filegroups/native": 0.964705765247345, "filetypes/macho": 0.9877621531486511}` |
+| filetypes/lua | joint_or_at_fp_0 | 106 | 27782 | 61.32% | 0 | 0.00 | 10782.42 | 0.000 | 76.02% | 99.85% | `{"filetypes/lua": 0.6480605602264404}` |
+| filetypes/tar | joint_or_at_fp_0 | 34314 | 82193 | 59.72% | 0 | 0.00 | 3644.69 | 0.000 | 74.78% | 88.14% | `{"filetypes/tar": 0.9995732307434082, "general": 0.9971647262573242}` |
+| filetypes/kotlin | joint_or_at_fp_0 | 32351 | 84060 | 53.20% | 0 | 0.00 | 3563.74 | 0.000 | 69.46% | 87.00% | `{"filegroups/source": 0.9893109202384949, "filetypes/kotlin": 0.9309629201889038, "general": 0.9947842955589294}` |
+| filetypes/swift | joint_or_at_fp_0 | 69 | 44608 | 52.17% | 0 | 0.00 | 6715.46 | 0.000 | 68.57% | 99.93% | `{"filegroups/source": 0.32530489563941956}` |
+| filetypes/python_sdist | joint_or_at_fp_0 | 951 | 806 | 49.95% | 0 | 0.00 | 370989.07 | 0.000 | 66.62% | 72.91% | `{"filetypes/python_sdist": 0.9906394481658936, "general": 0.971674382686615}` |
+| filetypes/ole_doc | joint_or_at_fp_0 | 87709 | 31328 | 49.31% | 0 | 0.00 | 9562.02 | 0.000 | 66.05% | 62.65% | `{"filetypes/ole_doc": 0.9993537068367004, "general": 0.9989978075027466}` |
+| filetypes/pe | joint_or_at_fp_0 | 1379460 | 249378 | 47.17% | 0 | 0.00 | 1201.27 | 0.000 | 64.10% | 55.26% | `{"filegroups/native": 0.9997759461402893, "filetypes/pe": 0.9994805455207825, "general": 0.9995736479759216}` |
+| filetypes/python | joint_or_at_fp_0 | 23619 | 650854 | 45.36% | 0 | 0.00 | 460.28 | 0.000 | 62.41% | 98.09% | `{"filegroups/scripts": 0.9993122816085815, "filetypes/python": 0.99659663438797, "general": 0.9914003014564514}` |
+| filetypes/gem | joint_or_at_fp_0 | 2105 | 41044 | 45.32% | 0 | 0.00 | 7298.56 | 0.000 | 62.37% | 97.33% | `{"filetypes/gem": 0.997404932975769, "general": 0.955265998840332}` |
+| filetypes/powershell | joint_or_at_fp_0 | 6049 | 5611 | 45.00% | 0 | 0.00 | 53376.10 | 0.000 | 62.07% | 71.47% | `{"filegroups/scripts": 0.9985575079917908, "filetypes/powershell": 0.9960235357284546, "general": 0.9981186985969543}` |
+| filetypes/npm | joint_or_at_fp_0 | 17444 | 98151 | 44.73% | 0 | 0.00 | 3052.12 | 0.000 | 61.81% | 91.66% | `{"filetypes/npm": 0.9993144869804382, "general": 0.9993318319320679}` |
+| filetypes/javascript | joint_or_at_fp_0 | 144939 | 1704828 | 41.81% | 0 | 0.00 | 175.72 | 0.000 | 58.97% | 95.44% | `{"filegroups/scripts": 0.9988857507705688, "filetypes/javascript": 0.9988902807235718, "general": 0.9969733357429504}` |
+| filetypes/clojure | joint_or_at_fp_0 | 110 | 9505 | 40.91% | 0 | 0.00 | 31512.47 | 0.000 | 58.06% | 99.32% | `{"filetypes/clojure": 0.9982877969741821, "general": 0.01750543713569641}` |
+| filetypes/rar | calibrate_inherited | 22206 | 43 | 34.51% | 0 | 0.00 | 6729675.34 | 0.000 | 51.32% | 34.64% | `{"general": 0.9992355090728172}` |
+| filetypes/perl | joint_or_at_fp_0 | 397 | 78543 | 30.98% | 0 | 0.00 | 3814.06 | 0.000 | 47.31% | 99.65% | `{"filetypes/perl": 0.9997957348823547, "general": 0.9915205240249634}` |
+| filetypes/apk_android | joint_or_at_fp_0 | 2900 | 245 | 29.90% | 0 | 0.00 | 1215302.68 | 0.000 | 46.03% | 35.36% | `{"filetypes/apk_android": 0.9270797967910767, "general": 0.5010213255882263}` |
+| filetypes/ooxml | joint_or_at_fp_0 | 67992 | 3136 | 29.82% | 0 | 0.00 | 95481.56 | 0.000 | 45.94% | 32.91% | `{"filetypes/ooxml": 0.9984638690948486, "general": 0.992874026298523}` |
+| filetypes/lnk | joint_or_at_fp_0 | 4693 | 1155 | 29.24% | 0 | 0.00 | 259034.68 | 0.000 | 45.24% | 43.21% | `{"filetypes/lnk": 0.9932800531387329, "general": 0.9992448687553406}` |
+| filetypes/ruby | learned_blend_at_fp_0 | 402 | 183691 | 28.86% | 0 | 0.00 | 1630.84 | 0.000 | 44.79% | 99.84% | `{}` |
+| filetypes/chrome_manifest | joint_or_at_fp_0 | 101 | 1114 | 28.71% | 0 | 0.00 | 268555.46 | 0.000 | 44.62% | 94.07% | `{"filetypes/chrome_manifest": 0.9885585904121399, "general": 0.9303878545761108}` |

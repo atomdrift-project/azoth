@@ -4,11 +4,11 @@ LightGBM specialist for `csharp`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `csharp` slice of the locked test partition: 466 malware / 12,688 benign (13,154 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `csharp` slice of the locked test partition: 467 malware / 12,800 benign (13,267 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.336966 | 0.687067 | 0.398671 | 23.18% | 0.0272 |
+| 0.343954 | 0.737622 | 0.402010 | 23.55% | 0.0275 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `csharp
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.336966 | 0.687067 | 0.398671 | 23.18% | 0.0272 | — |
+| 0.343954 | 0.737622 | 0.402010 | 23.55% | 0.0275 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `csharp` are scored by `general`, `filegroups/source`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 89,345 (867 mal / 88,478 ben) |
-| Feature spec | 1204 features (`route_specific`) |
+| Train rows | 89,944 (866 mal / 89,078 ben) |
+| Feature spec | 1207 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

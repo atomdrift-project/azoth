@@ -4,11 +4,11 @@ LightGBM specialist for `python_sdist`. Member of the Azoth routed ensemble; bun
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `python_sdist` slice of the locked test partition: 86 malware / 108 benign (194 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `python_sdist` slice of the locked test partition: 111 malware / 122 benign (233 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.975623 | 0.977498 | 0.918605 | 55.81% | 0.0552 |
+| 0.977864 | 0.973268 | 0.921659 | 72.07% | 0.0588 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.975623 | 0.977498 | 0.918605 | 55.81% | 0.0552 | — |
+| 0.977864 | 0.973268 | 0.921659 | 72.07% | 0.0588 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `python_sdist` are scored by `general`, `filetypes/python_sdist`.
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,193 (595 mal / 598 ben) |
-| Feature spec | 1512 features (`route_specific`) |
+| Train rows | 1,457 (777 mal / 680 ben) |
+| Feature spec | 1525 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

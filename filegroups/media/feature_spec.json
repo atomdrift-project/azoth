@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "feb93e1ce0078659e11a5e27285ae4d94697adad704ac1cd71600913a492ddd1",
+  "feature_layout_hash": "da5bde8c1b3b0d1f2518512aa4ffb03eed0bdb85cce3b044cc31e3356f9dac8a",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -23,6 +23,7 @@
     "metadata/package/testing",
     "micro-behaviors",
     "micro-behaviors/communications",
+    "micro-behaviors/communications/http",
     "micro-behaviors/communications/ip",
     "micro-behaviors/data",
     "micro-behaviors/data/embedded",
@@ -76,8 +77,6 @@
     "K",
     "K(Am)",
     "K(Am)H(Db)",
-    "K(Am)H(Db)Md",
-    "K(Am)H(Db)MdTh",
     "K(Am)Md",
     "K(Am)MdTh",
     "K(Li)",
@@ -112,11 +111,12 @@
     "HDb",
     "K",
     "KAm",
-    "KAmHDb",
     "KLi",
     "KOAs",
     "Md",
     "MdBi",
+    "MdIr",
+    "MdTh",
     "OAs",
     "OAsHDb",
     "OC",
@@ -435,6 +435,7 @@
     "present:metadata/package/testing",
     "present:micro-behaviors",
     "present:micro-behaviors/communications",
+    "present:micro-behaviors/communications/http",
     "present:micro-behaviors/communications/ip",
     "present:micro-behaviors/data",
     "present:micro-behaviors/data/embedded",
@@ -481,6 +482,7 @@
     "maxcrit:metadata/package/testing",
     "maxcrit:micro-behaviors",
     "maxcrit:micro-behaviors/communications",
+    "maxcrit:micro-behaviors/communications/http",
     "maxcrit:micro-behaviors/communications/ip",
     "maxcrit:micro-behaviors/data",
     "maxcrit:micro-behaviors/data/embedded",
@@ -717,6 +719,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 301,
+  "total_features": 303,
   "standardized": false
 }

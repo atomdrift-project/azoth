@@ -4,11 +4,11 @@ LightGBM specialist for `zip`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `zip` slice of the locked test partition: 13,815 malware / 5,470 benign (19,285 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `zip` slice of the locked test partition: 13,854 malware / 5,642 benign (19,496 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.936013 | 0.834188 | 0.845653 | 33.40% | 0.1349 |
+| 0.934631 | 0.832733 | 0.839258 | 29.48% | 0.1383 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `zip` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.928537 | 0.791123 | 0.845795 | 29.40% | 0.2255 | — |
+| 0.928781 | 0.796388 | 0.839404 | 25.23% | 0.2237 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `zip` are scored by `general`, `filetypes/zip`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 104,943 (66,995 mal / 37,948 ben) |
-| Feature spec | 3060 features (`route_specific`) |
+| Train rows | 106,260 (67,222 mal / 39,038 ben) |
+| Feature spec | 3090 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

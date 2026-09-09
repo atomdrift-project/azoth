@@ -4,11 +4,11 @@ LightGBM specialist for `crate`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `crate` slice of the locked test partition: 8 malware / 2,436 benign (2,444 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `crate` slice of the locked test partition: 8 malware / 5,516 benign (5,524 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.390064 | 0.823712 | 0.545455 | 37.50% | 0.0052 |
+| 0.384145 | 0.872892 | 0.545455 | 37.50% | 0.0026 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `crate`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.390065 | 0.823742 | 0.545455 | 37.50% | 0.0052 | — |
+| 0.384145 | 0.872892 | 0.545455 | 37.50% | 0.0026 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `crate` are scored by `general`, `filetypes/crate`. The ensemble'
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 17,003 (96 mal / 16,907 ben) |
-| Feature spec | 1622 features (`route_specific`) |
+| Train rows | 40,016 (96 mal / 39,920 ben) |
+| Feature spec | 1643 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
