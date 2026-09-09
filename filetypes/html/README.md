@@ -4,11 +4,11 @@ LightGBM specialist for `html`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `html` slice of the locked test partition: 33 malware / 22,189 benign (22,222 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `html` slice of the locked test partition: 33 malware / 23,284 benign (23,317 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.969774 | 0.984455 | 0.984615 | 96.97% | 0.0001 |
+| 0.969747 | 0.973797 | 0.984615 | 96.97% | 0.0001 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `html` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.969774 | 0.984456 | 0.984615 | 96.97% | 0.0001 | — |
+| 0.969740 | 0.977536 | 0.984615 | 96.97% | 0.0001 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `html` are scored by `general`, `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `html` are scored by `general`, `filegroups/documents`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 145,391 (274 mal / 145,117 ben) |
-| Feature spec | 629 features (`route_specific`) |
+| Train rows | 160,511 (274 mal / 160,237 ben) |
+| Feature spec | 637 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

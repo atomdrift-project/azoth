@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "a1285783e46f3b7b812dd48b479aee051607bb9a32e42e27e3106de19479433b",
+  "feature_layout_hash": "66a6af978043c1163bc43347997f5585c07cd3a9e112ed9c0d6c194250ee30e1",
   "presence_vocab": [
     "metadata",
     "metadata/document",
@@ -13,6 +13,7 @@
     "metadata/format/macro",
     "metadata/package",
     "metadata/package/files",
+    "metadata/package/testing",
     "micro-behaviors",
     "micro-behaviors/process",
     "micro-behaviors/process/create",
@@ -86,8 +87,7 @@
   ],
   "bigram_vocab": [],
   "ghost_vocab": [
-    "metadata/package",
-    "metadata/package/files"
+    "metadata/package"
   ],
   "skeleton_vocab": [
     "Md",
@@ -112,11 +112,9 @@
     "Md(PdAg)",
     "O(Al)Md(Ag)",
     "O(Al)Th",
-    "O(As)Md(AgPd)",
     "O(C)Md",
     "O(C)Md(Ag)",
     "O(C)Md(AgPd)",
-    "O(C)Md(Pd)",
     "O(C)Md(PdAg)",
     "O(CAlAs)H(Po)",
     "O(CEr)",
@@ -405,6 +403,7 @@
     "n:metadata + n:metadata/format/macro",
     "n:metadata + n:metadata/package",
     "n:metadata + n:metadata/package/files",
+    "n:metadata + n:metadata/package/testing",
     "n:metadata + n:objectives",
     "n:metadata + n:objectives/command-and-control",
     "n:metadata + n:objectives/command-and-control/dropper",
@@ -435,6 +434,7 @@
     "n:metadata/document + n:metadata/format/macro",
     "n:metadata/document + n:metadata/package",
     "n:metadata/document + n:metadata/package/files",
+    "n:metadata/document + n:metadata/package/testing",
     "n:metadata/document + n:micro-behaviors",
     "n:metadata/document + n:micro-behaviors/process",
     "n:metadata/document + n:micro-behaviors/process/create",
@@ -469,6 +469,7 @@
     "n:metadata/document/office + n:metadata/format/macro",
     "n:metadata/document/office + n:metadata/package",
     "n:metadata/document/office + n:metadata/package/files",
+    "n:metadata/document/office + n:metadata/package/testing",
     "n:metadata/document/office + n:micro-behaviors",
     "n:metadata/document/office + n:micro-behaviors/process",
     "n:metadata/document/office + n:micro-behaviors/process/create",
@@ -541,6 +542,7 @@
     "n:metadata/format/macro + s:objectives/execution",
     "n:metadata/format/macro + s:objectives/execution/interpreter",
     "n:metadata/package + n:metadata/package/files",
+    "n:metadata/package + n:metadata/package/testing",
     "n:metadata/package + n:objectives",
     "n:metadata/package + n:objectives/evasion",
     "n:metadata/package + n:objectives/evasion/decoy",
@@ -701,6 +703,7 @@
     "present:metadata/format/macro",
     "present:metadata/package",
     "present:metadata/package/files",
+    "present:metadata/package/testing",
     "present:micro-behaviors",
     "present:micro-behaviors/process",
     "present:micro-behaviors/process/create",
@@ -736,6 +739,7 @@
     "maxcrit:metadata/format/macro",
     "maxcrit:metadata/package",
     "maxcrit:metadata/package/files",
+    "maxcrit:metadata/package/testing",
     "maxcrit:micro-behaviors",
     "maxcrit:micro-behaviors/process",
     "maxcrit:micro-behaviors/process/create",
@@ -958,6 +962,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 266,
+  "total_features": 268,
   "standardized": false
 }

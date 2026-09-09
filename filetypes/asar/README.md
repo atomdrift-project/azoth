@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asar` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.991582 | 0.992669 | 0.976744 | — | 0.0237 |
+| 0.987879 | 0.989736 | 0.976744 | — | 0.1914 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asar` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.991582 | 0.992669 | 0.976744 | — | 0.0237 | — |
+| 0.987879 | 0.988270 | 0.976744 | — | 0.0299 | — |
 
 ## Routing
 
-Files matching `asar` are scored by `general`, `filetypes/asar`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `asar` are scored by `general`, `filetypes/asar`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 422 (169 mal / 253 ben) |
-| Feature spec | 1509 features (`route_specific`) |
+| Train rows | 434 (169 mal / 265 ben) |
+| Feature spec | 1515 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

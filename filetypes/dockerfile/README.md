@@ -4,11 +4,11 @@ LightGBM specialist for `dockerfile`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `dockerfile` slice of the locked test partition: 22 malware / 609 benign (631 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `dockerfile` slice of the locked test partition: 22 malware / 611 benign (633 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.193756 | 0.589640 | 0.277778 | 9.09% | 0.0317 |
+| 0.236756 | 0.599911 | 0.307692 | 18.18% | 0.0333 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `docker
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.193756 | 0.589640 | 0.277778 | 9.09% | 0.0317 | — |
+| 0.214103 | 0.588231 | 0.322581 | 4.55% | 0.0307 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `dockerfile` are scored by `general`, `filetypes/dockerfile`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `dockerfile` are scored by `general`, `filetypes/dockerfile`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,197 (60 mal / 4,137 ben) |
-| Feature spec | 468 features (`route_specific`) |
+| Train rows | 4,228 (60 mal / 4,168 ben) |
+| Feature spec | 469 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

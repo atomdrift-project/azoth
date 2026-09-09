@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xpi` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.646661 | 0.866469 | 0.720000 | 35.71% | 0.0263 |
+| 0.624113 | 0.859898 | 0.720000 | 21.43% | 0.0288 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xpi` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.646661 | 0.866469 | 0.720000 | 35.71% | 0.0263 | — |
+| 0.624113 | 0.859898 | 0.720000 | 21.43% | 0.0288 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `xpi` are scored by `general`, `filetypes/xpi`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,459 (141 mal / 2,318 ben) |
-| Feature spec | 1258 features (`route_specific`) |
+| Train rows | 2,461 (141 mal / 2,320 ben) |
+| Feature spec | 1260 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

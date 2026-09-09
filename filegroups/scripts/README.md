@@ -4,7 +4,7 @@ LightGBM specialist for `batch`, `javascript`, `lua`, `perl`, `php`, `powershell
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `scripts`). ROC 0.809973, PR 0.627263, F1 0.6905 on 476,428 rows (46,984 mal / 429,444 ben).
+Training-time benchmark only (no test-partition rows for `scripts`). ROC 0.900691, PR 0.678057, F1 0.6909 on 477,702 rows (47,000 mal / 430,702 ben).
 
 ## Routing
 
@@ -15,8 +15,8 @@ Files matching `scripts` are scored by none. The ensemble's per-row score is wha
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,192,535 (185,371 mal / 3,007,164 ben) |
-| Feature spec | 2553 features (`route_specific`) |
+| Train rows | 3,201,806 (185,843 mal / 3,015,963 ben) |
+| Feature spec | 2541 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

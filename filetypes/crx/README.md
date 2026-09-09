@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `crx` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.942293 | 0.963888 | 0.882943 | 47.44% | 0.0520 |
+| 0.942126 | 0.964051 | 0.882550 | 47.44% | 0.0520 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `crx` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.944100 | 0.964451 | 0.876897 | 45.05% | 0.0532 | — |
+| 0.944722 | 0.964197 | 0.879713 | 46.76% | 0.0532 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,7 +33,7 @@ Files matching `crx` are scored by `general`, `filetypes/crx`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,655 (1,181 mal / 5,474 ben) |
+| Train rows | 6,656 (1,181 mal / 5,475 ben) |
 | Feature spec | 1559 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 128 |

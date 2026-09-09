@@ -4,11 +4,11 @@ LightGBM specialist for `cargo.toml`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `cargo.toml` slice of the locked test partition: 50 malware / 1,141 benign (1,191 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `cargo.toml` slice of the locked test partition: 50 malware / 1,147 benign (1,197 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.541274 | 0.717993 | 0.597403 | 36.00% | 0.0269 |
+| 0.544959 | 0.781343 | 0.606742 | 36.00% | 0.0268 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `cargo.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.541274 | 0.717993 | 0.597403 | 36.00% | 0.0269 | — |
+| 0.544959 | 0.781343 | 0.606742 | 36.00% | 0.0268 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `cargo.toml` are scored by `filetypes/cargo.toml`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `cargo.toml` are scored by `general`, `filetypes/cargo.toml`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 7,886 (63 mal / 7,823 ben) |
-| Feature spec | 194 features (`route_specific`) |
+| Train rows | 7,920 (69 mal / 7,851 ben) |
+| Feature spec | 193 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

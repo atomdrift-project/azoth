@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "f077e95ba2be8fca863c2e3af918d4b37bcad8b7afc8f9b011838084d23ad3a2",
+  "feature_layout_hash": "a0c3d0e18d692b3b90aa23955573c0923007fbf7a7b08bf7299f1b1f6a439579",
   "presence_vocab": [
     "metadata",
     "metadata/build",
@@ -44,6 +44,7 @@
     "K(Te)",
     "K(Te)Md(Bk)",
     "Md(Bk)",
+    "Md(BkPa)",
     "Md(Pa)",
     "O(C)",
     "O(CS)",
@@ -55,7 +56,6 @@
   ],
   "bigram_vocab": [],
   "ghost_vocab": [
-    "well-known",
     "well-known/lib"
   ],
   "skeleton_vocab": [
@@ -94,9 +94,9 @@
     "n:objectives/command-and-control + s:objectives/supply-chain",
     "n:objectives/supply-chain + n:well-known",
     "n:objectives/supply-chain + n:well-known/lib",
+    "n:well-known + n:well-known/app",
     "n:well-known + n:well-known/dual-use",
-    "n:well-known + n:well-known/tool",
-    "s:objectives + s:objectives/command-and-control"
+    "n:well-known + n:well-known/tool"
   ],
   "crit_trigram_vocab": [
     "n:objectives + n:objectives/command-and-control + n:objectives/supply-chain",
@@ -136,6 +136,7 @@
     "n:metadata + s:objectives/supply-chain/hidden-payload",
     "n:metadata/build + n:metadata/build/ecosystem",
     "n:metadata/build + n:metadata/package",
+    "n:metadata/build + n:metadata/package/dependencies",
     "n:metadata/build + n:objectives",
     "n:metadata/build + n:objectives/supply-chain",
     "n:metadata/build + n:objectives/supply-chain/hidden-payload",
@@ -149,6 +150,7 @@
     "n:metadata/build + s:objectives/supply-chain",
     "n:metadata/build + s:objectives/supply-chain/hidden-payload",
     "n:metadata/build/ecosystem + n:metadata/package",
+    "n:metadata/build/ecosystem + n:metadata/package/dependencies",
     "n:metadata/build/ecosystem + n:objectives",
     "n:metadata/build/ecosystem + n:objectives/supply-chain",
     "n:metadata/build/ecosystem + n:objectives/supply-chain/hidden-payload",
@@ -391,7 +393,6 @@
     "crit:n:well-known",
     "crit:s:objectives",
     "critbi:n:objectives/command-and-control + s:objectives",
-    "critbi:s:objectives + s:objectives/command-and-control",
     "ext:third_party_max_crit",
     "ext:third_party_count",
     "ext:well_known_max_crit",
@@ -470,6 +471,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 194,
+  "total_features": 193,
   "standardized": false
 }

@@ -140,6 +140,7 @@
     "zip"
   ],
   "element_vocab": [
+    "H(Cm)Md",
     "H(CmDbOsU)",
     "O(AsC)",
     "O(C)",
@@ -1894,6 +1895,7 @@
     "n:metadata + n:micro-behaviors/dylib/load",
     "n:metadata + n:micro-behaviors/fs",
     "n:metadata + n:micro-behaviors/fs/file",
+    "n:metadata + n:micro-behaviors/fs/write",
     "n:metadata + n:micro-behaviors/os",
     "n:metadata + n:micro-behaviors/os/com",
     "n:metadata + n:micro-behaviors/os/env",
@@ -2304,6 +2306,7 @@
     "n:micro-behaviors/dylib/load + n:micro-behaviors/process/terminate",
     "n:micro-behaviors/dylib/load + s:objectives",
     "n:micro-behaviors/fs + n:micro-behaviors/fs/file",
+    "n:micro-behaviors/fs + n:micro-behaviors/fs/write",
     "n:micro-behaviors/fs + n:micro-behaviors/os",
     "n:micro-behaviors/fs + n:micro-behaviors/os/random",
     "n:micro-behaviors/fs + n:micro-behaviors/os/sysinfo",

@@ -1,10 +1,11 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "7f90fb2678fd297d7a0b4cafdbc4853f4efec7f13f4ee377a72794beaa62833b",
+  "feature_layout_hash": "5afed97f2093d1e0fd0a9cb33981ee0cea7e7395ef572bc20b4e0cc1352ce292",
   "presence_vocab": [
     "metadata",
     "metadata/document",
+    "metadata/document/ole",
     "metadata/document/rtf",
     "metadata/encoded-payload",
     "metadata/encoded-payload/hex",
@@ -44,14 +45,17 @@
     "O(AlAs)MdTh",
     "O(As)",
     "O(As)Md",
+    "O(As)Md(Pd)",
     "O(As)Md(Pd)Th",
     "O(As)MdTh",
     "O(As)Th",
+    "O(AsC)",
     "O(CAs)Th",
     "Th"
   ],
   "bigram_vocab": [],
   "ghost_vocab": [
+    "metadata/document/ole",
     "metadata/file",
     "metadata/file/magic",
     "metadata/file/profile"
@@ -64,7 +68,6 @@
     "Th"
   ],
   "rare_element_vocab": [
-    "Md(Pd)Th",
     "MdTh",
     "O(Al)MdTh",
     "O(Al)Th",
@@ -278,6 +281,7 @@
     "h:third_party/SigBase/SUSP + n:metadata/encoded-payload",
     "h:third_party/SigBase/SUSP + n:metadata/encoded-payload/hex",
     "n:metadata + n:metadata/document",
+    "n:metadata + n:metadata/document/ole",
     "n:metadata + n:metadata/document/rtf",
     "n:metadata + n:metadata/encoded-payload",
     "n:metadata + n:metadata/encoded-payload/hex",
@@ -291,6 +295,7 @@
     "n:metadata + s:objectives/anti-static",
     "n:metadata + s:objectives/anti-static/excessive-line-length",
     "n:metadata + s:objectives/anti-static/obfuscation",
+    "n:metadata/document + n:metadata/document/ole",
     "n:metadata/document + n:metadata/document/rtf",
     "n:metadata/document + n:metadata/encoded-payload",
     "n:metadata/document + n:metadata/encoded-payload/hex",
@@ -416,6 +421,10 @@
     "s:objectives/anti-analysis/analysis-bomb + s:objectives/anti-static/excessive-line-length",
     "s:objectives/anti-static + s:objectives/anti-static/excessive-line-length",
     "s:objectives/anti-static + s:objectives/anti-static/obfuscation",
+    "s:objectives/anti-static + s:objectives/command-and-control",
+    "s:objectives/anti-static + s:objectives/command-and-control/dropper",
+    "s:objectives/anti-static/obfuscation + s:objectives/command-and-control",
+    "s:objectives/anti-static/obfuscation + s:objectives/command-and-control/dropper",
     "s:objectives/command-and-control + s:objectives/command-and-control/dropper"
   ],
   "tiered_trigram_vocab": [],
@@ -428,6 +437,7 @@
   "feature_names": [
     "present:metadata",
     "present:metadata/document",
+    "present:metadata/document/ole",
     "present:metadata/document/rtf",
     "present:metadata/encoded-payload",
     "present:metadata/encoded-payload/hex",
@@ -455,6 +465,7 @@
     "present:third_party/SigBase/SUSP",
     "maxcrit:metadata",
     "maxcrit:metadata/document",
+    "maxcrit:metadata/document/ole",
     "maxcrit:metadata/document/rtf",
     "maxcrit:metadata/encoded-payload",
     "maxcrit:metadata/encoded-payload/hex",
@@ -592,6 +603,7 @@
     "elements:Md(Pd)",
     "elements:O(As)",
     "elements:O(As)Md",
+    "elements:O(AsC)",
     "formula:skeleton_len",
     "formula:unique_elements",
     "formula:complexity_ratio",
@@ -620,6 +632,7 @@
     "tierbi:s:objectives + s:objectives/command-and-control/dropper",
     "tierbi:s:objectives/anti-analysis + s:objectives/anti-static",
     "tierbi:s:objectives/anti-static + s:objectives/anti-static/obfuscation",
+    "tierbi:s:objectives/anti-static + s:objectives/command-and-control",
     "tierbi:s:objectives/command-and-control + s:objectives/command-and-control/dropper",
     "skeleton:MdPd",
     "struct:packaged_capability",
@@ -642,6 +655,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 215,
+  "total_features": 219,
   "standardized": false
 }
