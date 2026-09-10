@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "a0c3d0e18d692b3b90aa23955573c0923007fbf7a7b08bf7299f1b1f6a439579",
+  "feature_layout_hash": "c48b6ba43df2983f128ca5d9127606d8a21b98555291ab7495f2834528202f11",
   "presence_vocab": [
     "metadata",
     "metadata/build",
@@ -9,6 +9,7 @@
     "metadata/package",
     "metadata/package/fields",
     "metadata/package/files",
+    "metadata/package/quality",
     "metadata/package/testing",
     "micro-behaviors",
     "micro-behaviors/crypto",
@@ -38,6 +39,7 @@
     "H(Cr)",
     "K(Am)",
     "K(Am)Md(Bk)",
+    "K(Am)Md(Pa)",
     "K(Li)",
     "K(Li)Md(Pa)",
     "K(Li)O(S)Md(Pa)",
@@ -56,9 +58,11 @@
   ],
   "bigram_vocab": [],
   "ghost_vocab": [
+    "well-known/app/communication",
     "well-known/lib"
   ],
   "skeleton_vocab": [
+    "KAm",
     "KLi",
     "MdBk",
     "MdPa",
@@ -79,6 +83,7 @@
     "n:objectives/command-and-control",
     "n:objectives/supply-chain",
     "n:well-known",
+    "n:well-known/app",
     "n:well-known/lib",
     "n:well-known/tool",
     "s:objectives",
@@ -94,7 +99,6 @@
     "n:objectives/command-and-control + s:objectives/supply-chain",
     "n:objectives/supply-chain + n:well-known",
     "n:objectives/supply-chain + n:well-known/lib",
-    "n:well-known + n:well-known/app",
     "n:well-known + n:well-known/dual-use",
     "n:well-known + n:well-known/tool"
   ],
@@ -185,6 +189,9 @@
     "n:metadata/package/dependencies + n:objectives",
     "n:metadata/package/dependencies + n:objectives/supply-chain",
     "n:metadata/package/dependencies + n:objectives/supply-chain/hidden-payload",
+    "n:metadata/package/dependencies + n:well-known",
+    "n:metadata/package/dependencies + n:well-known/app",
+    "n:metadata/package/dependencies + n:well-known/app/communication",
     "n:metadata/package/fields + n:objectives",
     "n:metadata/package/fields + n:objectives/supply-chain",
     "n:metadata/package/fields + n:objectives/supply-chain/metadata-anomaly",
@@ -250,6 +257,8 @@
     "n:well-known + n:well-known/tool/reverse-engineering",
     "n:well-known/app + n:well-known/app/communication",
     "n:well-known/app + n:well-known/app/development",
+    "n:well-known/app + n:well-known/lib",
+    "n:well-known/app/communication + n:well-known/lib",
     "n:well-known/dual-use + n:well-known/dual-use/remote-admin",
     "n:well-known/lib + n:well-known/lib/data",
     "n:well-known/lib + n:well-known/lib/development",
@@ -283,6 +292,7 @@
     "present:metadata/package",
     "present:metadata/package/fields",
     "present:metadata/package/files",
+    "present:metadata/package/quality",
     "present:metadata/package/testing",
     "present:micro-behaviors",
     "present:micro-behaviors/crypto",
@@ -310,6 +320,7 @@
     "maxcrit:metadata/package",
     "maxcrit:metadata/package/fields",
     "maxcrit:metadata/package/files",
+    "maxcrit:metadata/package/quality",
     "maxcrit:metadata/package/testing",
     "maxcrit:micro-behaviors",
     "maxcrit:micro-behaviors/crypto",
@@ -471,6 +482,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 193,
+  "total_features": 195,
   "standardized": false
 }

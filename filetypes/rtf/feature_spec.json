@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "5afed97f2093d1e0fd0a9cb33981ee0cea7e7395ef572bc20b4e0cc1352ce292",
+  "feature_layout_hash": "b121663d8545dcc62e4fcb612f35af531485679546a21f7976bda5c8e944ce47",
   "presence_vocab": [
     "metadata",
     "metadata/document",
@@ -295,6 +295,8 @@
     "n:metadata + s:objectives/anti-static",
     "n:metadata + s:objectives/anti-static/excessive-line-length",
     "n:metadata + s:objectives/anti-static/obfuscation",
+    "n:metadata + s:objectives/command-and-control",
+    "n:metadata + s:objectives/command-and-control/dropper",
     "n:metadata/document + n:metadata/document/ole",
     "n:metadata/document + n:metadata/document/rtf",
     "n:metadata/document + n:metadata/encoded-payload",
@@ -308,6 +310,8 @@
     "n:metadata/document + s:objectives",
     "n:metadata/document + s:objectives/anti-static",
     "n:metadata/document + s:objectives/anti-static/obfuscation",
+    "n:metadata/document + s:objectives/command-and-control",
+    "n:metadata/document + s:objectives/command-and-control/dropper",
     "n:metadata/document/rtf + n:metadata/encoded-payload",
     "n:metadata/document/rtf + n:metadata/encoded-payload/hex",
     "n:metadata/document/rtf + n:metadata/encoded-payload/hex-base64",
@@ -319,6 +323,8 @@
     "n:metadata/document/rtf + s:objectives",
     "n:metadata/document/rtf + s:objectives/anti-static",
     "n:metadata/document/rtf + s:objectives/anti-static/obfuscation",
+    "n:metadata/document/rtf + s:objectives/command-and-control",
+    "n:metadata/document/rtf + s:objectives/command-and-control/dropper",
     "n:metadata/encoded-payload + n:metadata/encoded-payload/hex",
     "n:metadata/encoded-payload + n:metadata/encoded-payload/hex-base64",
     "n:metadata/encoded-payload + n:metadata/encoded-payload/url",
@@ -619,6 +625,7 @@
     "tierbi:n:metadata + s:objectives",
     "tierbi:n:metadata + s:objectives/anti-static",
     "tierbi:n:metadata + s:objectives/anti-static/obfuscation",
+    "tierbi:n:metadata + s:objectives/command-and-control",
     "tierbi:n:metadata/encoded-payload + s:metadata",
     "tierbi:n:metadata/encoded-payload + s:objectives",
     "tierbi:n:metadata/encoded-payload/url + s:objectives/anti-static",
@@ -655,6 +662,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 219,
+  "total_features": 220,
   "standardized": false
 }

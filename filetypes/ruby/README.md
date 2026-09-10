@@ -4,11 +4,11 @@ LightGBM specialist for `ruby`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` slice of the locked test partition: 52 malware / 22,758 benign (22,810 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` slice of the locked test partition: 52 malware / 22,847 benign (22,899 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.555877 | 0.857181 | 0.697674 | 11.54% | 0.0043 |
+| 0.561745 | 0.824131 | 0.705882 | 11.54% | 0.0027 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.570020 | 0.859862 | 0.705882 | 5.77% | 0.0012 | — |
+| 0.572258 | 0.811492 | 0.682927 | 7.69% | 0.0036 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,7 +33,7 @@ Files matching `ruby` are scored by `filegroups/scripts`, `filetypes/ruby`. The 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 161,234 (226 mal / 161,008 ben) |
+| Train rows | 161,728 (226 mal / 161,502 ben) |
 | Feature spec | 1311 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

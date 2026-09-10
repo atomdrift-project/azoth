@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `cab` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998317 | 0.987912 | 0.981132 | — | 0.0377 |
+| 0.998494 | 0.989377 | 0.985782 | — | 0.0366 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `cab` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998317 | 0.987912 | 0.981132 | — | 0.0377 | — |
+| 0.998494 | 0.989377 | 0.985782 | — | 0.0366 | — |
 
 ## Routing
 

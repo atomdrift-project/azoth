@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "0d871302fc0fab049eba84b297ccdb38b22327f026bd7dcf8f54953819361bdf",
+  "feature_layout_hash": "155acb7fffbd262ace02dc60f70c8cb545e77da9d1da9cfe981984b9ad962bd6",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -191,6 +191,7 @@
     "H(FOsPo)",
     "H(FPo)",
     "H(Os)",
+    "H(Os)Md(Pt)",
     "H(OsPo)",
     "H(Po)",
     "H(Po)Md",
@@ -725,6 +726,7 @@
     "n:metadata/build + n:micro-behaviors",
     "n:metadata/build + n:micro-behaviors/communications",
     "n:metadata/build + n:micro-behaviors/communications/http",
+    "n:metadata/build + n:micro-behaviors/os",
     "n:metadata/build + n:micro-behaviors/process",
     "n:metadata/build + n:micro-behaviors/process/create",
     "n:metadata/build + n:micro-behaviors/process/debug",
@@ -734,6 +736,7 @@
     "n:metadata/build/toolchain + n:micro-behaviors",
     "n:metadata/build/toolchain + n:micro-behaviors/communications",
     "n:metadata/build/toolchain + n:micro-behaviors/communications/http",
+    "n:metadata/build/toolchain + n:micro-behaviors/os",
     "n:metadata/build/toolchain + n:micro-behaviors/process",
     "n:metadata/build/toolchain + n:micro-behaviors/process/debug",
     "n:metadata/build/toolchain + n:well-known",
@@ -2610,6 +2613,7 @@
     "tierbi:n:metadata/build + n:micro-behaviors",
     "tierbi:n:metadata/build + n:micro-behaviors/communications",
     "tierbi:n:metadata/build + n:micro-behaviors/communications/http",
+    "tierbi:n:metadata/build + n:micro-behaviors/os",
     "tierbi:n:metadata/build + n:micro-behaviors/process",
     "tierbi:n:metadata/build + n:micro-behaviors/process/create",
     "tierbi:n:metadata/encoded-payload + n:micro-behaviors",
@@ -2972,6 +2976,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 950,
+  "total_features": 951,
   "standardized": false
 }

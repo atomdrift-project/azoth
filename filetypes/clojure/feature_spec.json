@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "3fa862b16ae8c5435ccc2b39cd2e327035356cd3d10c1a55d0f1a8aa1f3ace36",
+  "feature_layout_hash": "81d84c88eb42846ee6e181d7e5205f587a009572fcd164ef7d59499894da3649",
   "presence_vocab": [
     "metadata",
     "metadata/encoded-payload",
@@ -297,10 +297,12 @@
     "n:micro-behaviors/data + n:micro-behaviors/data/encode",
     "n:micro-behaviors/data + n:micro-behaviors/data/parse",
     "n:micro-behaviors/data + n:micro-behaviors/process",
+    "n:micro-behaviors/data + n:micro-behaviors/process/create",
     "n:micro-behaviors/data + n:micro-behaviors/process/interpreter",
     "n:micro-behaviors/data + n:well-known",
     "n:micro-behaviors/data + n:well-known/app",
     "n:micro-behaviors/data + n:well-known/app/communication",
+    "n:micro-behaviors/data/decode + n:micro-behaviors/data/encode",
     "n:micro-behaviors/data/parse + n:micro-behaviors/process",
     "n:micro-behaviors/data/parse + n:micro-behaviors/process/interpreter",
     "n:micro-behaviors/data/parse + n:well-known",
@@ -329,13 +331,11 @@
     "n:well-known + n:well-known/lib",
     "n:well-known + n:well-known/lib/ai",
     "n:well-known + n:well-known/lib/format",
-    "n:well-known + n:well-known/lib/runtime",
     "n:well-known + n:well-known/tool",
     "n:well-known + n:well-known/tool/development",
     "n:well-known/app + n:well-known/app/communication",
     "n:well-known/lib + n:well-known/lib/ai",
     "n:well-known/lib + n:well-known/lib/format",
-    "n:well-known/lib + n:well-known/lib/runtime",
     "n:well-known/tool + n:well-known/tool/development",
     "s:objectives + s:objectives/command-and-control",
     "s:objectives + s:objectives/command-and-control/backdoor",
@@ -631,6 +631,7 @@
     "tierbi:n:micro-behaviors/communications/http + n:micro-behaviors/process/create",
     "tierbi:n:micro-behaviors/data + n:micro-behaviors/data/encode",
     "tierbi:n:micro-behaviors/data + n:micro-behaviors/process",
+    "tierbi:n:micro-behaviors/data + n:micro-behaviors/process/create",
     "tierbi:n:micro-behaviors/fs + n:micro-behaviors/fs/path",
     "tierbi:n:micro-behaviors/process + n:micro-behaviors/process/create",
     "tierbi:n:micro-behaviors/process + n:micro-behaviors/process/interpreter",
@@ -662,6 +663,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 312,
+  "total_features": 313,
   "standardized": false
 }

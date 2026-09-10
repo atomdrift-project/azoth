@@ -4,11 +4,11 @@ LightGBM specialist for `batch`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `batch` slice of the locked test partition: 22,141 malware / 1,036 benign (23,177 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `batch` slice of the locked test partition: 22,141 malware / 1,038 benign (23,179 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.988980 | 0.860173 | 0.989411 | 15.08% | 0.0195 |
+| 0.991514 | 0.893231 | 0.993140 | 15.41% | 0.0129 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `batch`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.987193 | 0.765497 | 0.989477 | 14.17% | 0.7939 | — |
+| 0.988693 | 0.811795 | 0.993162 | 14.28% | 0.7938 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `batch` are scored by `general`, `filegroups/scripts`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 34,494 (26,996 mal / 7,498 ben) |
-| Feature spec | 1372 features (`route_specific`) |
+| Train rows | 34,508 (27,000 mal / 7,508 ben) |
+| Feature spec | 1371 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
