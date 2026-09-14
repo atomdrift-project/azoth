@@ -4,11 +4,11 @@ LightGBM specialist for `dmg`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `dmg` slice of the locked test partition: 3 malware / 62 benign (65 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `dmg` slice of the locked test partition: 3 malware / 75 benign (78 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.866667 | 0.989247 | 0.800000 | 66.67% | 0.0525 |
+| 0.700000 | 0.982222 | 0.750000 | 33.33% | 0.0619 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dmg` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.866667 | 0.989247 | 0.800000 | 66.67% | 0.0525 | — |
+| 0.700000 | 0.982222 | 0.750000 | 33.33% | 0.0619 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `dmg` are scored by `general`, `filetypes/dmg`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 324 (56 mal / 268 ben) |
-| Feature spec | 1795 features (`route_specific`) |
+| Train rows | 367 (56 mal / 311 ben) |
+| Feature spec | 1780 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

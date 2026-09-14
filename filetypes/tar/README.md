@@ -4,11 +4,11 @@ LightGBM specialist for `tar`, `tar.gz`, `tar.zst`. Member of the Azoth routed e
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `tar` slice of the locked test partition: 3,224 malware / 10,133 benign (13,357 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `tar` slice of the locked test partition: 3,155 malware / 10,596 benign (13,751 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.959343 | 0.972633 | 0.917521 | 68.55% | 0.0438 |
+| 0.955713 | 0.970542 | 0.918589 | 68.87% | 0.0594 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `tar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.970648 | 0.975887 | 0.940048 | 68.23% | 0.0265 | — |
+| 0.969117 | 0.974198 | 0.939791 | 68.70% | 0.0252 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `tar` are scored by `general`, `filetypes/tar`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 96,467 (30,176 mal / 66,291 ben) |
-| Feature spec | 2624 features (`route_specific`) |
+| Train rows | 99,658 (29,926 mal / 69,732 ben) |
+| Feature spec | 2638 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

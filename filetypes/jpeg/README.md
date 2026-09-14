@@ -4,11 +4,11 @@ LightGBM specialist for `jpeg`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 193 malware / 5,611 benign (5,804 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 195 malware / 5,615 benign (5,810 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.199040 | 0.556652 | 0.251121 | 9.84% | 0.0293 |
+| 0.169718 | 0.604252 | 0.235772 | 9.74% | 0.0310 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.199040 | 0.556652 | 0.251121 | 9.84% | 0.0293 | — |
+| 0.147117 | 0.541407 | 0.204444 | 2.05% | 0.0301 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `jpeg` are scored by `general`, `filegroups/media`, `filetypes/jpeg`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `jpeg` are scored by `general`, `filegroups/media`, `filetypes/jpeg`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 39,886 (261 mal / 39,625 ben) |
-| Feature spec | 212 features (`route_specific`) |
+| Train rows | 39,931 (262 mal / 39,669 ben) |
+| Feature spec | 217 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

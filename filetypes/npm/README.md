@@ -4,11 +4,11 @@ LightGBM specialist for `npm`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `npm` slice of the locked test partition: 2,115 malware / 13,451 benign (15,566 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `npm` slice of the locked test partition: 2,174 malware / 19,745 benign (21,919 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.948583 | 0.967007 | 0.929067 | 70.17% | 0.0240 |
+| 0.948890 | 0.971227 | 0.930166 | 68.77% | 0.0144 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `npm` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.948585 | 0.966977 | 0.929067 | 70.17% | 0.0240 | — |
+| 0.948814 | 0.971135 | 0.930087 | 69.04% | 0.0143 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `npm` are scored by `general`, `filetypes/npm`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 113,733 (14,836 mal / 98,897 ben) |
-| Feature spec | 1787 features (`route_specific`) |
+| Train rows | 155,569 (14,961 mal / 140,608 ben) |
+| Feature spec | 1802 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

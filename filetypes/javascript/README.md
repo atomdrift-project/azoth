@@ -4,11 +4,11 @@ LightGBM specialist for `javascript`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `javascript` slice of the locked test partition: 17,768 malware / 216,359 benign (234,127 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `javascript` slice of the locked test partition: 17,984 malware / 223,193 benign (241,177 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.891468 | 0.949223 | 0.864996 | 45.63% | 0.0205 |
+| 0.886903 | 0.948103 | 0.855283 | 45.28% | 0.0205 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `javasc
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.915494 | 0.967766 | 0.880950 | 45.07% | 0.0151 | — |
+| 0.910027 | 0.963401 | 0.877177 | 44.54% | 0.0158 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `javascript` are scored by `general`, `filegroups/scripts`, `file
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,625,864 (116,767 mal / 1,509,097 ben) |
-| Feature spec | 2245 features (`route_specific`) |
+| Train rows | 1,674,272 (117,283 mal / 1,556,989 ben) |
+| Feature spec | 2255 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

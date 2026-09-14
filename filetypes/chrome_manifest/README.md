@@ -4,11 +4,11 @@ LightGBM specialist for `chrome-manifest`. Member of the Azoth routed ensemble; 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `chrome_manifest` slice of the locked test partition: 12 malware / 140 benign (152 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `chrome_manifest` slice of the locked test partition: 12 malware / 141 benign (153 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.931373 | 0.966667 | 0.956522 | 91.67% | 0.0325 |
+| 0.913302 | 0.964539 | 0.909091 | 83.33% | 0.0279 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chrome
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.931373 | 0.966667 | 0.956522 | 91.67% | 0.0325 | — |
+| 0.913302 | 0.964539 | 0.909091 | 83.33% | 0.0279 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `chrome_manifest` are scored by `general`, `filetypes/chrome_mani
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,064 (86 mal / 978 ben) |
-| Feature spec | 210 features (`route_specific`) |
+| Train rows | 1,067 (86 mal / 981 ben) |
+| Feature spec | 212 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

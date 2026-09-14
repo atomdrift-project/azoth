@@ -55,7 +55,6 @@
   ],
   "bigram_vocab": [],
   "ghost_vocab": [
-    "metadata/document/ole",
     "metadata/file",
     "metadata/file/magic",
     "metadata/file/profile"

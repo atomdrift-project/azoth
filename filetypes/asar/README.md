@@ -4,11 +4,11 @@ LightGBM specialist for `asar`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `asar` slice of the locked test partition: 22 malware / 32 benign (54 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `asar` slice of the locked test partition: 23 malware / 41 benign (64 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998024 | 0.998580 | 0.977778 | — | 0.1438 |
+| 0.981522 | 0.981972 | 0.977778 | — | 0.0484 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asar` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.987879 | 0.988636 | 0.976744 | — | 0.0350 | — |
+| 0.979778 | 0.978791 | 0.977778 | — | 0.0226 | — |
 
 ## Routing
 
-Files matching `asar` are scored by `general`, `filetypes/asar`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `asar` are scored by `general`, `filetypes/asar`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 441 (169 mal / 272 ben) |
-| Feature spec | 1516 features (`route_specific`) |
+| Train rows | 484 (169 mal / 315 ben) |
+| Feature spec | 1533 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
