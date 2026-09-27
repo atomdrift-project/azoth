@@ -4,11 +4,11 @@ LightGBM specialist for `perl`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `perl` slice of the locked test partition: 63 malware / 9,986 benign (10,049 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `perl` slice of the locked test partition: 48 malware / 10,066 benign (10,114 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.709023 | 0.937408 | 0.769231 | 60.32% | 0.0024 |
+| 0.832202 | 0.967089 | 0.870588 | 77.08% | 0.0015 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `perl` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.709023 | 0.937408 | 0.769231 | 60.32% | 0.0024 | — |
+| 0.832202 | 0.967089 | 0.870588 | 77.08% | 0.0015 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `perl` are scored by `general`, `filegroups/scripts`, `filetypes/
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 69,966 (317 mal / 69,649 ben) |
-| Feature spec | 1176 features (`route_specific`) |
+| Train rows | 70,553 (293 mal / 70,260 ben) |
+| Feature spec | 1308 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

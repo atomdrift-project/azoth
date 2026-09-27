@@ -2,11 +2,9 @@
 
 LightGBM specialist for `bmp`, `gif`, `jpeg`, `jpg`, `mp3`, `mp4`, `png`, `svg`, `webp`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
-
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `media`). ROC 0.469506, PR 0.089190, F1 0.1337 on 123,111 rows (1,361 mal / 121,750 ben).
+Training-time benchmark only (no test-partition rows for `media`). ROC 0.726786, PR 0.131822, F1 0.1639 on 124,209 rows (1,459 mal / 122,750 ben).
 
 ## Routing
 
@@ -17,8 +15,8 @@ Files matching `media` are scored by none. The ensemble's per-row score is whate
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 849,537 (708 mal / 848,829 ben) |
-| Feature spec | 317 features (`route_specific`) |
+| Train rows | 856,751 (1,001 mal / 855,750 ben) |
+| Feature spec | 342 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
