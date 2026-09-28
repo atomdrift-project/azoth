@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asar` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.975040 | 0.967126 | 0.977778 | — | 0.0180 |
+| 0.975040 | 0.967126 | 0.977778 | — | 0.0178 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asar` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.975040 | 0.967126 | 0.977778 | — | 0.0180 | — |
+| 0.975040 | 0.967126 | 0.977778 | — | 0.0178 | — |
 
 ## Routing
 

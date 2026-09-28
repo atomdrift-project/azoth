@@ -169,6 +169,7 @@
     "n:metadata + n:metadata/file/format",
     "n:metadata + n:metadata/image",
     "n:metadata + n:metadata/image/metrics",
+    "n:metadata + n:metadata/image/segment",
     "n:metadata + n:metadata/image/trailing",
     "n:metadata + n:micro-behaviors",
     "n:metadata + n:micro-behaviors/data",
@@ -203,6 +204,7 @@
     "n:metadata/file/format + n:micro-behaviors/data",
     "n:metadata/file/format + n:micro-behaviors/data/embedded",
     "n:metadata/image + n:metadata/image/metrics",
+    "n:metadata/image + n:metadata/image/segment",
     "n:metadata/image + n:metadata/image/trailing",
     "n:micro-behaviors + n:micro-behaviors/communications",
     "n:micro-behaviors + n:micro-behaviors/communications/ip",
@@ -276,6 +278,7 @@
   "symbol_trigram_vocab": [],
   "kv_vocab": [],
   "mbc_id_vocab": [],
+  "trait_path_depth": 3,
   "feature_names": [
     "present:metadata",
     "present:metadata/encoded-payload",

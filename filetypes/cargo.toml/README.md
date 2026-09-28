@@ -4,11 +4,11 @@ LightGBM specialist for `cargo.toml`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `cargo.toml` slice of the locked test partition: 22 malware / 1,296 benign (1,318 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `cargo.toml` slice of the locked test partition: 22 malware / 1,298 benign (1,320 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.106808 | 0.492793 | 0.166667 | 9.09% | 0.0156 |
+| 0.106809 | 0.517702 | 0.166667 | 9.09% | 0.0165 |
 
 ## Specialist Performance
 
@@ -26,14 +26,14 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `cargo.toml` are scored by `general`, `filetypes/cargo.toml`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `cargo.toml` are scored by `general`, `filetypes/cargo.toml`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 8,979 (14 mal / 8,965 ben) |
+| Train rows | 8,995 (14 mal / 8,981 ben) |
 | Feature spec | 201 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

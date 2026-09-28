@@ -2,15 +2,13 @@
 
 LightGBM specialist for `xml`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
-
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xml` slice of the locked test partition: 272 malware / 57,933 benign (58,205 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xml` slice of the locked test partition: 278 malware / 57,963 benign (58,241 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.197049 | 0.747220 | 0.293413 | 3.68% | 0.0040 |
+| 0.176571 | 0.483989 | 0.303207 | 1.80% | 0.0044 |
 
 ## Specialist Performance
 
@@ -18,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xml` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.192620 | 0.534089 | 0.289157 | 2.57% | 0.0043 | — |
+| 0.176571 | 0.483989 | 0.303207 | 1.80% | 0.0044 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -28,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `xml` are scored by `filegroups/config`, `filetypes/xml`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `xml` are scored by `filegroups/config`, `filetypes/xml`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 404,079 (332 mal / 403,747 ben) |
-| Feature spec | 783 features (`route_specific`) |
+| Train rows | 404,404 (332 mal / 404,072 ben) |
+| Feature spec | 784 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

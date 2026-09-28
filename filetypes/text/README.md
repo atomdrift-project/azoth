@@ -4,11 +4,11 @@ LightGBM specialist for `text`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `text` slice of the locked test partition: 604 malware / 41,919 benign (42,523 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `text` slice of the locked test partition: 622 malware / 41,859 benign (42,481 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.092464 | 0.570675 | 0.140762 | 3.48% | 0.0133 |
+| 0.090919 | 0.527900 | 0.138810 | 3.86% | 0.0138 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `text` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.092464 | 0.570675 | 0.140762 | 3.48% | 0.0133 | — |
+| 0.090919 | 0.527900 | 0.138810 | 3.86% | 0.0138 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,7 +33,7 @@ Files matching `text` are scored by `general`, `filetypes/text`. The ensemble's 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 291,501 (298 mal / 291,203 ben) |
+| Train rows | 293,305 (304 mal / 293,001 ben) |
 | Feature spec | 914 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

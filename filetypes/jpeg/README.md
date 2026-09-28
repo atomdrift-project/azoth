@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.198329 | 0.584663 | 0.248889 | 10.31% | 0.0293 |
+| 0.196991 | 0.547971 | 0.251012 | 10.31% | 0.0292 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.198329 | 0.584663 | 0.248889 | 10.31% | 0.0293 | — |
+| 0.196991 | 0.547971 | 0.251012 | 10.31% | 0.0292 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,7 +33,7 @@ Files matching `jpeg` are scored by `general`, `filegroups/media`, `filetypes/jp
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 40,393 (255 mal / 40,138 ben) |
+| Train rows | 40,398 (255 mal / 40,143 ben) |
 | Feature spec | 231 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

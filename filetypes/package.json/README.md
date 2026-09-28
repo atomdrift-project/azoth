@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `packag
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.959189 | 0.963619 | 0.957901 | 74.20% | 0.0282 |
+| 0.963035 | 0.972698 | 0.958162 | 80.98% | 0.0255 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `packag
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.964100 | 0.971154 | 0.961380 | 72.63% | 0.0183 | — |
+| 0.963678 | 0.969965 | 0.962239 | 70.30% | 0.0177 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `package.json` are scored by `general`, `filegroups/config`, `fil
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 85,815 (18,712 mal / 67,103 ben) |
-| Feature spec | 563 features (`route_specific`) |
+| Train rows | 85,822 (18,716 mal / 67,106 ben) |
+| Feature spec | 557 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "7c600faa43d67ece9c00fcb412d2822c8ad879ed76bbae1542cb71418c36217f",
+  "feature_layout_hash": "29bfc42a4ca5ff3cc1093b8cd4c59112c04e3fce0b084940ad7b59851aa9cb57",
   "presence_vocab": [
     "metadata",
     "metadata/document",
@@ -12,6 +12,8 @@
     "metadata/file-extension-mismatch",
     "metadata/format",
     "metadata/format/macro",
+    "metadata/lang",
+    "metadata/lang/scripted",
     "metadata/package",
     "metadata/package/files",
     "metadata/package/testing",
@@ -384,6 +386,7 @@
     "h:third_party + n:metadata/format",
     "h:third_party + n:metadata/format/macro",
     "h:third_party + n:objectives",
+    "h:third_party + n:objectives/execution",
     "h:third_party + s:metadata",
     "h:third_party + s:metadata/document",
     "h:third_party + s:metadata/document/office",
@@ -393,9 +396,13 @@
     "h:third_party + s:objectives/anti-analysis",
     "h:third_party + s:objectives/anti-analysis/analysis-bomb",
     "h:third_party/ArkBird + h:third_party/ArkBird/SOLG",
+    "h:third_party/ArkBird + n:objectives",
+    "h:third_party/ArkBird + n:objectives/execution",
     "h:third_party/ArkBird + s:metadata",
     "h:third_party/ArkBird + s:metadata/document",
     "h:third_party/ArkBird + s:metadata/document/office",
+    "h:third_party/ArkBird/SOLG + n:objectives",
+    "h:third_party/ArkBird/SOLG + n:objectives/execution",
     "h:third_party/ArkBird/SOLG + s:metadata",
     "h:third_party/ArkBird/SOLG + s:metadata/document",
     "h:third_party/ArkBird/SOLG + s:metadata/document/office",
@@ -851,6 +858,7 @@
   "symbol_trigram_vocab": [],
   "kv_vocab": [],
   "mbc_id_vocab": [],
+  "trait_path_depth": 3,
   "feature_names": [
     "present:metadata",
     "present:metadata/document",
@@ -861,6 +869,8 @@
     "present:metadata/file-extension-mismatch",
     "present:metadata/format",
     "present:metadata/format/macro",
+    "present:metadata/lang",
+    "present:metadata/lang/scripted",
     "present:metadata/package",
     "present:metadata/package/files",
     "present:metadata/package/testing",
@@ -903,6 +913,8 @@
     "maxcrit:metadata/file-extension-mismatch",
     "maxcrit:metadata/format",
     "maxcrit:metadata/format/macro",
+    "maxcrit:metadata/lang",
+    "maxcrit:metadata/lang/scripted",
     "maxcrit:metadata/package",
     "maxcrit:metadata/package/files",
     "maxcrit:metadata/package/testing",
@@ -1144,6 +1156,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 291,
+  "total_features": 295,
   "standardized": false
 }

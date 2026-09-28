@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `cab` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.994394 | 0.957804 | 0.970297 | — | 0.0692 |
+| 0.994393 | 0.957804 | 0.970297 | — | 0.0704 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `cab` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.994394 | 0.957804 | 0.970297 | — | 0.0692 | — |
+| 0.994393 | 0.957804 | 0.970297 | — | 0.0704 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `cab` are scored by `general`, `filetypes/cab`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 825 (742 mal / 83 ben) |
-| Feature spec | 2124 features (`route_specific`) |
+| Train rows | 824 (741 mal / 83 ben) |
+| Feature spec | 2125 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

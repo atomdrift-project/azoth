@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "5a813e9b369a85dedb454e835e2a6089df3ff3dd0ea46ba13f03bd17994eb056",
+  "feature_layout_hash": "2d540f4b7e66da6bb18102675cd7c4edbb2dcaed9b0038cc93f6d2287e28f3ae",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -51,6 +51,7 @@
     "objectives/command-and-control",
     "objectives/command-and-control/dropper",
     "objectives/command-and-control/infrastructure",
+    "objectives/execution",
     "objectives/exfiltration",
     "objectives/exfiltration/oob",
     "objectives/supply-chain",
@@ -302,10 +303,12 @@
     "n:metadata/import + n:metadata/import/groovy",
     "n:metadata/import + n:micro-behaviors",
     "n:metadata/import + n:micro-behaviors/communications",
+    "n:metadata/import + n:micro-behaviors/communications/http",
     "n:metadata/import + n:micro-behaviors/process",
     "n:metadata/import + n:micro-behaviors/process/create",
     "n:metadata/import/groovy + n:micro-behaviors",
     "n:metadata/import/groovy + n:micro-behaviors/communications",
+    "n:metadata/import/groovy + n:micro-behaviors/communications/http",
     "n:metadata/import/groovy + n:micro-behaviors/process",
     "n:metadata/import/groovy + n:micro-behaviors/process/create",
     "n:metadata/package + n:metadata/package/manager",
@@ -440,6 +443,7 @@
   "symbol_trigram_vocab": [],
   "kv_vocab": [],
   "mbc_id_vocab": [],
+  "trait_path_depth": 3,
   "feature_names": [
     "present:metadata",
     "present:metadata/binary",
@@ -489,6 +493,7 @@
     "present:objectives/command-and-control",
     "present:objectives/command-and-control/dropper",
     "present:objectives/command-and-control/infrastructure",
+    "present:objectives/execution",
     "present:objectives/exfiltration",
     "present:objectives/exfiltration/oob",
     "present:objectives/supply-chain",
@@ -544,6 +549,7 @@
     "maxcrit:objectives/command-and-control",
     "maxcrit:objectives/command-and-control/dropper",
     "maxcrit:objectives/command-and-control/infrastructure",
+    "maxcrit:objectives/execution",
     "maxcrit:objectives/exfiltration",
     "maxcrit:objectives/exfiltration/oob",
     "maxcrit:objectives/supply-chain",
@@ -820,6 +826,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 378,
+  "total_features": 380,
   "standardized": false
 }

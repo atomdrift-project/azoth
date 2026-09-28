@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "c83e36442b8fc8b318a903fcb09dc755fb9488c180f5cb65350eb5c26322681d",
+  "feature_layout_hash": "2e1cc7178c66bc8ed242b15b83c7cf666c3230db0285917aef3062cbfa05b70d",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -438,6 +438,7 @@
     "n:metadata + n:well-known/app",
     "n:metadata + n:well-known/app/ai",
     "n:metadata + n:well-known/app/communication",
+    "n:metadata + n:well-known/app/infrastructure",
     "n:metadata + n:well-known/lib",
     "n:metadata + n:well-known/lib/ai",
     "n:metadata + n:well-known/lib/format",
@@ -497,6 +498,7 @@
     "n:metadata/package + n:well-known/app",
     "n:metadata/package + n:well-known/app/ai",
     "n:metadata/package + n:well-known/app/communication",
+    "n:metadata/package + n:well-known/app/infrastructure",
     "n:metadata/package + n:well-known/lib",
     "n:metadata/package + n:well-known/lib/ai",
     "n:metadata/package + n:well-known/lib/format",
@@ -556,6 +558,7 @@
     "n:metadata/package/description + s:objectives/supply-chain/impersonation",
     "n:metadata/package/documentation + n:metadata/package/ecosystem",
     "n:metadata/package/documentation + n:metadata/package/files",
+    "n:metadata/package/documentation + n:metadata/package/versioning",
     "n:metadata/package/documentation + n:micro-behaviors",
     "n:metadata/package/documentation + n:micro-behaviors/data",
     "n:metadata/package/documentation + n:micro-behaviors/data/llm",
@@ -566,7 +569,7 @@
     "n:metadata/package/documentation + n:objectives/supply-chain/impersonation",
     "n:metadata/package/documentation + n:well-known",
     "n:metadata/package/documentation + n:well-known/app",
-    "n:metadata/package/documentation + n:well-known/app/ai",
+    "n:metadata/package/documentation + n:well-known/app/infrastructure",
     "n:metadata/package/documentation + n:well-known/lib",
     "n:metadata/package/documentation + n:well-known/lib/ai",
     "n:metadata/package/documentation + n:well-known/lib/format",
@@ -587,6 +590,7 @@
     "n:metadata/package/ecosystem + n:well-known",
     "n:metadata/package/ecosystem + n:well-known/app",
     "n:metadata/package/ecosystem + n:well-known/app/ai",
+    "n:metadata/package/ecosystem + n:well-known/app/infrastructure",
     "n:metadata/package/ecosystem + n:well-known/lib",
     "n:metadata/package/ecosystem + n:well-known/lib/ai",
     "n:metadata/package/ecosystem + n:well-known/lib/format",
@@ -961,7 +965,6 @@
     "n:well-known/tool + n:well-known/tool/packaging",
     "n:well-known/tool + n:well-known/tool/reverse-engineering",
     "n:well-known/tool/development + n:well-known/tool/packaging",
-    "s:metadata + s:metadata/package",
     "s:micro-behaviors + s:micro-behaviors/data",
     "s:micro-behaviors + s:micro-behaviors/data/text",
     "s:micro-behaviors/data + s:micro-behaviors/data/text",
@@ -994,6 +997,7 @@
   "symbol_trigram_vocab": [],
   "kv_vocab": [],
   "mbc_id_vocab": [],
+  "trait_path_depth": 3,
   "feature_names": [
     "present:metadata",
     "present:metadata/binary",
@@ -1387,7 +1391,6 @@
     "tierbi:n:objectives/anti-static/obfuscation + s:micro-behaviors",
     "tierbi:n:objectives/anti-static/obfuscation + s:objectives",
     "tierbi:n:objectives/command-and-control + n:objectives/command-and-control/dropper",
-    "tierbi:s:metadata + s:metadata/package",
     "tierbi:s:micro-behaviors + s:micro-behaviors/data",
     "tierbi:s:objectives + s:objectives/command-and-control",
     "tierbi:s:objectives + s:objectives/command-and-control/dropper",
@@ -1420,6 +1423,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 424,
+  "total_features": 423,
   "standardized": false
 }

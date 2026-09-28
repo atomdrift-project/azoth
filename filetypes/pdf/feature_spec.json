@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "7c644e518decaa77f59744ad78dbcaf4c7c9272875256dcf9859c843e871c444",
+  "feature_layout_hash": "8b6577b1677e529cfb0b71c608b90741470057c0db8389f0d74014fa7e61e337",
   "presence_vocab": [
     "metadata",
     "metadata/document",
@@ -58,8 +58,7 @@
     "third_party/bartblaze/generic",
     "well-known",
     "well-known/app",
-    "well-known/lib",
-    "well-known/tool"
+    "well-known/lib"
   ],
   "filetype_vocab": [
     "clojure",
@@ -90,6 +89,7 @@
     "H(Po)Md(Pd)Th",
     "H(PoDb)Md(Pd)",
     "K(Am)",
+    "K(Am)Md(Pd)",
     "K(Li)",
     "K(Li)H(Cm)Md(Pd)",
     "K(Li)H(Db)Md(Pa)",
@@ -230,7 +230,6 @@
   ],
   "crit_bigram_vocab": [
     "h:objectives + h:objectives/execution",
-    "n:objectives + n:objectives/execution",
     "s:objectives + s:objectives/execution"
   ],
   "crit_trigram_vocab": [
@@ -443,6 +442,8 @@
     "n:metadata + n:objectives/supply-chain",
     "n:metadata + n:objectives/supply-chain/hidden-payload",
     "n:metadata + n:well-known",
+    "n:metadata + n:well-known/app",
+    "n:metadata + n:well-known/app/productivity",
     "n:metadata + n:well-known/lib",
     "n:metadata + n:well-known/lib/format",
     "n:metadata + s:micro-behaviors",
@@ -496,6 +497,8 @@
     "n:metadata/document + n:objectives/supply-chain",
     "n:metadata/document + n:objectives/supply-chain/hidden-payload",
     "n:metadata/document + n:well-known",
+    "n:metadata/document + n:well-known/app",
+    "n:metadata/document + n:well-known/app/productivity",
     "n:metadata/document + n:well-known/lib",
     "n:metadata/document + n:well-known/lib/format",
     "n:metadata/document + s:micro-behaviors",
@@ -548,6 +551,8 @@
     "n:metadata/document/pdf + n:objectives/supply-chain",
     "n:metadata/document/pdf + n:objectives/supply-chain/hidden-payload",
     "n:metadata/document/pdf + n:well-known",
+    "n:metadata/document/pdf + n:well-known/app",
+    "n:metadata/document/pdf + n:well-known/app/productivity",
     "n:metadata/document/pdf + n:well-known/lib",
     "n:metadata/document/pdf + n:well-known/lib/format",
     "n:metadata/document/pdf + s:micro-behaviors",
@@ -976,13 +981,14 @@
     "n:objectives/supply-chain/hidden-payload + s:micro-behaviors/process/create",
     "n:well-known + n:well-known/app",
     "n:well-known + n:well-known/app/communication",
+    "n:well-known + n:well-known/app/productivity",
     "n:well-known + n:well-known/lib",
     "n:well-known + n:well-known/lib/format",
-    "n:well-known + n:well-known/tool",
     "n:well-known + s:objectives",
     "n:well-known + s:objectives/execution",
     "n:well-known + s:objectives/execution/interpreter",
     "n:well-known/app + n:well-known/app/communication",
+    "n:well-known/app + n:well-known/app/productivity",
     "n:well-known/lib + n:well-known/lib/format",
     "n:well-known/lib + s:objectives",
     "n:well-known/lib + s:objectives/execution",
@@ -1063,6 +1069,7 @@
   "symbol_trigram_vocab": [],
   "kv_vocab": [],
   "mbc_id_vocab": [],
+  "trait_path_depth": 3,
   "feature_names": [
     "present:metadata",
     "present:metadata/document",
@@ -1120,7 +1127,6 @@
     "present:well-known",
     "present:well-known/app",
     "present:well-known/lib",
-    "present:well-known/tool",
     "maxcrit:metadata",
     "maxcrit:metadata/document",
     "maxcrit:metadata/document/pdf",
@@ -1177,7 +1183,6 @@
     "maxcrit:well-known",
     "maxcrit:well-known/app",
     "maxcrit:well-known/lib",
-    "maxcrit:well-known/tool",
     "agg:max_crit",
     "agg:category_breadth",
     "agg:path_breadth_any",
@@ -1466,6 +1471,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 401,
+  "total_features": 399,
   "standardized": false
 }

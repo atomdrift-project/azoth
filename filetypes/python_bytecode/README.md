@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.679959 | 0.921385 | 0.783862 | 59.37% | 0.0010 |
+| 0.684395 | 0.940890 | 0.781341 | 62.53% | 0.0010 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.679959 | 0.921385 | 0.783862 | 59.37% | 0.0010 | — |
+| 0.684395 | 0.940890 | 0.781341 | 62.53% | 0.0010 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `python_bytecode` are scored by `general`, `filetypes/python_byte
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,050,637 (1,899 mal / 1,048,738 ben) |
-| Feature spec | 1416 features (`route_specific`) |
+| Train rows | 1,050,630 (1,892 mal / 1,048,738 ben) |
+| Feature spec | 1412 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
