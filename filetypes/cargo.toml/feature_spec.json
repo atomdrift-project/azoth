@@ -236,7 +236,6 @@
     "n:metadata/package/manifest + n:well-known/app",
     "n:metadata/package/manifest + n:well-known/app/communication",
     "n:metadata/package/manifest + n:well-known/lib",
-    "n:metadata/package/manifest + n:well-known/lib/platform",
     "n:micro-behaviors + n:micro-behaviors/crypto",
     "n:micro-behaviors + n:micro-behaviors/crypto/symmetric",
     "n:micro-behaviors/crypto + n:micro-behaviors/crypto/symmetric",

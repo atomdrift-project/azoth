@@ -4,11 +4,11 @@ LightGBM specialist for `jpeg`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 194 malware / 5,644 benign (5,838 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 194 malware / 5,645 benign (5,839 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.196991 | 0.547971 | 0.251012 | 10.31% | 0.0292 |
+| 0.196862 | 0.627350 | 0.250951 | 9.79% | 0.0292 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.196991 | 0.547971 | 0.251012 | 10.31% | 0.0292 | — |
+| 0.196862 | 0.627350 | 0.250951 | 9.79% | 0.0292 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `jpeg` are scored by `general`, `filegroups/media`, `filetypes/jp
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 40,398 (255 mal / 40,143 ben) |
-| Feature spec | 231 features (`route_specific`) |
+| Train rows | 40,403 (255 mal / 40,148 ben) |
+| Feature spec | 234 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

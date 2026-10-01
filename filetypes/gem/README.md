@@ -4,11 +4,11 @@ LightGBM specialist for `gem`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `gem` slice of the locked test partition: 43 malware / 13,980 benign (14,023 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `gem` slice of the locked test partition: 44 malware / 14,058 benign (14,102 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.940980 | 0.960809 | 0.963855 | 93.02% | 0.0005 |
+| 0.943214 | 0.994275 | 0.964706 | 93.18% | 0.0013 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `gem` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.937338 | 0.992676 | 0.963855 | 93.02% | 0.0007 | — |
+| 0.943214 | 0.994275 | 0.964706 | 93.18% | 0.0013 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `gem` are scored by `general`, `filetypes/gem`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `gem` are scored by `general`, `filetypes/gem`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 101,020 (281 mal / 100,739 ben) |
-| Feature spec | 1951 features (`route_specific`) |
+| Train rows | 101,640 (284 mal / 101,356 ben) |
+| Feature spec | 1938 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

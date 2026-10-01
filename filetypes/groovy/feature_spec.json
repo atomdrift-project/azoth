@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "2d540f4b7e66da6bb18102675cd7c4edbb2dcaed9b0038cc93f6d2287e28f3ae",
+  "feature_layout_hash": "b37ac1c53413cdacd0318f6916240e65d2998a387a3ef72ce41ef5e548d379e7",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -282,6 +282,7 @@
     "n:metadata + n:micro-behaviors",
     "n:metadata + n:micro-behaviors/communications",
     "n:metadata + n:micro-behaviors/communications/http",
+    "n:metadata + n:micro-behaviors/data",
     "n:metadata + n:micro-behaviors/fs",
     "n:metadata + n:micro-behaviors/process",
     "n:metadata + n:micro-behaviors/process/create",
@@ -304,11 +305,13 @@
     "n:metadata/import + n:micro-behaviors",
     "n:metadata/import + n:micro-behaviors/communications",
     "n:metadata/import + n:micro-behaviors/communications/http",
+    "n:metadata/import + n:micro-behaviors/data",
     "n:metadata/import + n:micro-behaviors/process",
     "n:metadata/import + n:micro-behaviors/process/create",
     "n:metadata/import/groovy + n:micro-behaviors",
     "n:metadata/import/groovy + n:micro-behaviors/communications",
     "n:metadata/import/groovy + n:micro-behaviors/communications/http",
+    "n:metadata/import/groovy + n:micro-behaviors/data",
     "n:metadata/import/groovy + n:micro-behaviors/process",
     "n:metadata/import/groovy + n:micro-behaviors/process/create",
     "n:metadata/package + n:metadata/package/manager",
@@ -744,6 +747,7 @@
     "tierbi:n:metadata + n:micro-behaviors",
     "tierbi:n:metadata + n:micro-behaviors/communications",
     "tierbi:n:metadata + n:micro-behaviors/communications/http",
+    "tierbi:n:metadata + n:micro-behaviors/data",
     "tierbi:n:metadata + n:micro-behaviors/fs",
     "tierbi:n:metadata + n:micro-behaviors/process",
     "tierbi:n:metadata + n:micro-behaviors/process/create",
@@ -826,6 +830,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 380,
+  "total_features": 381,
   "standardized": false
 }

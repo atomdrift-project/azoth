@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dex` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.895295 | 0.888095 | 0.857143 | — | 0.0993 |
+| 0.899254 | 0.888095 | 0.888889 | — | 0.0963 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dex` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.895295 | 0.888095 | 0.857143 | — | 0.0993 | — |
+| 0.899254 | 0.888095 | 0.888889 | — | 0.0963 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `dex` are scored by `general`, `filetypes/dex`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 309 (72 mal / 237 ben) |
-| Feature spec | 742 features (`route_specific`) |
+| Train rows | 310 (73 mal / 237 ben) |
+| Feature spec | 745 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

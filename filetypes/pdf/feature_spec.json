@@ -129,6 +129,7 @@
     "metadata/encoded-payload/base64",
     "metadata/package",
     "metadata/package/quality",
+    "metadata/package/testing",
     "micro-behaviors/data/embedded",
     "micro-behaviors/data/format",
     "well-known",

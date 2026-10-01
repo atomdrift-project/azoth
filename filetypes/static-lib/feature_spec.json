@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "adfa8c5e2c3bc71004d5edf0e1d97ae91e69d5435315b531ff16758dc8e6c162",
+  "feature_layout_hash": "47e09c9273343aae759f288c15bb224881c4656cc19a334371536119922637ed",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -316,8 +316,7 @@
     "n:well-known/app",
     "n:well-known/lib",
     "n:well-known/malware",
-    "n:well-known/tool",
-    "s:objectives"
+    "n:well-known/tool"
   ],
   "crit_bigram_vocab": [
     "n:objectives + n:objectives/anti-analysis",
@@ -1919,8 +1918,6 @@
     "n:metadata/file + n:metadata/file/string",
     "n:metadata/file + n:metadata/lang",
     "n:metadata/file + n:metadata/lang/natural",
-    "n:metadata/file + n:metadata/package",
-    "n:metadata/file + n:metadata/package/files",
     "n:metadata/file + n:micro-behaviors",
     "n:metadata/file + n:micro-behaviors/communications",
     "n:metadata/file + n:micro-behaviors/communications/http",
@@ -2052,8 +2049,6 @@
     "n:metadata/file/encoded + n:well-known/tool/reverse-engineering",
     "n:metadata/file/extension + n:metadata/file/format",
     "n:metadata/file/extension + n:metadata/file/string",
-    "n:metadata/file/extension + n:metadata/package",
-    "n:metadata/file/extension + n:metadata/package/files",
     "n:metadata/file/extension + n:micro-behaviors",
     "n:metadata/file/extension + n:micro-behaviors/communications",
     "n:metadata/file/extension + n:micro-behaviors/communications/http",
@@ -2808,6 +2803,7 @@
     "n:micro-behaviors/communications/http + n:objectives/execution/interpreter",
     "n:micro-behaviors/communications/http + n:objectives/impact",
     "n:micro-behaviors/communications/http + n:objectives/impact/degrade",
+    "n:micro-behaviors/communications/http + n:objectives/impact/infect",
     "n:micro-behaviors/communications/http + n:objectives/impact/ransom",
     "n:micro-behaviors/communications/http + n:objectives/lateral-movement",
     "n:micro-behaviors/communications/http + n:objectives/lateral-movement/social-engineering",
@@ -6076,6 +6072,7 @@
     "n:objectives/impact/infect + n:objectives/persistence",
     "n:objectives/impact/infect + n:objectives/persistence/system",
     "n:objectives/impact/infect + n:well-known",
+    "n:objectives/impact/infect + n:well-known/lib",
     "n:objectives/impact/ransom + n:well-known",
     "n:objectives/lateral-movement + n:objectives/lateral-movement/social-engineering",
     "n:objectives/lateral-movement + n:objectives/persistence",
@@ -6621,7 +6618,6 @@
     "crit:n:objectives/persistence",
     "crit:n:well-known",
     "crit:n:well-known/malware",
-    "crit:s:objectives",
     "atkbi:T1070.004 + T1071.001",
     "atkbi:T1070.004 + T1105",
     "atkbi:T1071.001 + T1620",
@@ -7249,6 +7245,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 1003,
+  "total_features": 1002,
   "standardized": false
 }

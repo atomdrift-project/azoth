@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lua` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.965152 | 0.999889 | 0.909091 | 80.00% | 0.0005 |
+| 1.000000 | 1.000000 | 1.000000 | 100.00% | 0.0055 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lua` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.965152 | 0.999889 | 0.909091 | 80.00% | 0.0005 | — |
+| 0.980909 | 0.999945 | 0.952381 | 80.00% | 0.0004 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `lua` are scored by `filegroups/scripts`, `filetypes/lua`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `lua` are scored by `general`, `filegroups/scripts`, `filetypes/lua`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 25,083 (70 mal / 25,013 ben) |
-| Feature spec | 1049 features (`route_specific`) |
+| Train rows | 25,088 (71 mal / 25,017 ben) |
+| Feature spec | 1072 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

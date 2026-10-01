@@ -4,11 +4,11 @@ LightGBM specialist for `vsix`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` slice of the locked test partition: 40 malware / 645 benign (685 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` slice of the locked test partition: 47 malware / 693 benign (740 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.653861 | 0.915000 | 0.655738 | 42.50% | 0.0314 |
+| 0.629402 | 0.846336 | 0.650000 | 46.81% | 0.2510 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.653861 | 0.915000 | 0.655738 | 42.50% | 0.0314 | — |
+| 0.704334 | 0.916736 | 0.702703 | 44.68% | 0.0337 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `vsix` are scored by `general`, `filetypes/vsix`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `vsix` are scored by `general`, `filetypes/vsix`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 5,922 (151 mal / 5,771 ben) |
-| Feature spec | 1828 features (`route_specific`) |
+| Train rows | 6,322 (171 mal / 6,151 ben) |
+| Feature spec | 1818 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

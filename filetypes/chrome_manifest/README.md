@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chrome
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.799210 | 0.972222 | 0.740741 | 41.67% | 0.0345 |
+| 0.858479 | 0.976667 | 0.869565 | 41.67% | 0.0365 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chrome
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.799210 | 0.972222 | 0.740741 | 41.67% | 0.0345 | — |
+| 0.858479 | 0.976667 | 0.869565 | 41.67% | 0.0365 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,7 +33,7 @@ Files matching `chrome_manifest` are scored by `general`, `filetypes/chrome_mani
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,105 (82 mal / 1,023 ben) |
+| Train rows | 1,106 (83 mal / 1,023 ben) |
 | Feature spec | 216 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

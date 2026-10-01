@@ -4,11 +4,11 @@ LightGBM specialist for `go`. Member of the Azoth routed ensemble; bundle root: 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `go` slice of the locked test partition: 2,024 malware / 30,296 benign (32,320 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `go` slice of the locked test partition: 2,024 malware / 30,441 benign (32,465 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.338251 | 0.642847 | 0.384699 | 9.83% | 0.0484 |
+| 0.321841 | 0.639620 | 0.365371 | 8.84% | 0.0487 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `go` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.345822 | 0.638205 | 0.389196 | 8.55% | 0.0520 | — |
+| 0.332833 | 0.645949 | 0.373978 | 7.36% | 0.0500 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `go` are scored by `general`, `filegroups/source`, `filetypes/go`
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 213,389 (5,353 mal / 208,036 ben) |
-| Feature spec | 1358 features (`route_specific`) |
+| Train rows | 214,297 (5,417 mal / 208,880 ben) |
+| Feature spec | 1350 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
