@@ -4,11 +4,11 @@ LightGBM specialist for `whl`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `whl` slice of the locked test partition: 324 malware / 6,787 benign (7,111 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `whl` slice of the locked test partition: 325 malware / 7,307 benign (7,632 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.657025 | 0.944258 | 0.617143 | 18.83% | 0.0414 |
+| 0.777155 | 0.965877 | 0.750383 | 18.77% | 0.0189 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `whl` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.784460 | 0.966382 | 0.742200 | 17.59% | 0.0198 | — |
+| 0.777155 | 0.965877 | 0.750383 | 18.77% | 0.0189 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `whl` are scored by `general`, `filetypes/whl`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `whl` are scored by `general`, `filetypes/whl`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 49,790 (2,736 mal / 47,054 ben) |
-| Feature spec | 1873 features (`route_specific`) |
+| Train rows | 52,907 (2,762 mal / 50,145 ben) |
+| Feature spec | 1860 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

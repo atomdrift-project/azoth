@@ -4,7 +4,7 @@ LightGBM specialist for `dex`, `java_class`, `pyc`, `wasm`. Member of the Azoth 
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `portable`). ROC 0.906125, PR 0.752930, F1 0.8247 on 229,399 rows (326 mal / 229,073 ben).
+Training-time benchmark only (no test-partition rows for `portable`). ROC 0.894303, PR 0.271206, F1 0.4886 on 229,669 rows (326 mal / 229,343 ben).
 
 ## Routing
 
@@ -15,8 +15,8 @@ Files matching `portable` are scored by none. The ensemble's per-row score is wh
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,613,874 (1,747 mal / 1,612,127 ben) |
-| Feature spec | 1213 features (`route_specific`) |
+| Train rows | 1,615,641 (1,747 mal / 1,613,894 ben) |
+| Feature spec | 1215 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -6,11 +6,11 @@ LightGBM specialist for `gif`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `gif` slice of the locked test partition: 85 malware / 194 benign (279 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `gif` slice of the locked test partition: 85 malware / 202 benign (287 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.672957 | 0.831019 | 0.660714 | 9.41% | 0.1483 |
+| 0.348501 | 0.582324 | 0.456989 | 0.00% | 0.2912 |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `gif` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.313177 | 0.491510 | 0.467033 | 0.00% | 0.2992 | — |
+| 0.348501 | 0.582324 | 0.456989 | 0.00% | 0.2912 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -28,14 +28,14 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `gif` are scored by `general`, `filegroups/media`, `filetypes/gif`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `gif` are scored by `general`, `filegroups/media`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,201 (21 mal / 1,180 ben) |
+| Train rows | 1,243 (21 mal / 1,222 ben) |
 | Feature spec | 139 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

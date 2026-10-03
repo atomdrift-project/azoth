@@ -4,11 +4,11 @@ LightGBM specialist for `dos_com`. Member of the Azoth routed ensemble; bundle r
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `dos_com` slice of the locked test partition: 812 malware / 19 benign (831 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `dos_com` slice of the locked test partition: 812 malware / 20 benign (832 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.997248 | 0.894089 | 0.988436 | — | 0.0206 |
+| 0.997139 | 0.895166 | 0.987835 | — | 0.0216 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dos_co
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.996321 | 0.901964 | 0.988436 | — | 0.1650 | — |
+| 0.996136 | 0.902925 | 0.987835 | — | 0.1648 | — |
 
 ## Routing
 

@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.077099 | 0.618455 | 0.130081 | 1.20% | 0.0161 |
+| 0.071930 | 0.588405 | 0.126354 | 1.45% | 0.0168 |
 
 ## Specialist Performance
 
@@ -33,8 +33,8 @@ Files matching `java` are scored by `general`, `filegroups/source`. The ensemble
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 176,420 (287 mal / 176,133 ben) |
-| Feature spec | 1183 features (`route_specific`) |
+| Train rows | 176,420 (289 mal / 176,131 ben) |
+| Feature spec | 1189 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

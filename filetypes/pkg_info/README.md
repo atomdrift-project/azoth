@@ -4,11 +4,11 @@ LightGBM specialist for `pkg-info`, `pkg_info`. Member of the Azoth routed ensem
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pkg_info` slice of the locked test partition: 29 malware / 2,274 benign (2,303 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pkg_info` slice of the locked test partition: 29 malware / 2,293 benign (2,322 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.798935 | 0.926083 | 0.836364 | 48.28% | 0.0040 |
+| 0.808268 | 0.913327 | 0.851852 | 62.07% | 0.0037 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pkg_in
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.798935 | 0.926083 | 0.836364 | 48.28% | 0.0040 | — |
+| 0.808268 | 0.913327 | 0.851852 | 62.07% | 0.0037 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `pkg_info` are scored by `general`, `filetypes/pkg_info`. The ens
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 15,643 (179 mal / 15,464 ben) |
-| Feature spec | 420 features (`route_specific`) |
+| Train rows | 15,784 (179 mal / 15,605 ben) |
+| Feature spec | 413 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

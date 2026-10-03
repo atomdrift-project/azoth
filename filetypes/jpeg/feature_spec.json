@@ -39,6 +39,7 @@
     "H(Cm)",
     "H(Db)",
     "H(Db)Md",
+    "H(Db)Md(Ir)",
     "K(Am)",
     "K(Li)",
     "Md",
@@ -59,6 +60,7 @@
     "KAm",
     "KLi",
     "Md",
+    "MdIr",
     "OAs",
     "OEr"
   ],
@@ -107,7 +109,9 @@
     "s:objectives",
     "s:objectives/anti-static"
   ],
-  "crit_bigram_vocab": [],
+  "crit_bigram_vocab": [
+    "s:objectives + s:objectives/anti-static"
+  ],
   "crit_trigram_vocab": [],
   "attack_bigram_vocab": [
     "T1036.005 + T1036.008"
@@ -186,6 +190,8 @@
     "n:metadata/encoded-payload + n:metadata/encoded-payload/url",
     "n:metadata/encoded-payload + n:metadata/encoded-payload/xor",
     "n:metadata/encoded-payload + n:metadata/encoded-payload/xor-base64",
+    "n:metadata/encoded-payload + n:metadata/image",
+    "n:metadata/encoded-payload + n:metadata/image/trailing",
     "n:metadata/encoded-payload + s:objectives",
     "n:metadata/encoded-payload + s:objectives/anti-static",
     "n:metadata/encoded-payload + s:objectives/anti-static/obfuscation",
@@ -193,6 +199,8 @@
     "n:metadata/encoded-payload/base64 + s:objectives",
     "n:metadata/encoded-payload/base64 + s:objectives/anti-static",
     "n:metadata/encoded-payload/base64 + s:objectives/anti-static/obfuscation",
+    "n:metadata/encoded-payload/hex + n:metadata/image",
+    "n:metadata/encoded-payload/hex + n:metadata/image/trailing",
     "n:metadata/encoded-payload/xor-base64 + s:objectives",
     "n:metadata/encoded-payload/xor-base64 + s:objectives/anti-static",
     "n:metadata/encoded-payload/xor-base64 + s:objectives/anti-static/obfuscation",
@@ -214,6 +222,7 @@
     "n:metadata/image + n:metadata/image/metrics",
     "n:metadata/image + n:metadata/image/segment",
     "n:metadata/image + n:metadata/image/trailing",
+    "n:metadata/image + n:micro-behaviors",
     "n:micro-behaviors + n:micro-behaviors/communications",
     "n:micro-behaviors + n:micro-behaviors/communications/ip",
     "n:micro-behaviors + n:micro-behaviors/data",

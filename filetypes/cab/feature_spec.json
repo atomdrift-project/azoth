@@ -363,6 +363,8 @@
   "bigram_vocab": [],
   "ghost_vocab": [
     "anti-analysis",
+    "anti-analysis/malformed",
+    "anti-analysis/malformed/archive-incomplete",
     "metadata/file/archive",
     "metadata/lang/generated",
     "micro-behaviors/fs/watch",

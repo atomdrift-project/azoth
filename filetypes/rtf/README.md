@@ -4,11 +4,11 @@ LightGBM specialist for `rtf`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` slice of the locked test partition: 810 malware / 115 benign (925 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` slice of the locked test partition: 813 malware / 115 benign (928 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999278 | 0.995046 | 0.995660 | 99.14% | 0.0108 |
+| 0.999238 | 0.994679 | 0.995676 | 99.14% | 0.0123 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999278 | 0.995046 | 0.995660 | 99.14% | 0.0108 | — |
+| 0.999238 | 0.994679 | 0.995676 | 99.14% | 0.0123 | — |
 
 ## Recall by FP level (per 100M benigns)
 

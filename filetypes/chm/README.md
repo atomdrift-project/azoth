@@ -4,11 +4,11 @@ LightGBM specialist for `chm`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `chm` slice of the locked test partition: 40 malware / 19 benign (59 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `chm` slice of the locked test partition: 41 malware / 19 benign (60 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.966570 | 0.923026 | 0.909091 | — | 0.1194 |
+| 0.968059 | 0.924904 | 0.911392 | — | 0.1181 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chm` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.966570 | 0.923026 | 0.909091 | — | 0.1194 | — |
+| 0.968059 | 0.924904 | 0.911392 | — | 0.1181 | — |
 
 ## Routing
 

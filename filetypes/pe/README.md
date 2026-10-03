@@ -4,11 +4,11 @@ LightGBM specialist for `pe`. Member of the Azoth routed ensemble; bundle root: 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pe` slice of the locked test partition: 203,540 malware / 33,312 benign (236,852 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pe` slice of the locked test partition: 203,553 malware / 33,415 benign (236,968 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.997472 | 0.984272 | 0.980040 | 73.58% | 0.0472 |
+| 0.997385 | 0.984742 | 0.979980 | 51.68% | 0.0287 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pe` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.997725 | 0.986062 | 0.979237 | 43.69% | 0.1247 | PR -0.000575 / ROC -0.012138 |
+| 0.997619 | 0.985418 | 0.979959 | 46.15% | 0.1235 | PR -0.000681 / ROC -0.012782 |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `pe` are scored by `general`, `filegroups/native`, `filetypes/pe`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `pe` are scored by `general`, `filegroups/native`, `filetypes/pe`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,628,146 (1,394,796 mal / 233,350 ben) |
-| Feature spec | 5436 features (`route_specific`) |
+| Train rows | 1,628,785 (1,394,890 mal / 233,895 ben) |
+| Feature spec | 5422 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

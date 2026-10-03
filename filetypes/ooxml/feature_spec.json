@@ -215,7 +215,6 @@
   "crit_bigram_vocab": [
     "h:objectives + h:objectives/execution",
     "n:objectives + n:objectives/command-and-control",
-    "n:objectives + n:objectives/evasion",
     "n:objectives + n:objectives/execution",
     "n:objectives + s:well-known",
     "n:objectives + s:well-known/malware",

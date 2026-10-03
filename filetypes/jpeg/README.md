@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.196862 | 0.627350 | 0.250951 | 9.79% | 0.0292 |
+| 0.179741 | 0.576244 | 0.262712 | 11.34% | 0.0305 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.196862 | 0.627350 | 0.250951 | 9.79% | 0.0292 | — |
+| 0.203488 | 0.567972 | 0.268908 | 9.79% | 0.0289 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,14 +26,14 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `jpeg` are scored by `general`, `filegroups/media`, `filetypes/jpeg`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `jpeg` are scored by `general`, `filegroups/media`, `filetypes/jpeg`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 40,403 (255 mal / 40,148 ben) |
+| Train rows | 40,402 (255 mal / 40,147 ben) |
 | Feature spec | 234 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

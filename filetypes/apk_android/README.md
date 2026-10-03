@@ -4,11 +4,11 @@ LightGBM specialist for `apk_android`. Member of the Azoth routed ensemble; bund
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `apk_android` slice of the locked test partition: 482 malware / 104 benign (586 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `apk_android` slice of the locked test partition: 482 malware / 106 benign (588 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.960257 | 0.836748 | 0.903534 | 29.46% | 0.1116 |
+| 0.957321 | 0.836560 | 0.902184 | 25.10% | 0.1122 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apk_an
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.967677 | 0.852727 | 0.905624 | 21.99% | 0.1731 | — |
+| 0.966155 | 0.850123 | 0.903901 | 18.26% | 0.1755 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `apk_android` are scored by `general`, `filetypes/apk_android`. T
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,172 (1,899 mal / 273 ben) |
-| Feature spec | 1583 features (`route_specific`) |
+| Train rows | 2,173 (1,900 mal / 273 ben) |
+| Feature spec | 1584 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

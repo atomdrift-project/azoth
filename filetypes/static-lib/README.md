@@ -4,11 +4,11 @@ LightGBM specialist for `static-lib`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `static-lib` slice of the locked test partition: 117 malware / 1,422 benign (1,539 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `static-lib` slice of the locked test partition: 117 malware / 1,436 benign (1,553 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.420559 | 0.776101 | 0.426357 | 26.50% | 0.0599 |
+| 0.417270 | 0.767151 | 0.418919 | 26.50% | 0.0555 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `static
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.420559 | 0.776101 | 0.426357 | 26.50% | 0.0599 | — |
+| 0.417270 | 0.767151 | 0.418919 | 26.50% | 0.0555 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `static-lib` are scored by `general`, `filetypes/static-lib`. The
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 10,178 (152 mal / 10,026 ben) |
-| Feature spec | 1002 features (`route_specific`) |
+| Train rows | 10,297 (152 mal / 10,145 ben) |
+| Feature spec | 1007 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

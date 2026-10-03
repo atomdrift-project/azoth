@@ -4,11 +4,11 @@ LightGBM specialist for `deb`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `deb` slice of the locked test partition: 41 malware / 3,429 benign (3,470 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `deb` slice of the locked test partition: 43 malware / 3,429 benign (3,472 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.203412 | 0.631258 | 0.320000 | 14.63% | 0.0110 |
+| 0.234431 | 0.642146 | 0.346154 | 20.93% | 0.0101 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `deb` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.203412 | 0.631258 | 0.320000 | 14.63% | 0.0110 | — |
+| 0.234431 | 0.642146 | 0.346154 | 20.93% | 0.0101 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `deb` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `deb` are scored by `general`, `filetypes/deb`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 23,724 (42 mal / 23,682 ben) |
-| Feature spec | 2192 features (`route_specific`) |
+| Train rows | 23,727 (42 mal / 23,685 ben) |
+| Feature spec | 2189 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

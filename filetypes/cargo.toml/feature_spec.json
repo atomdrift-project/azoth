@@ -1,7 +1,7 @@
 {
   "version": 18,
   "abi_version": 18,
-  "feature_layout_hash": "76d0214c7998c7b8b5a7f256d2c7e7782226e0039c085ba52e6584b3878c12c6",
+  "feature_layout_hash": "aea3e1335f312b3bfe2aacb5b7dd96ac96b257f2c89b0bf7b2933011c7ed2826",
   "presence_vocab": [
     "metadata",
     "metadata/build",
@@ -132,6 +132,7 @@
     "n:well-known + n:well-known/app",
     "n:well-known + n:well-known/dual-use",
     "n:well-known + n:well-known/tool",
+    "s:objectives + s:objectives/command-and-control",
     "s:objectives + s:objectives/supply-chain"
   ],
   "crit_trigram_vocab": [
@@ -307,8 +308,11 @@
     "n:well-known/lib + n:well-known/lib/web",
     "n:well-known/tool + n:well-known/tool/development",
     "n:well-known/tool + n:well-known/tool/reverse-engineering",
+    "s:objectives + s:objectives/command-and-control",
+    "s:objectives + s:objectives/command-and-control/backdoor",
     "s:objectives + s:objectives/supply-chain",
     "s:objectives + s:objectives/supply-chain/hidden-payload",
+    "s:objectives/command-and-control + s:objectives/command-and-control/backdoor",
     "s:objectives/supply-chain + s:objectives/supply-chain/hidden-payload"
   ],
   "tiered_trigram_vocab": [],
@@ -436,6 +440,7 @@
     "crit:n:well-known",
     "crit:s:objectives",
     "critbi:n:objectives/command-and-control + s:objectives",
+    "critbi:s:objectives + s:objectives/command-and-control",
     "ext:third_party_max_crit",
     "ext:third_party_count",
     "ext:well_known_max_crit",
@@ -499,6 +504,7 @@
     "tierbi:n:micro-behaviors/crypto + n:micro-behaviors/crypto/symmetric",
     "tierbi:n:objectives + n:objectives/command-and-control",
     "tierbi:n:objectives + n:objectives/evasion",
+    "tierbi:s:objectives + s:objectives/command-and-control",
     "tierbi:s:objectives + s:objectives/supply-chain",
     "skeleton:MdPa",
     "skeleton:OS",
@@ -522,6 +528,6 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 201,
+  "total_features": 203,
   "standardized": false
 }

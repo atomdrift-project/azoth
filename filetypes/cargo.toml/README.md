@@ -2,15 +2,13 @@
 
 LightGBM specialist for `cargo.toml`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
-
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `cargo.toml` slice of the locked test partition: 22 malware / 1,317 benign (1,339 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `cargo.toml` slice of the locked test partition: 22 malware / 1,328 benign (1,350 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.106779 | 0.500190 | 0.166667 | 9.09% | 0.0154 |
+| 0.106779 | 0.504330 | 0.166667 | 9.09% | 0.0152 |
 
 ## Specialist Performance
 
@@ -35,8 +33,8 @@ Files matching `cargo.toml` are scored by `general`, `filetypes/cargo.toml`. The
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,073 (14 mal / 9,059 ben) |
-| Feature spec | 201 features (`route_specific`) |
+| Train rows | 9,153 (14 mal / 9,139 ben) |
+| Feature spec | 203 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

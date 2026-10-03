@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `7z` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.997862 | 0.951022 | 0.979895 | — | 0.0809 |
+| 0.998021 | 0.953727 | 0.979895 | — | 0.0821 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `7z` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.997862 | 0.951022 | 0.979895 | — | 0.0809 | — |
+| 0.998021 | 0.953727 | 0.979895 | — | 0.0821 | — |
 
 ## Routing
 
@@ -27,7 +27,7 @@ Files matching `7z` are scored by `general`, `filetypes/7z`. The ensemble's per-
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 7,392 (7,041 mal / 351 ben) |
+| Train rows | 7,394 (7,041 mal / 353 ben) |
 | Feature spec | 3173 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

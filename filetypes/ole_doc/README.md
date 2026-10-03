@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ole_do
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.995401 | 0.987991 | 0.958563 | 88.97% | 0.0350 |
+| 0.994939 | 0.986352 | 0.958443 | 90.22% | 0.0382 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ole_do
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.995056 | 0.985966 | 0.958750 | 88.42% | 0.0574 | — |
+| 0.995113 | 0.986177 | 0.958703 | 89.93% | 0.0573 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `ole_doc` are scored by `general`, `filetypes/ole_doc`. The ensem
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 101,676 (73,781 mal / 27,895 ben) |
-| Feature spec | 6307 features (`general_shared`) |
+| Train rows | 101,679 (73,782 mal / 27,897 ben) |
+| Feature spec | 6212 features (`general_shared`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

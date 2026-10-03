@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dex` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.899254 | 0.888095 | 0.888889 | — | 0.0963 |
+| 0.899254 | 0.888095 | 0.888889 | — | 0.0948 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dex` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.899254 | 0.888095 | 0.888889 | — | 0.0963 | — |
+| 0.899254 | 0.888095 | 0.888889 | — | 0.0948 | — |
 
 ## Routing
 

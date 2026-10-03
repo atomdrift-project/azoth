@@ -4,11 +4,11 @@ LightGBM specialist for `macho`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `macho` slice of the locked test partition: 305 malware / 4,760 benign (5,065 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `macho` slice of the locked test partition: 308 malware / 4,765 benign (5,073 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.951001 | 0.982874 | 0.910017 | 68.52% | 0.0090 |
+| 0.907708 | 0.963095 | 0.877551 | 67.86% | 0.0484 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `macho`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.951001 | 0.982874 | 0.910017 | 68.52% | 0.0090 | — |
+| 0.951860 | 0.987136 | 0.909091 | 61.36% | 0.0090 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `macho` are scored by `general`, `filegroups/native`, `filetypes/macho`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `macho` are scored by `general`, `filegroups/native`, `filetypes/macho`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 34,984 (2,356 mal / 32,628 ben) |
-| Feature spec | 2014 features (`route_specific`) |
+| Train rows | 34,991 (2,356 mal / 32,635 ben) |
+| Feature spec | 2010 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

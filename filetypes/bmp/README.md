@@ -8,7 +8,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `bmp` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 1.000000 | — | 0.0144 |
+| 1.000000 | 1.000000 | 1.000000 | — | 0.0134 |
 
 ## Specialist Performance
 
@@ -16,18 +16,18 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `bmp` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 1.000000 | — | 0.0144 | — |
+| 1.000000 | 1.000000 | 1.000000 | — | 0.0115 | — |
 
 ## Routing
 
-Files matching `bmp` are scored by `filegroups/media`, `filetypes/bmp`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `bmp` are scored by `general`, `filegroups/media`, `filetypes/bmp`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 343 (115 mal / 228 ben) |
+| Train rows | 348 (115 mal / 233 ben) |
 | Feature spec | 142 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
