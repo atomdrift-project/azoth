@@ -4,11 +4,11 @@ LightGBM specialist for `java`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `java` slice of the locked test partition: 415 malware / 24,946 benign (25,361 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `java` slice of the locked test partition: 415 malware / 25,170 benign (25,585 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.071930 | 0.588405 | 0.126354 | 1.45% | 0.0168 |
+| 0.072570 | 0.486618 | 0.126582 | 2.17% | 0.0162 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.079722 | 0.611876 | 0.130879 | 0.48% | 0.0180 | — |
+| 0.075407 | 0.548789 | 0.115888 | 1.69% | 0.0159 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `java` are scored by `general`, `filegroups/source`. The ensemble
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 176,420 (289 mal / 176,131 ben) |
-| Feature spec | 1189 features (`route_specific`) |
+| Train rows | 178,124 (298 mal / 177,826 ben) |
+| Feature spec | 1230 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

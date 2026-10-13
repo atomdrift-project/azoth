@@ -4,11 +4,11 @@ LightGBM specialist for `7z`. Member of the Azoth routed ensemble; bundle root: 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `7z` slice of the locked test partition: 1,121 malware / 47 benign (1,168 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `7z` slice of the locked test partition: 1,119 malware / 47 benign (1,166 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998021 | 0.953727 | 0.979895 | — | 0.0821 |
+| 0.998721 | 0.969977 | 0.981946 | — | 0.0648 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `7z` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998021 | 0.953727 | 0.979895 | — | 0.0821 | — |
+| 0.998721 | 0.969977 | 0.981946 | — | 0.0648 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `7z` are scored by `general`, `filetypes/7z`. The ensemble's per-
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 7,394 (7,041 mal / 353 ben) |
-| Feature spec | 3173 features (`route_specific`) |
+| Train rows | 7,409 (7,053 mal / 356 ben) |
+| Feature spec | 3187 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

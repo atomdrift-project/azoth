@@ -4,11 +4,11 @@ LightGBM specialist for `dex`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `dex` slice of the locked test partition: 14 malware / 30 benign (44 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `dex` slice of the locked test partition: 16 malware / 32 benign (48 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.899254 | 0.888095 | 0.888889 | — | 0.0948 |
+| 0.993056 | 0.996094 | 0.967742 | — | 0.0200 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dex` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.899254 | 0.888095 | 0.888889 | — | 0.0948 | — |
+| 0.993056 | 0.996094 | 0.967742 | — | 0.0200 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `dex` are scored by `general`, `filetypes/dex`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 310 (73 mal / 237 ben) |
-| Feature spec | 745 features (`route_specific`) |
+| Train rows | 325 (88 mal / 237 ben) |
+| Feature spec | 753 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

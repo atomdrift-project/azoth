@@ -4,11 +4,11 @@ LightGBM specialist for `chm`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `chm` slice of the locked test partition: 41 malware / 19 benign (60 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `chm` slice of the locked test partition: 41 malware / 18 benign (59 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.968059 | 0.924904 | 0.911392 | — | 0.1181 |
+| 0.989282 | 0.974932 | 0.951220 | — | 0.0663 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chm` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.968059 | 0.924904 | 0.911392 | — | 0.1181 | — |
+| 0.989282 | 0.974932 | 0.951220 | — | 0.0663 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `chm` are scored by `general`, `filetypes/chm`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 249 (169 mal / 80 ben) |
-| Feature spec | 1129 features (`route_specific`) |
+| Train rows | 263 (185 mal / 78 ben) |
+| Feature spec | 1145 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

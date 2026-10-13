@@ -4,11 +4,11 @@ LightGBM specialist for `php`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `php` slice of the locked test partition: 832 malware / 77,831 benign (78,663 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `php` slice of the locked test partition: 850 malware / 78,155 benign (79,005 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.720434 | 0.934829 | 0.741888 | 42.43% | 0.0091 |
+| 0.731336 | 0.904538 | 0.747048 | 55.88% | 0.0075 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `php` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.732877 | 0.940326 | 0.757225 | 41.47% | 0.0047 | — |
+| 0.741071 | 0.928404 | 0.782956 | 51.18% | 0.0040 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `php` are scored by `general`, `filegroups/scripts`, `filetypes/p
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 550,707 (4,989 mal / 545,718 ben) |
-| Feature spec | 1551 features (`route_specific`) |
+| Train rows | 553,149 (4,981 mal / 548,168 ben) |
+| Feature spec | 1574 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

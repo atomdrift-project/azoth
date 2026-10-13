@@ -4,11 +4,11 @@ LightGBM specialist for `dos_com`. Member of the Azoth routed ensemble; bundle r
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `dos_com` slice of the locked test partition: 812 malware / 20 benign (832 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `dos_com` slice of the locked test partition: 837 malware / 21 benign (858 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.997139 | 0.895166 | 0.987835 | — | 0.0216 |
+| 0.996163 | 0.906383 | 0.987611 | — | 0.1960 |
 
 ## Specialist Performance
 
@@ -16,19 +16,19 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dos_co
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.996136 | 0.902925 | 0.987835 | — | 0.1648 | — |
+| 0.996163 | 0.906383 | 0.987611 | — | 0.1960 | — |
 
 ## Routing
 
-Files matching `dos_com` are scored by `general`, `filetypes/dos_com`. The ensemble's per-row score is whatever combiner strategy (`stacked_lr`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `dos_com` are scored by `filetypes/dos_com`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,367 (3,225 mal / 142 ben) |
-| Feature spec | 136 features (`route_specific`) |
+| Train rows | 3,509 (3,343 mal / 166 ben) |
+| Feature spec | 162 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

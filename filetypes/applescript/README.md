@@ -4,11 +4,11 @@ LightGBM specialist for `applescript`. Member of the Azoth routed ensemble; bund
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `applescript` slice of the locked test partition: 10 malware / 64 benign (74 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `applescript` slice of the locked test partition: 9 malware / 68 benign (77 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.828555 | 0.826563 | 0.888889 | 80.00% | 0.0270 |
+| 1.000000 | 1.000000 | 1.000000 | 100.00% | 0.0008 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apples
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.827027 | 0.867188 | 0.888889 | 80.00% | 0.0333 | — |
+| 1.000000 | 1.000000 | 1.000000 | 100.00% | 0.0001 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `applescript` are scored by `general`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `applescript` are scored by `general`, `filetypes/applescript`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 553 (44 mal / 509 ben) |
-| Feature spec | 597 features (`route_specific`) |
+| Train rows | 574 (44 mal / 530 ben) |
+| Feature spec | 629 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

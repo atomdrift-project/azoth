@@ -4,11 +4,11 @@ LightGBM specialist for `vsix`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` slice of the locked test partition: 50 malware / 744 benign (794 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` slice of the locked test partition: 52 malware / 761 benign (813 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.706767 | 0.915753 | 0.698795 | 38.00% | 0.0319 |
+| 0.610760 | 0.883301 | 0.625000 | 38.46% | 0.0444 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.706767 | 0.915753 | 0.698795 | 38.00% | 0.0319 | — |
+| 0.610760 | 0.883301 | 0.625000 | 38.46% | 0.0444 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `vsix` are scored by `general`, `filetypes/vsix`. The ensemble's 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,630 (178 mal / 6,452 ben) |
-| Feature spec | 1820 features (`route_specific`) |
+| Train rows | 6,833 (196 mal / 6,637 ben) |
+| Feature spec | 1802 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

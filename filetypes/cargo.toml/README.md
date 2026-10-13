@@ -4,11 +4,11 @@ LightGBM specialist for `cargo.toml`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `cargo.toml` slice of the locked test partition: 22 malware / 1,328 benign (1,350 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `cargo.toml` slice of the locked test partition: 22 malware / 1,401 benign (1,423 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.106779 | 0.504330 | 0.166667 | 9.09% | 0.0152 |
+| 0.106754 | 0.529638 | 0.166667 | 9.09% | 0.0145 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `cargo.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.106779 | 0.490519 | 0.166667 | 9.09% | 0.0157 | — |
+| 0.106782 | 0.490265 | 0.166667 | 9.09% | 0.0157 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `cargo.toml` are scored by `general`, `filetypes/cargo.toml`. The
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,153 (14 mal / 9,139 ben) |
-| Feature spec | 203 features (`route_specific`) |
+| Train rows | 9,573 (14 mal / 9,559 ben) |
+| Feature spec | 231 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

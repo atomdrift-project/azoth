@@ -4,11 +4,11 @@ LightGBM specialist for `lnk`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 584 malware / 148 benign (732 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 584 malware / 153 benign (737 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.996294 | 0.985821 | 0.981293 | 80.14% | 0.1462 |
+| 0.995777 | 0.984410 | 0.981324 | 79.45% | 0.1510 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.996294 | 0.985821 | 0.981293 | 80.14% | 0.1462 | — |
+| 0.995777 | 0.984410 | 0.981324 | 79.45% | 0.1510 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,8 +33,8 @@ Files matching `lnk` are scored by `general`, `filetypes/lnk`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 4,390 (3,369 mal / 1,021 ben) |
-| Feature spec | 483 features (`route_specific`) |
+| Train rows | 4,441 (3,386 mal / 1,055 ben) |
+| Feature spec | 499 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

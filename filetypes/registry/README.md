@@ -4,11 +4,11 @@ LightGBM specialist for `registry`. Member of the Azoth routed ensemble; bundle 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `registry` slice of the locked test partition: 80 malware / 13,660 benign (13,740 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `registry` slice of the locked test partition: 77 malware / 13,661 benign (13,738 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.886920 | 0.971604 | 0.835616 | 70.00% | 0.0014 |
+| 0.926682 | 0.999279 | 0.857143 | 71.43% | 0.0012 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `regist
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.886920 | 0.971604 | 0.835616 | 70.00% | 0.0014 | — |
+| 0.926682 | 0.999279 | 0.857143 | 71.43% | 0.0012 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -33,7 +33,7 @@ Files matching `registry` are scored by `general`, `filetypes/registry`. The ens
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 97,737 (537 mal / 97,200 ben) |
+| Train rows | 97,748 (537 mal / 97,211 ben) |
 | Feature spec | 126 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 128 |

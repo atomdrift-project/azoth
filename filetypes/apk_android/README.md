@@ -4,11 +4,11 @@ LightGBM specialist for `apk_android`. Member of the Azoth routed ensemble; bund
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `apk_android` slice of the locked test partition: 482 malware / 106 benign (588 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `apk_android` slice of the locked test partition: 485 malware / 111 benign (596 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.957321 | 0.836560 | 0.902184 | 25.10% | 0.1122 |
+| 0.968577 | 0.867419 | 0.910798 | 27.01% | 0.1563 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apk_an
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.966155 | 0.850123 | 0.903901 | 18.26% | 0.1755 | — |
+| 0.968577 | 0.867419 | 0.910798 | 27.01% | 0.1563 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `apk_android` are scored by `general`, `filetypes/apk_android`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `apk_android` are scored by `general`, `filetypes/apk_android`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,173 (1,900 mal / 273 ben) |
-| Feature spec | 1584 features (`route_specific`) |
+| Train rows | 2,223 (1,940 mal / 283 ben) |
+| Feature spec | 1607 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

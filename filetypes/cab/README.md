@@ -4,11 +4,11 @@ LightGBM specialist for `cab`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `cab` slice of the locked test partition: 104 malware / 13 benign (117 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `cab` slice of the locked test partition: 102 malware / 13 benign (115 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.994115 | 0.957470 | 0.965517 | — | 0.0818 |
+| 0.998937 | 0.991704 | 0.990196 | — | 0.0946 |
 
 ## Specialist Performance
 
@@ -16,7 +16,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `cab` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.994115 | 0.957470 | 0.965517 | — | 0.0818 | — |
+| 0.998937 | 0.991704 | 0.990196 | — | 0.0946 | — |
 
 ## Routing
 
@@ -27,8 +27,8 @@ Files matching `cab` are scored by `general`, `filetypes/cab`. The ensemble's pe
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 825 (741 mal / 84 ben) |
-| Feature spec | 2125 features (`route_specific`) |
+| Train rows | 846 (759 mal / 87 ben) |
+| Feature spec | 2114 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
