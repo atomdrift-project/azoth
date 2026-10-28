@@ -27,7 +27,7 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | File type | Test mal / ben | PR AUC | ROC AUC | F1 | Recall @ L25 | FP @ L25 | Δ vs EMBER 2024 |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | [`rtf`](filetypes/rtf/README.md) | 810 / 115 | 1.000000 | 1.000000 | 0.996904 | 99.38% | 0 | — |
-| [`elf`](filetypes/elf/README.md) | 24,968 / 113,453 | — | — | 0.980295 | 96.14% | 1 | — |
+| [`elf`](filetypes/elf/README.md) | 24,968 / 113,453 | 0.999550 | 0.999841 | 0.980295 | 96.14% | 1 | PR +0.006250 / ROC +0.006541 |
 | [`ole_doc`](filetypes/ole_doc/README.md) | 11,041 / 4,150 | 0.994489 | 0.984096 | 0.946625 | 89.87% | 1 | — |
 | [`python_sdist`](filetypes/python_sdist/README.md) | 370 / 1,527 | 0.932616 | 0.925020 | 0.935622 | 88.38% | 2 | — |
 | [`gem`](filetypes/gem/README.md) | 51 / 14,892 | — | — | 0.937500 | 88.24% | 0 | — |
@@ -76,7 +76,7 @@ A filetype appears here when it has at least 25 malware and 25 benign in the tes
 | [`gif`](filetypes/gif/README.md) | 85 / 222 | 0.586619 | 0.828193 | 0.045455 | 2.35% | 1 | — |
 | **Weighted avg** (by test pop) | **2,130,559** | — | — | **0.5673** | **44.6%** | **126 total** | — |
 
-L25 decisions and F1 are updated from the committed [test evaluation](route_policy_eval_oof.json). Signed-policy-margin PR AUC and ROC AUC were not regenerated for the 14 updated specialists; those cells, their EMBER deltas, and the aggregate AUCs are marked —. Unchanged routes retain their previous AUC results. See [SPECIALIST_UPDATE.md](SPECIALIST_UPDATE.md) for all 14 updates, including filetypes outside this table, and [global policy metrics](global_policy_metrics.md) for current results across FP levels.
+L25 decisions and F1 are updated from the committed [test evaluation](route_policy_eval_oof.json). ELF signed-policy-margin PR AUC and ROC AUC were recomputed at L25 from the captured test scores using the installed routing policies; its EMBER deltas use the ELF specialist reference (PR AUC and ROC AUC both 0.9933). These AUC metrics were not regenerated for the other 13 updated specialists; those cells, their EMBER deltas, and the aggregate AUCs are marked —. Unchanged routes retain their previous AUC results. See [SPECIALIST_UPDATE.md](SPECIALIST_UPDATE.md) for all 14 updates, including filetypes outside this table, and [global policy metrics](global_policy_metrics.md) for current results across FP levels.
 
 PR AUC summarizes recall against precision across operating points. Recall@L25 is the selection-budget headline; for filetypes whose calibration slice cannot resolve L25 (0.25 FP/M) empirically, that level shares an operating point with its neighbours (its measured ceiling). EMBER 2024 deltas are reported where Joyce et al. publish per-filetype numbers (Table 5, All files → X).
 
