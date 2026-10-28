@@ -1,40 +1,7 @@
-# `filetype/chm`
+# chm specialist
 
-LightGBM specialist for `chm`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
+Updated 2026-10-28; 1 ONNX ensemble member(s), 1647 input features.
 
-## Ensemble Performance
+The routed ensemble on the locked test cohort at L25 has recall 0.00% (0 true positives) and 0 false positives. The previous installed policy had recall 0.00% and 0 false positives on the same cohort.
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `chm` slice of the locked test partition: 41 malware / 18 benign (59 rows).
-
-| PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.989282 | 0.974932 | 0.951220 | — | 0.0663 |
-
-## Specialist Performance
-
-`filetypes/chm` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
-
-| PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|---:|
-| 0.989282 | 0.974932 | 0.951220 | — | 0.0663 | — |
-
-## Routing
-
-Files matching `chm` are scored by `general`, `filetypes/chm`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
-
-## Training
-
-| Parameter | Value |
-|---|---:|
-| Algorithm | LightGBM binary classifier |
-| Train rows | 263 (185 mal / 78 ben) |
-| Feature spec | 1145 features (`route_specific`) |
-| n_estimators | 400 |
-| num_leaves | 96 |
-| max_depth | 12 |
-| min_child_samples | 100 |
-| learning_rate | 0.05 |
-| subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
-| device | auto |
+Models were selected before test evaluation. Policies were fitted on development rows; the general model and unrelated policies remain unchanged. See [the complete specialist update](../../SPECIALIST_UPDATE.md).
