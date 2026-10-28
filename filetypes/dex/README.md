@@ -4,31 +4,37 @@ LightGBM specialist for `dex`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `dex` slice of the locked test partition: 16 malware / 32 benign (48 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `dex` slice of the locked test partition: 17 malware / 32 benign (49 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.993056 | 0.996094 | 0.967742 | — | 0.0200 |
+| 0.791868 | 0.915441 | 0.642857 | 52.94% | - |
 
 ## Specialist Performance
 
-`filetypes/dex` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/dex` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.993056 | 0.996094 | 0.967742 | — | 0.0200 | — |
+| 0.991176 | 0.994485 | 0.000000 | 0.00% | 0.0644 | — |
+
+## Recall by FP level (per 100M benigns)
+
+<img src="recall_curve.svg" alt="dex: recall by FP level (per 100M benigns)" height="300" />
+
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
-Files matching `dex` are scored by `general`, `filetypes/dex`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `dex` are scored by `filegroups/portable`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 325 (88 mal / 237 ben) |
-| Feature spec | 753 features (`route_specific`) |
+| Train rows | 278 (72 mal / 206 ben) |
+| Feature spec | 6627 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

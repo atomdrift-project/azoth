@@ -4,19 +4,19 @@ LightGBM specialist for `javascript`. Member of the Azoth routed ensemble; bundl
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `javascript` slice of the locked test partition: 18,602 malware / 226,674 benign (245,276 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `javascript` slice of the locked test partition: 18,084 malware / 227,412 benign (245,496 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.840481 | 0.919157 | 0.814534 | 24.34% | 0.0244 |
+| 0.886481 | 0.961918 | 0.649903 | 48.16% | - |
 
 ## Specialist Performance
 
-`filetypes/javascript` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/javascript` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.850522 | 0.930988 | 0.816549 | 23.90% | 0.0220 | — |
+| 0.885460 | 0.961967 | 0.633555 | 46.38% | 0.0178 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `javascript` are scored by `general`, `filegroups/scripts`, `filetypes/javascript`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `javascript` are scored by `filegroups/scripts`, `filetypes/javascript`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,698,831 (117,443 mal / 1,581,388 ben) |
-| Feature spec | 1962 features (`route_specific`) |
+| Train rows | 1,457,782 (98,722 mal / 1,359,060 ben) |
+| Feature spec | 29233 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

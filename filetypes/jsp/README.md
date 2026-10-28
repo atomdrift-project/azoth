@@ -4,31 +4,37 @@ LightGBM specialist for `jsp`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `jsp` slice of the locked test partition: 37 malware / 15 benign (52 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `jsp` slice of the locked test partition: 42 malware / 18 benign (60 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 1.000000 | — | 0.0270 |
+| 0.999446 | 0.998677 | 0.000000 | 0.00% | - |
 
 ## Specialist Performance
 
-`filetypes/jsp` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/jsp` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 1.000000 | — | 0.0270 | — |
+| 0.999446 | 0.998677 | 0.000000 | 0.00% | 0.0188 | — |
+
+## Recall by FP level (per 100M benigns)
+
+<img src="recall_curve.svg" alt="jsp: recall by FP level (per 100M benigns)" height="300" />
+
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
-Files matching `jsp` are scored by `general`, `filetypes/jsp`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `jsp` are scored by `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 284 (219 mal / 65 ben) |
-| Feature spec | 387 features (`route_specific`) |
+| Train rows | 302 (225 mal / 77 ben) |
+| Feature spec | 4111 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

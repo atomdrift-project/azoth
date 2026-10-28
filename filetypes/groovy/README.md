@@ -4,19 +4,19 @@ LightGBM specialist for `groovy`. Member of the Azoth routed ensemble; bundle ro
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 6 malware / 1,415 benign (1,421 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 5 malware / 1,418 benign (1,423 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.670667 | 0.860130 | 0.800000 | 66.67% | 0.0040 |
+| 0.805650 | 0.975740 | 0.727273 | 80.00% | - |
 
 ## Specialist Performance
 
-`filetypes/groovy` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/groovy` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.670667 | 0.860130 | 0.800000 | 66.67% | 0.0040 | — |
+| 0.805650 | 0.975740 | 0.727273 | 80.00% | 0.0045 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `groovy` are scored by `general`, `filetypes/groovy`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `groovy` are scored by `filetypes/groovy`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,531 (50 mal / 9,481 ben) |
-| Feature spec | 403 features (`route_specific`) |
+| Train rows | 8,215 (42 mal / 8,173 ben) |
+| Feature spec | 452 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -4,19 +4,19 @@ LightGBM specialist for `pdf`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` slice of the locked test partition: 22,480 malware / 3,772 benign (26,252 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` slice of the locked test partition: 22,480 malware / 3,773 benign (26,253 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.994807 | 0.972926 | 0.976538 | 12.71% | 0.0406 |
+| 0.993010 | 0.963585 | 0.855638 | 74.79% | - |
 
 ## Specialist Performance
 
-`filetypes/pdf` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/pdf` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.994396 | 0.968924 | 0.977157 | 12.46% | 0.2371 | PR +0.001096 / ROC -0.022276 |
+| 0.992743 | 0.962873 | 0.184373 | 10.16% | 0.4754 | PR -0.000557 / ROC -0.028327 |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `pdf` are scored by `general`, `filegroups/documents`, `filetypes/pdf`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `pdf` are scored by `filegroups/documents`, `filetypes/pdf`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 143,671 (117,532 mal / 26,139 ben) |
-| Feature spec | 404 features (`route_specific`) |
+| Train rows | 123,254 (100,808 mal / 22,446 ben) |
+| Feature spec | 1462 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

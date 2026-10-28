@@ -1,22 +1,22 @@
 # `filetype/ooxml`
 
-LightGBM specialist for `docx`, `pptx`, `xlsx`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
+LightGBM specialist for `docm`, `docx`, `dotx`, `ooxml`, `potm`, `potx`, `ppam`, `ppsm`, `pptm`, `pptx`, `sldm`, `sldx`, `xlam`, `xlsb`, `xlsm`, `xlsx`, `xltm`, `xltx`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml` slice of the locked test partition: 8,332 malware / 818 benign (9,150 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml` slice of the locked test partition: 8,334 malware / 822 benign (9,156 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.984628 | 0.885839 | 0.969604 | 32.07% | 0.0471 |
+| 0.985152 | 0.888261 | 0.524024 | 35.53% | - |
 
 ## Specialist Performance
 
-`filetypes/ooxml` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/ooxml` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.984673 | 0.880345 | 0.969661 | 31.58% | 0.5863 | — |
+| 0.942601 | 0.658324 | 0.508899 | 34.14% | 0.5720 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,21 +26,21 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `ooxml` are scored by `general`, `filetypes/ooxml`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `ooxml` are scored by `filegroups/documents`, `filetypes/ooxml`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 26,324 (21,258 mal / 5,066 ben) |
-| Feature spec | 308 features (`route_specific`) |
-| n_estimators | 400 |
-| num_leaves | 96 |
+| Train rows | 22,651 (18,220 mal / 4,431 ben) |
+| Feature spec | 1148 features (`route_specific`) |
+| n_estimators | 300 |
+| num_leaves | 128 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| early_stopping_rounds | 25 |
 | device | auto |

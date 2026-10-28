@@ -4,19 +4,19 @@ LightGBM specialist for `pe`. Member of the Azoth routed ensemble; bundle root: 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pe` slice of the locked test partition: 203,621 malware / 33,705 benign (237,326 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pe` slice of the locked test partition: 204,120 malware / 33,839 benign (237,959 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.997392 | 0.984949 | 0.980929 | 54.82% | 0.0277 |
+| 0.994215 | 0.965998 | 0.562973 | 39.18% | - |
 
 ## Specialist Performance
 
-`filetypes/pe` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/pe` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.997713 | 0.986056 | 0.981128 | 50.97% | 0.1176 | PR -0.000587 / ROC -0.012144 |
+| 0.994539 | 0.968603 | 0.324241 | 19.35% | 0.0765 | PR -0.003761 / ROC -0.029597 |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `pe` are scored by `general`, `filegroups/native`, `filetypes/pe`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `pe` are scored by `filegroups/native`, `filetypes/pe`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,631,386 (1,395,440 mal / 235,946 ben) |
-| Feature spec | 5423 features (`route_specific`) |
+| Train rows | 1,403,357 (1,200,303 mal / 203,054 ben) |
+| Feature spec | 79113 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

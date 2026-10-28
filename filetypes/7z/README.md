@@ -4,31 +4,37 @@ LightGBM specialist for `7z`. Member of the Azoth routed ensemble; bundle root: 
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `7z` slice of the locked test partition: 1,119 malware / 47 benign (1,166 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `7z` slice of the locked test partition: 1,125 malware / 49 benign (1,174 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998721 | 0.969977 | 0.981946 | — | 0.0648 |
+| 0.997898 | 0.952417 | 0.908826 | 83.29% | - |
 
 ## Specialist Performance
 
-`filetypes/7z` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/7z` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998721 | 0.969977 | 0.981946 | — | 0.0648 | — |
+| 0.998236 | 0.960762 | 0.000000 | 0.00% | 0.0702 | — |
+
+## Recall by FP level (per 100M benigns)
+
+<img src="recall_curve.svg" alt="7z: recall by FP level (per 100M benigns)" height="300" />
+
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
-Files matching `7z` are scored by `general`, `filetypes/7z`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `7z` are scored by `filegroups/archive`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 7,409 (7,053 mal / 356 ben) |
-| Feature spec | 3187 features (`route_specific`) |
+| Train rows | 6,405 (6,067 mal / 338 ben) |
+| Feature spec | 20951 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

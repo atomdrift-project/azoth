@@ -4,19 +4,19 @@ LightGBM specialist for `elf`, `macho`, `pe`. Member of the Azoth routed ensembl
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `native`). ROC 0.992641, PR 0.995905, F1 0.9808 on 380,546 rows (228,784 mal / 151,762 ben).
+Training-time benchmark only (no test-partition rows for `native`). ROC 0.999880, PR 0.999922, F1 0.9972 on 381,491 rows (229,410 mal / 152,081 ben).
 
 ## Routing
 
-Files matching `native` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `native` are scored by none. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,632,477 (1,569,533 mal / 1,062,944 ben) |
-| Feature spec | 5911 features (`route_specific`) |
+| Train rows | 2,263,936 (1,350,194 mal / 913,742 ben) |
+| Feature spec | 91901 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

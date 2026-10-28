@@ -8,27 +8,33 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `cab` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998937 | 0.991704 | 0.990196 | — | 0.0946 |
+| 0.999621 | 0.996983 | 0.964467 | 93.14% | - |
 
 ## Specialist Performance
 
-`filetypes/cab` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/cab` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998937 | 0.991704 | 0.990196 | — | 0.0946 | — |
+| 0.999421 | 0.995475 | 0.000000 | 0.00% | 0.0390 | — |
+
+## Recall by FP level (per 100M benigns)
+
+<img src="recall_curve.svg" alt="cab: recall by FP level (per 100M benigns)" height="300" />
+
+Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
-Files matching `cab` are scored by `general`, `filetypes/cab`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `cab` are scored by `filegroups/archive`, `filetypes/cab`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 846 (759 mal / 87 ben) |
-| Feature spec | 2114 features (`route_specific`) |
+| Train rows | 741 (662 mal / 79 ben) |
+| Feature spec | 19161 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

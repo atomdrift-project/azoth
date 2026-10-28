@@ -4,19 +4,19 @@ LightGBM specialist for `c`, `cpp`, `csharp`, `go`, `java`, `kotlin`, `makefile`
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `source`). ROC 0.851457, PR 0.468542, F1 0.5399 on 373,538 rows (8,325 mal / 365,213 ben).
+Training-time benchmark only (no test-partition rows for `source`). ROC 0.941984, PR 0.544632, F1 0.5793 on 375,275 rows (7,356 mal / 367,919 ben).
 
 ## Routing
 
-Files matching `source` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `source` are scored by none. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,571,563 (25,394 mal / 2,546,169 ben) |
-| Feature spec | 1959 features (`route_specific`) |
+| Train rows | 2,217,588 (19,035 mal / 2,198,553 ben) |
+| Feature spec | 11980 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

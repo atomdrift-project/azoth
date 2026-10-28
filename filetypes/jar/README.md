@@ -4,19 +4,19 @@ LightGBM specialist for `jar`. Member of the Azoth routed ensemble; bundle root:
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `jar` slice of the locked test partition: 453 malware / 5,246 benign (5,699 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `jar` slice of the locked test partition: 470 malware / 5,247 benign (5,717 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.965697 | 0.993923 | 0.926130 | 41.72% | 0.0119 |
+| 0.970395 | 0.995145 | 0.860241 | 75.96% | - |
 
 ## Specialist Performance
 
-`filetypes/jar` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/jar` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.965697 | 0.993923 | 0.926130 | 41.72% | 0.0119 | — |
+| 0.957105 | 0.994305 | 0.361111 | 22.13% | 0.0231 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `jar` are scored by `general`, `filetypes/jar`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `jar` are scored by `filegroups/archive`, `filetypes/jar`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 39,502 (3,078 mal / 36,424 ben) |
-| Feature spec | 1980 features (`route_specific`) |
+| Train rows | 34,086 (2,699 mal / 31,387 ben) |
+| Feature spec | 10426 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

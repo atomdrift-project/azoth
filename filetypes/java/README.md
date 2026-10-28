@@ -4,19 +4,19 @@ LightGBM specialist for `java`. Member of the Azoth routed ensemble; bundle root
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `java` slice of the locked test partition: 415 malware / 25,170 benign (25,585 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `java` slice of the locked test partition: 414 malware / 25,208 benign (25,622 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.072570 | 0.486618 | 0.126582 | 2.17% | 0.0162 |
+| 0.105487 | 0.536366 | 0.138393 | 7.49% | - |
 
 ## Specialist Performance
 
-`filetypes/java` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/java` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.075407 | 0.548789 | 0.115888 | 1.69% | 0.0159 | — |
+| 0.104542 | 0.536365 | 0.117647 | 6.28% | 0.0152 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `java` are scored by `general`, `filegroups/source`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `java` are scored by `filegroups/source`, `filetypes/java`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 178,124 (298 mal / 177,826 ben) |
-| Feature spec | 1230 features (`route_specific`) |
+| Train rows | 152,825 (263 mal / 152,562 ben) |
+| Feature spec | 2565 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

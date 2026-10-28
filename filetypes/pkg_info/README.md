@@ -1,22 +1,22 @@
 # `filetype/pkg_info`
 
-LightGBM specialist for `pkg-info`, `pkg_info`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
+LightGBM specialist for `pkg-info`, `pkg_info`, `pkginfo`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pkg_info` slice of the locked test partition: 30 malware / 2,325 benign (2,355 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pkg_info` slice of the locked test partition: 30 malware / 2,355 benign (2,385 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.881461 | 0.961584 | 0.881356 | 40.00% | 0.0030 |
+| 0.885936 | 0.964529 | 0.708333 | 56.67% | - |
 
 ## Specialist Performance
 
-`filetypes/pkg_info` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/pkg_info` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.881461 | 0.961584 | 0.881356 | 40.00% | 0.0030 | — |
+| 0.883947 | 0.964423 | 0.708333 | 56.67% | 0.0034 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `pkg_info` are scored by `general`, `filetypes/pkg_info`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `pkg_info` are scored by `filetypes/pkg_info`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 16,025 (188 mal / 15,837 ben) |
-| Feature spec | 418 features (`route_specific`) |
+| Train rows | 13,968 (162 mal / 13,806 ben) |
+| Feature spec | 659 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

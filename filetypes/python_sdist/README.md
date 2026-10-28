@@ -1,22 +1,22 @@
 # `filetype/python_sdist`
 
-LightGBM specialist for `python_sdist`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
+LightGBM specialist for `python_sdist`, `pythonsdist`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `python_sdist` slice of the locked test partition: 365 malware / 1,178 benign (1,543 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `python_sdist` slice of the locked test partition: 370 malware / 1,527 benign (1,897 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.960215 | 0.974677 | 0.944206 | 88.49% | 0.0248 |
+| 0.932616 | 0.925020 | 0.935622 | 88.38% | - |
 
 ## Specialist Performance
 
-`filetypes/python_sdist` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/python_sdist` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.960215 | 0.974677 | 0.944206 | 88.49% | 0.0248 | — |
+| 0.979122 | 0.990740 | 0.930636 | 87.03% | 0.0186 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `python_sdist` are scored by `general`, `filetypes/python_sdist`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `python_sdist` are scored by `filegroups/archive`, `filetypes/python_sdist`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 10,662 (2,690 mal / 7,972 ben) |
-| Feature spec | 1640 features (`route_specific`) |
+| Train rows | 10,969 (2,391 mal / 8,578 ben) |
+| Feature spec | 20327 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

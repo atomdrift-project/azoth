@@ -4,19 +4,19 @@ LightGBM specialist for `bmp`, `gif`, `jpeg`, `jpg`, `mp3`, `mp4`, `png`, `svg`,
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `media`). ROC 0.709277, PR 0.127226, F1 0.1667 on 124,785 rows (1,446 mal / 123,339 ben).
+Training-time benchmark only (no test-partition rows for `media`). ROC 0.625697, PR 0.145554, F1 0.1913 on 131,007 rows (1,305 mal / 129,702 ben).
 
 ## Routing
 
-Files matching `media` are scored by none. The ensemble's per-row score is whatever combiner strategy (`—`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `media` are scored by none. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 860,688 (1,011 mal / 859,677 ben) |
-| Feature spec | 356 features (`route_specific`) |
+| Train rows | 776,102 (871 mal / 775,231 ben) |
+| Feature spec | 612 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -4,19 +4,19 @@ LightGBM specialist for `batch`. Member of the Azoth routed ensemble; bundle roo
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `batch` slice of the locked test partition: 22,293 malware / 1,142 benign (23,435 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `batch` slice of the locked test partition: 22,302 malware / 1,165 benign (23,467 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999849 | 0.997202 | 0.995705 | 75.32% | 0.0083 |
+| 0.948856 | 0.279310 | 0.270038 | 15.61% | - |
 
 ## Specialist Performance
 
-`filetypes/batch` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/batch` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.985432 | 0.766215 | 0.985901 | 14.85% | 0.7863 | — |
+| 0.992376 | 0.865955 | 0.255660 | 14.66% | 0.7795 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,15 +26,15 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `batch` are scored by `general`, `filegroups/scripts`, `filetypes/batch`. The ensemble's per-row score is whatever combiner strategy (`stacked_xgb`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `batch` are scored by `filegroups/scripts`, `filetypes/batch`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 35,689 (27,810 mal / 7,879 ben) |
-| Feature spec | 1532 features (`route_specific`) |
+| Train rows | 30,832 (23,882 mal / 6,950 ben) |
+| Feature spec | 8746 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

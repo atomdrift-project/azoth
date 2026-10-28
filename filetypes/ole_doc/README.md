@@ -1,22 +1,22 @@
 # `filetype/ole_doc`
 
-LightGBM specialist for `doc`, `msi`, `ole`, `ppt`, `xls`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
+LightGBM specialist for `doc`, `msg`, `msi`, `ole`, `ole_doc`, `oledoc`, `ppt`, `xls`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ole_doc` slice of the locked test partition: 11,030 malware / 4,154 benign (15,184 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ole_doc` slice of the locked test partition: 11,041 malware / 4,150 benign (15,191 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.994848 | 0.986475 | 0.958314 | 90.02% | 0.0369 |
+| 0.994489 | 0.984096 | 0.946625 | 89.87% | - |
 
 ## Specialist Performance
 
-`filetypes/ole_doc` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
+`filetypes/ole_doc` specialist scored alone on the same held-out slice, using its saved thresholds.
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.994793 | 0.985196 | 0.958830 | 89.69% | 0.0571 | — |
+| 0.995360 | 0.986953 | 0.869619 | 76.93% | 0.0616 | — |
 
 ## Recall by FP level (per 100M benigns)
 
@@ -26,21 +26,21 @@ Each curve plots recall at the per-100M-benign FP target for the route. The vert
 
 ## Routing
 
-Files matching `ole_doc` are scored by `general`, `filetypes/ole_doc`. The ensemble's per-row score is whatever combiner strategy (`calibrated_max`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
+Files matching `ole_doc` are scored by `filegroups/documents`, `filetypes/ole_doc`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 101,741 (73,827 mal / 27,914 ben) |
-| Feature spec | 6260 features (`general_shared`) |
-| n_estimators | 400 |
-| num_leaves | 96 |
+| Train rows | 86,924 (62,968 mal / 23,956 ben) |
+| Feature spec | 25488 features (`route_specific`) |
+| n_estimators | 300 |
+| num_leaves | 128 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| reg_alpha / reg_lambda | 0.0 / 2.0 |
+| early_stopping_rounds | 25 |
 | device | auto |
