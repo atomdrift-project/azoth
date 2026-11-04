@@ -20,6 +20,8 @@ Only detection regressions at L0 through L25 (inclusive) can block model accepta
 
 `config.json` records the deployed thresholds. Each route lives in its own subdirectory: `general/`, one of 60 `filegroups/<name>/`, or one of 71 `filetypes/<name>/`. A route directory carries a `models/seed_*.onnx` ensemble (LightGBM trees exported to ONNX, one file per training seed) and `feature_spec.json` (the features those models expect). Scores are the models' raw probabilities — there is no separate probability calibrator.
 
+`route_policies.json` retains every selected policy, level, metric, and provenance field. Collimator's runtime staging removes rejected search candidates and compacts the JSON; full candidate diagnostics remain in its training output. Inspect a policy with `jq '.routes["filetypes/elf"]' route_policies.json`. Scan distributes the bundle as a compressed `.tar.zst` archive and reads the installed JSON directly.
+
 Further reading: [ENSEMBLE_MODEL.md](ENSEMBLE_MODEL.md) for routing details, [GENERALIST_MODEL.md](GENERALIST_MODEL.md) for the single-model baseline. License: Apache 2.0.
 
 ## Per-filetype Ensemble Performance
