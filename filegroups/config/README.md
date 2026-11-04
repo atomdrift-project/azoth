@@ -2,9 +2,11 @@
 
 LightGBM specialist for `ini`, `json`, `package.json`, `packagejson`, `plist`, `toml`, `xml`, `yaml`, `yml`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `config`). ROC 0.984392, PR 0.924107, F1 0.9425 on 126,458 rows (2,937 mal / 123,521 ben).
+Training-time benchmark only (no test-partition rows for `config`). ROC 0.995836, PR 0.981089, F1 0.9610 on 127,494 rows (2,944 mal / 124,550 ben).
 
 ## Routing
 
@@ -15,8 +17,8 @@ Files matching `config` are scored by none. The ensemble's decisions apply the s
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 756,037 (16,225 mal / 739,812 ben) |
-| Feature spec | 8108 features (`route_specific`) |
+| Train rows | 767,258 (20,926 mal / 746,332 ben) |
+| Feature spec | 11019 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

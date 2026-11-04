@@ -2,13 +2,15 @@
 
 LightGBM specialist for `chrome-manifest`, `chrome_manifest`, `chromemanifest`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `chrome_manifest` slice of the locked test partition: 12 malware / 152 benign (164 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.716204 | 0.962171 | 0.555556 | 41.67% | - |
+| 0.797961 | 0.974232 | 0.700000 | 58.33% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chrome
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.723074 | 0.964364 | 0.555556 | 41.67% | 0.0467 | — |
+| 0.828864 | 0.980263 | 0.700000 | 58.33% | 0.0307 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="chrome_manifest: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="chrome_manifest: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 

@@ -2,13 +2,15 @@
 
 LightGBM specialist for `csharp`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `csharp` slice of the locked test partition: 452 malware / 12,879 benign (13,331 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `csharp` slice of the locked test partition: 454 malware / 12,879 benign (13,333 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.345597 | 0.797687 | 0.328413 | 19.69% | - |
+| 0.914852 | 0.989537 | 0.627451 | 45.81% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `csharp
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.467225 | 0.940692 | 0.328413 | 19.69% | 0.0260 | — |
+| 0.940358 | 0.995267 | 0.499174 | 33.26% | 0.0066 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="csharp: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="csharp: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,8 +35,8 @@ Files matching `csharp` are scored by `filegroups/source`, `filetypes/csharp`, `
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 78,001 (747 mal / 77,254 ben) |
-| Feature spec | 6057 features (`route_specific`) |
+| Train rows | 79,861 (2,596 mal / 77,265 ben) |
+| Feature spec | 1413 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

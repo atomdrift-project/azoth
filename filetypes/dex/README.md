@@ -2,13 +2,15 @@
 
 LightGBM specialist for `dex`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `dex` slice of the locked test partition: 17 malware / 32 benign (49 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `dex` slice of the locked test partition: 19 malware / 32 benign (51 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.791868 | 0.915441 | 0.642857 | 52.94% | - |
+| 0.994598 | 0.996711 | 0.848485 | 73.68% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dex` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.991176 | 0.994485 | 0.000000 | 0.00% | 0.0644 | — |
+| 0.985482 | 0.991776 | 0.000000 | 0.00% | 0.0204 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="dex: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="dex: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,14 +35,14 @@ Files matching `dex` are scored by `filegroups/portable`, `general`. The ensembl
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 278 (72 mal / 206 ben) |
-| Feature spec | 6627 features (`route_specific`) |
+| Train rows | 281 (75 mal / 206 ben) |
+| Feature spec | 6638 features (`accepted_pinned`) |
 | n_estimators | 400 |
-| num_leaves | 96 |
-| max_depth | 12 |
-| min_child_samples | 100 |
+| num_leaves | 32 |
+| max_depth | 8 |
+| min_child_samples | 10 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
+| reg_alpha / reg_lambda | 0.0 / 5.0 |
 | early_stopping_rounds | 50 |
-| device | auto |
+| device | cpu |

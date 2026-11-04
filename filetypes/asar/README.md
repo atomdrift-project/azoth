@@ -2,13 +2,15 @@
 
 LightGBM specialist for `asar`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `asar` slice of the locked test partition: 23 malware / 41 benign (64 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 0.904762 | 82.61% | - |
+| 0.998188 | 0.998940 | 0.930233 | 86.96% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asar` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 0.904762 | 82.61% | 0.0293 | — |
+| 0.998188 | 0.998940 | 0.930233 | 86.96% | 0.0199 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="asar: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="asar: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -34,13 +36,13 @@ Files matching `asar` are scored by `filetypes/asar`, `general`. The ensemble's 
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 417 (143 mal / 274 ben) |
-| Feature spec | 19594 features (`route_specific`) |
-| n_estimators | 400 |
+| Feature spec | 19616 features (`route_specific`) |
+| n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| reg_alpha / reg_lambda | 0.0 / 2.0 |
+| early_stopping_rounds | 25 |
 | device | auto |

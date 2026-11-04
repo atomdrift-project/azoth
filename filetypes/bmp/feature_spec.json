@@ -101,6 +101,8 @@
     3
   ],
   "tiered_branch_min_crit": {},
+  "keyword_vocabs": {},
+  "base_feature_abi": null,
   "feature_names": [
     "present:metadata",
     "present:metadata/file",
@@ -297,5 +299,36 @@
     "missing:pe*metadata/binary/linking"
   ],
   "total_features": 193,
-  "standardized": false
+  "standardized": false,
+  "metric_transforms": {
+    "binary_overall_entropy": "identity",
+    "binary_code_entropy": "identity",
+    "binary_code_to_data_ratio": "identity",
+    "binary_function_count": "log1p_abs",
+    "binary_complexity_per_kb": "identity",
+    "binary_max_complexity": "identity",
+    "binary_normalized_string_count": "identity",
+    "binary_high_entropy_regions": "identity",
+    "text_char_entropy": "identity",
+    "text_unique_chars": "log1p_abs",
+    "text_whitespace_ratio": "identity",
+    "text_most_common_ratio": "identity",
+    "text_total_lines": "log1p_abs",
+    "strings_avg_entropy": "identity",
+    "pe_rsrc_entropy": "identity",
+    "pe_rsrc_size": "log1p_abs",
+    "ast_depth_capped": "identity",
+    "binary_peak_region_bytes": "log1p_abs",
+    "binary_peak_region_entropy": "identity",
+    "file_entropy": "identity",
+    "file_size": "log1p_abs",
+    "file_size_bytes": "log1p_abs",
+    "media_gap_bytes": "log1p_abs",
+    "media_stowaway_bytes": "log1p_abs",
+    "media_stowaway_entropy": "identity",
+    "media_trailing_bytes": "log1p_abs"
+  },
+  "metric_getters": [],
+  "metric_reference_year": 0,
+  "metric_correlations": {}
 }

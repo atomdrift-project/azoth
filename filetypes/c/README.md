@@ -2,13 +2,15 @@
 
 LightGBM specialist for `c`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `c` slice of the locked test partition: 2,122 malware / 221,789 benign (223,911 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `c` slice of the locked test partition: 2,113 malware / 221,833 benign (223,946 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.287021 | 0.746079 | 0.132864 | 7.12% | - |
+| 0.851096 | 0.994891 | 0.463104 | 30.15% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `c` sli
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.216585 | 0.735285 | 0.341712 | 22.10% | 0.0097 | — |
+| 0.837292 | 0.994515 | 0.414854 | 26.17% | 0.0047 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="c: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="c: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,14 +35,14 @@ Files matching `c` are scored by `filegroups/source`, `filetypes/c`, `general`. 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,333,675 (3,664 mal / 1,330,011 ben) |
-| Feature spec | 8649 features (`route_specific`) |
-| n_estimators | 300 |
-| num_leaves | 128 |
+| Train rows | 1,344,454 (14,256 mal / 1,330,198 ben) |
+| Feature spec | 1711 features (`route_specific`) |
+| n_estimators | 400 |
+| num_leaves | 96 |
 | max_depth | 12 |
-| min_child_samples | 150 |
-| learning_rate | 0.03 |
+| min_child_samples | 100 |
+| learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 2.0 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |
 | device | auto |

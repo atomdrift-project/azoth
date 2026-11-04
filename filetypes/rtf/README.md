@@ -2,13 +2,15 @@
 
 LightGBM specialist for `rtf`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` slice of the locked test partition: 810 malware / 115 benign (925 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` slice of the locked test partition: 821 malware / 116 benign (937 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 0.996904 | 99.38% | - |
+| 0.999732 | 0.998771 | 0.996946 | 99.39% | - |
 
 ## Specialist Performance
 
@@ -16,31 +18,31 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rtf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 0.996904 | 99.38% | 0.0380 | — |
+| 0.999382 | 0.997396 | 0.992638 | 98.54% | 0.0547 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="rtf: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="rtf: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
-Files matching `rtf` are scored by `filegroups/documents`, `filetypes/rtf`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
+Files matching `rtf` are scored by `filegroups/documents`, `filegroups/historical_filegroups_documents_frozen`, `filegroups/historical_filetypes_rtf_frozen`, `filetypes/rtf`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 5,287 (4,515 mal / 772 ben) |
-| Feature spec | 1353 features (`route_specific`) |
-| n_estimators | 300 |
+| Train rows | 5,334 (4,558 mal / 776 ben) |
+| Feature spec | 485 features (`route_specific`) |
+| n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
-| learning_rate | 0.05 |
+| learning_rate | 0.03 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 2.0 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |
 | device | auto |

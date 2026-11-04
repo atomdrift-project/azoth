@@ -2,13 +2,15 @@
 
 LightGBM specialist for `php`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `php` slice of the locked test partition: 764 malware / 78,540 benign (79,304 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `php` slice of the locked test partition: 766 malware / 78,544 benign (79,310 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.849734 | 0.961880 | 0.804669 | 67.67% | - |
+| 0.965781 | 0.997145 | 0.902073 | 82.38% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `php` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.866055 | 0.989749 | 0.497551 | 33.25% | 0.0026 | — |
+| 0.958298 | 0.998011 | 0.866864 | 76.50% | 0.0013 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="php: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="php: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,8 +35,8 @@ Files matching `php` are scored by `filegroups/scripts`, `filetypes/php`, `gener
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 476,257 (4,187 mal / 472,070 ben) |
-| Feature spec | 9464 features (`route_specific`) |
+| Train rows | 476,877 (4,778 mal / 472,099 ben) |
+| Feature spec | 1503 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

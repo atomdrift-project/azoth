@@ -2,15 +2,15 @@
 
 LightGBM specialist for `xml`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
-> Benchmark AUC degenerate on this split. Routed full-corpus calibration governs deployment.
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xml` slice of the locked test partition: 223 malware / 56,238 benign (56,461 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xml` slice of the locked test partition: 225 malware / 55,957 benign (56,182 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.300489 | 0.891416 | 0.257812 | 14.80% | - |
+| 0.649505 | 0.969601 | 0.571429 | 44.44% | - |
 
 ## Specialist Performance
 
@@ -18,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xml` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.228552 | 0.619930 | 0.230159 | 13.00% | 0.0034 | — |
+| 0.652884 | 0.966325 | 0.513595 | 37.78% | 0.0115 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="xml: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="xml: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -35,8 +35,8 @@ Files matching `xml` are scored by `filegroups/config`, `filetypes/xml`, `genera
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 336,728 (301 mal / 336,427 ben) |
-| Feature spec | 1430 features (`route_specific`) |
+| Train rows | 337,374 (2,635 mal / 334,739 ben) |
+| Feature spec | 3359 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

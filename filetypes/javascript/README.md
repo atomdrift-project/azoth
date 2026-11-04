@@ -2,13 +2,15 @@
 
 LightGBM specialist for `javascript`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `javascript` slice of the locked test partition: 18,084 malware / 227,412 benign (245,496 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `javascript` slice of the locked test partition: 18,081 malware / 227,861 benign (245,942 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.886481 | 0.961918 | 0.649903 | 48.16% | - |
+| 0.990108 | 0.998143 | 0.801722 | 66.94% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `javasc
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.885460 | 0.961967 | 0.633555 | 46.38% | 0.0178 | — |
+| 0.992044 | 0.998542 | 0.725068 | 56.88% | 0.0037 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="javascript: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="javascript: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,8 +35,8 @@ Files matching `javascript` are scored by `filegroups/scripts`, `filetypes/javas
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,457,782 (98,722 mal / 1,359,060 ben) |
-| Feature spec | 29233 features (`route_specific`) |
+| Train rows | 1,473,830 (111,812 mal / 1,362,018 ben) |
+| Feature spec | 21955 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

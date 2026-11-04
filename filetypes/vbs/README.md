@@ -2,13 +2,15 @@
 
 LightGBM specialist for `vbs`, `vbscript`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `vbs` slice of the locked test partition: 1,858 malware / 546 benign (2,404 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `vbs` slice of the locked test partition: 1,868 malware / 547 benign (2,415 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.990829 | 0.971439 | 0.636863 | 46.77% | - |
+| 0.999141 | 0.997256 | 0.984632 | 97.75% | - |
 
 ## Specialist Performance
 
@@ -16,25 +18,25 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `vbs` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.992196 | 0.974630 | 0.511013 | 34.34% | 0.1121 | — |
+| 0.999171 | 0.997367 | 0.966979 | 94.06% | 0.0141 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="vbs: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="vbs: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
-Files matching `vbs` are scored by `filegroups/scripts`, `filetypes/vbs`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
+Files matching `vbs` are scored by `filegroups/code_pooled_recovery`, `filegroups/scripts`, `filegroups/vbs_hnm_recovery`, `filetypes/vbs`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 12,615 (9,391 mal / 3,224 ben) |
-| Feature spec | 9273 features (`route_specific`) |
+| Train rows | 14,081 (10,851 mal / 3,230 ben) |
+| Feature spec | 4051 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

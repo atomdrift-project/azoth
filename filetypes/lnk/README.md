@@ -2,13 +2,15 @@
 
 LightGBM specialist for `lnk`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
 Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 585 malware / 153 benign (738 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.996282 | 0.987017 | 0.803681 | 67.18% | - |
+| 0.999204 | 0.996939 | 0.972831 | 94.87% | - |
 
 ## Specialist Performance
 
@@ -16,25 +18,25 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.996875 | 0.988638 | 0.778706 | 63.76% | 0.2281 | — |
+| 0.998676 | 0.994995 | 0.659794 | 49.23% | 0.0875 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="lnk: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="lnk: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
-Files matching `lnk` are scored by `filetypes/lnk`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
+Files matching `lnk` are scored by `filegroups/filetypes_lnk_oct26`, `filegroups/lnk_general_layout_recovery`, `filegroups/lnk_recovered`, `filetypes/lnk`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,791 (2,888 mal / 903 ben) |
-| Feature spec | 3283 features (`route_specific`) |
+| Train rows | 3,792 (2,888 mal / 904 ben) |
+| Feature spec | 1387 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

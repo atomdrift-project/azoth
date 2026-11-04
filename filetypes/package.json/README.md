@@ -2,13 +2,15 @@
 
 LightGBM specialist for `package.json`, `packagejson`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `package.json` slice of the locked test partition: 2,672 malware / 9,664 benign (12,336 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `package.json` slice of the locked test partition: 2,673 malware / 9,675 benign (12,348 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.978912 | 0.985038 | 0.817176 | 69.09% | - |
+| 0.998039 | 0.998535 | 0.810414 | 68.13% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `packag
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.979192 | 0.985094 | 0.804742 | 67.33% | 0.0148 | — |
+| 0.998295 | 0.998999 | 0.279923 | 16.27% | 0.0030 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="package.json: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="package.json: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,8 +35,8 @@ Files matching `package.json` are scored by `filegroups/config`, `filetypes/pack
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 74,317 (15,792 mal / 58,525 ben) |
-| Feature spec | 8417 features (`route_specific`) |
+| Train rows | 74,959 (16,311 mal / 58,648 ben) |
+| Feature spec | 7502 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

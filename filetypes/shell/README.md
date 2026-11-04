@@ -2,13 +2,15 @@
 
 LightGBM specialist for `shell`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `shell` slice of the locked test partition: 2,445 malware / 21,600 benign (24,045 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `shell` slice of the locked test partition: 2,439 malware / 21,618 benign (24,057 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.948472 | 0.973721 | 0.679449 | 51.45% | - |
+| 0.990678 | 0.996060 | 0.931495 | 87.25% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `shell`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.954966 | 0.981114 | 0.411306 | 25.89% | 0.0115 | — |
+| 0.990483 | 0.997408 | 0.713080 | 55.43% | 0.0056 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="shell: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="shell: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,8 +35,8 @@ Files matching `shell` are scored by `filegroups/scripts`, `filetypes/shell`, `g
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 142,831 (13,379 mal / 129,452 ben) |
-| Feature spec | 11213 features (`route_specific`) |
+| Train rows | 143,532 (13,970 mal / 129,562 ben) |
+| Feature spec | 1461 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

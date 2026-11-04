@@ -2,13 +2,15 @@
 
 LightGBM specialist for `msix`, `zip`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `zip` slice of the locked test partition: 13,595 malware / 18,598 benign (32,193 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `zip` slice of the locked test partition: 13,626 malware / 18,640 benign (32,266 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.854095 | 0.795638 | 0.675693 | 51.03% | - |
+| 0.997887 | 0.998348 | 0.858841 | 75.28% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `zip` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.852519 | 0.798740 | 0.444038 | 28.54% | 0.1876 | — |
+| 0.998103 | 0.998480 | 0.622732 | 45.22% | 0.0142 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="zip: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="zip: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,8 +35,8 @@ Files matching `zip` are scored by `filegroups/archive`, `filetypes/zip`, `gener
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 174,751 (58,698 mal / 116,053 ben) |
-| Feature spec | 28011 features (`route_specific`) |
+| Train rows | 197,216 (80,056 mal / 117,160 ben) |
+| Feature spec | 3090 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

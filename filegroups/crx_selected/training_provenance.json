@@ -1,0 +1,25 @@
+{
+  "training_partitions": [
+    "train"
+  ],
+  "model_revision": "1152c4407af38a6e7a768a8d389e949eed898e61258b596bdadf8f4e6eede5ed",
+  "spec_revision": "27947b6dd853b287fc76441c4e081fa720812f05de02c4deb18d4678c2a38c05",
+  "training_protocol": {
+    "kind": "frozen_research_weights",
+    "study": "/home/t/src/collimator/out/experiments/regression-crx-ap-20261101/filetypes/crx",
+    "winner_sha256": "098cee3f346713102d6736a05a9e4a0d06f9e106a19d0731ea832094fe2b2de9",
+    "source_model_sha256": {
+      "/home/t/src/collimator/out/experiments/regression-crx-ap-20261101/filetypes/crx/fits/current/results/control_seed42/model.txt": "8569b125b5fc7be55cc3217d80779c71f9fc6b71522cd0d95ac29b6b8af194f5",
+      "/home/t/src/collimator/out/experiments/regression-crx-ap-20261101/filetypes/crx/fits/current/results/control_seed43/model.txt": "5c09e3fcd656edcffc8104b2f442bc5eab23e79705c84cec7d90da88e4827667",
+      "/home/t/src/collimator/out/experiments/regression-crx-ap-20261101/filetypes/crx/fits/current/results/control_seed44/model.txt": "f2797ceda5bcace01a980441eff07640af38feb235c0e8ea835d7610dc150099"
+    },
+    "test_rows": 0,
+    "ordinary_train_config_replay_equivalent": false,
+    "canonical_train_pool": 10181,
+    "fit_condition": "split_bucket(canonical_hash)>=0.12",
+    "stopping_condition": "split_bucket(canonical_hash)<0.12",
+    "stopping_rows": 1320,
+    "holdout_usage": "Early stopping on canonical training rows only; canonical dev used for selection/assessment only."
+  },
+  "ordinary_train_config_replay_equivalent": false
+}

@@ -2,13 +2,15 @@
 
 LightGBM specialist for `github-actions`, `github_actions`, `githubactions`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `github_actions` slice of the locked test partition: 6 malware / 2,759 benign (2,765 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `github_actions` slice of the locked test partition: 6 malware / 2,760 benign (2,766 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.350777 | 0.990274 | 0.444444 | 33.33% | - |
+| 0.387916 | 0.964583 | 0.600000 | 50.00% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `github
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.361535 | 0.982663 | 0.444444 | 33.33% | 0.0034 | — |
+| 0.447450 | 0.966002 | 0.600000 | 50.00% | 0.0018 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="github_actions: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="github_actions: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,8 +35,8 @@ Files matching `github_actions` are scored by `filetypes/github_actions`, `gener
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 16,539 (54 mal / 16,485 ben) |
-| Feature spec | 2417 features (`route_specific`) |
+| Train rows | 16,542 (55 mal / 16,487 ben) |
+| Feature spec | 2444 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

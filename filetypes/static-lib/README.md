@@ -2,13 +2,15 @@
 
 LightGBM specialist for `static-lib`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `static-lib` slice of the locked test partition: 72 malware / 1,613 benign (1,685 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `static-lib` slice of the locked test partition: 72 malware / 1,614 benign (1,686 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.875802 | 0.982861 | 0.584906 | 43.06% | - |
+| 0.925460 | 0.985096 | 0.930556 | 93.06% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `static
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.875802 | 0.982861 | 0.584906 | 43.06% | 0.0217 | — |
+| 0.945479 | 0.985715 | 0.935252 | 90.28% | 0.0231 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="static-lib: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="static-lib: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,14 +35,14 @@ Files matching `static-lib` are scored by `filetypes/static-lib`, `general`. The
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,848 (127 mal / 9,721 ben) |
-| Feature spec | 900 features (`route_specific`) |
-| n_estimators | 400 |
+| Train rows | 9,854 (127 mal / 9,727 ben) |
+| Feature spec | 2468 features (`route_specific`) |
+| n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| reg_alpha / reg_lambda | 0 / 1 |
+| early_stopping_rounds | 25 |
 | device | auto |

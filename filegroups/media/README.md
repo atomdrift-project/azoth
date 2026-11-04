@@ -2,9 +2,11 @@
 
 LightGBM specialist for `bmp`, `gif`, `jpeg`, `jpg`, `mp3`, `mp4`, `png`, `svg`, `webp`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `media`). ROC 0.625697, PR 0.145554, F1 0.1913 on 131,007 rows (1,305 mal / 129,702 ben).
+Training-time benchmark only (no test-partition rows for `media`). ROC 0.943826, PR 0.443041, F1 0.4528 on 131,579 rows (1,297 mal / 130,282 ben).
 
 ## Routing
 
@@ -15,8 +17,8 @@ Files matching `media` are scored by none. The ensemble's decisions apply the sa
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 776,102 (871 mal / 775,231 ben) |
-| Feature spec | 612 features (`route_specific`) |
+| Train rows | 786,318 (7,425 mal / 778,893 ben) |
+| Feature spec | 325 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

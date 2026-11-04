@@ -2,9 +2,11 @@
 
 LightGBM specialist for `elf`, `macho`, `pe`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `native`). ROC 0.999880, PR 0.999922, F1 0.9972 on 381,491 rows (229,410 mal / 152,081 ben).
+Training-time benchmark only (no test-partition rows for `native`). ROC 0.999832, PR 0.999888, F1 0.9963 on 381,557 rows (229,425 mal / 152,132 ben).
 
 ## Routing
 
@@ -15,8 +17,8 @@ Files matching `native` are scored by none. The ensemble's decisions apply the s
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,263,936 (1,350,194 mal / 913,742 ben) |
-| Feature spec | 91901 features (`route_specific`) |
+| Train rows | 2,305,470 (1,391,337 mal / 914,133 ben) |
+| Feature spec | 4236 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

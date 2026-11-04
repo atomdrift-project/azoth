@@ -2,13 +2,15 @@
 
 LightGBM specialist for `kotlin`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin` slice of the locked test partition: 3,161 malware / 10,647 benign (13,808 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin` slice of the locked test partition: 3,172 malware / 10,599 benign (13,771 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.706845 | 0.807676 | 0.726430 | 57.04% | - |
+| 0.989991 | 0.997275 | 0.970447 | 98.87% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.706834 | 0.807674 | 0.712948 | 55.39% | 0.1063 | — |
+| 0.985238 | 0.996474 | 0.968857 | 98.08% | 0.0136 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="kotlin: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="kotlin: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,8 +35,8 @@ Files matching `kotlin` are scored by `filegroups/source`, `filetypes/kotlin`, `
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 72,944 (11,251 mal / 61,693 ben) |
-| Feature spec | 9031 features (`route_specific`) |
+| Train rows | 82,269 (20,899 mal / 61,370 ben) |
+| Feature spec | 1416 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -2,9 +2,11 @@
 
 LightGBM specialist for `c`, `cpp`, `csharp`, `go`, `java`, `kotlin`, `makefile`, `rust`, `scala`, `swift`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `source`). ROC 0.941984, PR 0.544632, F1 0.5793 on 375,275 rows (7,356 mal / 367,919 ben).
+Training-time benchmark only (no test-partition rows for `source`). ROC 0.994806, PR 0.907746, F1 0.8514 on 375,639 rows (7,353 mal / 368,286 ben).
 
 ## Routing
 
@@ -15,8 +17,8 @@ Files matching `source` are scored by none. The ensemble's decisions apply the s
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,217,588 (19,035 mal / 2,198,553 ben) |
-| Feature spec | 11980 features (`route_specific`) |
+| Train rows | 2,249,781 (49,385 mal / 2,200,396 ben) |
+| Feature spec | 1704 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

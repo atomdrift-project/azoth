@@ -2,13 +2,15 @@
 
 LightGBM specialist for `jar`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `jar` slice of the locked test partition: 470 malware / 5,247 benign (5,717 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `jar` slice of the locked test partition: 481 malware / 5,255 benign (5,736 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.970395 | 0.995145 | 0.860241 | 75.96% | - |
+| 0.970308 | 0.996783 | 0.927900 | 92.31% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.957105 | 0.994305 | 0.361111 | 22.13% | 0.0231 | — |
+| 0.977330 | 0.997985 | 0.920940 | 89.60% | 0.0087 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="jar: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="jar: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,8 +35,8 @@ Files matching `jar` are scored by `filegroups/archive`, `filetypes/jar`, `gener
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 34,086 (2,699 mal / 31,387 ben) |
-| Feature spec | 10426 features (`route_specific`) |
+| Train rows | 34,352 (2,945 mal / 31,407 ben) |
+| Feature spec | 11789 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

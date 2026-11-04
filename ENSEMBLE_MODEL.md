@@ -1,27 +1,33 @@
-# Specialist update — 2026-10-28
+# Azoth — Routed Ensemble
 
-Updated 14 specialists. The general and filegroup models, their fallback thresholds, and unrelated filetype policies are preserved from the installed nightly bundle.
+## How a file is scored
 
-Thresholds and policies were fitted on captured development rows; this table reports the locked test partition. General/filegroup scores are preserved from the nightly snapshot. Updated specialists use currently available reports.
+1. `cleave` identifies the file's format — `elf`, `pe`, `pdf`, `javascript`, and so on.
+2. `route_policies.json` answers: given that format and a severity level L0..L20, which routes are allowed, and at what calibrated thresholds?
+3. Each allowed route scores the file with its own model and feature spec.
+4. If any allowed route's score crosses its threshold, the file is flagged at that severity.
 
-| Filetype | Previous L25 recall | New L25 recall | Previous FP | New FP |
-| --- | ---: | ---: | ---: | ---: |
-| applescript | 40.00% | 60.00% | 0 | 0 |
-| cargo.toml | 0.00% | 12.50% | 0 | 2 |
-| chm | 0.00% | 0.00% | 0 | 0 |
-| crx | 33.01% | 39.87% | 2 | 0 |
-| dmg | 0.00% | 0.00% | 0 | 0 |
-| dockerfile | 0.00% | 100.00% | 0 | 1 |
-| elf | 84.16% | 96.14% | 0 | 1 |
-| gem | 88.24% | 88.24% | 3 | 0 |
-| java | 7.49% | 46.14% | 3 | 8 |
-| json | 45.45% | 45.45% | 0 | 0 |
-| markdown | 0.00% | 33.33% | 2 | 0 |
-| npm | 25.13% | 72.44% | 0 | 2 |
-| rust | 32.73% | 49.09% | 9 | 41 |
-| whl | 12.79% | 14.53% | 0 | 0 |
+A route is one of: the general model, a filegroup specialist (`filegroups/<name>`), or a filetype specialist (`filetypes/<name>`). Specialists are trained only on files of their domain; the general model is trained on everything.
 
-Held back VSIX, XML, makefile, and plist because their candidate decisions were worse on the locked test set. Their installed models and policies are retained.
+## Selection and reporting
 
-See [full test evaluation](route_policy_eval_oof.md) and [global policy metrics](global_policy_metrics.md).
-The general model documentation remains in [GENERALIST_MODEL.md](GENERALIST_MODEL.md).
+Policy search selects route combinations and thresholds on dev raw scores from the exact exported ensembles. The locked test partition is used only to report saved decisions, without fitting a new calibrator, threshold, or combiner. Models, feature specs and policies stay fixed during publication.
+
+## Routing policies
+
+Per filetype per level, `azoth_route_policy_search.py` picks one of these policy forms by recall at the shared FP allowance, with F1 and fp-count tiebreaks. The chosen policy and its calibrated thresholds are written to `route_policies.json` and read by Scan at scan time:
+
+- `joint_or_at_fp_N` — OR-rule across the allowed routes, with per-route thresholds sharing a total allowance of N observed false positives in the decision pool. The common case.
+- `learned_blend_at_fp_N` — a logit blend `σ(b + Σ wᵢ · logit(pᵢ))` over raw route probabilities, thresholded to hit the shared FP allowance. Wins when route scores are complementary in a way a simple OR misses.
+- `filetype_only` / `filetype_only_at_fp_N` — the specialist fires alone.
+- `general_only`, `group_only`, `or_general_primary`, `group_primary_with_escape` — the single-route or single-primary variants.
+- `calibrate_inherited` — the level inherits its threshold from a stricter level (no fresh calibration was warranted).
+- `no_policy` — no configuration meets the shared FP allowance at this level; the route does not fire at this severity.
+
+## Severity levels (L0..L25000)
+
+L0 allows zero observed calibration FPs. For N benign files, positive L has continuous allowance `1 + (L - 1) * N / 100_000_000`, rounded down for a count budget. L1 allows one FP; L25 adds an estimated 24 FP/100M. General, group, and specialist models share the final decision allowance. Interpolation or extrapolation does not guarantee live-traffic rates. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md).
+
+Litmus reads the per-level thresholds from `route_policies.json` and assigns severity per file.
+
+Default deploy level: L25 (one FP plus an estimated additional 24 FP/100M) (Scan loads the hostile threshold at that level; any suspicious band is derived consumer-side). Per-route thresholds and observed FP/100M live in [route_policies.md](route_policies.md) and each `filetypes/<name>/README.md`.

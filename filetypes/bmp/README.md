@@ -1,35 +1,12 @@
-<<<<<<<< HEAD:filetypes/cab/README.md
-# `filetype/cab`
-
-LightGBM specialist for `cab`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
-
-## Ensemble Performance
-
-Routed ensemble (general + filegroup + filetype where applicable) on the `cab` slice of the locked test partition: 102 malware / 13 benign (115 rows).
-
-| PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
-|---:|---:|---:|---:|---:|
-| 0.998937 | 0.991704 | 0.990196 | — | 0.0946 |
-
-## Specialist Performance
-
-`filetypes/cab` specialist scored *alone* on the same slice (the ensemble usually does better — that's the point of the routing).
-
-| PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
-|---:|---:|---:|---:|---:|---:|
-| 0.998937 | 0.991704 | 0.990196 | — | 0.0946 | — |
-
-## Routing
-
-Files matching `cab` are scored by `general`, `filetypes/cab`. The ensemble's per-row score is whatever combiner strategy (`specialist_priority`) the metrics step selected for this route. The per-level operating thresholds litmus applies on top live in [`route_policies.md`](../../route_policies.md).
-========
 # `filetype/bmp`
 
 LightGBM specialist for `bmp`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `bmp` slice of the locked test partition: 14 malware / 39 benign (53 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `bmp` slice of the locked test partition: 14 malware / 40 benign (54 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
@@ -41,31 +18,25 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `bmp` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 0.000000 | 0.00% | 0.0077 | — |
+| 1.000000 | 1.000000 | 0.000000 | 0.00% | 0.0079 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="bmp: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="bmp: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
 Files matching `bmp` are scored by `filegroups/media`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
->>>>>>>> f29b4aba (new v21 bundle - experimental):filetypes/bmp/README.md
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-<<<<<<<< HEAD:filetypes/cab/README.md
-| Train rows | 846 (759 mal / 87 ben) |
-| Feature spec | 2114 features (`route_specific`) |
-========
-| Train rows | 298 (97 mal / 201 ben) |
+| Train rows | 306 (97 mal / 209 ben) |
 | Feature spec | 193 features (`route_specific`) |
->>>>>>>> f29b4aba (new v21 bundle - experimental):filetypes/bmp/README.md
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

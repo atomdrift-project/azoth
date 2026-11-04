@@ -2,13 +2,15 @@
 
 LightGBM specialist for `ruby`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` slice of the locked test partition: 32 malware / 24,725 benign (24,757 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` slice of the locked test partition: 33 malware / 24,722 benign (24,755 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.741094 | 0.945843 | 0.703704 | 59.38% | - |
+| 0.908990 | 0.993128 | 0.730769 | 57.58% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.705637 | 0.945442 | 0.727273 | 62.50% | 0.0010 | — |
+| 0.903620 | 0.975924 | 0.730769 | 57.58% | 0.0003 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="ruby: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="ruby: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,14 +35,14 @@ Files matching `ruby` are scored by `filegroups/scripts`, `filetypes/ruby`, `gen
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 149,541 (175 mal / 149,366 ben) |
-| Feature spec | 3404 features (`route_specific`) |
-| n_estimators | 400 |
+| Train rows | 149,543 (192 mal / 149,351 ben) |
+| Feature spec | 12928 features (`route_specific`) |
+| n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| reg_alpha / reg_lambda | 0 / 1 |
+| early_stopping_rounds | 25 |
 | device | auto |

@@ -2,13 +2,15 @@
 
 LightGBM specialist for `groovy`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 5 malware / 1,418 benign (1,423 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 5 malware / 1,420 benign (1,425 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.805650 | 0.975740 | 0.727273 | 80.00% | - |
+| 0.800972 | 0.855845 | 0.615385 | 80.00% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `groovy
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.805650 | 0.975740 | 0.727273 | 80.00% | 0.0045 | — |
+| 0.800972 | 0.855845 | 0.615385 | 80.00% | 0.0032 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="groovy: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="groovy: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,14 +35,14 @@ Files matching `groovy` are scored by `filetypes/groovy`, `general`. The ensembl
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 8,215 (42 mal / 8,173 ben) |
-| Feature spec | 452 features (`route_specific`) |
+| Train rows | 8,220 (44 mal / 8,176 ben) |
+| Feature spec | 488 features (`accepted_pinned`) |
 | n_estimators | 400 |
-| num_leaves | 96 |
-| max_depth | 12 |
-| min_child_samples | 100 |
+| num_leaves | 32 |
+| max_depth | 8 |
+| min_child_samples | 10 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
+| reg_alpha / reg_lambda | 0.0 / 5.0 |
 | early_stopping_rounds | 50 |
-| device | auto |
+| device | cpu |

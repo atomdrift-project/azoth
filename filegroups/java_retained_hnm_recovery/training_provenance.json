@@ -1,0 +1,7 @@
+{
+  "training_partitions": [
+    "train"
+  ],
+  "model_revision": "9fdedbf0b7b35a321252070c32cc1802f28fd2271bf1791e99d7659d47c55fe9",
+  "spec_revision": "73fd69ce562e97653739f53b11360c78d354995d71167fe4bb836d61fa0baedf"
+}

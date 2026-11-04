@@ -2,13 +2,15 @@
 
 LightGBM specialist for `mp3`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `mp3` slice of the locked test partition: 24 malware / 51 benign (75 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `mp3` slice of the locked test partition: 24 malware / 52 benign (76 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.918833 | 0.899918 | 0.829268 | 70.83% | - |
+| 0.982143 | 0.989984 | 0.829268 | 70.83% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `mp3` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.915000 | 0.932598 | 0.000000 | 0.00% | 0.0390 | — |
+| 0.914474 | 0.936298 | 0.000000 | 0.00% | 0.0386 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="mp3: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="mp3: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,7 +35,7 @@ Files matching `mp3` are scored by `filegroups/media`, `general`. The ensemble's
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 408 (139 mal / 269 ben) |
+| Train rows | 410 (139 mal / 271 ben) |
 | Feature spec | 217 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

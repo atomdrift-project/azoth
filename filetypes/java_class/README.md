@@ -2,13 +2,15 @@
 
 LightGBM specialist for `java_class`, `javaclass`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 305 malware / 229,228 benign (229,533 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `java_class` slice of the locked test partition: 296 malware / 229,234 benign (229,530 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.696471 | 0.971626 | 0.493827 | 32.79% | - |
+| 0.903520 | 0.981869 | 0.875472 | 78.38% | - |
 
 ## Specialist Performance
 
@@ -16,31 +18,31 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java_c
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.386787 | 0.942551 | 0.000000 | 0.00% | 0.0026 | — |
+| 0.232112 | 0.976193 | 0.000000 | 0.00% | 0.0269 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="java_class: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="java_class: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
-Files matching `java_class` are scored by `filetypes/java_class`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
+Files matching `java_class` are scored by `filegroups/portable`, `filetypes/java_class`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,384,862 (1,408 mal / 1,383,454 ben) |
-| Feature spec | 6825 features (`route_specific`) |
-| n_estimators | 300 |
-| num_leaves | 128 |
+| Train rows | 1,385,180 (1,698 mal / 1,383,482 ben) |
+| Feature spec | 3083 features (`route_specific`) |
+| n_estimators | 400 |
+| num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 2.0 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |
 | device | auto |

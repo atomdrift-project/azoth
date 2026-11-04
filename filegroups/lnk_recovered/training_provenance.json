@@ -1,0 +1,19 @@
+{
+  "training_partitions": [
+    "train"
+  ],
+  "model_revision": "6d5f863495a94f87de1f8a3276d5d93b376c65030d215f141d6904963a8e042d",
+  "spec_revision": "c0d305caeb10172f75e587c9fcb1bafb93f07ff67e22993346fface596b876cb",
+  "training_protocol": {
+    "kind": "frozen_research_canonical_holdout_v1",
+    "canonical_train_pool": 3791,
+    "fit_condition": "split_bucket(canonical_hash)>=0.12",
+    "stopping_condition": "split_bucket(canonical_hash)<0.12",
+    "stopping_rows": 456,
+    "fitting_implementation_sha256": "9a97474eac4e41599348ecad23fbca93e7dfdcd085bf88da37b22e27b4a2d614",
+    "source_plan_sha256": "66aa40c0b0238831a7ff131b5850a3402f09e7dc3bc62ed3b495e725b565abe1",
+    "holdout_usage": "Early stopping only; canonical dev/test never fitted. All three selected weights preserved byte-for-byte.",
+    "ordinary_train_config_replay_equivalent": false
+  },
+  "ordinary_train_config_replay_equivalent": false
+}

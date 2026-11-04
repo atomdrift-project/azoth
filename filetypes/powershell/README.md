@@ -2,13 +2,15 @@
 
 LightGBM specialist for `powershell`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `powershell` slice of the locked test partition: 776 malware / 792 benign (1,568 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `powershell` slice of the locked test partition: 778 malware / 795 benign (1,573 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.980763 | 0.975813 | 0.737185 | 58.38% | - |
+| 0.994967 | 0.994660 | 0.871832 | 77.38% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `powers
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.982791 | 0.977985 | 0.610564 | 43.94% | 0.0486 | — |
+| 0.994509 | 0.994391 | 0.755200 | 60.67% | 0.0314 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="powershell: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="powershell: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,8 +35,8 @@ Files matching `powershell` are scored by `filegroups/scripts`, `filetypes/power
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 9,366 (4,576 mal / 4,790 ben) |
-| Feature spec | 9988 features (`route_specific`) |
+| Train rows | 9,645 (4,815 mal / 4,830 ben) |
+| Feature spec | 1842 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

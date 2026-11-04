@@ -2,9 +2,11 @@
 
 LightGBM specialist for `batch`, `javascript`, `lua`, `perl`, `php`, `powershell`, `python`, `ruby`, `shell`, `typescript`, `vbs`, `vbscript`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `scripts`). ROC 0.904942, PR 0.685266, F1 0.7020 on 502,403 rows (48,962 mal / 453,441 ben).
+Training-time benchmark only (no test-partition rows for `scripts`). ROC 0.998635, PR 0.993738, F1 0.9727 on 503,397 rows (48,982 mal / 454,415 ben).
 
 ## Routing
 
@@ -15,8 +17,8 @@ Files matching `scripts` are scored by none. The ensemble's decisions apply the 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,886,897 (168,571 mal / 2,718,326 ben) |
-| Feature spec | 35865 features (`route_specific`) |
+| Train rows | 3,021,421 (297,344 mal / 2,724,077 ben) |
+| Feature spec | 2278 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

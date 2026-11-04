@@ -2,13 +2,15 @@
 
 LightGBM specialist for `pdf`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` slice of the locked test partition: 22,480 malware / 3,773 benign (26,253 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` slice of the locked test partition: 22,484 malware / 3,774 benign (26,258 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.993010 | 0.963585 | 0.855638 | 74.79% | - |
+| 0.999835 | 0.998963 | 0.993648 | 98.80% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.992743 | 0.962873 | 0.184373 | 10.16% | 0.4754 | PR -0.000557 / ROC -0.028327 |
+| 0.999839 | 0.998981 | 0.992814 | 98.63% | 0.0085 | PR +0.006539 / ROC +0.007781 |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="pdf: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="pdf: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,8 +35,8 @@ Files matching `pdf` are scored by `filegroups/documents`, `filetypes/pdf`, `gen
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 123,254 (100,808 mal / 22,446 ben) |
-| Feature spec | 1462 features (`route_specific`) |
+| Train rows | 156,438 (133,983 mal / 22,455 ben) |
+| Feature spec | 390 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -2,13 +2,15 @@
 
 LightGBM specialist for `deb`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `deb` slice of the locked test partition: 17 malware / 3,344 benign (3,361 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `deb` slice of the locked test partition: 18 malware / 3,349 benign (3,367 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.100791 | 0.758021 | 0.000000 | 0.00% | - |
+| 0.196677 | 0.860257 | 0.200000 | 11.11% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `deb` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.100791 | 0.758021 | 0.000000 | 0.00% | 0.0159 | — |
+| 0.201142 | 0.861012 | 0.200000 | 11.11% | 0.0047 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="deb: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="deb: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,8 +35,8 @@ Files matching `deb` are scored by `filegroups/archive`, `filetypes/deb`, `gener
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 19,868 (25 mal / 19,843 ben) |
-| Feature spec | 7260 features (`route_specific`) |
+| Train rows | 19,905 (27 mal / 19,878 ben) |
+| Feature spec | 8215 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

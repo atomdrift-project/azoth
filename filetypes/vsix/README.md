@@ -2,13 +2,15 @@
 
 LightGBM specialist for `vsix`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` slice of the locked test partition: 51 malware / 766 benign (817 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` slice of the locked test partition: 45 malware / 773 benign (818 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.658859 | 0.888522 | 0.454545 | 29.41% | - |
+| 0.692408 | 0.914460 | 0.474576 | 31.11% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.658622 | 0.886628 | 0.454545 | 29.41% | 0.0317 | — |
+| 0.688568 | 0.923487 | 0.474576 | 31.11% | 0.0304 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="vsix: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="vsix: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,14 +35,14 @@ Files matching `vsix` are scored by `filegroups/archive`, `filetypes/vsix`, `gen
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 5,991 (177 mal / 5,814 ben) |
-| Feature spec | 10008 features (`route_specific`) |
-| n_estimators | 400 |
+| Train rows | 6,023 (188 mal / 5,835 ben) |
+| Feature spec | 30111 features (`route_specific`) |
+| n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
+| reg_alpha / reg_lambda | 0.0 / 2.0 |
 | early_stopping_rounds | 25 |
-| device | cpu |
+| device | auto |

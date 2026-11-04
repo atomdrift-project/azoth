@@ -2,13 +2,15 @@
 
 LightGBM specialist for `gif`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `gif` slice of the locked test partition: 85 malware / 222 benign (307 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `gif` slice of the locked test partition: 77 malware / 236 benign (313 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.586619 | 0.828193 | 0.045455 | 2.35% | - |
+| 0.875862 | 0.933634 | 0.723077 | 61.04% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `gif` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.586619 | 0.828193 | 0.045455 | 2.35% | 0.2714 | — |
+| 0.924436 | 0.975017 | 0.649573 | 49.35% | 0.0565 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="gif: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="gif: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,14 +35,14 @@ Files matching `gif` are scored by `filegroups/media`, `filetypes/gif`, `general
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,211 (25 mal / 1,186 ben) |
-| Feature spec | 263 features (`route_specific`) |
-| n_estimators | 400 |
+| Train rows | 1,737 (403 mal / 1,334 ben) |
+| Feature spec | 322 features (`route_specific`) |
+| n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| reg_alpha / reg_lambda | 0 / 1 |
+| early_stopping_rounds | 25 |
 | device | auto |

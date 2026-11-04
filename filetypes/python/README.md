@@ -2,13 +2,15 @@
 
 LightGBM specialist for `python`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `python` slice of the locked test partition: 2,634 malware / 84,912 benign (87,546 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `python` slice of the locked test partition: 2,630 malware / 85,342 benign (87,972 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.831747 | 0.936723 | 0.682671 | 51.82% | - |
+| 0.948804 | 0.994162 | 0.782709 | 64.37% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.841433 | 0.953726 | 0.660905 | 49.35% | 0.0081 | — |
+| 0.948904 | 0.996258 | 0.761770 | 61.52% | 0.0058 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="python: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="python: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,9 +35,9 @@ Files matching `python` are scored by `filegroups/scripts`, `filetypes/python`, 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 525,004 (13,909 mal / 511,095 ben) |
-| Feature spec | 13442 features (`route_specific`) |
-| n_estimators | 320 |
+| Train rows | 530,246 (16,735 mal / 513,511 ben) |
+| Feature spec | 1928 features (`route_specific`) |
+| n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |

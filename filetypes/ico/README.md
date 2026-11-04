@@ -2,13 +2,15 @@
 
 LightGBM specialist for `ico`. Member of the Azoth routed ensemble; bundle root: [../..](../..).
 
+Level labels use the [shared pool-adjusted FP allowance](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md): L0 allows zero observed calibration FPs; L1 allows one; L25 adds an estimated 24 FP/100M beyond the initial FP.
+
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ico` slice of the locked test partition: 33 malware / 99 benign (132 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ico` slice of the locked test partition: 33 malware / 101 benign (134 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.681818 | 0.785736 | 0.730769 | 57.58% | - |
+| 0.941694 | 0.956196 | 0.842105 | 72.73% | - |
 
 ## Specialist Performance
 
@@ -16,13 +18,13 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ico` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.681818 | 0.785736 | 0.730769 | 57.58% | 0.1048 | — |
+| 0.941694 | 0.956196 | 0.842105 | 72.73% | 0.0464 | — |
 
-## Recall by FP level (per 100M benigns)
+## Recall by FP level (pool-adjusted)
 
-<img src="recall_curve.svg" alt="ico: recall by FP level (per 100M benigns)" height="300" />
+<img src="recall_curve.svg" alt="ico: recall by FP level (pool-adjusted)" height="300" />
 
-Each curve plots recall at the per-100M-benign FP target for the route. The vertical dashed line marks the L25 deploy operating point.
+Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero observed calibration FPs; positive L allows `1 + (L - 1) * N / 100_000_000` for N benigns. See the [shared level definition](https://github.com/atomdrift-project/collimator/blob/main/LEVELS.md). The vertical dashed line marks the L25 deploy operating point.
 
 ## Routing
 
@@ -33,14 +35,14 @@ Files matching `ico` are scored by `filetypes/ico`, `general`. The ensemble's de
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 720 (129 mal / 591 ben) |
-| Feature spec | 193 features (`route_specific`) |
-| n_estimators | 400 |
+| Train rows | 816 (202 mal / 614 ben) |
+| Feature spec | 229 features (`route_specific`) |
+| n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 50 |
+| reg_alpha / reg_lambda | 0 / 1 |
+| early_stopping_rounds | 25 |
 | device | auto |
