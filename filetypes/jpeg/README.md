@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 194 malware / 5,652 benign (5,846 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` slice of the locked test partition: 172 malware / 5,674 benign (5,846 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.694264 | 0.947396 | 0.496241 | 34.02% | - |
+| 0.635015 | 0.962135 | 0.475000 | 33.14% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.801499 | 0.982006 | 0.446215 | 28.87% | 0.0139 | — |
+| 0.832507 | 0.992295 | 0.462222 | 30.23% | 0.0112 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `jpeg` are scored by `filegroups/historical_filegroups_media_froz
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 35,458 (864 mal / 34,594 ben) |
+| Train rows | 35,457 (864 mal / 34,593 ben) |
 | Feature spec | 351 features (`accepted_pinned`) |
 | n_estimators | 300 |
 | num_leaves | 128 |

@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin` slice of the locked test partition: 3,172 malware / 10,599 benign (13,771 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin` slice of the locked test partition: 3,166 malware / 10,579 benign (13,745 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.989991 | 0.997275 | 0.970447 | 98.87% | - |
+| 0.990593 | 0.997525 | 0.971685 | 99.18% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `kotlin
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.985238 | 0.996474 | 0.968857 | 98.08% | 0.0136 | — |
+| 0.986043 | 0.996661 | 0.969556 | 98.58% | 0.0132 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `kotlin` are scored by `filegroups/source`, `filetypes/kotlin`, `
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 82,269 (20,899 mal / 61,370 ben) |
-| Feature spec | 1416 features (`route_specific`) |
+| Train rows | 82,188 (20,889 mal / 61,299 ben) |
+| Feature spec | 1426 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

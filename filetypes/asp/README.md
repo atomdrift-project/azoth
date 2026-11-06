@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `asp` slice of the locked test partition: 39 malware / 9 benign (48 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `asp` slice of the locked test partition: 37 malware / 11 benign (48 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.973048 | 0.908832 | 0.000000 | 0.00% | - |
+| 0.975495 | 0.936118 | 0.000000 | 0.00% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asp` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.982394 | 0.931624 | 0.000000 | 0.00% | 0.0942 | — |
+| 0.986272 | 0.960688 | 0.000000 | 0.00% | 0.0633 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `asp` are scored by `general`. The ensemble's decisions apply the
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 279 (218 mal / 61 ben) |
-| Feature spec | 4082 features (`route_specific`) |
+| Train rows | 282 (214 mal / 68 ben) |
+| Feature spec | 5841 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

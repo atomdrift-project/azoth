@@ -1,7 +1,7 @@
 {
   "version": 20,
   "abi_version": 20,
-  "feature_layout_hash": "1878a312188166c136721de3aaa79e967fb8b9000148e20f274148f88be89fd3",
+  "feature_layout_hash": "962912fceae8c047f060e7359ade1c6109e1f44f8b6edc166afa90ca366565aa",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -48,6 +48,7 @@
     "micro-behaviors/communications/ip",
     "micro-behaviors/communications/ipc",
     "micro-behaviors/communications/socket",
+    "micro-behaviors/communications/url",
     "micro-behaviors/crypto",
     "micro-behaviors/crypto/symmetric",
     "micro-behaviors/data",
@@ -3777,7 +3778,6 @@
     "n:micro-behaviors/ui/window + s:objectives/execution",
     "n:objectives + n:objectives/command-and-control",
     "n:objectives + n:objectives/command-and-control/backdoor",
-    "n:objectives + n:objectives/command-and-control/dropper",
     "n:objectives + n:objectives/execution",
     "n:objectives/anti-static + n:objectives/anti-static/obfuscation",
     "n:objectives/anti-static + n:objectives/command-and-control/backdoor",
@@ -4171,6 +4171,7 @@
     "present:micro-behaviors/communications/ip",
     "present:micro-behaviors/communications/ipc",
     "present:micro-behaviors/communications/socket",
+    "present:micro-behaviors/communications/url",
     "present:micro-behaviors/crypto",
     "present:micro-behaviors/crypto/symmetric",
     "present:micro-behaviors/data",
@@ -4308,6 +4309,7 @@
     "maxcrit:micro-behaviors/communications/ip",
     "maxcrit:micro-behaviors/communications/ipc",
     "maxcrit:micro-behaviors/communications/socket",
+    "maxcrit:micro-behaviors/communications/url",
     "maxcrit:micro-behaviors/crypto",
     "maxcrit:micro-behaviors/crypto/symmetric",
     "maxcrit:micro-behaviors/data",
@@ -7655,7 +7657,6 @@
     "tierbi:n:micro-behaviors/ui/window + s:objectives/execution",
     "tierbi:n:objectives + n:objectives/command-and-control",
     "tierbi:n:objectives + n:objectives/command-and-control/backdoor",
-    "tierbi:n:objectives + n:objectives/command-and-control/dropper",
     "tierbi:n:objectives + n:objectives/execution",
     "tierbi:n:objectives/anti-static + n:objectives/anti-static/obfuscation",
     "tierbi:n:objectives/anti-static + n:objectives/command-and-control/backdoor",
@@ -8805,7 +8806,7 @@
     "kv:text.unique_chars:exists",
     "kv:text.whitespace_ratio:exists"
   ],
-  "total_features": 4678,
+  "total_features": 4679,
   "standardized": false,
   "metric_transforms": {
     "binary_overall_entropy": "identity",

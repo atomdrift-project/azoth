@@ -6,7 +6,7 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `portable`). ROC 0.991087, PR 0.922446, F1 0.9080 on 385,099 rows (719 mal / 384,380 ben).
+Training-time benchmark only (no test-partition rows for `portable`). ROC 0.994346, PR 0.932009, F1 0.9147 on 385,092 rows (705 mal / 384,387 ben).
 
 ## Routing
 
@@ -17,7 +17,7 @@ Files matching `portable` are scored by none. The ensemble's decisions apply the
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,321,716 (4,316 mal / 2,317,400 ben) |
+| Train rows | 2,321,710 (4,304 mal / 2,317,406 ben) |
 | Feature spec | 1599 features (`accepted_pinned`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

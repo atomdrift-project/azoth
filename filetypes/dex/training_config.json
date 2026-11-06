@@ -1,7 +1,7 @@
 {
   "schema": "azoth.model_config.v1",
   "route": "filetypes/dex",
-  "updated_at": "2026-11-02T06:43:33.752255+00:00",
+  "updated_at": "2026-11-06T07:22:42.609577+00:00",
   "train_config": {
     "learner": "azoth",
     "seed": 42,
@@ -37,6 +37,7 @@
     "COLLIMATOR_AIR_GAP_SIGNAL": "1",
     "COLLIMATOR_ALLOWED_FEATURES_FILE": "",
     "COLLIMATOR_ANACHRONISTIC_INJECTION": "",
+    "COLLIMATOR_ARCHIVE_MEMBER_CONTEXT": "0",
     "COLLIMATOR_ATTACK_CODE_NGRAMS": "1",
     "COLLIMATOR_ATTACK_FEATURES": "1",
     "COLLIMATOR_ATTACK_NGRAMS": "0",
@@ -89,6 +90,7 @@
     "COLLIMATOR_MBC_ID_VOCAB": "0",
     "COLLIMATOR_MEM_CEILING_GB": "144",
     "COLLIMATOR_MEM_RESERVE_GB": "2",
+    "COLLIMATOR_MEM_SHARES": "2",
     "COLLIMATOR_METRIC_CORRELATION_PAIRS": "",
     "COLLIMATOR_METRIC_MIN_FREQ_PCT": "5",
     "COLLIMATOR_METRIC_RATIO_FEATURES": "0",

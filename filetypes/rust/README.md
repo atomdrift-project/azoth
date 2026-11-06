@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `rust` slice of the locked test partition: 59 malware / 45,705 benign (45,764 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `rust` slice of the locked test partition: 59 malware / 45,706 benign (45,765 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.372388 | 0.974949 | 0.347490 | 76.27% | - |
+| 0.402433 | 0.978676 | 0.345238 | 49.15% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `rust` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.152830 | 0.984758 | 0.269231 | 47.46% | 0.0044 | — |
+| 0.155649 | 0.988837 | 0.062500 | 5.08% | 0.0044 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `rust` are scored by `filegroups/source`, `filetypes/rust`, `gene
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 273,040 (1,504 mal / 271,536 ben) |
-| Feature spec | 2439 features (`route_specific`) |
+| Train rows | 273,047 (1,499 mal / 271,548 ben) |
+| Feature spec | 2438 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

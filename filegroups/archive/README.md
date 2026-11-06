@@ -6,7 +6,7 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `archive`). ROC 0.958073, PR 0.935367, F1 0.9209 on 178,283 rows (25,845 mal / 152,438 ben).
+Training-time benchmark only (no test-partition rows for `archive`). ROC 0.960451, PR 0.936989, F1 0.9218 on 177,765 rows (25,744 mal / 152,021 ben).
 
 ## Routing
 
@@ -17,8 +17,8 @@ Files matching `archive` are scored by none. The ensemble's decisions apply the 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,075,515 (147,937 mal / 927,578 ben) |
-| Feature spec | 43391 features (`route_specific`) |
+| Train rows | 1,072,660 (147,846 mal / 924,814 ben) |
+| Feature spec | 43209 features (`route_specific`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |

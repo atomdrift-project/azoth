@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `github
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.387916 | 0.964583 | 0.600000 | 50.00% | - |
+| 0.353219 | 0.982669 | 0.545455 | 50.00% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `github
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.447450 | 0.966002 | 0.600000 | 50.00% | 0.0018 | — |
+| 0.390215 | 0.984601 | 0.545455 | 50.00% | 0.0020 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `github_actions` are scored by `filetypes/github_actions`, `gener
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 16,542 (55 mal / 16,487 ben) |
-| Feature spec | 2444 features (`route_specific`) |
+| Train rows | 16,544 (54 mal / 16,490 ben) |
+| Feature spec | 2398 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

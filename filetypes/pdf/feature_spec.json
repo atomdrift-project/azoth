@@ -1,7 +1,7 @@
 {
   "version": 20,
   "abi_version": 20,
-  "feature_layout_hash": "72fae2b90d3d4cfe8d428bbcc4ed36a430dedfae1ed19d249f309e50c01edac7",
+  "feature_layout_hash": "76a43224500fd008526a23f530ecc52ac9ad59eac1f2b3cca75cf8167e5a30c9",
   "presence_vocab": [
     "metadata",
     "metadata/document",
@@ -26,6 +26,7 @@
     "micro-behaviors",
     "micro-behaviors/communications",
     "micro-behaviors/communications/http",
+    "micro-behaviors/communications/url",
     "micro-behaviors/data",
     "micro-behaviors/data/control-flow",
     "micro-behaviors/data/decode",
@@ -129,8 +130,6 @@
   "bigram_vocab": [],
   "ghost_vocab": [
     "metadata/encoded-payload/base64",
-    "metadata/file",
-    "metadata/file/naming",
     "micro-behaviors/data/embedded",
     "micro-behaviors/data/format",
     "well-known",
@@ -947,6 +946,7 @@
     "present:micro-behaviors",
     "present:micro-behaviors/communications",
     "present:micro-behaviors/communications/http",
+    "present:micro-behaviors/communications/url",
     "present:micro-behaviors/data",
     "present:micro-behaviors/data/control-flow",
     "present:micro-behaviors/data/decode",
@@ -1003,6 +1003,7 @@
     "maxcrit:micro-behaviors",
     "maxcrit:micro-behaviors/communications",
     "maxcrit:micro-behaviors/communications/http",
+    "maxcrit:micro-behaviors/communications/url",
     "maxcrit:micro-behaviors/data",
     "maxcrit:micro-behaviors/data/control-flow",
     "maxcrit:micro-behaviors/data/decode",
@@ -1315,7 +1316,7 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 390,
+  "total_features": 392,
   "standardized": false,
   "metric_transforms": {
     "binary_overall_entropy": "identity",

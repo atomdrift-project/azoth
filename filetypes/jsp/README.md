@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jsp` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999446 | 0.998747 | 0.000000 | 0.00% | - |
+| 1.000000 | 1.000000 | 0.000000 | 0.00% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jsp` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 0.000000 | 0.00% | 0.0170 | — |
+| 1.000000 | 1.000000 | 0.000000 | 0.00% | 0.0134 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `jsp` are scored by `general`. The ensemble's decisions apply the
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 309 (228 mal / 81 ben) |
-| Feature spec | 4143 features (`route_specific`) |
+| Train rows | 308 (228 mal / 80 ben) |
+| Feature spec | 5804 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

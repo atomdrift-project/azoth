@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `xpi` slice of the locked test partition: 12 malware / 634 benign (646 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `xpi` slice of the locked test partition: 11 malware / 635 benign (646 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.924731 | 0.985279 | 0.956522 | 91.67% | - |
+| 1.000000 | 1.000000 | 1.000000 | 100.00% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `xpi` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.921545 | 0.974632 | 0.956522 | 91.67% | 0.0028 | — |
+| 1.000000 | 1.000000 | 1.000000 | 100.00% | 0.0007 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `xpi` are scored by `filegroups/archive`, `filegroups/rare_archiv
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,732 (85 mal / 3,647 ben) |
-| Feature spec | 18240 features (`route_specific`) |
+| Train rows | 3,736 (80 mal / 3,656 ben) |
+| Feature spec | 17802 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

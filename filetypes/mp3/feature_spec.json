@@ -1,7 +1,7 @@
 {
   "version": 20,
   "abi_version": 20,
-  "feature_layout_hash": "136323df8684399489eaad93a7e7c658415f822530b1cd4301879367f8998335",
+  "feature_layout_hash": "4f1287e9e04c89d33ed51c26cb2108af87f1e04520f5d97946dfb3cf1ff8a099",
   "presence_vocab": [
     "metadata",
     "metadata/encoded-payload",
@@ -44,6 +44,8 @@
     "ast_depth_capped",
     "binary_peak_region_bytes",
     "binary_peak_region_entropy",
+    "consistency_extension_content_mismatch",
+    "consistency_extension_content_mismatch.audio_as_unknown",
     "file_entropy",
     "file_size",
     "file_size_bytes",
@@ -235,6 +237,8 @@
     "metrics:ast_depth_capped",
     "metrics:binary_peak_region_bytes",
     "metrics:binary_peak_region_entropy",
+    "metrics:consistency_extension_content_mismatch",
+    "metrics:consistency_extension_content_mismatch.audio_as_unknown",
     "metrics:file_entropy",
     "metrics:file_size",
     "metrics:file_size_bytes",
@@ -343,7 +347,7 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 217,
+  "total_features": 219,
   "standardized": false,
   "metric_transforms": {
     "binary_overall_entropy": "identity",
@@ -365,6 +369,8 @@
     "ast_depth_capped": "identity",
     "binary_peak_region_bytes": "log1p_abs",
     "binary_peak_region_entropy": "identity",
+    "consistency_extension_content_mismatch": "identity",
+    "consistency_extension_content_mismatch.audio_as_unknown": "identity",
     "file_entropy": "identity",
     "file_size": "log1p_abs",
     "file_size_bytes": "log1p_abs",

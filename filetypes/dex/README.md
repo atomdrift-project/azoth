@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `dex` slice of the locked test partition: 19 malware / 32 benign (51 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `dex` slice of the locked test partition: 16 malware / 32 benign (48 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.994598 | 0.996711 | 0.848485 | 73.68% | - |
+| 0.996324 | 0.998047 | 0.896552 | 81.25% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dex` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.985482 | 0.991776 | 0.000000 | 0.00% | 0.0204 | — |
+| 0.988511 | 0.994141 | 0.000000 | 0.00% | 0.0206 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `dex` are scored by `filegroups/portable`, `general`. The ensembl
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 281 (75 mal / 206 ben) |
+| Train rows | 278 (72 mal / 206 ben) |
 | Feature spec | 6638 features (`accepted_pinned`) |
 | n_estimators | 400 |
 | num_leaves | 32 |

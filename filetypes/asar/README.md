@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asar` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998188 | 0.998940 | 0.930233 | 86.96% | - |
+| 0.992236 | 0.994698 | 0.878049 | 78.26% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asar` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998188 | 0.998940 | 0.930233 | 86.96% | 0.0199 | — |
+| 0.993559 | 0.995758 | 0.878049 | 78.26% | 0.0384 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -36,13 +36,13 @@ Files matching `asar` are scored by `filetypes/asar`, `general`. The ensemble's 
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 417 (143 mal / 274 ben) |
-| Feature spec | 19616 features (`route_specific`) |
+| Feature spec | 15755 features (`route_specific`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 2.0 |
+| reg_alpha / reg_lambda | 0 / 1 |
 | early_stopping_rounds | 25 |
 | device | auto |

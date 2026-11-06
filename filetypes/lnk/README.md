@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 585 malware / 153 benign (738 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` slice of the locked test partition: 577 malware / 154 benign (731 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999204 | 0.996939 | 0.972831 | 94.87% | - |
+| 0.999493 | 0.998087 | 0.979700 | 96.19% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998676 | 0.994995 | 0.659794 | 49.23% | 0.0875 | — |
+| 0.998562 | 0.994857 | 0.664352 | 49.74% | 0.0829 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `lnk` are scored by `filegroups/filetypes_lnk_oct26`, `filegroups
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,792 (2,888 mal / 904 ben) |
-| Feature spec | 1387 features (`route_specific`) |
+| Train rows | 3,784 (2,877 mal / 907 ben) |
+| Feature spec | 503 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

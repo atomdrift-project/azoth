@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ico` slice of the locked test partition: 33 malware / 101 benign (134 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ico` slice of the locked test partition: 29 malware / 106 benign (135 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.941694 | 0.956196 | 0.842105 | 72.73% | - |
+| 0.966201 | 0.967794 | 0.884615 | 79.31% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ico` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.941694 | 0.956196 | 0.842105 | 72.73% | 0.0464 | — |
+| 0.966201 | 0.967794 | 0.884615 | 79.31% | 0.0251 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,14 +35,14 @@ Files matching `ico` are scored by `filetypes/ico`, `general`. The ensemble's de
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 816 (202 mal / 614 ben) |
-| Feature spec | 229 features (`route_specific`) |
+| Train rows | 820 (173 mal / 647 ben) |
+| Feature spec | 194 features (`route_specific`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0 / 1 |
+| reg_alpha / reg_lambda | 0.0 / 1.0 |
 | early_stopping_rounds | 25 |
 | device | auto |

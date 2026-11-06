@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `plist` slice of the locked test partition: 4 malware / 12,596 benign (12,600 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `plist` slice of the locked test partition: 3 malware / 12,597 benign (12,600 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.138474 | 0.997023 | 0.148148 | 50.00% | - |
+| 0.169580 | 0.998730 | 0.153846 | 66.67% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `plist`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.281987 | 0.996070 | 0.333333 | 25.00% | 0.0055 | — |
+| 0.360380 | 0.996851 | 0.400000 | 33.33% | 0.0047 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `plist` are scored by `filegroups/config`, `filegroups/plist_prof
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 76,148 (384 mal / 75,764 ben) |
-| Feature spec | 615 features (`route_specific`) |
+| Train rows | 76,128 (356 mal / 75,772 ben) |
+| Feature spec | 622 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

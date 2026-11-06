@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 5 malware / 1,420 benign (1,425 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `groovy` slice of the locked test partition: 4 malware / 1,420 benign (1,424 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.800972 | 0.855845 | 0.615385 | 80.00% | - |
+| 1.000000 | 1.000000 | 0.727273 | 100.00% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `groovy
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.800972 | 0.855845 | 0.615385 | 80.00% | 0.0032 | — |
+| 1.000000 | 1.000000 | 0.727273 | 100.00% | 0.0018 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `groovy` are scored by `filetypes/groovy`, `general`. The ensembl
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 8,220 (44 mal / 8,176 ben) |
+| Train rows | 8,214 (38 mal / 8,176 ben) |
 | Feature spec | 488 features (`accepted_pinned`) |
 | n_estimators | 400 |
 | num_leaves | 32 |

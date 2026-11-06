@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `regist
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.967229 | 0.999676 | 0.936937 | 88.14% | - |
+| 0.960257 | 0.999609 | 0.936937 | 88.14% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `regist
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.957097 | 0.998844 | 0.383562 | 23.73% | 0.0015 | — |
+| 0.956074 | 0.998600 | 0.659091 | 49.15% | 0.0014 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `registry` are scored by `filetypes/registry`, `general`. The ens
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 83,863 (358 mal / 83,505 ben) |
+| Train rows | 83,864 (358 mal / 83,506 ben) |
 | Feature spec | 132 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 128 |

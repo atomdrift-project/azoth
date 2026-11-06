@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `c` slice of the locked test partition: 2,113 malware / 221,833 benign (223,946 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `c` slice of the locked test partition: 2,103 malware / 221,834 benign (223,937 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.851096 | 0.994891 | 0.463104 | 30.15% | - |
+| 0.865593 | 0.996583 | 0.537445 | 37.71% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `c` sli
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.837292 | 0.994515 | 0.414854 | 26.17% | 0.0047 | — |
+| 0.842451 | 0.995134 | 0.469918 | 31.38% | 0.0046 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `c` are scored by `filegroups/source`, `filetypes/c`, `general`. 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,344,454 (14,256 mal / 1,330,198 ben) |
-| Feature spec | 1711 features (`route_specific`) |
+| Train rows | 1,344,399 (14,253 mal / 1,330,146 ben) |
+| Feature spec | 1708 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

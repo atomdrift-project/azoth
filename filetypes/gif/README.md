@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `gif` slice of the locked test partition: 77 malware / 236 benign (313 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `gif` slice of the locked test partition: 63 malware / 250 benign (313 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.875862 | 0.933634 | 0.723077 | 61.04% | - |
+| 0.879635 | 0.983841 | 0.767857 | 68.25% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `gif` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.924436 | 0.975017 | 0.649573 | 49.35% | 0.0565 | — |
+| 0.853700 | 0.978889 | 0.617021 | 46.03% | 0.0428 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,14 +35,14 @@ Files matching `gif` are scored by `filegroups/media`, `filetypes/gif`, `general
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,737 (403 mal / 1,334 ben) |
-| Feature spec | 322 features (`route_specific`) |
+| Train rows | 1,747 (388 mal / 1,359 ben) |
+| Feature spec | 316 features (`route_specific`) |
 | n_estimators | 250 |
-| num_leaves | 96 |
-| max_depth | 12 |
-| min_child_samples | 100 |
+| num_leaves | 32 |
+| max_depth | 8 |
+| min_child_samples | 10 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0 / 1 |
-| early_stopping_rounds | 25 |
+| reg_alpha / reg_lambda | 0 / 5 |
+| early_stopping_rounds | 50 |
 | device | auto |

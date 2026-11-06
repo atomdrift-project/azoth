@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` slice of the locked test partition: 45 malware / 773 benign (818 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` slice of the locked test partition: 40 malware / 780 benign (820 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.692408 | 0.914460 | 0.474576 | 31.11% | - |
+| 0.729178 | 0.924776 | 0.718750 | 57.50% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.688568 | 0.923487 | 0.474576 | 31.11% | 0.0304 | — |
+| 0.723007 | 0.925000 | 0.718750 | 57.50% | 0.0224 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,14 +35,14 @@ Files matching `vsix` are scored by `filegroups/archive`, `filetypes/vsix`, `gen
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,023 (188 mal / 5,835 ben) |
-| Feature spec | 30111 features (`route_specific`) |
-| n_estimators | 250 |
+| Train rows | 6,021 (170 mal / 5,851 ben) |
+| Feature spec | 50111 features (`accepted_pinned`) |
+| n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0.0 / 2.0 |
-| early_stopping_rounds | 25 |
-| device | auto |
+| early_stopping_rounds | 0 |
+| device | cpu |

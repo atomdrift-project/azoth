@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `mp3` slice of the locked test partition: 24 malware / 52 benign (76 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `mp3` slice of the locked test partition: 22 malware / 54 benign (76 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.982143 | 0.989984 | 0.829268 | 70.83% | - |
+| 1.000000 | 1.000000 | 0.842105 | 72.73% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `mp3` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.914474 | 0.936298 | 0.000000 | 0.00% | 0.0386 | — |
+| 0.967703 | 0.975168 | 0.000000 | 0.00% | 0.0132 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `mp3` are scored by `filegroups/media`, `general`. The ensemble's
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 410 (139 mal / 271 ben) |
-| Feature spec | 217 features (`route_specific`) |
+| Train rows | 415 (139 mal / 276 ben) |
+| Feature spec | 219 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

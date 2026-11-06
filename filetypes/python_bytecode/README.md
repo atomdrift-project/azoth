@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.948054 | 0.991586 | 0.852006 | 76.43% | - |
+| 0.940567 | 0.998587 | 0.825911 | 75.93% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.832552 | 0.989541 | 0.588441 | 41.69% | 0.0006 | — |
+| 0.921612 | 0.996893 | 0.668863 | 50.37% | 0.0027 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,14 +35,14 @@ Files matching `python_bytecode` are scored by `filegroups/portable`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 930,657 (1,850 mal / 928,807 ben) |
-| Feature spec | 18780 features (`route_specific`) |
+| Train rows | 931,348 (2,534 mal / 928,814 ben) |
+| Feature spec | 12009 features (`route_specific`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
 | min_child_samples | 100 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
+| reg_alpha / reg_lambda | 0 / 1 |
 | early_stopping_rounds | 25 |
 | device | auto |

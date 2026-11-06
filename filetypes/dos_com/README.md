@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `dos_com` slice of the locked test partition: 858 malware / 21 benign (879 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `dos_com` slice of the locked test partition: 855 malware / 21 benign (876 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998696 | 0.948413 | 0.932919 | 87.53% | - |
+| 0.998576 | 0.944194 | 0.935243 | 87.84% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dos_co
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998624 | 0.948385 | 0.000000 | 0.00% | 0.1558 | — |
+| 0.999077 | 0.966722 | 0.000000 | 0.00% | 0.1692 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `dos_com` are scored by `filetypes/dos_com`, `general`. The ensem
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,203 (3,045 mal / 158 ben) |
+| Train rows | 3,205 (3,045 mal / 160 ben) |
 | Feature spec | 961 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
