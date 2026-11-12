@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `python_bytecode` slice of the locked test partition: 403 malware / 154,295 benign (154,698 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `python_bytecode` slice of the locked test partition: 403 malware / 154,301 benign (154,704 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.940567 | 0.998587 | 0.825911 | 75.93% | - |
+| 0.950086 | 0.999770 | 0.825613 | 75.19% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.921612 | 0.996893 | 0.668863 | 50.37% | 0.0027 | — |
+| 0.935353 | 0.999699 | 0.738872 | 61.79% | 0.0006 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,12 +35,12 @@ Files matching `python_bytecode` are scored by `filegroups/portable`, `filetypes
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 931,348 (2,534 mal / 928,814 ben) |
-| Feature spec | 12009 features (`route_specific`) |
+| Train rows | 931,386 (2,533 mal / 928,853 ben) |
+| Feature spec | 12037 features (`route_specific`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
-| min_child_samples | 100 |
+| min_child_samples | 50 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0 / 1 |

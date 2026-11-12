@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dex` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.996324 | 0.998047 | 0.896552 | 81.25% | - |
+| 1.000000 | 1.000000 | 0.857143 | 75.00% | - |
 
 ## Specialist Performance
 

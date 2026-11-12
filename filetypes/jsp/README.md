@@ -6,7 +6,7 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `jsp` slice of the locked test partition: 42 malware / 19 benign (61 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `jsp` slice of the locked test partition: 42 malware / 21 benign (63 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jsp` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 0.000000 | 0.00% | 0.0134 | — |
+| 1.000000 | 1.000000 | 0.000000 | 0.00% | 0.0208 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `jsp` are scored by `general`. The ensemble's decisions apply the
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 308 (228 mal / 80 ben) |
-| Feature spec | 5804 features (`route_specific`) |
+| Train rows | 310 (231 mal / 79 ben) |
+| Feature spec | 6138 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

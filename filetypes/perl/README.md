@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `perl` slice of the locked test partition: 56 malware / 10,190 benign (10,246 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `perl` slice of the locked test partition: 56 malware / 10,188 benign (10,244 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.948574 | 0.998649 | 0.884615 | 82.14% | - |
+| 0.963002 | 0.994729 | 0.893204 | 82.14% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `perl` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.973233 | 0.999707 | 0.760870 | 62.50% | 0.0006 | — |
+| 0.978874 | 0.999245 | 0.769231 | 62.50% | 0.0005 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `perl` are scored by `filegroups/perl_hnm_recovery`, `filegroups/
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 61,170 (334 mal / 60,836 ben) |
-| Feature spec | 6492 features (`route_specific`) |
+| Train rows | 61,108 (334 mal / 60,774 ben) |
+| Feature spec | 11862 features (`route_specific`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |

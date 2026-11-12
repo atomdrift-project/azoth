@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `nupkg` slice of the locked test partition: 3 malware / 1,320 benign (1,323 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `nupkg` slice of the locked test partition: 5 malware / 1,437 benign (1,442 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.833333 | 0.999242 | 0.545455 | 100.00% | - |
+| 0.942857 | 0.999722 | 0.625000 | 100.00% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `nupkg`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.833333 | 0.999242 | 0.545455 | 100.00% | 0.0018 | — |
+| 0.942857 | 0.999722 | 0.625000 | 100.00% | 0.0014 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `nupkg` are scored by `filegroups/archive`, `filegroups/rare_arch
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 8,773 (42 mal / 8,731 ben) |
-| Feature spec | 17749 features (`route_specific`) |
+| Train rows | 9,583 (51 mal / 9,532 ben) |
+| Feature spec | 17838 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

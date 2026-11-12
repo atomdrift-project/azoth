@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `makefile` slice of the locked test partition: 22 malware / 8,276 benign (8,298 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `makefile` slice of the locked test partition: 23 malware / 8,309 benign (8,332 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.722628 | 0.997583 | 0.426667 | 72.73% | - |
+| 0.579863 | 0.992130 | 0.405063 | 69.57% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `makefi
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.281907 | 0.995760 | 0.290323 | 40.91% | 0.0091 | — |
+| 0.265394 | 0.985859 | 0.376812 | 56.52% | 0.0076 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `makefile` are scored by `filegroups/makefile_retained_hnm_recove
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 49,183 (490 mal / 48,693 ben) |
-| Feature spec | 3046 features (`route_specific`) |
+| Train rows | 49,315 (490 mal / 48,825 ben) |
+| Feature spec | 52780 features (`route_specific`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |

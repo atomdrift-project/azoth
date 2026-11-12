@@ -6,7 +6,7 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `native`). ROC 0.999834, PR 0.999888, F1 0.9962 on 381,548 rows (229,407 mal / 152,141 ben).
+Training-time benchmark only (no test-partition rows for `native`). ROC 0.999841, PR 0.999894, F1 0.9963 on 383,453 rows (231,271 mal / 152,182 ben).
 
 ## Routing
 
@@ -17,8 +17,8 @@ Files matching `native` are scored by none. The ensemble's decisions apply the s
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 2,305,442 (1,391,284 mal / 914,158 ben) |
-| Feature spec | 4236 features (`route_specific`) |
+| Train rows | 2,316,818 (1,402,507 mal / 914,311 ben) |
+| Feature spec | 4228 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

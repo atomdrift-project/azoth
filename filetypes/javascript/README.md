@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `javascript` slice of the locked test partition: 18,072 malware / 227,771 benign (245,843 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `javascript` slice of the locked test partition: 18,106 malware / 227,683 benign (245,789 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.990639 | 0.998502 | 0.800610 | 66.80% | - |
+| 0.992318 | 0.998767 | 0.849941 | 73.94% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `javasc
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.992338 | 0.998769 | 0.710085 | 55.05% | 0.0037 | — |
+| 0.992319 | 0.998744 | 0.719539 | 56.20% | 0.0037 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `javascript` are scored by `filegroups/scripts`, `filetypes/javas
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,473,415 (111,808 mal / 1,361,607 ben) |
-| Feature spec | 21955 features (`route_specific`) |
+| Train rows | 1,473,362 (112,020 mal / 1,361,342 ben) |
+| Feature spec | 21958 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

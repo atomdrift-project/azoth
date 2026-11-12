@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `lua` slice of the locked test partition: 14 malware / 3,631 benign (3,645 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `lua` slice of the locked test partition: 14 malware / 3,629 benign (3,643 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.943273 | 0.999587 | 0.800000 | 71.43% | - |
+| 0.939050 | 0.999488 | 0.800000 | 71.43% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lua` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.962023 | 0.999823 | 0.800000 | 71.43% | 0.0009 | — |
+| 0.959642 | 0.999803 | 0.800000 | 71.43% | 0.0008 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `lua` are scored by `filegroups/code_pooled_recovery`, `filegroup
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 21,705 (79 mal / 21,626 ben) |
-| Feature spec | 4974 features (`route_specific`) |
+| Train rows | 21,661 (79 mal / 21,582 ben) |
+| Feature spec | 5409 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

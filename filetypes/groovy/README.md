@@ -35,7 +35,7 @@ Files matching `groovy` are scored by `filetypes/groovy`, `general`. The ensembl
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 8,214 (38 mal / 8,176 ben) |
+| Train rows | 8,215 (38 mal / 8,177 ben) |
 | Feature spec | 488 features (`accepted_pinned`) |
 | n_estimators | 400 |
 | num_leaves | 32 |

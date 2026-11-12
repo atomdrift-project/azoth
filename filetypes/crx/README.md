@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `crx` slice of the locked test partition: 296 malware / 1,560 benign (1,856 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `crx` slice of the locked test partition: 306 malware / 1,657 benign (1,963 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.963461 | 0.992758 | 0.763860 | 62.84% | - |
+| 0.978591 | 0.994709 | 0.841121 | 73.53% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `crx` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.952629 | 0.992303 | 0.543689 | 37.84% | 0.0356 | — |
+| 0.979540 | 0.995821 | 0.803883 | 67.65% | 0.0203 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `crx` are scored by `filegroups/archive`, `filegroups/crx_selecte
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 10,199 (1,030 mal / 9,169 ben) |
-| Feature spec | 10252 features (`route_specific`) |
+| Train rows | 10,872 (1,042 mal / 9,830 ben) |
+| Feature spec | 10327 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 128 |
 | max_depth | 12 |

@@ -6,7 +6,7 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `scripts`). ROC 0.998755, PR 0.994018, F1 0.9730 on 503,293 rows (48,949 mal / 454,344 ben).
+Training-time benchmark only (no test-partition rows for `scripts`). ROC 0.998754, PR 0.993970, F1 0.9731 on 503,315 rows (48,979 mal / 454,336 ben).
 
 ## Routing
 
@@ -17,8 +17,8 @@ Files matching `scripts` are scored by none. The ensemble's decisions apply the 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,020,912 (297,286 mal / 2,723,626 ben) |
-| Feature spec | 2279 features (`route_specific`) |
+| Train rows | 3,021,190 (297,466 mal / 2,723,724 ben) |
+| Feature spec | 2285 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `7z` slice of the locked test partition: 1,123 malware / 51 benign (1,174 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `7z` slice of the locked test partition: 1,124 malware / 50 benign (1,174 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998557 | 0.970300 | 0.973636 | 95.37% | - |
+| 0.998127 | 0.963274 | 0.972235 | 95.02% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `7z` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.998464 | 0.968310 | 0.000000 | 0.00% | 0.0665 | — |
+| 0.998120 | 0.963292 | 0.000000 | 0.00% | 0.0685 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `7z` are scored by `filegroups/archive`, `filetypes/7z`, `general
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 6,418 (6,070 mal / 348 ben) |
+| Train rows | 6,430 (6,082 mal / 348 ben) |
 | Feature spec | 20951 features (`accepted_pinned`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

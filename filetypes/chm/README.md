@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chm` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.984162 | 0.951189 | 0.226415 | 12.77% | - |
+| 0.983022 | 0.948686 | 0.259259 | 14.89% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chm` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.993330 | 0.979975 | 0.000000 | 0.00% | 0.0665 | — |
+| 0.994042 | 0.982478 | 0.000000 | 0.00% | 0.0671 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -36,7 +36,7 @@ Files matching `chm` are scored by `filegroups/archive`, `general`. The ensemble
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 253 (188 mal / 65 ben) |
-| Feature spec | 4679 features (`route_specific`) |
+| Feature spec | 4681 features (`route_specific`) |
 | n_estimators | 200 |
 | num_leaves | 16 |
 | max_depth | 6 |

@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `crate` slice of the locked test partition: 6 malware / 22,184 benign (22,190 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `crate` slice of the locked test partition: 9 malware / 22,481 benign (22,490 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.797078 | 0.999369 | 0.000000 | 0.00% | - |
+| 0.877778 | 0.999592 | 0.615385 | 44.44% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `crate`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.084507 | 0.998535 | 0.000000 | 0.00% | 0.0512 | — |
+| 0.728594 | 0.999236 | 0.615385 | 44.44% | 0.0015 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `crate` are scored by `filegroups/archive`, `filetypes/crate`, `g
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 131,680 (40 mal / 131,640 ben) |
-| Feature spec | 5322 features (`route_specific`) |
+| Train rows | 133,428 (43 mal / 133,385 ben) |
+| Feature spec | 5519 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

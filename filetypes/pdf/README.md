@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999846 | 0.999039 | 0.993962 | 98.87% | - |
+| 0.999854 | 0.999086 | 0.993760 | 98.83% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999850 | 0.999060 | 0.992769 | 98.63% | 0.0088 | PR +0.006550 / ROC +0.007860 |
+| 0.999853 | 0.999082 | 0.992271 | 98.51% | 0.0087 | PR +0.006553 / ROC +0.007882 |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `pdf` are scored by `filegroups/documents`, `filetypes/pdf`, `gen
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 156,436 (133,955 mal / 22,481 ben) |
+| Train rows | 156,434 (133,954 mal / 22,480 ben) |
 | Feature spec | 392 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

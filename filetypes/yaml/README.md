@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `yaml` slice of the locked test partition: 4 malware / 7,248 benign (7,252 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `yaml` slice of the locked test partition: 8 malware / 7,366 benign (7,374 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.503299 | 0.882381 | 0.500000 | 50.00% | - |
+| 0.274406 | 0.880244 | 0.333333 | 25.00% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `yaml` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.500470 | 0.746171 | 0.666667 | 50.00% | 0.0003 | — |
+| 0.262524 | 0.699260 | 0.222222 | 12.50% | 0.0008 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `yaml` are scored by `filegroups/config`, `filetypes/yaml`, `gene
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 42,947 (7 mal / 42,940 ben) |
+| Train rows | 43,679 (7 mal / 43,672 ben) |
 | Feature spec | 3040 features (`accepted_pinned`) |
 | n_estimators | 250 |
 | num_leaves | 32 |

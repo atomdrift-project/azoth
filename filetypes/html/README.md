@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `html` slice of the locked test partition: 11,515 malware / 54,283 benign (65,798 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `html` slice of the locked test partition: 11,512 malware / 54,350 benign (65,862 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999664 | 0.999912 | 0.987215 | 97.57% | - |
+| 0.999718 | 0.999930 | 0.988234 | 97.77% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `html` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.991631 | 0.996631 | 0.911891 | 83.81% | 0.0090 | — |
+| 0.988108 | 0.995254 | 0.930449 | 87.04% | 0.0088 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `html` are scored by `filegroups/documents`, `filegroups/historic
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 390,643 (65,787 mal / 324,856 ben) |
+| Train rows | 391,078 (65,868 mal / 325,210 ben) |
 | Feature spec | 19224 features (`accepted_pinned`) |
 | n_estimators | 250 |
 | num_leaves | 96 |

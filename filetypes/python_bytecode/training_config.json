@@ -1,7 +1,7 @@
 {
   "schema": "azoth.model_config.v1",
   "route": "filetypes/python_bytecode",
-  "updated_at": "2026-11-06T07:04:35.734917+00:00",
+  "updated_at": "2026-11-12T08:07:36.905248+00:00",
   "train_config": {
     "learner": "azoth",
     "seed": 42,
@@ -13,7 +13,7 @@
     "learning_rate": 0.05,
     "early_stopping_rounds": 25,
     "min_child_weight": 5,
-    "min_child_samples": 100,
+    "min_child_samples": 50,
     "num_leaves": 96,
     "colsample_bytree": 0.8,
     "subsample": 0.8,
@@ -31,7 +31,7 @@
     "max_delta_step": 0,
     "boosting_type": "gbdt",
     "extra_trees": false,
-    "num_threads": 32
+    "num_threads": 8
   },
   "feature_env": {
     "COLLIMATOR_AIR_GAP_SIGNAL": "1",
@@ -88,14 +88,13 @@
     "COLLIMATOR_MBC_ID_VOCAB": "0",
     "COLLIMATOR_MEM_CEILING_GB": "48",
     "COLLIMATOR_MEM_RESERVE_GB": "2",
-    "COLLIMATOR_MEM_SHARES": "2",
     "COLLIMATOR_METRIC_CORRELATION_PAIRS": "",
     "COLLIMATOR_METRIC_MIN_FREQ_PCT": "5",
     "COLLIMATOR_METRIC_RATIO_FEATURES": "0",
     "COLLIMATOR_MIN_SAMPLE_SCORE": "0",
     "COLLIMATOR_MTIME_KURTOSIS": "0",
     "COLLIMATOR_NONSTANDARD_SECTION_SIGNAL": "0",
-    "COLLIMATOR_NUM_THREADS": "32",
+    "COLLIMATOR_NUM_THREADS": "8",
     "COLLIMATOR_OBJECTIVE_TRIGRAMS": "0",
     "COLLIMATOR_OVERLAY_SIGNAL": "0",
     "COLLIMATOR_PACKAGED_CAPABILITY_MODE": "paths",

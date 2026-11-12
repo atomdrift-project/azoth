@@ -1,7 +1,7 @@
 {
   "version": 20,
   "abi_version": 20,
-  "feature_layout_hash": "4f1287e9e04c89d33ed51c26cb2108af87f1e04520f5d97946dfb3cf1ff8a099",
+  "feature_layout_hash": "93a07ab8eb451d2a845287db8c4ec8e5316aa24ea3291421769a8bb3d797ed03",
   "presence_vocab": [
     "metadata",
     "metadata/encoded-payload",
@@ -27,10 +27,7 @@
     "metadata/encoded-payload/hex + objectives/evasion/process/hidden/execution",
     "metadata/file/format/media + objectives/evasion/masquerade/extension-mismatch"
   ],
-  "ghost_vocab": [
-    "metadata/package",
-    "metadata/package/testing"
-  ],
+  "ghost_vocab": [],
   "skeleton_vocab": [
     "Md",
     "OErMd"
@@ -307,8 +304,6 @@
     "tierbi:s:objectives + s:objectives/evasion/process",
     "tierbi:s:objectives/evasion + s:objectives/evasion/masquerade",
     "tierbi:s:objectives/evasion + s:objectives/evasion/process",
-    "ghost:metadata/package",
-    "ghost:metadata/package/testing",
     "skeleton:Md",
     "skeleton:OErMd",
     "rare:O(Er)",
@@ -347,7 +342,7 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 219,
+  "total_features": 217,
   "standardized": false,
   "metric_transforms": {
     "binary_overall_entropy": "identity",

@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `macho`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.975633 | 0.997149 | 0.900158 | 84.52% | - |
+| 0.970458 | 0.996183 | 0.901408 | 85.71% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `macho`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.977054 | 0.998238 | 0.873977 | 79.46% | 0.0082 | — |
+| 0.977924 | 0.998292 | 0.864238 | 77.68% | 0.0081 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `macho` are scored by `filegroups/historical_filetypes_macho_froz
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 30,319 (2,116 mal / 28,203 ben) |
-| Feature spec | 1727 features (`route_specific`) |
+| Train rows | 30,340 (2,129 mal / 28,211 ben) |
+| Feature spec | 2013 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

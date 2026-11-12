@@ -1,7 +1,7 @@
 {
   "version": 20,
   "abi_version": 20,
-  "feature_layout_hash": "962912fceae8c047f060e7359ade1c6109e1f44f8b6edc166afa90ca366565aa",
+  "feature_layout_hash": "32113e6b98266e2145957f2ba4b47c994127640d7c324993be3d29367c8bd3cc",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -52,6 +52,7 @@
     "micro-behaviors/crypto",
     "micro-behaviors/crypto/symmetric",
     "micro-behaviors/data",
+    "micro-behaviors/data/collection",
     "micro-behaviors/data/control-flow",
     "micro-behaviors/data/decode",
     "micro-behaviors/data/embedded",
@@ -4175,6 +4176,7 @@
     "present:micro-behaviors/crypto",
     "present:micro-behaviors/crypto/symmetric",
     "present:micro-behaviors/data",
+    "present:micro-behaviors/data/collection",
     "present:micro-behaviors/data/control-flow",
     "present:micro-behaviors/data/decode",
     "present:micro-behaviors/data/embedded",
@@ -4313,6 +4315,7 @@
     "maxcrit:micro-behaviors/crypto",
     "maxcrit:micro-behaviors/crypto/symmetric",
     "maxcrit:micro-behaviors/data",
+    "maxcrit:micro-behaviors/data/collection",
     "maxcrit:micro-behaviors/data/control-flow",
     "maxcrit:micro-behaviors/data/decode",
     "maxcrit:micro-behaviors/data/embedded",
@@ -8806,7 +8809,7 @@
     "kv:text.unique_chars:exists",
     "kv:text.whitespace_ratio:exists"
   ],
-  "total_features": 4679,
+  "total_features": 4681,
   "standardized": false,
   "metric_transforms": {
     "binary_overall_entropy": "identity",

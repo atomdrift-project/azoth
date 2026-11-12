@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `deb` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.296566 | 0.802216 | 0.428571 | 27.27% | - |
+| 0.309975 | 0.878261 | 0.375000 | 27.27% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `deb` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.296998 | 0.801779 | 0.428571 | 27.27% | 0.0026 | — |
+| 0.310581 | 0.878289 | 0.375000 | 27.27% | 0.0026 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `deb` are scored by `filegroups/archive`, `filetypes/deb`, `gener
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 19,039 (29 mal / 19,010 ben) |
-| Feature spec | 8128 features (`route_specific`) |
+| Train rows | 19,045 (28 mal / 19,017 ben) |
+| Feature spec | 7448 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ico` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.966201 | 0.967794 | 0.884615 | 79.31% | - |
+| 0.967589 | 0.969421 | 0.884615 | 79.31% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ico` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.966201 | 0.967794 | 0.884615 | 79.31% | 0.0251 | — |
+| 0.967589 | 0.969421 | 0.884615 | 79.31% | 0.0256 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `ico` are scored by `filetypes/ico`, `general`. The ensemble's de
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 820 (173 mal / 647 ben) |
+| Train rows | 826 (173 mal / 653 ben) |
 | Feature spec | 194 features (`route_specific`) |
 | n_estimators | 250 |
 | num_leaves | 96 |

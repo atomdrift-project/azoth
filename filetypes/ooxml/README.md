@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml` slice of the locked test partition: 8,455 malware / 824 benign (9,279 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml` slice of the locked test partition: 8,460 malware / 822 benign (9,282 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.990183 | 0.933438 | 0.960977 | 93.49% | - |
+| 0.993803 | 0.952712 | 0.967446 | 94.67% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.995268 | 0.961520 | 0.945165 | 90.51% | 0.0172 | — |
+| 0.991915 | 0.944376 | 0.955113 | 92.30% | 0.0171 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `ooxml` are scored by `filegroups/documents`, `filetypes/ooxml`, 
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 55,399 (50,945 mal / 4,454 ben) |
-| Feature spec | 6302 features (`route_specific`) |
+| Train rows | 55,401 (50,950 mal / 4,451 ben) |
+| Feature spec | 6400 features (`route_specific`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |

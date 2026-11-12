@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `apk_android` slice of the locked test partition: 500 malware / 120 benign (620 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `apk_android` slice of the locked test partition: 517 malware / 121 benign (638 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.943654 | 0.846317 | 0.949612 | 98.00% | - |
+| 0.944361 | 0.845101 | 0.948454 | 97.87% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apk_an
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.978370 | 0.922550 | 0.785973 | 65.00% | 0.1436 | — |
+| 0.932235 | 0.809006 | 0.789766 | 68.67% | 0.2576 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,14 +35,14 @@ Files matching `apk_android` are scored by `filegroups/apk_android_retained_hnm_
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,993 (1,743 mal / 250 ben) |
-| Feature spec | 15798 features (`route_specific`) |
+| Train rows | 3,502 (3,246 mal / 256 ben) |
+| Feature spec | 23080 features (`route_specific`) |
 | n_estimators | 250 |
-| num_leaves | 96 |
-| max_depth | 12 |
-| min_child_samples | 100 |
-| learning_rate | 0.05 |
-| subsample / colsample | 0.8 / 0.8 |
+| num_leaves | 16 |
+| max_depth | 6 |
+| min_child_samples | 10 |
+| learning_rate | 0.02 |
+| subsample / colsample | 0.6 / 0.8 |
 | reg_alpha / reg_lambda | 0 / 1 |
-| early_stopping_rounds | 25 |
+| early_stopping_rounds | 10 |
 | device | auto |

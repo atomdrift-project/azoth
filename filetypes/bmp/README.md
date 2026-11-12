@@ -6,7 +6,7 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `bmp` slice of the locked test partition: 14 malware / 41 benign (55 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `bmp` slice of the locked test partition: 14 malware / 42 benign (56 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `bmp` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 0.000000 | 0.00% | 0.0052 | — |
+| 1.000000 | 1.000000 | 0.000000 | 0.00% | 0.0054 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `bmp` are scored by `filegroups/media`, `general`. The ensemble's
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 306 (97 mal / 209 ben) |
+| Train rows | 309 (97 mal / 212 ben) |
 | Feature spec | 193 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

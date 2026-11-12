@@ -36,7 +36,7 @@ Files matching `mp3` are scored by `filegroups/media`, `general`. The ensemble's
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 415 (139 mal / 276 ben) |
-| Feature spec | 219 features (`route_specific`) |
+| Feature spec | 217 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

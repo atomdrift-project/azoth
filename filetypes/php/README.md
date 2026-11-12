@@ -6,11 +6,11 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Ensemble Performance
 
-Routed ensemble (general + filegroup + filetype where applicable) on the `php` slice of the locked test partition: 762 malware / 78,548 benign (79,310 rows).
+Routed ensemble (general + filegroup + filetype where applicable) on the `php` slice of the locked test partition: 764 malware / 78,554 benign (79,318 rows).
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.971207 | 0.998044 | 0.894203 | 80.97% | - |
+| 0.968916 | 0.997628 | 0.904011 | 82.59% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `php` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.965573 | 0.997653 | 0.881057 | 78.74% | 0.0012 | — |
+| 0.963512 | 0.996999 | 0.892754 | 80.63% | 0.0012 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `php` are scored by `filegroups/scripts`, `filetypes/php`, `gener
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 476,880 (4,782 mal / 472,098 ben) |
-| Feature spec | 1483 features (`route_specific`) |
+| Train rows | 476,933 (4,808 mal / 472,125 ben) |
+| Feature spec | 1481 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

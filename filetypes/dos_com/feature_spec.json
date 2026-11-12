@@ -1,7 +1,7 @@
 {
   "version": 20,
   "abi_version": 20,
-  "feature_layout_hash": "c0efabaa73a19d7f4259c9a66b2b9478e517ff310b44f1df5394ef47df7cc589",
+  "feature_layout_hash": "f83d4839c83e537800d0d5eadd086f6c0df34de81d28776e5db7b3e5f9dd5c51",
   "presence_vocab": [
     "metadata",
     "metadata/binary",
@@ -172,6 +172,7 @@
     "metadata/binary/layout",
     "metadata/file",
     "metadata/file/data-blob",
+    "metadata/file/entropy",
     "metadata/lang",
     "metadata/lang/embedded"
   ],
@@ -1299,6 +1300,7 @@
     "ghost:metadata/binary/layout",
     "ghost:metadata/file",
     "ghost:metadata/file/data-blob",
+    "ghost:metadata/file/entropy",
     "ghost:metadata/lang",
     "ghost:metadata/lang/embedded",
     "skeleton:OI",
@@ -1702,7 +1704,7 @@
     "missing:pe*metadata/binary/symbols",
     "missing:pe*metadata/binary/linking"
   ],
-  "total_features": 961,
+  "total_features": 962,
   "standardized": false,
   "metric_transforms": {
     "binary_overall_entropy": "identity",
