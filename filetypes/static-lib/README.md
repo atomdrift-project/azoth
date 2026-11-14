@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `static
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.939551 | 0.995123 | 0.925170 | 94.44% | - |
+| 0.942337 | 0.995027 | 0.931507 | 94.44% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `static
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.971250 | 0.994037 | 0.935252 | 90.28% | 0.0064 | — |
+| 0.974251 | 0.996512 | 0.949640 | 91.67% | 0.0048 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -36,13 +36,13 @@ Files matching `static-lib` are scored by `filetypes/static-lib`, `general`. The
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 12,013 (1,418 mal / 10,595 ben) |
-| Feature spec | 1012 features (`route_specific`) |
+| Feature spec | 3878 features (`route_specific`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |
-| min_child_samples | 100 |
+| min_child_samples | 50 |
 | learning_rate | 0.05 |
 | subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 0.5 |
+| reg_alpha / reg_lambda | 0 / 1 |
 | early_stopping_rounds | 25 |
 | device | auto |

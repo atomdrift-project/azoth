@@ -6,7 +6,7 @@ Level labels use the [shared pool-adjusted FP allowance](https://github.com/atom
 
 ## Performance
 
-Training-time benchmark only (no test-partition rows for `media`). ROC 0.991713, PR 0.755045, F1 0.6836 on 132,024 rows (1,234 mal / 130,790 ben).
+Training-time benchmark only (no test-partition rows for `media`). ROC 0.953575, PR 0.456092, F1 0.4573 on 132,024 rows (1,234 mal / 130,790 ben).
 
 ## Routing
 
@@ -18,7 +18,7 @@ Files matching `media` are scored by none. The ensemble's decisions apply the sa
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 789,071 (7,378 mal / 781,693 ben) |
-| Feature spec | 6638 features (`accepted_pinned`) |
+| Feature spec | 328 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

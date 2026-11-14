@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.937614 | 0.997186 | 0.872727 | 82.76% | - |
+| 0.932652 | 0.999728 | 0.814815 | 75.86% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ruby` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.925508 | 0.997162 | 0.872727 | 82.76% | 0.0002 | — |
+| 0.927891 | 0.999721 | 0.814815 | 75.86% | 0.0003 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -36,13 +36,13 @@ Files matching `ruby` are scored by `filegroups/scripts`, `filetypes/ruby`, `gen
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 149,630 (167 mal / 149,463 ben) |
-| Feature spec | 7723 features (`route_specific`) |
+| Feature spec | 4013 features (`route_specific`) |
 | n_estimators | 250 |
-| num_leaves | 96 |
-| max_depth | 12 |
-| min_child_samples | 100 |
-| learning_rate | 0.05 |
-| subsample / colsample | 0.8 / 0.8 |
-| reg_alpha / reg_lambda | 0.0 / 1.0 |
-| early_stopping_rounds | 25 |
+| num_leaves | 16 |
+| max_depth | 6 |
+| min_child_samples | 10 |
+| learning_rate | 0.02 |
+| subsample / colsample | 0.6 / 0.6 |
+| reg_alpha / reg_lambda | 0 / 1 |
+| early_stopping_rounds | 10 |
 | device | auto |

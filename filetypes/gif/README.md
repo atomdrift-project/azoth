@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `gif` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.826919 | 0.972997 | 0.806202 | 82.54% | - |
+| 0.847608 | 0.964720 | 0.577320 | 44.44% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `gif` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.828049 | 0.973400 | 0.610526 | 46.03% | 0.0530 | — |
+| 0.453260 | 0.774461 | 0.090909 | 4.76% | 0.1876 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `gif` are scored by `filegroups/media`, `filetypes/gif`, `general
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,782 (389 mal / 1,393 ben) |
-| Feature spec | 292 features (`route_specific`) |
+| Train rows | 1,420 (27 mal / 1,393 ben) |
+| Feature spec | 267 features (`route_specific`) |
 | n_estimators | 250 |
 | num_leaves | 96 |
 | max_depth | 12 |

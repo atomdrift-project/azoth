@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pe` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999914 | 0.999488 | 0.907129 | 83.01% | - |
+| 0.999916 | 0.999501 | 0.905780 | 82.78% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pe` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.999967 | 0.999806 | 0.826841 | 70.48% | 0.0056 | PR +0.001667 / ROC +0.001606 |
+| 0.999968 | 0.999808 | 0.828991 | 70.79% | 0.0056 | PR +0.001668 / ROC +0.001608 |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,8 +35,8 @@ Files matching `pe` are scored by `filegroups/native`, `filegroups/native_previo
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 1,453,359 (1,249,992 mal / 203,367 ben) |
-| Feature spec | 76237 features (`route_specific`) |
+| Train rows | 1,453,675 (1,250,308 mal / 203,367 ben) |
+| Feature spec | 76244 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

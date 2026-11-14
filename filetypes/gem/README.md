@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `gem` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.934632 | 0.997714 | 0.937500 | 88.24% | - |
+| 0.924489 | 0.993325 | 0.948454 | 90.20% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `gem` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.928645 | 0.997539 | 0.891304 | 80.39% | 0.0004 | — |
+| 0.925056 | 0.993348 | 0.948454 | 90.20% | 0.0004 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -36,7 +36,7 @@ Files matching `gem` are scored by `filegroups/archive`, `filetypes/gem`, `gener
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 93,485 (336 mal / 93,149 ben) |
-| Feature spec | 29162 features (`route_specific`) |
+| Feature spec | 9162 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

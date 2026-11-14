@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dos_co
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.997558 | 0.907682 | 0.886719 | 79.65% | - |
+| 0.998632 | 0.949043 | 0.886719 | 79.65% | - |
 
 ## Specialist Performance
 

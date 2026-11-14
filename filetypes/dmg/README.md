@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `dmg` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.795455 | 0.944444 | 0.000000 | 0.00% | - |
+| 0.793478 | 0.941358 | 0.000000 | 0.00% | - |
 
 ## Specialist Performance
 

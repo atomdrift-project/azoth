@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `html` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999718 | 0.999930 | 0.988234 | 97.77% | - |
+| 0.999708 | 0.999927 | 0.988234 | 97.77% | - |
 
 ## Specialist Performance
 

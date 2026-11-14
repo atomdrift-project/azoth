@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apk_an
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.944361 | 0.845101 | 0.948454 | 97.87% | - |
+| 0.946771 | 0.853989 | 0.950235 | 97.87% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `apk_an
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.932235 | 0.809006 | 0.789766 | 68.67% | 0.2576 | — |
+| 0.945733 | 0.841345 | 0.858031 | 80.08% | 0.1256 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,14 +35,14 @@ Files matching `apk_android` are scored by `filegroups/apk_android_retained_hnm_
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 3,502 (3,246 mal / 256 ben) |
-| Feature spec | 23080 features (`route_specific`) |
+| Train rows | 3,410 (3,154 mal / 256 ben) |
+| Feature spec | 19628 features (`route_specific`) |
 | n_estimators | 250 |
-| num_leaves | 16 |
-| max_depth | 6 |
-| min_child_samples | 10 |
-| learning_rate | 0.02 |
-| subsample / colsample | 0.6 / 0.8 |
+| num_leaves | 96 |
+| max_depth | 12 |
+| min_child_samples | 100 |
+| learning_rate | 0.05 |
+| subsample / colsample | 0.8 / 0.8 |
 | reg_alpha / reg_lambda | 0 / 1 |
-| early_stopping_rounds | 10 |
+| early_stopping_rounds | 25 |
 | device | auto |

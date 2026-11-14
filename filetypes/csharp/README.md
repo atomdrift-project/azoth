@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `csharp
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.979339 | 0.999374 | 0.578352 | 40.87% | - |
+| 0.980638 | 0.999400 | 0.570033 | 39.95% | - |
 
 ## Specialist Performance
 

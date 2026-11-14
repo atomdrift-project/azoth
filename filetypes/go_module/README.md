@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `go_mod
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 0.909091 | 100.00% | - |
+| 1.000000 | 1.000000 | 0.769231 | 100.00% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `go_mod
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 0.909091 | 100.00% | 0.0002 | — |
+| 1.000000 | 1.000000 | 0.769231 | 100.00% | 0.0001 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `go_module` are scored by `filetypes/go_module`, `general`. The e
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 14,323 (40 mal / 14,283 ben) |
+| Train rows | 14,328 (40 mal / 14,288 ben) |
 | Feature spec | 18584 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |

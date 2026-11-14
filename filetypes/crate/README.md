@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `crate`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.877778 | 0.999592 | 0.615385 | 44.44% | - |
+| 0.853470 | 0.999597 | 0.615385 | 44.44% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `crate`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.728594 | 0.999236 | 0.615385 | 44.44% | 0.0015 | — |
+| 0.729312 | 0.999261 | 0.615385 | 44.44% | 0.0015 | — |
 
 ## Recall by FP level (pool-adjusted)
 

@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `vsix` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.932825 | 0.988170 | 0.880000 | 78.57% | - |
+| 0.935627 | 0.988170 | 0.880000 | 78.57% | - |
 
 ## Specialist Performance
 

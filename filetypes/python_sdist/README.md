@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `python
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998074 | 0.999419 | 0.979592 | 97.83% | - |
+| 0.998163 | 0.999444 | 0.979536 | 97.55% | - |
 
 ## Specialist Performance
 

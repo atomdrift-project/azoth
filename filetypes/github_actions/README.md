@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `github
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.465839 | 0.909236 | 0.533333 | 50.00% | - |
+| 0.464914 | 0.909011 | 0.533333 | 50.00% | - |
 
 ## Specialist Performance
 

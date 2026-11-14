@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.970306 | 0.996240 | 0.922432 | 90.72% | - |
+| 0.966046 | 0.996212 | 0.923077 | 90.31% | - |
 
 ## Specialist Performance
 

@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `npm` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.972831 | 0.994210 | 0.853138 | 74.45% | - |
+| 0.972783 | 0.994365 | 0.849555 | 73.91% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `npm` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.976600 | 0.995709 | 0.819567 | 69.45% | 0.0084 | — |
+| 0.976356 | 0.995698 | 0.811370 | 68.28% | 0.0084 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -35,7 +35,7 @@ Files matching `npm` are scored by `filegroups/archive`, `filegroups/archive_oct
 | Parameter | Value |
 |---|---:|
 | Algorithm | LightGBM binary classifier |
-| Train rows | 303,376 (20,917 mal / 282,459 ben) |
+| Train rows | 303,379 (20,917 mal / 282,462 ben) |
 | Feature spec | 31846 features (`accepted_pinned`) |
 | n_estimators | 800 |
 | num_leaves | 96 |

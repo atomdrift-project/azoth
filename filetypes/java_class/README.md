@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java_c
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.928184 | 0.986482 | 0.885437 | 80.00% | - |
+| 0.928510 | 0.984019 | 0.883721 | 80.00% | - |
 
 ## Specialist Performance
 
@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `java_c
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.447723 | 0.979947 | 0.000000 | 0.00% | 0.0148 | — |
+| 0.294813 | 0.982371 | 0.000000 | 0.00% | 0.0280 | — |
 
 ## Recall by FP level (pool-adjusted)
 
@@ -36,7 +36,7 @@ Files matching `java_class` are scored by `filegroups/portable`, `filetypes/java
 |---|---:|
 | Algorithm | LightGBM binary classifier |
 | Train rows | 1,385,180 (1,698 mal / 1,383,482 ben) |
-| Feature spec | 1093 features (`route_specific`) |
+| Feature spec | 2289 features (`route_specific`) |
 | n_estimators | 400 |
 | num_leaves | 96 |
 | max_depth | 12 |

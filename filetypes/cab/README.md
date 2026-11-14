@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `cab` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999657 | 0.997097 | 0.995261 | 99.06% | - |
+| 0.999912 | 0.999274 | 0.990476 | 98.11% | - |
 
 ## Specialist Performance
 
@@ -28,7 +28,7 @@ Each curve plots recall at the route's pool-adjusted FP level. L0 allows zero ob
 
 ## Routing
 
-Files matching `cab` are scored by `filegroups/archive`, `filegroups/rare_archive_recovery`, `filetypes/cab`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
+Files matching `cab` are scored by `filegroups/archive`, `filegroups/rare_archive_recovery`, `general`. The ensemble's decisions apply the saved routing policy, including every level at or below the requested level. Ranking metrics use the signed distance from that policy's decision boundary. See [`route_policies.md`](../../route_policies.md).
 
 ## Training
 

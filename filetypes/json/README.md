@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `json` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.796495 | 0.989997 | 0.582524 | 83.33% | - |
+| 0.796450 | 0.989998 | 0.582524 | 83.33% | - |
 
 ## Specialist Performance
 

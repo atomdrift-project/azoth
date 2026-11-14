@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `jpeg` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.525401 | 0.930828 | 0.504274 | 34.30% | - |
+| 0.463403 | 0.841169 | 0.504274 | 34.30% | - |
 
 ## Specialist Performance
 

@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `png` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.952120 | 0.997585 | 0.665281 | 50.05% | - |
+| 0.942462 | 0.992829 | 0.662509 | 49.84% | - |
 
 ## Specialist Performance
 

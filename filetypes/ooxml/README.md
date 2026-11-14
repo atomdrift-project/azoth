@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `ooxml`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.993803 | 0.952712 | 0.967446 | 94.67% | - |
+| 0.991887 | 0.943586 | 0.967325 | 94.66% | - |
 
 ## Specialist Performance
 

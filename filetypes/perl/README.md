@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `perl` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.963002 | 0.994729 | 0.893204 | 82.14% | - |
+| 0.956404 | 0.997783 | 0.903846 | 83.93% | - |
 
 ## Specialist Performance
 

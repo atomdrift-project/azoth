@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `asar` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.996522 | 0.997879 | 0.954545 | 91.30% | - |
+| 0.992899 | 0.995758 | 0.954545 | 91.30% | - |
 
 ## Specialist Performance
 

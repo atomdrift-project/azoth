@@ -1,7 +1,7 @@
 {
   "schema": "azoth.model_config.v1",
   "route": "filetypes/npm",
-  "updated_at": "2026-11-12T06:04:57.380014+00:00",
+  "updated_at": "2026-11-14T05:10:59.356634+00:00",
   "train_config": {
     "learner": "azoth",
     "seed": 42,
@@ -90,6 +90,7 @@
     "COLLIMATOR_MBC_ID_VOCAB": "0",
     "COLLIMATOR_MEM_CEILING_GB": "144",
     "COLLIMATOR_MEM_RESERVE_GB": "2",
+    "COLLIMATOR_MEM_SHARES": "2",
     "COLLIMATOR_METRIC_CORRELATION_PAIRS": "",
     "COLLIMATOR_METRIC_MIN_FREQ_PCT": "5",
     "COLLIMATOR_METRIC_RATIO_FEATURES": "0",

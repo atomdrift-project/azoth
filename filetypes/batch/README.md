@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `batch`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999989 | 0.999780 | 0.993621 | 98.74% | - |
+| 0.999988 | 0.999768 | 0.993416 | 98.70% | - |
 
 ## Specialist Performance
 

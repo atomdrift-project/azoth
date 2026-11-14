@@ -18,7 +18,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `plist`
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier | Δ vs EMBER 2024 |
 |---:|---:|---:|---:|---:|---:|
-| 0.368284 | 0.997615 | 0.400000 | 33.33% | 0.0046 | — |
+| 0.368609 | 0.997641 | 0.400000 | 33.33% | 0.0046 | — |
 
 ## Recall by FP level (pool-adjusted)
 

@@ -1,7 +1,7 @@
 {
   "schema": "azoth.model_config.v1",
   "route": "filegroups/media",
-  "updated_at": "2026-11-12T08:37:36.471743+00:00",
+  "updated_at": "2026-11-14T07:47:19.368592+00:00",
   "train_config": {
     "learner": "azoth",
     "seed": 42,
@@ -31,7 +31,7 @@
     "max_delta_step": 2,
     "boosting_type": "gbdt",
     "extra_trees": false,
-    "num_threads": 8
+    "num_threads": 32
   },
   "feature_env": {
     "COLLIMATOR_AIR_GAP_SIGNAL": "1",
@@ -58,13 +58,11 @@
     "COLLIMATOR_DISABLE_FEATURE_GROUPS": "clusters,kv,symbols,textenc",
     "COLLIMATOR_DOCUMENT_OBFUSCATION_FEATURES": "0",
     "COLLIMATOR_EMBER_LITE_FEATURES": "0",
-    "COLLIMATOR_ENSEMBLE_SEEDS": "42,43,44",
+    "COLLIMATOR_ENSEMBLE_SEEDS": "",
     "COLLIMATOR_EXTENDED_METRICS": "1",
     "COLLIMATOR_EXTENDED_METRICS_INCLUDE": "",
     "COLLIMATOR_EXTENSION_MISMATCH_SIGNAL": "",
     "COLLIMATOR_EXTREME_FEATURES": "1",
-    "COLLIMATOR_FEATURE_SPEC_FILE": "model-vocabularies/filetypes/dex/47ffe975b724cda950ecb6ebc1a8ec4b84d3849399fe3f5f0c38c55ae413a89f.json",
-    "COLLIMATOR_FEATURE_SPEC_SHA256": "47ffe975b724cda950ecb6ebc1a8ec4b84d3849399fe3f5f0c38c55ae413a89f",
     "COLLIMATOR_FILETYPE_INTERACTIONS": "0",
     "COLLIMATOR_FILE_SEVERITY_DISTRIBUTION": "1",
     "COLLIMATOR_FOREIGN_BINARY_SIGNAL": "",
@@ -90,6 +88,7 @@
     "COLLIMATOR_MBC_ID_VOCAB": "0",
     "COLLIMATOR_MEM_CEILING_GB": "48",
     "COLLIMATOR_MEM_RESERVE_GB": "2",
+    "COLLIMATOR_MEM_SHARES": "2",
     "COLLIMATOR_METRIC_CORRELATION_PAIRS": "",
     "COLLIMATOR_METRIC_MIN_FREQ_PCT": "5",
     "COLLIMATOR_METRIC_RATIO_FEATURES": "0",

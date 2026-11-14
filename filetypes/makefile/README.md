@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `makefi
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.579863 | 0.992130 | 0.405063 | 69.57% | - |
+| 0.510707 | 0.990487 | 0.400000 | 69.57% | - |
 
 ## Specialist Performance
 

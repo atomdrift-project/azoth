@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `mp3` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 1.000000 | 1.000000 | 0.842105 | 72.73% | - |
+| 1.000000 | 1.000000 | 0.871795 | 77.27% | - |
 
 ## Specialist Performance
 

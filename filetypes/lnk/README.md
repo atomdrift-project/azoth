@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `lnk` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999497 | 0.998109 | 0.979736 | 96.36% | - |
+| 0.999508 | 0.998154 | 0.979700 | 96.19% | - |
 
 ## Specialist Performance
 

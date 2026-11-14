@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `c` sli
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.854122 | 0.995775 | 0.557507 | 40.07% | - |
+| 0.858815 | 0.996153 | 0.556072 | 39.92% | - |
 
 ## Specialist Performance
 

@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `crx` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.978591 | 0.994709 | 0.841121 | 73.53% | - |
+| 0.978187 | 0.993951 | 0.849722 | 74.84% | - |
 
 ## Specialist Performance
 

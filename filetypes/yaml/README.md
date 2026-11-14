@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `yaml` 
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.274406 | 0.880244 | 0.333333 | 25.00% | - |
+| 0.274406 | 0.880210 | 0.333333 | 25.00% | - |
 
 ## Specialist Performance
 

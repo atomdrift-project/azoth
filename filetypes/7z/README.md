@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `7z` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.998127 | 0.963274 | 0.972235 | 95.02% | - |
+| 0.998247 | 0.966032 | 0.971741 | 94.84% | - |
 
 ## Specialist Performance
 

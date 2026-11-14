@@ -1,7 +1,7 @@
 {
   "schema": "azoth.model_config.v1",
   "route": "filetypes/7z",
-  "updated_at": "2026-11-12T07:26:59.014751+00:00",
+  "updated_at": "2026-11-14T06:27:41.460363+00:00",
   "train_config": {
     "learner": "azoth",
     "seed": 42,
@@ -110,7 +110,7 @@
     "COLLIMATOR_RULE_DESCRIPTION_KEYWORD_MIN_FREQ": "0",
     "COLLIMATOR_RULE_DESCRIPTION_KEYWORD_SELECTION": "inherit",
     "COLLIMATOR_RULE_DESCRIPTION_KEYWORD_VOCAB_MAX": "0",
-    "COLLIMATOR_RULE_KEYWORDS": "0",
+    "COLLIMATOR_RULE_KEYWORDS": "1",
     "COLLIMATOR_RULE_KEYWORD_MIN_FREQ": "0",
     "COLLIMATOR_RULE_KEYWORD_SELECTION": "inherit",
     "COLLIMATOR_RULE_KEYWORD_VOCAB_MAX": "0",

@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `tar` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.979220 | 0.996119 | 0.821629 | 69.88% | - |
+| 0.979599 | 0.996224 | 0.820851 | 69.77% | - |
 
 ## Specialist Performance
 

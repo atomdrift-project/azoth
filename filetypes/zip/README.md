@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `zip` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.997394 | 0.997838 | 0.893871 | 80.85% | - |
+| 0.997431 | 0.997869 | 0.890681 | 80.32% | - |
 
 ## Specialist Performance
 

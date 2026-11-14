@@ -2,6 +2,6 @@
   "training_partitions": [
     "train"
   ],
-  "model_revision": "84017c815e866abd0df877f9b4468894d6a63deff5830973f10360dbdde6ab9e",
+  "model_revision": "cc1f1c311affdfca1b4e7eb48ba9f60a4e7e69ff36611a0111c3ae6da717e30c",
   "spec_revision": "305e8778bd895a49ca795bcce2da72bb6f0044d789e611861208ce094fef3554"
 }

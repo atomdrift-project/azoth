@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `chrome
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.824885 | 0.978618 | 0.631579 | 50.00% | - |
+| 0.822660 | 0.977522 | 0.631579 | 50.00% | - |
 
 ## Specialist Performance
 

@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `pdf` s
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.999854 | 0.999086 | 0.993760 | 98.83% | - |
+| 0.999854 | 0.999085 | 0.993737 | 98.82% | - |
 
 ## Specialist Performance
 

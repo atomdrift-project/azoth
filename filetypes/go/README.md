@@ -10,7 +10,7 @@ Routed ensemble (general + filegroup + filetype where applicable) on the `go` sl
 
 | PR AUC | ROC AUC | F1 | Recall @ L25 | Brier |
 |---:|---:|---:|---:|---:|
-| 0.887948 | 0.983995 | 0.814932 | 70.65% | - |
+| 0.884854 | 0.983862 | 0.814308 | 70.56% | - |
 
 ## Specialist Performance
 
